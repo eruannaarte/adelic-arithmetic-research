@@ -22,10 +22,10 @@ from fixed_degree_arithmetic_sensing import (
     fixed_degree_tail_l1_from_sieve,
 )
 from optimized_arithmetic_quadrature import (
+    CosineQuadratureDesign,
     centered_cosine_response,
     cosine_window_gram,
 )
-from arithmetic_sensing_v import design_for_time
 from verified_mellin_certificate import (
     binary64_fractions,
     exact_dyadic_convolution_power,
@@ -75,6 +75,8 @@ def _hybrid_complete_report(
     maximum_norm: int,
     truncation: int,
     kernel_bound_method: str,
+    observation_time: int,
+    sample_count: int,
 ) -> dict[str, object]:
     """Combine the proved remote upper with the pre-existing finite audit.
 
@@ -82,7 +84,9 @@ def _hybrid_complete_report(
     million-term finite kernel evaluation and Gram inversion remain binary64
     computations and are labelled accordingly in the returned payload.
     """
-    design = design_for_time()
+    design = CosineQuadratureDesign(
+        sample_count, observation_time, REFERENCE_COEFFICIENTS.copy()
+    )
     coefficients = fixed_degree_divisor_coefficients_sieve(truncation, degree)
     base_remainder = fixed_degree_tail_l1_from_sieve(
         truncation, degree, 2.0, coefficients
@@ -137,23 +141,31 @@ def build_certificate(
     mpfr_precision: int = 192,
     include_hybrid_report: bool = True,
     kernel_bound_method: str = "triangle",
+    observation_time: int = 1_000,
+    sample_count: int = 5_000,
+    alias_periods: int = 2,
+    bin_count_override: int | None = None,
 ) -> dict[str, object]:
     """Recompute the complete compact certificate payload from first principles."""
     if not degrees or any(degree < 1 for degree in degrees):
         raise ValueError("at least one positive degree is required")
     if kernel_bound_method not in {"triangle", "cancellation"}:
         raise ValueError("unknown kernel-bound method")
-    observation_time = 1_000
-    sample_count = 5_000
-    alias_periods = 2
-    bin_count = verified_mellin_bin_count(
-        maximum_norm,
-        observation_time,
-        sample_count,
-        alias_periods,
-        bin_width,
-        mpfr_precision,
-    )
+    if observation_time < 1 or sample_count < 2 or alias_periods < 1:
+        raise ValueError("invalid observation or alias parameters")
+    if bin_count_override is None:
+        bin_count = verified_mellin_bin_count(
+            maximum_norm,
+            observation_time,
+            sample_count,
+            alias_periods,
+            bin_width,
+            mpfr_precision,
+        )
+    else:
+        if bin_count_override < 1:
+            raise ValueError("bin_count_override must be positive")
+        bin_count = bin_count_override
     bins = verified_one_factor_log_bins(
         bin_count,
         bin_width,
@@ -198,6 +210,8 @@ def build_certificate(
                 maximum_norm,
                 truncation,
                 kernel_bound_method,
+                observation_time,
+                sample_count,
             )
         degree_payloads.append(entry)
     parameters: dict[str, object] = {
@@ -206,7 +220,9 @@ def build_certificate(
         "observation_time": observation_time,
         "sample_count": sample_count,
         "truncation": truncation,
-        "alias_periods_before_elementary_tail": alias_periods,
+        "alias_periods_before_elementary_tail": (
+            alias_periods if bin_count_override is None else None
+        ),
         "bin_width": str(bin_width),
         "bin_count": bin_count,
         "maximum_log": str(bins.maximum_log),
@@ -221,6 +237,8 @@ def build_certificate(
     # artifact while making stronger realizations self-describing.
     if kernel_bound_method != "triangle":
         parameters["kernel_bound_method"] = kernel_bound_method
+    if bin_count_override is not None:
+        parameters["remote_range_strategy"] = "explicit_bin_count"
     return {
         "scope": (
             "formal MPFR/dyadic upper certificate for k>truncation; the "
@@ -311,6 +329,10 @@ def parse_args() -> argparse.Namespace:
             "and emitting defaults to triangle"
         ),
     )
+    parser.add_argument("--observation-time", type=int, default=1_000)
+    parser.add_argument("--sample-count", type=int, default=5_000)
+    parser.add_argument("--alias-periods", type=int, default=2)
+    parser.add_argument("--bin-count", type=int)
     return parser.parse_args()
 
 
@@ -336,6 +358,10 @@ def main() -> None:
         degrees=degrees,
         include_hybrid_report=not arguments.skip_hybrid_report,
         kernel_bound_method=kernel_bound_method,
+        observation_time=arguments.observation_time,
+        sample_count=arguments.sample_count,
+        alias_periods=arguments.alias_periods,
+        bin_count_override=arguments.bin_count,
     )
     if arguments.emit or arguments.write is not None:
         result: dict[str, object] = artifact_document(certificate)

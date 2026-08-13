@@ -1,5 +1,9 @@
 # Arithmetic Sensing V — End-to-End Certificate
 
+> **Later milestone:** `ARITHMETIC_SENSING_V_DEGREE_14_RESOURCE_LAW.md`
+> proves that degree fourteen becomes certifiable at 14,691 samples with
+> `T=1000`, or at `T=1893,m=9465` along the fixed-ratio path.
+
 ## Arb finite tails, inverse-free Gram control, and a formal degree-thirteen frontier
 
 - **Research lead, theorem, implementation, and manuscript:** Codex (OpenAI)

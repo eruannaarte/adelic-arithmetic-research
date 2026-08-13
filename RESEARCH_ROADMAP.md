@@ -332,6 +332,22 @@ Deliverables: `ARITHMETIC_SENSING_V_END_TO_END.md`,
 `verified_end_to_end_certificate.py`, `verify_end_to_end_certificate.py`,
 `certificates/arithmetic_sensing_v_end_to_end.json`, and their tests.
 
+**Degree-fourteen resource-law milestone:** observation time and sample count
+are separated as geometrically distinct resources. At fixed `T=1000`, formal
+adjacent artifacts give `0.5000009667` at 14,690 samples and `0.4999975382` at
+14,691, confirming the adjacent boundary found by the localized scan. At fixed
+ratio `m/T=5`, an exhaustive hybrid scan of every
+integer `T` from 1000 through 3000 finds one crossing: formal artifacts give
+`0.5000018477` at `T=1892` and `0.4992815922` at `T=1893`. Proportional scaling
+initially worsens recovery through finite logarithmic resonances before the
+longer observation wins. At fixed `T`, dense sampling approaches a nonzero
+continuous-window floor near `0.47566`, showing that samples cannot substitute
+for observation time indefinitely.
+
+Deliverables: `ARITHMETIC_SENSING_V_DEGREE_14_RESOURCE_LAW.md`,
+`degree_fourteen_resource_law.py`, parameterized formal checkers, eight remote
+and end-to-end boundary artifacts, and their tests.
+
 ## Adjacent target — arithmetic acceleration
 
 **Status:** first exact study completed in Stage 5; asymptotic questions remain

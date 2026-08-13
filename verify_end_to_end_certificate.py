@@ -228,6 +228,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--degrees", default="13,14")
     parser.add_argument("--processes", type=int)
+    parser.add_argument("--observation-time", type=int, default=1_000)
+    parser.add_argument("--sample-count", type=int, default=5_000)
     parser.add_argument("--emit", action="store_true")
     parser.add_argument("--write", type=Path)
     return parser.parse_args()
@@ -240,6 +242,8 @@ def main() -> None:
     certificate = build_certificate(
         degrees,
         arguments.remote_certificate,
+        observation_time=arguments.observation_time,
+        sample_count=arguments.sample_count,
         processes=arguments.processes,
     )
     if arguments.emit or arguments.write is not None:

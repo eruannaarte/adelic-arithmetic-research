@@ -223,6 +223,17 @@ evaluations and an inverse-free Gram theorem. Degree thirteen is formally
 certified at `0.3308795520`; degree fourteen first fails at `0.8438209207`.
 See `ARITHMETIC_SENSING_V_END_TO_END.md`.
 
+Reproduce the compact degree-fourteen resource-boundary study:
+
+```sh
+python degree_fourteen_resource_law.py
+```
+
+At `T=1000`, the formal endpoint at 14,690 samples misses the strict threshold
+at `0.5000009667`, while 14,691 formally pass at `0.4999975382`. Along
+`m/T=5`, the adjacent formal boundary is `T=1892/1893`. See
+`ARITHMETIC_SENSING_V_DEGREE_14_RESOURCE_LAW.md`.
+
 ## Manuscript map
 
 ### Publication 1 — The Geometry Arithmetic Remembers
@@ -252,6 +263,8 @@ See `ARITHMETIC_SENSING_V_END_TO_END.md`.
   the degree-thirteen frontier, and actual all-alias window search
 - `ARITHMETIC_SENSING_V_END_TO_END.md` — Arb finite tails, inverse-free Gram
   control, and the formal degree-thirteen frontier
+- `ARITHMETIC_SENSING_V_DEGREE_14_RESOURCE_LAW.md` — exact sampling and
+  observation thresholds amid logarithmic resonances
 - `STAGE_9_ARITHMETIC_SENSING_PLAN.md` — research plan and falsification rules
 
 `RESEARCH_ROADMAP.md` records the overall sequence and the boundary between
@@ -275,6 +288,8 @@ proved results, computation, conjecture, and interpretation.
   consequence
 - `verify_end_to_end_certificate.py` — compact end-to-end artifact builder and
   checker
+- `degree_fourteen_resource_law.py` — fixed-time density and fixed-ratio
+  observation scans
 - `adelic_poisson.py`, `quadratic_adelic_geometry.py` — adelic and field models
 - `global_trace_inversion.py`, `class_group_obstruction.py` — inverse Stage 8
 - `arithmetic_acceleration.py`, `exact_rigidity_certificates.py` — exact finite
