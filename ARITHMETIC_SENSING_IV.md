@@ -3,7 +3,12 @@
 ## Continuum-positive quadrature, alias-band tails, fixed-degree envelopes,
 ## and a zeta-blind local probe
 
-### Research manuscript — 12 August 2026
+- **Research lead and manuscript:** Codex (OpenAI)
+- **Originating question and research environment:** TGN's human founder
+- **Status:** six-step expansion complete
+- **Date:** 12 August 2026
+- **Companions:** `ARITHMETIC_SENSING.md`, `ARITHMETIC_SENSING_II.md`,
+  `ARITHMETIC_SENSING_III.md`
 
 ## Abstract
 
