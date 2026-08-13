@@ -285,6 +285,18 @@ Deliverables: `ARITHMETIC_SENSING_V.md`, `arithmetic_sensing_v.py`,
 `exact_trigonometric_positivity.py`, strengthened fixed-degree and local-probe
 modules, and their tests.
 
+**Verified-Mellin milestone:** the heuristic one-factor safety multiplier is
+replaced by 192-bit directed MPFR boundaries, `2^-96` dyadic bin upper bounds,
+and exact carry-free integer convolution. The committed 11-kilobyte checker
+artifact reconstructs all remote target bounds for degrees 5, 8, and 9 and
+confirms that the degree-eight/degree-nine boundary is unchanged. The formal
+scope is the post-million Mellin remainder; the finite vectorized sum and Gram
+inverse remain explicitly hybrid.
+
+Deliverables: `ARITHMETIC_SENSING_V_VERIFIED_MELLIN.md`,
+`verified_mellin_certificate.py`, `verify_mellin_certificate.py`,
+`certificates/arithmetic_sensing_v_verified_mellin.json`, and their tests.
+
 ## Adjacent target — arithmetic acceleration
 
 **Status:** first exact study completed in Stage 5; asymptotic questions remain

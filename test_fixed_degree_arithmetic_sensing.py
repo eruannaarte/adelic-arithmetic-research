@@ -84,6 +84,21 @@ class FixedDegreeArithmeticSensingTests(unittest.TestCase):
         )
         self.assertGreaterEqual(float(np.sum(certificate.upper_masses)) + remote, exact)
 
+    def test_default_mellin_backend_is_mpfr_dyadic(self) -> None:
+        certificate = zeta_log_convolution_certificate(
+            math.log(2_000),
+            3,
+            2.0,
+            bin_width=0.05,
+            exact_cutoff=100,
+        )
+        self.assertEqual(
+            certificate.verification_backend,
+            "MPFR outward bins plus exact dyadic convolution",
+        )
+        self.assertIsNotNone(certificate.one_factor_sha256)
+        self.assertIsNotNone(certificate.convolution_sha256)
+
     def test_mellin_alias_remainder_dominates_explicit_finite_block(self) -> None:
         degree, sigma, truncation, stop = 3, 2.0, 200, 20_000
         design = CosineQuadratureDesign(

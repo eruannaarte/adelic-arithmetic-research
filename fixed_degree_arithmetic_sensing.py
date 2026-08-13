@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import math
 from dataclasses import dataclass
+from fractions import Fraction
 
 import numpy as np
 from scipy.special import zeta
@@ -20,6 +21,11 @@ from optimized_arithmetic_quadrature import (
     centered_cosine_response,
     prealias_limit,
     trigonometric_kernel_interval_bound,
+)
+from verified_mellin_certificate import (
+    exact_dyadic_convolution_power,
+    fraction_to_float_upper,
+    verified_one_factor_log_bins,
 )
 
 
@@ -40,6 +46,9 @@ class ZetaLogConvolutionCertificate:
     upper_masses: np.ndarray
     one_factor_mass_upper: float
     numerical_safety_factor: float
+    verification_backend: str = "legacy floating inflation"
+    one_factor_sha256: str | None = None
+    convolution_sha256: str | None = None
 
 
 def fixed_degree_divisor_coefficients_sieve(
@@ -121,7 +130,7 @@ def one_factor_zeta_log_bin_upper_masses(
     exact_cutoff: int = 1_000_000,
     numerical_safety_factor: float = 1e-10,
 ) -> np.ndarray:
-    """Upper masses for ``sum n^-sigma`` in logarithmic bins.
+    """Legacy floating upper masses for ``sum n^-sigma`` in logarithmic bins.
 
     Integers through ``exact_cutoff`` are accumulated explicitly.  Above it,
     monotonicity supplies
@@ -130,7 +139,9 @@ def one_factor_zeta_log_bin_upper_masses(
 
     The use of ``floor(exp(L))`` and ``ceil(exp(U))`` deliberately includes
     possible boundary integers in adjacent bins.  This small overcount keeps
-    the inequality safe under boundary rounding.
+    the inequality safe under boundary rounding.  New theorem runs use the
+    MPFR/dyadic backend in :func:`zeta_log_convolution_certificate`; this
+    routine remains available for regression comparisons.
     """
     if maximum_log <= 0.0 or sigma <= 1.0 or bin_width <= 0.0:
         raise ValueError("require positive log range/bin width and sigma>1")
@@ -167,7 +178,7 @@ def zeta_log_convolution_certificate(
     sigma: float,
     bin_width: float = 0.01,
     exact_cutoff: int = 1_000_000,
-    numerical_safety_factor: float = 1e-10,
+    numerical_safety_factor: float | None = None,
 ) -> ZetaLogConvolutionCertificate:
     """Convolve one-factor log bins into an all-``d_d`` certificate.
 
@@ -179,6 +190,44 @@ def zeta_log_convolution_certificate(
     """
     if degree < 1:
         raise ValueError("degree must be positive")
+    if numerical_safety_factor is None:
+        if float(sigma).is_integer() is False or int(sigma) < 2:
+            raise ValueError(
+                "verified Mellin bins currently require integral sigma>=2"
+            )
+        width = Fraction(str(bin_width))
+        bin_count = math.ceil(maximum_log / bin_width)
+        verified_bins = verified_one_factor_log_bins(
+            bin_count,
+            width,
+            int(sigma),
+            exact_cutoff,
+            96,
+            192,
+        )
+        convolution = exact_dyadic_convolution_power(verified_bins, degree)
+        denominator = 1 << convolution.scale_bits
+        upper_masses = np.asarray(
+            [
+                fraction_to_float_upper(Fraction(value, denominator))
+                for value in convolution.numerators
+            ]
+        )
+        one_factor_denominator = 1 << verified_bins.scale_bits
+        return ZetaLogConvolutionCertificate(
+            degree,
+            sigma,
+            float(width),
+            float(verified_bins.maximum_log),
+            upper_masses,
+            fraction_to_float_upper(
+                Fraction(sum(verified_bins.numerators), one_factor_denominator)
+            ),
+            0.0,
+            "MPFR outward bins plus exact dyadic convolution",
+            verified_bins.sha256,
+            convolution.sha256,
+        )
     one_factor = one_factor_zeta_log_bin_upper_masses(
         maximum_log,
         sigma,

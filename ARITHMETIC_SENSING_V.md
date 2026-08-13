@@ -489,8 +489,10 @@ as a physical sensor.
 
 ## 12. Next targets
 
-1. Replace the declared floating safety inflation in the log-Mellin bins by
-   outward-rounded interval arithmetic and export a compact checker artifact.
+1. **Completed in the verified-Mellin milestone:** replace the declared
+   floating safety inflation in the log-Mellin bins by outward-rounded MPFR
+   arithmetic, exact dyadic convolution, and a compact checker artifact. See
+   `ARITHMETIC_SENSING_V_VERIFIED_MELLIN.md`.
 2. Optimize the actual all-alias log-Mellin objective, not a short integer-tail
    surrogate, and retest degree nine at `T=1000`.
 3. Determine whether a non-midpoint schedule or a larger density cap crosses
@@ -532,6 +534,12 @@ python -m unittest discover -v
 
 All computations in this manuscript used the local machine. The Windows
 computer was not required.
+
+The post-manuscript formal remote-tail checker is:
+
+```text
+python verify_mellin_certificate.py
+```
 
 ---
 

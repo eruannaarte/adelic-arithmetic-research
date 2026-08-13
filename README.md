@@ -185,6 +185,15 @@ See `ARITHMETIC_SENSING_V.md` for the log-Mellin convolution theorem, the
 degree-eight recovery boundary, degree-nine time continuation, sampling/noise
 costs, and exact local collision separation.
 
+Verify the outward-rounded MPFR/dyadic remote-tail artifact:
+
+```sh
+python verify_mellin_certificate.py
+```
+
+The checker reconstructs the exact dyadic convolutions for degrees 5, 8, and
+9. See `ARITHMETIC_SENSING_V_VERIFIED_MELLIN.md` for its proof boundary.
+
 ## Manuscript map
 
 ### Publication 1 — The Geometry Arithmetic Remembers
@@ -208,6 +217,8 @@ costs, and exact local collision separation.
   and an enriched local channel
 - `ARITHMETIC_SENSING_V.md` — exact positivity, Mellin-convolution tails,
   degree-eight universality, and quantitative continuation costs
+- `ARITHMETIC_SENSING_V_VERIFIED_MELLIN.md` — MPFR-directed bins, exact dyadic
+  convolution, and the compact remote-tail checker
 - `STAGE_9_ARITHMETIC_SENSING_PLAN.md` — research plan and falsification rules
 
 `RESEARCH_ROADMAP.md` records the overall sequence and the boundary between
@@ -223,6 +234,8 @@ proved results, computation, conjecture, and interpretation.
 - `arithmetic_sensing_iv.py` — Stage IV reproduction and continuation studies
 - `arithmetic_sensing_v.py` — Stage V reproduction and boundary studies
 - `exact_trigonometric_positivity.py` — exact rational Sturm certificates
+- `verified_mellin_certificate.py` — directed MPFR and exact convolution core
+- `verify_mellin_certificate.py` — compact-artifact builder and checker
 - `adelic_poisson.py`, `quadratic_adelic_geometry.py` — adelic and field models
 - `global_trace_inversion.py`, `class_group_obstruction.py` — inverse Stage 8
 - `arithmetic_acceleration.py`, `exact_rigidity_certificates.py` — exact finite
