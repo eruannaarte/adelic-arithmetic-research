@@ -1,6 +1,6 @@
 # Order–Factorization and Adelic Geometry: Recommended Work Order
 
-**Updated:** 2026-08-12
+**Updated:** 2026-08-13
 
 This roadmap keeps the adelic line as the main program while preserving finite
 arithmetic rigidity as an adjacent branch that can be resumed when it becomes a
@@ -256,6 +256,34 @@ Euler data at 2 is separated by local component dimensions `(1,1,2,4)` versus
 Deliverables: `ARITHMETIC_SENSING_IV.md`, `arithmetic_sensing_iv.py`,
 `fixed_degree_arithmetic_sensing.py`, expanded local-probe and optimized-
 quadrature modules, and their tests.
+
+### Stage 9 continuation — Arithmetic Sensing V — theorem layer complete
+
+Replace the coarse pre-alias estimate for the universal fixed-degree envelope
+`d_d=1^{*d}` by a positive log-Mellin convolution certificate. Partition one
+zeta factor into logarithmic bins, convolve the certified bin masses `d` times,
+pair those masses with interval suprema of the sampling kernel, and close the
+remaining remote tail analytically. Certify the published trigonometric window
+over the continuum with exact rational arithmetic, then measure where degree,
+observation time, sensor count, and enriched local information change the
+recovery conclusion.
+
+Result: the old degree-five failure is traced to a deliberately coarse remote
+remainder, not to observed tail mass. The new positive convolution bound gives
+`0.00775069` in degree five and certifies every number field through degree
+eight at the Stage IV parameters; degree nine is the first failure, at
+`1.13679`. Holding `m/T=5`, degree nine crosses the `1/2` rounding threshold by
+`T=2450`. Exact Sturm sequences prove
+`10^-5 < p(theta) < 2.499999995` for the rationalized eight-harmonic density.
+For quadratic fields with sensor noise `0.01`, about 67,200 readings make the
+stated union-bound failure probability smaller than `10^-6`. Finally, power
+moments of the 2-adic component dimensions separate the Perlis collision at
+moment order two, with integer observation distance six and adversarial
+ambiguity radius three.
+
+Deliverables: `ARITHMETIC_SENSING_V.md`, `arithmetic_sensing_v.py`,
+`exact_trigonometric_positivity.py`, strengthened fixed-degree and local-probe
+modules, and their tests.
 
 ## Adjacent target — arithmetic acceleration
 

@@ -198,6 +198,68 @@ def perlis_two_adic_local_probe(parameter: int = 33) -> dict[str, object]:
     }
 
 
+def local_component_power_moments(
+    component_degrees: list[int], maximum_order: int
+) -> list[int]:
+    """Symmetric power moments of the dimensions of local-algebra factors."""
+    if not component_degrees or any(degree < 1 for degree in component_degrees):
+        raise ValueError("component degrees must be positive")
+    if maximum_order < 0:
+        raise ValueError("maximum_order must be nonnegative")
+    return [
+        sum(degree**order for degree in component_degrees)
+        for order in range(maximum_order + 1)
+    ]
+
+
+def perlis_two_adic_moment_channel(parameter: int = 33) -> dict[str, object]:
+    """Quantify the smallest symmetric local moment separating the Perlis pair.
+
+    Zeroth and first moments record the number of components and total algebra
+    dimension; both collide.  The second moment is the first separator.  As a
+    one-dimensional deterministic channel its two-ball ambiguity radius is
+    half the response distance.
+    """
+    probe = perlis_two_adic_local_probe(parameter)
+    first = list(probe["first_factor_degrees"])
+    second = list(probe["second_factor_degrees"])
+    first_moments = local_component_power_moments(first, 4)
+    second_moments = local_component_power_moments(second, 4)
+    separating_order = next(
+        order
+        for order, (left, right) in enumerate(
+            zip(first_moments, second_moments)
+        )
+        if left != right
+    )
+    distance = abs(
+        first_moments[separating_order] - second_moments[separating_order]
+    )
+    return {
+        "parameter": parameter,
+        "prime": 2,
+        "first_component_degrees": first,
+        "second_component_degrees": second,
+        "first_power_moments_orders_0_to_4": first_moments,
+        "second_power_moments_orders_0_to_4": second_moments,
+        "first_separating_moment_order": separating_order,
+        "first_separating_responses": [
+            first_moments[separating_order],
+            second_moments[separating_order],
+        ],
+        "response_distance": distance,
+        "adversarial_ambiguity_radius": distance / 2.0,
+        "robust_separation_condition": (
+            "absolute deterministic error below 3 in the second component-"
+            "dimension moment"
+        ),
+        "scope": (
+            "a quantitative oracle-level local invariant, not a physical "
+            "sensor or a procedure for inferring a local algebra from raw data"
+        ),
+    }
+
+
 def analyze(
     maximum_norm: int = 50,
     sigma: float = 2.0,

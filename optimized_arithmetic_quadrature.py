@@ -653,6 +653,7 @@ def optimize_cosine_quadrature(
     density_cap: float = 2.5,
     continuous_density_margin: float = 1e-8,
     maximum_continuum_rounds: int = 20,
+    design_envelope_coefficients: np.ndarray | None = None,
 ) -> tuple[CosineQuadratureDesign, dict[str, object]]:
     """Solve the positive-window design LP and certify the full continuum.
 
@@ -760,9 +761,20 @@ def optimize_cosine_quadrature(
         maximum_norm, 1.0 - gershgorin_lower_bound
     )
 
-    envelope_coefficients = quadratic_divisor_coefficients_sieve(
-        design_tail_cutoff
-    )
+    if design_envelope_coefficients is None:
+        envelope_coefficients = quadratic_divisor_coefficients_sieve(
+            design_tail_cutoff
+        )
+        envelope_name = "quadratic divisor d_2"
+    else:
+        envelope_coefficients = np.asarray(
+            design_envelope_coefficients, dtype=float
+        )
+        if len(envelope_coefficients) <= design_tail_cutoff:
+            raise ValueError("design envelope coefficient array is too short")
+        if np.any(envelope_coefficients[1 : design_tail_cutoff + 1] < 0.0):
+            raise ValueError("design envelope coefficients must be nonnegative")
+        envelope_name = "caller-supplied nonnegative envelope"
     aggregation_scale = 10_000.0
     aggregate_rows = np.repeat(
         np.arange(maximum_norm), design_tail_cutoff - maximum_norm
@@ -945,6 +957,7 @@ def optimize_cosine_quadrature(
         "first_alias_magnitude": exact_alias_magnitude(design),
         "prealias_limit": prealias_limit(design),
         "design_tail_cutoff": design_tail_cutoff,
+        "design_envelope": envelope_name,
     }
     return design, report
 

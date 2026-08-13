@@ -73,6 +73,25 @@ class OptimizedArithmeticQuadratureTests(unittest.TestCase):
             float(np.linalg.eigvalsh(cosine_window_gram(10, design))[0]), 0.9
         )
 
+    def test_optimizer_accepts_custom_nonnegative_tail_envelope(self) -> None:
+        envelope = np.ones(41)
+        envelope[0] = 0.0
+        _, report = optimize_cosine_quadrature(
+            maximum_norm=8,
+            sigma=2.0,
+            observation_time=300.0,
+            sample_count=200,
+            harmonic_count=2,
+            design_tail_cutoff=40,
+            gershgorin_lower_bound=0.85,
+            density_cap=2.5,
+            design_envelope_coefficients=envelope,
+        )
+        self.assertEqual(
+            report["design_envelope"],
+            "caller-supplied nonnegative envelope",
+        )
+
     def test_published_eight_harmonic_design_is_positive_and_well_conditioned(self) -> None:
         design = CosineQuadratureDesign(
             5_000,

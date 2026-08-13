@@ -10,13 +10,14 @@ for two TGN research publications:
    from noisy global traces, deterministic tapered quadrature, complete
    analytic-tail certificates, and explicit nonidentifiability results.
 
-The active continuation also includes continuum-certified arithmetic window
-design. Its eight-harmonic positive quadrature and alias-by-alias remainder
-theorem improve the complete-tail bound at `N=50`, `sigma=2`, `T=1000`, and
-`m=5000` from Hann's `0.0270048` to `0.0000456318` under a declared sampling-
-density cap. The fixed-degree extension certifies all number fields through
-degree four at the same parameters, while an enriched 2-adic probe separates
-an explicit pair that complete Dedekind-zeta data cannot distinguish.
+The active continuation includes continuum-certified arithmetic window design
+and a log-Mellin convolution certificate for higher-degree coefficient tails.
+At `N=50`, `sigma=2`, `T=1000`, and `m=5000`, the eight-harmonic positive
+quadrature bounds the complete quadratic tail by `0.0000456318`. The new
+fixed-degree argument certifies every number field through degree eight at the
+same parameters, with a degree-eight bound of `0.376282`; degree nine is the
+first failure at `1.13679`. An exact rational Sturm calculation independently
+certifies positivity and the density cap for the published window.
 
 The work was developed by **Codex (OpenAI)** from an originating question and
 research environment provided by TGN's human founder. It has not undergone
@@ -161,6 +162,29 @@ python arithmetic_sensing_iv.py --ratio-study
 See `ARITHMETIC_SENSING_IV.md` for the interval divisor theorem, continuation
 tables, fixed-degree extension, and novelty boundary.
 
+## Reproduce Arithmetic Sensing V
+
+Run the exact density certificate, the default degree-five report, and the
+enriched local-moment channel:
+
+```sh
+python arithmetic_sensing_v.py
+```
+
+The longer continuation studies are opt-in:
+
+```sh
+python arithmetic_sensing_v.py --degree-study
+python arithmetic_sensing_v.py --bin-study
+python arithmetic_sensing_v.py --degree-aware-study
+python arithmetic_sensing_v.py --degree-nine-time-study
+python arithmetic_sensing_v.py --noise-study
+```
+
+See `ARITHMETIC_SENSING_V.md` for the log-Mellin convolution theorem, the
+degree-eight recovery boundary, degree-nine time continuation, sampling/noise
+costs, and exact local collision separation.
+
 ## Manuscript map
 
 ### Publication 1 — The Geometry Arithmetic Remembers
@@ -182,6 +206,8 @@ tables, fixed-degree extension, and novelty boundary.
 - `ARITHMETIC_SENSING_III.md` — optimized positive quadrature and alias theorem
 - `ARITHMETIC_SENSING_IV.md` — continuum positivity, alias bands, fixed degree,
   and an enriched local channel
+- `ARITHMETIC_SENSING_V.md` — exact positivity, Mellin-convolution tails,
+  degree-eight universality, and quantitative continuation costs
 - `STAGE_9_ARITHMETIC_SENSING_PLAN.md` — research plan and falsification rules
 
 `RESEARCH_ROADMAP.md` records the overall sequence and the boundary between
@@ -195,6 +221,8 @@ proved results, computation, conjecture, and interpretation.
 - `optimized_arithmetic_quadrature.py` — convex arithmetic window design
 - `fixed_degree_arithmetic_sensing.py` — universal `d_d` coefficient envelopes
 - `arithmetic_sensing_iv.py` — Stage IV reproduction and continuation studies
+- `arithmetic_sensing_v.py` — Stage V reproduction and boundary studies
+- `exact_trigonometric_positivity.py` — exact rational Sturm certificates
 - `adelic_poisson.py`, `quadratic_adelic_geometry.py` — adelic and field models
 - `global_trace_inversion.py`, `class_group_obstruction.py` — inverse Stage 8
 - `arithmetic_acceleration.py`, `exact_rigidity_certificates.py` — exact finite
