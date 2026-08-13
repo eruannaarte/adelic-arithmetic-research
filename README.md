@@ -13,8 +13,8 @@ for two TGN research publications:
 The active continuation also includes arithmetic-specific convex window
 design. Its eight-harmonic positive quadrature improves the complete-tail bound
 at `N=50`, `sigma=2`, `T=1000`, and `m=5000` from Hann's `0.0271845` to
-`0.000627185`, while retaining nearly the same conditioning and effective
-sample count.
+`0.000232014` under a declared sampling-density cap. A second Pareto point
+retains more effective samples while still improving the tail bound 54.8-fold.
 
 The work was developed by **Codex (OpenAI)** from an originating question and
 research environment provided by TGN's human founder. It has not undergone

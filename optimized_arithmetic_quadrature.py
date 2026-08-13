@@ -539,7 +539,7 @@ def optimize_cosine_quadrature(
     objective = np.zeros(variable_count)
     objective[objective_index] = 1.0
     bounds = (
-        [(-0.5, 0.5)] * harmonic_count
+        [(None, None)] * harmonic_count
         + [(0.0, 1.0)] * (target_count + tail_count)
         + [(0.0, None)]
     )

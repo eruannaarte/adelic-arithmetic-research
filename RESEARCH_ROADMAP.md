@@ -225,8 +225,9 @@ impossible. A linear program over positive cosine-series windows instead
 minimizes a divisor-weighted pre-alias leakage proxy while enforcing a
 Gershgorin Gram bound. At `N=50`, `sigma=2`, `T=1,000`, and `m=5,000`, an
 eight-harmonic window independently certifies the complete quadratic tail by
-`0.000627185`, 43.3 times tighter than the Hann certificate at essentially the
-same conditioning and effective sample count. The improvement survives a
+`0.000232014`, 117 times tighter than the Hann certificate while satisfying
+the declared conditioning and sampling-density constraints. A more
+noise-balanced Pareto point is 54.8 times tighter. The improvement survives a
 million-term exact kernel audit plus analytic remote-alias control.
 
 Deliverables: `ARITHMETIC_SENSING_III.md`,

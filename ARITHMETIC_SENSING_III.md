@@ -29,15 +29,16 @@ At `N=50`, `sigma=2`, `T=1,000`, and `m=5,000`, an eight-harmonic positive
 window gives
 
 ```text
-minimum Gram eigenvalue:              0.98254279
-complete quadratic-tail bound:        0.000627185
-effective sample count:               3330.92
+minimum Gram eigenvalue:              0.98182107
+complete quadratic-tail bound:        0.000232014
+effective sample count:               2759.61
 ```
 
-The complete-tail certificate is 43.3 times smaller than the previous Hann
+The complete-tail certificate is 117 times smaller than the previous Hann
 bound `0.0271845` at the same resources. For `m=100,000` and sensor noise
-`nu=0.01`, the optimized design gives a tail bound `0.000443241` and a Gaussian
-rounding-failure bound `6.29*10^-12`.
+`nu=0.01`, the optimized design gives a tail bound `0.0000478553` and a Gaussian
+rounding-failure bound `6.09*10^-10`. A more noise-balanced density cap produces
+a 54.8-fold tail improvement and a smaller Gaussian failure bound than Hann.
 
 The same analysis proves a hard limitation: every weighting of a fixed uniform
 midpoint grid has unit-magnitude responses at its exact grid aliases. Weight
@@ -264,14 +265,14 @@ The optimized coefficients are
 
 \[
 \begin{aligned}
-c_1={}&-0.5,\\
-c_2={}&-0.019538065502654568,\\
-c_3={}& 0.009110715499497659,\\
-c_4={}& 0.001590307557416935,\\
-c_5={}& 0.008645319597726280,\\
-c_6={}&-0.000254171732993643,\\
-c_7={}&-0.000249377656619355,\\
-c_8={}& 0.000864743265416718.
+c_1={}&-0.6264119552599481,\\
+c_2={}& 0.1159282765690596,\\
+c_3={}& 0.0016529449271753,\\
+c_4={}& 0.0095090113473966,\\
+c_5={}&-0.0006326825432905,\\
+c_6={}&-0.0001320496814286,\\
+c_7={}& 0.0003945156501663,\\
+c_8={}&-0.0003021786328145.
 \end{aligned}
 \]
 
@@ -279,10 +280,10 @@ Independent realized quantities are:
 
 | quantity | value |
 |---|---:|
-| minimum weight | `6.78*10^-8` |
-| maximum density `m max(w_j)` | 1.93031 |
-| effective sample count | 3330.92 |
-| exact minimum Gram eigenvalue | 0.982543 |
+| minimum weight | `2.35*10^-9` |
+| maximum density `m max(w_j)` | 2.50000 |
+| effective sample count | 2759.61 |
+| exact minimum Gram eigenvalue | 0.981821 |
 | Gershgorin lower bound | 0.980000 |
 | first alias frequency | 31.4159 |
 | first alias magnitude | 1.000000 |
@@ -298,35 +299,30 @@ so every explicitly enumerated target-tail frequency is inside the safe
 pre-alias region for `n>=1`. The remainder theorem then controls the remote
 aliases.
 
-## 6. Falsification sweep
+## 6. Falsification and tradeoff sweep
 
-Using the same `N`, `sigma`, `T`, `m`, `gamma`, and density cap with finite
-design cutoff 300:
+An audit of the first LP formulation found an unnecessary hidden coefficient
+box `|c_r|<=1/2`. Because its solution touched that boundary, the box was
+removed and the leading designs were recomputed. This matters: it prevents a
+claim of optimality over a family narrower than the one stated in the theorem.
 
-| harmonics `H` | optimized finite-tail proxy | exact `lambda_min` | effective samples |
-|---:|---:|---:|---:|
-| 1 | 0.025873 | 0.985665 | 3348.16 |
-| 2 | 0.025090 | 0.986103 | 3333.29 |
-| 4 | 0.004546 | 0.983184 | 3332.25 |
-| 6 | 0.001094 | 0.982583 | 3330.91 |
-| 8 | 0.000404 | 0.982543 | 3330.92 |
+The density cap gives a genuine leakage/noise tradeoff. Every optimized result
+below uses `H=8`, `M_d=300`, and `gamma=0.98`, then undergoes the independent
+million-term complete-tail audit:
 
-The improvement is not merely a relaxation of conditioning or a collapse of
-effective sample count: those quantities remain nearly fixed. It arises from
-small higher-harmonic corrections to a Hann-like leading coefficient
-`c_1=-1/2`.
+| design | max density | exact `lambda_min` | effective samples | complete-tail bound | improvement over Hann |
+|---|---:|---:|---:|---:|---:|
+| Hann | 2.000 | 0.984390 | 3333.33 | 0.0271845 | 1.0 |
+| balanced optimized | 2.000 | 0.982433 | 3253.48 | 0.000495807 | 54.83 |
+| tail-optimized | 2.500 | 0.981821 | 2759.61 | 0.000232014 | 117.17 |
 
-The proxy is not the theorem. The independent complete-tail results are:
+The improvement is not produced by violating the `0.98` conditioning demand
+or by negative quadrature. The tail-optimized point does spend more effective
+samples, exactly as its larger density cap permits. Reporting both Pareto
+points makes that cost visible.
 
-| design | rigorous complete-tail coefficient bound | improvement over Hann |
-|---|---:|---:|
-| Hann, `m=5,000` | 0.0271845 | 1.0 |
-| optimized `H=4`, `m=5,000` | 0.00484671 | 5.61 |
-| optimized `H=6`, `m=5,000` | 0.00133121 | 20.42 |
-| optimized `H=8`, `m=5,000` | 0.000627185 | 43.34 |
-
-The improvement survived expansion from the design tail `M_d=300` to a
-million-term exact kernel sum plus the analytic infinite remainder.
+The improvement survived expansion from the finite LP objective through norm
+300 to a million-term exact kernel sum plus the analytic infinite remainder.
 
 ## 7. Sensor noise and held-out arithmetic control
 
@@ -334,10 +330,10 @@ Reusing the `H=8` coefficients at increasing grid densities gives:
 
 | samples | complete-tail bound | Gaussian failure bound at `nu=0.01` |
 |---:|---:|---:|
-| 5,000 | 0.000627185 | 1.0 |
-| 20,000 | 0.000443256 | 0.02435 |
-| 50,000 | 0.000443243 | `4.88*10^-6` |
-| 100,000 | 0.000443241 | `6.29*10^-12` |
+| 5,000 | 0.000232014 | 1.0 |
+| 20,000 | 0.0000478558 | 0.06778 |
+| 50,000 | 0.0000478554 | `5.13*10^-5` |
+| 100,000 | 0.0000478553 | `6.09*10^-10` |
 
 The first row certifies noiseless tail recovery but the stated sensor noise is
 too large for the Gaussian union bound at that sampling density. Tail leakage
@@ -347,8 +343,8 @@ For a held-out `Q(sqrt(-5))` tail through norm 2,000, the 5,000-point optimized
 design produced:
 
 ```text
-maximum complex coefficient error: 0.00009135
-maximum real coefficient error:    0.00007005
+maximum complex coefficient error: 0.000002105
+maximum real coefficient error:    0.000001771
 integer rounding:                   success
 ```
 
@@ -362,8 +358,8 @@ are logarithmic ratios of integers, and the tail cost is weighted by the
 quadratic divisor envelope. The interesting structural observation is that a
 small number of positive trigonometric corrections can exploit the irregular
 placement and weighting of those arithmetic frequencies much more effectively
-than a generic window, without materially sacrificing conditioning or noise
-averaging.
+than a generic window. The conditioning loss is small; the noise-averaging cost
+is controlled explicitly by the density cap and displayed as a Pareto tradeoff.
 
 There is a useful geometric separation:
 
@@ -391,7 +387,7 @@ There is a useful geometric separation:
 - positive realized weights and density caps;
 - exact Gram spectra and effective sample counts;
 - million-term complete-tail certificates with analytic remainders;
-- harmonic-count falsification sweep;
+- density-cap Pareto and hidden-constraint falsification checks;
 - held-out quadratic-field recovery.
 
 ### Not established
@@ -463,4 +459,3 @@ The exact arithmetic-frequency LP, its positive conditioning constraints, the
 unavoidable-alias theorem in this sensing context, and the certified numerical
 design are constructions of this research program. No literature-priority
 claim is made without independent specialist review.
-

@@ -67,21 +67,21 @@ class OptimizedArithmeticQuadratureTests(unittest.TestCase):
             1_000.0,
             np.asarray(
                 [
-                    -0.5,
-                    -0.019538065502654568,
-                    0.009110715499497659,
-                    0.001590307557416935,
-                    0.00864531959772628,
-                    -0.00025417173299364313,
-                    -0.00024937765661935547,
-                    0.0008647432654167179,
+                    -0.6264119552599481,
+                    0.11592827656905959,
+                    0.0016529449271752857,
+                    0.009509011347396578,
+                    -0.0006326825432905279,
+                    -0.00013204968142858147,
+                    0.0003945156501662514,
+                    -0.0003021786328145067,
                 ]
             ),
         )
         weights = cosine_window_weights(design)
         gram = cosine_window_gram(50, design)
         self.assertGreaterEqual(float(np.min(weights)), -1e-12)
-        self.assertGreater(float(np.linalg.eigvalsh(gram)[0]), 0.982)
+        self.assertGreater(float(np.linalg.eigvalsh(gram)[0]), 0.981)
         self.assertLess(exact_alias_magnitude(design) - 1.0, 1e-10)
         truth = ideal_count_coefficients(NEGATIVE_FIVE, 200)
         recovery = finite_cosine_tail_recovery_error(
