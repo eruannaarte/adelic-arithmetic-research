@@ -233,6 +233,30 @@ million-term exact kernel audit plus analytic remote-alias control.
 Deliverables: `ARITHMETIC_SENSING_III.md`,
 `optimized_arithmetic_quadrature.py`, and its tests.
 
+### Stage 9 continuation — Arithmetic Sensing IV — six-step expansion complete
+
+Replace midpoint-only density checks by whole-interval certificates, resolve
+the unenumerated divisor tail alias by alias, test harmonic/cutoff stability,
+optimize the sampling ratio on a certified grid, extend the envelope to fixed
+degree, and exhibit a local channel that breaks a Dedekind-zeta collision.
+
+Result: a Chebyshev extremum exchange plus margin-shifted Fejer--Riesz factors
+certifies the optimized density on the full period. Dirichlet-hyperbola and
+Abel bounds on individual log-frequency intervals sharpen the 5,000-sample
+quadratic coefficient certificate from `0.000232014` to `0.0000456318`.
+Held-out leakage improves monotonically through `H=2,4,6,8`, and the optimized
+coefficients stabilize through `M_d=100,150,200,300`. Re-optimization on a
+sampling-ratio grid finds that `m/T=4.42`, just above the million-term alias
+threshold, retains a `0.0000458959` bound. The universal `d_d` extension
+certifies degrees two through four and fails to certify degree five at the same
+parameters. For the Perlis pair from `x^8-33` and `x^8-528`, identical local
+Euler data at 2 is separated by local component dimensions `(1,1,2,4)` versus
+`(2,2,2,2)`.
+
+Deliverables: `ARITHMETIC_SENSING_IV.md`, `arithmetic_sensing_iv.py`,
+`fixed_degree_arithmetic_sensing.py`, expanded local-probe and optimized-
+quadrature modules, and their tests.
+
 ## Adjacent target — arithmetic acceleration
 
 **Status:** first exact study completed in Stage 5; asymptotic questions remain

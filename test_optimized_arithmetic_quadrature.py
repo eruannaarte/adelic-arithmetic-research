@@ -8,12 +8,18 @@ import numpy as np
 from deterministic_arithmetic_sensing import midpoint_times
 from optimized_arithmetic_quadrature import (
     CosineQuadratureDesign,
+    continuous_density_extrema,
     cosine_window_gram,
     cosine_window_kernel,
     cosine_window_weights,
     exact_alias_magnitude,
+    fejer_riesz_certificate,
+    finite_divisor_tail_proxy,
     finite_cosine_tail_recovery_error,
     optimize_cosine_quadrature,
+    quadratic_divisor_interval_l1_bound,
+    trigonometric_alias_band_remainder_bound,
+    trigonometric_kernel_interval_bound,
 )
 from class_group_obstruction import NEGATIVE_FIVE
 from global_trace_inversion import ideal_count_coefficients
@@ -54,6 +60,12 @@ class OptimizedArithmeticQuadratureTests(unittest.TestCase):
         self.assertGreaterEqual(float(np.min(weights)), -1e-12)
         self.assertAlmostEqual(float(np.sum(weights)), 1.0, places=13)
         self.assertLessEqual(report["maximum_density"], 2.5 + 1e-8)
+        self.assertGreaterEqual(report["continuous_minimum_density"], -1e-9)
+        self.assertLessEqual(report["continuous_maximum_density"], 2.5 + 1e-9)
+        self.assertLess(report["lower_fejer_riesz_residual"], 1e-8)
+        self.assertLess(report["upper_fejer_riesz_residual"], 1e-8)
+        self.assertGreater(report["certified_continuous_density_floor"], 0.0)
+        self.assertGreater(report["certified_continuous_cap_gap"], 0.0)
         self.assertGreaterEqual(
             report["gershgorin_lower_bound"], 0.9 - 1e-8
         )
@@ -89,6 +101,110 @@ class OptimizedArithmeticQuadratureTests(unittest.TestCase):
         )
         self.assertTrue(recovery["integer_rounding_succeeds"])
         self.assertLess(recovery["maximum_absolute_error"], 0.001)
+
+    def test_continuous_extrema_and_fejer_riesz_factorization(self) -> None:
+        coefficients = np.asarray([-0.45, 0.04, -0.01])
+        extrema = continuous_density_extrema(coefficients)
+        grid = np.linspace(0.0, 2.0 * math.pi, 200_001)
+        sampled = 1.0 + 2.0 * np.cos(
+            np.outer(grid, np.arange(1, 4))
+        ) @ coefficients
+        self.assertAlmostEqual(extrema["minimum"], float(sampled.min()), places=8)
+        self.assertAlmostEqual(extrema["maximum"], float(sampled.max()), places=8)
+        certificate = fejer_riesz_certificate(coefficients)
+        self.assertLess(certificate.residual, 1e-10)
+
+    def test_published_design_is_positive_on_the_full_interval(self) -> None:
+        coefficients = np.asarray(
+            [
+                -0.6264119552599481,
+                0.11592827656905959,
+                0.0016529449271752857,
+                0.009509011347396578,
+                -0.0006326825432905279,
+                -0.00013204968142858147,
+                0.0003945156501662514,
+                -0.0003021786328145067,
+            ]
+        )
+        extrema = continuous_density_extrema(coefficients)
+        self.assertGreater(extrema["minimum"], 1e-5)
+        self.assertLess(extrema["maximum"], 2.500001)
+        self.assertLess(fejer_riesz_certificate(coefficients).residual, 1e-10)
+
+    def test_divisor_interval_bound_dominates_exact_sum(self) -> None:
+        sigma = 2.0
+        lower, upper = 1_000, 1_700
+        tau = np.zeros(upper + 1)
+        for divisor in range(1, upper + 1):
+            tau[divisor::divisor] += 1.0
+        exact = float(
+            np.dot(
+                tau[lower + 1 : upper + 1],
+                np.arange(lower + 1, upper + 1, dtype=float) ** (-sigma),
+            )
+        )
+        bound = quadratic_divisor_interval_l1_bound(
+            math.log(lower), math.log(upper), sigma
+        )
+        self.assertGreaterEqual(bound, exact)
+        self.assertLess(bound, 3.0 * exact)
+
+    def test_kernel_interval_bound_dominates_dense_sample(self) -> None:
+        design = CosineQuadratureDesign(
+            211, 317.0, np.asarray([-0.45, 0.04, -0.01])
+        )
+        lower, upper = 0.17, 0.23
+        frequencies = np.linspace(lower, upper, 100_001)
+        exact = float(np.max(np.abs(cosine_window_kernel(frequencies, design))))
+        bound = trigonometric_kernel_interval_bound(lower, upper, design)
+        self.assertGreaterEqual(bound + 1e-14, exact)
+
+    def test_alias_band_remainder_improves_global_l1_tail(self) -> None:
+        design = CosineQuadratureDesign(
+            5_000, 1_000.0, np.asarray([-0.5])
+        )
+        truncation = 100_000
+        from deterministic_arithmetic_sensing import (
+            quadratic_divisor_coefficients_sieve,
+            quadratic_tail_l1_from_sieve,
+        )
+
+        coefficients = quadratic_divisor_coefficients_sieve(truncation)
+        base = quadratic_tail_l1_from_sieve(truncation, 2.0, coefficients)
+        bound = trigonometric_alias_band_remainder_bound(
+            50,
+            truncation,
+            2.0,
+            design,
+            base,
+            alias_periods=1,
+            bins_per_alias=256,
+        )
+        self.assertGreaterEqual(bound, 0.0)
+        self.assertLess(bound, base)
+
+    def test_held_out_tail_proxy_matches_direct_sum(self) -> None:
+        design = CosineQuadratureDesign(
+            211, 317.0, np.asarray([-0.45, 0.04, -0.01])
+        )
+        coefficients = np.zeros(41)
+        for divisor in range(1, 41):
+            coefficients[divisor::divisor] += 1.0
+        proxy = finite_divisor_tail_proxy(
+            5, 2.0, 6, 40, design, coefficients
+        )
+        tail = np.arange(6, 41, dtype=float)
+        direct = []
+        for target in range(1, 6):
+            direct.append(
+                target**2
+                * np.dot(
+                    coefficients[6:] * tail ** (-2.0),
+                    np.abs(cosine_window_kernel(np.log(target / tail), design)),
+                )
+            )
+        np.testing.assert_allclose(proxy, direct, atol=2e-15)
 
 
 if __name__ == "__main__":
