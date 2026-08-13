@@ -21,6 +21,7 @@ from verified_mellin_certificate import (
     exact_dyadic_convolution_power,
     fraction_to_float_upper,
     verified_kernel_interval_upper,
+    verified_cancellation_kernel_interval_upper,
     verified_mellin_bin_count,
     verified_one_factor_log_bins,
     verified_remote_tail_bounds,
@@ -100,6 +101,26 @@ class VerifiedMellinCertificateTests(unittest.TestCase):
         samples = np.linspace(lower, upper, 1_001)
         observed = float(np.max(np.abs(cosine_window_kernel(samples, design))))
         self.assertGreaterEqual(float(bound), observed)
+
+    def test_mpfr_cancellation_envelope_dominates_dense_samples(self) -> None:
+        from gmpy2 import mpfr
+
+        design = CosineQuadratureDesign(
+            5_000, 1_000.0, REFERENCE_COEFFICIENTS.copy()
+        )
+        for lower, upper in [(14.01, 14.10), (31.30, 31.40), (47.0, 47.09)]:
+            bound = verified_cancellation_kernel_interval_upper(
+                (mpfr(lower), mpfr(upper)),
+                1_000,
+                5_000,
+                binary64_fractions(REFERENCE_COEFFICIENTS),
+                160,
+            )
+            samples = np.linspace(lower, upper, 20_001)
+            observed = float(
+                np.max(np.abs(cosine_window_kernel(samples, design)))
+            )
+            self.assertGreaterEqual(float(bound), observed)
 
     def test_verified_remote_dominates_an_explicit_block(self) -> None:
         width = Fraction(1, 50)

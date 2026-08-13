@@ -90,6 +90,7 @@ def fixed_degree_report(
     sampling_ratio: float = 5.0,
     certificate_truncation: int = 1_000_000,
     bin_width: float = 0.01,
+    mellin_kernel_bound_method: str = "cancellation",
 ) -> dict[str, object]:
     design = design_for_time(observation_time, sampling_ratio)
     coefficients = fixed_degree_divisor_coefficients_sieve(
@@ -104,6 +105,7 @@ def fixed_degree_report(
         coefficients,
         remainder_method="mellin",
         mellin_bin_width=bin_width,
+        mellin_kernel_bound_method=mellin_kernel_bound_method,
     )
     gram = cosine_window_gram(50, design)
     bounds = deterministic_coefficient_bounds(gram, 2.0, envelope)
@@ -114,6 +116,7 @@ def fixed_degree_report(
         "sampling_ratio": sampling_ratio,
         "certificate_truncation": certificate_truncation,
         "mellin_bin_width": bin_width,
+        "mellin_kernel_bound_method": mellin_kernel_bound_method,
         "global_l1_remainder_before_kernel_decay": base_remainder,
         "lambda_min": float(np.linalg.eigvalsh(gram)[0]),
         "worst_complete_coefficient_bound": float(np.max(bounds)),
@@ -125,14 +128,17 @@ def fixed_degree_report(
 def degree_study(
     certificate_truncation: int = 1_000_000,
     bin_width: float = 0.01,
+    maximum_degree: int = 10,
 ) -> list[dict[str, object]]:
+    if maximum_degree < 2:
+        raise ValueError("maximum_degree must be at least two")
     return [
         fixed_degree_report(
             degree,
             certificate_truncation=certificate_truncation,
             bin_width=bin_width,
         )
-        for degree in range(2, 11)
+        for degree in range(2, maximum_degree + 1)
     ]
 
 
@@ -275,6 +281,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--bin-width", type=float, default=0.01)
     parser.add_argument("--degree", type=int, default=5)
     parser.add_argument("--degree-study", action="store_true")
+    parser.add_argument("--maximum-study-degree", type=int, default=10)
     parser.add_argument("--bin-study", action="store_true")
     parser.add_argument("--degree-aware-study", action="store_true")
     parser.add_argument("--degree-nine-time-study", action="store_true")
@@ -296,7 +303,9 @@ def main() -> None:
     }
     if arguments.degree_study or arguments.all:
         report["degree_study"] = degree_study(
-            arguments.certificate_truncation, arguments.bin_width
+            arguments.certificate_truncation,
+            arguments.bin_width,
+            arguments.maximum_study_degree,
         )
     if arguments.bin_study or arguments.all:
         report["bin_resolution_study"] = bin_resolution_study(

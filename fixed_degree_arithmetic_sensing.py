@@ -17,6 +17,7 @@ import numpy as np
 from scipy.special import zeta
 
 from optimized_arithmetic_quadrature import (
+    cancellation_kernel_interval_bound,
     CosineQuadratureDesign,
     centered_cosine_response,
     prealias_limit,
@@ -263,6 +264,7 @@ def fixed_degree_mellin_alias_remainder_bound(
     design: CosineQuadratureDesign,
     base_remainder: float,
     certificate: ZetaLogConvolutionCertificate,
+    kernel_bound_method: str = "cancellation",
 ) -> float:
     """All-alias ``d_d`` remainder from a log-Mellin convolution.
 
@@ -289,9 +291,19 @@ def fixed_degree_mellin_alias_remainder_bound(
         upper_frequency = upper_product_log - log_target
         if upper_frequency <= 0.0:
             continue
-        total += float(mass) * trigonometric_kernel_interval_bound(
-            lower_frequency, upper_frequency, design
-        )
+        if kernel_bound_method == "cancellation":
+            kernel_bound = cancellation_kernel_interval_bound(
+                lower_frequency, upper_frequency, design
+            )
+        elif kernel_bound_method == "triangle":
+            kernel_bound = trigonometric_kernel_interval_bound(
+                lower_frequency, upper_frequency, design
+            )
+        else:
+            raise ValueError(
+                "kernel_bound_method must be 'cancellation' or 'triangle'"
+            )
+        total += float(mass) * kernel_bound
     total += fixed_degree_tail_l1_elementary_bound(
         certificate.maximum_log,
         certificate.degree,
@@ -347,6 +359,7 @@ def fixed_degree_tail_envelope(
     remainder_method: str = "prealias",
     mellin_bin_width: float = 0.01,
     mellin_alias_periods: int = 2,
+    mellin_kernel_bound_method: str = "cancellation",
 ) -> tuple[np.ndarray, float]:
     """Universal complete tail envelope for every degree-``degree`` field."""
     if truncation <= maximum_norm:
@@ -408,6 +421,7 @@ def fixed_degree_tail_envelope(
                 design,
                 base_remainder,
                 mellin_certificate,
+                mellin_kernel_bound_method,
             )
         result[target_index] = subtotal + remainder
     return result, base_remainder

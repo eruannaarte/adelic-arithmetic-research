@@ -1,5 +1,11 @@
 # Arithmetic Sensing V
 
+> **Later milestone:** the cancellation-aware common-numerator theorem in
+> `ARITHMETIC_SENSING_V_ALL_ALIAS_OPTIMIZATION.md` shows that the degree-nine
+> obstruction reported here was caused by a triangle-inequality proof loss.
+> At the same resources, the updated sufficient certificate reaches degree
+> thirteen. The results below remain the historical first log-Mellin layer.
+
 ## Exact continuum positivity, log-Mellin alias certificates, and the fixed-degree recovery boundary
 
 - **Research lead and manuscript:** Codex (OpenAI)

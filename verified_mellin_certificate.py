@@ -448,6 +448,111 @@ def verified_kernel_interval_upper(
     return min(mpfr(1), total)
 
 
+def _signed_interval_scale(
+    interval: tuple[mpfr, mpfr], scalar: Fraction, precision: int
+) -> tuple[mpfr, mpfr]:
+    downward = _directed_context(precision, gmpy2.RoundDown)
+    upward = _directed_context(precision, gmpy2.RoundUp)
+    exact = _mpq(scalar)
+    if scalar >= 0:
+        return downward.mul(exact, interval[0]), upward.mul(exact, interval[1])
+    return downward.mul(exact, interval[1]), upward.mul(exact, interval[0])
+
+
+def verified_cancellation_kernel_interval_upper(
+    frequency: tuple[mpfr, mpfr],
+    observation_time: int,
+    sample_count: int,
+    coefficients: Sequence[Fraction],
+    precision: int = 192,
+) -> mpfr:
+    """Directed counterpart of the cancellation-aware midpoint envelope.
+
+    The centered kernel has the exact removable-singularity factorization
+
+    ``R=sin(u)*(g_0+sum c_r(g_r+g_-r))``.
+
+    On intervals avoiding a denominator zero, the bracket is enclosed at an
+    exact MPFR midpoint plus a derivative remainder.  Intervals meeting a
+    removable sampling alias fall back to the positivity bound ``|R|<=1``.
+    """
+    if frequency[0] < 0 or frequency[1] < frequency[0]:
+        raise ValueError("invalid nonnegative frequency interval")
+    downward = _directed_context(precision, gmpy2.RoundDown)
+    nearest = _directed_context(precision, gmpy2.RoundToNearest)
+    upward = _directed_context(precision, gmpy2.RoundUp)
+    alias_period = _alias_period_interval(
+        sample_count, observation_time, precision
+    )
+    scale_lower = downward.div(observation_time, 2 * sample_count)
+    scale_upper = upward.div(observation_time, 2 * sample_count)
+
+    center_terms: dict[int, tuple[mpfr, mpfr]] = {}
+    variation_terms: dict[int, mpfr] = {}
+    for shift in range(-len(coefficients), len(coefficients) + 1):
+        shifted = _shifted_frequency_interval(
+            frequency, shift, observation_time, precision
+        )
+        distance_frequency = _distance_to_alias_lower(
+            shifted, alias_period, precision
+        )
+        if distance_frequency == 0:
+            return mpfr(1)
+        argument_lower = downward.mul(scale_lower, shifted[0])
+        argument_upper = upward.mul(scale_upper, shifted[1])
+        argument_center = nearest.div(
+            nearest.add(argument_lower, argument_upper), 2
+        )
+        radius = max(
+            upward.sub(argument_center, argument_lower),
+            upward.sub(argument_upper, argument_center),
+        )
+        sine_lower = downward.sin(argument_center)
+        sine_upper = upward.sin(argument_center)
+        if sine_lower <= 0 <= sine_upper:
+            return mpfr(1)
+        denominator_upper = upward.mul(sample_count, sine_upper)
+        denominator_lower = downward.mul(sample_count, sine_lower)
+        center_terms[shift] = (
+            downward.div(1, denominator_upper),
+            upward.div(1, denominator_lower),
+        )
+        distance_argument = downward.mul(
+            scale_lower, distance_frequency
+        )
+        sine_distance = downward.sin(distance_argument)
+        if sine_distance <= 0:
+            return mpfr(1)
+        derivative = upward.div(
+            1, upward.mul(sample_count, upward.mul(sine_distance, sine_distance))
+        )
+        variation_terms[shift] = upward.mul(radius, derivative)
+
+    center_interval = center_terms[0]
+    variation = variation_terms[0]
+    for harmonic, coefficient in enumerate(coefficients, start=1):
+        paired_center = _positive_interval_add(
+            center_terms[harmonic], center_terms[-harmonic], precision
+        )
+        scaled_center = _signed_interval_scale(
+            paired_center, coefficient, precision
+        )
+        center_interval = _positive_interval_add(
+            center_interval, scaled_center, precision
+        )
+        paired_variation = upward.add(
+            variation_terms[harmonic], variation_terms[-harmonic]
+        )
+        variation = upward.add(
+            variation,
+            upward.mul(_mpq(abs(coefficient)), paired_variation),
+        )
+    center_absolute = max(
+        upward.sub(0, center_interval[0]), center_interval[1]
+    )
+    return min(mpfr(1), upward.add(center_absolute, variation))
+
+
 def verified_elementary_tail_upper(
     maximum_log: Fraction,
     degree: int,
@@ -483,6 +588,7 @@ def verified_remote_tail_bounds(
     coefficients: Sequence[Fraction],
     sigma: int = 2,
     output_scale_bits: int = 128,
+    kernel_bound_method: str = "triangle",
 ) -> VerifiedRemoteTail:
     """Certify every post-truncation alias plus the analytic remote tail."""
     if convolution.degree < 1 or convolution.scale_bits != (
@@ -519,13 +625,26 @@ def verified_remote_tail_bounds(
                 mpfr(0), downward.sub(lower_log, log_target[1])
             )
             frequency_upper = upward.sub(upper_log, log_target[0])
-            kernel = verified_kernel_interval_upper(
-                (frequency_lower, frequency_upper),
-                observation_time,
-                sample_count,
-                coefficients,
-                precision,
-            )
+            if kernel_bound_method == "triangle":
+                kernel = verified_kernel_interval_upper(
+                    (frequency_lower, frequency_upper),
+                    observation_time,
+                    sample_count,
+                    coefficients,
+                    precision,
+                )
+            elif kernel_bound_method == "cancellation":
+                kernel = verified_cancellation_kernel_interval_upper(
+                    (frequency_lower, frequency_upper),
+                    observation_time,
+                    sample_count,
+                    coefficients,
+                    precision,
+                )
+            else:
+                raise ValueError(
+                    "kernel_bound_method must be 'triangle' or 'cancellation'"
+                )
             mass = upward.div(numerator, mpz(1) << convolution.scale_bits)
             total = upward.add(total, upward.mul(mass, kernel))
         total = upward.add(total, remote)

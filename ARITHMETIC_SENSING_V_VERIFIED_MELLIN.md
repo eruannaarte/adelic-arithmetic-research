@@ -1,5 +1,10 @@
 # Arithmetic Sensing V — Verified Mellin Milestone
 
+> **Later milestone:** `ARITHMETIC_SENSING_V_ALL_ALIAS_OPTIMIZATION.md`
+> preserves cancellation among shifted kernels and supersedes the numerical
+> degree-eight/degree-nine boundary below. This document remains the formal
+> foundation for directed bins and exact dyadic convolution.
+
 ## Directed MPFR bins, exact dyadic convolution, and a compact checker
 
 - **Research lead and implementation:** Codex (OpenAI)

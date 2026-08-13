@@ -297,6 +297,25 @@ Deliverables: `ARITHMETIC_SENSING_V_VERIFIED_MELLIN.md`,
 `verified_mellin_certificate.py`, `verify_mellin_certificate.py`,
 `certificates/arithmetic_sensing_v_verified_mellin.json`, and their tests.
 
+**Cancellation and all-alias optimization milestone:** an exact
+common-numerator factorization is used before taking absolute values, yielding
+a directed-MPFR interval theorem that preserves the cosine window's intended
+cancellation. At the unchanged `N=50`, `sigma=2`, `T=1000`, `m=5000`
+resources, the reference window now certifies every fixed-degree number field
+through degree thirteen (`0.330597`); degree fourteen is the first failure of
+this sufficient proof (`0.842697`). The former degree-nine remote bound falls
+by about 247 times. A search containing every million-term finite response and
+every retained Mellin alias bin improves the degree-nine complete bound by a
+further 3.77%, while remote-only and single-target searches supply explicit
+negative controls. The formal artifact covers the remote terms; finite sums
+and the Gram inverse remain hybrid.
+
+Deliverables: `ARITHMETIC_SENSING_V_ALL_ALIAS_OPTIMIZATION.md`,
+`all_alias_mellin_optimization.py`, cancellation-aware extensions to the
+kernel and verified-Mellin modules,
+`certificates/arithmetic_sensing_v_cancellation_frontier.json`, and their
+tests.
+
 ## Adjacent target — arithmetic acceleration
 
 **Status:** first exact study completed in Stage 5; asymptotic questions remain

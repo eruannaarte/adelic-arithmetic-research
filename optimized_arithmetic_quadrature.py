@@ -392,6 +392,65 @@ def trigonometric_kernel_interval_bound(
     return min(1.0, result)
 
 
+def cancellation_kernel_interval_bound(
+    lower_frequency: float,
+    upper_frequency: float,
+    design: CosineQuadratureDesign,
+) -> float:
+    """Cancellation-aware supremum envelope for the centered midpoint kernel.
+
+    Put ``u=T*omega/2``.  The shifted Dirichlet quotients share the same
+    numerator, giving the exact identity
+
+    ``R(omega)=sin(u)*(g_0(u)+sum c_r*(g_r(u)+g_-r(u)))``,
+
+    where ``g_r(u)=1/(m*sin((u+pi*r)/m))``.  Away from removable sampling
+    aliases, the bracket varies on the slow ``u/m`` scale.  We bound its value
+    at the interval midpoint plus a mean-value derivative remainder.  If any
+    denominator vanishes on the interval, positivity supplies the safe global
+    fallback ``|R|<=1``.
+
+    This floating implementation is a fast theorem realization.  The formal
+    MPFR-directed counterpart lives in ``verified_mellin_certificate.py``.
+    """
+    if lower_frequency < 0.0 or upper_frequency < lower_frequency:
+        raise ValueError("invalid nonnegative frequency interval")
+    sample_count = design.sample_count
+    midpoint_u = 0.25 * design.observation_time * (
+        lower_frequency + upper_frequency
+    )
+    half_width_u = 0.25 * design.observation_time * (
+        upper_frequency - lower_frequency
+    )
+    harmonic_count = design.harmonic_count
+    center_terms: dict[int, float] = {}
+    variation_terms: dict[int, float] = {}
+    for shift in range(-harmonic_count, harmonic_count + 1):
+        argument = (midpoint_u + math.pi * shift) / sample_count
+        argument_half_width = half_width_u / sample_count
+        remainder = (
+            (argument + 0.5 * math.pi) % math.pi
+        ) - 0.5 * math.pi
+        distance = max(0.0, abs(remainder) - argument_half_width)
+        if distance <= 16.0 * np.finfo(float).eps:
+            return 1.0
+        sine = math.sin(argument)
+        center_terms[shift] = 1.0 / (sample_count * sine)
+        variation_terms[shift] = half_width_u / (
+            sample_count**2 * math.sin(distance) ** 2
+        )
+    center = center_terms[0]
+    variation = variation_terms[0]
+    for harmonic, coefficient in enumerate(design.coefficients, start=1):
+        center += float(coefficient) * (
+            center_terms[harmonic] + center_terms[-harmonic]
+        )
+        variation += abs(float(coefficient)) * (
+            variation_terms[harmonic] + variation_terms[-harmonic]
+        )
+    return min(1.0, abs(center) + variation)
+
+
 def trigonometric_alias_band_remainder_bound(
     target_norm: int,
     truncation: int,

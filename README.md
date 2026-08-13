@@ -11,13 +11,15 @@ for two TGN research publications:
    analytic-tail certificates, and explicit nonidentifiability results.
 
 The active continuation includes continuum-certified arithmetic window design
-and a log-Mellin convolution certificate for higher-degree coefficient tails.
-At `N=50`, `sigma=2`, `T=1000`, and `m=5000`, the eight-harmonic positive
-quadrature bounds the complete quadratic tail by `0.0000456318`. The new
-fixed-degree argument certifies every number field through degree eight at the
-same parameters, with a degree-eight bound of `0.376282`; degree nine is the
-first failure at `1.13679`. An exact rational Sturm calculation independently
-certifies positivity and the density cap for the published window.
+and a cancellation-aware log-Mellin certificate for higher-degree coefficient
+tails. At `N=50`, `sigma=2`, `T=1000`, and `m=5000`, the eight-harmonic
+positive quadrature bounds the complete quadratic tail by `0.0000456318`. An
+exact common-numerator identity removes a triangle-inequality artifact in the
+remote theorem and now certifies every number field through degree thirteen at
+the same parameters. Degree thirteen gives `0.330597`; degree fourteen is the
+first failure of this sufficient certificate at `0.842697`. Exact rational
+Sturm calculations independently certify the published window and the new
+all-alias optimization candidate over the full continuum.
 
 The work was developed by **Codex (OpenAI)** from an originating question and
 research environment provided by TGN's human founder. It has not undergone
@@ -175,6 +177,7 @@ The longer continuation studies are opt-in:
 
 ```sh
 python arithmetic_sensing_v.py --degree-study
+python arithmetic_sensing_v.py --degree-study --maximum-study-degree 15
 python arithmetic_sensing_v.py --bin-study
 python arithmetic_sensing_v.py --degree-aware-study
 python arithmetic_sensing_v.py --degree-nine-time-study
@@ -182,8 +185,9 @@ python arithmetic_sensing_v.py --noise-study
 ```
 
 See `ARITHMETIC_SENSING_V.md` for the log-Mellin convolution theorem, the
-degree-eight recovery boundary, degree-nine time continuation, sampling/noise
-costs, and exact local collision separation.
+original degree-eight boundary, degree-nine time continuation, sampling/noise
+costs, and exact local collision separation. The later cancellation theorem
+supersedes that numerical boundary without altering the original argument.
 
 Verify the outward-rounded MPFR/dyadic remote-tail artifact:
 
@@ -193,6 +197,20 @@ python verify_mellin_certificate.py
 
 The checker reconstructs the exact dyadic convolutions for degrees 5, 8, and
 9. See `ARITHMETIC_SENSING_V_VERIFIED_MELLIN.md` for its proof boundary.
+
+Verify the cancellation-aware degree 9/13/14 frontier and reproduce the
+all-alias optimization candidate:
+
+```sh
+python verify_mellin_certificate.py \
+  --certificate certificates/arithmetic_sensing_v_cancellation_frontier.json \
+  --degrees 9,13,14 --skip-hybrid-report
+python all_alias_mellin_optimization.py --complete-certificate
+```
+
+See `ARITHMETIC_SENSING_V_ALL_ALIAS_OPTIMIZATION.md` for the exact response
+factorization, directed interval theorem, new degree-thirteen frontier,
+optimizer falsification experiments, and remaining formal boundary.
 
 ## Manuscript map
 
@@ -219,6 +237,8 @@ The checker reconstructs the exact dyadic convolutions for degrees 5, 8, and
   degree-eight universality, and quantitative continuation costs
 - `ARITHMETIC_SENSING_V_VERIFIED_MELLIN.md` — MPFR-directed bins, exact dyadic
   convolution, and the compact remote-tail checker
+- `ARITHMETIC_SENSING_V_ALL_ALIAS_OPTIMIZATION.md` — cancellation geometry,
+  the degree-thirteen frontier, and actual all-alias window search
 - `STAGE_9_ARITHMETIC_SENSING_PLAN.md` — research plan and falsification rules
 
 `RESEARCH_ROADMAP.md` records the overall sequence and the boundary between
@@ -236,6 +256,8 @@ proved results, computation, conjecture, and interpretation.
 - `exact_trigonometric_positivity.py` — exact rational Sturm certificates
 - `verified_mellin_certificate.py` — directed MPFR and exact convolution core
 - `verify_mellin_certificate.py` — compact-artifact builder and checker
+- `all_alias_mellin_optimization.py` — million-term plus all-alias candidate
+  objective and independent candidate audit
 - `adelic_poisson.py`, `quadratic_adelic_geometry.py` — adelic and field models
 - `global_trace_inversion.py`, `class_group_obstruction.py` — inverse Stage 8
 - `arithmetic_acceleration.py`, `exact_rigidity_certificates.py` — exact finite
