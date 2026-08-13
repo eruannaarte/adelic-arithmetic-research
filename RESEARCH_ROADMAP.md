@@ -213,6 +213,25 @@ Deliverables: `ARITHMETIC_SENSING_II.md`,
 `deterministic_arithmetic_sensing.py`,
 `arithmetic_indistinguishability.py`, and their tests.
 
+### Stage 9 continuation — optimized arithmetic quadrature — first layer complete
+
+Optimize positive midpoint weights specifically for logarithmic integer
+frequencies, subject to target conditioning, sampling-density, and alias-safety
+constraints.
+
+Result: every weighting of a fixed midpoint grid is proved to have unit
+magnitude at the exact grid aliases, so alias suppression by weights alone is
+impossible. A linear program over positive cosine-series windows instead
+minimizes a divisor-weighted pre-alias leakage proxy while enforcing a
+Gershgorin Gram bound. At `N=50`, `sigma=2`, `T=1,000`, and `m=5,000`, an
+eight-harmonic window independently certifies the complete quadratic tail by
+`0.000627185`, 43.3 times tighter than the Hann certificate at essentially the
+same conditioning and effective sample count. The improvement survives a
+million-term exact kernel audit plus analytic remote-alias control.
+
+Deliverables: `ARITHMETIC_SENSING_III.md`,
+`optimized_arithmetic_quadrature.py`, and its tests.
+
 ## Adjacent target — arithmetic acceleration
 
 **Status:** first exact study completed in Stage 5; asymptotic questions remain

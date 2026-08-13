@@ -10,6 +10,12 @@ for two TGN research publications:
    from noisy global traces, deterministic tapered quadrature, complete
    analytic-tail certificates, and explicit nonidentifiability results.
 
+The active continuation also includes arithmetic-specific convex window
+design. Its eight-harmonic positive quadrature improves the complete-tail bound
+at `N=50`, `sigma=2`, `T=1000`, and `m=5000` from Hann's `0.0271845` to
+`0.000627185`, while retaining nearly the same conditioning and effective
+sample count.
+
 The work was developed by **Codex (OpenAI)** from an originating question and
 research environment provided by TGN's human founder. It has not undergone
 formal peer review. Classical ingredients and new constructions are identified
@@ -60,7 +66,7 @@ On Windows PowerShell, activate the environment with:
 python -m unittest discover -v
 ```
 
-The initial public release contains 89 tests.
+The current release contains 93 tests.
 
 ## Reproduce Arithmetic Sensing I
 
@@ -110,6 +116,29 @@ python arithmetic_indistinguishability.py
 See `ARITHMETIC_SENSING_II.md` for the proof, alias treatment, limitations, and
 source boundary.
 
+## Reproduce Arithmetic Sensing III
+
+Optimize a positive cosine-series window and independently certify it against
+the complete tail:
+
+```sh
+python optimized_arithmetic_quadrature.py \
+  --maximum-norm 50 \
+  --sigma 2 \
+  --observation-time 1000 \
+  --sample-count 5000 \
+  --harmonics 8 \
+  --design-tail-cutoff 300 \
+  --certificate-truncation 1000000 \
+  --gershgorin-lower-bound 0.98 \
+  --density-cap 2.5 \
+  --noise-sigma 0.01
+```
+
+See `ARITHMETIC_SENSING_III.md` for the linear program, the independent
+certificate, and the theorem showing why no weighting of a fixed midpoint grid
+can remove its exact aliases.
+
 ## Manuscript map
 
 ### Publication 1 — The Geometry Arithmetic Remembers
@@ -128,6 +157,7 @@ source boundary.
 
 - `ARITHMETIC_SENSING.md` — random-time theorem layer
 - `ARITHMETIC_SENSING_II.md` — deterministic theorem and impossibility layer
+- `ARITHMETIC_SENSING_III.md` — optimized positive quadrature and alias theorem
 - `STAGE_9_ARITHMETIC_SENSING_PLAN.md` — research plan and falsification rules
 
 `RESEARCH_ROADMAP.md` records the overall sequence and the boundary between
@@ -138,6 +168,7 @@ proved results, computation, conjecture, and interpretation.
 - `arithmetic_sensing.py` — random sensing and complete quadratic-tail bounds
 - `deterministic_arithmetic_sensing.py` — Hann midpoint and alias-safe theorem
 - `arithmetic_indistinguishability.py` — two-ball lower bound and Perlis metadata
+- `optimized_arithmetic_quadrature.py` — convex arithmetic window design
 - `adelic_poisson.py`, `quadratic_adelic_geometry.py` — adelic and field models
 - `global_trace_inversion.py`, `class_group_obstruction.py` — inverse Stage 8
 - `arithmetic_acceleration.py`, `exact_rigidity_certificates.py` — exact finite
@@ -172,4 +203,3 @@ central sources are:
 No reuse license has yet been assigned. The repository is public for
 inspection and reproducibility; copyright and reuse terms remain reserved
 until the human owner chooses a license.
-
