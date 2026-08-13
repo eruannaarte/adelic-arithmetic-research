@@ -10,11 +10,13 @@ for two TGN research publications:
    from noisy global traces, deterministic tapered quadrature, complete
    analytic-tail certificates, and explicit nonidentifiability results.
 
-The active continuation also includes arithmetic-specific convex window
-design. Its eight-harmonic positive quadrature improves the complete-tail bound
-at `N=50`, `sigma=2`, `T=1000`, and `m=5000` from Hann's `0.0271845` to
-`0.000232014` under a declared sampling-density cap. A second Pareto point
-retains more effective samples while still improving the tail bound 54.8-fold.
+The active continuation also includes continuum-certified arithmetic window
+design. Its eight-harmonic positive quadrature and alias-by-alias remainder
+theorem improve the complete-tail bound at `N=50`, `sigma=2`, `T=1000`, and
+`m=5000` from Hann's `0.0270048` to `0.0000456318` under a declared sampling-
+density cap. The fixed-degree extension certifies all number fields through
+degree four at the same parameters, while an enriched 2-adic probe separates
+an explicit pair that complete Dedekind-zeta data cannot distinguish.
 
 The work was developed by **Codex (OpenAI)** from an originating question and
 research environment provided by TGN's human founder. It has not undergone
@@ -66,7 +68,8 @@ On Windows PowerShell, activate the environment with:
 python -m unittest discover -v
 ```
 
-The current release contains 93 tests.
+The test count is reported by the discovery command and grows with each
+research layer.
 
 ## Reproduce Arithmetic Sensing I
 
@@ -139,6 +142,25 @@ See `ARITHMETIC_SENSING_III.md` for the linear program, the independent
 certificate, and the theorem showing why no weighting of a fixed midpoint grid
 can remove its exact aliases.
 
+## Reproduce Arithmetic Sensing IV
+
+Recompute the continuum factors, alias-band remainder, million-term quadratic
+certificate, held-out bands, and enriched local probe:
+
+```sh
+python arithmetic_sensing_iv.py
+```
+
+The two larger studies are opt-in:
+
+```sh
+python arithmetic_sensing_iv.py --degree-study
+python arithmetic_sensing_iv.py --ratio-study
+```
+
+See `ARITHMETIC_SENSING_IV.md` for the interval divisor theorem, continuation
+tables, fixed-degree extension, and novelty boundary.
+
 ## Manuscript map
 
 ### Publication 1 — The Geometry Arithmetic Remembers
@@ -158,6 +180,8 @@ can remove its exact aliases.
 - `ARITHMETIC_SENSING.md` — random-time theorem layer
 - `ARITHMETIC_SENSING_II.md` — deterministic theorem and impossibility layer
 - `ARITHMETIC_SENSING_III.md` — optimized positive quadrature and alias theorem
+- `ARITHMETIC_SENSING_IV.md` — continuum positivity, alias bands, fixed degree,
+  and an enriched local channel
 - `STAGE_9_ARITHMETIC_SENSING_PLAN.md` — research plan and falsification rules
 
 `RESEARCH_ROADMAP.md` records the overall sequence and the boundary between
@@ -169,6 +193,8 @@ proved results, computation, conjecture, and interpretation.
 - `deterministic_arithmetic_sensing.py` — Hann midpoint and alias-safe theorem
 - `arithmetic_indistinguishability.py` — two-ball lower bound and Perlis metadata
 - `optimized_arithmetic_quadrature.py` — convex arithmetic window design
+- `fixed_degree_arithmetic_sensing.py` — universal `d_d` coefficient envelopes
+- `arithmetic_sensing_iv.py` — Stage IV reproduction and continuation studies
 - `adelic_poisson.py`, `quadratic_adelic_geometry.py` — adelic and field models
 - `global_trace_inversion.py`, `class_group_obstruction.py` — inverse Stage 8
 - `arithmetic_acceleration.py`, `exact_rigidity_certificates.py` — exact finite

@@ -22,6 +22,7 @@ from dataclasses import dataclass
 from typing import Sequence
 
 import numpy as np
+from numpy.polynomial import Chebyshev
 from scipy import sparse
 from scipy.optimize import linprog
 
@@ -46,6 +47,110 @@ class CosineQuadratureDesign:
     @property
     def harmonic_count(self) -> int:
         return len(self.coefficients)
+
+
+@dataclass(frozen=True)
+class FejerRieszCertificate:
+    """Numerical realization of an exact Fejer--Riesz certificate.
+
+    ``factor_coefficients`` are in increasing powers and certify
+
+        a_0 + 2 sum_(r=1)^H a_r cos(r theta)
+            = |sum_(r=0)^H q_r exp(i r theta)|^2.
+
+    The identity is checked coefficient by coefficient; ``residual`` records
+    the largest reconstruction error from floating-point root factorization.
+    """
+
+    constant_coefficient: float
+    cosine_coefficients: np.ndarray
+    factor_coefficients: np.ndarray
+    residual: float
+
+
+def continuous_density_extrema(
+    coefficients: Sequence[float], constant: float = 1.0
+) -> dict[str, float]:
+    """Return all-interval extrema of a real cosine polynomial.
+
+    With ``x=cos(theta)``, the density becomes an ordinary Chebyshev
+    polynomial on ``[-1,1]``.  Its extrema therefore occur at the endpoints
+    or at the real roots of its derivative.  This avoids a sampled-grid
+    positivity test.
+    """
+    cosine_coefficients = np.asarray(coefficients, dtype=float)
+    polynomial = Chebyshev(
+        np.concatenate(([constant], 2.0 * cosine_coefficients))
+    )
+    roots = polynomial.deriv().roots()
+    real_roots = np.real(roots[np.abs(np.imag(roots)) <= 1e-9])
+    critical = real_roots[(real_roots >= -1.0) & (real_roots <= 1.0)]
+    points = np.concatenate(([-1.0, 1.0], critical))
+    values = np.asarray(polynomial(points), dtype=float)
+    minimum_index = int(np.argmin(values))
+    maximum_index = int(np.argmax(values))
+    return {
+        "minimum": float(values[minimum_index]),
+        "minimum_x": float(points[minimum_index]),
+        "minimum_theta": float(math.acos(np.clip(points[minimum_index], -1.0, 1.0))),
+        "maximum": float(values[maximum_index]),
+        "maximum_x": float(points[maximum_index]),
+        "maximum_theta": float(math.acos(np.clip(points[maximum_index], -1.0, 1.0))),
+    }
+
+
+def fejer_riesz_certificate(
+    coefficients: Sequence[float],
+    constant: float = 1.0,
+    tolerance: float = 2e-7,
+) -> FejerRieszCertificate:
+    """Construct and verify a Fejer--Riesz spectral factor.
+
+    Strictly positive inputs have exactly one root from each reciprocal pair
+    inside the unit disk.  Selecting those roots constructs the minimum-phase
+    factor.  The returned residual is an independent coefficient-level check,
+    not a sampled comparison of function values.
+    """
+    cosine_coefficients = np.asarray(coefficients, dtype=float)
+    if constant <= 0.0:
+        raise ValueError("constant Fourier coefficient must be positive")
+    extrema = continuous_density_extrema(cosine_coefficients, constant)
+    if extrema["minimum"] < -tolerance:
+        raise ValueError("cosine polynomial is negative on the unit circle")
+    degree = len(cosine_coefficients)
+    if degree == 0:
+        factor = np.asarray([math.sqrt(constant)])
+    else:
+        # Coefficients of z^H p(z), in increasing powers of z.
+        self_reciprocal = np.concatenate(
+            (cosine_coefficients[::-1], [constant], cosine_coefficients)
+        )
+        roots = np.roots(self_reciprocal[::-1])
+        selected = roots[np.argsort(np.abs(roots))[:degree]]
+        factor = np.poly(selected)[::-1]
+        if np.max(np.abs(np.imag(factor))) <= 1e-8:
+            factor = np.real(factor)
+        factor = factor * math.sqrt(
+            constant / float(np.sum(np.abs(factor) ** 2))
+        )
+    reconstructed = np.asarray(
+        [
+            np.sum(factor[lag:] * np.conjugate(factor[: degree + 1 - lag]))
+            for lag in range(degree + 1)
+        ]
+    )
+    expected = np.concatenate(([constant], cosine_coefficients))
+    residual = float(np.max(np.abs(reconstructed - expected)))
+    if residual > tolerance:
+        raise ValueError(
+            f"spectral factor reconstruction residual {residual} exceeds tolerance"
+        )
+    return FejerRieszCertificate(
+        constant,
+        cosine_coefficients,
+        np.asarray(factor),
+        residual,
+    )
 
 
 def cosine_window_weights(design: CosineQuadratureDesign) -> np.ndarray:
@@ -184,6 +289,159 @@ def prealias_limit(design: CosineQuadratureDesign) -> float:
     )
 
 
+_EULER_GAMMA = 0.5772156649015329
+
+
+def quadratic_divisor_interval_l1_bound(
+    log_lower: float, log_upper: float, sigma: float
+) -> float:
+    """Bound ``sum_(exp(L)<n<=exp(U)) tau(n)n^-sigma``.
+
+    Dirichlet's hyperbola identity and elementary harmonic-number bounds give,
+    for ``x >= 4``,
+
+        x log x + (2 gamma - 1)x - 4 sqrt(x) - 4 <= D(x)
+        D(x) <= x log x + (2 gamma - 1)x + 3 sqrt(x) + 1,
+
+    where ``D(x)=sum_(n<=x) tau(n)``.  Abel summation with the lower endpoint
+    estimate and the upper integrand estimate yields the interval bound.  The
+    log-domain formula remains stable at remote aliases that cannot be sieved.
+    """
+    if sigma <= 1.0 or log_lower < math.log(4.0) or log_upper < log_lower:
+        raise ValueError("require sigma>1 and 4<=lower<=upper")
+    if log_upper == log_lower:
+        return 0.0
+    exponent = sigma - 1.0
+
+    def power(rate: float, logarithm: float) -> float:
+        return math.exp(-rate * logarithm)
+
+    lower_main = power(exponent, log_lower) * (
+        log_lower + 2.0 * _EULER_GAMMA - 1.0
+    )
+    lower_scaled = max(
+        0.0,
+        lower_main
+        - 4.0 * power(sigma - 0.5, log_lower)
+        - 4.0 * power(sigma, log_lower),
+    )
+    upper_scaled = power(exponent, log_upper) * (
+        log_upper + 2.0 * _EULER_GAMMA - 1.0
+    ) + 3.0 * power(sigma - 0.5, log_upper) + power(
+        sigma, log_upper
+    )
+
+    lower_exp = power(exponent, log_lower)
+    upper_exp = power(exponent, log_upper)
+    integral_log = lower_exp * (
+        log_lower / exponent + 1.0 / exponent**2
+    ) - upper_exp * (log_upper / exponent + 1.0 / exponent**2)
+    integral_constant = (lower_exp - upper_exp) / exponent
+    square_root_integral = (
+        power(sigma - 0.5, log_lower)
+        - power(sigma - 0.5, log_upper)
+    ) / (sigma - 0.5)
+    unit_integral = (
+        power(sigma, log_lower) - power(sigma, log_upper)
+    ) / sigma
+    integral_upper = (
+        integral_log
+        + (2.0 * _EULER_GAMMA - 1.0) * integral_constant
+        + 3.0 * square_root_integral
+        + unit_integral
+    )
+    return max(0.0, upper_scaled - lower_scaled + sigma * integral_upper)
+
+
+def trigonometric_kernel_interval_bound(
+    lower_frequency: float,
+    upper_frequency: float,
+    design: CosineQuadratureDesign,
+) -> float:
+    """Rigorous supremum envelope for ``|K(omega)|`` on an interval.
+
+    Each shifted uniform midpoint kernel is bounded by
+    ``min(1, pi/(T*distance_to_alias))``.  The triangle inequality combines
+    the finite cosine shifts, while positivity of the realized quadrature
+    supplies the final global cap ``|K|<=1``.
+    """
+    if lower_frequency < 0.0 or upper_frequency < lower_frequency:
+        raise ValueError("invalid nonnegative frequency interval")
+    alias_period = (
+        2.0 * math.pi * design.sample_count / design.observation_time
+    )
+    fundamental = 2.0 * math.pi / design.observation_time
+    center = 0.5 * (lower_frequency + upper_frequency)
+    half_width = 0.5 * (upper_frequency - lower_frequency)
+
+    def uniform_bound(shift: int) -> float:
+        shifted_center = center + shift * fundamental
+        centered_remainder = (
+            (shifted_center + 0.5 * alias_period) % alias_period
+        ) - 0.5 * alias_period
+        distance = max(0.0, abs(centered_remainder) - half_width)
+        if distance == 0.0:
+            return 1.0
+        return min(1.0, math.pi / (design.observation_time * distance))
+
+    result = uniform_bound(0)
+    for harmonic, coefficient in enumerate(design.coefficients, start=1):
+        result += abs(float(coefficient)) * (
+            uniform_bound(harmonic) + uniform_bound(-harmonic)
+        )
+    return min(1.0, result)
+
+
+def trigonometric_alias_band_remainder_bound(
+    target_norm: int,
+    truncation: int,
+    sigma: float,
+    design: CosineQuadratureDesign,
+    base_remainder: float,
+    alias_periods: int = 2,
+    bins_per_alias: int = 2_048,
+) -> float:
+    """All-alias remainder bound using log-frequency bands.
+
+    The unenumerated integers are partitioned by ``v=log(k/target_norm)``.
+    On each band we multiply a rigorous midpoint-kernel supremum by an Abel
+    bound for its divisor mass.  After the requested number of full alias
+    periods, the remaining mass is paid once with the elementary tail bound.
+    """
+    if target_norm < 1 or truncation < max(4, target_norm):
+        raise ValueError("target and truncation are inconsistent")
+    if alias_periods < 1 or bins_per_alias < 8:
+        raise ValueError("alias partition is too small")
+    start_frequency = math.log(float(truncation) / target_norm)
+    alias_period = (
+        2.0 * math.pi * design.sample_count / design.observation_time
+    )
+    end_frequency = (alias_periods + 0.5) * alias_period
+    if start_frequency >= end_frequency:
+        return base_remainder
+    step = alias_period / bins_per_alias
+    first_index = math.floor(start_frequency / step) + 1
+    last_index = math.ceil(end_frequency / step)
+    interior = np.arange(first_index, last_index, dtype=float) * step
+    boundaries = np.concatenate(
+        ([start_frequency], interior[interior < end_frequency], [end_frequency])
+    )
+    log_target = math.log(float(target_norm))
+    total = 0.0
+    for lower, upper in zip(boundaries[:-1], boundaries[1:]):
+        kernel_bound = trigonometric_kernel_interval_bound(
+            float(lower), float(upper), design
+        )
+        interval_mass = quadratic_divisor_interval_l1_bound(
+            log_target + float(lower), log_target + float(upper), sigma
+        )
+        total += kernel_bound * interval_mass
+    total += quadratic_tail_l1_elementary_bound(
+        log_target + end_frequency, sigma
+    )
+    return min(base_remainder, total)
+
+
 def trigonometric_alias_aware_remainder_bound(
     target_norm: int,
     truncation: int,
@@ -191,28 +449,14 @@ def trigonometric_alias_aware_remainder_bound(
     design: CosineQuadratureDesign,
     base_remainder: float,
 ) -> float:
-    """Rigorous remainder for a finite cosine-series midpoint window."""
-    start_frequency = math.log((truncation + 1.0) / target_norm)
-    fundamental = 2.0 * math.pi / design.observation_time
-    safe_limit = prealias_limit(design)
-    if start_frequency <= design.harmonic_count * fundamental:
-        return base_remainder
-    if start_frequency >= safe_limit or safe_limit <= 0.0:
-        return base_remainder
-
-    reciprocal_sum = 1.0 / start_frequency
-    for harmonic, coefficient in enumerate(design.coefficients, start=1):
-        shift = harmonic * fundamental
-        reciprocal_sum += abs(float(coefficient)) * (
-            1.0 / (start_frequency + shift)
-            + 1.0 / (start_frequency - shift)
-        )
-    kernel_factor = min(
-        1.0, math.pi * reciprocal_sum / design.observation_time
+    """Rigorous all-alias remainder for a cosine-series midpoint window."""
+    return trigonometric_alias_band_remainder_bound(
+        target_norm,
+        truncation,
+        sigma,
+        design,
+        base_remainder,
     )
-    remote_log_cutoff = math.log(float(target_norm)) + safe_limit
-    remote = quadratic_tail_l1_elementary_bound(remote_log_cutoff, sigma)
-    return min(base_remainder, kernel_factor * base_remainder + remote)
 
 
 def cosine_quadratic_tail_envelope(
@@ -313,6 +557,47 @@ def finite_cosine_tail_recovery_error(
     }
 
 
+def finite_divisor_tail_proxy(
+    maximum_norm: int,
+    sigma: float,
+    lower_tail_norm: int,
+    upper_tail_norm: int,
+    design: CosineQuadratureDesign,
+    coefficients: np.ndarray | None = None,
+    chunk_size: int = 100_000,
+) -> np.ndarray:
+    """Exact divisor-weighted correlation envelope on a finite held-out band."""
+    if (
+        maximum_norm < 1
+        or lower_tail_norm <= maximum_norm
+        or upper_tail_norm < lower_tail_norm
+        or sigma <= 1.0
+    ):
+        raise ValueError("invalid held-out tail band")
+    if coefficients is None:
+        coefficients = quadratic_divisor_coefficients_sieve(upper_tail_norm)
+    if len(coefficients) <= upper_tail_norm:
+        raise ValueError("coefficient array is too short")
+    result = np.zeros(maximum_norm, dtype=float)
+    for target_index, target_norm in enumerate(range(1, maximum_norm + 1)):
+        subtotal = 0.0
+        for start in range(
+            lower_tail_norm, upper_tail_norm + 1, chunk_size
+        ):
+            stop = min(upper_tail_norm + 1, start + chunk_size)
+            tail_norms = np.arange(start, stop, dtype=float)
+            weighted = coefficients[start:stop] * tail_norms ** (-sigma)
+            frequencies = np.log(target_norm / tail_norms)
+            subtotal += float(
+                np.dot(
+                    weighted,
+                    np.abs(centered_cosine_response(frequencies, design)),
+                )
+            )
+        result[target_index] = target_norm**sigma * subtotal
+    return result
+
+
 def _absolute_value_constraints(
     basis: np.ndarray,
     base: np.ndarray,
@@ -366,8 +651,18 @@ def optimize_cosine_quadrature(
     design_tail_cutoff: int = 500,
     gershgorin_lower_bound: float = 0.98,
     density_cap: float = 2.5,
+    continuous_density_margin: float = 1e-8,
+    maximum_continuum_rounds: int = 20,
 ) -> tuple[CosineQuadratureDesign, dict[str, object]]:
-    """Solve the finite positive-window design LP and return its certificate."""
+    """Solve the positive-window design LP and certify the full continuum.
+
+    The frequency-response and conditioning constraints are finite.  Density
+    positivity and the cap are semi-infinite constraints.  We solve them by
+    exact separation: each LP candidate is converted to a Chebyshev
+    polynomial, all derivative roots are inspected, and every violating
+    extremum is added as a cut.  At termination, Fejer--Riesz factors certify
+    both ``density >= 0`` and ``density <= density_cap`` on the entire period.
+    """
     if maximum_norm < 2 or design_tail_cutoff <= maximum_norm:
         raise ValueError("cutoffs are inconsistent")
     if sigma <= 1.0 or observation_time <= 0 or sample_count < 2:
@@ -378,6 +673,10 @@ def optimize_cosine_quadrature(
         raise ValueError("Gershgorin lower bound must lie in (0,1)")
     if density_cap < 1.0:
         raise ValueError("density_cap must be at least one")
+    if continuous_density_margin < 0.0 or 2.0 * continuous_density_margin >= density_cap:
+        raise ValueError("invalid continuous density margin")
+    if maximum_continuum_rounds < 1:
+        raise ValueError("maximum_continuum_rounds must be positive")
 
     target_pairs = [
         (left, right)
@@ -493,47 +792,22 @@ def optimize_cosine_quadrature(
     )
     tail_objective_rhs = np.zeros(maximum_norm)
 
-    times = midpoint_times(sample_count, observation_time)
     harmonics = np.arange(1, harmonic_count + 1, dtype=float)
-    grid_cosines = np.cos(
-        2.0
-        * math.pi
-        * np.outer(times / observation_time, harmonics)
-    )
-    positivity_left = sparse.hstack(
-        [
-            sparse.csr_matrix(-2.0 * grid_cosines),
-            sparse.csr_matrix((sample_count, variable_count - harmonic_count)),
-        ],
-        format="csr",
-    )
-    density_left = sparse.hstack(
-        [
-            sparse.csr_matrix(2.0 * grid_cosines),
-            sparse.csr_matrix((sample_count, variable_count - harmonic_count)),
-        ],
-        format="csr",
-    )
-
-    inequality_matrix = sparse.vstack(
+    finite_inequality_matrix = sparse.vstack(
         [
             target_absolute_matrix,
             tail_absolute_matrix,
             conditioning_matrix,
             tail_objective_matrix,
-            positivity_left,
-            density_left,
         ],
         format="csr",
     )
-    inequality_rhs = np.concatenate(
+    finite_inequality_rhs = np.concatenate(
         [
             target_absolute_rhs,
             tail_absolute_rhs,
             conditioning_rhs,
             tail_objective_rhs,
-            np.ones(sample_count),
-            np.full(sample_count, density_cap - 1.0),
         ]
     )
     objective = np.zeros(variable_count)
@@ -543,16 +817,75 @@ def optimize_cosine_quadrature(
         + [(0.0, 1.0)] * (target_count + tail_count)
         + [(0.0, None)]
     )
-    solution = linprog(
-        objective,
-        A_ub=inequality_matrix,
-        b_ub=inequality_rhs,
-        bounds=bounds,
-        method="highs",
-        options={"dual_feasibility_tolerance": 1e-9, "primal_feasibility_tolerance": 1e-9},
-    )
-    if not solution.success:
-        raise RuntimeError(f"quadrature LP failed: {solution.message}")
+    # A small seed grid initializes the exchange method.  These are not the
+    # certificate: the exact extrema separation and spectral factors below are.
+    density_angles = list(
+        np.linspace(0.0, 2.0 * math.pi, 8 * harmonic_count + 1, endpoint=False)
+    ) + [math.pi]
+    continuum_cuts = 0
+    solution = None
+    extrema = None
+    for continuum_round in range(1, maximum_continuum_rounds + 1):
+        density_cosines = np.cos(np.outer(density_angles, harmonics))
+        positivity_left = sparse.hstack(
+            [
+                sparse.csr_matrix(-2.0 * density_cosines),
+                sparse.csr_matrix(
+                    (len(density_angles), variable_count - harmonic_count)
+                ),
+            ],
+            format="csr",
+        )
+        density_left = sparse.hstack(
+            [
+                sparse.csr_matrix(2.0 * density_cosines),
+                sparse.csr_matrix(
+                    (len(density_angles), variable_count - harmonic_count)
+                ),
+            ],
+            format="csr",
+        )
+        inequality_matrix = sparse.vstack(
+            [finite_inequality_matrix, positivity_left, density_left],
+            format="csr",
+        )
+        inequality_rhs = np.concatenate(
+            [
+                finite_inequality_rhs,
+                np.full(len(density_angles), 1.0 - continuous_density_margin),
+                np.full(
+                    len(density_angles),
+                    density_cap - 1.0 - continuous_density_margin,
+                ),
+            ]
+        )
+        solution = linprog(
+            objective,
+            A_ub=inequality_matrix,
+            b_ub=inequality_rhs,
+            bounds=bounds,
+            method="highs",
+            options={
+                "dual_feasibility_tolerance": 1e-9,
+                "primal_feasibility_tolerance": 1e-9,
+            },
+        )
+        if not solution.success:
+            raise RuntimeError(f"quadrature LP failed: {solution.message}")
+        candidate = np.asarray(solution.x[coefficient_slice], dtype=float)
+        extrema = continuous_density_extrema(candidate)
+        violations: list[float] = []
+        if extrema["minimum"] < continuous_density_margin - 5e-10:
+            violations.append(extrema["minimum_theta"])
+        if extrema["maximum"] > density_cap - continuous_density_margin + 5e-10:
+            violations.append(extrema["maximum_theta"])
+        if not violations:
+            break
+        density_angles.extend(violations)
+        continuum_cuts += len(violations)
+    else:
+        raise RuntimeError("continuum density exchange method did not converge")
+    assert solution is not None and extrema is not None
     design = CosineQuadratureDesign(
         sample_count,
         observation_time,
@@ -561,6 +894,23 @@ def optimize_cosine_quadrature(
     weights = cosine_window_weights(design)
     gram = cosine_window_gram(maximum_norm, design)
     radius = float(np.max(np.sum(np.abs(gram), axis=1) - 1.0))
+    factor_margin = 0.5 * continuous_density_margin
+    lower_factor = fejer_riesz_certificate(
+        design.coefficients, constant=1.0 - factor_margin
+    )
+    upper_factor = fejer_riesz_certificate(
+        -design.coefficients,
+        constant=density_cap - 1.0 - factor_margin,
+    )
+    factor_error_multiplier = 2 * harmonic_count + 1
+    lower_certified_floor = (
+        factor_margin - factor_error_multiplier * lower_factor.residual
+    )
+    upper_certified_gap = (
+        factor_margin - factor_error_multiplier * upper_factor.residual
+    )
+    if lower_certified_floor <= 0.0 or upper_certified_gap <= 0.0:
+        raise RuntimeError("Fejer--Riesz residual is too large for certification")
     report = {
         "solver_status": solution.message,
         "objective_finite_tail_proxy": float(
@@ -569,6 +919,21 @@ def optimize_cosine_quadrature(
         "cosine_coefficients": design.coefficients.tolist(),
         "minimum_weight": float(np.min(weights)),
         "maximum_density": float(sample_count * np.max(weights)),
+        "continuous_minimum_density": extrema["minimum"],
+        "continuous_maximum_density": extrema["maximum"],
+        "continuum_exchange_rounds": continuum_round,
+        "continuum_extremum_cuts": continuum_cuts,
+        "lower_fejer_riesz_residual": lower_factor.residual,
+        "upper_fejer_riesz_residual": upper_factor.residual,
+        "fejer_riesz_factor_margin": factor_margin,
+        "certified_continuous_density_floor": lower_certified_floor,
+        "certified_continuous_cap_gap": upper_certified_gap,
+        "lower_fejer_riesz_factor": np.real_if_close(
+            lower_factor.factor_coefficients
+        ).tolist(),
+        "upper_fejer_riesz_factor": np.real_if_close(
+            upper_factor.factor_coefficients
+        ).tolist(),
         "effective_sample_count": float(1.0 / np.sum(weights**2)),
         "lambda_min": float(np.linalg.eigvalsh(gram)[0]),
         "gershgorin_radius": radius,

@@ -6,6 +6,7 @@ from arithmetic_indistinguishability import (
     adversarial_ambiguity_radius,
     direct_singleton_dirichlet_distance,
     perlis_degree_eight_collision,
+    perlis_two_adic_local_probe,
     singleton_dirichlet_distance,
 )
 
@@ -31,6 +32,17 @@ class ArithmeticIndistinguishabilityTests(unittest.TestCase):
     def test_perlis_hypothesis_rejects_square_parameter(self) -> None:
         with self.assertRaises(ValueError):
             perlis_degree_eight_collision(1)
+
+    def test_enriched_two_adic_probe_breaks_zeta_collision(self) -> None:
+        probe = perlis_two_adic_local_probe(33)
+        self.assertTrue(probe["dedekind_zeta_functions_equal"])
+        self.assertEqual(probe["shared_residue_degrees"], [1, 1, 1, 1])
+        self.assertEqual(probe["first_factor_degrees"], [1, 1, 2, 4])
+        self.assertEqual(probe["second_factor_degrees"], [2, 2, 2, 2])
+        self.assertTrue(probe["first_factorization_identity_verified"])
+        self.assertTrue(probe["second_factorization_identity_verified"])
+        self.assertTrue(probe["enriched_two_adic_channel_separates_pair"])
+        self.assertFalse(probe["aggregate_zeta_channel_separates_pair"])
 
 
 if __name__ == "__main__":

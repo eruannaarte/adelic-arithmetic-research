@@ -120,6 +120,84 @@ def perlis_degree_eight_collision(parameter: int = 3) -> dict[str, object]:
     }
 
 
+def _multiply_integer_polynomials(*factors: list[int]) -> list[int]:
+    """Multiply coefficient lists stored in increasing powers."""
+    result = [1]
+    for factor in factors:
+        product = [0] * (len(result) + len(factor) - 1)
+        for left_index, left in enumerate(result):
+            for right_index, right in enumerate(factor):
+                product[left_index + right_index] += left * right
+        result = product
+    return result
+
+
+def perlis_two_adic_local_probe(parameter: int = 33) -> dict[str, object]:
+    """An enriched 2-adic channel that breaks a Dedekind-zeta collision.
+
+    For a Perlis parameter ``a == 1 (mod 32)``, ``a`` is an eighth power in
+    ``Q_2``.  The two local algebras reduce to those defined by ``x^8-1`` and
+    ``x^8-16``.  Their residue degrees are all one, so their local Dedekind
+    Euler factors agree, but their ramification/component-degree multisets are
+    ``(1,1,2,4)`` and ``(2,2,2,2)``.  Thus a local-algebra channel is strictly
+    more informative than the aggregate zeta channel on this explicit pair.
+    """
+    collision = perlis_degree_eight_collision(parameter)
+    if parameter % 32 != 1:
+        raise ValueError("the explicit 2-adic reduction requires a == 1 mod 32")
+
+    first_factors = [
+        [-1, 1],
+        [1, 1],
+        [1, 0, 1],
+        [1, 0, 0, 0, 1],
+    ]
+    second_factors = [
+        [2, 2, 1],
+        [2, -2, 1],
+        [-2, 0, 1],
+        [2, 0, 1],
+    ]
+    first_product = _multiply_integer_polynomials(*first_factors)
+    second_product = _multiply_integer_polynomials(*second_factors)
+    x_eight_minus_one = [-1] + [0] * 7 + [1]
+    x_eight_minus_sixteen = [-16] + [0] * 7 + [1]
+    first_local_degrees = [1, 1, 2, 4]
+    second_local_degrees = [2, 2, 2, 2]
+    residue_degrees = [1, 1, 1, 1]
+    return {
+        **collision,
+        "prime": 2,
+        "parameter_is_two_adic_eighth_power": True,
+        "first_reduced_local_polynomial": "x^8 - 1",
+        "second_reduced_local_polynomial": "x^8 - 16",
+        "first_factor_degrees": first_local_degrees,
+        "second_factor_degrees": second_local_degrees,
+        "first_ramification_indices": first_local_degrees,
+        "second_ramification_indices": second_local_degrees,
+        "shared_residue_degrees": residue_degrees,
+        "shared_local_euler_factor": "(1 - 2^(-s))^(-4)",
+        "first_factorization_identity_verified": (
+            first_product == x_eight_minus_one
+        ),
+        "second_factorization_identity_verified": (
+            second_product == x_eight_minus_sixteen
+        ),
+        "aggregate_zeta_channel_separates_pair": False,
+        "enriched_two_adic_channel_separates_pair": (
+            first_local_degrees != second_local_degrees
+        ),
+        "enriched_probe": (
+            "multiset of Q_2-component dimensions, equivalently the "
+            "ramification-index multiset because every residue degree is one"
+        ),
+        "local_algebra_source": (
+            "A. Angelakis, Universal Adelic Groups for Number Fields, "
+            "Example 1.4.1 (2015)"
+        ),
+    }
+
+
 def analyze(
     maximum_norm: int = 50,
     sigma: float = 2.0,
