@@ -4,7 +4,9 @@
 > `ARITHMETIC_SENSING_V_ALL_ALIAS_OPTIMIZATION.md` shows that the degree-nine
 > obstruction reported here was caused by a triangle-inequality proof loss.
 > At the same resources, the updated sufficient certificate reaches degree
-> thirteen. The results below remain the historical first log-Mellin layer.
+> thirteen. `ARITHMETIC_SENSING_V_END_TO_END.md` later certifies that frontier
+> with Arb finite sums and an inverse-free Gram theorem. The results below
+> remain the historical first log-Mellin layer.
 
 ## Exact continuum positivity, log-Mellin alias certificates, and the fixed-degree recovery boundary
 

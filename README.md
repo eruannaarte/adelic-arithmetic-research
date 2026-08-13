@@ -212,6 +212,17 @@ See `ARITHMETIC_SENSING_V_ALL_ALIAS_OPTIMIZATION.md` for the exact response
 factorization, directed interval theorem, new degree-thirteen frontier,
 optimizer falsification experiments, and remaining formal boundary.
 
+Close that formal boundary with the end-to-end checker:
+
+```sh
+python verify_end_to_end_certificate.py --processes 8
+```
+
+This composes the remote artifact with one hundred million Arb finite-response
+evaluations and an inverse-free Gram theorem. Degree thirteen is formally
+certified at `0.3308795520`; degree fourteen first fails at `0.8438209207`.
+See `ARITHMETIC_SENSING_V_END_TO_END.md`.
+
 ## Manuscript map
 
 ### Publication 1 — The Geometry Arithmetic Remembers
@@ -239,6 +250,8 @@ optimizer falsification experiments, and remaining formal boundary.
   convolution, and the compact remote-tail checker
 - `ARITHMETIC_SENSING_V_ALL_ALIAS_OPTIMIZATION.md` — cancellation geometry,
   the degree-thirteen frontier, and actual all-alias window search
+- `ARITHMETIC_SENSING_V_END_TO_END.md` — Arb finite tails, inverse-free Gram
+  control, and the formal degree-thirteen frontier
 - `STAGE_9_ARITHMETIC_SENSING_PLAN.md` — research plan and falsification rules
 
 `RESEARCH_ROADMAP.md` records the overall sequence and the boundary between
@@ -258,6 +271,10 @@ proved results, computation, conjecture, and interpretation.
 - `verify_mellin_certificate.py` — compact-artifact builder and checker
 - `all_alias_mellin_optimization.py` — million-term plus all-alias candidate
   objective and independent candidate audit
+- `verified_end_to_end_certificate.py` — Arb finite sums and localized Neumann
+  consequence
+- `verify_end_to_end_certificate.py` — compact end-to-end artifact builder and
+  checker
 - `adelic_poisson.py`, `quadratic_adelic_geometry.py` — adelic and field models
 - `global_trace_inversion.py`, `class_group_obstruction.py` — inverse Stage 8
 - `arithmetic_acceleration.py`, `exact_rigidity_certificates.py` — exact finite

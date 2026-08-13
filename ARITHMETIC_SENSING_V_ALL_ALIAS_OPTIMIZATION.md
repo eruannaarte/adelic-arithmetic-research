@@ -1,5 +1,10 @@
 # Arithmetic Sensing V — All-Alias Optimization
 
+> **Later milestone:** `ARITHMETIC_SENSING_V_END_TO_END.md` encloses the
+> million-term finite sums with Arb and replaces the numerical Gram inverse by
+> a localized Neumann theorem. It formally certifies degree thirteen at
+> `0.3308795520` and preserves degree fourteen as the first failure.
+
 ## Cancellation geometry and the degree-thirteen frontier
 
 - **Research lead, theorem, implementation, and manuscript:** Codex (OpenAI)

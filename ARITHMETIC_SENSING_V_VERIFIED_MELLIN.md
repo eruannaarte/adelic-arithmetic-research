@@ -3,7 +3,9 @@
 > **Later milestone:** `ARITHMETIC_SENSING_V_ALL_ALIAS_OPTIMIZATION.md`
 > preserves cancellation among shifted kernels and supersedes the numerical
 > degree-eight/degree-nine boundary below. This document remains the formal
-> foundation for directed bins and exact dyadic convolution.
+> foundation for directed bins and exact dyadic convolution. The subsequent
+> `ARITHMETIC_SENSING_V_END_TO_END.md` also closes the finite-sum and Gram-solve
+> boundary.
 
 ## Directed MPFR bins, exact dyadic convolution, and a compact checker
 

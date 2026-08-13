@@ -316,6 +316,22 @@ kernel and verified-Mellin modules,
 `certificates/arithmetic_sensing_v_cancellation_frontier.json`, and their
 tests.
 
+**End-to-end formal-numerics milestone:** checked unsigned-integer convolution
+constructs the degree-13 and degree-14 divisor coefficients through one
+million, and Arb encloses every finite response and Gram off-diagonal. A
+localized Neumann theorem replaces numerical matrix inversion while avoiding
+the false global pairing of target 1's largest raw tail with target 50's
+quadratic scale. Composed with the directed-MPFR remote artifact, degree
+thirteen is formally certified at `0.3308795520`; degree fourteen is the first
+failure at `0.8438209207`. The formal frontier therefore agrees with the hybrid
+frontier. A proposed single Mellin certificate beginning at norm 50 is rejected
+because tuple-bin width destroys adjacent-mode cancellation and gives a bound
+above 12.
+
+Deliverables: `ARITHMETIC_SENSING_V_END_TO_END.md`,
+`verified_end_to_end_certificate.py`, `verify_end_to_end_certificate.py`,
+`certificates/arithmetic_sensing_v_end_to_end.json`, and their tests.
+
 ## Adjacent target — arithmetic acceleration
 
 **Status:** first exact study completed in Stage 5; asymptotic questions remain
