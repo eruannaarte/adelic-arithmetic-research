@@ -270,6 +270,21 @@ that `T=510` uniquely beats every other declared short time from 300 through
 retains a rigorous support gap above `5.07e-7`. See
 `ARITHMETIC_SENSING_V_ADAPTIVE_EXCHANGE.md`.
 
+Close the finite residual with a complete million-mode stopping certificate:
+
+```sh
+python verify_residual_stopping_certificate.py --processes 5
+```
+
+The fourteen-mode duals eliminate 45 competing supports, and complete Arb
+duals eliminate the remaining five. The exact published `T=510` design beats
+every other declared pair support on the complete target-50 finite objective,
+with closest gap `5.0873130853e-7`. See
+`ARITHMETIC_SENSING_V_RESIDUAL_STOPPING.md`.
+
+For the public synthesis of the complete progression, see
+`ARITHMETIC_SENSING_V_COMPLETE.md`.
+
 ## Manuscript map
 
 ### Publication 1 — The Geometry Arithmetic Remembers
@@ -286,6 +301,8 @@ retains a rigorous support gap above `5.07e-7`. See
 
 ### Publication 2 — Arithmetic Sensing
 
+- `ARITHMETIC_SENSING_V_COMPLETE.md` — canonical unified Arithmetic Sensing V
+  publication, from log-Mellin geometry through residual stopping
 - `ARITHMETIC_SENSING.md` — random-time theorem layer
 - `ARITHMETIC_SENSING_II.md` — deterministic theorem and impossibility layer
 - `ARITHMETIC_SENSING_III.md` — optimized positive quadrature and alias theorem
@@ -307,6 +324,8 @@ retains a rigorous support gap above `5.07e-7`. See
   sparse positive minimax search, and an 8,900-reading formal certificate
 - `ARITHMETIC_SENSING_V_ADAPTIVE_EXCHANGE.md` — adaptive mode rows, exact
   rational duality, and Arb-robust pair-support selection
+- `ARITHMETIC_SENSING_V_RESIDUAL_STOPPING.md` — selected-mode screening,
+  complete million-mode duals, and the finite pair-support stopping theorem
 - `STAGE_9_ARITHMETIC_SENSING_PLAN.md` — research plan and falsification rules
 
 `RESEARCH_ROADMAP.md` records the overall sequence and the boundary between
@@ -343,6 +362,9 @@ proved results, computation, conjecture, and interpretation.
 - `verify_multiscale_certificate.py` — reference multiscale artifact builder
   and checker
 - `verify_adaptive_multiscale_certificate.py` — self-contained exact dual
+  artifact builder and checker
+- `residual_stopping_envelope.py` — two-layer complete finite support audit
+- `verify_residual_stopping_certificate.py` — compact residual-stopping
   artifact builder and checker
 - `adelic_poisson.py`, `quadratic_adelic_geometry.py` — adelic and field models
 - `global_trace_inversion.py`, `class_group_obstruction.py` — inverse Stage 8

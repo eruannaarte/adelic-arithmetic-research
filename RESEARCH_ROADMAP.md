@@ -403,6 +403,25 @@ Deliverables: `ARITHMETIC_SENSING_V_ADAPTIVE_EXCHANGE.md`,
 dual/Arb artifact, a reusable verified signed-response interval function, and
 their tests.
 
+**Residual-stopping and Arithmetic Sensing V completion milestone:** the
+fourteen-mode restricted dual bounds are compared with the published complete
+finite upper, eliminating 45 of the 50 competing short supports without any
+residual estimate. The five survivors receive complete million-mode feasible
+duals, with every short and outer component sum enclosed in 192-bit Arb. The
+closest competitor is `T=500`; its full finite lower
+`4.431758370846863e-6` exceeds the published `T=510` upper
+`3.9230270623181385e-6` by `5.087313085287239e-7`. Thus no unselected
+target-50 finite mode through one million can reverse the declared pair-support
+choice. This closes Arithmetic Sensing V; enlarged multiscale families,
+multi-target exchange, continuous times, and noise-aware design begin a new
+publication.
+
+Deliverables: `ARITHMETIC_SENSING_V_COMPLETE.md`,
+`ARITHMETIC_SENSING_V_RESIDUAL_STOPPING.md`,
+`residual_stopping_envelope.py`,
+`verify_residual_stopping_certificate.py`,
+`certificates/arithmetic_sensing_v_residual_stopping.json`, and their tests.
+
 ## Adjacent target — arithmetic acceleration
 
 **Status:** first exact study completed in Stage 5; asymptotic questions remain

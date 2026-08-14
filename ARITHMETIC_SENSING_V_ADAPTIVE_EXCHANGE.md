@@ -444,9 +444,10 @@ python -m unittest -v test_adaptive_multiscale_exchange.py
 
 ## 10. Next research targets
 
-1. **Residual stopping envelope.** Bound the total contribution of every
-   unselected finite mode uniformly over the candidate weight simplex. This
-   would turn support stability into a finite stopping theorem.
+1. **Residual stopping envelope — completed.** The selected-mode screen and
+   five million-mode Arb duals now prove a complete target-50 finite stopping
+   theorem over the declared pair family. See
+   `ARITHMETIC_SENSING_V_RESIDUAL_STOPPING.md`.
 2. **Multi-target exchange.** Let targets 1 through 50 propose mode rows and
    solve the true worst-target restricted master problem.
 3. **Robust multi-scale duals.** Extend the Arb-interval rational certificate
@@ -458,6 +459,7 @@ python -m unittest -v test_adaptive_multiscale_exchange.py
    contributions for every candidate scale rather than using them only in the
    independent recovery audit.
 
-The most immediate target is the residual stopping envelope. It attacks the
-largest remaining logical gap: not whether the selected finite LP is solved,
-but when the adaptive finite LP has seen enough of the million-term geometry.
+The residual stopping theorem closes the largest logical gap left by this
+manuscript: it proves that the unselected finite modes cannot reverse the
+declared support ordering. The remaining targets enlarge the objective or the
+design family and therefore begin the research after Arithmetic Sensing V.
