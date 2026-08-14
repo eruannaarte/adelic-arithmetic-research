@@ -23,6 +23,14 @@ signed-displacement leakage theorem, and exact protocol counterexamples. The
 adjacent Stage IV E-design is also independently bracketed with rational
 witnesses and 192-bit Arb arithmetic.
 
+Stages VI and VII then prove the fixed-mode continuum limit and resolve the
+smooth-to-atomic initial layer. A concentrating target of width
+\(\varepsilon\) has an explicit continuum phase function in
+\(t/\varepsilon^2\); at \(\varepsilon/h=O(1)\), an explicit lattice phase
+retains cell placement and preparation rules. The two charts match, while an
+adversarial audit separates multiplication-moment order from the complete
+noncommutative causal-word hierarchy.
+
 The active continuation also includes continuum-certified arithmetic window
 design. Its eight-harmonic positive quadrature and alias-by-alias remainder
 theorem improve the complete-tail bound at `N=50`, `sigma=2`, `T=1000`, and
@@ -257,6 +265,20 @@ fixed-response convergence through time zero, the smooth positive-time
 \(O(n^{-2})\) theorem, atomic and growing-band boundaries, and the next
 mollifier target.
 
+Run the Stage VII smooth-to-atomic phase laboratories:
+
+    python -m pip install -r oig_vii_mollifier_requirements.txt
+    python -m unittest -v test_oig_vii_mollifier_phase.py
+    python oig_vii_mollifier_phase.py --fast
+    python oig_vii_mollifier_phase.py
+    python oig_vii_adversarial_controls.py
+    python -m unittest -v test_oig_vii_adversarial_controls.py
+
+See [OPERATIONAL_INFORMATION_GEOMETRY_VII.md](OPERATIONAL_INFORMATION_GEOMETRY_VII.md)
+for the continuum and lattice phase laws, their matching limit, odd/even ramp
+critical widths, fixed-positive-time atomic universality, and the explicit
+boundary between multiplication moments and complete causal order.
+
 Run the outward-rounded finite-grid E-design certificate separately:
 
 ```sh
@@ -315,6 +337,15 @@ frozen binary64 grid. It does not certify a continuum-time optimum.
   checks
 - [OIG_VI_ADVERSARIAL_AUDIT.md](OIG_VI_ADVERSARIAL_AUDIT.md) — rate, atom,
   endpoint, symmetry, and growing-band falsification controls
+- [OPERATIONAL_INFORMATION_GEOMETRY_VII.md](OPERATIONAL_INFORMATION_GEOMETRY_VII.md)
+  — smooth-to-atomic phase diagram, continuum/lattice matching, and critical
+  width boundary
+- [OIG_VII_CONTINUUM_MOLLIFIER_THEOREM.md](OIG_VII_CONTINUUM_MOLLIFIER_THEOREM.md)
+  — detailed balanced, early, atomic, and finite-cell proofs
+- [oig_vii_mollifier_phase.md](oig_vii_mollifier_phase.md) — full-generator,
+  high-precision, lattice, bridge, and phase-ridge audit
+- [OIG_VII_ADVERSARIAL_AUDIT.md](OIG_VII_ADVERSARIAL_AUDIT.md) — sampling,
+  boundary, operator-topology, and mixed-word counterexamples
 - `oig_iv_certificate.md` — outward-rounded finite-grid E-design certificate
 - `oig_v_scaling_report.md` — independent continuum and propagation audit
 
@@ -347,6 +378,11 @@ proved results, computation, conjecture, and interpretation.
   comparison, and Galerkin-tail audit
 - [oig_vi_adversarial_controls.py](oig_vi_adversarial_controls.py) —
   nonsmooth, atomic, endpoint, symmetry, and growing-band controls
+- [oig_vii_mollifier_phase.py](oig_vii_mollifier_phase.py) — continuum and
+  lattice phase functions, full finite modal responses, bridge, and ridge
+  audits
+- [oig_vii_adversarial_controls.py](oig_vii_adversarial_controls.py) —
+  lattice-phase, boundary, sampling, topology, symmetry, and mixed-jet controls
 - `oig_iv_certificate.py` — rational/Arb finite-grid E-design checker
 - `adelic_poisson.py`, `quadratic_adelic_geometry.py` — adelic and field models
 - `global_trace_inversion.py`, `class_group_obstruction.py` — inverse Stage 8
