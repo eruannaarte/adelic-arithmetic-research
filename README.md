@@ -290,7 +290,10 @@ Run the Stage VIII uniform three-parameter atlas and adversarial controls:
 See [OPERATIONAL_INFORMATION_GEOMETRY_VIII.md](OPERATIONAL_INFORMATION_GEOMETRY_VIII.md)
 for the quantitative resolved and lattice charts, the direct simultaneous
 atomic theorem, reflecting-boundary crossover, critical-width resolution
-certificates, and the discrete-moment obstruction.
+certificates, and the discrete-moment obstruction. The dedicated dependency
+surface, exact source digests, reference environment, and complete validation
+commands are frozen in
+[OIG_VIII_REPRODUCIBILITY_MANIFEST.md](OIG_VIII_REPRODUCIBILITY_MANIFEST.md).
 
 Run the outward-rounded finite-grid E-design certificate separately:
 
@@ -370,6 +373,9 @@ frozen binary64 grid. It does not certify a continuum-time optimum.
   stress scan, overlap rates, critical slowdown, and explicit counterexamples
 - [OIG_VIII_ADVERSARIAL_AUDIT.md](OIG_VIII_ADVERSARIAL_AUDIT.md) — independent
   normalization, rate, null-port, boundary, and proof-gap audit
+- [OIG_VIII_REPRODUCIBILITY_MANIFEST.md](OIG_VIII_REPRODUCIBILITY_MANIFEST.md)
+  — minimal dependencies, immutable theorem commit, source digests, and
+  validation commands
 - `oig_iv_certificate.md` — outward-rounded finite-grid E-design certificate
 - `oig_v_scaling_report.md` — independent continuum and propagation audit
 
