@@ -6,6 +6,7 @@ from arithmetic_indistinguishability import (
     adversarial_ambiguity_radius,
     direct_singleton_dirichlet_distance,
     perlis_degree_eight_collision,
+    perlis_two_adic_moment_channel,
     perlis_two_adic_local_probe,
     singleton_dirichlet_distance,
 )
@@ -43,6 +44,13 @@ class ArithmeticIndistinguishabilityTests(unittest.TestCase):
         self.assertTrue(probe["second_factorization_identity_verified"])
         self.assertTrue(probe["enriched_two_adic_channel_separates_pair"])
         self.assertFalse(probe["aggregate_zeta_channel_separates_pair"])
+
+    def test_second_local_dimension_moment_is_first_separator(self) -> None:
+        channel = perlis_two_adic_moment_channel(33)
+        self.assertEqual(channel["first_separating_moment_order"], 2)
+        self.assertEqual(channel["first_separating_responses"], [22, 16])
+        self.assertEqual(channel["response_distance"], 6)
+        self.assertEqual(channel["adversarial_ambiguity_radius"], 3.0)
 
 
 if __name__ == "__main__":

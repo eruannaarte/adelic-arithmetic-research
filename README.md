@@ -10,13 +10,16 @@ for two TGN research publications:
    from noisy global traces, deterministic tapered quadrature, complete
    analytic-tail certificates, and explicit nonidentifiability results.
 
-The active continuation also includes continuum-certified arithmetic window
-design. Its eight-harmonic positive quadrature and alias-by-alias remainder
-theorem improve the complete-tail bound at `N=50`, `sigma=2`, `T=1000`, and
-`m=5000` from Hann's `0.0270048` to `0.0000456318` under a declared sampling-
-density cap. The fixed-degree extension certifies all number fields through
-degree four at the same parameters, while an enriched 2-adic probe separates
-an explicit pair that complete Dedekind-zeta data cannot distinguish.
+The active continuation includes continuum-certified arithmetic window design
+and a cancellation-aware log-Mellin certificate for higher-degree coefficient
+tails. At `N=50`, `sigma=2`, `T=1000`, and `m=5000`, the eight-harmonic
+positive quadrature bounds the complete quadratic tail by `0.0000456318`. An
+exact common-numerator identity removes a triangle-inequality artifact in the
+remote theorem and now certifies every number field through degree thirteen at
+the same parameters. Degree thirteen gives `0.330597`; degree fourteen is the
+first failure of this sufficient certificate at `0.842697`. Exact rational
+Sturm calculations independently certify the published window and the new
+all-alias optimization candidate over the full continuum.
 
 The work was developed by **Codex (OpenAI)** from an originating question and
 research environment provided by TGN's human founder. It has not undergone
@@ -161,6 +164,127 @@ python arithmetic_sensing_iv.py --ratio-study
 See `ARITHMETIC_SENSING_IV.md` for the interval divisor theorem, continuation
 tables, fixed-degree extension, and novelty boundary.
 
+## Reproduce Arithmetic Sensing V
+
+Run the exact density certificate, the default degree-five report, and the
+enriched local-moment channel:
+
+```sh
+python arithmetic_sensing_v.py
+```
+
+The longer continuation studies are opt-in:
+
+```sh
+python arithmetic_sensing_v.py --degree-study
+python arithmetic_sensing_v.py --degree-study --maximum-study-degree 15
+python arithmetic_sensing_v.py --bin-study
+python arithmetic_sensing_v.py --degree-aware-study
+python arithmetic_sensing_v.py --degree-nine-time-study
+python arithmetic_sensing_v.py --noise-study
+```
+
+See `ARITHMETIC_SENSING_V.md` for the log-Mellin convolution theorem, the
+original degree-eight boundary, degree-nine time continuation, sampling/noise
+costs, and exact local collision separation. The later cancellation theorem
+supersedes that numerical boundary without altering the original argument.
+
+Verify the outward-rounded MPFR/dyadic remote-tail artifact:
+
+```sh
+python verify_mellin_certificate.py
+```
+
+The checker reconstructs the exact dyadic convolutions for degrees 5, 8, and
+9. See `ARITHMETIC_SENSING_V_VERIFIED_MELLIN.md` for its proof boundary.
+
+Verify the cancellation-aware degree 9/13/14 frontier and reproduce the
+all-alias optimization candidate:
+
+```sh
+python verify_mellin_certificate.py \
+  --certificate certificates/arithmetic_sensing_v_cancellation_frontier.json \
+  --degrees 9,13,14 --skip-hybrid-report
+python all_alias_mellin_optimization.py --complete-certificate
+```
+
+See `ARITHMETIC_SENSING_V_ALL_ALIAS_OPTIMIZATION.md` for the exact response
+factorization, directed interval theorem, new degree-thirteen frontier,
+optimizer falsification experiments, and remaining formal boundary.
+
+Close that formal boundary with the end-to-end checker:
+
+```sh
+python verify_end_to_end_certificate.py --processes 8
+```
+
+This composes the remote artifact with one hundred million Arb finite-response
+evaluations and an inverse-free Gram theorem. Degree thirteen is formally
+certified at `0.3308795520`; degree fourteen first fails at `0.8438209207`.
+See `ARITHMETIC_SENSING_V_END_TO_END.md`.
+
+Reproduce the compact degree-fourteen resource-boundary study:
+
+```sh
+python degree_fourteen_resource_law.py
+```
+
+At `T=1000`, the formal endpoint at 14,690 samples misses the strict threshold
+at `0.5000009667`, while 14,691 formally pass at `0.4999975382`. Along
+`m/T=5`, the adjacent formal boundary is `T=1892/1893`. See
+`ARITHMETIC_SENSING_V_DEGREE_14_RESOURCE_LAW.md`.
+
+Reproduce the resonance-aware nested time ensemble:
+
+```sh
+python time_ensemble_design.py
+```
+
+The ratios `51/50` and `52/50` explain more than 99% of the two largest finite
+resource peaks. A positive reweighting of a 2,500-point central subset inside
+an 8,950-point grid suppresses the dominant lobe. Its formal endpoint is
+`0.4972362699` at maximum time 1,790, improving both resource coordinates of
+the previous ratio-five frontier. See `ARITHMETIC_SENSING_V_TIME_DIVERSITY.md`.
+
+Run the arithmetic multiscale design algorithm:
+
+```sh
+python arithmetic_multiscale_sensing.py
+```
+
+The dangerous-mode detector, positive minimax LP, sparse-support search, and
+exact dyadic rationalization produce a nested candidate using 8,900 distinct
+readings through time 1,780. Its independent all-target Arb/MPFR endpoint is
+`0.4980274168`. See `ARITHMETIC_SENSING_V_MULTISCALE.md`.
+
+Run adaptive mode exchange and the exact support-optimality layer:
+
+```sh
+python adaptive_multiscale_exchange.py
+```
+
+Starting from two modes, four full-tail exchange rounds keep selecting
+`T=510`. Exact rational duals weakened over 192-bit Arb intervals then prove
+that `T=510` uniquely beats every other declared short time from 300 through
+800 for the resulting fourteen-mode objective. The published dyadic weight
+retains a rigorous support gap above `5.07e-7`. See
+`ARITHMETIC_SENSING_V_ADAPTIVE_EXCHANGE.md`.
+
+Close the finite residual with a complete million-mode stopping certificate:
+
+```sh
+python verify_residual_stopping_certificate.py --processes 5
+```
+
+The fourteen-mode duals eliminate 45 competing supports, and complete Arb
+duals eliminate the remaining five. The exact published `T=510` design beats
+every other declared pair support on the complete target-50 finite objective,
+with closest gap `5.0873130853e-7`. See
+`ARITHMETIC_SENSING_V_RESIDUAL_STOPPING.md`.
+
+For the public synthesis of the complete progression, see
+`ARITHMETIC_SENSING_V_COMPLETE.md`.
+
 ## Manuscript map
 
 ### Publication 1 — The Geometry Arithmetic Remembers
@@ -177,11 +301,31 @@ tables, fixed-degree extension, and novelty boundary.
 
 ### Publication 2 — Arithmetic Sensing
 
+- `ARITHMETIC_SENSING_V_COMPLETE.md` — canonical unified Arithmetic Sensing V
+  publication, from log-Mellin geometry through residual stopping
 - `ARITHMETIC_SENSING.md` — random-time theorem layer
 - `ARITHMETIC_SENSING_II.md` — deterministic theorem and impossibility layer
 - `ARITHMETIC_SENSING_III.md` — optimized positive quadrature and alias theorem
 - `ARITHMETIC_SENSING_IV.md` — continuum positivity, alias bands, fixed degree,
   and an enriched local channel
+- `ARITHMETIC_SENSING_V.md` — exact positivity, Mellin-convolution tails,
+  degree-eight universality, and quantitative continuation costs
+- `ARITHMETIC_SENSING_V_VERIFIED_MELLIN.md` — MPFR-directed bins, exact dyadic
+  convolution, and the compact remote-tail checker
+- `ARITHMETIC_SENSING_V_ALL_ALIAS_OPTIMIZATION.md` — cancellation geometry,
+  the degree-thirteen frontier, and actual all-alias window search
+- `ARITHMETIC_SENSING_V_END_TO_END.md` — Arb finite tails, inverse-free Gram
+  control, and the formal degree-thirteen frontier
+- `ARITHMETIC_SENSING_V_DEGREE_14_RESOURCE_LAW.md` — exact sampling and
+  observation thresholds amid logarithmic resonances
+- `ARITHMETIC_SENSING_V_TIME_DIVERSITY.md` — resonance attribution and a
+  formally certified nested two-window sensing measure
+- `ARITHMETIC_SENSING_V_MULTISCALE.md` — convex response-signature design,
+  sparse positive minimax search, and an 8,900-reading formal certificate
+- `ARITHMETIC_SENSING_V_ADAPTIVE_EXCHANGE.md` — adaptive mode rows, exact
+  rational duality, and Arb-robust pair-support selection
+- `ARITHMETIC_SENSING_V_RESIDUAL_STOPPING.md` — selected-mode screening,
+  complete million-mode duals, and the finite pair-support stopping theorem
 - `STAGE_9_ARITHMETIC_SENSING_PLAN.md` — research plan and falsification rules
 
 `RESEARCH_ROADMAP.md` records the overall sequence and the boundary between
@@ -195,6 +339,33 @@ proved results, computation, conjecture, and interpretation.
 - `optimized_arithmetic_quadrature.py` — convex arithmetic window design
 - `fixed_degree_arithmetic_sensing.py` — universal `d_d` coefficient envelopes
 - `arithmetic_sensing_iv.py` — Stage IV reproduction and continuation studies
+- `arithmetic_sensing_v.py` — Stage V reproduction and boundary studies
+- `exact_trigonometric_positivity.py` — exact rational Sturm certificates
+- `verified_mellin_certificate.py` — directed MPFR and exact convolution core
+- `verify_mellin_certificate.py` — compact-artifact builder and checker
+- `all_alias_mellin_optimization.py` — million-term plus all-alias candidate
+  objective and independent candidate audit
+- `verified_end_to_end_certificate.py` — Arb finite sums and localized Neumann
+  consequence
+- `verify_end_to_end_certificate.py` — compact end-to-end artifact builder and
+  checker
+- `degree_fourteen_resource_law.py` — fixed-time density and fixed-ratio
+  observation scans
+- `time_ensemble_design.py` — dominant-mode attribution and nested-ensemble
+  exploration
+- `arithmetic_multiscale_sensing.py` — dangerous-mode detection, positive
+  minimax design, sparse-support search, and exact nested-grid realization
+- `adaptive_multiscale_exchange.py` — million-term mode exchange and exact
+  rational/Arb support-frontier certificates
+- `verify_time_ensemble_certificate.py` — formal signed multi-time Arb
+  certificate builder and checker
+- `verify_multiscale_certificate.py` — reference multiscale artifact builder
+  and checker
+- `verify_adaptive_multiscale_certificate.py` — self-contained exact dual
+  artifact builder and checker
+- `residual_stopping_envelope.py` — two-layer complete finite support audit
+- `verify_residual_stopping_certificate.py` — compact residual-stopping
+  artifact builder and checker
 - `adelic_poisson.py`, `quadratic_adelic_geometry.py` — adelic and field models
 - `global_trace_inversion.py`, `class_group_obstruction.py` — inverse Stage 8
 - `arithmetic_acceleration.py`, `exact_rigidity_certificates.py` — exact finite

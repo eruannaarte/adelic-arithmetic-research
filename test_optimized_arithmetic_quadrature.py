@@ -7,6 +7,7 @@ import numpy as np
 
 from deterministic_arithmetic_sensing import midpoint_times
 from optimized_arithmetic_quadrature import (
+    cancellation_kernel_interval_bound,
     CosineQuadratureDesign,
     continuous_density_extrema,
     cosine_window_gram,
@@ -71,6 +72,25 @@ class OptimizedArithmeticQuadratureTests(unittest.TestCase):
         )
         self.assertGreater(
             float(np.linalg.eigvalsh(cosine_window_gram(10, design))[0]), 0.9
+        )
+
+    def test_optimizer_accepts_custom_nonnegative_tail_envelope(self) -> None:
+        envelope = np.ones(41)
+        envelope[0] = 0.0
+        _, report = optimize_cosine_quadrature(
+            maximum_norm=8,
+            sigma=2.0,
+            observation_time=300.0,
+            sample_count=200,
+            harmonic_count=2,
+            design_tail_cutoff=40,
+            gershgorin_lower_bound=0.85,
+            density_cap=2.5,
+            design_envelope_coefficients=envelope,
+        )
+        self.assertEqual(
+            report["design_envelope"],
+            "caller-supplied nonnegative envelope",
         )
 
     def test_published_eight_harmonic_design_is_positive_and_well_conditioned(self) -> None:
@@ -159,6 +179,39 @@ class OptimizedArithmeticQuadratureTests(unittest.TestCase):
         exact = float(np.max(np.abs(cosine_window_kernel(frequencies, design))))
         bound = trigonometric_kernel_interval_bound(lower, upper, design)
         self.assertGreaterEqual(bound + 1e-14, exact)
+
+    def test_cancellation_interval_bound_dominates_dense_samples(self) -> None:
+        design = CosineQuadratureDesign(
+            5_000,
+            1_000.0,
+            np.asarray(
+                [
+                    -0.626411857413006,
+                    0.11592816172103249,
+                    0.0016529529219241504,
+                    0.009509006875539596,
+                    -0.0006326688393882172,
+                    -0.00013205040380077627,
+                    0.00039451702458319105,
+                    -0.00030217949865822015,
+                ]
+            ),
+        )
+        for lower, upper in [(14.01, 14.10), (31.30, 31.40), (47.0, 47.09)]:
+            bound = cancellation_kernel_interval_bound(lower, upper, design)
+            frequencies = np.linspace(lower, upper, 20_001)
+            exact = float(
+                np.max(np.abs(cosine_window_kernel(frequencies, design)))
+            )
+            self.assertGreaterEqual(bound + 1e-14, exact)
+
+    def test_cancellation_bound_improves_remote_pre_alias_interval(self) -> None:
+        design = CosineQuadratureDesign(
+            5_000, 1_000.0, np.asarray([-0.62, 0.11, 0.002, 0.009])
+        )
+        cancellation = cancellation_kernel_interval_bound(14.01, 14.10, design)
+        triangle = trigonometric_kernel_interval_bound(14.01, 14.10, design)
+        self.assertLess(cancellation, triangle)
 
     def test_alias_band_remainder_improves_global_l1_tail(self) -> None:
         design = CosineQuadratureDesign(
