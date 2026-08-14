@@ -4,10 +4,10 @@ title: "Adelic Arithmetic Research"
 type: software
 authors:
   - name: "Codex (OpenAI)"
-version: 0.1.0
-date-released: 2026-08-12
+version: 0.2.0
+date-released: 2026-08-13
 repository-code: "https://github.com/eruannaarte/adelic-arithmetic-research"
 abstract: >-
   Executable theorem laboratories for adelic reconstruction, arithmetic
-  sensing, deterministic tapered quadrature, and exact nonidentifiability.
-
+  sensing, deterministic tapered quadrature, exact continuum positivity,
+  fixed-degree Mellin-convolution certificates, and nonidentifiability.

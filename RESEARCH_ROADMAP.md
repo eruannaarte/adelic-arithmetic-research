@@ -1,6 +1,6 @@
 # Order–Factorization and Adelic Geometry: Recommended Work Order
 
-**Updated:** 2026-08-12
+**Updated:** 2026-08-13
 
 This roadmap keeps the adelic line as the main program while preserving finite
 arithmetic rigidity as an adjacent branch that can be resumed when it becomes a
@@ -256,6 +256,171 @@ Euler data at 2 is separated by local component dimensions `(1,1,2,4)` versus
 Deliverables: `ARITHMETIC_SENSING_IV.md`, `arithmetic_sensing_iv.py`,
 `fixed_degree_arithmetic_sensing.py`, expanded local-probe and optimized-
 quadrature modules, and their tests.
+
+### Stage 9 continuation — Arithmetic Sensing V — theorem layer complete
+
+Replace the coarse pre-alias estimate for the universal fixed-degree envelope
+`d_d=1^{*d}` by a positive log-Mellin convolution certificate. Partition one
+zeta factor into logarithmic bins, convolve the certified bin masses `d` times,
+pair those masses with interval suprema of the sampling kernel, and close the
+remaining remote tail analytically. Certify the published trigonometric window
+over the continuum with exact rational arithmetic, then measure where degree,
+observation time, sensor count, and enriched local information change the
+recovery conclusion.
+
+Result: the old degree-five failure is traced to a deliberately coarse remote
+remainder, not to observed tail mass. The new positive convolution bound gives
+`0.00775069` in degree five and certifies every number field through degree
+eight at the Stage IV parameters; degree nine is the first failure, at
+`1.13679`. Holding `m/T=5`, degree nine crosses the `1/2` rounding threshold by
+`T=2450`. Exact Sturm sequences prove
+`10^-5 < p(theta) < 2.499999995` for the rationalized eight-harmonic density.
+For quadratic fields with sensor noise `0.01`, about 67,200 readings make the
+stated union-bound failure probability smaller than `10^-6`. Finally, power
+moments of the 2-adic component dimensions separate the Perlis collision at
+moment order two, with integer observation distance six and adversarial
+ambiguity radius three.
+
+Deliverables: `ARITHMETIC_SENSING_V.md`, `arithmetic_sensing_v.py`,
+`exact_trigonometric_positivity.py`, strengthened fixed-degree and local-probe
+modules, and their tests.
+
+**Verified-Mellin milestone:** the heuristic one-factor safety multiplier is
+replaced by 192-bit directed MPFR boundaries, `2^-96` dyadic bin upper bounds,
+and exact carry-free integer convolution. The committed 11-kilobyte checker
+artifact reconstructs all remote target bounds for degrees 5, 8, and 9 and
+confirms that the degree-eight/degree-nine boundary is unchanged. The formal
+scope is the post-million Mellin remainder; the finite vectorized sum and Gram
+inverse remain explicitly hybrid.
+
+Deliverables: `ARITHMETIC_SENSING_V_VERIFIED_MELLIN.md`,
+`verified_mellin_certificate.py`, `verify_mellin_certificate.py`,
+`certificates/arithmetic_sensing_v_verified_mellin.json`, and their tests.
+
+**Cancellation and all-alias optimization milestone:** an exact
+common-numerator factorization is used before taking absolute values, yielding
+a directed-MPFR interval theorem that preserves the cosine window's intended
+cancellation. At the unchanged `N=50`, `sigma=2`, `T=1000`, `m=5000`
+resources, the reference window now certifies every fixed-degree number field
+through degree thirteen (`0.330597`); degree fourteen is the first failure of
+this sufficient proof (`0.842697`). The former degree-nine remote bound falls
+by about 247 times. A search containing every million-term finite response and
+every retained Mellin alias bin improves the degree-nine complete bound by a
+further 3.77%, while remote-only and single-target searches supply explicit
+negative controls. The formal artifact covers the remote terms; finite sums
+and the Gram inverse remain hybrid.
+
+Deliverables: `ARITHMETIC_SENSING_V_ALL_ALIAS_OPTIMIZATION.md`,
+`all_alias_mellin_optimization.py`, cancellation-aware extensions to the
+kernel and verified-Mellin modules,
+`certificates/arithmetic_sensing_v_cancellation_frontier.json`, and their
+tests.
+
+**End-to-end formal-numerics milestone:** checked unsigned-integer convolution
+constructs the degree-13 and degree-14 divisor coefficients through one
+million, and Arb encloses every finite response and Gram off-diagonal. A
+localized Neumann theorem replaces numerical matrix inversion while avoiding
+the false global pairing of target 1's largest raw tail with target 50's
+quadratic scale. Composed with the directed-MPFR remote artifact, degree
+thirteen is formally certified at `0.3308795520`; degree fourteen is the first
+failure at `0.8438209207`. The formal frontier therefore agrees with the hybrid
+frontier. A proposed single Mellin certificate beginning at norm 50 is rejected
+because tuple-bin width destroys adjacent-mode cancellation and gives a bound
+above 12.
+
+Deliverables: `ARITHMETIC_SENSING_V_END_TO_END.md`,
+`verified_end_to_end_certificate.py`, `verify_end_to_end_certificate.py`,
+`certificates/arithmetic_sensing_v_end_to_end.json`, and their tests.
+
+**Degree-fourteen resource-law milestone:** observation time and sample count
+are separated as geometrically distinct resources. At fixed `T=1000`, formal
+adjacent artifacts give `0.5000009667` at 14,690 samples and `0.4999975382` at
+14,691, confirming the adjacent boundary found by the localized scan. At fixed
+ratio `m/T=5`, an exhaustive hybrid scan of every
+integer `T` from 1000 through 3000 finds one crossing: formal artifacts give
+`0.5000018477` at `T=1892` and `0.4992815922` at `T=1893`. Proportional scaling
+initially worsens recovery through finite logarithmic resonances before the
+longer observation wins. At fixed `T`, dense sampling approaches a nonzero
+continuous-window floor near `0.47566`, showing that samples cannot substitute
+for observation time indefinitely.
+
+Deliverables: `ARITHMETIC_SENSING_V_DEGREE_14_RESOURCE_LAW.md`,
+`degree_fourteen_resource_law.py`, parameterized formal checkers, eight remote
+and end-to-end boundary artifacts, and their tests.
+
+**Resonance-aware time-diversity milestone:** the large finite peaks at
+`T=1100` and `T=1200` are localized: the ratios `51/50` and `52/50` contribute
+more than 99% of the target-50 finite leakage. A positive centered ensemble
+uses exact weights `7/4096` at `(T,m)=(500,2500)` and `4089/4096` at
+`(1790,8950)`. The grids share spacing `1/5`; the short grid is exactly the
+central subset of the long grid, so only 8,950 distinct observations are
+required. Signed cancellation is preserved through all finite Arb sums and
+Gram rows, while separate MPFR remote bounds are combined conservatively. The
+formal coefficient endpoint is `0.4972362699`, improving both observation time
+and distinct reading count over the previous ratio-five single-window
+frontier.
+
+Deliverables: `ARITHMETIC_SENSING_V_TIME_DIVERSITY.md`,
+`time_ensemble_design.py`, `verify_time_ensemble_certificate.py`, two MPFR
+remote dependencies, the end-to-end ensemble and same-grid control artifacts,
+and their tests.
+
+**Arithmetic multiscale sensing milestone:** nested window design is recast as
+convex geometry on signed log-frequency response signatures. For any declared
+finite dangerous-mode set, an epigraph linear program exactly minimizes the
+worst weighted selected-target leakage over the candidate probability
+simplex. Sparse-support enumeration and exact dyadic rounding turn the
+discovery output into a simple rational measure. At degree fourteen the first
+scanned outer-time crossing simplified from three proposed scales to the exact
+two-scale weights `125/65536` at `(T,m)=(510,2550)` and `65411/65536` at
+`(1780,8900)`. The short grid is an exact central subset of the long grid, so
+the construction uses 8,900 distinct readings. Its independent all-target
+Arb/MPFR endpoint is `0.4980274168`, reducing the preceding nested design by
+50 readings and 10 time units without claiming global optimality.
+
+Deliverables: `ARITHMETIC_SENSING_V_MULTISCALE.md`,
+`arithmetic_multiscale_sensing.py`, `verify_multiscale_certificate.py`, two
+new remote dependencies, the end-to-end multiscale and same-grid control
+artifacts, and their tests.
+
+**Adaptive exchange and dual-geometry milestone:** the proposed adaptive
+procedure is corrected terminologically to mode-row generation: modes add
+constraints or epigraph terms, while scales are the columns. Beginning with
+only `51/50` and `52/50`, four design/audit rounds add twelve newly exposed
+modes without changing the selected `(510,1780)` support or its numerical
+weight. For the fourteen-mode problem present at the fourth solve, every
+signed response on all 51 candidate short times is enclosed with 192-bit Arb.
+Exact rational primal/dual witnesses are then weakened over those intervals.
+They prove `T=510` uniquely optimal over the declared pair-support family,
+with optimized separation `5.1507e-7` from runner-up `T=500`. The published
+weight `125/65536` itself retains separation `5.0770e-7`. This finite support
+theorem is explicitly separate from the prior all-target recovery theorem;
+adaptive termination and global scale optimality remain open.
+
+Deliverables: `ARITHMETIC_SENSING_V_ADAPTIVE_EXCHANGE.md`,
+`adaptive_multiscale_exchange.py`,
+`verify_adaptive_multiscale_certificate.py`, the self-contained exact
+dual/Arb artifact, a reusable verified signed-response interval function, and
+their tests.
+
+**Residual-stopping and Arithmetic Sensing V completion milestone:** the
+fourteen-mode restricted dual bounds are compared with the published complete
+finite upper, eliminating 45 of the 50 competing short supports without any
+residual estimate. The five survivors receive complete million-mode feasible
+duals, with every short and outer component sum enclosed in 192-bit Arb. The
+closest competitor is `T=500`; its full finite lower
+`4.431758370846863e-6` exceeds the published `T=510` upper
+`3.9230270623181385e-6` by `5.087313085287239e-7`. Thus no unselected
+target-50 finite mode through one million can reverse the declared pair-support
+choice. This closes Arithmetic Sensing V; enlarged multiscale families,
+multi-target exchange, continuous times, and noise-aware design begin a new
+publication.
+
+Deliverables: `ARITHMETIC_SENSING_V_COMPLETE.md`,
+`ARITHMETIC_SENSING_V_RESIDUAL_STOPPING.md`,
+`residual_stopping_envelope.py`,
+`verify_residual_stopping_certificate.py`,
+`certificates/arithmetic_sensing_v_residual_stopping.json`, and their tests.
 
 ## Adjacent target — arithmetic acceleration
 
