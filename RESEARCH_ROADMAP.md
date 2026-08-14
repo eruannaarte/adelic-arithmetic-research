@@ -383,6 +383,26 @@ Deliverables: `ARITHMETIC_SENSING_V_MULTISCALE.md`,
 new remote dependencies, the end-to-end multiscale and same-grid control
 artifacts, and their tests.
 
+**Adaptive exchange and dual-geometry milestone:** the proposed adaptive
+procedure is corrected terminologically to mode-row generation: modes add
+constraints or epigraph terms, while scales are the columns. Beginning with
+only `51/50` and `52/50`, four design/audit rounds add twelve newly exposed
+modes without changing the selected `(510,1780)` support or its numerical
+weight. For the fourteen-mode problem present at the fourth solve, every
+signed response on all 51 candidate short times is enclosed with 192-bit Arb.
+Exact rational primal/dual witnesses are then weakened over those intervals.
+They prove `T=510` uniquely optimal over the declared pair-support family,
+with optimized separation `5.1507e-7` from runner-up `T=500`. The published
+weight `125/65536` itself retains separation `5.0770e-7`. This finite support
+theorem is explicitly separate from the prior all-target recovery theorem;
+adaptive termination and global scale optimality remain open.
+
+Deliverables: `ARITHMETIC_SENSING_V_ADAPTIVE_EXCHANGE.md`,
+`adaptive_multiscale_exchange.py`,
+`verify_adaptive_multiscale_certificate.py`, the self-contained exact
+dual/Arb artifact, a reusable verified signed-response interval function, and
+their tests.
+
 ## Adjacent target — arithmetic acceleration
 
 **Status:** first exact study completed in Stage 5; asymptotic questions remain

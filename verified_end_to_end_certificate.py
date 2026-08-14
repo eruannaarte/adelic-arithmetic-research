@@ -149,6 +149,16 @@ def _arb_binary64(value: float) -> arb:
     return _arb_fraction(Fraction.from_float(float(value)))
 
 
+def _arf_fraction(value: object) -> Fraction:
+    """Convert an exact Arb endpoint to its exact dyadic rational value."""
+    mantissa, exponent = value.man_exp()
+    integer_mantissa = int(mantissa)
+    integer_exponent = int(exponent)
+    if integer_exponent >= 0:
+        return Fraction(integer_mantissa << integer_exponent)
+    return Fraction(integer_mantissa, 1 << (-integer_exponent))
+
+
 def _arb_upper_dyadic_numerator(value: arb, scale_bits: int) -> int:
     if scale_bits < 1 or not value.is_finite() or value < 0:
         raise ValueError("a finite nonnegative ball is required")
@@ -206,6 +216,39 @@ def _centered_response_absolute(
             pi,
         )
     )
+
+
+def verified_centered_response_interval(
+    target_norm: int,
+    tail_norm: int,
+    observation_time: int,
+    sample_count: int,
+    window_coefficients: Sequence[float] = REFERENCE_COEFFICIENTS,
+    precision: int = 192,
+) -> tuple[Fraction, Fraction]:
+    """Enclose one signed arithmetic response by exact dyadic endpoints."""
+    if (
+        target_norm < 1
+        or tail_norm < 1
+        or observation_time < 1
+        or sample_count < 2
+        or precision < 64
+    ):
+        raise ValueError("invalid centered-response parameters")
+    ctx.prec = precision
+    frequency = (arb(tail_norm) / target_norm).log()
+    window = tuple(
+        _arb_fraction(Fraction.from_float(float(value)))
+        for value in window_coefficients
+    )
+    response = _centered_response(
+        frequency,
+        observation_time,
+        sample_count,
+        window,
+        arb.pi(),
+    )
+    return _arf_fraction(response.lower()), _arf_fraction(response.upper())
 
 
 _WORKER_COEFFICIENTS: np.ndarray | None = None

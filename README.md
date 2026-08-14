@@ -257,6 +257,19 @@ exact dyadic rationalization produce a nested candidate using 8,900 distinct
 readings through time 1,780. Its independent all-target Arb/MPFR endpoint is
 `0.4980274168`. See `ARITHMETIC_SENSING_V_MULTISCALE.md`.
 
+Run adaptive mode exchange and the exact support-optimality layer:
+
+```sh
+python adaptive_multiscale_exchange.py
+```
+
+Starting from two modes, four full-tail exchange rounds keep selecting
+`T=510`. Exact rational duals weakened over 192-bit Arb intervals then prove
+that `T=510` uniquely beats every other declared short time from 300 through
+800 for the resulting fourteen-mode objective. The published dyadic weight
+retains a rigorous support gap above `5.07e-7`. See
+`ARITHMETIC_SENSING_V_ADAPTIVE_EXCHANGE.md`.
+
 ## Manuscript map
 
 ### Publication 1 — The Geometry Arithmetic Remembers
@@ -292,6 +305,8 @@ readings through time 1,780. Its independent all-target Arb/MPFR endpoint is
   formally certified nested two-window sensing measure
 - `ARITHMETIC_SENSING_V_MULTISCALE.md` — convex response-signature design,
   sparse positive minimax search, and an 8,900-reading formal certificate
+- `ARITHMETIC_SENSING_V_ADAPTIVE_EXCHANGE.md` — adaptive mode rows, exact
+  rational duality, and Arb-robust pair-support selection
 - `STAGE_9_ARITHMETIC_SENSING_PLAN.md` — research plan and falsification rules
 
 `RESEARCH_ROADMAP.md` records the overall sequence and the boundary between
@@ -321,10 +336,14 @@ proved results, computation, conjecture, and interpretation.
   exploration
 - `arithmetic_multiscale_sensing.py` — dangerous-mode detection, positive
   minimax design, sparse-support search, and exact nested-grid realization
+- `adaptive_multiscale_exchange.py` — million-term mode exchange and exact
+  rational/Arb support-frontier certificates
 - `verify_time_ensemble_certificate.py` — formal signed multi-time Arb
   certificate builder and checker
 - `verify_multiscale_certificate.py` — reference multiscale artifact builder
   and checker
+- `verify_adaptive_multiscale_certificate.py` — self-contained exact dual
+  artifact builder and checker
 - `adelic_poisson.py`, `quadratic_adelic_geometry.py` — adelic and field models
 - `global_trace_inversion.py`, `class_group_obstruction.py` — inverse Stage 8
 - `arithmetic_acceleration.py`, `exact_rigidity_certificates.py` — exact finite

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-import unittest
 import json
+import unittest
 from fractions import Fraction
 from pathlib import Path
 
@@ -22,6 +22,7 @@ from verified_end_to_end_certificate import (
     verified_end_to_end_bound,
     verified_ensemble_finite_tail_bounds,
     verified_ensemble_gram_row_bound,
+    verified_centered_response_interval,
     verified_finite_tail_bounds,
     verified_gram_row_bound,
 )
@@ -29,6 +30,22 @@ from verify_end_to_end_certificate import artifact_document, verify_artifact
 
 
 class VerifiedEndToEndCertificateTests(unittest.TestCase):
+    def test_arb_signed_response_interval_is_tight(self) -> None:
+        lower, upper = verified_centered_response_interval(
+            50, 51, 510, 2_550, precision=128
+        )
+        observed = float(
+            centered_cosine_response(
+                np.log(51.0 / 50.0),
+                CosineQuadratureDesign(
+                    2_550, 510.0, REFERENCE_COEFFICIENTS.copy()
+                ),
+            )
+        )
+        self.assertLessEqual(lower, upper)
+        self.assertLess(abs(float((lower + upper) / 2) - observed), 2e-15)
+        self.assertLess(float(upper - lower), 1e-30)
+
     def test_checked_uint64_sieve_matches_existing_small_sieve(self) -> None:
         exact = exact_fixed_degree_coefficients_uint64(300, 7)
         existing = fixed_degree_divisor_coefficients_sieve(300, 7)
