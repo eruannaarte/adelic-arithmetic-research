@@ -279,6 +279,19 @@ for the continuum and lattice phase laws, their matching limit, odd/even ramp
 critical widths, fixed-positive-time atomic universality, and the explicit
 boundary between multiplication moments and complete causal order.
 
+Run the Stage VIII uniform three-parameter atlas and adversarial controls:
+
+    python -m pip install -r oig_viii_three_parameter_requirements.txt
+    python -m unittest -v test_oig_viii_three_parameter.py
+    python -m unittest -v test_oig_viii_adversarial_controls.py
+    python oig_viii_three_parameter.py --fast
+    python oig_viii_three_parameter.py
+
+See [OPERATIONAL_INFORMATION_GEOMETRY_VIII.md](OPERATIONAL_INFORMATION_GEOMETRY_VIII.md)
+for the quantitative resolved and lattice charts, the direct simultaneous
+atomic theorem, reflecting-boundary crossover, critical-width resolution
+certificates, and the discrete-moment obstruction.
+
 Run the outward-rounded finite-grid E-design certificate separately:
 
 ```sh
@@ -346,6 +359,17 @@ frozen binary64 grid. It does not certify a continuum-time optimum.
   high-precision, lattice, bridge, and phase-ridge audit
 - [OIG_VII_ADVERSARIAL_AUDIT.md](OIG_VII_ADVERSARIAL_AUDIT.md) — sampling,
   boundary, operator-topology, and mixed-word counterexamples
+- [OPERATIONAL_INFORMATION_GEOMETRY_VIII.md](OPERATIONAL_INFORMATION_GEOMETRY_VIII.md)
+  — uniform three-parameter atlas, simultaneous atomic theorem, boundary
+  crossover, and critical-resolution barrier
+- [OIG_VIII_RESOLVED_UNIFORM_THEOREM.md](OIG_VIII_RESOLVED_UNIFORM_THEOREM.md)
+  — detailed balanced, early, ultra-early, and heat-resolved comparison proof
+- [OIG_VIII_LATTICE_UNIFORM_THEOREM.md](OIG_VIII_LATTICE_UNIFORM_THEOREM.md)
+  — finite-cell chart, joint atomic tail, variance criterion, and boundary law
+- [oig_viii_three_parameter.md](oig_viii_three_parameter.md) — rectangular
+  stress scan, overlap rates, critical slowdown, and explicit counterexamples
+- [OIG_VIII_ADVERSARIAL_AUDIT.md](OIG_VIII_ADVERSARIAL_AUDIT.md) — independent
+  normalization, rate, null-port, boundary, and proof-gap audit
 - `oig_iv_certificate.md` — outward-rounded finite-grid E-design certificate
 - `oig_v_scaling_report.md` — independent continuum and propagation audit
 
@@ -383,6 +407,8 @@ proved results, computation, conjecture, and interpretation.
   audits
 - [oig_vii_adversarial_controls.py](oig_vii_adversarial_controls.py) —
   lattice-phase, boundary, sampling, topology, symmetry, and mixed-jet controls
+- [oig_viii_three_parameter.py](oig_viii_three_parameter.py) — finite,
+  lattice, continuum, early, and atomic chart comparisons plus hostile paths
 - `oig_iv_certificate.py` — rational/Arb finite-grid E-design checker
 - `adelic_poisson.py`, `quadratic_adelic_geometry.py` — adelic and field models
 - `global_trace_inversion.py`, `class_group_obstruction.py` — inverse Stage 8

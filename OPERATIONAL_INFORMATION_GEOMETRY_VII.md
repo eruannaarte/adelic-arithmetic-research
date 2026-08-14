@@ -996,3 +996,9 @@ current host.
 6. **Only afterward open the wave branch.** Replace parabolic smoothing by
    finite-speed propagation and determine which operational phase ideas
    survive.
+
+**Continuation note (Stage VIII).** The uniform resolved/lattice comparison,
+the simultaneous interior atomic tail, and the atomic reflecting-boundary
+chart are proved in `OPERATIONAL_INFORMATION_GEOMETRY_VIII.md`.  The research
+order now begins with the growing-band source theorem; diffusion-scale target
+shapes remain the next boundary refinement.
