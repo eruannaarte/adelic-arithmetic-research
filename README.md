@@ -242,6 +242,21 @@ mesoscopic dimension theorem, directed modal reduction, causal-jet regularity
 and symmetry bounds, diffusive leakage envelope, expanding-domain control,
 path-space sensor result, and next proof targets.
 
+Run the Stage VI fixed-mode continuum theorem, high-precision audit, and
+adversarial controls:
+
+    python -m pip install -r oig_vi_fixed_mode_requirements.txt
+    python oig_vi_fixed_mode_convergence.py
+    python -m unittest -v test_oig_vi_fixed_mode_convergence.py
+    python oig_vi_adversarial_controls.py
+    python -m unittest -v test_oig_vi_adversarial_controls.py
+
+See [OPERATIONAL_INFORMATION_GEOMETRY_VI.md](OPERATIONAL_INFORMATION_GEOMETRY_VI.md)
+for compact Mosco convergence, positive-time embedded semigroup convergence,
+fixed-response convergence through time zero, the smooth positive-time
+\(O(n^{-2})\) theorem, atomic and growing-band boundaries, and the next
+mollifier target.
+
 Run the outward-rounded finite-grid E-design certificate separately:
 
 ```sh
@@ -290,6 +305,16 @@ frozen binary64 grid. It does not certify a continuum-time optimum.
 - `OPERATIONAL_INFORMATION_GEOMETRY_V.md` — continuum scale flow,
   noncommuting dimension limits, response regularity, diffusive leakage, and
   protocol boundaries
+- [OPERATIONAL_INFORMATION_GEOMETRY_VI.md](OPERATIONAL_INFORMATION_GEOMETRY_VI.md)
+  — fixed-mode continuum theorem, sharp positive-time response rate, and
+  time-zero boundary
+- [OIG_VI_FIXED_MODE_RESPONSE_THEOREM.md](OIG_VI_FIXED_MODE_RESPONSE_THEOREM.md)
+  — detailed Mosco and quantitative finite-element proof
+- [oig_vi_fixed_mode_convergence.md](oig_vi_fixed_mode_convergence.md) —
+  exact modal expansion, high-precision audit, and outward-rounded finite-block
+  checks
+- [OIG_VI_ADVERSARIAL_AUDIT.md](OIG_VI_ADVERSARIAL_AUDIT.md) — rate, atom,
+  endpoint, symmetry, and growing-band falsification controls
 - `oig_iv_certificate.md` — outward-rounded finite-grid E-design certificate
 - `oig_v_scaling_report.md` — independent continuum and propagation audit
 
@@ -317,6 +342,11 @@ proved results, computation, conjecture, and interpretation.
   scale flow, spectral dimension, modal response, and protocol boundaries
 - `oig_v_scaling_continuum.py` — independent regularity, propagation, and
   expanding-domain audit
+- [oig_vi_fixed_mode_convergence.py](oig_vi_fixed_mode_convergence.py) —
+  exact midpoint structure, fixed-block expansion, high-precision continuum
+  comparison, and Galerkin-tail audit
+- [oig_vi_adversarial_controls.py](oig_vi_adversarial_controls.py) —
+  nonsmooth, atomic, endpoint, symmetry, and growing-band controls
 - `oig_iv_certificate.py` — rational/Arb finite-grid E-design checker
 - `adelic_poisson.py`, `quadratic_adelic_geometry.py` — adelic and field models
 - `global_trace_inversion.py`, `class_group_obstruction.py` — inverse Stage 8
