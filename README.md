@@ -1,7 +1,8 @@
 # Adelic Arithmetic Research
 
 This repository contains the manuscripts, executable laboratories, and tests
-for two TGN research publications:
+for two TGN research publications and one new operational-geometry research
+program:
 
 1. **The Geometry Arithmetic Remembers** — an eight-stage path from ordered
    multiplicative rigidity through adelic harmonic analysis, number-field
@@ -9,6 +10,18 @@ for two TGN research publications:
 2. **Arithmetic Sensing** — stable recovery of finite Dirichlet coefficients
    from noisy global traces, deterministic tapered quadrature, complete
    analytic-tail certificates, and explicit nonidentifiability results.
+3. **Operational Information Geometry** — a finite, falsifiable construction
+   in which restricted histories induce a quotient geometry, tested on a
+   factorization universe against degree-preserving random controls, followed
+   by protocol-invariance, common-kernel, composition, interaction, and
+   directed-intervention audits.
+
+The fifth operational-geometry layer supplies the first controlled scale flow:
+cell-centred continuum normalization, noncommuting spectral-dimension limits,
+target-mode response reduction, smooth-versus-atomic regularity, a diffusive
+signed-displacement leakage theorem, and exact protocol counterexamples. The
+adjacent Stage IV E-design is also independently bracketed with rational
+witnesses and 192-bit Arb arithmetic.
 
 The active continuation also includes continuum-certified arithmetic window
 design. Its eight-harmonic positive quadrature and alias-by-alias remainder
@@ -161,6 +174,86 @@ python arithmetic_sensing_iv.py --ratio-study
 See `ARITHMETIC_SENSING_IV.md` for the interval divisor theorem, continuation
 tables, fixed-degree extension, and novelty boundary.
 
+## Reproduce Operational Information Geometry
+
+Run the focused theorem and falsification tests:
+
+```sh
+python -m unittest -v test_operational_information_geometry.py
+```
+
+Recompute the reference factorization universe and 32 connected
+degree-preserving controls:
+
+```sh
+python operational_information_geometry.py --controls 32
+```
+
+See `OPERATIONAL_INFORMATION_GEOMETRY_I.md` for the operational quotient
+metric, exact Gaussian testing interpretation, product-spectrum theorem,
+matched controls, negative result for arbitrary-mixture recovery, and scope.
+
+Run the Stage II protocol-invariance and mixture-recovery laboratory:
+
+```sh
+python -m unittest -v test_operational_information_geometry_ii.py
+python operational_information_geometry_ii.py --protocols 16
+```
+
+See `OPERATIONAL_INFORMATION_GEOMETRY_II.md` for the finite random-projection
+guarantee, schedule dependence, exact 125-dimensional common blind subspace,
+explicit nonnegative mixture collision, and early refreshed-sensor remedy.
+
+Run the Stage III composition and interaction laboratory:
+
+```sh
+python -m unittest -v test_operational_information_geometry_iii.py
+python operational_information_geometry_iii.py --interaction-strength 0.4
+```
+
+See `OPERATIONAL_INFORMATION_GEOMETRY_III.md` for exact Cartesian and tensor
+composition laws, the correlation kernel, signed mixed spectral witness,
+Markov no-go boundary and control, and positive multiscale interaction design.
+
+Run the Stage IV intervention and causal-envelope laboratory:
+
+```sh
+python -m unittest -v test_operational_information_geometry_iv.py
+python operational_information_geometry_iv.py --protocol-seeds 32
+```
+
+See `OPERATIONAL_INFORMATION_GEOMETRY_IV.md` for the directed response kernel,
+an exactly one-way subsystem response inside a symmetric Markov generator, the
+finite causal-jet theorem, passive-versus-interventional ranks, the
+uniformization Poisson propagation envelope, stationary-background control,
+compressed-protocol audits, and positive multiscale response design.
+
+Run the Stage V scale-flow and continuum laboratories:
+
+```sh
+python -m unittest -v test_operational_information_geometry_v.py
+python operational_information_geometry_v.py
+python -m unittest -v test_oig_v_scaling_continuum.py
+python oig_v_scaling_continuum.py --maximum-side-length 64
+```
+
+See `OPERATIONAL_INFORMATION_GEOMETRY_V.md` for the exact path scaling,
+mesoscopic dimension theorem, directed modal reduction, causal-jet regularity
+and symmetry bounds, diffusive leakage envelope, expanding-domain control,
+path-space sensor result, and next proof targets.
+
+Run the outward-rounded finite-grid E-design certificate separately:
+
+```sh
+python -m pip install -r oig_iv_certificate_requirements.txt
+python oig_iv_certificate.py --grid both
+python -m unittest -v test_oig_iv_certificate.py
+```
+
+The certificate proves
+`4.982412e-9 <= z_* <= 4.982942e-9` on both the exact canonical grid and the
+frozen binary64 grid. It does not certify a continuum-time optimum.
+
 ## Manuscript map
 
 ### Publication 1 — The Geometry Arithmetic Remembers
@@ -184,6 +277,22 @@ tables, fixed-degree extension, and novelty boundary.
   and an enriched local channel
 - `STAGE_9_ARITHMETIC_SENSING_PLAN.md` — research plan and falsification rules
 
+### Research program 3 — Operational Information Geometry
+
+- `OPERATIONAL_INFORMATION_GEOMETRY_I.md` — first theorem-and-falsification
+  layer: geometry from distinguishable histories
+- `OPERATIONAL_INFORMATION_GEOMETRY_II.md` — protocol invariance, adversarial
+  observers, common kernels, and stable mixture recovery
+- `OPERATIONAL_INFORMATION_GEOMETRY_III.md` — independent composition, hidden
+  interactions, Markov boundaries, and multiscale observation
+- `OPERATIONAL_INFORMATION_GEOMETRY_IV.md` — interventions, finite causal jets,
+  one-way rate modulation, and approximate causal cones
+- `OPERATIONAL_INFORMATION_GEOMETRY_V.md` — continuum scale flow,
+  noncommuting dimension limits, response regularity, diffusive leakage, and
+  protocol boundaries
+- `oig_iv_certificate.md` — outward-rounded finite-grid E-design certificate
+- `oig_v_scaling_report.md` — independent continuum and propagation audit
+
 `RESEARCH_ROADMAP.md` records the overall sequence and the boundary between
 proved results, computation, conjecture, and interpretation.
 
@@ -195,6 +304,20 @@ proved results, computation, conjecture, and interpretation.
 - `optimized_arithmetic_quadrature.py` — convex arithmetic window design
 - `fixed_degree_arithmetic_sensing.py` — universal `d_d` coefficient envelopes
 - `arithmetic_sensing_iv.py` — Stage IV reproduction and continuation studies
+- `operational_information_geometry.py` — observable-history geometry,
+  factorization universe, matched controls, and finite diagnostics
+- `operational_information_geometry_ii.py` — protocol ensembles, scale-free
+  distortion, axis-blind controls, and simplex-tangent recovery
+- `operational_information_geometry_iii.py` — composition laws, interaction
+  witnesses, Markov controls, and positive multiscale design
+- `operational_information_geometry_iv.py` — directed response, finite causal
+  jets, uniformization envelopes, background controls, compressed response
+  protocols, and positive finite-grid response design
+- `operational_information_geometry_v.py` — canonical continuum-normalized
+  scale flow, spectral dimension, modal response, and protocol boundaries
+- `oig_v_scaling_continuum.py` — independent regularity, propagation, and
+  expanding-domain audit
+- `oig_iv_certificate.py` — rational/Arb finite-grid E-design checker
 - `adelic_poisson.py`, `quadratic_adelic_geometry.py` — adelic and field models
 - `global_trace_inversion.py`, `class_group_obstruction.py` — inverse Stage 8
 - `arithmetic_acceleration.py`, `exact_rigidity_certificates.py` — exact finite
