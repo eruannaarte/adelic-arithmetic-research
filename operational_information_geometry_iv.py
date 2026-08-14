@@ -171,12 +171,45 @@ STAGE_IV_REFERENCE_DYADIC_NUMERATORS = {
     106: 810,
 }
 
+# A frozen floating optimum and the exact rank-two dual factor used by the
+# independent interval certificate.  The floating weights are descriptive;
+# the dyadic design above is the rigorously certified feasible primal.
+STAGE_IV_REFERENCE_FLOATING_WEIGHT_HEX = {
+    62: "0x1.e193205f6a6f9p-3",
+    76: "0x1.1cedf5be99951p-6",
+    77: "0x1.4e7815e1cd938p-3",
+    87: "0x1.424b820d3396ap-2",
+    105: "0x1.257c24eb0e2a6p-4",
+    106: "0x1.9501f47705e1dp-3",
+}
+STAGE_IV_REFERENCE_DUAL_FACTOR = (
+    (-83_192_408_875, 105_456_840_882),
+    (213_863_105_956, -399_443_523_170),
+    (-118_297_442_349, 672_776_519_441),
+    (-185_640_175_907, -579_962_301_934),
+    (292_803_378_790, 218_679_629_676),
+)
+STAGE_IV_REFERENCE_DUAL_NORMALIZER = 1_208_925_819_615_549_701_407_998
+
 
 def stage_iv_reference_time_grid() -> np.ndarray:
     """Return the platform-independent published binary64 time grid."""
     return np.asarray(
         [float.fromhex(value) for value in STAGE_IV_REFERENCE_TIME_HEX],
         dtype=float,
+    )
+
+
+def _stage_iv_reference_dual_matrix() -> np.ndarray:
+    """Return the certified dual witness in orthonormal tangent coordinates."""
+    difference_basis = np.vstack((np.eye(5), -np.ones((1, 5))))
+    orthonormal_basis = mixture_tangent_basis(6)
+    coordinate_map = orthonormal_basis.T @ difference_basis
+    factor = np.asarray(STAGE_IV_REFERENCE_DUAL_FACTOR, dtype=float)
+    transformed_factor = coordinate_map @ factor
+    return (
+        transformed_factor @ transformed_factor.T
+        / STAGE_IV_REFERENCE_DUAL_NORMALIZER
     )
 
 
@@ -819,10 +852,11 @@ def positive_multiscale_response_design(
 ) -> dict[str, object]:
     """Design positive time weights for the weakest response direction.
 
-    This solves a floating E-optimal design over a declared finite time grid,
-    rounds the result to dyadic weights, audits every candidate time, and builds
-    a floating dual upper witness in the computed two-dimensional minimum
-    eigenspace.  It is not an outward-rounded interval certificate.
+    On the published reference grid this replays the frozen floating design
+    and its rank-two dual witness, then rounds to the certified dyadic weights.
+    On a caller-supplied grid it solves the floating E-optimal design afresh.
+    In both cases every candidate time is audited.  This function is not the
+    outward-rounded interval certificate supplied by ``oig_iv_certificate``.
     """
     using_reference_grid = candidate_times is None
     if using_reference_grid:
@@ -847,88 +881,117 @@ def positive_multiscale_response_design(
         )
         return -objective_scale * float(values[0]), -objective_scale * gradient
 
-    if using_reference_grid and dyadic_denominator == 4096:
-        # A certified feasible design is a stable warm start for the nonsmooth
-        # minimum-eigenvalue objective.  A uniform start can stall in some
-        # SciPy SLSQP releases even though the mathematical problem is fixed.
-        initial = np.asarray(
+    use_frozen_reference_audit = bool(
+        using_reference_grid
+        and dyadic_denominator == 4096
+        and information.shape[1:] == (5, 5)
+    )
+    if use_frozen_reference_audit:
+        # Reuse the published finite-grid primal/dual pair.  This makes the
+        # audit independent of changes in a nonsmooth SLSQP implementation;
+        # the separate Arb checker supplies the rigorous certificate.
+        weights = np.asarray(
             [
-                STAGE_IV_REFERENCE_DYADIC_NUMERATORS.get(index, 0)
-                / dyadic_denominator
+                float.fromhex(
+                    STAGE_IV_REFERENCE_FLOATING_WEIGHT_HEX.get(index, "0x0p+0")
+                )
                 for index in range(candidate_count)
             ]
         )
+        weights /= np.sum(weights)
+        optimization_status = "frozen published floating design"
     else:
         initial = np.ones(candidate_count) / candidate_count
-    primal = minimize(
-        lambda weights: objective_and_gradient(weights)[0],
-        initial,
-        jac=lambda weights: objective_and_gradient(weights)[1],
-        method="SLSQP",
-        bounds=[(0.0, 1.0)] * candidate_count,
-        constraints=[
-            {
-                "type": "eq",
-                "fun": lambda weights: float(np.sum(weights) - 1.0),
-                "jac": lambda weights: np.ones(candidate_count),
-            }
-        ],
-        options={"ftol": 1e-12, "maxiter": 5000},
-    )
-    if not primal.success:
-        raise RuntimeError(f"response design failed: {primal.message}")
-    weights = np.maximum(primal.x, 0.0)
-    weights /= np.sum(weights)
+        primal = minimize(
+            lambda candidate: objective_and_gradient(candidate)[0],
+            initial,
+            jac=lambda candidate: objective_and_gradient(candidate)[1],
+            method="SLSQP",
+            bounds=[(0.0, 1.0)] * candidate_count,
+            constraints=[
+                {
+                    "type": "eq",
+                    "fun": lambda candidate: float(np.sum(candidate) - 1.0),
+                    "jac": lambda candidate: np.ones(candidate_count),
+                }
+            ],
+            options={"ftol": 1e-12, "maxiter": 5000},
+        )
+        if not primal.success:
+            raise RuntimeError(f"response design failed: {primal.message}")
+        weights = np.maximum(primal.x, 0.0)
+        weights /= np.sum(weights)
+        optimization_status = str(primal.message)
     gram = np.tensordot(weights, information, axes=(0, 0))
     eigenvalues, eigenvectors = np.linalg.eigh(gram)
     primal_floor = float(eigenvalues[0])
 
-    # Construct a dual witness Z=V H V^T, with tr(H)=1 and H positive.
-    # For every design w, lambda_min(G(w)) <= tr(ZG(w)) <= mu if
-    # tr(ZA_t)<=mu for every candidate information matrix A_t.
-    weak_vectors = eigenvectors[:, :2]
-    restricted = np.einsum(
-        "ia,tij,jb->tab", weak_vectors, information, weak_vectors
-    )
-    restricted_scaled = objective_scale * restricted
-
-    def dual_sensitivities(candidate: np.ndarray) -> np.ndarray:
-        first, cross, _ = candidate
-        return (
-            first * restricted_scaled[:, 0, 0]
-            + 2.0 * cross * restricted_scaled[:, 0, 1]
-            + (1.0 - first) * restricted_scaled[:, 1, 1]
+    if use_frozen_reference_audit:
+        dual_matrix = _stage_iv_reference_dual_matrix()
+        dual_sensitivity_values = np.einsum(
+            "ij,tij->t", dual_matrix, information
         )
+        maximum_dual_sensitivity = float(np.max(dual_sensitivity_values))
+        dual_upper = maximum_dual_sensitivity
+        nonzero_dual_eigenvalues = np.linalg.eigvalsh(dual_matrix)[-2:]
+        dual_minimum_eigenvalue = float(nonzero_dual_eigenvalues[0])
+        maximum_dual_constraint_excess = 0.0
+    else:
+        # Construct a dual witness Z=V H V^T, with tr(H)=1 and H positive.
+        # For every design w, lambda_min(G(w)) <= tr(ZG(w)) <= mu if
+        # tr(ZA_t)<=mu for every candidate information matrix A_t.
+        weak_vectors = eigenvectors[:, :2]
+        restricted = np.einsum(
+            "ia,tij,jb->tab", weak_vectors, information, weak_vectors
+        )
+        restricted_scaled = objective_scale * restricted
 
-    dual = minimize(
-        lambda candidate: candidate[2],
-        np.asarray([0.5, 0.0, -primal.fun]),
-        method="SLSQP",
-        bounds=[(0.0, 1.0), (-0.5, 0.5), (0.0, None)],
-        constraints=[
-            {
-                "type": "ineq",
-                "fun": lambda candidate: (
-                    candidate[2] - dual_sensitivities(candidate)
-                ),
-            },
-            {
-                "type": "ineq",
-                "fun": lambda candidate: (
-                    candidate[0] * (1.0 - candidate[0])
-                    - candidate[1] ** 2
-                ),
-            },
-        ],
-        options={"ftol": 1e-13, "maxiter": 10000},
-    )
-    if not dual.success:
-        raise RuntimeError(f"response design dual audit failed: {dual.message}")
-    maximum_dual_sensitivity = float(np.max(dual_sensitivities(dual.x)))
-    dual_upper = max(float(dual.x[2]), maximum_dual_sensitivity) / objective_scale
-    dual_matrix = np.asarray(
-        [[dual.x[0], dual.x[1]], [dual.x[1], 1.0 - dual.x[0]]]
-    )
+        def dual_sensitivities(candidate: np.ndarray) -> np.ndarray:
+            first, cross, _ = candidate
+            return (
+                first * restricted_scaled[:, 0, 0]
+                + 2.0 * cross * restricted_scaled[:, 0, 1]
+                + (1.0 - first) * restricted_scaled[:, 1, 1]
+            )
+
+        dual = minimize(
+            lambda candidate: candidate[2],
+            np.asarray([0.5, 0.0, objective_scale * primal_floor]),
+            method="SLSQP",
+            bounds=[(0.0, 1.0), (-0.5, 0.5), (0.0, None)],
+            constraints=[
+                {
+                    "type": "ineq",
+                    "fun": lambda candidate: (
+                        candidate[2] - dual_sensitivities(candidate)
+                    ),
+                },
+                {
+                    "type": "ineq",
+                    "fun": lambda candidate: (
+                        candidate[0] * (1.0 - candidate[0])
+                        - candidate[1] ** 2
+                    ),
+                },
+            ],
+            options={"ftol": 1e-13, "maxiter": 10000},
+        )
+        if not dual.success:
+            raise RuntimeError(f"response design dual audit failed: {dual.message}")
+        maximum_dual_sensitivity = float(np.max(dual_sensitivities(dual.x)))
+        dual_upper = (
+            max(float(dual.x[2]), maximum_dual_sensitivity) / objective_scale
+        )
+        reduced_dual_matrix = np.asarray(
+            [[dual.x[0], dual.x[1]], [dual.x[1], 1.0 - dual.x[0]]]
+        )
+        dual_minimum_eigenvalue = float(
+            np.linalg.eigvalsh(reduced_dual_matrix)[0]
+        )
+        maximum_dual_constraint_excess = float(
+            max(0.0, maximum_dual_sensitivity - float(dual.x[2]))
+            / objective_scale
+        )
 
     raw_numerators = weights * dyadic_denominator
     numerators = np.floor(raw_numerators).astype(int)
@@ -955,18 +1018,14 @@ def positive_multiscale_response_design(
         "candidate_time_count": candidate_count,
         "candidate_time_minimum": float(times[0]),
         "candidate_time_maximum": float(times[-1]),
+        "optimization_status": optimization_status,
         "floating_primal_floor": primal_floor,
         "floating_dual_upper_bound": dual_upper,
         "relative_primal_dual_gap": float(
             (dual_upper - primal_floor) / primal_floor
         ),
-        "dual_two_by_two_minimum_eigenvalue": float(
-            np.linalg.eigvalsh(dual_matrix)[0]
-        ),
-        "maximum_dual_constraint_excess": float(
-            max(0.0, maximum_dual_sensitivity - float(dual.x[2]))
-            / objective_scale
-        ),
+        "dual_two_by_two_minimum_eigenvalue": dual_minimum_eigenvalue,
+        "maximum_dual_constraint_excess": maximum_dual_constraint_excess,
         "dyadic_denominator": dyadic_denominator,
         "dyadic_active_times": [float(times[index]) for index in active],
         "dyadic_active_numerators": [int(numerators[index]) for index in active],
