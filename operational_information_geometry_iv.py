@@ -35,6 +35,151 @@ from operational_information_geometry_iii import (
 )
 
 
+# Freeze the binary64 candidate grid used for the published Stage IV design.
+# NumPy's geomspace can differ by a few ulps across platforms because its
+# logarithm/exponential path depends on the system math library.  Hexadecimal
+# literals make the finite optimization problem exactly reproducible.
+STAGE_IV_REFERENCE_TIME_HEX = (
+    "0x1.0624dd2f1a9fcp-10",
+    "0x1.1b3d3c907e0fap-10",
+    "0x1.32082fde119bap-10",
+    "0x1.4aa8afbcf09f9p-10",
+    "0x1.65448541bd769p-10",
+    "0x1.820483ea2bff4p-10",
+    "0x1.a114c840df8d2p-10",
+    "0x1.c2a4fb8bb8505p-10",
+    "0x1.e6e89cec68366p-10",
+    "0x1.070ba831c13dbp-9",
+    "0x1.1c369a17a04cbp-9",
+    "0x1.33159e847c52cp-9",
+    "0x1.4bcbcce765cb8p-9",
+    "0x1.667f0f993ab76p-9",
+    "0x1.83585e093bb26p-9",
+    "0x1.a283fb980ff79p-9",
+    "0x1.c431bb81a8f52p-9",
+    "0x1.e8954a3e38de9p-9",
+    "0x1.07f33e656921fp-8",
+    "0x1.1d30d329ab067p-8",
+    "0x1.3423fa608fa39p-8",
+    "0x1.4cefea5e37e5cp-8",
+    "0x1.67baaedd072e3p-8",
+    "0x1.84ad635d6ff06p-8",
+    "0x1.a3f472384e4ffp-8",
+    "0x1.c5bfd8c49658ap-8",
+    "0x1.ea4370f8e4f0cp-8",
+    "0x1.08dba07cf65a3p-7",
+    "0x1.1e2be887e7967p-7",
+    "0x1.3533444322c22p-7",
+    "0x1.4e1509030c691p-7",
+    "0x1.68f76400f0d54p-7",
+    "0x1.860394ee3544dp-7",
+    "0x1.a5662d3e39df8p-7",
+    "0x1.c74f548807339p-7",
+    "0x1.ebf31268b26e4p-7",
+    "0x1.09c4cf2bea740p-6",
+    "0x1.1f27daf449809p-6",
+    "0x1.36437cfdc4be9p-6",
+    "0x1.4f3b29b84f7abp-6",
+    "0x1.6a352ff99c4c6p-6",
+    "0x1.875af3c3e0260p-6",
+    "0x1.a6d92dc76c835p-6",
+    "0x1.c8e0300090fffp-6",
+    "0x1.eda42fdb0be25p-6",
+    "0x1.0aaecb2665065p-5",
+    "0x1.2024ab316f0b2p-5",
+    "0x1.3754a562bd297p-5",
+    "0x1.50624d6134970p-5",
+    "0x1.6b7413bc85958p-5",
+    "0x1.88b380e7adc20p-5",
+    "0x1.a84d74f27b8bfp-5",
+    "0x1.ca726c63d8e47p-5",
+    "0x1.ef56ca9e81637p-5",
+    "0x1.0b999521243d0p-4",
+    "0x1.21225a02a1d43p-4",
+    "0x1.3866be450cb44p-4",
+    "0x1.518a74e1b741dp-4",
+    "0x1.6cb4104000d2fp-4",
+    "0x1.8a0d3d63c4cb5p-4",
+    "0x1.a9c303def8983p-4",
+    "0x1.cc060ae894a4cp-4",
+    "0x1.f10ae402c993fp-4",
+    "0x1.0c852dd185647p-3",
+    "0x1.2220e82bd7681p-3",
+    "0x1.3979c8786dd4fp-3",
+    "0x1.52b3a11e9bb74p-3",
+    "0x1.6df5267b3b058p-3",
+    "0x1.8b682a4336475p-3",
+    "0x1.ab39dbad72746p-3",
+    "0x1.cd9b0cc68b92ap-3",
+    "0x1.f2c07d58c2a7ep-3",
+    "0x1.0d7195ed85758p-2",
+    "0x1.23205671b1d90p-2",
+    "0x1.3a8dc4d1556a9p-2",
+    "0x1.53ddd2fd6f9a8p-2",
+    "0x1.6f3757663acb5p-2",
+    "0x1.8cc44891fe5acp-2",
+    "0x1.acb1fd7f75f9cp-2",
+    "0x1.cf317336977bfp-2",
+    "0x1.f47797f273661p-2",
+    "0x1.0e5ece2bc1a2dp-1",
+    "0x1.2420a5998057fp-1",
+    "0x1.3ba2b424f35efp-1",
+    "0x1.55090b648aa93p-1",
+    "0x1.707aa3f9e1203p-1",
+    "0x1.8e21995d051b4p-1",
+    "0x1.ae2b6a778eec0p-1",
+    "0x1.d0c93f72a59f7p-1",
+    "0x1.f63035230c312p-1",
+    "0x1.0f4cd74377e45p+0",
+    "0x1.2521d6693fcafp+0",
+    "0x1.3cb89749334e0p+0",
+    "0x1.56354b3b0f6cep+0",
+    "0x1.71bf0d2fea1bdp+0",
+    "0x1.8f801db21f5bcp+0",
+    "0x1.afa623b948dd2p+0",
+    "0x1.d26272b5b79e0p+0",
+    "0x1.f7ea563ee8094p+0",
+    "0x1.103bb1ec87867p+1",
+    "0x1.2623e9a79b68bp+1",
+    "0x1.3dcf6f14bd29ep+1",
+    "0x1.57629368ebebap+1",
+    "0x1.73049402edb55p+1",
+    "0x1.90dfd6a00f80cp+1",
+    "0x1.b1222a69300aap+1",
+    "0x1.d3fd0e3be46c4p+1",
+    "0x1.f9a5fc9b8d96dp+1",
+    "0x1.112b5edf71b7ap+2",
+    "0x1.2726e01bed4f5p+2",
+    "0x1.3ee73c5ef5dfap+2",
+    "0x1.5890e4d6da5e3p+2",
+    "0x1.744b396e60839p+2",
+    "0x1.9240c536864ddp+2",
+    "0x1.b29f7facd2431p+2",
+    "0x1.d5991342594a7p+2",
+    "0x1.fb63298fb030bp+2",
+    "0x1.121bded55a15bp+3",
+    "0x1.282aba8e3f207p+3",
+    "0x1.4000000000000p+3",
+)
+
+STAGE_IV_REFERENCE_DYADIC_NUMERATORS = {
+    62: 963,
+    76: 71,
+    77: 669,
+    87: 1289,
+    105: 294,
+    106: 810,
+}
+
+
+def stage_iv_reference_time_grid() -> np.ndarray:
+    """Return the platform-independent published binary64 time grid."""
+    return np.asarray(
+        [float.fromhex(value) for value in STAGE_IV_REFERENCE_TIME_HEX],
+        dtype=float,
+    )
+
+
 def one_way_rate_modulation_generator(
     left_laplacian: np.ndarray,
     right_laplacian: np.ndarray,
@@ -679,8 +824,9 @@ def positive_multiscale_response_design(
     a floating dual upper witness in the computed two-dimensional minimum
     eigenspace.  It is not an outward-rounded interval certificate.
     """
-    if candidate_times is None:
-        times = np.geomspace(0.001, 10.0, 120)
+    using_reference_grid = candidate_times is None
+    if using_reference_grid:
+        times = stage_iv_reference_time_grid()
     else:
         times = np.asarray(candidate_times, dtype=float)
     if times.ndim != 1 or len(times) < 2 or np.any(times <= 0.0):
@@ -701,7 +847,19 @@ def positive_multiscale_response_design(
         )
         return -objective_scale * float(values[0]), -objective_scale * gradient
 
-    initial = np.ones(candidate_count) / candidate_count
+    if using_reference_grid and dyadic_denominator == 4096:
+        # A certified feasible design is a stable warm start for the nonsmooth
+        # minimum-eigenvalue objective.  A uniform start can stall in some
+        # SciPy SLSQP releases even though the mathematical problem is fixed.
+        initial = np.asarray(
+            [
+                STAGE_IV_REFERENCE_DYADIC_NUMERATORS.get(index, 0)
+                / dyadic_denominator
+                for index in range(candidate_count)
+            ]
+        )
+    else:
+        initial = np.ones(candidate_count) / candidate_count
     primal = minimize(
         lambda weights: objective_and_gradient(weights)[0],
         initial,

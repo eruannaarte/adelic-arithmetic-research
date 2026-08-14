@@ -29,6 +29,8 @@ import numpy as np
 import flint
 from flint import arb, arb_mat, ctx, fmpq
 
+from operational_information_geometry_iv import STAGE_IV_REFERENCE_TIME_HEX
+
 
 STATE_COUNT = 6
 TANGENT_DIMENSION = STATE_COUNT - 1
@@ -183,12 +185,12 @@ def _canonical_geometric_times() -> tuple[arb, ...]:
 
 
 def _binary64_reference_times() -> tuple[tuple[arb, ...], str, tuple[str, ...]]:
-    """Return exact balls for every binary64 value used by NumPy's grid."""
-    values = np.geomspace(0.001, 10.0, CANDIDATE_COUNT)
-    hex_values = tuple(float(value).hex() for value in values)
+    """Return exact balls for the frozen published binary64 candidate grid."""
+    hex_values = STAGE_IV_REFERENCE_TIME_HEX
     digest = hashlib.sha256("\n".join(hex_values).encode("ascii")).hexdigest()
     times = []
-    for value in values:
+    for hex_value in hex_values:
+        value = float.fromhex(hex_value)
         numerator, denominator = float(value).as_integer_ratio()
         times.append(_arb_rational(Fraction(numerator, denominator)))
     return tuple(times), digest, hex_values
@@ -422,7 +424,7 @@ def run_interval_certificate(
 
     ``canonical`` certifies the exact algebraic grid
     ``10**(-3 + 4i/119)``.  ``binary64`` certifies the exact dyadic values
-    returned by the NumPy expression in the Stage IV implementation.
+    frozen from the original NumPy expression in the Stage IV implementation.
     """
     if precision_bits < 128:
         raise ValueError("at least 128 bits are required for the declared margins")
@@ -452,7 +454,7 @@ def run_interval_certificate(
                 )
                 rows.append(
                     _certify_one_grid(
-                        "exact binary64 values returned by numpy.geomspace",
+                        "frozen exact binary64 values from numpy.geomspace",
                         times,
                     )
                 )
