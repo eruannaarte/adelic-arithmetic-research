@@ -31,6 +31,16 @@ retains cell placement and preparation rules. The two charts match, while an
 adversarial audit separates multiplication-moment order from the complete
 noncommutative causal-word hierarchy.
 
+Stages VIII and IX make that phase diagram uniform and operator-valued. The
+declared atlas now carries complete source response Gramians with one exact
+conditional-expectation null quotient. Every fixed finite quotient is
+uniformly visible after calibration on the compactified sectors treated in
+the theorem; the raw lattice endpoint \(\tau\downarrow0\) remains separate.
+Compact Laplace factorization rules out an infinite-band coercivity floor. For
+the first \(K\) cosine ports, the early singular values form the exact flag
+\(q,q^2,\ldots,q^K\), while a finite grid is certified only when its Gram
+error is small relative to the shrinking continuum observability floor.
+
 The active continuation includes continuum-certified arithmetic window design
 and a cancellation-aware log-Mellin certificate for higher-degree coefficient
 tails. At `N=50`, `sigma=2`, `T=1000`, and `m=5000`, the eight-harmonic
@@ -298,6 +308,21 @@ surface, exact source digests, reference environment, and complete validation
 commands are frozen in
 [OIG_VIII_REPRODUCIBILITY_MANIFEST.md](OIG_VIII_REPRODUCIBILITY_MANIFEST.md).
 
+Run the Stage IX growing-band Gramian laboratory and adversarial controls:
+
+    python -m pip install -r oig_ix_growing_band_requirements.txt
+    python -m unittest -v test_oig_ix_growing_band.py
+    python -m unittest -v test_oig_ix_adversarial_controls.py
+    python oig_ix_growing_band.py --fast
+    python oig_ix_growing_band.py
+
+See [OPERATIONAL_INFORMATION_GEOMETRY_IX.md](OPERATIONAL_INFORMATION_GEOMETRY_IX.md)
+for the common Laplace quotient, exact three-chart Hankel Grams, fixed-band
+atlas theorem, causal singular flag, critical fan, compactness no-go, relative
+finite-grid certificate, and noise-thresholded effective dimension. The atlas
+theorem treats the lattice sector for \(\tau\ge\tau_0>0\); the raw early
+lattice endpoint is not claimed.
+
 Run the outward-rounded finite-grid E-design certificate separately:
 
 ```sh
@@ -520,6 +545,15 @@ For the public synthesis of the complete progression, see
 - [OIG_VIII_REPRODUCIBILITY_MANIFEST.md](OIG_VIII_REPRODUCIBILITY_MANIFEST.md)
   — minimal dependencies, immutable theorem commit, source digests, and
   validation commands
+- [OPERATIONAL_INFORMATION_GEOMETRY_IX.md](OPERATIONAL_INFORMATION_GEOMETRY_IX.md)
+  — growing-band Gramians, common Laplace quotient, causal singular flag,
+  critical fan, and effective dimension
+- [OIG_IX_GROWING_BAND_THEOREM.md](OIG_IX_GROWING_BAND_THEOREM.md)
+  — detailed compact-atlas, Sobolev-lift, perturbation, and mixed-word proofs
+- [oig_ix_growing_band.md](oig_ix_growing_band.md) — finite-generator,
+  high-precision Hankel, effective-rank, and calibration-cost audit
+- [OIG_IX_ADVERSARIAL_AUDIT.md](OIG_IX_ADVERSARIAL_AUDIT.md) — compactness,
+  symmetry, finite-sampling, Sobolev, and causal-word counterexamples
 - `oig_iv_certificate.md` — outward-rounded finite-grid E-design certificate
 - `oig_v_scaling_report.md` — independent continuum and propagation audit
 
@@ -559,6 +593,9 @@ proved results, computation, conjecture, and interpretation.
   lattice-phase, boundary, sampling, topology, symmetry, and mixed-jet controls
 - [oig_viii_three_parameter.py](oig_viii_three_parameter.py) — finite,
   lattice, continuum, early, and atomic chart comparisons plus hostile paths
+- [oig_ix_growing_band.py](oig_ix_growing_band.py) — finite response Gramians,
+  high-precision Hankel spectra, causal flags, effective rank, and calibration
+  costs
 - `oig_iv_certificate.py` — rational/Arb finite-grid E-design checker
 - `arithmetic_sensing_v.py` — Stage V reproduction and boundary studies
 - `exact_trigonometric_positivity.py` — exact rational Sturm certificates
