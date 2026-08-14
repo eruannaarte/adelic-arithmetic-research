@@ -348,6 +348,23 @@ Deliverables: `ARITHMETIC_SENSING_V_DEGREE_14_RESOURCE_LAW.md`,
 `degree_fourteen_resource_law.py`, parameterized formal checkers, eight remote
 and end-to-end boundary artifacts, and their tests.
 
+**Resonance-aware time-diversity milestone:** the large finite peaks at
+`T=1100` and `T=1200` are localized: the ratios `51/50` and `52/50` contribute
+more than 99% of the target-50 finite leakage. A positive centered ensemble
+uses exact weights `7/4096` at `(T,m)=(500,2500)` and `4089/4096` at
+`(1790,8950)`. The grids share spacing `1/5`; the short grid is exactly the
+central subset of the long grid, so only 8,950 distinct observations are
+required. Signed cancellation is preserved through all finite Arb sums and
+Gram rows, while separate MPFR remote bounds are combined conservatively. The
+formal coefficient endpoint is `0.4972362699`, improving both observation time
+and distinct reading count over the previous ratio-five single-window
+frontier.
+
+Deliverables: `ARITHMETIC_SENSING_V_TIME_DIVERSITY.md`,
+`time_ensemble_design.py`, `verify_time_ensemble_certificate.py`, two MPFR
+remote dependencies, the end-to-end ensemble and same-grid control artifacts,
+and their tests.
+
 ## Adjacent target — arithmetic acceleration
 
 **Status:** first exact study completed in Stage 5; asymptotic questions remain

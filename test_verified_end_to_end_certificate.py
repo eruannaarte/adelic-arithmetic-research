@@ -17,8 +17,11 @@ from optimized_arithmetic_quadrature import (
     cosine_window_gram,
 )
 from verified_end_to_end_certificate import (
+    VerifiedTimeComponent,
     exact_fixed_degree_coefficients_uint64,
     verified_end_to_end_bound,
+    verified_ensemble_finite_tail_bounds,
+    verified_ensemble_gram_row_bound,
     verified_finite_tail_bounds,
     verified_gram_row_bound,
 )
@@ -83,6 +86,85 @@ class VerifiedEndToEndCertificateTests(unittest.TestCase):
         )
         self.assertGreaterEqual(
             float(certificate.upper_fraction) + 2e-14, observed
+        )
+
+    def test_ensemble_arb_tail_dominates_signed_binary64_sum(self) -> None:
+        components = (
+            VerifiedTimeComponent(60, 300, Fraction(1, 4)),
+            VerifiedTimeComponent(100, 500, Fraction(3, 4)),
+        )
+        degree = 4
+        maximum_norm = 5
+        truncation = 300
+        certificate = verified_ensemble_finite_tail_bounds(
+            degree,
+            components,
+            maximum_norm,
+            truncation,
+            precision=96,
+            output_scale_bits=80,
+            processes=1,
+        )
+        coefficients = fixed_degree_divisor_coefficients_sieve(
+            truncation, degree
+        )
+        designs = [
+            CosineQuadratureDesign(
+                component.sample_count,
+                float(component.observation_time),
+                REFERENCE_COEFFICIENTS.copy(),
+            )
+            for component in components
+        ]
+        norms = np.arange(maximum_norm + 1, truncation + 1, dtype=float)
+        weights = coefficients[maximum_norm + 1 :] * norms ** (-2.0)
+        for target in range(1, maximum_norm + 1):
+            frequency = np.log(norms / target)
+            response = sum(
+                float(component.weight)
+                * centered_cosine_response(frequency, design)
+                for component, design in zip(components, designs)
+            )
+            direct = float(np.dot(weights, np.abs(response)))
+            self.assertGreaterEqual(
+                float(certificate.upper_fraction(target)) + 2e-14,
+                direct,
+            )
+
+    def test_ensemble_arb_gram_dominates_signed_binary64_sum(self) -> None:
+        components = (
+            VerifiedTimeComponent(60, 300, Fraction(1, 4)),
+            VerifiedTimeComponent(100, 500, Fraction(3, 4)),
+        )
+        logs = np.log(np.arange(1, 9, dtype=float))
+        frequencies = logs[:, None] - logs[None, :]
+        matrices = [
+            centered_cosine_response(
+                frequencies,
+                CosineQuadratureDesign(
+                    component.sample_count,
+                    float(component.observation_time),
+                    REFERENCE_COEFFICIENTS.copy(),
+                ),
+            )
+            for component in components
+        ]
+        matrix = sum(
+            float(component.weight) * value
+            for component, value in zip(components, matrices)
+        )
+        observed = float(
+            np.max(np.sum(np.abs(matrix - np.eye(len(matrix))), axis=1))
+        )
+        certificate = verified_ensemble_gram_row_bound(
+            components,
+            maximum_norm=8,
+            precision=96,
+            output_scale_bits=80,
+        )
+        self.assertGreaterEqual(
+            float(certificate.upper_fraction) + 2e-14,
+            observed,
         )
 
     def test_neumann_consequence_is_exact_rational_arithmetic(self) -> None:

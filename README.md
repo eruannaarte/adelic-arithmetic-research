@@ -234,6 +234,18 @@ at `0.5000009667`, while 14,691 formally pass at `0.4999975382`. Along
 `m/T=5`, the adjacent formal boundary is `T=1892/1893`. See
 `ARITHMETIC_SENSING_V_DEGREE_14_RESOURCE_LAW.md`.
 
+Reproduce the resonance-aware nested time ensemble:
+
+```sh
+python time_ensemble_design.py
+```
+
+The ratios `51/50` and `52/50` explain more than 99% of the two largest finite
+resource peaks. A positive reweighting of a 2,500-point central subset inside
+an 8,950-point grid suppresses the dominant lobe. Its formal endpoint is
+`0.4972362699` at maximum time 1,790, improving both resource coordinates of
+the previous ratio-five frontier. See `ARITHMETIC_SENSING_V_TIME_DIVERSITY.md`.
+
 ## Manuscript map
 
 ### Publication 1 — The Geometry Arithmetic Remembers
@@ -265,6 +277,8 @@ at `0.5000009667`, while 14,691 formally pass at `0.4999975382`. Along
   control, and the formal degree-thirteen frontier
 - `ARITHMETIC_SENSING_V_DEGREE_14_RESOURCE_LAW.md` — exact sampling and
   observation thresholds amid logarithmic resonances
+- `ARITHMETIC_SENSING_V_TIME_DIVERSITY.md` — resonance attribution and a
+  formally certified nested two-window sensing measure
 - `STAGE_9_ARITHMETIC_SENSING_PLAN.md` — research plan and falsification rules
 
 `RESEARCH_ROADMAP.md` records the overall sequence and the boundary between
@@ -290,6 +304,10 @@ proved results, computation, conjecture, and interpretation.
   checker
 - `degree_fourteen_resource_law.py` — fixed-time density and fixed-ratio
   observation scans
+- `time_ensemble_design.py` — dominant-mode attribution and nested-ensemble
+  exploration
+- `verify_time_ensemble_certificate.py` — formal signed multi-time Arb
+  certificate builder and checker
 - `adelic_poisson.py`, `quadratic_adelic_geometry.py` — adelic and field models
 - `global_trace_inversion.py`, `class_group_obstruction.py` — inverse Stage 8
 - `arithmetic_acceleration.py`, `exact_rigidity_certificates.py` — exact finite

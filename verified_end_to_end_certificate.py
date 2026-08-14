@@ -79,6 +79,31 @@ class VerifiedEndToEndBound:
         return self.coefficient_bound < Fraction(1, 2)
 
 
+@dataclass(frozen=True)
+class VerifiedTimeComponent:
+    """One positive component of a centered multi-time sensing measure."""
+
+    observation_time: int
+    sample_count: int
+    weight: Fraction
+
+
+def _validate_time_ensemble(
+    components: Sequence[VerifiedTimeComponent],
+) -> tuple[VerifiedTimeComponent, ...]:
+    result = tuple(components)
+    if not result or any(
+        component.observation_time < 1
+        or component.sample_count < 2
+        or component.weight <= 0
+        for component in result
+    ):
+        raise ValueError("time components must have positive parameters")
+    if sum((component.weight for component in result), Fraction()) != 1:
+        raise ValueError("time-component weights must sum exactly to one")
+    return result
+
+
 def _hash_unsigned_vector(values: Sequence[int], width: int | None = None) -> str:
     if any(value < 0 for value in values):
         raise ValueError("hash input must be nonnegative")
@@ -136,14 +161,14 @@ def _arb_upper_dyadic_numerator(value: arb, scale_bits: int) -> int:
     return (mantissa + denominator - 1) // denominator
 
 
-def _centered_response_absolute(
+def _centered_response(
     frequency: arb,
     observation_time: int,
     sample_count: int,
     coefficients: Sequence[arb],
     pi: arb,
 ) -> arb:
-    """Exact common-numerator response evaluated in real-ball arithmetic."""
+    """Signed common-numerator response evaluated in real-ball arithmetic."""
     u = arb(observation_time) * frequency / 2
     bracket = 1 / (sample_count * (u / sample_count).sin())
     for harmonic, coefficient in enumerate(coefficients, start=1):
@@ -159,14 +184,40 @@ def _centered_response_absolute(
                 * ((u - pi * harmonic) / sample_count).sin()
             )
         )
-    result = abs(u.sin() * bracket)
+    result = u.sin() * bracket
     if not result.is_finite():
         raise ArithmeticError("ball precision did not separate a removable alias")
     return result
 
 
+def _centered_response_absolute(
+    frequency: arb,
+    observation_time: int,
+    sample_count: int,
+    coefficients: Sequence[arb],
+    pi: arb,
+) -> arb:
+    return abs(
+        _centered_response(
+            frequency,
+            observation_time,
+            sample_count,
+            coefficients,
+            pi,
+        )
+    )
+
+
 _WORKER_COEFFICIENTS: np.ndarray | None = None
 _WORKER_PARAMETERS: tuple[int, int, int, int, int, tuple[Fraction, ...]] | None = None
+_WORKER_ENSEMBLE_PARAMETERS: tuple[
+    int,
+    int,
+    int,
+    int,
+    tuple[Fraction, ...],
+    tuple[VerifiedTimeComponent, ...],
+] | None = None
 
 
 def _initialize_finite_worker(
@@ -223,6 +274,63 @@ def _finite_target_worker(target_norm: int) -> tuple[int, int]:
             tail_norm * tail_norm
         )
         total += weight * response
+    return target_norm, _arb_upper_dyadic_numerator(total, output_scale_bits)
+
+
+def _initialize_ensemble_finite_worker(
+    coefficients: np.ndarray,
+    maximum_norm: int,
+    truncation: int,
+    precision: int,
+    output_scale_bits: int,
+    window: tuple[Fraction, ...],
+    components: tuple[VerifiedTimeComponent, ...],
+) -> None:
+    global _WORKER_COEFFICIENTS, _WORKER_ENSEMBLE_PARAMETERS
+    _WORKER_COEFFICIENTS = coefficients
+    _WORKER_ENSEMBLE_PARAMETERS = (
+        maximum_norm,
+        truncation,
+        precision,
+        output_scale_bits,
+        window,
+        components,
+    )
+
+
+def _ensemble_finite_target_worker(target_norm: int) -> tuple[int, int]:
+    if _WORKER_COEFFICIENTS is None or _WORKER_ENSEMBLE_PARAMETERS is None:
+        raise RuntimeError("ensemble finite-tail worker was not initialized")
+    (
+        maximum_norm,
+        truncation,
+        precision,
+        output_scale_bits,
+        window,
+        components,
+    ) = _WORKER_ENSEMBLE_PARAMETERS
+    if not 1 <= target_norm <= maximum_norm:
+        raise ValueError("target norm is outside the finite certificate")
+    ctx.prec = precision
+    pi = arb.pi()
+    arb_window = tuple(_arb_fraction(value) for value in window)
+    arb_weights = tuple(_arb_fraction(component.weight) for component in components)
+    total = arb(0)
+    for tail_norm in range(maximum_norm + 1, truncation + 1):
+        frequency = (arb(tail_norm) / target_norm).log()
+        response = arb(0)
+        for weight, component in zip(arb_weights, components):
+            response += weight * _centered_response(
+                frequency,
+                component.observation_time,
+                component.sample_count,
+                arb_window,
+                pi,
+            )
+        coefficient_weight = arb(int(_WORKER_COEFFICIENTS[tail_norm])) / (
+            tail_norm * tail_norm
+        )
+        total += coefficient_weight * abs(response)
     return target_norm, _arb_upper_dyadic_numerator(total, output_scale_bits)
 
 
@@ -288,6 +396,72 @@ def verified_finite_tail_bounds(
     )
 
 
+def verified_ensemble_finite_tail_bounds(
+    degree: int,
+    components: Sequence[VerifiedTimeComponent],
+    maximum_norm: int = 50,
+    truncation: int = 1_000_000,
+    window_coefficients: Sequence[float] = REFERENCE_COEFFICIENTS,
+    precision: int = 128,
+    output_scale_bits: int = 128,
+    processes: int | None = None,
+) -> VerifiedFiniteTail:
+    """Enclose finite tails after signed cancellation across time windows."""
+    ensemble = _validate_time_ensemble(components)
+    if truncation <= maximum_norm or precision < 64 or output_scale_bits < 32:
+        raise ValueError("invalid finite-tail certificate parameters")
+    coefficients = exact_fixed_degree_coefficients_uint64(truncation, degree)
+    coefficient_values = tuple(int(value) for value in coefficients)
+    coefficient_sha256 = _hash_unsigned_vector(coefficient_values, 8)
+    window = tuple(
+        Fraction.from_float(float(value)) for value in window_coefficients
+    )
+    if any(component.sample_count <= len(window) for component in ensemble):
+        raise ValueError("harmonic count must be below every sample count")
+    initializer_arguments = (
+        coefficients,
+        maximum_norm,
+        truncation,
+        precision,
+        output_scale_bits,
+        window,
+        ensemble,
+    )
+    if processes is None:
+        processes = min(maximum_norm, max(1, min(8, os.cpu_count() or 1)))
+    if processes < 1:
+        raise ValueError("process count must be positive")
+    if processes == 1:
+        _initialize_ensemble_finite_worker(*initializer_arguments)
+        pairs = [
+            _ensemble_finite_target_worker(target)
+            for target in range(1, maximum_norm + 1)
+        ]
+    else:
+        context = multiprocessing.get_context("spawn")
+        with context.Pool(
+            processes,
+            initializer=_initialize_ensemble_finite_worker,
+            initargs=initializer_arguments,
+        ) as pool:
+            pairs = pool.map(
+                _ensemble_finite_target_worker,
+                range(1, maximum_norm + 1),
+            )
+    pairs.sort()
+    numerators = tuple(value for _, value in pairs)
+    return VerifiedFiniteTail(
+        degree,
+        maximum_norm,
+        truncation,
+        numerators,
+        output_scale_bits,
+        coefficient_sha256,
+        _hash_unsigned_vector(numerators),
+        precision,
+    )
+
+
 def verified_gram_row_bound(
     maximum_norm: int = 50,
     observation_time: int = 1_000,
@@ -318,6 +492,54 @@ def verified_gram_row_bound(
                 window,
                 pi,
             )
+        rows.append(_arb_upper_dyadic_numerator(total, output_scale_bits))
+    numerator = max(rows)
+    return VerifiedGramRowBound(
+        maximum_norm,
+        numerator,
+        output_scale_bits,
+        tuple(rows),
+        _hash_unsigned_vector(rows),
+        precision,
+    )
+
+
+def verified_ensemble_gram_row_bound(
+    components: Sequence[VerifiedTimeComponent],
+    maximum_norm: int = 50,
+    window_coefficients: Sequence[float] = REFERENCE_COEFFICIENTS,
+    precision: int = 160,
+    output_scale_bits: int = 128,
+) -> VerifiedGramRowBound:
+    """Enclose Gram row defects after signed multi-time cancellation."""
+    ensemble = _validate_time_ensemble(components)
+    if maximum_norm < 2 or precision < 64 or output_scale_bits < 32:
+        raise ValueError("invalid Gram certificate parameters")
+    ctx.prec = precision
+    pi = arb.pi()
+    window = tuple(_arb_binary64(value) for value in window_coefficients)
+    if any(component.sample_count <= len(window) for component in ensemble):
+        raise ValueError("harmonic count must be below every sample count")
+    weights = tuple(_arb_fraction(component.weight) for component in ensemble)
+    rows: list[int] = []
+    for left in range(1, maximum_norm + 1):
+        total = arb(0)
+        for right in range(1, maximum_norm + 1):
+            if left == right:
+                continue
+            larger = max(left, right)
+            smaller = min(left, right)
+            frequency = (arb(larger) / smaller).log()
+            response = arb(0)
+            for weight, component in zip(weights, ensemble):
+                response += weight * _centered_response(
+                    frequency,
+                    component.observation_time,
+                    component.sample_count,
+                    window,
+                    pi,
+                )
+            total += abs(response)
         rows.append(_arb_upper_dyadic_numerator(total, output_scale_bits))
     numerator = max(rows)
     return VerifiedGramRowBound(

@@ -1,5 +1,9 @@
 # Arithmetic Sensing V — Degree-Fourteen Resource Law
 
+> **Later milestone:** `ARITHMETIC_SENSING_V_TIME_DIVERSITY.md` turns the
+> observed `51/50` resonance into a nested two-window design that formally
+> certifies degree fourteen with 8,950 distinct readings and maximum time 1,790.
+
 ## Exact sampling and observation thresholds amid logarithmic resonances
 
 - **Research lead, theorem, computation, and manuscript:** Codex (OpenAI)
