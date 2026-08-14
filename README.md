@@ -246,6 +246,17 @@ an 8,950-point grid suppresses the dominant lobe. Its formal endpoint is
 `0.4972362699` at maximum time 1,790, improving both resource coordinates of
 the previous ratio-five frontier. See `ARITHMETIC_SENSING_V_TIME_DIVERSITY.md`.
 
+Run the arithmetic multiscale design algorithm:
+
+```sh
+python arithmetic_multiscale_sensing.py
+```
+
+The dangerous-mode detector, positive minimax LP, sparse-support search, and
+exact dyadic rationalization produce a nested candidate using 8,900 distinct
+readings through time 1,780. Its independent all-target Arb/MPFR endpoint is
+`0.4980274168`. See `ARITHMETIC_SENSING_V_MULTISCALE.md`.
+
 ## Manuscript map
 
 ### Publication 1 — The Geometry Arithmetic Remembers
@@ -279,6 +290,8 @@ the previous ratio-five frontier. See `ARITHMETIC_SENSING_V_TIME_DIVERSITY.md`.
   observation thresholds amid logarithmic resonances
 - `ARITHMETIC_SENSING_V_TIME_DIVERSITY.md` — resonance attribution and a
   formally certified nested two-window sensing measure
+- `ARITHMETIC_SENSING_V_MULTISCALE.md` — convex response-signature design,
+  sparse positive minimax search, and an 8,900-reading formal certificate
 - `STAGE_9_ARITHMETIC_SENSING_PLAN.md` — research plan and falsification rules
 
 `RESEARCH_ROADMAP.md` records the overall sequence and the boundary between
@@ -306,8 +319,12 @@ proved results, computation, conjecture, and interpretation.
   observation scans
 - `time_ensemble_design.py` — dominant-mode attribution and nested-ensemble
   exploration
+- `arithmetic_multiscale_sensing.py` — dangerous-mode detection, positive
+  minimax design, sparse-support search, and exact nested-grid realization
 - `verify_time_ensemble_certificate.py` — formal signed multi-time Arb
   certificate builder and checker
+- `verify_multiscale_certificate.py` — reference multiscale artifact builder
+  and checker
 - `adelic_poisson.py`, `quadratic_adelic_geometry.py` — adelic and field models
 - `global_trace_inversion.py`, `class_group_obstruction.py` — inverse Stage 8
 - `arithmetic_acceleration.py`, `exact_rigidity_certificates.py` — exact finite

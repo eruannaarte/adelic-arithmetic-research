@@ -365,6 +365,24 @@ Deliverables: `ARITHMETIC_SENSING_V_TIME_DIVERSITY.md`,
 remote dependencies, the end-to-end ensemble and same-grid control artifacts,
 and their tests.
 
+**Arithmetic multiscale sensing milestone:** nested window design is recast as
+convex geometry on signed log-frequency response signatures. For any declared
+finite dangerous-mode set, an epigraph linear program exactly minimizes the
+worst weighted selected-target leakage over the candidate probability
+simplex. Sparse-support enumeration and exact dyadic rounding turn the
+discovery output into a simple rational measure. At degree fourteen the first
+scanned outer-time crossing simplified from three proposed scales to the exact
+two-scale weights `125/65536` at `(T,m)=(510,2550)` and `65411/65536` at
+`(1780,8900)`. The short grid is an exact central subset of the long grid, so
+the construction uses 8,900 distinct readings. Its independent all-target
+Arb/MPFR endpoint is `0.4980274168`, reducing the preceding nested design by
+50 readings and 10 time units without claiming global optimality.
+
+Deliverables: `ARITHMETIC_SENSING_V_MULTISCALE.md`,
+`arithmetic_multiscale_sensing.py`, `verify_multiscale_certificate.py`, two
+new remote dependencies, the end-to-end multiscale and same-grid control
+artifacts, and their tests.
+
 ## Adjacent target — arithmetic acceleration
 
 **Status:** first exact study completed in Stage 5; asymptotic questions remain
