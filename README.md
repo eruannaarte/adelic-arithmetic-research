@@ -41,6 +41,19 @@ the first \(K\) cosine ports, the early singular values form the exact flag
 \(q,q^2,\ldots,q^K\), while a finite grid is certified only when its Gram
 error is small relative to the shrinking continuum observability floor.
 
+Stage X replaces qualitative positivity and high-precision spectra by
+outward-rounded generalized-eigenvalue certificates. A common truncated
+Laplace Gram rigorously controls the continuous late resolved, one-cell
+lattice, and interior atomic charts through eight cosine ports in both
+\(L^2\) and \(H^1\) source metrics. For the first two ports, a second proof
+covers the calibrated early chart and every reflecting-boundary coordinate,
+giving the complete declared continuum-atlas bracket
+\(10^{-19}\le\gamma_2\le10^{-6}\). The source metric and calibration cost
+are part of every statement. A separate asymptotic proof gives
+squared-factorial upper ceilings, an explicit \(e^{-O(K^2)}\) lower frame,
+and an exact fixed-band contrast fan; a proposed spectral-ratio constant is
+kept explicitly conjectural. Finite-grid transfer remains the next theorem.
+
 The active continuation includes continuum-certified arithmetic window design
 and a cancellation-aware log-Mellin certificate for higher-degree coefficient
 tails. At `N=50`, `sigma=2`, `T=1000`, and `m=5000`, the eight-harmonic
@@ -323,6 +336,26 @@ finite-grid certificate, and noise-thresholded effective dimension. The atlas
 theorem treats the lattice sector for \(\tau\ge\tau_0>0\); the raw early
 lattice endpoint is not claimed.
 
+Run the Stage X outward-rounded spectral certificates and adversarial
+controls:
+
+    python -m pip install -r oig_x_spectral_certificate_requirements.txt
+    python -m unittest -v test_oig_x_spectral_certificate.py
+    python -m unittest -v test_oig_x_full_atlas_certificate.py
+    python -m unittest -v test_oig_x_spectral_asymptotics.py
+    python -m unittest -v test_oig_x_adversarial_controls.py
+    python oig_x_spectral_certificate.py --max-band 8 --precision-bits 320
+    python oig_x_full_atlas_certificate.py --precision-bits 192
+    python oig_x_spectral_asymptotics.py --maximum-band 12 --digits 100
+
+See [OPERATIONAL_INFORMATION_GEOMETRY_X.md](OPERATIONAL_INFORMATION_GEOMETRY_X.md)
+for the coordinate-invariant certification theorem, common-window reduction,
+exact affine-ramp determinant law, rigorous late-core spectra through
+\(K=8\), complete four-stratum \(K=2\) certificate, effective-rank and
+Gaussian information budgets, factorial upper obstruction, and finite-model
+transfer target. The full-atlas result concerns continuum phase Grams; no
+finite-grid or finite-sensor certificate is implied.
+
 Run the outward-rounded finite-grid E-design certificate separately:
 
 ```sh
@@ -554,6 +587,20 @@ For the public synthesis of the complete progression, see
   high-precision Hankel, effective-rank, and calibration-cost audit
 - [OIG_IX_ADVERSARIAL_AUDIT.md](OIG_IX_ADVERSARIAL_AUDIT.md) — compactness,
   symmetry, finite-sampling, Sobolev, and causal-word counterexamples
+- [OPERATIONAL_INFORMATION_GEOMETRY_X.md](OPERATIONAL_INFORMATION_GEOMETRY_X.md)
+  — certified generalized spectra, effective rank, and finite-transfer target
+- [OIG_X_CERTIFIED_SPECTRUM_THEOREM.md](OIG_X_CERTIFIED_SPECTRUM_THEOREM.md)
+  — interval-atlas theorem, common-window proof, endpoint determinants, and
+  information inequalities
+- [OIG_X_SPECTRAL_ASYMPTOTICS.md](OIG_X_SPECTRAL_ASYMPTOTICS.md) —
+  squared-factorial ceilings, explicit lower frames, determinant scale, exact
+  interaction fan, and a falsifiable cosine constant
+- [oig_x_spectral_certificate.md](oig_x_spectral_certificate.md) — rigorous
+  late-core \(K\le8\) Arb certificates in \(L^2\) and \(H^1\)
+- [oig_x_full_atlas_certificate.md](oig_x_full_atlas_certificate.md) — complete
+  calibrated early/late/lattice/boundary certificate at \(K=2\)
+- [OIG_X_ADVERSARIAL_AUDIT.md](OIG_X_ADVERSARIAL_AUDIT.md) — coordinate,
+  sampling, interval, boundary, underflow, and degeneracy controls
 - `oig_iv_certificate.md` — outward-rounded finite-grid E-design certificate
 - `oig_v_scaling_report.md` — independent continuum and propagation audit
 
@@ -596,6 +643,12 @@ proved results, computation, conjecture, and interpretation.
 - [oig_ix_growing_band.py](oig_ix_growing_band.py) — finite response Gramians,
   high-precision Hankel spectra, causal flags, effective rank, and calibration
   costs
+- [oig_x_spectral_certificate.py](oig_x_spectral_certificate.py) — continuous
+  late-core Arb spectrum, generalized inertia, and information budgets
+- [oig_x_full_atlas_certificate.py](oig_x_full_atlas_certificate.py) — exact
+  two-port early/late/lattice/boundary atlas certificate
+- [oig_x_spectral_asymptotics.py](oig_x_spectral_asymptotics.py) — exact
+  cosine-moment recurrence and high-precision nested-band conjecture audit
 - `oig_iv_certificate.py` — rational/Arb finite-grid E-design checker
 - `arithmetic_sensing_v.py` — Stage V reproduction and boundary studies
 - `exact_trigonometric_positivity.py` — exact rational Sturm certificates

@@ -1018,10 +1018,11 @@ verification evidence, not interval certificates.
 
 ## 17. Next research order
 
-1. **Certify the observable spectrum.** Obtain useful two-sided bounds for
-   \(\gamma_K\) on the cosine and moment-adapted bands, beginning with
-   high-precision or interval-certified moderate \(K\), then seek asymptotic
-   singular-value constants.
+1. **Certify the observable spectrum — completed in Stage X.** The late
+   continuous core is outward-certified through \(K=8\), and the complete
+   declared four-stratum atlas is certified at \(K=2\).  Asymptotic lower
+   constants and a matching factorial lower law remain open; Stage X proves
+   a nonmatching explicit \(e^{-O(K^2)}\) lower bound.
 2. **Optimize effective rank.** Choose several times and target profiles to
    maximize the number of singular values above a declared noise threshold,
    with source cost and output whitening fixed in advance.
@@ -1042,7 +1043,7 @@ verification evidence, not interval certificates.
    by finite-speed propagation and identify which parts of the Gram atlas
    survive.
 
-The immediate target is the first: turn the observed high-precision spectrum
-into certified lower and upper information bounds.  Stage IX has proved what
-must be compared; the next stage should determine how much effective source
-dimension a declared experiment can actually afford.
+Stage X completes the first target with generalized-metric Arb certificates.
+Its next handoff is finite-model transfer: enclose the discretization,
+mixed-word, target-preparation, boundary, and sensor-frame error in the same
+source metric, then prove that it lies below the certified continuum floor.
