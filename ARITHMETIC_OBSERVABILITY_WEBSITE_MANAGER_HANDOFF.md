@@ -1,10 +1,10 @@
 # Arithmetic Observability Atlas: Website Manager Handoff
 
-## User-mediated publishing package
+## Direct publishing package
 
-- **Package status:** ready for the user to augment and hand to the Website
-  Manager
-- **Dispatch status:** not sent to the Website Manager
+- **Package status:** formal Atlas is live; public companion and AO Lab are
+  validated and ready for integration
+- **Dispatch status:** direct Website Manager dispatch requested by the user
 - **Prepared:** 15 August 2026
 - **Repository:**
   `https://github.com/eruannaarte/adelic-arithmetic-research`
@@ -14,10 +14,11 @@
 - **Corpus payload SHA-256:**
   `a64f515f770d316a3d6ecad4b70494af1a5cc90342b4076c7fd783fce0f1c0d6`
 
-This is the handoff artifact.  It is intentionally self-contained so the user
-can append design, audience, deployment, or editorial instructions before
-prompting the Website Manager.  Instructions added by the user at handoff
-time are authoritative.
+This is the handoff artifact.  The user has now explicitly authorized the
+Website Manager to publish the public companion and interactive AO Lab beside
+the existing formal Atlas page once the normal validation, immutable-release,
+rollback, and Mac/Windows synchronization gates pass.  Instructions added by
+the user at dispatch time remain authoritative.
 
 ---
 
@@ -90,6 +91,95 @@ within the existing research site, with these sections:
 7. **Scope and open boundary**
    - Reproduce a concise version of the established/non-established ledger.
    - Link readers to the full Atlas scope section.
+
+### Public companion and interactive AO Lab
+
+Publish the new public-facing companion beside the formal Atlas without
+replacing or weakening the existing theorem page.
+
+Canonical package files:
+
+```text
+ARITHMETIC_OBSERVABILITY_PUBLIC_COMPANION.md
+website/arithmetic-observability-companion/index.html
+website/arithmetic-observability-companion/ao-lab.css
+website/arithmetic-observability-companion/ao-lab.js
+website/arithmetic-observability-companion/README.md
+```
+
+Suggested route:
+
+```text
+/number-geometry/arithmetic-observability-atlas/lab/
+```
+
+Suggested visible navigation:
+
+```text
+Formal Atlas | Public companion | Explore the AO Lab
+```
+
+The standalone page is dependency-free: it makes no network requests and uses
+no external fonts, libraries, analytics, or build step.  The Website Manager
+may adapt its presentation to the site's established publication system, but
+must preserve these semantic boundaries:
+
+- display `Interactive illustration -- synthetic declared model` above the
+  lab;
+- label the companion and lab `Not peer reviewed`;
+- keep `shape` defined as an exponent-weight profile, not the shape of a prime;
+- keep the control label `Pair cutoff (2epsilon)` and explain that two
+  independent adversarial response balls of radius `epsilon` can overlap at
+  pair distance `2epsilon`;
+- call the heatmap and separation envelope sampled finite-grid diagnostics;
+- do not call the separation envelope an energy spectrum or a formal
+  certificate;
+- present the quantum Hamiltonian discussion as a controlled engineered toy
+  embedding, not evidence for prime-logarithmic particle energies; and
+- link back to AO V for the exact three-reading theorem and to the full Atlas
+  for all other models and open boundaries.
+
+The lab uses the exact AO V schedule
+
+```text
+T = (245943/1000, 140531/500, 120104/125)
+```
+
+on normalized four-level geometric factors for primes 2, 3, and 5.  Its
+heatmap minimizes reading distance over a displayed candidate `y_5` grid; its
+envelope bins compact `L-infinity` shape distance and records the smallest
+displayed reading distance.  These are illustrations of one declared branch,
+not claims about every Atlas model.
+
+The local standalone package passed the following checks before dispatch:
+
+- JavaScript syntax and HTML reference/identifier checks;
+- no external script or stylesheet requests;
+- live one-reading and three-reading control updates;
+- tooltip and dynamic status updates;
+- desktop layout at 1,024 CSS pixels;
+- narrow layout at 360 CSS pixels with zero horizontal overflow and 12-pixel
+  chart labels; and
+- light/dark theme rendering.
+
+Package SHA-256 identities at dispatch:
+
+```text
+ARITHMETIC_OBSERVABILITY_PUBLIC_COMPANION.md
+9c4938570b0d86ad5bac9313c716608c7769280e6c082bfd9b0b2faef0c21d67
+
+website/arithmetic-observability-companion/README.md
+7989f3be385ef51525417043e9412106fe037caa1d313bd7529e6baa67615a77
+
+website/arithmetic-observability-companion/index.html
+d07fb34f45b162af46ac298789a9608ddd9aa35fc3d9cb0a08db231c8cb58e21
+
+website/arithmetic-observability-companion/ao-lab.css
+089e8f80c4ec85cd9198e9f2ed31537b3520c58b25c07ec780966db0f2f19fb7
+
+website/arithmetic-observability-companion/ao-lab.js
+ffc99651689fe1ee1bfa0e64e07b575e1f25a3403f1896598633d6ee57262ab9
+```
 
 ### Required theorem cards
 
@@ -258,20 +348,24 @@ producer environment and Windows/LF caveats are recorded in Atlas Section 9.
 - [ ] The AO-IX rebuild is marked opt-in and resource-intensive.
 - [ ] Proved, formally computed, descriptive, and open claims have distinct
       presentation treatments.
-- [ ] No deployment occurs before the user's requested review gate.
+- [ ] The formal Atlas remains the authoritative theorem page.
+- [ ] The public companion and AO Lab are reachable beside the formal Atlas.
+- [ ] The lab remains usable at 360 CSS pixels without horizontal overflow.
+- [ ] The controlled physical analogy is visually separated from proved and
+      computed claims.
+- [ ] Deployment occurs only after the Website Manager's ordinary validation
+      gates; this dispatch carries the user's publication authorization.
 
 ---
 
-## User additions before Website Manager dispatch
+## User authorization for Website Manager dispatch
 
-Add any desired visual direction, audience emphasis, site location, release
-timing, deployment authority, analytics requirements, or additional calls to
-action below this line.  These additions override the defaults above when
-they are explicit.
-
-```text
-[USER ADDITIONAL INSTRUCTIONS GO HERE]
-```
+On 15 August 2026 the user explicitly requested that the public science-
+communication text and interactive AO Lab be prepared and sent directly to
+the Website Manager for publication beside the formal paper.  This authorizes
+the Website Manager to publish the faithful companion after its normal route,
+security, accessibility, immutable-release, rollback, and synchronization
+checks pass.  It does not authorize enlarging the mathematical claims.
 
 ---
 

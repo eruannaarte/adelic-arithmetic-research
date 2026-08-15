@@ -191,6 +191,12 @@ large AO-IX fine-grid reconstruction is deliberately opt-in; ordinary
 verification checks its committed proof objects without rebuilding the
 multi-gigabyte convolution.
 
+For a nontechnical introduction and an interactive finite-grid illustration,
+see [Can a Few Echoes Reveal a Hidden Arithmetic Shape?](ARITHMETIC_OBSERVABILITY_PUBLIC_COMPANION.md)
+and the [Arithmetic Observability Lab package](website/arithmetic-observability-companion/README.md).
+The companion is a science-communication layer, not part of the formal corpus;
+the Atlas and numbered manuscripts remain authoritative.
+
 ## Reproduce Arithmetic Sensing I
 
 The random-time first theorem layer separates Gram conditioning, measurement
