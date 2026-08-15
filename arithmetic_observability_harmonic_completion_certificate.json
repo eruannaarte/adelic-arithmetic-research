@@ -1,0 +1,1116 @@
+{
+  "payload": {
+    "complex_near_dft_completion": {
+      "all_nearest_integer_windings_certified": true,
+      "complex_source_basis": "q_l(a)=exp(2*pi*i*a*l/4)/2 for l=1,2,3, tensor cubed",
+      "exact_fourier_basis_and_ideal_matrix_verified": true,
+      "exact_rational_implications_verified": true,
+      "frobenius_error_certainly_below_upper": true,
+      "frobenius_error_interval": "[0.161091502223988150691904 +/- 4.19e-26]",
+      "frobenius_error_upper_exact": "81/500",
+      "ideal_restricted_matrix": "8 I_27",
+      "method": "Arb phase residuals plus projection contraction, |exp(-ix)-1|<=|x|, a Frobenius bound, and Weyl's inequality",
+      "passed": true,
+      "residual_records": [
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[-0.000198935603919435088 +/- 4.33e-22]",
+            "[0.000238932150294845774 +/- 2.77e-22]"
+          ],
+          "n": 1661137,
+          "nearest_integer_windings": [
+            1661137,
+            2632840,
+            3857041
+          ],
+          "row_error_squared_upper_interval": "[0.000314385430007528253627934 +/- 4.00e-28]",
+          "target_phase_indices": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[-0.000156452879855796236 +/- 2.97e-22]",
+            "[0.000144714295996177332 +/- 5.81e-23]"
+          ],
+          "n": 645383,
+          "nearest_integer_windings": [
+            645383,
+            1022908,
+            1498533
+          ],
+          "row_error_squared_upper_interval": "[0.000144231274909383405395401 +/- 2.60e-28]",
+          "target_phase_indices": [
+            1,
+            1,
+            2
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[0.000341910467376472149 +/- 7.76e-23]",
+            "[-0.000151489325092526670 +/- 4.82e-22]"
+          ],
+          "n": 1111112,
+          "nearest_integer_windings": [
+            1111112,
+            1761071,
+            2579922
+          ],
+          "row_error_squared_upper_interval": "[0.000647825559130800818479535 +/- 5.02e-29]",
+          "target_phase_indices": [
+            1,
+            1,
+            3
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[-0.000299432146051213826 +/- 4.01e-22]",
+            "[-0.000123065376787834212 +/- 8.81e-23]"
+          ],
+          "n": 568452,
+          "nearest_integer_windings": [
+            568452,
+            900975,
+            1319905
+          ],
+          "row_error_squared_upper_interval": "[0.00134577876486298930320605 +/- 3.93e-28]",
+          "target_phase_indices": [
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[0.000198931201181054558 +/- 2.26e-22]",
+            "[-0.000419268997876538215 +/- 4.89e-22]"
+          ],
+          "n": 1034181,
+          "nearest_integer_windings": [
+            1034181,
+            1639138,
+            2401294
+          ],
+          "row_error_squared_upper_interval": "[0.000956160502276469656119495 +/- 2.50e-28]",
+          "target_phase_indices": [
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[-0.000137114940499749607 +/- 2.91e-22]",
+            "[0.000296786089789960141 +/- 1.40e-22]"
+          ],
+          "n": 1348196,
+          "nearest_integer_windings": [
+            1348196,
+            2136840,
+            3130414
+          ],
+          "row_error_squared_upper_interval": "[0.000482499745564863553417647 +/- 3.74e-28]",
+          "target_phase_indices": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[-7.52942770800641261e-5 +/- 4.86e-23]",
+            "[0.000354640029285074509 +/- 4.45e-22]"
+          ],
+          "n": 1035255,
+          "nearest_integer_windings": [
+            1035255,
+            1640840,
+            2403788
+          ],
+          "row_error_squared_upper_interval": "[0.000858734752052168887143007 +/- 1.98e-28]",
+          "target_phase_indices": [
+            1,
+            3,
+            1
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[-3.28115530164252734e-5 +/- 1.94e-23]",
+            "[0.000260422174986406067 +/- 2.26e-22]"
+          ],
+          "n": 19501,
+          "nearest_integer_windings": [
+            19501,
+            30908,
+            45280
+          ],
+          "row_error_squared_upper_interval": "[0.000512108280862699069570761 +/- 1.13e-29]",
+          "target_phase_indices": [
+            1,
+            3,
+            2
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[-0.000237611482631528345 +/- 2.59e-22]",
+            "[-6.52114372927198447e-5 +/- 2.82e-23]"
+          ],
+          "n": 255511,
+          "nearest_integer_windings": [
+            255511,
+            404975,
+            593278
+          ],
+          "row_error_squared_upper_interval": "[0.000713058691539089531849110 +/- 2.66e-28]",
+          "target_phase_indices": [
+            1,
+            3,
+            3
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[0.000208602372228268138 +/- 4.65e-22]",
+            "[-0.000253064677188800590 +/- 4.82e-22]"
+          ],
+          "n": 37928,
+          "nearest_integer_windings": [
+            37928,
+            60115,
+            88067
+          ],
+          "row_error_squared_upper_interval": "[0.000350931847758884354387525 +/- 4.39e-28]",
+          "target_phase_indices": [
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[0.000328436853716093504 +/- 8.41e-23]",
+            "[0.000261004643687662205 +/- 4.91e-22]"
+          ],
+          "n": 1833426,
+          "nearest_integer_windings": [
+            1833426,
+            2905912,
+            4257084
+          ],
+          "row_error_squared_upper_interval": "[0.00253100396674460142090946 +/- 1.93e-27]",
+          "target_phase_indices": [
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[-0.000332243699067639100 +/- 1.81e-22]",
+            "[0.000137356798198571855 +/- 3.14e-22]"
+          ],
+          "n": 587953,
+          "nearest_integer_windings": [
+            587953,
+            931884,
+            1365185
+          ],
+          "row_error_squared_upper_interval": "[0.000624132915663458131119104 +/- 1.79e-29]",
+          "target_phase_indices": [
+            2,
+            1,
+            3
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[0.000185457587520675913 +/- 2.20e-22]",
+            "[-6.77502909634933854e-6 +/- 6.82e-25]"
+          ],
+          "n": 1756495,
+          "nearest_integer_windings": [
+            1756495,
+            2783979,
+            4078456
+          ],
+          "row_error_squared_upper_interval": "[0.000290276403073376035531177 +/- 1.04e-28]",
+          "target_phase_indices": [
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[0.000227940311584314766 +/- 5.17e-23]",
+            "[-0.000100992883395017780 +/- 3.21e-22]"
+          ],
+          "n": 740741,
+          "nearest_integer_windings": [
+            740741,
+            1174047,
+            1719948
+          ],
+          "row_error_squared_upper_interval": "[0.000287922470724800363768682 +/- 2.45e-28]",
+          "target_phase_indices": [
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[2.31403819692116941e-5 +/- 9.45e-24]",
+            "[-0.000426626495674143692 +/- 2.33e-22]"
+          ],
+          "n": 976751,
+          "nearest_integer_windings": [
+            976751,
+            1548114,
+            2267946
+          ],
+          "row_error_squared_upper_interval": "[0.00150203542787679894380751 +/- 3.25e-27]",
+          "target_phase_indices": [
+            2,
+            2,
+            3
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[8.49610453888971753e-5 +/- 4.86e-23]",
+            "[-0.000368772556179029324 +/- 3.51e-22]"
+          ],
+          "n": 663810,
+          "nearest_integer_windings": [
+            663810,
+            1052114,
+            1541320
+          ],
+          "row_error_squared_upper_interval": "[0.000910213543574190713398533 +/- 4.92e-28]",
+          "target_phase_indices": [
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[-0.000251085096291906990 +/- 2.65e-22]",
+            "[0.000347282531487469031 +/- 3.01e-22]"
+          ],
+          "n": 977825,
+          "nearest_integer_windings": [
+            977825,
+            1549816,
+            2270440
+          ],
+          "row_error_squared_upper_interval": "[0.000632621069195894234853493 +/- 6.45e-29]",
+          "target_phase_indices": [
+            2,
+            3,
+            2
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[0.000247278250940361394 +/- 3.62e-22]",
+            "[5.10789103987650289e-5 +/- 2.32e-23]"
+          ],
+          "n": 1443554,
+          "nearest_integer_windings": [
+            1443554,
+            2287979,
+            3351829
+          ],
+          "row_error_squared_upper_interval": "[0.000707409598581972910204503 +/- 1.94e-28]",
+          "target_phase_indices": [
+            2,
+            3,
+            3
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[-9.67117104721357931e-6 +/- 1.11e-25]",
+            "[-0.000166204320687737625 +/- 7.26e-24]"
+          ],
+          "n": 996252,
+          "nearest_integer_windings": [
+            996252,
+            1579023,
+            2313227
+          ],
+          "row_error_squared_upper_interval": "[0.000263385307543190785777818 +/- 2.60e-28]",
+          "target_phase_indices": [
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[-0.000214471100662316651 +/- 1.49e-22]",
+            "[-0.000491837932966863536 +/- 4.39e-22]"
+          ],
+          "n": 1232262,
+          "nearest_integer_windings": [
+            1232262,
+            1953090,
+            2861225
+          ],
+          "row_error_squared_upper_interval": "[0.00374531058392897080514924 +/- 3.70e-27]",
+          "target_phase_indices": [
+            3,
+            1,
+            2
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[0.000152646034504250640 +/- 2.01e-22]",
+            "[0.000253647145890056728 +/- 2.36e-22]"
+          ],
+          "n": 1775996,
+          "nearest_integer_windings": [
+            1775996,
+            2814888,
+            4123736
+          ],
+          "row_error_squared_upper_interval": "[0.00121521250287525744295999 +/- 4.56e-27]",
+          "target_phase_indices": [
+            3,
+            1,
+            3
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[0.000214466697923936121 +/- 5.83e-23]",
+            "[0.000311501085385171096 +/- 3.49e-22]"
+          ],
+          "n": 1463055,
+          "nearest_integer_windings": [
+            1463055,
+            2318888,
+            3397110
+          ],
+          "row_error_squared_upper_interval": "[0.00202440489229048218365664 +/- 1.89e-27]",
+          "target_phase_indices": [
+            3,
+            2,
+            1
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[9.66676830883304910e-6 +/- 2.91e-24]",
+            "[-1.41325268939548158e-5 +/- 4.97e-24]"
+          ],
+          "n": 1699065,
+          "nearest_integer_windings": [
+            1699065,
+            2692955,
+            3945108
+          ],
+          "row_error_squared_upper_interval": "[1.03929974332615604838801e-6 +/- 4.16e-31]",
+          "target_phase_indices": [
+            3,
+            2,
+            2
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[5.21494923724719018e-5 +/- 3.22e-23]",
+            "[-0.000108350381192623258 +/- 4.24e-22]"
+          ],
+          "n": 683311,
+          "nearest_integer_windings": [
+            683311,
+            1083023,
+            1586600
+          ],
+          "row_error_squared_upper_interval": "[6.36226171472104213921710e-5 +/- 1.50e-29]",
+          "target_phase_indices": [
+            3,
+            2,
+            3
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[0.000113970155792157383 +/- 2.59e-23]",
+            "[-5.04964416975088902e-5 +/- 3.96e-23]"
+          ],
+          "n": 370370,
+          "nearest_integer_windings": [
+            370370,
+            587023,
+            859974
+          ],
+          "row_error_squared_upper_interval": "[7.19806176812000909421706e-5 +/- 3.89e-29]",
+          "target_phase_indices": [
+            3,
+            3,
+            1
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[-9.08297738229456889e-5 +/- 3.54e-23]",
+            "[-0.000376130053976634802 +/- 3.94e-22]"
+          ],
+          "n": 606380,
+          "nearest_integer_windings": [
+            606380,
+            961090,
+            1407972
+          ],
+          "row_error_squared_upper_interval": "[0.00171246805053589486948871 +/- 1.37e-27]",
+          "target_phase_indices": [
+            3,
+            3,
+            2
+          ]
+        },
+        {
+          "cycle_residual_intervals": [
+            "0",
+            "[0.000276287361343621602 +/- 8.39e-23]",
+            "[0.000369355024880285463 +/- 6.74e-23]"
+          ],
+          "n": 1150114,
+          "nearest_integer_windings": [
+            1150114,
+            1822888,
+            2670483
+          ],
+          "row_error_squared_upper_interval": "[0.00304171797263567695828894 +/- 2.36e-27]",
+          "target_phase_indices": [
+            3,
+            3,
+            3
+          ]
+        }
+      ],
+      "residual_records_sha256": "e48fe1a5622f365b88cec375b57c21ddd65791545279a1ac9004717d8d987bbb",
+      "rms_time_gram_floor_exact": "9/4",
+      "rms_time_normalization": "each of 27 complex rows divided by sqrt(27)",
+      "scale_free_gram_floor_exact": "576/625",
+      "scale_free_normalization": "restricted matrix divided by exact 8",
+      "scale_free_singular_lower_exact": "3919/4000",
+      "schedule": [
+        {
+          "n": 1661137,
+          "target_phase_indices": [
+            1,
+            1,
+            1
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 645383,
+          "target_phase_indices": [
+            1,
+            1,
+            2
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 1111112,
+          "target_phase_indices": [
+            1,
+            1,
+            3
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 568452,
+          "target_phase_indices": [
+            1,
+            2,
+            1
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 1034181,
+          "target_phase_indices": [
+            1,
+            2,
+            2
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 1348196,
+          "target_phase_indices": [
+            1,
+            2,
+            3
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 1035255,
+          "target_phase_indices": [
+            1,
+            3,
+            1
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 19501,
+          "target_phase_indices": [
+            1,
+            3,
+            2
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 255511,
+          "target_phase_indices": [
+            1,
+            3,
+            3
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 37928,
+          "target_phase_indices": [
+            2,
+            1,
+            1
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 1833426,
+          "target_phase_indices": [
+            2,
+            1,
+            2
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 587953,
+          "target_phase_indices": [
+            2,
+            1,
+            3
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 1756495,
+          "target_phase_indices": [
+            2,
+            2,
+            1
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 740741,
+          "target_phase_indices": [
+            2,
+            2,
+            2
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 976751,
+          "target_phase_indices": [
+            2,
+            2,
+            3
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 663810,
+          "target_phase_indices": [
+            2,
+            3,
+            1
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 977825,
+          "target_phase_indices": [
+            2,
+            3,
+            2
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 1443554,
+          "target_phase_indices": [
+            2,
+            3,
+            3
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 996252,
+          "target_phase_indices": [
+            3,
+            1,
+            1
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 1232262,
+          "target_phase_indices": [
+            3,
+            1,
+            2
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 1775996,
+          "target_phase_indices": [
+            3,
+            1,
+            3
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 1463055,
+          "target_phase_indices": [
+            3,
+            2,
+            1
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 1699065,
+          "target_phase_indices": [
+            3,
+            2,
+            2
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 683311,
+          "target_phase_indices": [
+            3,
+            2,
+            3
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 370370,
+          "target_phase_indices": [
+            3,
+            3,
+            1
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 606380,
+          "target_phase_indices": [
+            3,
+            3,
+            2
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        },
+        {
+          "n": 1150114,
+          "target_phase_indices": [
+            3,
+            3,
+            3
+          ],
+          "time_rule": "2*pi*(n+k1/4)/log(2)"
+        }
+      ],
+      "schedule_sha256": "857ad6bacae521c0d9e5e5184dd850d6dcbaf6caee05a775c99d9f96f1d3272e"
+    },
+    "formal_scope": {
+      "arb_scope": "computer-assisted interval proof conditional on the Arb/FLINT implementation; not a formal-proof-assistant derivation",
+      "claim": "finite exact-time harmonic completion for the declared 2^a 3^b 5^c box and declared RMS noise geometries",
+      "clock_jitter_certified": false,
+      "complex_full_raw_62-trace_floor_certified": false,
+      "off_box_tail_certified": false,
+      "schedule_optimality_claimed": false
+    },
+    "full_uniform_raw_real_operator": {
+      "certificate": {
+        "determinant_relative_radius_cap_exact": "1/100000000",
+        "dimension": 64,
+        "every_determinant_relative_radius_strictly_below_cap": true,
+        "every_leading_principal_minor_certainly_positive": true,
+        "final_minor_lower_endpoint_exact": "14362308359570963584467694464737988218323331161236038456205725095364783841543/1093625362391505962186251113558810682676584715446606218212885303204976499599687961611756588511526912",
+        "floor_exact": "1/500",
+        "leading_principal_minor_intervals": [
+          "[0.998000000000000000000000 +/- 3e-29]",
+          "[0.921130232182786705857740 +/- 4.19e-25]",
+          "[0.806429534823972441553283 +/- 4.34e-25]",
+          "[0.688803617132612982431908 +/- 2.67e-25]",
+          "[0.628794655126853572088074 +/- 3.73e-25]",
+          "[0.520383874146020941565438 +/- 4.34e-27]",
+          "[0.405040784646589826304500 +/- 2.10e-25]",
+          "[0.305732247832484838701774 +/- 3.09e-25]",
+          "[0.270296887897658387822406 +/- 2.28e-25]",
+          "[0.213690845121719279505180 +/- 1.25e-25]",
+          "[0.159792484273470307228714 +/- 6.77e-27]",
+          "[0.115635753645715022008299 +/- 3.19e-25]",
+          "[0.0995000189929712564663010 +/- 1.16e-27]",
+          "[0.0742040517702052337804352 +/- 2.06e-26]",
+          "[0.0487709196489066349505793 +/- 2.96e-26]",
+          "[0.0301952188565609077379489 +/- 2.08e-26]",
+          "[0.0269975594891283356464994 +/- 2.27e-26]",
+          "[0.0208293440548328961462833 +/- 1.62e-26]",
+          "[0.0149161254910457474664913 +/- 6.22e-27]",
+          "[0.00905385992690038694673660 +/- 4.39e-27]",
+          "[0.00683915562673225492946929 +/- 2.68e-27]",
+          "[0.00435773742168641083190336 +/- 3.11e-27]",
+          "[0.00262491198949169477591699 +/- 2.29e-27]",
+          "[0.00115724046564450013216129 +/- 1.75e-27]",
+          "[0.000834299577594855875625321 +/- 3.29e-28]",
+          "[0.000492845961477876696317677 +/- 2.62e-28]",
+          "[0.000269836186426834078529411 +/- 1.84e-28]",
+          "[0.000108763284304491720424996 +/- 4.29e-29]",
+          "[7.48480022819271534504883e-5 +/- 3.81e-29]",
+          "[3.75142790501611910265029e-5 +/- 1.66e-29]",
+          "[9.96453136170164514407752e-6 +/- 1.58e-30]",
+          "[2.48829619273304205222197e-6 +/- 3.83e-30]",
+          "[1.87234458641984056711319e-6 +/- 7.46e-32]",
+          "[1.31221366274327002457206e-6 +/- 2.72e-30]",
+          "[8.45237637614554226177362e-7 +/- 1.59e-31]",
+          "[3.90239871766467615513993e-7 +/- 2.38e-31]",
+          "[2.29987647832445621920896e-7 +/- 4.47e-31]",
+          "[1.19529837988250009190015e-7 +/- 1.36e-31]",
+          "[6.04635861926773334743604e-8 +/- 4.53e-32]",
+          "[1.32389689333398028366162e-8 +/- 3.42e-33]",
+          "[6.86192487696068712263521e-9 +/- 3.73e-33]",
+          "[2.91441857924235316030646e-9 +/- 1.32e-33]",
+          "[1.13651217177592253784052e-9 +/- 2.69e-34]",
+          "[1.69832231106419839096232e-10 +/- 1.83e-34]",
+          "[7.98732611840582758804677e-11 +/- 1.69e-36]",
+          "[1.95580226045520130817640e-11 +/- 4.12e-36]",
+          "[3.78209110224833721922028e-12 +/- 3.09e-36]",
+          "[6.83913770411730538321378e-13 +/- 3.54e-37]",
+          "[4.55506702244762600432831e-13 +/- 1.44e-37]",
+          "[2.55049216286986045853183e-13 +/- 2.00e-37]",
+          "[1.28582232565296981037704e-13 +/- 1.09e-37]",
+          "[5.22612318873987927792681e-14 +/- 3.25e-38]",
+          "[2.17234134779506862720316e-14 +/- 3.26e-38]",
+          "[5.00566717180752948140987e-15 +/- 2.85e-40]",
+          "[1.24136251356000625377853e-15 +/- 3.54e-39]",
+          "[1.64057915120359245215767e-16 +/- 2.89e-40]",
+          "[6.52911125727552768351886e-17 +/- 2.60e-41]",
+          "[1.00930640521217902420968e-17 +/- 3.82e-41]",
+          "[1.39496874002691169004805e-18 +/- 1.28e-42]",
+          "[1.07853518830390279783848e-19 +/- 4.63e-43]",
+          "[3.52100268623145982285372e-20 +/- 4.57e-44]",
+          "[2.86011775315739537687343e-21 +/- 1.08e-45]",
+          "[2.34836506749985138345789e-22 +/- 1.52e-46]",
+          "[1.31327498917581007068338e-23 +/- 1.50e-47]"
+        ],
+        "leading_principal_minor_intervals_sha256": "c518a67f59c5f59a006229cbe7bb2ff2b733df5ff7642364e877b3e5720b3523",
+        "leading_principal_minor_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "method": "direct Arb Sylvester test on Re(A^* A) - L S",
+        "passed": true,
+        "shift_matrix_radius_audit": {
+          "every_radius_strictly_below_cap": true,
+          "quantity_count": 4096,
+          "radius_cap_exact": "1/1000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "complex_row_weight_exact": "1/62",
+      "consequence": "the 48 raw resonant readings plus 14 raw completion readings are injective on real sources and have squared amplification strictly below 500",
+      "observation_norm": "uniform RMS over all 62 raw complex traces: (1/62) sum |y_l|^2",
+      "preprocessing": "none; no inverse-Vandermonde calibration is used",
+      "source": "all real coefficient arrays on the 64-state prime box",
+      "source_metric": "ambient Euclidean I_64"
+    },
+    "implementation": {
+      "all_transcendentals_enclosed_by_arb": true,
+      "arb_precision_bits": 256,
+      "binary64_used_for_proof_decisions": false,
+      "python_flint_version": "0.9.0",
+      "strict_interval_comparisons_only": true
+    },
+    "overall_passed": true,
+    "parameters": {
+      "ambient_real_dimension": 64,
+      "completion_time_rule": "t_m=1279*m/100 for 1<=m<=14",
+      "completion_times_exact": [
+        "1279/100",
+        "1279/50",
+        "3837/100",
+        "1279/25",
+        "1279/20",
+        "3837/50",
+        "8953/100",
+        "2558/25",
+        "11511/100",
+        "1279/10",
+        "14069/100",
+        "3837/25",
+        "16627/100",
+        "8953/50"
+      ],
+      "completion_times_sha256": "fe6c5912b288b63a6190fbbe8bc782b4c11b65b338b8eadfb7860f29c8e2aa90",
+      "exponents_per_axis": 4,
+      "primes": [
+        2,
+        3,
+        5
+      ],
+      "raw_completion_complex_trace_count": 14,
+      "raw_resonant_complex_trace_count": 48,
+      "raw_total_complex_trace_count": 62,
+      "real_top_interaction_dimension": 27,
+      "resonant_time_rule": "2*pi*m/log(p_j) for 0<=m<16 and j=1,2,3"
+    },
+    "restricted_real_completion": {
+      "certificate": {
+        "determinant_relative_radius_cap_exact": "1/100000000",
+        "dimension": 27,
+        "every_determinant_relative_radius_strictly_below_cap": true,
+        "every_leading_principal_minor_certainly_positive": true,
+        "final_minor_lower_endpoint_exact": "17124490994688684472848853358902565558785958617735817479830987929683429320951/110427941548649020598956093796432407239217743554726184882600387580788736",
+        "floor_exact": "1/25",
+        "leading_principal_minor_intervals": [
+          "[5.38666780623001537963304 +/- 1.63e-24]",
+          "[31.4260026607215724729192 +/- 2.00e-23]",
+          "[158.928039042251081573888 +/- 6.67e-23]",
+          "[1145.42852715903517369576 +/- 2.29e-21]",
+          "[3953.56561838744976272688 +/- 1.47e-21]",
+          "[8403.27668756983791611012 +/- 2.11e-21]",
+          "[46715.8560442373258056432 +/- 1.27e-20]",
+          "[149872.318106549721072219 +/- 4.87e-19]",
+          "[177964.377794955056833562 +/- 4.41e-19]",
+          "[1142415.68609432692817033 +/- 2.88e-19]",
+          "[3462359.62714613557985659 +/- 2.22e-18]",
+          "[9994977.32756249529730209 +/- 5e-21]",
+          "[12714915.0648669083441957 +/- 4.26e-17]",
+          "[12953686.9665615559848292 +/- 2.34e-17]",
+          "[9117583.25811663748111649 +/- 1.13e-18]",
+          "[14053935.8393252610843582 +/- 2.64e-17]",
+          "[15879515.6120393177592780 +/- 4.60e-17]",
+          "[11968280.5897790541794569 +/- 4.99e-17]",
+          "[22390588.2103567376061511 +/- 4.03e-17]",
+          "[22148006.3712281011025719 +/- 4.84e-17]",
+          "[35246622.3990389192226335 +/- 1.80e-17]",
+          "[15439153.9102102416696760 +/- 1.57e-17]",
+          "[12231058.6100696226429116 +/- 2.25e-17]",
+          "[7308089.52584440103272139 +/- 4.43e-18]",
+          "[1994010.31370444512520565 +/- 3.41e-18]",
+          "[466730.340538638789090992 +/- 1.29e-19]",
+          "[155073.894836158757596728 +/- 4.96e-19]"
+        ],
+        "leading_principal_minor_intervals_sha256": "ed6c9d0c55a4e88be8ac2b046ba10e4e5cff6e77d9bf4b0a9723d5ac210ccd8e",
+        "leading_principal_minor_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "method": "direct Arb Sylvester test on Re(A^* A) - L S",
+        "passed": true,
+        "shift_matrix_radius_audit": {
+          "every_radius_strictly_below_cap": true,
+          "quantity_count": 729,
+          "radius_cap_exact": "1/1000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "complex_row_weight_exact": "1/14",
+      "consequence": "the added block is injective on the old real kernel and its worst-case squared amplification is strictly below 25",
+      "observation_norm": "(1/14) sum_{m=1}^{14} |F_c(1279*m/100)|^2",
+      "source": "real top interaction W tensor W tensor W",
+      "source_metric": "S=B^T B in exact integer contrast coordinates"
+    },
+    "source_basis": {
+      "ambient_state_order": "lexicographic product(range(4), repeat=3)",
+      "descriptor_sha256": "575593f34ca6df3f2929a961d3ece330b6d199770d129ad3b5af2a96befbd750",
+      "exact_zero_sum_and_metric_identities_verified": true,
+      "one_axis_integer_columns": [
+        [
+          1,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          1,
+          -1
+        ]
+      ],
+      "one_axis_metric": [
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ]
+      ],
+      "restricted_coordinate_order": "lexicographic product(range(3), repeat=3)",
+      "restricted_metric_sha256": "6305a494ab7621e1b0519ca2f8c874a6fd00dfe15f768f10c6890b885c975ea0",
+      "source_metric_rule": "S = (C^T C) tensor (C^T C) tensor (C^T C)",
+      "tensor_rule": "B = C tensor C tensor C"
+    }
+  },
+  "payload_sha256": "9692367b6b1ad26e713e2da4684726ccc43a9b1b3747f8e1e5f368ad74c70b6a",
+  "schema": "arithmetic-observability-harmonic-completion-v1"
+}
