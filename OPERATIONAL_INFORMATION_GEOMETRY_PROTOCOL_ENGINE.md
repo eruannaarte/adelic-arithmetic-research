@@ -55,6 +55,18 @@ The resulting two-channel physical floor exceeds
 Markov benchmark yields an exact design bracket with certified efficiency
 above 97.25 percent.
 
+The Arithmetic-Observability integration developed here makes that engine
+query-directed and model aware. For a requested linear query \(Lx\), it now
+decides the exact condition \(\ker(PH)\subseteq\ker L\), constructs a
+nuisance-invariant decoder, and certifies the exact minimax query
+amplification. It distinguishes one nuisance shared across protocols from
+independent per-protocol refits, compares declared finite candidate libraries,
+retains bounded nuisance correlations through exact zonotope support, and
+audits finite model secants, tangent spaces, response tubes, and uncertain
+nominal null directions. These layers have strict standalone JSON verifiers.
+They strengthen the experiment-design conclusion without claiming that an
+external physical model has been enclosed.
+
 These are experiment-design theorems for declared stochastic models. They do
 not establish that nature uses those models, that matched global sensors are
 hardware-local, or that a candidate protocol library is physically complete.
@@ -403,7 +415,7 @@ Let the complete whitened finite response be
 
 \[
  R_{\rm true}=R_0+E_R\in\mathbb R^{m\times d},
- \qquad d=2,quad m=172.
+ \qquad d=2,\qquad m=172.
  \tag{7.1}
 \]
 
@@ -529,7 +541,202 @@ by an independent exact verifier.
 
 ---
 
-## 9. What has been achieved
+## 9. Query-directed observability under nuisance
+
+The full-state E-design of Sections 4--5 is now one special case of a
+query-directed problem. Let
+
+\[
+ y=Hx+Bz+\eta,
+ \qquad \|\eta\|_W\le\varepsilon.
+ \tag{9.1}
+\]
+
+For an exact basis \(B_0\) of \(\operatorname{ran}B\), define
+
+\[
+ P=I-B_0(B_0^TWB_0)^{-1}B_0^TW,
+ \qquad A=PH.
+ \tag{9.2}
+\]
+
+The engine verifies \(P^2=P\), \(PB=0\), and \(P^TW=WP\) with rational
+arithmetic.
+
+### Theorem 9.1 — exact query test and minimax factor
+
+For a requested linear query \(Lx\), identifiability is exactly
+
+\[
+ \boxed{\ker A\subseteq\ker L.}
+ \tag{9.3}
+\]
+
+Failure returns a rational \(h\) with \(Ah=0\) and \(Lh\ne0\), proving
+infinite zero-noise error on an unbounded source class. Success constructs a
+rational decoder \(D\) with
+
+\[
+ DA=L,\qquad DH=L,\qquad DB=0.
+ \tag{9.4}
+\]
+
+On the exact observable quotient, let \(G\) be the data Gram and \(Q\) the
+query form. Then
+
+\[
+ \kappa^2=\lambda_{\max}(Q,G),
+ \qquad R^*(\varepsilon)=\kappa\varepsilon.
+ \tag{9.5}
+\]
+
+The serialized certificate gives a rational Rayleigh lower bound and a
+rational upper shift accepted only after exact \(LDL^T\). Exact fallbacks
+handle rational magnitudes outside binary64 range; floating point decides no
+theorem field.
+
+If one nuisance \(z\) is shared across protocols, the responses and
+precisions must be stacked before one joint projection. The resulting Schur
+complement couples protocols and is not generally a linear information-form
+mixture. If each protocol receives an independent \(z_i\), the nuisance map
+is block diagonal and the individually profiled information forms add
+exactly. Both semantics are implemented and sealed into distinct reports.
+
+The pinned scalar control makes the distinction sharp. Each observation
+\(h_ix+z_i\) is useless when its nuisance is independently refit. With one
+shared \(z\), the pair \(x+z\) and \(2x+z\) identifies \(x\) and has the exact
+query-amplification lower certificate \(\kappa^2\ge4\).
+
+---
+
+## 10. Structured bounded nuisance
+
+An unrestricted subspace is not the right model for every nuisance. For a
+rational generator matrix \(V=[v_1,\ldots,v_m]\) and radii \(d_j\ge0\), set
+
+\[
+ Z_F=\{Va:|a_j|\le d_j\},
+ \qquad
+ h_{Z_F}(u)=\sum_jd_j|u^Tv_j|.
+ \tag{10.1}
+\]
+
+The checker returns an exact attaining coefficient vector. It can add a
+separately declared norm remainder or direction-specific support remainder
+for omitted countable generators; an absent premise is never interpreted as
+a zero bound.
+
+For query response \(q\), optional unbounded nuisance subspace
+\(\operatorname{ran}B\), and precision \(\Omega\succ0\), put
+
+\[
+ d^2=\inf_{\alpha,z\in Z}
+ \|q+B\alpha-z\|_\Omega^2.
+ \tag{10.2}
+\]
+
+A feasible primal point supplies an exact upper bound. If \(B^Tu=0\), the
+support dual gives
+
+\[
+ \boxed{
+ d^2\ge
+ \frac{(u^Tq-h_Z(u))_+^2}{u^T\Omega^{-1}u}.}
+ \tag{10.3}
+\]
+
+Both the scale-invariant distance bracket and the squared dual/KKT gap are
+reported. The correlation control is decisive: for \(v=(1,1)^T\) and
+\(u=(1,-1)^T\), the shared-generator support is zero, while the entrywise
+outer box has support two. Thus entrywise uncertainty can be sound yet erase
+real experimental distinguishability.
+
+---
+
+## 11. Model-aware quotient robustness
+
+A positive generalized information floor on an ambient quotient does not
+prove stability on a nonlinear model or under uncertainty that activates a
+nominal null. The integrated audit adds three checks.
+
+For a model secant \(v=x-x'\), the minimum source-cost distance from the
+nominal kernel is
+
+\[
+ d_Q(v)^2=\min_{k\in\ker H}(v-k)^TS(v-k).
+ \tag{11.1}
+\]
+
+Equal source radii erode this quotient separation by twice the radius;
+declared quotient-data uncertainty is then subtracted outward. Finite secant
+lists support model-wide conclusions only when explicitly declared exhaustive
+with nonempty provenance.
+
+For a tangent basis \(T_x\), exact generalized forms compute the smallest
+source-metric angle to \(\ker H\). A zero angle includes a rational witness; a
+positive squared bound \(\mu^2\) controls local amplification \(1/\mu\). The
+declared source metric is retained rather than replaced by Euclidean
+projection.
+
+For uncertain nominal null directions, the report separates:
+
+1. task irrelevance of the null to the query or an exhaustive model;
+2. stability of that null throughout the response family; and
+3. bounded blind amplitude whose possible leakage is charged to output
+   uncertainty.
+
+Possible activation never becomes a positive worst-case information floor by
+itself. Conversely, \(\ker H\subseteq\ker L\) does not make an unbounded blind
+coordinate safe when response uncertainty can leak it into the data. The
+combined object is therefore labelled a partial model-geometry audit until a
+compatible response-box information certificate is also supplied.
+
+---
+
+## 12. Certified finite-library choice
+
+All candidates must share one exact comparison contract: source dimension and
+metric, query and query metric, and the stated data-noise-radius convention.
+For each admissible protocol candidate \(i\), the query layer returns either an
+exact unidentifiability witness or a bracket
+
+\[
+ \ell_i\le\kappa_i^2\le u_i.
+ \tag{12.1}
+\]
+
+Over a finite candidate library, the global minimax-query optimum obeys
+
+\[
+ \boxed{
+ \min_i\ell_i
+ \le \min_i\kappa_i^2
+ \le \min_i u_i.}
+ \tag{12.2}
+\]
+
+The engine selects the candidate with smallest upper bound and certifies it as
+the unique library winner only when its upper bound is below every competing
+lower bound. This is a theorem over the supplied finite library, not a
+continuous optimization over every physically possible experiment.
+
+The complete proof chain now separates four questions: query recoverability,
+choice within the declared candidate library, bounded correlated nuisance,
+and stability under declared model secants, tangents, response boxes, and
+nominal-null rules. Each answer has an exact ledger and standalone verifier.
+
+In the pinned end-to-end control, the library selects the scalar response
+\(H=[2]\). The same declaration is reused by the structured-nuisance and
+response-tube layers. Their source metric and output-noise precision are
+checked equal, and the structured response difference is recomputed as
+\(H(1)=2\). The structured certificate closes at \(d^2=9/4\), with critical
+equal-noise radius square \(9/16\); the declared noise-radius square is
+\(1/4<9/16\). This cross-layer inequality is reconstructed exactly in the
+integration ledger.
+
+---
+
+## 13. What has been achieved
 
 The research path that began with fixed-mode convergence has now reached a
 working certified-design application:
@@ -543,9 +750,17 @@ working certified-design application:
 5. exact null removal, cost calibration, noise whitening, and E-optimal design
    are implemented;
 6. irrational response enclosures transfer into exact physical floors;
-7. finite sensor loss is certified; and
+7. finite sensor loss is certified;
 8. both the canonical noncommuting Neumann model and a broader hidden CTMC are
-   validated.
+   validated;
+9. exact query recovery and minimax amplification are certified after
+   nuisance profiling;
+10. finite protocol libraries are compared globally under one sealed query
+    and calibration contract;
+11. bounded correlated nuisance is handled through exact zonotope support;
+    and
+12. finite secants, tangent spaces, response tubes, and uncertain nominal
+    nulls receive separate model-aware audits.
 
 This is the first point in the programme where the mathematics answers an
 experimenter's question rather than only describing a response limit:
@@ -555,7 +770,7 @@ experimenter's question rather than only describing a response limit:
 
 ---
 
-## 10. Boundaries and next research order
+## 14. Boundaries and next research order
 
 The following are not claimed:
 
@@ -568,7 +783,11 @@ The following are not claimed:
 - entrywise response boxes are conservative when correlations between errors
   are known;
 - the engine optimizes a declared finite candidate library, not every
-  physically possible experiment; and
+  physically possible experiment;
+- an externally asserted response enclosure, remote-tail bound, or exhaustive
+  model list is a premise rather than something the finite verifier can prove;
+- the current combined model object is a geometry audit until its leakage
+  budget is composed with a compatible interval-information certificate; and
 - no conclusion about fundamental physics follows from the model.
 
 The strongest next targets are:
@@ -578,10 +797,12 @@ The strongest next targets are:
 2. extend the Arb cover adaptively across larger compact \(\tau\) intervals;
 3. add structured locality, sparsity, and bandwidth constraints to the matched
    sensor synthesis;
-4. admit correlated interval or affine-arithmetic response uncertainty rather
-   than entrywise boxes;
-5. extend the exact quotient engine to robustly nominally blind directions;
-6. add sequential and adaptive protocol design; and
+4. compose correlated affine or ellipsoidal response enclosures with the
+   structured-nuisance support certificate in one joint robust design;
+5. optimize shared-nuisance mixtures continuously rather than over only a
+   finite declared library;
+6. add sequential and adaptive protocol design with exact stopping ledgers;
+   and
 7. instantiate a radio/acoustic branch in which candidate responses come from
    measured or simulated Green functions and the source/output metrics are
    physically calibrated.
@@ -594,7 +815,7 @@ synthesis.
 
 ---
 
-## 11. Reproduction
+## 15. Reproduction
 
 Install the repository dependencies, then run:
 
@@ -611,13 +832,38 @@ python -m unittest -v \
   test_oig_protocol_engine_adversarial_controls.py \
   test_oig_interval_protocol_design.py \
   test_oig_interval_protocol_design_adversarial.py \
-  test_oig_neumann_matched_frame.py
+  test_oig_neumann_matched_frame.py \
+  test_oig_query_protocol_design.py \
+  test_oig_query_protocol_design_adversarial.py \
+  test_oig_query_candidate_library.py \
+  test_oig_query_candidate_library_adversarial.py \
+  test_oig_structured_nuisance.py \
+  test_oig_structured_nuisance_adversarial.py \
+  test_oig_robust_model_quotient.py \
+  test_oig_robust_model_quotient_adversarial.py \
+  test_oig_atlas_protocol_integration.py \
+  test_oig_atlas_protocol_integration_adversarial.py
 
 python oig_hidden_network_protocol_demo.py \
   --output /tmp/oig-hidden-protocol-design.json
 
 python oig_neumann_matched_frame.py \
   --output /tmp/oig-neumann-matched-frame.json
+
+python oig_structured_nuisance.py \
+  --output /tmp/oig-structured-nuisance.json
+python oig_structured_nuisance.py \
+  --verify /tmp/oig-structured-nuisance.json
+
+python oig_robust_model_quotient_demo.py \
+  --output /tmp/oig-robust-model.json
+python oig_robust_model_quotient_demo.py \
+  --verify /tmp/oig-robust-model.json
+
+python oig_atlas_protocol_integration.py \
+  --output /tmp/oig-atlas-protocol-integration.json
+python oig_atlas_protocol_integration.py \
+  --verify /tmp/oig-atlas-protocol-integration.json
 
 python -m unittest -v test_oig_protocol_artifacts.py
 ```
@@ -629,8 +875,9 @@ summaries are for readability.
 The repository commits independently verifiable reference artifacts at:
 
 - `certificates/oig_uniform_lattice_arb_cover.json`;
-- `certificates/oig_hidden_protocol_design.json`; and
-- `certificates/oig_neumann_matched_frame.json`.
+- `certificates/oig_hidden_protocol_design.json`;
+- `certificates/oig_neumann_matched_frame.json`; and
+- `certificates/oig_atlas_protocol_integration.json`.
 
 Detailed sources:
 
@@ -638,13 +885,20 @@ Detailed sources:
 - `OIG_UNIFORM_LATTICE_EXPLICIT_CONSTANTS.md`
 - `oig_uniform_lattice_arb_cover.md`
 - `OIG_PROTOCOL_DESIGN_ENGINE.md`
+- `OIG_QUERY_PROTOCOL_DESIGN_THEOREM.md`
+- `OIG_QUERY_CANDIDATE_LIBRARY.md`
+- `OIG_STRUCTURED_NUISANCE_THEOREM.md`
+- `OIG_ROBUST_MODEL_AWARE_QUOTIENT.md`
+- `OIG_ARITHMETIC_ATLAS_PROTOCOL_INTEGRATION.md`
+- `OIG_QUERY_PROTOCOL_DESIGN_ADVERSARIAL_AUDIT.md`
+- `OIG_STRUCTURED_ROBUST_INTEGRATION_ADVERSARIAL_AUDIT.md`
 - `OIG_INTERVAL_PROTOCOL_DESIGN_AUDIT.md`
 - `OIG_PROTOCOL_ENGINE_ADVERSARIAL_AUDIT.md`
 - `OIG_UNIFORM_LATTICE_ADVERSARIAL_AUDIT.md`
 
 ---
 
-## 12. Credit and interpretation
+## 16. Credit and interpretation
 
 This work was developed by **Codex (OpenAI)** from the originating curiosity,
 research direction, and computational environment provided by **TGN's human

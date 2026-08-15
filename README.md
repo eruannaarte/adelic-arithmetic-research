@@ -91,6 +91,17 @@ retain the information of 172 active modal outputs up to a certified \(L^2\)
 frame loss below \(1.95\times10^{-37}\); a separate nonreversible
 hidden-chain design is certified above 97.25 percent global efficiency.
 
+The Arithmetic-Observability integration makes this protocol engine
+query-directed and model aware. It now proves exact recovery and minimax
+amplification for a requested linear query after nuisance profiling; seals the
+difference between one nuisance shared across protocols and independent
+per-protocol refits; compares a finite library only under one common
+source/query/noise contract; preserves bounded nuisance correlations through
+exact zonotope support; and audits finite secants, tangent spaces, response
+tubes, and uncertain nominal null directions. A pinned integration report
+composes the independently verified layers while keeping continuum enclosure,
+tail, and model-exhaustiveness assumptions explicit.
+
 The active continuation includes continuum-certified arithmetic window design
 and a cancellation-aware log-Mellin certificate for higher-degree coefficient
 tails. At `N=50`, `sigma=2`, `T=1000`, and `m=5000`, the eight-harmonic
@@ -455,18 +466,44 @@ Run the resolution-aware transfer and certified protocol-design application:
     python -m unittest -v test_oig_protocol_design_engine.py
     python -m unittest -v test_oig_interval_protocol_design.py
     python -m unittest -v test_oig_neumann_matched_frame.py
+    python -m unittest -v test_oig_query_protocol_design.py
+    python -m unittest -v test_oig_query_protocol_design_adversarial.py
+    python -m unittest -v test_oig_query_candidate_library.py
+    python -m unittest -v test_oig_query_candidate_library_adversarial.py
+    python -m unittest -v test_oig_structured_nuisance.py
+    python -m unittest -v test_oig_structured_nuisance_adversarial.py
+    python -m unittest -v test_oig_robust_model_quotient.py
+    python -m unittest -v test_oig_robust_model_quotient_adversarial.py
+    python -m unittest -v test_oig_atlas_protocol_integration.py
+    python -m unittest -v test_oig_atlas_protocol_integration_adversarial.py
     python oig_hidden_network_protocol_demo.py \
       --output /tmp/oig-hidden-protocol-design.json
     python oig_neumann_matched_frame.py \
       --output /tmp/oig-neumann-matched-frame.json
+    python oig_structured_nuisance.py \
+      --output /tmp/oig-structured-nuisance.json
+    python oig_structured_nuisance.py \
+      --verify /tmp/oig-structured-nuisance.json
+    python oig_robust_model_quotient_demo.py \
+      --output /tmp/oig-robust-model.json
+    python oig_robust_model_quotient_demo.py \
+      --verify /tmp/oig-robust-model.json
+    python oig_atlas_protocol_integration.py \
+      --output /tmp/oig-atlas-protocol-integration.json
+    python oig_atlas_protocol_integration.py \
+      --verify /tmp/oig-atlas-protocol-integration.json
     python -m unittest -v test_oig_protocol_artifacts.py
 
 See
 [OPERATIONAL_INFORMATION_GEOMETRY_PROTOCOL_ENGINE.md](OPERATIONAL_INFORMATION_GEOMETRY_PROTOCOL_ENGINE.md)
 for the coupled-resolution theorem, exact protocol optimizer, robust response
 boxes, two-channel Neumann compression, broader hidden-network validation,
-and the boundary between proved design performance and hardware or model
-interpretation.
+query-directed finite-library design, structured correlated nuisance,
+model-aware quotient audits, and the boundary between proved design
+performance and hardware or model interpretation. The detailed Atlas bridge
+is [OIG_ARITHMETIC_ATLAS_PROTOCOL_INTEGRATION.md](OIG_ARITHMETIC_ATLAS_PROTOCOL_INTEGRATION.md),
+and its pinned self-verifying report is
+[`certificates/oig_atlas_protocol_integration.json`](certificates/oig_atlas_protocol_integration.json).
 
 Run the outward-rounded finite-grid E-design certificate separately:
 
@@ -736,6 +773,26 @@ For the public synthesis of the complete progression, see
 - [OPERATIONAL_INFORMATION_GEOMETRY_PROTOCOL_ENGINE.md](OPERATIONAL_INFORMATION_GEOMETRY_PROTOCOL_ENGINE.md)
   — resolution-aware finite transfer, proof-producing experiment design, and
   certified finite sensing
+- [OIG_ARITHMETIC_ATLAS_PROTOCOL_INTEGRATION.md](OIG_ARITHMETIC_ATLAS_PROTOCOL_INTEGRATION.md)
+  — query-directed design, structured nuisance, model-aware quotients, and
+  exact certificate composition
+- [OIG_QUERY_PROTOCOL_DESIGN_THEOREM.md](OIG_QUERY_PROTOCOL_DESIGN_THEOREM.md)
+  — exact query identifiability, nuisance projection, minimax amplification,
+  and shared-versus-independent nuisance semantics
+- [OIG_QUERY_CANDIDATE_LIBRARY.md](OIG_QUERY_CANDIDATE_LIBRARY.md)
+  — globally certified selection within a finite common-contract library
+- [OIG_STRUCTURED_NUISANCE_THEOREM.md](OIG_STRUCTURED_NUISANCE_THEOREM.md)
+  — correlated zonotope support, primal/dual separation, and remote-tail
+  interface
+- [OIG_ROBUST_MODEL_AWARE_QUOTIENT.md](OIG_ROBUST_MODEL_AWARE_QUOTIENT.md)
+  — quotient tubes, finite secants, tangent angles, and uncertain nominal-null
+  rules
+- [OIG_QUERY_PROTOCOL_DESIGN_ADVERSARIAL_AUDIT.md](OIG_QUERY_PROTOCOL_DESIGN_ADVERSARIAL_AUDIT.md)
+  — metric covariance, report sealing, extreme rational scales, and
+  finite-library comparability attacks
+- [OIG_STRUCTURED_ROBUST_INTEGRATION_ADVERSARIAL_AUDIT.md](OIG_STRUCTURED_ROBUST_INTEGRATION_ADVERSARIAL_AUDIT.md)
+  — structured-support, model-null, trust-boundary, and cross-layer
+  integration attacks
 - [OIG_UNIFORM_LATTICE_TRANSFER_THEOREM.md](OIG_UNIFORM_LATTICE_TRANSFER_THEOREM.md)
   — compact-\(\tau\) expansion, fixed-grid obstruction, and coupled tail
   theorem
@@ -809,6 +866,17 @@ proved results, computation, conjecture, and interpretation.
   proof-producing whole-cell compact-\(\tau\) certificate
 - [oig_protocol_design_engine.py](oig_protocol_design_engine.py) — exact
   rational quotient, E-optimal design, finite-frame, and noise certificates
+- [oig_query_protocol_design.py](oig_query_protocol_design.py) — exact
+  query quotient, nuisance-invariant decoder, minimax amplification, and
+  shared/independent nuisance mixtures
+- [oig_query_candidate_library.py](oig_query_candidate_library.py) — sealed
+  common-contract finite-library selection and uniqueness certificates
+- [oig_structured_nuisance.py](oig_structured_nuisance.py) — exact correlated
+  zonotope support and primal/dual separation certificates
+- [oig_robust_model_quotient.py](oig_robust_model_quotient.py) — model secant,
+  tangent, tube, lattice, and uncertain-null audits
+- [oig_atlas_protocol_integration.py](oig_atlas_protocol_integration.py) —
+  pinned self-verifying composition of the Atlas-derived protocol layers
 - [oig_interval_protocol_design.py](oig_interval_protocol_design.py) —
   outward rational response-box transfer and independent verification
 - [oig_neumann_matched_frame.py](oig_neumann_matched_frame.py) — Arb finite

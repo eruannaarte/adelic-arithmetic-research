@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 import unittest
 
+from oig_atlas_protocol_integration import verify_atlas_protocol_integration_report
 from oig_neumann_matched_frame import verify_neumann_matched_frame_report
 from oig_protocol_design_engine import verify_design_report
 from oig_uniform_lattice_arb_cover import verify_cover_report
@@ -26,6 +27,10 @@ class CommittedProtocolArtifactTests(unittest.TestCase):
     def test_uniform_tau_cover_artifact_self_verifies(self) -> None:
         report = self._load("oig_uniform_lattice_arb_cover.json")
         self.assertTrue(verify_cover_report(report)["passed"])
+
+    def test_atlas_protocol_integration_artifact_self_verifies(self) -> None:
+        report = self._load("oig_atlas_protocol_integration.json")
+        self.assertTrue(verify_atlas_protocol_integration_report(report)["passed"])
 
 
 if __name__ == "__main__":
