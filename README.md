@@ -72,6 +72,18 @@ the declared continuum-\(H^1\) source cost.  Exact \(2\times2\) spectral
 geometry is essential: entrywise maxima can certify falsely, while safe row
 sums miss both true crossings.
 
+The protocol-engine continuation now closes the original application target.
+A fixed finite grid is proved unable to cover every late lattice time; the
+correct coupled theorem gives explicit errors \(23\sqrt{\tau}/n\) in
+\(L^2\) and \((23/10)\sqrt{\tau}/n\) in \(H^1\), together with rigorous
+continuum-to-atomic tails. A practical Arb cell certifies \(n=1001\)
+uniformly on \(1\le\tau\le6/5\). Exact rational quotient, noise, cost,
+E-optimal primal/dual, interval-response, and finite-frame certificates are
+implemented. In the finite Neumann benchmark, two matched linear sensors
+retain the information of 172 active modal outputs up to a certified \(L^2\)
+frame loss below \(1.95\times10^{-37}\); a separate nonreversible
+hidden-chain design is certified above 97.25 percent global efficiency.
+
 The active continuation includes continuum-certified arithmetic window design
 and a cancellation-aware log-Mellin certificate for higher-degree coefficient
 tails. At `N=50`, `sigma=2`, `T=1000`, and `m=5000`, the eight-harmonic
@@ -408,6 +420,27 @@ predictions, the complete two-port finite-generator certificates at
 \(n=345\) and \(n=649\), and the exact boundary between a local adjacent
 bracket and a global minimal-grid theorem.
 
+Run the resolution-aware transfer and certified protocol-design application:
+
+    python -m unittest -v test_oig_uniform_lattice_transfer.py
+    python -m unittest -v test_oig_uniform_lattice_explicit_constants.py
+    python -m unittest -v test_oig_uniform_lattice_arb_cover.py
+    python -m unittest -v test_oig_protocol_design_engine.py
+    python -m unittest -v test_oig_interval_protocol_design.py
+    python -m unittest -v test_oig_neumann_matched_frame.py
+    python oig_hidden_network_protocol_demo.py \
+      --output /tmp/oig-hidden-protocol-design.json
+    python oig_neumann_matched_frame.py \
+      --output /tmp/oig-neumann-matched-frame.json
+    python -m unittest -v test_oig_protocol_artifacts.py
+
+See
+[OPERATIONAL_INFORMATION_GEOMETRY_PROTOCOL_ENGINE.md](OPERATIONAL_INFORMATION_GEOMETRY_PROTOCOL_ENGINE.md)
+for the coupled-resolution theorem, exact protocol optimizer, robust response
+boxes, two-channel Neumann compression, broader hidden-network validation,
+and the boundary between proved design performance and hardware or model
+interpretation.
+
 Run the outward-rounded finite-grid E-design certificate separately:
 
 ```sh
@@ -673,6 +706,22 @@ For the public synthesis of the complete progression, see
   centred-Taylor, Rayleigh-rejection, and exact spectral-norm proof trace
 - [OIG_XII_ADVERSARIAL_AUDIT.md](OIG_XII_ADVERSARIAL_AUDIT.md) — parity,
   normalization, norm, metric, and minimality controls
+- [OPERATIONAL_INFORMATION_GEOMETRY_PROTOCOL_ENGINE.md](OPERATIONAL_INFORMATION_GEOMETRY_PROTOCOL_ENGINE.md)
+  — resolution-aware finite transfer, proof-producing experiment design, and
+  certified finite sensing
+- [OIG_UNIFORM_LATTICE_TRANSFER_THEOREM.md](OIG_UNIFORM_LATTICE_TRANSFER_THEOREM.md)
+  — compact-\(\tau\) expansion, fixed-grid obstruction, and coupled tail
+  theorem
+- [OIG_UNIFORM_LATTICE_EXPLICIT_CONSTANTS.md](OIG_UNIFORM_LATTICE_EXPLICIT_CONSTANTS.md)
+  — global analytic constants and executable joint resolution schedules
+- [oig_uniform_lattice_arb_cover.md](oig_uniform_lattice_arb_cover.md) —
+  practical \(n=1001\), \(1\le\tau\le6/5\) full-generator Arb cover
+- [OIG_PROTOCOL_DESIGN_ENGINE.md](OIG_PROTOCOL_DESIGN_ENGINE.md) — exact
+  quotient, cost, noise, E-optimal primal/dual, and finite-frame engine
+- [OIG_PROTOCOL_ENGINE_ADVERSARIAL_AUDIT.md](OIG_PROTOCOL_ENGINE_ADVERSARIAL_AUDIT.md)
+  — calibration, verifier, CTMC, noise, and integer-realization controls
+- [OIG_INTERVAL_PROTOCOL_DESIGN_AUDIT.md](OIG_INTERVAL_PROTOCOL_DESIGN_AUDIT.md)
+  — response-box transfer theorem and tamper controls
 - `oig_iv_certificate.md` — outward-rounded finite-grid E-design certificate
 - `oig_v_scaling_report.md` — independent continuum and propagation audit
 
@@ -727,6 +776,18 @@ proved results, computation, conjecture, and interpretation.
 - [oig_xii_two_port_certificate.py](oig_xii_two_port_certificate.py) —
   complete two-port finite-Neumann Arb transfer in the declared \(L^2\) and
   continuum-\(H^1\) source metrics
+- [oig_uniform_lattice_transfer.py](oig_uniform_lattice_transfer.py) —
+  compact-\(\tau\), atomic-tail, fixed-grid obstruction, and coupled-limit lab
+- [oig_uniform_lattice_arb_cover.py](oig_uniform_lattice_arb_cover.py) —
+  proof-producing whole-cell compact-\(\tau\) certificate
+- [oig_protocol_design_engine.py](oig_protocol_design_engine.py) — exact
+  rational quotient, E-optimal design, finite-frame, and noise certificates
+- [oig_interval_protocol_design.py](oig_interval_protocol_design.py) —
+  outward rational response-box transfer and independent verification
+- [oig_neumann_matched_frame.py](oig_neumann_matched_frame.py) — Arb finite
+  response enclosure and 172-to-2 matched sensor certificate
+- [oig_hidden_network_protocol_demo.py](oig_hidden_network_protocol_demo.py) —
+  nonreversible finite CTMC protocol-design benchmark
 - `oig_iv_certificate.py` — rational/Arb finite-grid E-design checker
 - `arithmetic_sensing_v.py` — Stage V reproduction and boundary studies
 - `exact_trigonometric_positivity.py` — exact rational Sturm certificates

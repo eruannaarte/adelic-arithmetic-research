@@ -1,0 +1,374 @@
+{
+  "benchmark": {
+    "candidate_count": 5,
+    "dynamics": "continuous-time Markov chain observed at independent exponential times",
+    "interventions_preserve_total_mass": true,
+    "laplacian_columns_sum_exactly_to_zero": true,
+    "laplacian_is_non_symmetric": true,
+    "name": "four-state nonreversible hidden cycle with a side branch",
+    "response_identity": "E[C exp(-T L) J] = C alpha(alpha I+L)^-1 J"
+  },
+  "certificate": {
+    "budget_exactly_one": true,
+    "certified_efficiency_lower_exact": "76710018065006561886247783115453511/78876558593707412000000000000000000",
+    "certified_optimality_gap_upper_exact": "2166540528700850113752216884546489/2823024011465101173000000000000000000",
+    "dual_metric_trace_exactly_one": true,
+    "dual_optimum_upper_exact": "78876558593707412/2823024011465101173",
+    "dual_witness_exact": [
+      [
+        "1149051014499025/10426681482788924",
+        "383401562429765/2606670370697231",
+        "-2707133608373315/10426681482788924"
+      ],
+      [
+        "383401562429765/2606670370697231",
+        "511717875724157/2606670370697231",
+        "-1806565947455495/5213340741394462"
+      ],
+      [
+        "-2707133608373315/10426681482788924",
+        "-1806565947455495/5213340741394462",
+        "3402038738782027/5213340741394462"
+      ]
+    ],
+    "dual_witness_integer_factor": [
+      [
+        -33897655,
+        0,
+        0
+      ],
+      [
+        -45242252,
+        100682,
+        0
+      ],
+      [
+        79861973,
+        35883,
+        -20643194
+      ]
+    ],
+    "dual_witness_psd_by_exact_factorization": true,
+    "primal_generalized_floor_lower_exact": "27172995253836107/1000000000000000000",
+    "primal_shift_positive_by_exact_ldl": true,
+    "rationalized_design_gram_exact": [
+      [
+        "3500663241216259/28089835998050000",
+        "398458926036197/10533688499268750",
+        "1747950563687379/28089835998050000"
+      ],
+      [
+        "398458926036197/10533688499268750",
+        "157327959699679/2808983599805000",
+        "912943584000289/28089835998050000"
+      ],
+      [
+        "1747950563687379/28089835998050000",
+        "912943584000289/28089835998050000",
+        "252357656675443/3511229499756250"
+      ]
+    ]
+  },
+  "declared_source_metric": [
+    [
+      "2/1",
+      "1/1",
+      "1/1"
+    ],
+    [
+      "1/1",
+      "2/1",
+      "1/1"
+    ],
+    [
+      "1/1",
+      "1/1",
+      "2/1"
+    ]
+  ],
+  "exact_blind_dimension": 0,
+  "independent_exact_verification": {
+    "dual_upper_exact": "78876558593707412/2823024011465101173",
+    "method": "independent exact-rational reconstruction of quotient, design, primal, dual, noise, and integer realization",
+    "passed": true,
+    "primal_lower_exact": "27172995253836107/1000000000000000000"
+  },
+  "noise_performance": {
+    "approximate_design_measure": {
+      "amplitude_exact": "1/1",
+      "certified_squared_separation_lower_exact": "27172995253836107/10000000000000000",
+      "continuous_budget_exposure_multiplier": 100,
+      "descriptive_exact_gaussian_error": 0.2049096478752585,
+      "formula": "Phi(-amplitude*sqrt(exposure_multiplier*floor)/2)",
+      "gaussian_error_rational_upper_exact": "40000000000000000/107172995253836107",
+      "gaussian_error_rational_upper_method": "Q(d/2)<=exp(-d^2/8)/2<=4/(8+d^2)",
+      "role": "certified consequence of the floor under the already-whitened unit-covariance Gaussian model"
+    },
+    "integer_realization": {
+      "amplitude_exact": "1/1",
+      "certified_squared_separation_lower_exact": "81518985761508321/5000000000000",
+      "continuous_budget_exposure_multiplier": 600000,
+      "descriptive_exact_gaussian_error": 0.0,
+      "formula": "Phi(-amplitude*sqrt(exposure_multiplier*floor)/2)",
+      "gaussian_error_rational_upper_exact": "20000000000000/81558985761508321",
+      "gaussian_error_rational_upper_method": "Q(d/2)<=exp(-d^2/8)/2<=4/(8+d^2)",
+      "minimum_budget_multiplier_exactly_realizing_weights": 600000,
+      "protocol_counts": [
+        17358,
+        9645,
+        0,
+        177096,
+        99236
+      ],
+      "realized_budget_multiplier": 600000,
+      "requested_multiplier_was_exactly_realizable": false,
+      "role": "certified consequence of the floor under the already-whitened unit-covariance Gaussian model"
+    }
+  },
+  "observable_quotient_dimension": 3,
+  "overall_passed": true,
+  "proof_boundary": "Floating point is used only to discover weights and a dual vector. The exact certificate covers the declared rational finite protocols; binary floating matrix declarations are rejected. It does not by itself certify continuum-to-finite model transfer or the completeness of the candidate protocol list.",
+  "protocols": [
+    {
+      "budget_share_exact": "2893/100000",
+      "cost_exact": "1/1",
+      "name": "state-0 fast",
+      "noise_precision_exact": [
+        [
+          "1/1"
+        ]
+      ],
+      "physical_weight_exact": "2893/100000",
+      "response_exact": [
+        [
+          "308/383",
+          "16/383",
+          "60/383"
+        ]
+      ]
+    },
+    {
+      "budget_share_exact": "643/20000",
+      "cost_exact": "2/1",
+      "name": "state-3 slow",
+      "noise_precision_exact": [
+        [
+          "2/1"
+        ]
+      ],
+      "physical_weight_exact": "643/40000",
+      "response_exact": [
+        [
+          "-12/19",
+          "-10/19",
+          "-13/19"
+        ]
+      ]
+    },
+    {
+      "budget_share_exact": "0/1",
+      "cost_exact": "1/1",
+      "name": "middle aggregate",
+      "noise_precision_exact": [
+        [
+          "1/1"
+        ]
+      ],
+      "physical_weight_exact": "0/1",
+      "response_exact": [
+        [
+          "7/76",
+          "21/76",
+          "23/76"
+        ]
+      ]
+    },
+    {
+      "budget_share_exact": "22137/50000",
+      "cost_exact": "3/2",
+      "name": "state-1 medium",
+      "noise_precision_exact": [
+        [
+          "1/1"
+        ]
+      ],
+      "physical_weight_exact": "7379/25000",
+      "response_exact": [
+        [
+          "6/103",
+          "36/103",
+          "-4/103"
+        ]
+      ]
+    },
+    {
+      "budget_share_exact": "24809/50000",
+      "cost_exact": "3/1",
+      "name": "paired occupancy",
+      "noise_precision_exact": [
+        [
+          "2/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "1/1"
+        ]
+      ],
+      "physical_weight_exact": "24809/150000",
+      "response_exact": [
+        [
+          "10/19",
+          "2/19",
+          "9/38"
+        ],
+        [
+          "1/19",
+          "4/19",
+          "9/19"
+        ]
+      ]
+    }
+  ],
+  "quotient_injection": [
+    [
+      "1/1",
+      "0/1",
+      "0/1"
+    ],
+    [
+      "0/1",
+      "1/1",
+      "0/1"
+    ],
+    [
+      "0/1",
+      "0/1",
+      "1/1"
+    ]
+  ],
+  "quotient_protocol_information": [
+    [
+      [
+        "94864/146689",
+        "4928/146689",
+        "18480/146689"
+      ],
+      [
+        "4928/146689",
+        "256/146689",
+        "960/146689"
+      ],
+      [
+        "18480/146689",
+        "960/146689",
+        "3600/146689"
+      ]
+    ],
+    [
+      [
+        "288/361",
+        "240/361",
+        "312/361"
+      ],
+      [
+        "240/361",
+        "200/361",
+        "260/361"
+      ],
+      [
+        "312/361",
+        "260/361",
+        "338/361"
+      ]
+    ],
+    [
+      [
+        "49/5776",
+        "147/5776",
+        "161/5776"
+      ],
+      [
+        "147/5776",
+        "441/5776",
+        "483/5776"
+      ],
+      [
+        "161/5776",
+        "483/5776",
+        "529/5776"
+      ]
+    ],
+    [
+      [
+        "36/10609",
+        "216/10609",
+        "-24/10609"
+      ],
+      [
+        "216/10609",
+        "1296/10609",
+        "-144/10609"
+      ],
+      [
+        "-24/10609",
+        "-144/10609",
+        "16/10609"
+      ]
+    ],
+    [
+      [
+        "201/361",
+        "44/361",
+        "99/361"
+      ],
+      [
+        "44/361",
+        "24/361",
+        "54/361"
+      ],
+      [
+        "99/361",
+        "54/361",
+        "243/722"
+      ]
+    ]
+  ],
+  "quotient_row_coordinates": [
+    [
+      "1/1",
+      "0/1",
+      "0/1"
+    ],
+    [
+      "0/1",
+      "1/1",
+      "0/1"
+    ],
+    [
+      "0/1",
+      "0/1",
+      "1/1"
+    ]
+  ],
+  "quotient_source_metric": [
+    [
+      "2/1",
+      "1/1",
+      "1/1"
+    ],
+    [
+      "1/1",
+      "2/1",
+      "1/1"
+    ],
+    [
+      "1/1",
+      "1/1",
+      "2/1"
+    ]
+  ],
+  "schema_version": "oig-protocol-design-engine-v1",
+  "source_dimension": 3,
+  "status": "exact quotient and exact rational primal/dual certificate"
+}
