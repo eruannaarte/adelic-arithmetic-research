@@ -81,6 +81,59 @@ def _strict_form_upper(bound: QMatrix, metric: QMatrix) -> Fraction:
     raise ArithmeticError("could not certify the response-box form bound")
 
 
+def _valid_strict_form_upper(
+    bound: QMatrix, metric: QMatrix, candidate: Fraction
+) -> bool:
+    """Verify a serialized form upper without regenerating its proposal.
+
+    ``_strict_form_upper`` may use a platform-dependent floating eigensolver to
+    *propose* a convenient rational number. A saved certificate is portable
+    only if verification checks that number directly with exact arithmetic.
+    """
+    if _zero(bound):
+        return candidate == 0
+    return bool(
+        candidate > 0
+        and _ldl_positive_definite(
+            _subtract(_scale(metric, candidate), bound)
+        )
+    )
+
+
+def _response_box_exact_bounds(
+    protocol: "EnclosedProtocol",
+    source_metric: Sequence[Sequence[ExactScalar]],
+) -> tuple[QMatrix, QMatrix, QMatrix]:
+    """Return the metric and deterministic entrywise/diagonal box bounds."""
+    metric = rational_matrix(source_metric)
+    rows, columns = _shape(protocol.response_centre)
+    if _shape(protocol.response_radius) != (rows, columns):
+        raise ValueError("response centre and radius shapes differ")
+    if any(value < 0 for row in protocol.response_radius for value in row):
+        raise ValueError("response radii must be nonnegative")
+    if _shape(metric) != (columns, columns):
+        raise ValueError("source metric has the wrong dimension")
+    nominal = protocol.nominal()
+    # This validates cost, output dimension, and positive noise precision.
+    from oig_protocol_design_engine import information_matrix
+
+    information_matrix(nominal)
+    if not _ldl_positive_definite(metric):
+        raise ValueError("source metric must be positive definite")
+
+    centre_abs = _absolute(protocol.response_centre)
+    radius = protocol.response_radius
+    precision_abs = _absolute(protocol.noise_precision)
+    cross = _matmul(
+        _transpose(centre_abs), _matmul(precision_abs, radius)
+    )
+    quadratic = _matmul(_transpose(radius), _matmul(precision_abs, radius))
+    entry_bound = _add(_add(cross, _transpose(cross)), quadratic)
+    row_sums = tuple(sum(row, Q(0)) for row in entry_bound)
+    diagonal_bound = _diagonal(row_sums)
+    return metric, entry_bound, diagonal_bound
+
+
 @dataclass(frozen=True)
 class EnclosedProtocol:
     """A response protocol with an exact rational entrywise enclosure."""
@@ -129,32 +182,9 @@ def response_box_form_bound(
     ``2|x_i x_j| <= x_i^2+x_j^2``.  The final metric-relative comparison is
     verified by exact rational LDL.
     """
-    metric = rational_matrix(source_metric)
-    rows, columns = _shape(protocol.response_centre)
-    if _shape(protocol.response_radius) != (rows, columns):
-        raise ValueError("response centre and radius shapes differ")
-    if any(value < 0 for row in protocol.response_radius for value in row):
-        raise ValueError("response radii must be nonnegative")
-    if _shape(metric) != (columns, columns):
-        raise ValueError("source metric has the wrong dimension")
-    nominal = protocol.nominal()
-    # This validates cost, output dimension, and positive noise precision.
-    from oig_protocol_design_engine import information_matrix
-
-    information_matrix(nominal)
-    if not _ldl_positive_definite(metric):
-        raise ValueError("source metric must be positive definite")
-
-    centre_abs = _absolute(protocol.response_centre)
-    radius = protocol.response_radius
-    precision_abs = _absolute(protocol.noise_precision)
-    cross = _matmul(
-        _transpose(centre_abs), _matmul(precision_abs, radius)
+    metric, entry_bound, diagonal_bound = _response_box_exact_bounds(
+        protocol, source_metric
     )
-    quadratic = _matmul(_transpose(radius), _matmul(precision_abs, radius))
-    entry_bound = _add(_add(cross, _transpose(cross)), quadratic)
-    row_sums = tuple(sum(row, Q(0)) for row in entry_bound)
-    diagonal_bound = _diagonal(row_sums)
     delta = _strict_form_upper(diagonal_bound, metric)
     return {
         "schema_version": "oig-response-box-form-bound-v1",
@@ -293,15 +323,27 @@ def verify_enclosed_design_report(report: dict[str, object]) -> dict[str, object
             )
             if bound["source_metric_exact"] != _matrix_text(metric):
                 raise ValueError("response-box metric differs from the design metric")
-            rebuilt = response_box_form_bound(enclosure, metric)
-            for field in (
-                "entrywise_information_bound_exact",
-                "diagonal_quadratic_bound_exact",
-                "metric_relative_information_error_upper_exact",
+            _, entry_bound, diagonal_bound = _response_box_exact_bounds(
+                enclosure, metric
+            )
+            if bound["entrywise_information_bound_exact"] != _matrix_text(
+                entry_bound
             ):
-                if rebuilt[field] != bound[field]:
-                    raise ValueError(f"response-box field {field} does not reproduce")
-            deltas.append(Q(bound["metric_relative_information_error_upper_exact"]))
+                raise ValueError(
+                    "response-box entrywise information bound does not reproduce"
+                )
+            if bound["diagonal_quadratic_bound_exact"] != _matrix_text(
+                diagonal_bound
+            ):
+                raise ValueError(
+                    "response-box diagonal quadratic bound does not reproduce"
+                )
+            delta = Q(bound["metric_relative_information_error_upper_exact"])
+            if not _valid_strict_form_upper(diagonal_bound, metric, delta):
+                raise ValueError(
+                    "reported response-box form upper fails exact LDL verification"
+                )
+            deltas.append(delta)
             shares.append(Q(row["budget_share_exact"]))
             costs.append(Q(row["cost_exact"]))
         aggregate = sum(

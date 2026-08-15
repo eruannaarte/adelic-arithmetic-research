@@ -19,7 +19,9 @@ from flint import arb, ctx
 from oig_interval_protocol_design import (
     EnclosedProtocol,
     _absolute,
+    _response_box_exact_bounds,
     _strict_form_upper,
+    _valid_strict_form_upper,
     design_enclosed_protocols,
     response_box_form_bound,
     verify_enclosed_design_report,
@@ -28,10 +30,13 @@ from oig_protocol_design_engine import (
     QMatrix,
     _fraction_text,
     _inverse,
+    _ldl_positive_definite,
     _matmul,
     _matrix_text,
     _primal_lower,
+    _scale,
     _shape,
+    _subtract,
     _transpose,
     rational_matrix,
 )
@@ -149,9 +154,7 @@ def _second_order_frame_loss_bound(radius: QMatrix, metric: QMatrix) -> dict[str
     # radius^T radius dominates the resulting quadratic form.  The matrix
     # radius^T radius itself is not asserted to dominate Delta^T Delta in
     # Loewner order.
-    quadratic = _matmul(_transpose(radius), radius)
-    row_sums = tuple(sum(row, Q(0)) for row in quadratic)
-    diagonal = _diagonal(row_sums)
+    quadratic, diagonal = _second_order_frame_loss_matrices(radius)
     delta = _strict_form_upper(diagonal, metric)
     return {
         "radius_quadratic_exact": _matrix_text(quadratic),
@@ -159,6 +162,15 @@ def _second_order_frame_loss_bound(radius: QMatrix, metric: QMatrix) -> dict[str
         "metric_relative_frame_loss_upper_exact": _fraction_text(delta),
         "identity": "with Delta=R_true-R_centre, the loss is Delta^T(I-Pi)Delta; |Delta x|<=radius|x| and a diagonal row-sum bound of radius^T radius controls it",
     }
+
+
+def _second_order_frame_loss_matrices(
+    radius: QMatrix,
+) -> tuple[QMatrix, QMatrix]:
+    """Return the deterministic quadratic and diagonal frame-loss bounds."""
+    quadratic = _matmul(_transpose(radius), radius)
+    row_sums = tuple(sum(row, Q(0)) for row in quadratic)
+    return quadratic, _diagonal(row_sums)
 
 
 def _metric_record(
@@ -325,26 +337,47 @@ def verify_neumann_matched_frame_report(
         for record in records:
             metric = rational_matrix(record["source_metric_exact"])
             full_gram = _matmul(_transpose(centre), centre)
-            nominal = _primal_lower(full_gram, metric)
-            if record["nominal_complete_modal_floor_lower_exact"] != _fraction_text(nominal):
-                raise ValueError("nominal complete floor does not reproduce")
-            full_box = response_box_form_bound(full, metric)
-            full_error = Q(full_box["metric_relative_information_error_upper_exact"])
-            if record["complete_response_box_error_upper_exact"] != _fraction_text(full_error):
-                raise ValueError("complete response-box error does not reproduce")
+            nominal = Q(record["nominal_complete_modal_floor_lower_exact"])
+            if nominal <= 0 or not _ldl_positive_definite(
+                _subtract(full_gram, _scale(metric, nominal))
+            ):
+                raise ValueError(
+                    "nominal complete floor fails exact LDL verification"
+                )
+            _, _, full_diagonal_bound = _response_box_exact_bounds(full, metric)
+            full_error = Q(record["complete_response_box_error_upper_exact"])
+            if not _valid_strict_form_upper(
+                full_diagonal_bound, metric, full_error
+            ):
+                raise ValueError(
+                    "complete response-box upper fails exact LDL verification"
+                )
             full_robust = nominal - full_error
             if record["robust_complete_modal_floor_lower_exact"] != _fraction_text(full_robust):
                 raise ValueError("robust complete floor does not reproduce")
-            frame = _second_order_frame_loss_bound(radius, metric)
             reported_frame = record["matched_frame_loss_certificate"]
-            for field in (
-                "radius_quadratic_exact",
-                "diagonal_quadratic_bound_exact",
-                "metric_relative_frame_loss_upper_exact",
+            frame_quadratic, frame_diagonal = _second_order_frame_loss_matrices(
+                radius
+            )
+            if reported_frame["radius_quadratic_exact"] != _matrix_text(
+                frame_quadratic
             ):
-                if reported_frame[field] != frame[field]:
-                    raise ValueError(f"matched-frame field {field} does not reproduce")
-            frame_delta = Q(frame["metric_relative_frame_loss_upper_exact"])
+                raise ValueError("matched-frame quadratic does not reproduce")
+            if reported_frame["diagonal_quadratic_bound_exact"] != _matrix_text(
+                frame_diagonal
+            ):
+                raise ValueError(
+                    "matched-frame diagonal bound does not reproduce"
+                )
+            frame_delta = Q(
+                reported_frame["metric_relative_frame_loss_upper_exact"]
+            )
+            if not _valid_strict_form_upper(
+                frame_diagonal, metric, frame_delta
+            ):
+                raise ValueError(
+                    "matched-frame form upper fails exact LDL verification"
+                )
             inherited = full_robust - frame_delta
             if record["inherited_two_channel_floor_lower_exact"] != _fraction_text(inherited):
                 raise ValueError("inherited two-channel floor does not reproduce")
