@@ -61,8 +61,16 @@ and noise whitening.  Arb phase quadrature transfers the late lattice Gram
 through eight ports, while the actual noncommuting finite generator is
 rigorously transferred for one port at \(n=7\).  An exact three-port
 counterexample shows why pure moment fitting cannot replace mixed causal-word
-control.  The observed two-port crossing near \(n=383\) remains a clearly
-labeled target for the next certificate.
+control.  At the end of Stage XI, the observed two-port crossing near
+\(n=383\) remained a clearly labeled target for the next certificate.
+
+Stage XII closes that two-port target and explains its scale.  On exactly
+centred odd grids, the complete noncommuting finite generator has the sharp
+law \(G_n-G=E/n^2+O(n^{-3})\).  A degree-32 centred-Taylor Arb checker gives
+adjacent local transfer brackets \(343/345\) in \(L^2\) and \(647/649\) in
+the declared continuum-\(H^1\) source cost.  Exact \(2\times2\) spectral
+geometry is essential: entrywise maxima can certify falsely, while safe row
+sums miss both true crossings.
 
 The active continuation includes continuum-certified arithmetic window design
 and a cancellation-aware log-Mellin certificate for higher-degree coefficient
@@ -384,6 +392,22 @@ phase-grid transfer, and the first complete finite Neumann crossing at
 separate; the descriptive \(K=2\) crossing near \(n=383\) is not promoted to
 a certificate.
 
+Run the Stage XII two-port finite-Neumann certificate and adversarial
+controls:
+
+    python -m pip install -r oig_xii_two_port_requirements.txt
+    python oig_xii_two_port_certificate.py \
+      --precision-bits 256 \
+      --taylor-degree 32
+    python -m unittest -v test_oig_xii_two_port_certificate.py
+    python -m unittest -v test_oig_xii_adversarial_controls.py
+
+See [OPERATIONAL_INFORMATION_GEOMETRY_XII.md](OPERATIONAL_INFORMATION_GEOMETRY_XII.md)
+for the explicit mixed (n^{-2}) coefficient, its metric-dependent threshold
+predictions, the complete two-port finite-generator certificates at
+\(n=345\) and \(n=649\), and the exact boundary between a local adjacent
+bracket and a global minimal-grid theorem.
+
 Run the outward-rounded finite-grid E-design certificate separately:
 
 ```sh
@@ -639,6 +663,16 @@ For the public synthesis of the complete progression, see
   phase-grid and complete finite-Neumann proof trace
 - [OIG_XI_ADVERSARIAL_AUDIT.md](OIG_XI_ADVERSARIAL_AUDIT.md) — metric,
   moment, mixed-word, target, boundary, sensor, and dispersion controls
+- [OPERATIONAL_INFORMATION_GEOMETRY_XII.md](OPERATIONAL_INFORMATION_GEOMETRY_XII.md)
+  — sharp two-port finite-Neumann asymptotics and certified metric-dependent
+  transfer brackets
+- [OIG_XII_TWO_PORT_NEUMANN_THEOREM.md](OIG_XII_TWO_PORT_NEUMANN_THEOREM.md)
+  — detailed weak-Dyson expansion, exact-centre quadrature, and mixed
+  \(n^{-2}\) coefficient
+- [oig_xii_two_port_certificate.md](oig_xii_two_port_certificate.md) — Arb
+  centred-Taylor, Rayleigh-rejection, and exact spectral-norm proof trace
+- [OIG_XII_ADVERSARIAL_AUDIT.md](OIG_XII_ADVERSARIAL_AUDIT.md) — parity,
+  normalization, norm, metric, and minimality controls
 - `oig_iv_certificate.md` — outward-rounded finite-grid E-design certificate
 - `oig_v_scaling_report.md` — independent continuum and propagation audit
 
@@ -690,6 +724,9 @@ proved results, computation, conjecture, and interpretation.
 - [oig_xi_transfer_certificate.py](oig_xi_transfer_certificate.py) — rigorous
   phase-quadrature transfer through eight ports and complete one-port finite
   Neumann transfer
+- [oig_xii_two_port_certificate.py](oig_xii_two_port_certificate.py) —
+  complete two-port finite-Neumann Arb transfer in the declared \(L^2\) and
+  continuum-\(H^1\) source metrics
 - `oig_iv_certificate.py` — rational/Arb finite-grid E-design checker
 - `arithmetic_sensing_v.py` — Stage V reproduction and boundary studies
 - `exact_trigonometric_positivity.py` — exact rational Sturm certificates

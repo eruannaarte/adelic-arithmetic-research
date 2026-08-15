@@ -635,7 +635,7 @@ band.
 | \(M\ge K\) sensors preserve rank | a sensor-frame lower bound is also required |
 | output whitening creates information | whitening must transform the noise covariance and preserves generalized information |
 | the phase-grid \(K\le8\) result is a finite-dynamics theorem | false; full dynamics is certified only for \(K=1,n=7\) here |
-| the observed \(K=2,n=383\) crossing is proved | false; it is a numerical target for the next enclosure |
+| the sampled \(K=2,n=383\) point was a minimal crossing | false; Stage XII later proves only adjacent local brackets \(343/345\) and \(647/649\), without global minimality |
 | fixed-band convergence proves growing-band transfer | the error must beat the shrinking continuum floor with uniform constants |
 
 ## 11. Interpretation
@@ -717,8 +717,8 @@ element consistency, validated matrix functions, and sensor-frame theory are
 classical subjects.  Stage XI makes no priority claim for those ingredients.
 Its provisional contribution is their auditable assembly for this declared
 operational atlas, together with the rigorous calibrated moment-leakage
-amplification bound, the
-explicit mixed-word counterexample, and the first outward-rounded transfer
+amplification bound, the explicit mixed-word counterexample, and the first
+outward-rounded transfer
 from an OIG continuum floor to the complete finite Neumann response.
 
 The literature boundary and the finite-element sources used for the
@@ -727,9 +727,10 @@ Novelty remains provisional pending independent specialist review.
 
 ## 14. Next research order
 
-1. **Certify the full two-port Neumann crossing.**  Turn the observed
-   \(O(n^{-2})\) convergence near \(n=383\) into an Arb enclosure or a sharp
-   analytic bound for the complete mixed-word response.
+1. **Certify the full two-port Neumann crossing — completed in Stage XII.**
+   Stage XII proves the sharp \(n^{-2}\) coefficient and adjacent local Arb
+   brackets \(343/345\) in \(L^2\) and \(647/649\) in declared continuum
+   \(H^1\).
 2. **Make the lattice result uniform in \(\tau\).**  Cover a compact
    \(\tau\)-interval with validated response bounds and close the
    \(\tau\to\infty\) tail analytically.
@@ -748,6 +749,6 @@ Novelty remains provisional pending independent specialist review.
    finite frames are controlled, test jump-history ports and finite-speed
    analogues, including the previously noted radio/acoustic branch.
 
-The immediate target is the first.  The continuum floor is no longer merely
-an ideal quantity, and one finite direction has now crossed the bridge.  The
-next milestone is to make the two-direction crossing a theorem.
+Stage XII completes the first item.  The immediate continuation is now the
+second: make the two-port certificate uniform on a compact lattice-time
+interval, then close the \(\tau\to\infty\) tail.
