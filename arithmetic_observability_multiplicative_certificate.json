@@ -1,0 +1,474 @@
+{
+  "payload": {
+    "formal_scope": {
+      "calibrated_marginal_geometry_certified": true,
+      "claim": "exact structured reconstruction, collisions, TV witnesses, and uniform-product pullback geometry on the finite prime box",
+      "free_scale_model": "signed integer geometric factors v_4(u)",
+      "normalized_model": "labelled nonnegative unit-sum rank-one tensors",
+      "raw_resonant_noise_geometry_certified": false
+    },
+    "free_scale_exceptional_collision": {
+      "all_axis_collision_exact": true,
+      "common_marginal_sha256_by_axis": [
+        "849f20d745022d485859ae18fd2d5642a64689a080e11f3f722c890d89ee22c4",
+        "a32873aef211111c5d5ae73fc4bb7db14385bcb5fc632cfb5473b5a1a2fe7367",
+        "a32873aef211111c5d5ae73fc4bb7db14385bcb5fc632cfb5473b5a1a2fe7367"
+      ],
+      "difference_factor_sums": [
+        0,
+        0,
+        0
+      ],
+      "difference_factorization": [
+        [
+          14,
+          -2,
+          -4,
+          -8
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1
+        ]
+      ],
+      "difference_in_full_mean_zero_interaction": true,
+      "difference_sha256": "e379ab5671e45aa65a8bfa823cab648e8bce84858b55bc0e846b24b4a079e880",
+      "difference_squared_l2": "4480/1",
+      "geometric_sums_left": [
+        1,
+        0,
+        0
+      ],
+      "geometric_sums_right": [
+        15,
+        0,
+        0
+      ],
+      "left": {
+        "parameters": [
+          0,
+          -1,
+          -1
+        ],
+        "scale": 15
+      },
+      "right": {
+        "parameters": [
+          2,
+          -1,
+          -1
+        ],
+        "scale": 1
+      },
+      "scaled_geometric_sums_left": [
+        15,
+        0,
+        0
+      ],
+      "scaled_geometric_sums_right": [
+        15,
+        0,
+        0
+      ],
+      "tensor_left_sha256": "c954db392bbbc9a2c22d96a0102c8c9994eade66c40de04221d431b01236fb97",
+      "tensor_right_sha256": "0814dd423332f8c6c21e120f05f3853aad3035c6887513cceb3d8606b40f8e7a"
+    },
+    "implementation": {
+      "arithmetic": "integers and fractions.Fraction only",
+      "binary64_used_for_proof_decisions": false,
+      "external_packages_required": false,
+      "serialized_resource_cap_bytes": 100000
+    },
+    "normalized_product_reconstruction": {
+      "canonical_factors": [
+        [
+          "1/10",
+          "1/5",
+          "3/10",
+          "2/5"
+        ],
+        [
+          "2/5",
+          "3/10",
+          "1/5",
+          "1/10"
+        ],
+        [
+          "1/8",
+          "1/8",
+          "1/4",
+          "1/2"
+        ]
+      ],
+      "complementary_marginal_sha256_by_axis": [
+        "0cd8b7795adabe3997f18c761b134e170400757c4eaa4b9c15a1072ad9f9bc5a",
+        "7c733e22ecd9a3609bd375f146616078b17dd41d9d2581875a4edc46abeaadeb",
+        "0b7fa8ccd4ecf391b113499efbc5045b5a5fd5c2bbd5f108505bdad7d6fd0076"
+      ],
+      "marginal_identity_verified_all_axes": true,
+      "normalized_product_dimension": 9,
+      "product_tensor_sha256": "06f536de0fd961c6a0d557a20e9e8a0c1383e667c89244fcdbc0a51fc11bd783",
+      "reconstructed_factors": [
+        [
+          "1/10",
+          "1/5",
+          "3/10",
+          "2/5"
+        ],
+        [
+          "2/5",
+          "3/10",
+          "1/5",
+          "1/10"
+        ],
+        [
+          "1/8",
+          "1/8",
+          "1/4",
+          "1/2"
+        ]
+      ],
+      "reconstructed_tensor_sha256": "06f536de0fd961c6a0d557a20e9e8a0c1383e667c89244fcdbc0a51fc11bd783",
+      "selected_reconstruction_axes": [
+        0,
+        1
+      ],
+      "two_axis_ambient_common_kernel_dimension": 36,
+      "two_axis_reconstruction_exact": true
+    },
+    "one_axis_probability_collision": {
+      "common_observed_marginal_sha256": "6c9eac3315eb2a9c627bc30924b5159b97c74b01d8fd380743a8006389f90517",
+      "hidden_factor_fibre_dimension": 3,
+      "hidden_factor_minus": [
+        "1/8",
+        "3/8",
+        "1/4",
+        "1/4"
+      ],
+      "hidden_factor_plus": [
+        "3/8",
+        "1/8",
+        "1/4",
+        "1/4"
+      ],
+      "observed_axis": 0,
+      "one_axis_ambient_kernel_dimension": 48,
+      "one_axis_collision_exact": true,
+      "revealing_axis": 1,
+      "revealing_marginal_minus_sha256": "deb7b7c3fefd20da3a74138e225f1eb58e6525f3c45c7fd8209c0dc4eb4ae395",
+      "revealing_marginal_plus_sha256": "fbb59833d11a27b305319fe94df9ff759cbcb8e89322056bf044793c4a9ffa92",
+      "shared_uniform_factors": 2,
+      "source_squared_l2_distance": "1/128",
+      "source_total_variation": "1/4",
+      "tensor_minus_sha256": "c17fefd208700da8f32cc043fe9d6b95174fddc27c1e38afdce69d572cfe516a",
+      "tensor_plus_sha256": "d36258cb13e2f9ec89e9888dc593dd4ee69fbc783955ca96cc036efb952e9530"
+    },
+    "overall_passed": true,
+    "parameters": {
+      "ambient_dimension": 64,
+      "ambient_full_interaction_dimension": 27,
+      "axis_count": 3,
+      "exponents_per_axis": 4,
+      "marginal_calibration": "R_j=s^(-1/2) M_j",
+      "prime_axes": [
+        2,
+        3,
+        5
+      ],
+      "state_order": "lexicographic product(range(4), repeat=3)"
+    },
+    "sharp_tv_witness": {
+      "common_midpoint_a_sha256": "8495c7ecfb3b59def4490ed1a61391605a08eb0567c06458e06246e37c7fbc5b",
+      "common_midpoint_b_sha256": "2fd79ab23836bc3620b5f54a8e05cc7caf7cac27b054b030bebf1dd92bd5ab4b",
+      "common_midpoint_endpoint_distances": [
+        "1/8",
+        "1/8",
+        "1/6",
+        "1/6"
+      ],
+      "common_midpoint_lower_witness_verified": true,
+      "epsilon_a": "1/8",
+      "epsilon_b": "1/6",
+      "half_source_total_variation": "1/4",
+      "margin_tv_d_a": "1/4",
+      "margin_tv_d_b": "1/3",
+      "minimax_lower_formula": "1/4",
+      "moved_factor_a": [
+        "2/3",
+        "1/3",
+        "0/1",
+        "0/1"
+      ],
+      "moved_factor_b": [
+        "3/4",
+        "1/4",
+        "0/1",
+        "0/1"
+      ],
+      "selected_axes": [
+        0,
+        1
+      ],
+      "sharp_modulus_equality_verified": true,
+      "sharp_modulus_rhs": "1/2",
+      "source_total_variation": "1/2"
+    },
+    "uniform_product_tangent_geometry": {
+      "calibrated_marginal_rule": "P_j=R_j^*R_j=(1/s) M_j^* M_j",
+      "designs": {
+        "all_three_uniform": {
+          "exact_block_identity_verified": true,
+          "factor_block_generalized_eigenvalues": [
+            "2/3",
+            "2/3",
+            "2/3"
+          ],
+          "generalized_floor": "2/3",
+          "generalized_spectrum": [
+            {
+              "eigenvalue": "2/3",
+              "multiplicity": 9
+            }
+          ],
+          "name": "all three axes with uniform weights",
+          "pullback_gram_sha256": "831e4cca7db6cb4adf6aa10820853ad2ce683908cd26d357fb5ec59a3f5c880f",
+          "tangent_rank": 9,
+          "weights": [
+            "1/3",
+            "1/3",
+            "1/3"
+          ]
+        },
+        "one_axis": {
+          "exact_block_identity_verified": true,
+          "factor_block_generalized_eigenvalues": [
+            "0/1",
+            "1/1",
+            "1/1"
+          ],
+          "generalized_floor": "0/1",
+          "generalized_spectrum": [
+            {
+              "eigenvalue": "0/1",
+              "multiplicity": 3
+            },
+            {
+              "eigenvalue": "1/1",
+              "multiplicity": 6
+            }
+          ],
+          "name": "axis zero only",
+          "pullback_gram_sha256": "e582dce641121000f92363bf680ad3c10fba73b666a23097fb5cc4a570283f7d",
+          "tangent_rank": 6,
+          "weights": [
+            "1/1",
+            "0/1",
+            "0/1"
+          ]
+        },
+        "two_axis_half": {
+          "exact_block_identity_verified": true,
+          "factor_block_generalized_eigenvalues": [
+            "1/2",
+            "1/2",
+            "1/1"
+          ],
+          "generalized_floor": "1/2",
+          "generalized_spectrum": [
+            {
+              "eigenvalue": "1/2",
+              "multiplicity": 6
+            },
+            {
+              "eigenvalue": "1/1",
+              "multiplicity": 3
+            }
+          ],
+          "name": "axes zero and one with half weights",
+          "pullback_gram_sha256": "f8eed2a4692178b9ec7bc5ac1e7659dcead324a9ea4c1972a5b9c805b663fcf6",
+          "tangent_rank": 9,
+          "weights": [
+            "1/2",
+            "1/2",
+            "0/1"
+          ]
+        }
+      },
+      "factor_contrast_columns": [
+        [
+          1,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          1,
+          -1
+        ]
+      ],
+      "factor_tangent_dimension": 9,
+      "one_factor_contrast_metric": [
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ]
+      ],
+      "projector_action_on_factor_blocks": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "source_metric_coordinate_matrix": [
+        [
+          "1/8",
+          "1/16",
+          "1/16",
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "1/16",
+          "1/8",
+          "1/16",
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "1/16",
+          "1/16",
+          "1/8",
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "0/1",
+          "0/1",
+          "1/8",
+          "1/16",
+          "1/16",
+          "0/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "0/1",
+          "0/1",
+          "1/16",
+          "1/8",
+          "1/16",
+          "0/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "0/1",
+          "0/1",
+          "1/16",
+          "1/16",
+          "1/8",
+          "0/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1",
+          "1/8",
+          "1/16",
+          "1/16"
+        ],
+        [
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1",
+          "1/16",
+          "1/8",
+          "1/16"
+        ],
+        [
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1",
+          "0/1",
+          "1/16",
+          "1/16",
+          "1/8"
+        ]
+      ],
+      "source_metric_determinant": "1/1073741824",
+      "source_metric_rule": "ambient coefficient Euclidean metric pulled back by dPhi",
+      "source_metric_sha256": "8850cc2fd6cfd0dbfda37778e725fd9cbb8f6cc30108e571d772df2bf059aaa5",
+      "uniform_factor": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ]
+    }
+  },
+  "payload_sha256": "5805a3f385a6b5a0728d38413c9a0cb76d15b59285f671021ff749a6c4ea6a24",
+  "schema": "arithmetic-observability-normalized-product-v1"
+}
