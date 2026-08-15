@@ -817,7 +817,14 @@ synthesis.
 
 ## 15. Reproduction
 
-Install the repository dependencies, then run:
+Install the dedicated protocol-engine dependencies, then run:
+
+```bash
+python -m pip install -r oig_protocol_engine_requirements.txt
+```
+
+The complete file and certificate map is recorded in
+`OIG_PROTOCOL_ENGINE_REPRODUCIBILITY_MANIFEST.md`. Then run:
 
 ```bash
 python -m unittest -v \

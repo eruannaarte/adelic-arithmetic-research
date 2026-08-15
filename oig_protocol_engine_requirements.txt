@@ -1,0 +1,7 @@
+# Complete runtime for the Operational Information Geometry protocol engine,
+# including exact rational, SciPy, and Arb-backed certificate layers.
+numpy>=2.2,<3
+scipy>=1.15,<2
+mpmath>=1.3,<2
+gmpy2>=2.2,<3
+python-flint>=0.9,<0.10

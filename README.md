@@ -102,6 +102,11 @@ tubes, and uncertain nominal null directions. A pinned integration report
 composes the independently verified layers while keeping continuum enclosure,
 tail, and model-exhaustiveness assumptions explicit.
 
+For a focused clean-room installation and proof-artifact map, see the
+[Operational Information Geometry protocol-engine reproducibility
+manifest](OIG_PROTOCOL_ENGINE_REPRODUCIBILITY_MANIFEST.md) and install
+`oig_protocol_engine_requirements.txt`.
+
 The active continuation includes continuum-certified arithmetic window design
 and a cancellation-aware log-Mellin certificate for higher-degree coefficient
 tails. At `N=50`, `sigma=2`, `T=1000`, and `m=5000`, the eight-harmonic
