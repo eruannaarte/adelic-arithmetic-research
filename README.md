@@ -52,7 +52,17 @@ giving the complete declared continuum-atlas bracket
 are part of every statement. A separate asymptotic proof gives
 squared-factorial upper ceilings, an explicit \(e^{-O(K^2)}\) lower frame,
 and an exact fixed-band contrast fan; a proposed spectral-ratio constant is
-kept explicitly conjectural. Finite-grid transfer remains the next theorem.
+kept explicitly conjectural.
+
+Stage XI supplies the finite-transfer theorem and the first complete finite
+Neumann crossing.  The invariant comparison is the fully normalized response,
+including source cost, target preparation, sensor map, boundary coordinate,
+and noise whitening.  Arb phase quadrature transfers the late lattice Gram
+through eight ports, while the actual noncommuting finite generator is
+rigorously transferred for one port at \(n=7\).  An exact three-port
+counterexample shows why pure moment fitting cannot replace mixed causal-word
+control.  The observed two-port crossing near \(n=383\) remains a clearly
+labeled target for the next certificate.
 
 The active continuation includes continuum-certified arithmetic window design
 and a cancellation-aware log-Mellin certificate for higher-degree coefficient
@@ -356,6 +366,24 @@ Gaussian information budgets, factorial upper obstruction, and finite-model
 transfer target. The full-atlas result concerns continuum phase Grams; no
 finite-grid or finite-sensor certificate is implied.
 
+Run the Stage XI finite-transfer certificate and adversarial controls:
+
+    python -m pip install -r oig_xi_transfer_requirements.txt
+    python oig_xi_transfer_certificate.py \
+      --max-band 8 \
+      --precision-bits 320 \
+      --maximum-phase-side-length 24
+    python -m unittest -v test_oig_xi_transfer_certificate.py
+    python -m unittest -v test_oig_xi_adversarial_controls.py
+
+See [OPERATIONAL_INFORMATION_GEOMETRY_XI.md](OPERATIONAL_INFORMATION_GEOMETRY_XI.md)
+for the metric-normalized transfer theorem, exact error factorization,
+calibrated moment leakage, mixed-word obstruction, rigorous \(K\le8\)
+phase-grid transfer, and the first complete finite Neumann crossing at
+\(K=1,n=7\).  The phase-grid and full-dynamics statements are deliberately
+separate; the descriptive \(K=2\) crossing near \(n=383\) is not promoted to
+a certificate.
+
 Run the outward-rounded finite-grid E-design certificate separately:
 
 ```sh
@@ -601,6 +629,16 @@ For the public synthesis of the complete progression, see
   calibrated early/late/lattice/boundary certificate at \(K=2\)
 - [OIG_X_ADVERSARIAL_AUDIT.md](OIG_X_ADVERSARIAL_AUDIT.md) — coordinate,
   sampling, interval, boundary, underflow, and degeneracy controls
+- [OPERATIONAL_INFORMATION_GEOMETRY_XI.md](OPERATIONAL_INFORMATION_GEOMETRY_XI.md)
+  — metric-normalized finite transfer, mixed causal words, and the first
+  complete finite Neumann crossing
+- [OIG_XI_FINITE_TRANSFER_THEOREM.md](OIG_XI_FINITE_TRANSFER_THEOREM.md) —
+  detailed response/Gram transfer proof, chartwise budgets, and growing-band
+  conditions
+- [oig_xi_transfer_certificate.md](oig_xi_transfer_certificate.md) — Arb
+  phase-grid and complete finite-Neumann proof trace
+- [OIG_XI_ADVERSARIAL_AUDIT.md](OIG_XI_ADVERSARIAL_AUDIT.md) — metric,
+  moment, mixed-word, target, boundary, sensor, and dispersion controls
 - `oig_iv_certificate.md` — outward-rounded finite-grid E-design certificate
 - `oig_v_scaling_report.md` — independent continuum and propagation audit
 
@@ -649,6 +687,9 @@ proved results, computation, conjecture, and interpretation.
   two-port early/late/lattice/boundary atlas certificate
 - [oig_x_spectral_asymptotics.py](oig_x_spectral_asymptotics.py) — exact
   cosine-moment recurrence and high-precision nested-band conjecture audit
+- [oig_xi_transfer_certificate.py](oig_xi_transfer_certificate.py) — rigorous
+  phase-quadrature transfer through eight ports and complete one-port finite
+  Neumann transfer
 - `oig_iv_certificate.py` — rational/Arb finite-grid E-design checker
 - `arithmetic_sensing_v.py` — Stage V reproduction and boundary studies
 - `exact_trigonometric_positivity.py` — exact rational Sturm certificates

@@ -984,10 +984,10 @@ Detailed sources:
 
 ## 17. Next research order
 
-1. **Certify finite-model transfer.**  Build an outward-rounded enclosure of
-   \(\delta_K(h)\) including moment leakage, mixed causal words, target
-   preparation, boundary error, and sensor-frame error, then compare it
-   directly with the certified continuum floor.
+1. **Certify finite-model transfer — begun in Stage XI.**  Stage XI proves the
+   metric-normalized transfer theorem, closes the complete one-port
+   finite-Neumann crossing at \(n=7\), and isolates the two-port full-model
+   enclosure as the next finite certificate.
 2. **Optimize certified effective rank.**  Choose multiple times and target
    profiles to maximize the number of eigenvalues above a declared noise
    threshold while fixing source cost and output whitening in advance.
@@ -1008,6 +1008,7 @@ Detailed sources:
    finite-transfer problem is controlled, test jump-history ports and
    finite-speed analogues.
 
-The immediate target is the first.  The continuum spectrum is now a certified
-resource.  The next milestone is to prove exactly how much of that resource a
-finite discretization and a finite sensing protocol preserve.
+Stage XI completes the abstract transfer theorem and the first full finite
+crossing.  Its immediate continuation is to certify the observed two-port
+full-Neumann crossing, then extend the enclosure across lattice time, early
+calibration, reflecting boundaries, and finite sensor frames.
