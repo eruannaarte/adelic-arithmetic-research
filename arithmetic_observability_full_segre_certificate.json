@@ -1,0 +1,396 @@
+{
+  "payload": {
+    "analytic_inequalities": {
+      "epsilon_amplification_certainly_below_declared_upper": true,
+      "epsilon_amplification_definition": "2/((sqrt(2)-E)/sqrt(3))",
+      "epsilon_amplification_interval": "[4.384073743778968895961334037891111433489934881577115718318975054285948374070584961180517540804461645 +/- 4.21e-100]",
+      "epsilon_amplification_upper_exact": "877/200",
+      "factor_floor_certainly_above_declared_floor": true,
+      "factor_floor_definition": "sqrt(2)-E",
+      "factor_floor_exact": "7901/10000",
+      "factor_floor_interval": "[0.7901558727321452674833278043525393959403825286345824291219403040022951757539855276592293120787121596 +/- 3.01e-101]",
+      "finite_analytic_inputs_verified": true,
+      "passed": true,
+      "perturbation_certainly_below_upper": true,
+      "perturbation_definition": "E=9*sqrt(1202)/500",
+      "perturbation_interval": "[0.6240576896409497813183609198571586826292893467423656440547394339884373027081215111911582222489294131 +/- 4.93e-102]",
+      "perturbation_upper_exact": "5/8",
+      "quotient_floor_certainly_above_declared_floor": true,
+      "quotient_floor_definition": "(sqrt(2)-E)/(24*sqrt(2))",
+      "quotient_floor_exact": "291/12500",
+      "quotient_floor_interval": "[0.02328019065846977238597875985539881189159672538178618398486500101195406122106591319211580607864976731 +/- 3.68e-102]",
+      "raw_operator_norm_certainly_below_declared_upper": true,
+      "raw_operator_norm_definition": "8*sqrt(6)",
+      "raw_operator_norm_interval": "[19.59591794226542478557827259764713113572757984525336102746154053800768301965852021231887546483712188 +/- 1.46e-99]",
+      "raw_operator_norm_upper_exact": "20/1",
+      "rho_amplification_certainly_below_declared_upper": true,
+      "rho_amplification_definition": "2/((sqrt(2)-E)/(24*sqrt(2)))",
+      "rho_amplification_interval": "[85.90994933593304930403050463018961039554211520048072468251322383161664010020423805339112477882796464 +/- 1.50e-99]",
+      "rho_amplification_upper_exact": "8591/100",
+      "tensor_floor_certainly_above_declared_floor": true,
+      "tensor_floor_definition": "(sqrt(2)-E)/sqrt(3)",
+      "tensor_floor_exact": "4561/10000",
+      "tensor_floor_interval": "[0.4561967058236677465768029735716600444056180532054822732267847262289164640121885592933721410068089379 +/- 1.35e-101]"
+    },
+    "finite_certificate_passed": true,
+    "formal_environment": {
+      "flint_version": "3.6.0",
+      "interval_backend": "Arb",
+      "precision_bits": 384,
+      "python_flint_version": "0.9.0"
+    },
+    "parameters": {
+      "axis_count": 3,
+      "exponents_per_axis": 4,
+      "off_axis_error_radius_exact": "17/1000",
+      "primes": [
+        2,
+        3,
+        5
+      ],
+      "reading_count": 6,
+      "target_axes": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2
+      ],
+      "target_error_radius_exact": "1/1000",
+      "target_pi_multipliers_exact": [
+        "1/2",
+        "1/1",
+        "1/2",
+        "1/1",
+        "1/2",
+        "1/1"
+      ],
+      "times_exact": [
+        "22635173/250",
+        "220023423/1000",
+        "27819627/1000",
+        "94581299/1000",
+        "1808413/100",
+        "75110287/1000"
+      ],
+      "windings": [
+        [
+          9988,
+          15831,
+          23192
+        ],
+        [
+          24272,
+          38471,
+          56359
+        ],
+        [
+          3069,
+          4864,
+          7126
+        ],
+        [
+          10434,
+          16537,
+          24227
+        ],
+        [
+          1995,
+          3162,
+          4632
+        ],
+        [
+          8286,
+          13133,
+          19239
+        ]
+      ]
+    },
+    "phase_design": {
+      "every_off_axis_error_certainly_below_radius": true,
+      "every_target_error_certainly_below_radius": true,
+      "finite_phase_input_verified": true,
+      "logarithm_records": [
+        {
+          "logarithm_interval": "[0.6931471805599453094172321214581765680755001343602552541206800094933936219696947156058633269964186875 +/- 4.21e-101]",
+          "prime": 2
+        },
+        {
+          "logarithm_interval": "[1.098612288668109691395245236922525704647490557822749451734694333637494293218608966873615754813732089 +/- 2.13e-100]",
+          "prime": 3
+        },
+        {
+          "logarithm_interval": "[1.609437912434100374600759333226187639525601354268517721912647891474178987707657764630133878093179611 +/- 2.01e-100]",
+          "prime": 5
+        }
+      ],
+      "maximum_off_axis_absolute_error_upper_endpoint_exact": "20294096467719230886651997670904867188465372101155140419989059503457174818521214422332538394674006541006576996767275/1260864198284623334792929283204595641762551656654894293374345388935863096687910739565256520156317300505812095689818112",
+      "maximum_target_absolute_error_upper_endpoint_exact": "28396507725215641873902901391244883769169643640253403147740084400998172559580965533713615815162177848621044901315915/40347654345107946713373737062547060536401653012956617387979052445947619094013143666088208645002153616185987062074179584",
+      "off_axis_error_radius_exact": "17/1000",
+      "off_axis_error_slack_lower_exact": "142574362889920725603475017946657340187250757747257820921851513556562228146658518784602805997923445949028578744954113/157608024785577916849116160400574455220318957081861786671793173616982887085988842445657065019539662563226511961227264000",
+      "off_axis_record_count": 12,
+      "passed": true,
+      "pi_interval": "[3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117068 +/- 1.79e-101]",
+      "record_count": 18,
+      "records": [
+        {
+          "absolute_error_upper_endpoint_exact": "5218769546813008383528010859896627944298055368663020825394034375802008718291970421391622885519930003898099042533773/20173827172553973356686868531273530268200826506478308693989526222973809547006571833044104322501076808092993531037089792",
+          "axis_index": 0,
+          "declared_tolerance_exact": "1/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[-0.0002586901088313586825446316338344238640955463134279837610781386664786538914813948728047687721167607881 +/- 6.40e-105]",
+          "phase_role": "target",
+          "prime": 2,
+          "reading_index": 0,
+          "reduced_phase_interval": "[1.570537636686065260548777060005917018234489153374124926726394157487429549251623104441212643898941773 +/- 2.03e-100]",
+          "target_pi_multiplier_exact": "1/2",
+          "winding": 9988
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "25867270495684189968439196206094521735631813578887884927052048636187506294159649182353218076680024793429149025520813/2521728396569246669585858566409191283525103313309788586748690777871726193375821479130513040312634601011624191379636224",
+          "axis_index": 1,
+          "declared_tolerance_exact": "17/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[0.01025775437627462773445927380736712063364572314819897112969436752739822981382358140834295552381501747 +/- 5.00e-102]",
+          "phase_role": "off_axis",
+          "prime": 3,
+          "reading_index": 0,
+          "reduced_phase_interval": "[0.01025775437627462773445927380736712063364572314819897112969436752739822981382358140834295552381501747 +/- 5.00e-102]",
+          "target_pi_multiplier_exact": "0/1",
+          "winding": 15831
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "28549218774490895726989481094093312957075888908431621767547446528711351937343548937331847576410728825274730477613161/2521728396569246669585858566409191283525103313309788586748690777871726193375821479130513040312634601011624191379636224",
+          "axis_index": 2,
+          "declared_tolerance_exact": "17/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[-0.01132129011725903927693427884037610700708900616004386712632319269051026869048357732196346863563916433 +/- 4.20e-102]",
+          "phase_role": "off_axis",
+          "prime": 5,
+          "reading_index": 0,
+          "reduced_phase_interval": "[-0.01132129011725903927693427884037610700708900616004386712632319269051026869048357732196346863563916433 +/- 4.20e-102]",
+          "target_pi_multiplier_exact": "0/1",
+          "winding": 23192
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "2377214762824421180536831433517818718350097633331687179505979917616228808813587243457866366958351388614984542164281/40347654345107946713373737062547060536401653012956617387979052445947619094013143666088208645002153616185987062074179584",
+          "axis_index": 0,
+          "declared_tolerance_exact": "1/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[-5.891828909039547649252370766698752649376123591386181445717398685102378224578438252031272469103475673e-5 +/- 4.58e-105]",
+          "phase_role": "target",
+          "prime": 2,
+          "reading_index": 1,
+          "reduced_phase_interval": "[3.141533735300702842986150859571835896670675638139191959160487418320965382503963214245514512617426033 +/- 2.26e-100]",
+          "target_pi_multiplier_exact": "1/1",
+          "winding": 24272
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "36187094340196628261741569250674007085896849170025900224000851086397558434697461217323362889028623941434836780925279/2521728396569246669585858566409191283525103313309788586748690777871726193375821479130513040312634601011624191379636224",
+          "axis_index": 1,
+          "declared_tolerance_exact": "17/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[0.01435011573388646279575584858042612927296562136956458654832427752560445053941758829122937289013538665 +/- 1.06e-102]",
+          "phase_role": "off_axis",
+          "prime": 3,
+          "reading_index": 1,
+          "reduced_phase_interval": "[0.01435011573388646279575584858042612927296562136956458654832427752560445053941758829122937289013538665 +/- 1.06e-102]",
+          "target_pi_multiplier_exact": "0/1",
+          "winding": 38471
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "21461011032486201074603615279021503764575815194549721327768115993647995146550329503248426416058192364867430034938713/10086913586276986678343434265636765134100413253239154346994763111486904773503285916522052161250538404046496765518544896",
+          "axis_index": 2,
+          "declared_tolerance_exact": "17/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[-0.002127609287907790909980875568412223634259168247617270908479871072693655121220904444636586660746795414 +/- 2.60e-103]",
+          "phase_role": "off_axis",
+          "prime": 5,
+          "reading_index": 1,
+          "reduced_phase_interval": "[-0.002127609287907790909980875568412223634259168247617270908479871072693655121220904444636586660746795414 +/- 2.60e-103]",
+          "target_pi_multiplier_exact": "0/1",
+          "winding": 56359
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "25140234370236490282741710697874121838141147380099229312806553585433084197423441752607822253827993722120441789813761/80695308690215893426747474125094121072803306025913234775958104891895238188026287332176417290004307232371974124148359168",
+          "axis_index": 0,
+          "declared_tolerance_exact": "17/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[0.0003115451787507032799048155795207982958029877852652833209428772924255911614584473190120694836599736031 +/- 1.96e-104]",
+          "phase_role": "off_axis",
+          "prime": 2,
+          "reading_index": 2,
+          "reduced_phase_interval": "[0.0003115451787507032799048155795207982958029877852652833209428772924255911614584473190120694836599736031 +/- 1.96e-104]",
+          "target_pi_multiplier_exact": "0/1",
+          "winding": 3069
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "3396075389885268135298510881155536105794545493129026299751878802441311472091738277370462942047389589765501831179433/80695308690215893426747474125094121072803306025913234775958104891895238188026287332176417290004307232371974124148359168",
+          "axis_index": 1,
+          "declared_tolerance_exact": "1/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[-4.208516511068299408952335080770680869716989511764104914545794745658505332587349035809930470785211936e-5 +/- 3.86e-105]",
+          "phase_role": "target",
+          "prime": 3,
+          "reading_index": 2,
+          "reduced_phase_interval": "[1.570754241629785936237232168288943735289887529792435269438326838206451618089778625823659313366350682 +/- 1.29e-100]",
+          "target_pi_multiplier_exact": "1/2",
+          "winding": 4864
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "20294096467719230886651997670904867188465372101155140419989059503457174818521214422332538394674006541006576996767275/1260864198284623334792929283204595641762551656654894293374345388935863096687910739565256520156317300505812095689818112",
+          "axis_index": 2,
+          "declared_tolerance_exact": "17/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[-0.01609538639873261619493137822834196537165344898729403531940642285985312642659278263488216012443642134 +/- 3.67e-103]",
+          "phase_role": "off_axis",
+          "prime": 5,
+          "reading_index": 2,
+          "reduced_phase_interval": "[-0.01609538639873261619493137822834196537165344898729403531940642285985312642659278263488216012443642134 +/- 3.67e-103]",
+          "target_pi_multiplier_exact": "0/1",
+          "winding": 7126
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "26429909362972112721911820395501982841359980846307386018184108052976504884523556101837801846989502119993052501773677/5043456793138493339171717132818382567050206626619577173497381555743452386751642958261026080625269202023248382759272448",
+          "axis_index": 0,
+          "declared_tolerance_exact": "17/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[0.005240435369433400304909763447792516201756307767634203874308937987917828055452068294748543748840946151 +/- 1.35e-103]",
+          "phase_role": "off_axis",
+          "prime": 2,
+          "reading_index": 3,
+          "reduced_phase_interval": "[0.005240435369433400304909763447792516201756307767634203874308937987917828055452068294748543748840946151 +/- 1.35e-103]",
+          "target_pi_multiplier_exact": "0/1",
+          "winding": 10434
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "6901675743089878047637251211138488123392137459850560474491870742321094714311912230315028313614124050124698841170899/20173827172553973356686868531273530268200826506478308693989526222973809547006571833044104322501076808092993531037089792",
+          "axis_index": 1,
+          "declared_tolerance_exact": "1/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[0.0003421103831244994870297256856116286161647786298678589010527925777197865644303322950689577619720399930 +/- 3.94e-104]",
+          "phase_role": "target",
+          "prime": 3,
+          "reading_index": 3,
+          "reduced_phase_interval": "[3.141934763972917737949673108965114512813334178004973679875997384885536192850639330923103783104089108 +/- 2.50e-101]",
+          "target_pi_multiplier_exact": "1/1",
+          "winding": 16537
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "10183618724430969943720261244997857199721825262812182653340790501066915314112098617643367294505664403450948351606637/5043456793138493339171717132818382567050206626619577173497381555743452386751642958261026080625269202023248382759272448",
+          "axis_index": 2,
+          "declared_tolerance_exact": "17/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[-0.002019174376250342498370518344986814526234445776506500963170444062534296667193368482693166369782231761 +/- 2.88e-103]",
+          "phase_role": "off_axis",
+          "prime": 5,
+          "reading_index": 3,
+          "reduced_phase_interval": "[-0.002019174376250342498370518344986814526234445776506500963170444062534296667193368482693166369782231761 +/- 2.88e-103]",
+          "target_pi_multiplier_exact": "0/1",
+          "winding": 24227
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "22782697042867252513956533645317194643836891610714273367868910191155705113327869473952933465339862234522801313689189/2521728396569246669585858566409191283525103313309788586748690777871726193375821479130513040312634601011624191379636224",
+          "axis_index": 0,
+          "declared_tolerance_exact": "17/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[0.009034556248746925502825340238112084488341281650623011384056771576939788841392803602214520697978690164 +/- 3.78e-103]",
+          "phase_role": "off_axis",
+          "prime": 2,
+          "reading_index": 4,
+          "reduced_phase_interval": "[0.009034556248746925502825340238112084488341281650623011384056771576939788841392803602214520697978690164 +/- 3.78e-103]",
+          "target_pi_multiplier_exact": "0/1",
+          "winding": 1995
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "19551678661288190814922427436462115729383446380162331115550331524249220047362641040003833020571287806952826175318515/1260864198284623334792929283204595641762551656654894293374345388935863096687910739565256520156317300505812095689818112",
+          "axis_index": 1,
+          "declared_tolerance_exact": "17/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[0.01550656977007341373949052817853152392413979094883075338823800918871946945726878446864463610854089409 +/- 2.06e-102]",
+          "phase_role": "off_axis",
+          "prime": 3,
+          "reading_index": 4,
+          "reduced_phase_interval": "[0.01550656977007341373949052817853152392413979094883075338823800918871946945726878446864463610854089409 +/- 2.06e-102]",
+          "target_pi_multiplier_exact": "0/1",
+          "winding": 3162
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "28396507725215641873902901391244883769169643640253403147740084400998172559580965533713615815162177848621044901315915/40347654345107946713373737062547060536401653012956617387979052445947619094013143666088208645002153616185987062074179584",
+          "axis_index": 2,
+          "declared_tolerance_exact": "1/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[-0.0007037957518504083297436172577930705626817427384880502010617908206390648982567086856705408313812646163 +/- 2.81e-104]",
+          "phase_role": "target",
+          "prime": 5,
+          "reading_index": 4,
+          "reduced_phase_interval": "[1.570092531043046210901578074381958371535902956949064860286410505333269138244847790628346871839677269 +/- 3.75e-100]",
+          "target_pi_multiplier_exact": "1/2",
+          "winding": 4632
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "25746363411122130907639312983504551624614344017881138654542686074812504503876543273039410085753978181875870101291583/2521728396569246669585858566409191283525103313309788586748690777871726193375821479130513040312634601011624191379636224",
+          "axis_index": 0,
+          "declared_tolerance_exact": "17/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[0.01020980825934682918124063457872791036147389307986506542636448638606513821986627598024790629154284290 +/- 2.30e-102]",
+          "phase_role": "off_axis",
+          "prime": 2,
+          "reading_index": 5,
+          "reduced_phase_interval": "[0.01020980825934682918124063457872791036147389307986506542636448638606513821986627598024790629154284290 +/- 2.30e-102]",
+          "target_pi_multiplier_exact": "0/1",
+          "winding": 8286
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "29414446332129380205457613598374289717361099005795947165799635003179080115995607375616047343131419580289058547605369/2521728396569246669585858566409191283525103313309788586748690777871726193375821479130513040312634601011624191379636224",
+          "axis_index": 1,
+          "declared_tolerance_exact": "17/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[0.01166439905746671850907541447968462739818387027695515764459522884459699830768468680934934500182235481 +/- 6.11e-103]",
+          "phase_role": "off_axis",
+          "prime": 3,
+          "reading_index": 5,
+          "reduced_phase_interval": "[0.01166439905746671850907541447968462739818387027695515764459522884459699830768468680934934500182235481 +/- 6.11e-103]",
+          "target_pi_multiplier_exact": "0/1",
+          "winding": 13133
+        },
+        {
+          "absolute_error_upper_endpoint_exact": "2076648441576435310997630763411763440495539787132705962322415598732558159426763824705504773443725910725951680667347/10086913586276986678343434265636765134100413253239154346994763111486904773503285916522052161250538404046496765518544896",
+          "axis_index": 2,
+          "declared_tolerance_exact": "1/1000",
+          "error_certainly_below_declared_tolerance": true,
+          "phase_error_interval": "[-0.0002058755062997335108086644019604024197518576557278497209088420306413953892590603476123375893491513076 +/- 1.07e-104]",
+          "phase_role": "target",
+          "prime": 5,
+          "reading_index": 5,
+          "reduced_phase_interval": "[3.141386778083493504951834718877542481777417541719377971254035750277175010896949938280422487752767917 +/- 3.26e-100]",
+          "target_pi_multiplier_exact": "1/1",
+          "winding": 19239
+        }
+      ],
+      "residual_definition": "theta_lj=t_l*log(p_j)-2*pi*n_lj",
+      "target_error_definition": "theta_l,target_axis-mu_l*pi",
+      "target_error_radius_exact": "1/1000",
+      "target_error_slack_lower_exact": "1493893327486538104933854458912772095904001171587901780029871005618680816804022266546824103729996970945617770094783073/5043456793138493339171717132818382567050206626619577173497381555743452386751642958261026080625269202023248382759272448000",
+      "target_record_count": 6
+    },
+    "reproduction_files": {
+      "manuscript_basename": "ARITHMETIC_OBSERVABILITY_VI.md",
+      "manuscript_sha256": "ee2e6f1f604362d72553073e4e721e7e4a56724c2dba12e4903d8015d0056df4",
+      "tests_basename": "test_arithmetic_observability_full_segre.py",
+      "tests_sha256": "0dc5214d0a2359ed705604bf6e9b2dea1225800887552ca3c306eed6c706589f",
+      "verifier_basename": "arithmetic_observability_full_segre.py",
+      "verifier_sha256": "7fb4e662c02e2bf2854ba491bd00f2d2c9f2c866fe403526e2649140feac1348"
+    },
+    "scope": {
+      "certifies": "the eighteen finite reduced-phase inclusions and the displayed algebraic perturbation, factor-floor, tensor-floor, and raw operator-norm inequalities, together with the quotient and two amplification consequences",
+      "full_segre_global_reconstruction_theorem_mechanized": false,
+      "full_segre_reading_lower_bound_mechanized": false,
+      "mathematical_model": "three labelled four-state probability factors observed by six complex harmonic readings",
+      "schedule_optimality_claimed": false
+    }
+  },
+  "payload_sha256": "02a00b4a1bb18ab366cd1de844f1f23101f5c3f424329b12e268d981b42179fc",
+  "schema": "arithmetic-observability-full-segre-v1"
+}
