@@ -1,8 +1,7 @@
 # Adelic Arithmetic Research
 
 This repository contains the manuscripts, executable laboratories, and tests
-for two TGN research publications and one new operational-geometry research
-program:
+for four connected TGN research programmes:
 
 1. **The Geometry Arithmetic Remembers** — an eight-stage path from ordered
    multiplicative rigidity through adelic harmonic analysis, number-field
@@ -15,6 +14,14 @@ program:
    factorization universe against degree-preserving random controls, followed
    by protocol-invariance, common-kernel, composition, interaction, and
    directed-intervention audits.
+4. **Arithmetic Observability** — a theory of which local arithmetic
+   distinctions are exactly identifiable and stably recoverable from
+   incomplete global harmonic data.  It combines nuisance quotients, sharp
+   minimax constants, lattice and topological obstructions, nonlinear product
+   reconstruction, induced distinguishability geometry, and certified
+   Dirichlet-tail models.  See the
+   [Arithmetic Observability Atlas](ARITHMETIC_OBSERVABILITY_ATLAS.md) for
+   the model map, theorem index, and reproducibility manifest.
 
 The fifth operational-geometry layer supplies the first controlled scale flow:
 cell-centred continuum normalization, noncommuting spectral-dimension limits,
@@ -147,6 +154,26 @@ python -m unittest discover -v
 
 The test count is reported by the discovery command and grows with each
 research layer.
+
+## Reproduce Arithmetic Observability
+
+Verify the corpus manifest, run its focused hostile tests, and then run the
+complete ordinary Arithmetic Observability regression:
+
+```sh
+python arithmetic_observability_corpus.py \
+  arithmetic_observability_corpus_manifest.json
+python -m unittest -q test_arithmetic_observability_corpus.py
+python -m unittest discover -s . \
+  -p 'test_arithmetic_observability*.py' -q
+```
+
+The [Arithmetic Observability Atlas](ARITHMETIC_OBSERVABILITY_ATLAS.md)
+maps the two declared model branches, the sharp reconstruction--obstruction
+pairs, every induced geometry, and the certificate dependency graph.  The
+large AO-IX fine-grid reconstruction is deliberately opt-in; ordinary
+verification checks its committed proof objects without rebuilding the
+multi-gigabyte convolution.
 
 ## Reproduce Arithmetic Sensing I
 
