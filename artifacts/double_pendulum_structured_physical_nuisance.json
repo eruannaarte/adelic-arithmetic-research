@@ -1,0 +1,2768 @@
+{
+  "all_tier1_controls_passed": true,
+  "conditional_exact_analysis": {
+    "conditional_scope": "Exact ranks, confoundings, factorization decisions, and separation bounds hold for the fixed rational center response and fixed rational nuisance columns serialized here. No child encloses an ODE nuisance derivative or jointly propagates the established physical response boxes.",
+    "declared_columns_exact": {
+      "clock_and_common_gain_by_rows": [
+        [
+          "791811284/752991683",
+          "90824626/945622529"
+        ],
+        [
+          "382365224/657239921",
+          "1004219339/898287089"
+        ]
+      ],
+      "clock_and_common_gain_determinant_exact": "470697557764649722724227790728508396/420384875079460734709703127024544483",
+      "per_launch_initial_angle_preparation_rows": [
+        [
+          "-201396415/912483728",
+          "925377087/962133437"
+        ],
+        [
+          "-453310244/464297651",
+          "188485511/939334103"
+        ]
+      ],
+      "shared_clock_log_dilation": [
+        "791811284/752991683",
+        "382365224/657239921"
+      ],
+      "shared_common_log_gain": [
+        "90824626/945622529",
+        "1004219339/898287089"
+      ]
+    },
+    "exact_confoundings": {
+      "clock_lost_source_direction_H_inverse_b": [
+        "1950619597532806440240515728640/1549741807723032809571132317663",
+        "-9671842648337904348316105194848/4649225423169098428713396952989"
+      ],
+      "clock_surviving_query_row": [
+        "-432904860731359022378041/974846523430847059301400",
+        "-464185671816175763459611/1727630650021386356523485"
+      ],
+      "gain_lost_source_direction_H_inverse_b": [
+        "904893735925967605892563121920/379996995925692467151712536803",
+        "34854999948813878097244100884/150564847442255505852565344771"
+      ],
+      "gain_surviving_query_row": [
+        "12480681869840641904599/252562704055643120596800",
+        "-1507352305313778661201631/2965307625205553066822495"
+      ],
+      "identity_H_times_H_inverse_b_checks": true
+    },
+    "model_status": "exact rational linear theorem conditional on declared nuisance columns",
+    "query_engine_children": {
+      "independent_angle_preparation_full_source": {
+        "declared_nuisance_dimension": 4,
+        "declared_nuisance_response_exact": [
+          [
+            "-201396415/912483728",
+            "925377087/962133437",
+            "0/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "0/1",
+            "-453310244/464297651",
+            "188485511/939334103"
+          ]
+        ],
+        "declared_observation_exact": [
+          [
+            "265/3136",
+            "-4041/8894"
+          ],
+          [
+            "2357/5025",
+            "13/3140"
+          ]
+        ],
+        "declared_output_metric_exact": [
+          [
+            "4589/10000",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "5411/12500"
+          ]
+        ],
+        "declared_query_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "declared_query_metric_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "declared_source_metric_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "effective_response_rank": 0,
+        "factorization_and_minimax": {
+          "factorization_exists": false,
+          "kind": "unidentifiable-unbounded-source",
+          "reason": "ker(effective_response) is not contained in ker(query)",
+          "zero_noise_minimax_error": "infinite"
+        },
+        "identifiability": {
+          "kernel_condition_exact": false,
+          "kernel_counterexample_exact": [
+            "1/1",
+            "0/1"
+          ],
+          "query_identifiable_exact": false
+        },
+        "independent_exact_verification": {
+          "method": "exact rational nuisance profiling and kernel counterexample",
+          "passed": true,
+          "query_identifiable": false
+        },
+        "model_kind": "independent_nuisance_protocol_mixture",
+        "nuisance_elimination": {
+          "effective_response_exact": [
+            [
+              "0/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "0/1"
+            ]
+          ],
+          "metric_orthogonal_projector_exact": [
+            [
+              "0/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "0/1"
+            ]
+          ],
+          "nuisance_basis_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ],
+          "profiled_information_exact": [
+            [
+              "0/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "0/1"
+            ]
+          ],
+          "projector_annihilates_nuisance_exact": true,
+          "projector_idempotent_exact": true,
+          "projector_is_output_metric_self_adjoint_exact": true
+        },
+        "nuisance_rank": 2,
+        "output_dimension": 2,
+        "proof_boundary": "This certificate proves a finite-dimensional real rational linear theorem for the declared metrics, response, query, and one declared unrestricted nuisance independently re-fit in each active protocol. It does not prove that an external physical or continuum model is enclosed by these data.",
+        "protocol_mixture": {
+          "active_protocol_indices": [
+            0,
+            1
+          ],
+          "composition_rule": "stack active responses; block-diagonalize active nuisance maps; scale each output metric by budget_share/cost; exact profiled information then adds linearly",
+          "e_design_compatibility": "For this independent-refit nuisance model, the candidate profiled information forms enter linearly with physical weights budget_share/cost.",
+          "inactive_zero_share_protocols_omitted_from_assembly": true,
+          "individually_profiled_information_sum_exact": [
+            [
+              "0/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "0/1"
+            ]
+          ],
+          "nuisance_semantics": "one independently re-fit nuisance vector per active protocol",
+          "profiled_information_adds_linearly_exact": true,
+          "protocols": [
+            {
+              "budget_share_exact": "4589/10000",
+              "cost_exact": "1/1",
+              "name": "launch-A / theta-2 / tau-1",
+              "nuisance_response_exact": [
+                [
+                  "-201396415/912483728",
+                  "925377087/962133437"
+                ]
+              ],
+              "output_metric_exact": [
+                [
+                  "1/1"
+                ]
+              ],
+              "physical_weight_exact": "4589/10000",
+              "response_exact": [
+                [
+                  "265/3136",
+                  "-4041/8894"
+                ]
+              ]
+            },
+            {
+              "budget_share_exact": "5411/10000",
+              "cost_exact": "5/4",
+              "name": "launch-B / scaled-omega-1 / tau-5/4",
+              "nuisance_response_exact": [
+                [
+                  "-453310244/464297651",
+                  "188485511/939334103"
+                ]
+              ],
+              "output_metric_exact": [
+                [
+                  "1/1"
+                ]
+              ],
+              "physical_weight_exact": "5411/12500",
+              "response_exact": [
+                [
+                  "2357/5025",
+                  "13/3140"
+                ]
+              ]
+            }
+          ],
+          "schema_version": "oig-query-independent-nuisance-mixture-v1",
+          "unprofiled_information_sum_exact": [
+            [
+              "1223207477578270001/12416358528000000000",
+              "-92298989294454241/5501091976800000000"
+            ],
+            [
+              "-92298989294454241/5501091976800000000",
+              "57727014750403739/609317395051250000"
+            ]
+          ]
+        },
+        "query_dimension": 2,
+        "report_valid": true,
+        "schema_version": "oig-query-protocol-certificate-v1",
+        "source_dimension": 2,
+        "status": "exact finite-linear query certificate"
+      },
+      "nominal_full_source": {
+        "declared_nuisance_dimension": 0,
+        "declared_nuisance_response_exact": null,
+        "declared_observation_exact": [
+          [
+            "265/3136",
+            "-4041/8894"
+          ],
+          [
+            "2357/5025",
+            "13/3140"
+          ]
+        ],
+        "declared_output_metric_exact": [
+          [
+            "4589/10000",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "5411/12500"
+          ]
+        ],
+        "declared_query_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "declared_query_metric_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "declared_source_metric_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "effective_response_rank": 2,
+        "factorization_and_minimax": {
+          "amplification_lower_witness_exact": [
+            "89380259/1",
+            "100000000/1"
+          ],
+          "decoder_annihilates_nuisance_exact": true,
+          "decoder_exact": [
+            [
+              "60733924160/3131448222341",
+              "6665141347200/3131448222341"
+            ],
+            [
+              "-20642505535232/9394344667023",
+              "1239616814500/3131448222341"
+            ]
+          ],
+          "decoder_times_effective_response_equals_query_exact": true,
+          "decoder_times_raw_observation_equals_query_exact": true,
+          "descriptive_amplification_lower": 3.5412048946199506,
+          "descriptive_amplification_upper": 3.5412048946199506,
+          "factorization_exists": true,
+          "interpretation": "For data-noise radius epsilon, the exact minimax query error is kappa*epsilon; the true kappa squared lies in the certified rational interval.",
+          "kind": "identifiable-query-factorization",
+          "minimax_amplification_exactly_zero": false,
+          "minimax_amplification_squared_lower_exact": "108875645467133285100961963731594895488000000000/8682176914054673084203071352753369139079056321",
+          "minimax_amplification_squared_upper_exact": "1088629931958623694354367118443627729676725335054016951837286641/86811679716317152868495236360961686767777837640499847273381888",
+          "quotient_injection_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ],
+          "quotient_row_coordinates_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ],
+          "quotient_source_metric_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ],
+          "reduced_data_gram_exact": [
+            [
+              "1223207477578270001/12416358528000000000",
+              "-92298989294454241/5501091976800000000"
+            ],
+            [
+              "-92298989294454241/5501091976800000000",
+              "57727014750403739/609317395051250000"
+            ]
+          ],
+          "reduced_effective_response_exact": [
+            [
+              "265/3136",
+              "-4041/8894"
+            ],
+            [
+              "2357/5025",
+              "13/3140"
+            ]
+          ],
+          "reduced_query_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ],
+          "reduced_query_form_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ],
+          "upper_shift_positive_by_exact_ldl": true
+        },
+        "identifiability": {
+          "kernel_condition_exact": true,
+          "kernel_counterexample_exact": null,
+          "query_identifiable_exact": true
+        },
+        "independent_exact_verification": {
+          "amplification_squared_lower_exact": "108875645467133285100961963731594895488000000000/8682176914054673084203071352753369139079056321",
+          "amplification_squared_upper_exact": "1088629931958623694354367118443627729676725335054016951837286641/86811679716317152868495236360961686767777837640499847273381888",
+          "method": "exact rational reconstruction of the nuisance quotient, kernel condition, query factorization, and minimax amplification bracket",
+          "passed": true,
+          "query_identifiable": true
+        },
+        "model_kind": "shared_nuisance_protocol_mixture",
+        "nuisance_elimination": {
+          "effective_response_exact": [
+            [
+              "265/3136",
+              "-4041/8894"
+            ],
+            [
+              "2357/5025",
+              "13/3140"
+            ]
+          ],
+          "metric_orthogonal_projector_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ],
+          "nuisance_basis_exact": null,
+          "profiled_information_exact": [
+            [
+              "1223207477578270001/12416358528000000000",
+              "-92298989294454241/5501091976800000000"
+            ],
+            [
+              "-92298989294454241/5501091976800000000",
+              "57727014750403739/609317395051250000"
+            ]
+          ],
+          "projector_annihilates_nuisance_exact": true,
+          "projector_idempotent_exact": true,
+          "projector_is_output_metric_self_adjoint_exact": true
+        },
+        "nuisance_rank": 0,
+        "output_dimension": 2,
+        "proof_boundary": "This certificate proves a finite-dimensional real rational linear theorem for the declared metrics, response, query, and one declared unrestricted nuisance shared across the active protocols. It does not prove that an external physical or continuum model is enclosed by these data.",
+        "protocol_mixture": {
+          "active_protocol_indices": [
+            0,
+            1
+          ],
+          "composition_rule": "stack active responses and nuisance maps; scale each output metric by budget_share/cost; profile the shared nuisance only after assembly",
+          "inactive_zero_share_protocols_omitted_from_assembly": true,
+          "nuisance_semantics": "one shared nuisance vector across every active protocol",
+          "protocols": [
+            {
+              "budget_share_exact": "4589/10000",
+              "cost_exact": "1/1",
+              "name": "launch-A / theta-2 / tau-1",
+              "nuisance_response_exact": null,
+              "output_metric_exact": [
+                [
+                  "1/1"
+                ]
+              ],
+              "physical_weight_exact": "4589/10000",
+              "response_exact": [
+                [
+                  "265/3136",
+                  "-4041/8894"
+                ]
+              ]
+            },
+            {
+              "budget_share_exact": "5411/10000",
+              "cost_exact": "5/4",
+              "name": "launch-B / scaled-omega-1 / tau-5/4",
+              "nuisance_response_exact": null,
+              "output_metric_exact": [
+                [
+                  "1/1"
+                ]
+              ],
+              "physical_weight_exact": "5411/12500",
+              "response_exact": [
+                [
+                  "2357/5025",
+                  "13/3140"
+                ]
+              ]
+            }
+          ],
+          "schema_version": "oig-query-shared-nuisance-mixture-v1",
+          "unprofiled_information_sum_exact": [
+            [
+              "1223207477578270001/12416358528000000000",
+              "-92298989294454241/5501091976800000000"
+            ],
+            [
+              "-92298989294454241/5501091976800000000",
+              "57727014750403739/609317395051250000"
+            ]
+          ],
+          "warning": "With a shared nuisance, profiling generally does not commute with summing individually profiled protocol information forms."
+        },
+        "query_dimension": 2,
+        "report_valid": true,
+        "schema_version": "oig-query-protocol-certificate-v1",
+        "source_dimension": 2,
+        "status": "exact finite-linear query certificate"
+      },
+      "sensor_specific_gain_full_source": {
+        "declared_nuisance_dimension": 2,
+        "declared_nuisance_response_exact": [
+          [
+            "90824626/945622529",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1004219339/898287089"
+          ]
+        ],
+        "declared_observation_exact": [
+          [
+            "265/3136",
+            "-4041/8894"
+          ],
+          [
+            "2357/5025",
+            "13/3140"
+          ]
+        ],
+        "declared_output_metric_exact": [
+          [
+            "4589/10000",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "5411/12500"
+          ]
+        ],
+        "declared_query_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "declared_query_metric_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "declared_source_metric_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "effective_response_rank": 0,
+        "factorization_and_minimax": {
+          "factorization_exists": false,
+          "kind": "unidentifiable-unbounded-source",
+          "reason": "ker(effective_response) is not contained in ker(query)",
+          "zero_noise_minimax_error": "infinite"
+        },
+        "identifiability": {
+          "kernel_condition_exact": false,
+          "kernel_counterexample_exact": [
+            "1/1",
+            "0/1"
+          ],
+          "query_identifiable_exact": false
+        },
+        "independent_exact_verification": {
+          "method": "exact rational nuisance profiling and kernel counterexample",
+          "passed": true,
+          "query_identifiable": false
+        },
+        "model_kind": "independent_nuisance_protocol_mixture",
+        "nuisance_elimination": {
+          "effective_response_exact": [
+            [
+              "0/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "0/1"
+            ]
+          ],
+          "metric_orthogonal_projector_exact": [
+            [
+              "0/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "0/1"
+            ]
+          ],
+          "nuisance_basis_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ],
+          "profiled_information_exact": [
+            [
+              "0/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "0/1"
+            ]
+          ],
+          "projector_annihilates_nuisance_exact": true,
+          "projector_idempotent_exact": true,
+          "projector_is_output_metric_self_adjoint_exact": true
+        },
+        "nuisance_rank": 2,
+        "output_dimension": 2,
+        "proof_boundary": "This certificate proves a finite-dimensional real rational linear theorem for the declared metrics, response, query, and one declared unrestricted nuisance independently re-fit in each active protocol. It does not prove that an external physical or continuum model is enclosed by these data.",
+        "protocol_mixture": {
+          "active_protocol_indices": [
+            0,
+            1
+          ],
+          "composition_rule": "stack active responses; block-diagonalize active nuisance maps; scale each output metric by budget_share/cost; exact profiled information then adds linearly",
+          "e_design_compatibility": "For this independent-refit nuisance model, the candidate profiled information forms enter linearly with physical weights budget_share/cost.",
+          "inactive_zero_share_protocols_omitted_from_assembly": true,
+          "individually_profiled_information_sum_exact": [
+            [
+              "0/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "0/1"
+            ]
+          ],
+          "nuisance_semantics": "one independently re-fit nuisance vector per active protocol",
+          "profiled_information_adds_linearly_exact": true,
+          "protocols": [
+            {
+              "budget_share_exact": "4589/10000",
+              "cost_exact": "1/1",
+              "name": "launch-A / theta-2 / tau-1",
+              "nuisance_response_exact": [
+                [
+                  "90824626/945622529"
+                ]
+              ],
+              "output_metric_exact": [
+                [
+                  "1/1"
+                ]
+              ],
+              "physical_weight_exact": "4589/10000",
+              "response_exact": [
+                [
+                  "265/3136",
+                  "-4041/8894"
+                ]
+              ]
+            },
+            {
+              "budget_share_exact": "5411/10000",
+              "cost_exact": "5/4",
+              "name": "launch-B / scaled-omega-1 / tau-5/4",
+              "nuisance_response_exact": [
+                [
+                  "1004219339/898287089"
+                ]
+              ],
+              "output_metric_exact": [
+                [
+                  "1/1"
+                ]
+              ],
+              "physical_weight_exact": "5411/12500",
+              "response_exact": [
+                [
+                  "2357/5025",
+                  "13/3140"
+                ]
+              ]
+            }
+          ],
+          "schema_version": "oig-query-independent-nuisance-mixture-v1",
+          "unprofiled_information_sum_exact": [
+            [
+              "1223207477578270001/12416358528000000000",
+              "-92298989294454241/5501091976800000000"
+            ],
+            [
+              "-92298989294454241/5501091976800000000",
+              "57727014750403739/609317395051250000"
+            ]
+          ]
+        },
+        "query_dimension": 2,
+        "report_valid": true,
+        "schema_version": "oig-query-protocol-certificate-v1",
+        "source_dimension": 2,
+        "status": "exact finite-linear query certificate"
+      },
+      "shared_clock_and_common_gain_full_source": {
+        "declared_nuisance_dimension": 2,
+        "declared_nuisance_response_exact": [
+          [
+            "791811284/752991683",
+            "90824626/945622529"
+          ],
+          [
+            "382365224/657239921",
+            "1004219339/898287089"
+          ]
+        ],
+        "declared_observation_exact": [
+          [
+            "265/3136",
+            "-4041/8894"
+          ],
+          [
+            "2357/5025",
+            "13/3140"
+          ]
+        ],
+        "declared_output_metric_exact": [
+          [
+            "4589/10000",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "5411/12500"
+          ]
+        ],
+        "declared_query_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "declared_query_metric_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "declared_source_metric_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "effective_response_rank": 0,
+        "factorization_and_minimax": {
+          "factorization_exists": false,
+          "kind": "unidentifiable-unbounded-source",
+          "reason": "ker(effective_response) is not contained in ker(query)",
+          "zero_noise_minimax_error": "infinite"
+        },
+        "identifiability": {
+          "kernel_condition_exact": false,
+          "kernel_counterexample_exact": [
+            "1/1",
+            "0/1"
+          ],
+          "query_identifiable_exact": false
+        },
+        "independent_exact_verification": {
+          "method": "exact rational nuisance profiling and kernel counterexample",
+          "passed": true,
+          "query_identifiable": false
+        },
+        "model_kind": "shared_nuisance_protocol_mixture",
+        "nuisance_elimination": {
+          "effective_response_exact": [
+            [
+              "0/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "0/1"
+            ]
+          ],
+          "metric_orthogonal_projector_exact": [
+            [
+              "0/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "0/1"
+            ]
+          ],
+          "nuisance_basis_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ],
+          "profiled_information_exact": [
+            [
+              "0/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "0/1"
+            ]
+          ],
+          "projector_annihilates_nuisance_exact": true,
+          "projector_idempotent_exact": true,
+          "projector_is_output_metric_self_adjoint_exact": true
+        },
+        "nuisance_rank": 2,
+        "output_dimension": 2,
+        "proof_boundary": "This certificate proves a finite-dimensional real rational linear theorem for the declared metrics, response, query, and one declared unrestricted nuisance shared across the active protocols. It does not prove that an external physical or continuum model is enclosed by these data.",
+        "protocol_mixture": {
+          "active_protocol_indices": [
+            0,
+            1
+          ],
+          "composition_rule": "stack active responses and nuisance maps; scale each output metric by budget_share/cost; profile the shared nuisance only after assembly",
+          "inactive_zero_share_protocols_omitted_from_assembly": true,
+          "nuisance_semantics": "one shared nuisance vector across every active protocol",
+          "protocols": [
+            {
+              "budget_share_exact": "4589/10000",
+              "cost_exact": "1/1",
+              "name": "launch-A / theta-2 / tau-1",
+              "nuisance_response_exact": [
+                [
+                  "791811284/752991683",
+                  "90824626/945622529"
+                ]
+              ],
+              "output_metric_exact": [
+                [
+                  "1/1"
+                ]
+              ],
+              "physical_weight_exact": "4589/10000",
+              "response_exact": [
+                [
+                  "265/3136",
+                  "-4041/8894"
+                ]
+              ]
+            },
+            {
+              "budget_share_exact": "5411/10000",
+              "cost_exact": "5/4",
+              "name": "launch-B / scaled-omega-1 / tau-5/4",
+              "nuisance_response_exact": [
+                [
+                  "382365224/657239921",
+                  "1004219339/898287089"
+                ]
+              ],
+              "output_metric_exact": [
+                [
+                  "1/1"
+                ]
+              ],
+              "physical_weight_exact": "5411/12500",
+              "response_exact": [
+                [
+                  "2357/5025",
+                  "13/3140"
+                ]
+              ]
+            }
+          ],
+          "schema_version": "oig-query-shared-nuisance-mixture-v1",
+          "unprofiled_information_sum_exact": [
+            [
+              "1223207477578270001/12416358528000000000",
+              "-92298989294454241/5501091976800000000"
+            ],
+            [
+              "-92298989294454241/5501091976800000000",
+              "57727014750403739/609317395051250000"
+            ]
+          ],
+          "warning": "With a shared nuisance, profiling generally does not commute with summing individually profiled protocol information forms."
+        },
+        "query_dimension": 2,
+        "report_valid": true,
+        "schema_version": "oig-query-protocol-certificate-v1",
+        "source_dimension": 2,
+        "status": "exact finite-linear query certificate"
+      },
+      "shared_clock_full_source": {
+        "declared_nuisance_dimension": 1,
+        "declared_nuisance_response_exact": [
+          [
+            "791811284/752991683"
+          ],
+          [
+            "382365224/657239921"
+          ]
+        ],
+        "declared_observation_exact": [
+          [
+            "265/3136",
+            "-4041/8894"
+          ],
+          [
+            "2357/5025",
+            "13/3140"
+          ]
+        ],
+        "declared_output_metric_exact": [
+          [
+            "4589/10000",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "5411/12500"
+          ]
+        ],
+        "declared_query_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "declared_query_metric_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "declared_source_metric_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "effective_response_rank": 1,
+        "factorization_and_minimax": {
+          "factorization_exists": false,
+          "kind": "unidentifiable-unbounded-source",
+          "reason": "ker(effective_response) is not contained in ker(query)",
+          "zero_noise_minimax_error": "infinite"
+        },
+        "identifiability": {
+          "kernel_condition_exact": false,
+          "kernel_counterexample_exact": [
+            "-182870587268700603772548349560/302245082760559510884878287339",
+            "1/1"
+          ],
+          "query_identifiable_exact": false
+        },
+        "independent_exact_verification": {
+          "method": "exact rational nuisance profiling and kernel counterexample",
+          "passed": true,
+          "query_identifiable": false
+        },
+        "model_kind": "shared_nuisance_protocol_mixture",
+        "nuisance_elimination": {
+          "effective_response_exact": [
+            [
+              "-12043439488085260401250299842287222791696307/70423260573415985848543132941319460951624700",
+              "-7860496943564497916708941817047376633832946/75968050498882913976314075606188745600791665"
+            ],
+            [
+              "258461672227404768753824692337139490228334009/788740518422259041503683088942777962658196640",
+              "12049459948606463576168109085801687736305693/60774440399106331181051260484950996480633332"
+            ]
+          ],
+          "metric_orthogonal_projector_exact": [
+            [
+              "112138482342225665939342110346505878576/500520686378223069286020845354082878121",
+              "-202689723242766257660977020797030832392/500520686378223069286020845354082878121"
+            ],
+            [
+              "-214873207346390305952278587238397359510/500520686378223069286020845354082878121",
+              "388382204035997403346678735007576999545/500520686378223069286020845354082878121"
+            ]
+          ],
+          "nuisance_basis_exact": [
+            [
+              "1/1"
+            ],
+            [
+              "71979458385107998/130102496435767141"
+            ]
+          ],
+          "profiled_information_exact": [
+            [
+              "664786935389516200404659198160986677244844056316818257/11097579094201184713956821061424885934600826724800000000",
+              "30992307227993982178408971172179405217712512890656789/855096376415426079717391235023260520482510981240000000"
+            ],
+            [
+              "30992307227993982178408971172179405217712512890656789/855096376415426079717391235023260520482510981240000000",
+              "232622231342442259956148959493260020491933277730660233/10607859505851914799413796998530650442963024775607000000"
+            ]
+          ],
+          "projector_annihilates_nuisance_exact": true,
+          "projector_idempotent_exact": true,
+          "projector_is_output_metric_self_adjoint_exact": true
+        },
+        "nuisance_rank": 1,
+        "output_dimension": 2,
+        "proof_boundary": "This certificate proves a finite-dimensional real rational linear theorem for the declared metrics, response, query, and one declared unrestricted nuisance shared across the active protocols. It does not prove that an external physical or continuum model is enclosed by these data.",
+        "protocol_mixture": {
+          "active_protocol_indices": [
+            0,
+            1
+          ],
+          "composition_rule": "stack active responses and nuisance maps; scale each output metric by budget_share/cost; profile the shared nuisance only after assembly",
+          "inactive_zero_share_protocols_omitted_from_assembly": true,
+          "nuisance_semantics": "one shared nuisance vector across every active protocol",
+          "protocols": [
+            {
+              "budget_share_exact": "4589/10000",
+              "cost_exact": "1/1",
+              "name": "launch-A / theta-2 / tau-1",
+              "nuisance_response_exact": [
+                [
+                  "791811284/752991683"
+                ]
+              ],
+              "output_metric_exact": [
+                [
+                  "1/1"
+                ]
+              ],
+              "physical_weight_exact": "4589/10000",
+              "response_exact": [
+                [
+                  "265/3136",
+                  "-4041/8894"
+                ]
+              ]
+            },
+            {
+              "budget_share_exact": "5411/10000",
+              "cost_exact": "5/4",
+              "name": "launch-B / scaled-omega-1 / tau-5/4",
+              "nuisance_response_exact": [
+                [
+                  "382365224/657239921"
+                ]
+              ],
+              "output_metric_exact": [
+                [
+                  "1/1"
+                ]
+              ],
+              "physical_weight_exact": "5411/12500",
+              "response_exact": [
+                [
+                  "2357/5025",
+                  "13/3140"
+                ]
+              ]
+            }
+          ],
+          "schema_version": "oig-query-shared-nuisance-mixture-v1",
+          "unprofiled_information_sum_exact": [
+            [
+              "1223207477578270001/12416358528000000000",
+              "-92298989294454241/5501091976800000000"
+            ],
+            [
+              "-92298989294454241/5501091976800000000",
+              "57727014750403739/609317395051250000"
+            ]
+          ],
+          "warning": "With a shared nuisance, profiling generally does not commute with summing individually profiled protocol information forms."
+        },
+        "query_dimension": 2,
+        "report_valid": true,
+        "schema_version": "oig-query-protocol-certificate-v1",
+        "source_dimension": 2,
+        "status": "exact finite-linear query certificate"
+      },
+      "shared_clock_surviving_query": {
+        "declared_nuisance_dimension": 1,
+        "declared_nuisance_response_exact": [
+          [
+            "791811284/752991683"
+          ],
+          [
+            "382365224/657239921"
+          ]
+        ],
+        "declared_observation_exact": [
+          [
+            "265/3136",
+            "-4041/8894"
+          ],
+          [
+            "2357/5025",
+            "13/3140"
+          ]
+        ],
+        "declared_output_metric_exact": [
+          [
+            "4589/10000",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "5411/12500"
+          ]
+        ],
+        "declared_query_exact": [
+          [
+            "-432904860731359022378041/974846523430847059301400",
+            "-464185671816175763459611/1727630650021386356523485"
+          ]
+        ],
+        "declared_query_metric_exact": [
+          [
+            "1/1"
+          ]
+        ],
+        "declared_source_metric_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "effective_response_rank": 1,
+        "factorization_and_minimax": {
+          "amplification_lower_witness_exact": [
+            "100000000/1"
+          ],
+          "decoder_annihilates_nuisance_exact": true,
+          "decoder_exact": [
+            [
+              "382365224/657239921",
+              "-791811284/752991683"
+            ]
+          ],
+          "decoder_times_effective_response_equals_query_exact": true,
+          "decoder_times_raw_observation_equals_query_exact": true,
+          "descriptive_amplification_lower": 1.8143835573197127,
+          "descriptive_amplification_upper": 1.8143835573197127,
+          "factorization_exists": true,
+          "interpretation": "For data-noise radius epsilon, the exact minimax query error is kappa*epsilon; the true kappa squared lies in the certified rational interval.",
+          "kind": "identifiable-query-factorization",
+          "minimax_amplification_exactly_zero": false,
+          "minimax_amplification_squared_lower_exact": "20020827455128922771440833814163315124840000/6081683566819524406789013152142971017803071",
+          "minimax_amplification_squared_upper_exact": "113300955091785685250551220724159221206410882954150474991509491460538185/34417186713736291100572731463884231036372114040872279010094310389448704",
+          "quotient_injection_exact": [
+            [
+              "91352090052937468045010630631036527635387671184001847700921/124793741740936911395491307438605335419072192951881799894521"
+            ],
+            [
+              "55271735783500534428996766870685316178870141462223894220840/124793741740936911395491307438605335419072192951881799894521"
+            ]
+          ],
+          "quotient_row_coordinates_exact": [
+            [
+              "1/1",
+              "182870587268700603772548349560/302245082760559510884878287339"
+            ]
+          ],
+          "quotient_source_metric_exact": [
+            [
+              "91352090052937468045010630631036527635387671184001847700921/124793741740936911395491307438605335419072192951881799894521"
+            ]
+          ],
+          "reduced_data_gram_exact": [
+            [
+              "664786935389516200404659198160986677244844056316818257/11097579094201184713956821061424885934600826724800000000"
+            ]
+          ],
+          "reduced_effective_response_exact": [
+            [
+              "-12043439488085260401250299842287222791696307/70423260573415985848543132941319460951624700"
+            ],
+            [
+              "258461672227404768753824692337139490228334009/788740518422259041503683088942777962658196640"
+            ]
+          ],
+          "reduced_query_exact": [
+            [
+              "-432904860731359022378041/974846523430847059301400"
+            ]
+          ],
+          "reduced_query_form_exact": [
+            [
+              "187406618444837350919491431972283876214718997681/950325744245209044595118386573064088256041960000"
+            ]
+          ],
+          "upper_shift_positive_by_exact_ldl": true
+        },
+        "identifiability": {
+          "kernel_condition_exact": true,
+          "kernel_counterexample_exact": null,
+          "query_identifiable_exact": true
+        },
+        "independent_exact_verification": {
+          "amplification_squared_lower_exact": "20020827455128922771440833814163315124840000/6081683566819524406789013152142971017803071",
+          "amplification_squared_upper_exact": "113300955091785685250551220724159221206410882954150474991509491460538185/34417186713736291100572731463884231036372114040872279010094310389448704",
+          "method": "exact rational reconstruction of the nuisance quotient, kernel condition, query factorization, and minimax amplification bracket",
+          "passed": true,
+          "query_identifiable": true
+        },
+        "model_kind": "shared_nuisance_protocol_mixture",
+        "nuisance_elimination": {
+          "effective_response_exact": [
+            [
+              "-12043439488085260401250299842287222791696307/70423260573415985848543132941319460951624700",
+              "-7860496943564497916708941817047376633832946/75968050498882913976314075606188745600791665"
+            ],
+            [
+              "258461672227404768753824692337139490228334009/788740518422259041503683088942777962658196640",
+              "12049459948606463576168109085801687736305693/60774440399106331181051260484950996480633332"
+            ]
+          ],
+          "metric_orthogonal_projector_exact": [
+            [
+              "112138482342225665939342110346505878576/500520686378223069286020845354082878121",
+              "-202689723242766257660977020797030832392/500520686378223069286020845354082878121"
+            ],
+            [
+              "-214873207346390305952278587238397359510/500520686378223069286020845354082878121",
+              "388382204035997403346678735007576999545/500520686378223069286020845354082878121"
+            ]
+          ],
+          "nuisance_basis_exact": [
+            [
+              "1/1"
+            ],
+            [
+              "71979458385107998/130102496435767141"
+            ]
+          ],
+          "profiled_information_exact": [
+            [
+              "664786935389516200404659198160986677244844056316818257/11097579094201184713956821061424885934600826724800000000",
+              "30992307227993982178408971172179405217712512890656789/855096376415426079717391235023260520482510981240000000"
+            ],
+            [
+              "30992307227993982178408971172179405217712512890656789/855096376415426079717391235023260520482510981240000000",
+              "232622231342442259956148959493260020491933277730660233/10607859505851914799413796998530650442963024775607000000"
+            ]
+          ],
+          "projector_annihilates_nuisance_exact": true,
+          "projector_idempotent_exact": true,
+          "projector_is_output_metric_self_adjoint_exact": true
+        },
+        "nuisance_rank": 1,
+        "output_dimension": 2,
+        "proof_boundary": "This certificate proves a finite-dimensional real rational linear theorem for the declared metrics, response, query, and one declared unrestricted nuisance shared across the active protocols. It does not prove that an external physical or continuum model is enclosed by these data.",
+        "protocol_mixture": {
+          "active_protocol_indices": [
+            0,
+            1
+          ],
+          "composition_rule": "stack active responses and nuisance maps; scale each output metric by budget_share/cost; profile the shared nuisance only after assembly",
+          "inactive_zero_share_protocols_omitted_from_assembly": true,
+          "nuisance_semantics": "one shared nuisance vector across every active protocol",
+          "protocols": [
+            {
+              "budget_share_exact": "4589/10000",
+              "cost_exact": "1/1",
+              "name": "launch-A / theta-2 / tau-1",
+              "nuisance_response_exact": [
+                [
+                  "791811284/752991683"
+                ]
+              ],
+              "output_metric_exact": [
+                [
+                  "1/1"
+                ]
+              ],
+              "physical_weight_exact": "4589/10000",
+              "response_exact": [
+                [
+                  "265/3136",
+                  "-4041/8894"
+                ]
+              ]
+            },
+            {
+              "budget_share_exact": "5411/10000",
+              "cost_exact": "5/4",
+              "name": "launch-B / scaled-omega-1 / tau-5/4",
+              "nuisance_response_exact": [
+                [
+                  "382365224/657239921"
+                ]
+              ],
+              "output_metric_exact": [
+                [
+                  "1/1"
+                ]
+              ],
+              "physical_weight_exact": "5411/12500",
+              "response_exact": [
+                [
+                  "2357/5025",
+                  "13/3140"
+                ]
+              ]
+            }
+          ],
+          "schema_version": "oig-query-shared-nuisance-mixture-v1",
+          "unprofiled_information_sum_exact": [
+            [
+              "1223207477578270001/12416358528000000000",
+              "-92298989294454241/5501091976800000000"
+            ],
+            [
+              "-92298989294454241/5501091976800000000",
+              "57727014750403739/609317395051250000"
+            ]
+          ],
+          "warning": "With a shared nuisance, profiling generally does not commute with summing individually profiled protocol information forms."
+        },
+        "query_dimension": 1,
+        "report_valid": true,
+        "schema_version": "oig-query-protocol-certificate-v1",
+        "source_dimension": 2,
+        "status": "exact finite-linear query certificate"
+      },
+      "shared_common_gain_full_source": {
+        "declared_nuisance_dimension": 1,
+        "declared_nuisance_response_exact": [
+          [
+            "90824626/945622529"
+          ],
+          [
+            "1004219339/898287089"
+          ]
+        ],
+        "declared_observation_exact": [
+          [
+            "265/3136",
+            "-4041/8894"
+          ],
+          [
+            "2357/5025",
+            "13/3140"
+          ]
+        ],
+        "declared_output_metric_exact": [
+          [
+            "4589/10000",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "5411/12500"
+          ]
+        ],
+        "declared_query_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "declared_query_metric_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "declared_source_metric_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "effective_response_rank": 1,
+        "factorization_and_minimax": {
+          "factorization_exists": false,
+          "kind": "unidentifiable-unbounded-source",
+          "reason": "ker(effective_response) is not contained in ker(query)",
+          "zero_noise_minimax_error": "infinite"
+        },
+        "identifiability": {
+          "kernel_condition_exact": false,
+          "kernel_counterexample_exact": [
+            "4750692113611329930935956390080/461828749321783884788484336713",
+            "1/1"
+          ],
+          "query_identifiable_exact": false
+        },
+        "independent_exact_verification": {
+          "method": "exact rational nuisance profiling and kernel counterexample",
+          "passed": true,
+          "query_identifiable": false
+        },
+        "model_kind": "shared_nuisance_protocol_mixture",
+        "nuisance_elimination": {
+          "effective_response_exact": [
+            [
+              "485556830567181270460363899687385258785666661/11070560474610434293691886810324753364746451200",
+              "-1106472576486883343811294452072664023835456553/2452416756016803230256722713392770198575144860"
+            ],
+            [
+              "-17689802357570896846228101259154258298682633/4428224189844173717476754724129901345898580480",
+              "40310999578075278037117492286143865934798109/980966702406721292102689085357108079430057944"
+            ]
+          ],
+          "metric_orthogonal_projector_exact": [
+            [
+              "697063393545146776996129489300899378653/702518052252159755666304117824446223268",
+              "-29944334482282936415593574360494580591/351259026126079877833152058912223111634"
+            ],
+            [
+              "-126977038384029195353131503178996147045/1405036104504319511332608235648892446536",
+              "5454658707012978670174628523546844615/702518052252159755666304117824446223268"
+            ]
+          ],
+          "nuisance_basis_exact": [
+            [
+              "1/1"
+            ],
+            [
+              "949612431015888331/81586588899053714"
+            ]
+          ],
+          "profiled_information_exact": [
+            [
+              "1552122223737409789575456318627765064485043716736725673/1744543201831010677737142291118215934230204765900800000000",
+              "-3536930319598638914288422914951692243034157099031732029/386461642080151920236775392067286298972265627618240000000"
+            ],
+            [
+              "-3536930319598638914288422914951692243034157099031732029/386461642080151920236775392067286298972265627618240000000",
+              "8059852435830187791083209918459822448977908604997934817/85611293914952783124870420365692545223549803160497000000"
+            ]
+          ],
+          "projector_annihilates_nuisance_exact": true,
+          "projector_idempotent_exact": true,
+          "projector_is_output_metric_self_adjoint_exact": true
+        },
+        "nuisance_rank": 1,
+        "output_dimension": 2,
+        "proof_boundary": "This certificate proves a finite-dimensional real rational linear theorem for the declared metrics, response, query, and one declared unrestricted nuisance shared across the active protocols. It does not prove that an external physical or continuum model is enclosed by these data.",
+        "protocol_mixture": {
+          "active_protocol_indices": [
+            0,
+            1
+          ],
+          "composition_rule": "stack active responses and nuisance maps; scale each output metric by budget_share/cost; profile the shared nuisance only after assembly",
+          "inactive_zero_share_protocols_omitted_from_assembly": true,
+          "nuisance_semantics": "one shared nuisance vector across every active protocol",
+          "protocols": [
+            {
+              "budget_share_exact": "4589/10000",
+              "cost_exact": "1/1",
+              "name": "launch-A / theta-2 / tau-1",
+              "nuisance_response_exact": [
+                [
+                  "90824626/945622529"
+                ]
+              ],
+              "output_metric_exact": [
+                [
+                  "1/1"
+                ]
+              ],
+              "physical_weight_exact": "4589/10000",
+              "response_exact": [
+                [
+                  "265/3136",
+                  "-4041/8894"
+                ]
+              ]
+            },
+            {
+              "budget_share_exact": "5411/10000",
+              "cost_exact": "5/4",
+              "name": "launch-B / scaled-omega-1 / tau-5/4",
+              "nuisance_response_exact": [
+                [
+                  "1004219339/898287089"
+                ]
+              ],
+              "output_metric_exact": [
+                [
+                  "1/1"
+                ]
+              ],
+              "physical_weight_exact": "5411/12500",
+              "response_exact": [
+                [
+                  "2357/5025",
+                  "13/3140"
+                ]
+              ]
+            }
+          ],
+          "schema_version": "oig-query-shared-nuisance-mixture-v1",
+          "unprofiled_information_sum_exact": [
+            [
+              "1223207477578270001/12416358528000000000",
+              "-92298989294454241/5501091976800000000"
+            ],
+            [
+              "-92298989294454241/5501091976800000000",
+              "57727014750403739/609317395051250000"
+            ]
+          ],
+          "warning": "With a shared nuisance, profiling generally does not commute with summing individually profiled protocol information forms."
+        },
+        "query_dimension": 2,
+        "report_valid": true,
+        "schema_version": "oig-query-protocol-certificate-v1",
+        "source_dimension": 2,
+        "status": "exact finite-linear query certificate"
+      },
+      "shared_common_gain_surviving_query": {
+        "declared_nuisance_dimension": 1,
+        "declared_nuisance_response_exact": [
+          [
+            "90824626/945622529"
+          ],
+          [
+            "1004219339/898287089"
+          ]
+        ],
+        "declared_observation_exact": [
+          [
+            "265/3136",
+            "-4041/8894"
+          ],
+          [
+            "2357/5025",
+            "13/3140"
+          ]
+        ],
+        "declared_output_metric_exact": [
+          [
+            "4589/10000",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "5411/12500"
+          ]
+        ],
+        "declared_query_exact": [
+          [
+            "12480681869840641904599/252562704055643120596800",
+            "-1507352305313778661201631/2965307625205553066822495"
+          ]
+        ],
+        "declared_query_metric_exact": [
+          [
+            "1/1"
+          ]
+        ],
+        "declared_source_metric_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "effective_response_rank": 1,
+        "factorization_and_minimax": {
+          "amplification_lower_witness_exact": [
+            "100000000/1"
+          ],
+          "decoder_annihilates_nuisance_exact": true,
+          "decoder_exact": [
+            [
+              "1004219339/898287089",
+              "-90824626/945622529"
+            ]
+          ],
+          "decoder_times_effective_response_equals_query_exact": true,
+          "decoder_times_raw_observation_equals_query_exact": true,
+          "descriptive_amplification_lower": 1.6567119326488755,
+          "descriptive_amplification_upper": 1.6567119326488755,
+          "factorization_exists": true,
+          "interpretation": "For data-noise radius epsilon, the exact minimax query error is kappa*epsilon; the true kappa squared lies in the certified rational interval.",
+          "kind": "identifiable-query-factorization",
+          "minimax_amplification_exactly_zero": false,
+          "minimax_amplification_squared_lower_exact": "7025180522521597556663041178244462232680000/2559549234848994287916608542769336435807617",
+          "minimax_amplification_squared_upper_exact": "556592144130385587607739940708207105913638152112782519599765254510568253/202788382741877056777812010641092985391200612419537573413600476698509312",
+          "quotient_injection_exact": [
+            [
+              "213285793700123099023996570170087685377053415825739559644369/22782361352029008431074286315558263773194385968757324682050769"
+            ],
+            [
+              "-2194006197241982537982278470459735732050403144234522693007040/22782361352029008431074286315558263773194385968757324682050769"
+            ]
+          ],
+          "quotient_row_coordinates_exact": [
+            [
+              "1/1",
+              "-4750692113611329930935956390080/461828749321783884788484336713"
+            ]
+          ],
+          "quotient_source_metric_exact": [
+            [
+              "213285793700123099023996570170087685377053415825739559644369/22782361352029008431074286315558263773194385968757324682050769"
+            ]
+          ],
+          "reduced_data_gram_exact": [
+            [
+              "1552122223737409789575456318627765064485043716736725673/1744543201831010677737142291118215934230204765900800000000"
+            ]
+          ],
+          "reduced_effective_response_exact": [
+            [
+              "485556830567181270460363899687385258785666661/11070560474610434293691886810324753364746451200"
+            ],
+            [
+              "-17689802357570896846228101259154258298682633/4428224189844173717476754724129901345898580480"
+            ]
+          ],
+          "reduced_query_exact": [
+            [
+              "12480681869840641904599/252562704055643120596800"
+            ]
+          ],
+          "reduced_query_form_exact": [
+            [
+              "155767419936168901515807412842829834217350801/63787919479898369996947960364150028388170240000"
+            ]
+          ],
+          "upper_shift_positive_by_exact_ldl": true
+        },
+        "identifiability": {
+          "kernel_condition_exact": true,
+          "kernel_counterexample_exact": null,
+          "query_identifiable_exact": true
+        },
+        "independent_exact_verification": {
+          "amplification_squared_lower_exact": "7025180522521597556663041178244462232680000/2559549234848994287916608542769336435807617",
+          "amplification_squared_upper_exact": "556592144130385587607739940708207105913638152112782519599765254510568253/202788382741877056777812010641092985391200612419537573413600476698509312",
+          "method": "exact rational reconstruction of the nuisance quotient, kernel condition, query factorization, and minimax amplification bracket",
+          "passed": true,
+          "query_identifiable": true
+        },
+        "model_kind": "shared_nuisance_protocol_mixture",
+        "nuisance_elimination": {
+          "effective_response_exact": [
+            [
+              "485556830567181270460363899687385258785666661/11070560474610434293691886810324753364746451200",
+              "-1106472576486883343811294452072664023835456553/2452416756016803230256722713392770198575144860"
+            ],
+            [
+              "-17689802357570896846228101259154258298682633/4428224189844173717476754724129901345898580480",
+              "40310999578075278037117492286143865934798109/980966702406721292102689085357108079430057944"
+            ]
+          ],
+          "metric_orthogonal_projector_exact": [
+            [
+              "697063393545146776996129489300899378653/702518052252159755666304117824446223268",
+              "-29944334482282936415593574360494580591/351259026126079877833152058912223111634"
+            ],
+            [
+              "-126977038384029195353131503178996147045/1405036104504319511332608235648892446536",
+              "5454658707012978670174628523546844615/702518052252159755666304117824446223268"
+            ]
+          ],
+          "nuisance_basis_exact": [
+            [
+              "1/1"
+            ],
+            [
+              "949612431015888331/81586588899053714"
+            ]
+          ],
+          "profiled_information_exact": [
+            [
+              "1552122223737409789575456318627765064485043716736725673/1744543201831010677737142291118215934230204765900800000000",
+              "-3536930319598638914288422914951692243034157099031732029/386461642080151920236775392067286298972265627618240000000"
+            ],
+            [
+              "-3536930319598638914288422914951692243034157099031732029/386461642080151920236775392067286298972265627618240000000",
+              "8059852435830187791083209918459822448977908604997934817/85611293914952783124870420365692545223549803160497000000"
+            ]
+          ],
+          "projector_annihilates_nuisance_exact": true,
+          "projector_idempotent_exact": true,
+          "projector_is_output_metric_self_adjoint_exact": true
+        },
+        "nuisance_rank": 1,
+        "output_dimension": 2,
+        "proof_boundary": "This certificate proves a finite-dimensional real rational linear theorem for the declared metrics, response, query, and one declared unrestricted nuisance shared across the active protocols. It does not prove that an external physical or continuum model is enclosed by these data.",
+        "protocol_mixture": {
+          "active_protocol_indices": [
+            0,
+            1
+          ],
+          "composition_rule": "stack active responses and nuisance maps; scale each output metric by budget_share/cost; profile the shared nuisance only after assembly",
+          "inactive_zero_share_protocols_omitted_from_assembly": true,
+          "nuisance_semantics": "one shared nuisance vector across every active protocol",
+          "protocols": [
+            {
+              "budget_share_exact": "4589/10000",
+              "cost_exact": "1/1",
+              "name": "launch-A / theta-2 / tau-1",
+              "nuisance_response_exact": [
+                [
+                  "90824626/945622529"
+                ]
+              ],
+              "output_metric_exact": [
+                [
+                  "1/1"
+                ]
+              ],
+              "physical_weight_exact": "4589/10000",
+              "response_exact": [
+                [
+                  "265/3136",
+                  "-4041/8894"
+                ]
+              ]
+            },
+            {
+              "budget_share_exact": "5411/10000",
+              "cost_exact": "5/4",
+              "name": "launch-B / scaled-omega-1 / tau-5/4",
+              "nuisance_response_exact": [
+                [
+                  "1004219339/898287089"
+                ]
+              ],
+              "output_metric_exact": [
+                [
+                  "1/1"
+                ]
+              ],
+              "physical_weight_exact": "5411/12500",
+              "response_exact": [
+                [
+                  "2357/5025",
+                  "13/3140"
+                ]
+              ]
+            }
+          ],
+          "schema_version": "oig-query-shared-nuisance-mixture-v1",
+          "unprofiled_information_sum_exact": [
+            [
+              "1223207477578270001/12416358528000000000",
+              "-92298989294454241/5501091976800000000"
+            ],
+            [
+              "-92298989294454241/5501091976800000000",
+              "57727014750403739/609317395051250000"
+            ]
+          ],
+          "warning": "With a shared nuisance, profiling generally does not commute with summing individually profiled protocol information forms."
+        },
+        "query_dimension": 1,
+        "report_valid": true,
+        "schema_version": "oig-query-protocol-certificate-v1",
+        "source_dimension": 2,
+        "status": "exact finite-linear query certificate"
+      }
+    },
+    "rank_and_floor_conclusions": {
+      "clock_and_common_gain_any_nonzero_query_survives": false,
+      "clock_and_common_gain_effective_rank": 0,
+      "independent_preparation_any_nonzero_query_survives": false,
+      "independent_preparation_effective_rank": 0,
+      "nominal_effective_rank": 2,
+      "sensor_specific_gain_any_nonzero_query_survives": false,
+      "sensor_specific_gain_effective_rank": 0,
+      "shared_clock_effective_rank": 1,
+      "shared_clock_full_two_source_floor_positive": false,
+      "shared_clock_one_dimensional_query_survives": true,
+      "shared_common_gain_effective_rank": 1,
+      "shared_common_gain_full_two_source_floor_positive": false,
+      "shared_common_gain_one_dimensional_query_survives": true
+    },
+    "source_response_centre_exact": [
+      [
+        "265/3136",
+        "-4041/8894"
+      ],
+      [
+        "2357/5025",
+        "13/3140"
+      ]
+    ],
+    "source_response_determinant_exact": "3131448222341/14669578604800",
+    "source_response_rank": 2,
+    "structured_nuisance_children": {
+      "clock_and_gain_span_all_outputs": {
+        "certificate_kind": "query-response quotient",
+        "exact_calculation": {
+          "critical_equal_noise_radius_squared_lower_exact": "0/1",
+          "distance_squared_lower_exact": "0/1",
+          "distance_squared_upper_exact": "0/1",
+          "dual_feasible_exactly": true,
+          "dual_half_squared_lower_nonnegative_exact": "0/1",
+          "dual_half_squared_lower_raw_exact": "0/1",
+          "dual_linear_separation_numerator_exact": "0/1",
+          "dual_norm_squared_exact": "0/1",
+          "dual_nuisance_orthogonality_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "dual_precision_representer_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "exact_optimum_certified": true,
+          "finite_support_slack_exact": "0/1",
+          "gap_identity_verified_exactly": true,
+          "norm_dual_distance_squared_lower_exact": "0/1",
+          "positive_separation_certified": false,
+          "primal_dual_gap_upper_exact": "0/1",
+          "primal_feasible_exactly": true,
+          "primal_half_squared_upper_exact": "0/1",
+          "primal_nuisance_point_exact": [
+            "-265/3136",
+            "-2357/5025"
+          ],
+          "primal_residual_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "primal_zonotope_point_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "residual_dual_mismatch_half_squared_exact": "0/1",
+          "squared_dual_gap_closes_exactly": true
+        },
+        "finite_zonotope_support_certificate": {
+          "attainment_verified_exactly": true,
+          "direction_generator_pairings_exact": [
+            "0/1"
+          ],
+          "exposed_point_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "finite_support_exact": "0/1",
+          "maximizing_coefficients_exact": [
+            "0/1"
+          ]
+        },
+        "independent_verification": {
+          "distance_squared_lower_exact": "0/1",
+          "distance_squared_upper_exact": "0/1",
+          "method": "independent exact-rational reconstruction of support, feasibility, bounds, and gap",
+          "passed": true
+        },
+        "interpretation": "The distance is from the fixed query response plus the declared additive nuisance span to the fixed-response structured nuisance zonoid in the norm induced by the declared noise precision. Equal norm-bounded noise balls remain disjoint whenever their squared radius is strictly below the certified critical-radius square.",
+        "name": "clock and common gain cancel a physical displacement",
+        "problem": {
+          "coefficient_radii_exact": [
+            "0/1"
+          ],
+          "finite_generator_count": 1,
+          "finite_generators_by_rows_exact": [
+            [
+              "0/1"
+            ],
+            [
+              "0/1"
+            ]
+          ],
+          "nuisance_basis_by_rows_exact": [
+            [
+              "791811284/752991683",
+              "90824626/945622529"
+            ],
+            [
+              "382365224/657239921",
+              "1004219339/898287089"
+            ]
+          ],
+          "nuisance_subspace_dimension": 2,
+          "observation_dimension": 2,
+          "observation_noise_precision_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ],
+          "query_response_exact": [
+            "265/3136",
+            "2357/5025"
+          ]
+        },
+        "schema_version": "oig-structured-additive-nuisance-v1",
+        "scope_boundary": "This certificate preserves correlations induced by shared nuisance coefficients. It assumes the query response, generator matrix, nuisance basis, and noise norm are fixed exactly. It does not cover uncertainty in any response matrix, generator direction, calibration, or metric. Nonzero infinite-tail bounds are externally supplied analytic premises whose use, but not truth, is checked by this finite JSON verifier.",
+        "status": "exact rational structured-additive-nuisance certificate",
+        "tail_remainder": {
+          "declared_directional_support_upper_exact": null,
+          "declared_norm_remainder_upper_exact": null,
+          "effective_bound_method": "finite zonotope; no omitted tail premise",
+          "effective_directional_support_upper_exact": "0/1",
+          "external_analytic_assumption": false,
+          "l1_derived_directional_support_upper_exact": null,
+          "model": "countably generated absolutely summable zonoid tail",
+          "provenance": "finite zonotope; no omitted tail",
+          "required_meaning": "when present, the norm premise bounds sum d_k||v_k||_2; when present, the directional premise bounds omitted support in the serialized dual direction"
+        },
+        "witnesses": {
+          "dual_direction_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "primal_nuisance_coefficients_exact": [
+            "-327362023827601447123377653629874698600121/7417440394278456190577471217416126707526400",
+            "-52532417884453573712506659372307227709903/132454292754972431974597700311002262634400"
+          ],
+          "primal_zonotope_coefficients_exact": [
+            "0/1"
+          ]
+        }
+      },
+      "independent_preparation_span_all_outputs": {
+        "certificate_kind": "query-response quotient",
+        "exact_calculation": {
+          "critical_equal_noise_radius_squared_lower_exact": "0/1",
+          "distance_squared_lower_exact": "0/1",
+          "distance_squared_upper_exact": "0/1",
+          "dual_feasible_exactly": true,
+          "dual_half_squared_lower_nonnegative_exact": "0/1",
+          "dual_half_squared_lower_raw_exact": "0/1",
+          "dual_linear_separation_numerator_exact": "0/1",
+          "dual_norm_squared_exact": "0/1",
+          "dual_nuisance_orthogonality_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "dual_precision_representer_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "exact_optimum_certified": true,
+          "finite_support_slack_exact": "0/1",
+          "gap_identity_verified_exactly": true,
+          "norm_dual_distance_squared_lower_exact": "0/1",
+          "positive_separation_certified": false,
+          "primal_dual_gap_upper_exact": "0/1",
+          "primal_feasible_exactly": true,
+          "primal_half_squared_upper_exact": "0/1",
+          "primal_nuisance_point_exact": [
+            "-265/3136",
+            "-2357/5025"
+          ],
+          "primal_residual_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "primal_zonotope_point_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "residual_dual_mismatch_half_squared_exact": "0/1",
+          "squared_dual_gap_closes_exactly": true
+        },
+        "finite_zonotope_support_certificate": {
+          "attainment_verified_exactly": true,
+          "direction_generator_pairings_exact": [
+            "0/1"
+          ],
+          "exposed_point_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "finite_support_exact": "0/1",
+          "maximizing_coefficients_exact": [
+            "0/1"
+          ]
+        },
+        "independent_verification": {
+          "distance_squared_lower_exact": "0/1",
+          "distance_squared_upper_exact": "0/1",
+          "method": "independent exact-rational reconstruction of support, feasibility, bounds, and gap",
+          "passed": true
+        },
+        "interpretation": "The distance is from the fixed query response plus the declared additive nuisance span to the fixed-response structured nuisance zonoid in the norm induced by the declared noise precision. Equal norm-bounded noise balls remain disjoint whenever their squared radius is strictly below the certified critical-radius square.",
+        "name": "independent scalar-row preparation nuisance cancels every output",
+        "problem": {
+          "coefficient_radii_exact": [
+            "0/1"
+          ],
+          "finite_generator_count": 1,
+          "finite_generators_by_rows_exact": [
+            [
+              "0/1"
+            ],
+            [
+              "0/1"
+            ]
+          ],
+          "nuisance_basis_by_rows_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ],
+          "nuisance_subspace_dimension": 2,
+          "observation_dimension": 2,
+          "observation_noise_precision_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ],
+          "query_response_exact": [
+            "265/3136",
+            "2357/5025"
+          ]
+        },
+        "schema_version": "oig-structured-additive-nuisance-v1",
+        "scope_boundary": "This certificate preserves correlations induced by shared nuisance coefficients. It assumes the query response, generator matrix, nuisance basis, and noise norm are fixed exactly. It does not cover uncertainty in any response matrix, generator direction, calibration, or metric. Nonzero infinite-tail bounds are externally supplied analytic premises whose use, but not truth, is checked by this finite JSON verifier.",
+        "status": "exact rational structured-additive-nuisance certificate",
+        "tail_remainder": {
+          "declared_directional_support_upper_exact": null,
+          "declared_norm_remainder_upper_exact": null,
+          "effective_bound_method": "finite zonotope; no omitted tail premise",
+          "effective_directional_support_upper_exact": "0/1",
+          "external_analytic_assumption": false,
+          "l1_derived_directional_support_upper_exact": null,
+          "model": "countably generated absolutely summable zonoid tail",
+          "provenance": "finite zonotope; no omitted tail",
+          "required_meaning": "when present, the norm premise bounds sum d_k||v_k||_2; when present, the directional premise bounds omitted support in the serialized dual direction"
+        },
+        "witnesses": {
+          "dual_direction_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "primal_nuisance_coefficients_exact": [
+            "-265/3136",
+            "-2357/5025"
+          ],
+          "primal_zonotope_coefficients_exact": [
+            "0/1"
+          ]
+        }
+      },
+      "shared_clock_exact_confounding": {
+        "certificate_kind": "query-response quotient",
+        "exact_calculation": {
+          "critical_equal_noise_radius_squared_lower_exact": "0/1",
+          "distance_squared_lower_exact": "0/1",
+          "distance_squared_upper_exact": "0/1",
+          "dual_feasible_exactly": true,
+          "dual_half_squared_lower_nonnegative_exact": "0/1",
+          "dual_half_squared_lower_raw_exact": "0/1",
+          "dual_linear_separation_numerator_exact": "0/1",
+          "dual_norm_squared_exact": "0/1",
+          "dual_nuisance_orthogonality_exact": [
+            "0/1"
+          ],
+          "dual_precision_representer_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "exact_optimum_certified": true,
+          "finite_support_slack_exact": "0/1",
+          "gap_identity_verified_exactly": true,
+          "norm_dual_distance_squared_lower_exact": "0/1",
+          "positive_separation_certified": false,
+          "primal_dual_gap_upper_exact": "0/1",
+          "primal_feasible_exactly": true,
+          "primal_half_squared_upper_exact": "0/1",
+          "primal_nuisance_point_exact": [
+            "-791811284/752991683",
+            "-382365224/657239921"
+          ],
+          "primal_residual_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "primal_zonotope_point_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "residual_dual_mismatch_half_squared_exact": "0/1",
+          "squared_dual_gap_closes_exactly": true
+        },
+        "finite_zonotope_support_certificate": {
+          "attainment_verified_exactly": true,
+          "direction_generator_pairings_exact": [
+            "0/1"
+          ],
+          "exposed_point_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "finite_support_exact": "0/1",
+          "maximizing_coefficients_exact": [
+            "0/1"
+          ]
+        },
+        "independent_verification": {
+          "distance_squared_lower_exact": "0/1",
+          "distance_squared_upper_exact": "0/1",
+          "method": "independent exact-rational reconstruction of support, feasibility, bounds, and gap",
+          "passed": true
+        },
+        "interpretation": "The distance is from the fixed query response plus the declared additive nuisance span to the fixed-response structured nuisance zonoid in the norm induced by the declared noise precision. Equal norm-bounded noise balls remain disjoint whenever their squared radius is strictly below the certified critical-radius square.",
+        "name": "clock column is exactly confounded",
+        "problem": {
+          "coefficient_radii_exact": [
+            "0/1"
+          ],
+          "finite_generator_count": 1,
+          "finite_generators_by_rows_exact": [
+            [
+              "0/1"
+            ],
+            [
+              "0/1"
+            ]
+          ],
+          "nuisance_basis_by_rows_exact": [
+            [
+              "791811284/752991683"
+            ],
+            [
+              "382365224/657239921"
+            ]
+          ],
+          "nuisance_subspace_dimension": 1,
+          "observation_dimension": 2,
+          "observation_noise_precision_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ],
+          "query_response_exact": [
+            "791811284/752991683",
+            "382365224/657239921"
+          ]
+        },
+        "schema_version": "oig-structured-additive-nuisance-v1",
+        "scope_boundary": "This certificate preserves correlations induced by shared nuisance coefficients. It assumes the query response, generator matrix, nuisance basis, and noise norm are fixed exactly. It does not cover uncertainty in any response matrix, generator direction, calibration, or metric. Nonzero infinite-tail bounds are externally supplied analytic premises whose use, but not truth, is checked by this finite JSON verifier.",
+        "status": "exact rational structured-additive-nuisance certificate",
+        "tail_remainder": {
+          "declared_directional_support_upper_exact": null,
+          "declared_norm_remainder_upper_exact": null,
+          "effective_bound_method": "finite zonotope; no omitted tail premise",
+          "effective_directional_support_upper_exact": "0/1",
+          "external_analytic_assumption": false,
+          "l1_derived_directional_support_upper_exact": null,
+          "model": "countably generated absolutely summable zonoid tail",
+          "provenance": "finite zonotope; no omitted tail",
+          "required_meaning": "when present, the norm premise bounds sum d_k||v_k||_2; when present, the directional premise bounds omitted support in the serialized dual direction"
+        },
+        "witnesses": {
+          "dual_direction_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "primal_nuisance_coefficients_exact": [
+            "-1/1"
+          ],
+          "primal_zonotope_coefficients_exact": [
+            "0/1"
+          ]
+        }
+      },
+      "shared_clock_survivor": {
+        "certificate_kind": "query-response quotient",
+        "exact_calculation": {
+          "critical_equal_noise_radius_squared_lower_exact": "88430808032929182843916845195527540/244922243081725301054739230306623849",
+          "distance_squared_lower_exact": "353723232131716731375667380782110160/244922243081725301054739230306623849",
+          "distance_squared_upper_exact": "353723232131716731375667380782110160/244922243081725301054739230306623849",
+          "dual_feasible_exactly": true,
+          "dual_half_squared_lower_nonnegative_exact": "176861616065858365687833690391055080/244922243081725301054739230306623849",
+          "dual_half_squared_lower_raw_exact": "176861616065858365687833690391055080/244922243081725301054739230306623849",
+          "dual_linear_separation_numerator_exact": "353723232131716731375667380782110160/244922243081725301054739230306623849",
+          "dual_norm_squared_exact": "353723232131716731375667380782110160/244922243081725301054739230306623849",
+          "dual_nuisance_orthogonality_exact": [
+            "0/1"
+          ],
+          "dual_precision_representer_exact": [
+            "382365224/657239921",
+            "-791811284/752991683"
+          ],
+          "exact_optimum_certified": true,
+          "finite_support_slack_exact": "0/1",
+          "gap_identity_verified_exactly": true,
+          "norm_dual_distance_squared_lower_exact": "353723232131716731375667380782110160/244922243081725301054739230306623849",
+          "positive_separation_certified": true,
+          "primal_dual_gap_upper_exact": "0/1",
+          "primal_feasible_exactly": true,
+          "primal_half_squared_upper_exact": "176861616065858365687833690391055080/244922243081725301054739230306623849",
+          "primal_nuisance_point_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "primal_residual_exact": [
+            "382365224/657239921",
+            "-791811284/752991683"
+          ],
+          "primal_zonotope_point_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "residual_dual_mismatch_half_squared_exact": "0/1",
+          "squared_dual_gap_closes_exactly": true
+        },
+        "finite_zonotope_support_certificate": {
+          "attainment_verified_exactly": true,
+          "direction_generator_pairings_exact": [
+            "0/1"
+          ],
+          "exposed_point_exact": [
+            "0/1",
+            "0/1"
+          ],
+          "finite_support_exact": "0/1",
+          "maximizing_coefficients_exact": [
+            "0/1"
+          ]
+        },
+        "independent_verification": {
+          "distance_squared_lower_exact": "353723232131716731375667380782110160/244922243081725301054739230306623849",
+          "distance_squared_upper_exact": "353723232131716731375667380782110160/244922243081725301054739230306623849",
+          "method": "independent exact-rational reconstruction of support, feasibility, bounds, and gap",
+          "passed": true
+        },
+        "interpretation": "The distance is from the fixed query response plus the declared additive nuisance span to the fixed-response structured nuisance zonoid in the norm induced by the declared noise precision. Equal norm-bounded noise balls remain disjoint whenever their squared radius is strictly below the certified critical-radius square.",
+        "name": "clock-orthogonal output displacement survives",
+        "problem": {
+          "coefficient_radii_exact": [
+            "0/1"
+          ],
+          "finite_generator_count": 1,
+          "finite_generators_by_rows_exact": [
+            [
+              "0/1"
+            ],
+            [
+              "0/1"
+            ]
+          ],
+          "nuisance_basis_by_rows_exact": [
+            [
+              "791811284/752991683"
+            ],
+            [
+              "382365224/657239921"
+            ]
+          ],
+          "nuisance_subspace_dimension": 1,
+          "observation_dimension": 2,
+          "observation_noise_precision_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ],
+          "query_response_exact": [
+            "382365224/657239921",
+            "-791811284/752991683"
+          ]
+        },
+        "schema_version": "oig-structured-additive-nuisance-v1",
+        "scope_boundary": "This certificate preserves correlations induced by shared nuisance coefficients. It assumes the query response, generator matrix, nuisance basis, and noise norm are fixed exactly. It does not cover uncertainty in any response matrix, generator direction, calibration, or metric. Nonzero infinite-tail bounds are externally supplied analytic premises whose use, but not truth, is checked by this finite JSON verifier.",
+        "status": "exact rational structured-additive-nuisance certificate",
+        "tail_remainder": {
+          "declared_directional_support_upper_exact": null,
+          "declared_norm_remainder_upper_exact": null,
+          "effective_bound_method": "finite zonotope; no omitted tail premise",
+          "effective_directional_support_upper_exact": "0/1",
+          "external_analytic_assumption": false,
+          "l1_derived_directional_support_upper_exact": null,
+          "model": "countably generated absolutely summable zonoid tail",
+          "provenance": "finite zonotope; no omitted tail",
+          "required_meaning": "when present, the norm premise bounds sum d_k||v_k||_2; when present, the directional premise bounds omitted support in the serialized dual direction"
+        },
+        "witnesses": {
+          "dual_direction_exact": [
+            "382365224/657239921",
+            "-791811284/752991683"
+          ],
+          "primal_nuisance_coefficients_exact": [
+            "0/1"
+          ],
+          "primal_zonotope_coefficients_exact": [
+            "0/1"
+          ]
+        }
+      }
+    }
+  },
+  "evidence_tier": "tier_1_numerical_not_outward_validated",
+  "independent_verification": {
+    "current_two_scalar_protocols_full_nuisance_floor_positive": false,
+    "method": "strict reconstruction of analytic serialized local-column formulas, refinement gates, rational declarations, exact rank/confounding algebra, and all exact child certificates",
+    "ode_or_variational_system_replayed": false,
+    "outward_ode_nuisance_validation_verified": false,
+    "passed": true
+  },
+  "integration": {
+    "coarse": {
+      "atol": 1e-12,
+      "max_step_in_tau": 0.01,
+      "method": "DOP853 joint state/initial-state-tangent integration",
+      "rtol": 1e-10,
+      "sampled_scaled_energy_drift_tolerance": 1e-09
+    },
+    "fine": {
+      "atol": 1e-14,
+      "max_step_in_tau": 0.005,
+      "method": "DOP853 joint state/initial-state-tangent integration",
+      "rtol": 1e-12,
+      "sampled_scaled_energy_drift_tolerance": 1e-09
+    },
+    "gates": {
+      "nuisance_column_relative": 1e-08,
+      "rationalization_absolute": 1e-08,
+      "state_relative": 1e-09,
+      "tangent_relative": 1e-08
+    },
+    "parameters": {
+      "g": 1.0,
+      "l1": 1.0,
+      "l2": 1.0,
+      "m1": 1.0,
+      "m2": 1.0
+    },
+    "rationalization_max_denominator": 1000000000,
+    "refinement_norms": {
+      "nuisance_column_relative": "||n_c-n_f||_2/max(1,||n_f||_2)",
+      "state_relative": "||z_c-z_f||_2/max(1,||z_f||_2)",
+      "tangent_relative": "||Phi_c-Phi_f||_F/max(1,||Phi_f||_F)"
+    }
+  },
+  "outward_ode_nuisance_validation_claimed": false,
+  "proof_boundary": "The already established pointwise transfer concerns the two physical-source response boxes at u=v=0. The new clock, gain, and preparation columns here are evaluated by floating variational integration and are not outwardly enclosed. Exact child certificates therefore apply only to the explicitly declared rational finite linear model; they do not prove that the nonlinear ODE nuisance response equals, or lies near, those declarations.",
+  "protocols": [
+    {
+      "analytic_local_columns": {
+        "per_launch_initial_angle_preparation": "p_i=e_sensor^T Phi_i(tau_i) J_theta, J_theta=[e_theta1,e_theta2]",
+        "shared_clock_log_dilation": "c_i=tau_i * d y_i/d tau",
+        "shared_common_log_gain": "a_i=y_i for y_measured=exp(kappa)*y_i"
+      },
+      "budget_share_exact": "4589/10000",
+      "coarse": {
+        "accepted_step_count": 100,
+        "clock_log_dilation_column_entry": 1.0515538243999436,
+        "common_log_gain_column_entry": 0.09604744304902228,
+        "initial_angle_preparation_row": [
+          -0.22071233581493507,
+          0.9617970350197889
+        ],
+        "max_scaled_energy_drift": 2.9605947323337506e-16,
+        "nfev": 1502,
+        "sensor_output": 0.09604744304902228,
+        "terminal_initial_state_tangent": [
+          [
+            0.8680681213582828,
+            -0.13308691561476463,
+            1.0589567244687763,
+            -0.17208320611033698
+          ],
+          [
+            -0.22071233581493507,
+            0.9617970350197889,
+            -0.360555254974285,
+            1.069182254867742
+          ],
+          [
+            -0.6043380906418482,
+            0.05358027891721148,
+            0.9303672257664849,
+            -0.25962180694648024
+          ],
+          [
+            0.19357657701452619,
+            -0.5278407922171849,
+            -0.5645926042678254,
+            0.8837423996483338
+          ]
+        ],
+        "terminal_rhs_dz_dtau": [
+          -1.029104685801025,
+          1.0515538243999436,
+          -0.9793737043832088,
+          1.0981739883535637
+        ],
+        "terminal_state": [
+          0.32487193806652953,
+          0.09604744304902228,
+          -1.029104685801025,
+          1.0515538243999436
+        ]
+      },
+      "cost_exact": "1/1",
+      "declared_rational_point_columns": {
+        "initial_angle_preparation_row_exact": [
+          "-201396415/912483728",
+          "925377087/962133437"
+        ],
+        "rationalization_absolute_errors": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "shared_clock_log_dilation_exact": "791811284/752991683",
+        "shared_common_log_gain_exact": "90824626/945622529",
+        "status": "conditional point declaration; not an outward enclosure"
+      },
+      "fine": {
+        "accepted_step_count": 200,
+        "clock_log_dilation_column_entry": 1.0515538243999436,
+        "common_log_gain_column_entry": 0.09604744304902237,
+        "initial_angle_preparation_row": [
+          -0.2207123358149352,
+          0.9617970350197901
+        ],
+        "max_scaled_energy_drift": 4.440892098500626e-16,
+        "nfev": 3002,
+        "sensor_output": 0.09604744304902237,
+        "terminal_initial_state_tangent": [
+          [
+            0.8680681213582827,
+            -0.13308691561476474,
+            1.0589567244687759,
+            -0.1720832061103371
+          ],
+          [
+            -0.2207123358149352,
+            0.9617970350197901,
+            -0.36055525497428503,
+            1.0691822548677428
+          ],
+          [
+            -0.6043380906418477,
+            0.05358027891721113,
+            0.9303672257664876,
+            -0.25962180694648096
+          ],
+          [
+            0.19357657701452555,
+            -0.5278407922171847,
+            -0.5645926042678265,
+            0.8837423996483351
+          ]
+        ],
+        "terminal_rhs_dz_dtau": [
+          -1.0291046858010247,
+          1.0515538243999436,
+          -0.9793737043832094,
+          1.0981739883535642
+        ],
+        "terminal_state": [
+          0.32487193806652975,
+          0.09604744304902237,
+          -1.0291046858010247,
+          1.0515538243999436
+        ]
+      },
+      "launch_exact": [
+        "4/5",
+        "-7/20",
+        "0/1",
+        "0/1"
+      ],
+      "name": "launch-A / theta-2 / tau-1",
+      "observation_time_tau_exact": "1/1",
+      "physical_source_response_centre_exact": [
+        "265/3136",
+        "-4041/8894"
+      ],
+      "refinement_discrepancies": {
+        "nuisance_column_relative": 8.523918437567232e-16,
+        "state_relative": 3.334417152876837e-16,
+        "tangent_relative": 1.4052938416081303e-15
+      },
+      "sensor": "theta_2",
+      "tier1_controls_passed": true
+    },
+    {
+      "analytic_local_columns": {
+        "per_launch_initial_angle_preparation": "p_i=e_sensor^T Phi_i(tau_i) J_theta, J_theta=[e_theta1,e_theta2]",
+        "shared_clock_log_dilation": "c_i=tau_i * d y_i/d tau",
+        "shared_common_log_gain": "a_i=y_i for y_measured=exp(kappa)*y_i"
+      },
+      "budget_share_exact": "5411/10000",
+      "coarse": {
+        "accepted_step_count": 125,
+        "clock_log_dilation_column_entry": 0.5817741920153442,
+        "common_log_gain_column_entry": 1.1179269426191207,
+        "initial_angle_preparation_row": [
+          -0.9763354241049119,
+          0.200658647863439
+        ],
+        "max_scaled_energy_drift": 2.9605947323337506e-16,
+        "nfev": 1877,
+        "sensor_output": 1.1179269426191207,
+        "terminal_initial_state_tangent": [
+          [
+            0.7457157092552141,
+            -0.31103054997974755,
+            1.2833650347639523,
+            -0.43112535161545756
+          ],
+          [
+            -0.2880602414886404,
+            1.09302557653461,
+            -0.5617839136517663,
+            1.4654013992435753
+          ],
+          [
+            -0.9763354241049119,
+            0.200658647863439,
+            0.4288891933155942,
+            -0.2553280232573402
+          ],
+          [
+            0.524509038377025,
+            -0.6959101418068245,
+            -0.21959535414929365,
+            0.659273433815012
+          ]
+        ],
+        "terminal_rhs_dz_dtau": [
+          1.1179269426191207,
+          -1.5430501827305105,
+          0.4654193536122753,
+          -0.6745231776508733
+        ],
+        "terminal_state": [
+          -0.011759710472838678,
+          0.08757250244486336,
+          1.1179269426191207,
+          -1.5430501827305105
+        ]
+      },
+      "cost_exact": "5/4",
+      "declared_rational_point_columns": {
+        "initial_angle_preparation_row_exact": [
+          "-453310244/464297651",
+          "188485511/939334103"
+        ],
+        "rationalization_absolute_errors": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "shared_clock_log_dilation_exact": "382365224/657239921",
+        "shared_common_log_gain_exact": "1004219339/898287089",
+        "status": "conditional point declaration; not an outward enclosure"
+      },
+      "fine": {
+        "accepted_step_count": 251,
+        "clock_log_dilation_column_entry": 0.5817741920153386,
+        "common_log_gain_column_entry": 1.1179269426191207,
+        "initial_angle_preparation_row": [
+          -0.9763354241049133,
+          0.2006586478634429
+        ],
+        "max_scaled_energy_drift": 2.9605947323337506e-16,
+        "nfev": 3767,
+        "sensor_output": 1.1179269426191207,
+        "terminal_initial_state_tangent": [
+          [
+            0.7457157092552129,
+            -0.3110305499797473,
+            1.283365034763952,
+            -0.43112535161545723
+          ],
+          [
+            -0.28806024148864,
+            1.0930255765346115,
+            -0.5617839136517659,
+            1.4654013992435757
+          ],
+          [
+            -0.9763354241049133,
+            0.2006586478634429,
+            0.4288891933155907,
+            -0.25532802325733556
+          ],
+          [
+            0.5245090383770272,
+            -0.69591014180683,
+            -0.21959535414928757,
+            0.6592734338150075
+          ]
+        ],
+        "terminal_rhs_dz_dtau": [
+          1.1179269426191207,
+          -1.5430501827305119,
+          0.4654193536122709,
+          -0.6745231776508672
+        ],
+        "terminal_state": [
+          -0.011759710472838239,
+          0.08757250244486285,
+          1.1179269426191207,
+          -1.5430501827305119
+        ]
+      },
+      "launch_exact": [
+        "-3/5",
+        "9/10",
+        "0/1",
+        "0/1"
+      ],
+      "name": "launch-B / scaled-omega-1 / tau-5/4",
+      "observation_time_tau_exact": "5/4",
+      "physical_source_response_centre_exact": [
+        "2357/5025",
+        "13/3140"
+      ],
+      "refinement_discrepancies": {
+        "nuisance_column_relative": 4.297890138558726e-15,
+        "state_relative": 7.830787268968204e-16,
+        "tangent_relative": 4.1168620119564374e-15
+      },
+      "sensor": "scaled_omega_1",
+      "tier1_controls_passed": true
+    }
+  ],
+  "schema_version": "oig-double-pendulum-structured-physical-nuisance-v1",
+  "source_model": {
+    "calibration_convention": "kappa is a small log multiplicative gain; a common-gain model is an optimistic control, while distinct theta2 and nu1 sensors receive independent gain parameters in the sensor-specific control",
+    "clock_convention": "epsilon is a shared scheduling dilation: actual terminal tau is exp(epsilon) times declared tau; dimensionless sensor units are held fixed",
+    "common_mass_scale_blindness": "m1,m2 -> c*m1,c*m2 leaves the normalized vector field unchanged and is excluded before this nuisance analysis",
+    "coordinates": [
+      "u=log(m2/m1)",
+      "v=log(l2/l1)"
+    ],
+    "dimensionless_convention": "m1=l1=g=1, m2=exp(u), l2=exp(v), tau=t*sqrt(g/l1), nu=dtheta/dtau",
+    "preparation_convention": "each launch independently refits errors in initial theta1 and theta2; initial dimensionless velocities remain fixed at zero"
+  },
+  "status": "minimal structured-physical-nuisance extension",
+  "theorem": {
+    "minimum_dimension_consequence": "With d=2 physical sources and r independent unrestricted shared nuisance directions, m scalar outputs require m-r>=2 for a possible positive full-source floor. Independently refitted local nuisance must first be removed launch by launch; one scalar output cannot survive a single nonzero local nuisance derivative.",
+    "present_two_scalar_protocols_sufficient_for_full_source_with_nuisance": false,
+    "statement": "For an invertible two-by-two physical response H, profiling any nonzero shared scalar nuisance b leaves rank one and hence zero full two-source information floor; the exactly lost source direction is H^{-1}b and the surviving query row space is {w^T H : w^T b=0}. Two independent shared nuisance columns span the complete two-output space and destroy every nonzero query. Independently refitted preparation errors also destroy every query whenever each scalar protocol has one nonzero local preparation derivative, because their block-local ranges span both output coordinates."
+  }
+}

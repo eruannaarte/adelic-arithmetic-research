@@ -102,6 +102,42 @@ tubes, and uncertain nominal null directions. A pinned integration report
 composes the independently verified layers while keeping continuum enclosure,
 tail, and model-exhaustiveness assumptions explicit.
 
+The Double-Pendulum Operational Atlas is the first nonlinear benchmark built
+on that engine. Independent conservative launches are indexed by a toroidal
+initial-angle grid; a seam-free finite-time observation map is examined with
+state and tangent refinement, resolution/half-cell-shift persistence, energy
+stratification, analytic dimensionless parameter sensitivities, and explicit
+unresolved masks. A seven-candidate launch/sensor/time library produces an
+exact positive response-box floor. Outward Arb Picard--Taylor enclosures now
+prove box membership for the two nonzero protocols and compose to a declared-
+model floor above \(0.0783731\). Selection and efficiency over all seven
+candidates, parameter-neighbourhood uniformity, empirical adequacy, and
+hardware calibration remain explicitly unproved. A structured-nuisance audit
+then proves that the current two scalar readings lose their full two-source
+floor under even one unrestricted shared clock or gain coefficient. Grouping
+the existing readings by launch supplies the constructive remedy: launch A is
+already a minimal three-output witness, and the selected A+B batch has an exact
+clock-profiled point floor above \(0.0180269\). Outward Picard--Taylor
+enclosures of all five A+B parameter rows and the shared-clock column now
+transfer that same strict bound to the declared nonlinear model. This is a
+narrow Tier-3 fixed-mixture theorem with exact preparation; preparation error,
+finite clock amplitude, grid optimality, and hardware/model adequacy remain
+unproved. See
+[DOUBLE_PENDULUM_OPERATIONAL_ATLAS.md](DOUBLE_PENDULUM_OPERATIONAL_ATLAS.md).
+For the proof-aware interactive companion, see the
+[Double-Pendulum OIG Ensemble Calibration
+Chamber](website/double-pendulum-oig-wind-tunnel/README.md). It preserves the
+single held-out launch at \(N=1\), adds seeded interactive ensembles through
+\(N=50\) and \(T=30\), and provides a cancellable background laboratory through
+\(N=1000\). The chamber freezes each declaration before outcomes, separates
+bounded from sampled uncertainty and structured perturbation laws, reports
+finite-sample survival, spread, persistent exits, and projected-output
+re-entry beside a declared full-state separation metric, and keeps every
+ensemble result numerical rather than attaching the fixed Tier-3 theorem to
+arbitrary sliders. A half-scale response/gain refinement gate makes the central
+horizon lesson executable: longer runs that destroy numerical response
+convergence remain Live/unresolved instead of being promoted to Refined.
+
 For a focused clean-room installation and proof-artifact map, see the
 [Operational Information Geometry protocol-engine reproducibility
 manifest](OIG_PROTOCOL_ENGINE_REPRODUCIBILITY_MANIFEST.md) and install
@@ -516,6 +552,53 @@ is [OIG_ARITHMETIC_ATLAS_PROTOCOL_INTEGRATION.md](OIG_ARITHMETIC_ATLAS_PROTOCOL_
 and its pinned self-verifying report is
 [`certificates/oig_atlas_protocol_integration.json`](certificates/oig_atlas_protocol_integration.json).
 
+Run the nonlinear Double-Pendulum Operational Atlas benchmark:
+
+```sh
+python -m unittest -v \
+  test_double_pendulum_dynamics.py \
+  test_double_pendulum_variational.py \
+  test_oig_double_pendulum_atlas.py \
+  test_oig_double_pendulum_lab.py \
+  test_oig_double_pendulum_persistence.py \
+  test_oig_double_pendulum_variational_atlas.py \
+  test_oig_double_pendulum_parameter_sensitivity.py \
+  test_oig_double_pendulum_validated_transfer.py \
+  test_oig_double_pendulum_validated_transfer_audit.py \
+  test_oig_double_pendulum_structured_nuisance.py \
+  test_oig_double_pendulum_grouped_protocol.py \
+  test_oig_double_pendulum_grouped_validated_transfer.py \
+  test_oig_double_pendulum_grouped_validated_transfer_audit.py \
+  test_oig_double_pendulum_protocol.py \
+  test_oig_double_pendulum_protocol_artifact.py \
+  test_oig_double_pendulum_render.py \
+  test_double_pendulum_artifacts.py
+python oig_double_pendulum_lab.py \
+  --verify artifacts/double_pendulum_operational_atlas_stage1.json
+python oig_double_pendulum_persistence.py \
+  --verify artifacts/double_pendulum_persistence_13x13_t4_tier1.json
+python oig_double_pendulum_variational_atlas.py \
+  --verify artifacts/double_pendulum_variational_atlas_13x13_t4_tier1.json
+python oig_double_pendulum_parameter_sensitivity.py \
+  --verify artifacts/double_pendulum_parameter_sensitivity_tier1.json
+python oig_double_pendulum_validated_transfer.py \
+  --verify-physical artifacts/double_pendulum_physical_positive_floor.json
+python oig_double_pendulum_structured_nuisance.py \
+  --verify artifacts/double_pendulum_structured_physical_nuisance.json
+python oig_double_pendulum_grouped_protocol.py \
+  --verify artifacts/double_pendulum_grouped_protocol_tier1.json
+python oig_double_pendulum_grouped_validated_transfer.py \
+  --verify artifacts/double_pendulum_grouped_physical_clock_floor.json
+python oig_double_pendulum_protocol.py \
+  --verify artifacts/double_pendulum_protocol_design_conditional.json
+```
+
+See [DOUBLE_PENDULUM_OPERATIONAL_ATLAS.md](DOUBLE_PENDULUM_OPERATIONAL_ATLAS.md)
+for the full research contract. The numerical atlases are Tier 1. The
+seven-candidate selection remains conditional, while the separate composed
+artifacts prove both the fixed two-protocol no-nuisance floor and the selected
+five-output shared-clock-profiled floor for the declared nonlinear model.
+
 Run the outward-rounded finite-grid E-design certificate separately:
 
 ```sh
@@ -819,6 +902,72 @@ For the public synthesis of the complete progression, see
   — response-box transfer theorem and tamper controls
 - `oig_iv_certificate.md` — outward-rounded finite-grid E-design certificate
 - `oig_v_scaling_report.md` — independent continuum and propagation audit
+
+### Nonlinear OIG benchmark — Double-Pendulum Operational Atlas
+
+- [DOUBLE_PENDULUM_OPERATIONAL_ATLAS.md](DOUBLE_PENDULUM_OPERATIONAL_ATLAS.md)
+  — canonical research contract, current results, claim tiers, and next
+  preparation-aware extension target
+- [DOUBLE_PENDULUM_VARIATIONAL_TIER1.md](DOUBLE_PENDULUM_VARIATIONAL_TIER1.md)
+  — analytic state/tangent system and local-response boundary
+- [DOUBLE_PENDULUM_VARIATIONAL_ATLAS_TIER1.md](DOUBLE_PENDULUM_VARIATIONAL_ATLAS_TIER1.md)
+  — two-angle RMS-matched gain field, refinement gates, and unresolved cells
+- [DOUBLE_PENDULUM_PERSISTENCE_TIER1.md](DOUBLE_PENDULUM_PERSISTENCE_TIER1.md)
+  — periodic common-grid scalar persistence, threshold filtration, cadence,
+  horizon, and energy ledgers
+- [DOUBLE_PENDULUM_PARAMETER_SENSITIVITY_TIER1.md](DOUBLE_PENDULUM_PARAMETER_SENSITIVITY_TIER1.md)
+  — analytic log-ratio sensitivity equations and similarity controls that
+  precede the outward proof
+- [DOUBLE_PENDULUM_VALIDATED_TRANSFER_TIER2.md](DOUBLE_PENDULUM_VALIDATED_TRANSFER_TIER2.md)
+  — outward Picard--Taylor response enclosures and exact positive-floor
+  composition for the two active protocols
+- [DOUBLE_PENDULUM_VALIDATED_TRANSFER_AUDIT.md](DOUBLE_PENDULUM_VALIDATED_TRANSFER_AUDIT.md)
+  — independent defect, Picard-tube, partition, membership, and scope attacks
+- [DOUBLE_PENDULUM_STRUCTURED_PHYSICAL_NUISANCE.md](DOUBLE_PENDULUM_STRUCTURED_PHYSICAL_NUISANCE.md)
+  — exact rank obstruction for shared clock/gain and per-launch preparation
+- [DOUBLE_PENDULUM_GROUPED_PROTOCOL_TIER1.md](DOUBLE_PENDULUM_GROUPED_PROTOCOL_TIER1.md)
+  — constructive grouped multi-output recovery after shared-clock profiling
+- [DOUBLE_PENDULUM_GROUPED_NUISANCE_TRANSFER_THEOREM.md](DOUBLE_PENDULUM_GROUPED_NUISANCE_TRANSFER_THEOREM.md)
+  — invariant robust-transfer and division-free augmented-Gram theorems
+- [DOUBLE_PENDULUM_GROUPED_VALIDATED_TRANSFER_TIER3.md](DOUBLE_PENDULUM_GROUPED_VALIDATED_TRANSFER_TIER3.md)
+  — outward five-row/shared-clock transfer and exact profiled physical floor
+- [DOUBLE_PENDULUM_GROUPED_VALIDATED_TRANSFER_AUDIT.md](DOUBLE_PENDULUM_GROUPED_VALIDATED_TRANSFER_AUDIT.md)
+  — independent interval, alternate-partition, incidence, and false-floor audit
+- `double_pendulum_dynamics.py` and `double_pendulum_variational.py` — declared
+  nonlinear mechanics, energy audit, analytic Jacobian, and tangent flow
+- `oig_double_pendulum_lab.py`, `oig_double_pendulum_persistence.py`, and
+  `oig_double_pendulum_variational_atlas.py` — state-refined portrait,
+  persistence laboratory, and two-angle pullback-information field
+- `oig_double_pendulum_protocol.py` — parameter-response discovery and sealed
+  exact design conditional on rational response boxes
+- `oig_double_pendulum_parameter_sensitivity.py` — active-protocol analytic
+  sensitivities and a strict Tier-1 recomputing verifier
+- `oig_double_pendulum_validated_transfer.py` — outward state/sensitivity
+  integration and the strict composed-certificate verifier
+- `oig_double_pendulum_structured_nuisance.py` — Tier-1 physical-nuisance
+  columns and exact conditional query/confounding controls
+- `oig_double_pendulum_grouped_protocol.py` — grouped launch batches,
+  cost-weighted finite-share search, and exact nuisance-profiled query children
+- `oig_double_pendulum_grouped_validated_transfer.py` — outward five-row and
+  clock-column enclosures plus exact rational interval nuisance profiling
+- `artifacts/double_pendulum_operational_atlas_stage1.json` — provisional
+  all-cell state-refined portrait
+- `artifacts/double_pendulum_persistence_13x13_t4_tier1.json` — atlas-matched
+  persistence family
+- `artifacts/double_pendulum_variational_atlas_13x13_t4_tier1.json` —
+  two-angle variational field with explicit unresolved mask
+- `artifacts/double_pendulum_protocol_design_conditional.json` — exact
+  finite-library design conditional on declared response boxes
+- `artifacts/double_pendulum_parameter_sensitivity_tier1.json` — recomputed
+  analytic responses with outward-validation flags kept false
+- `artifacts/double_pendulum_physical_positive_floor.json` — recomputed
+  outward model transfer plus exact fixed-mixture OIG child
+- `artifacts/double_pendulum_structured_physical_nuisance.json` — strict
+  nuisance-rank obstruction and surviving-query report
+- `artifacts/double_pendulum_grouped_protocol_tier1.json` — recomputed grouped
+  library and exact positive clock-profiled point-model certificates
+- `artifacts/double_pendulum_grouped_physical_clock_floor.json` — strict
+  Tier-3 fixed-mixture certificate with floor above \(0.0180269\)
 
 `RESEARCH_ROADMAP.md` records the overall sequence and the boundary between
 proved results, computation, conjecture, and interpretation.

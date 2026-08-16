@@ -1,0 +1,1609 @@
+{
+  "candidate_response_boxes": [
+    {
+      "box_status": "exact rational declaration; external ODE membership unproved",
+      "candidate": {
+        "cost_exact": "1/1",
+        "launch": {
+          "state_convention": [
+            "theta1",
+            "theta2",
+            "omega1",
+            "omega2"
+          ],
+          "state_exact": [
+            "4/5",
+            "-7/20",
+            "0/1",
+            "0/1"
+          ]
+        },
+        "name": "launch-A / theta-1 / tau-1",
+        "noise_precision_exact": "1/1",
+        "observation_time": {
+          "dimensionless_tau_exact": "1/1",
+          "physical_time_rule": "t=tau*sqrt(l1/g)"
+        },
+        "sensor": {
+          "dimensionless_output_definition": "unwrapped absolute theta_1 (dimensionless radians)",
+          "name": "theta_1"
+        }
+      },
+      "response_centre_exact": [
+        [
+          "-311/2971",
+          "50/1599"
+        ]
+      ],
+      "response_radius_exact": [
+        [
+          "101/100000",
+          "101/100000"
+        ]
+      ],
+      "source_coordinates": [
+        "log_mass_ratio=log(m2/m1)",
+        "log_length_ratio=log(l2/l1)"
+      ]
+    },
+    {
+      "box_status": "exact rational declaration; external ODE membership unproved",
+      "candidate": {
+        "cost_exact": "1/1",
+        "launch": {
+          "state_convention": [
+            "theta1",
+            "theta2",
+            "omega1",
+            "omega2"
+          ],
+          "state_exact": [
+            "4/5",
+            "-7/20",
+            "0/1",
+            "0/1"
+          ]
+        },
+        "name": "launch-A / theta-2 / tau-1",
+        "noise_precision_exact": "1/1",
+        "observation_time": {
+          "dimensionless_tau_exact": "1/1",
+          "physical_time_rule": "t=tau*sqrt(l1/g)"
+        },
+        "sensor": {
+          "dimensionless_output_definition": "unwrapped absolute theta_2 (dimensionless radians)",
+          "name": "theta_2"
+        }
+      },
+      "response_centre_exact": [
+        [
+          "265/3136",
+          "-4041/8894"
+        ]
+      ],
+      "response_radius_exact": [
+        [
+          "101/100000",
+          "101/100000"
+        ]
+      ],
+      "source_coordinates": [
+        "log_mass_ratio=log(m2/m1)",
+        "log_length_ratio=log(l2/l1)"
+      ]
+    },
+    {
+      "box_status": "exact rational declaration; external ODE membership unproved",
+      "candidate": {
+        "cost_exact": "3/2",
+        "launch": {
+          "state_convention": [
+            "theta1",
+            "theta2",
+            "omega1",
+            "omega2"
+          ],
+          "state_exact": [
+            "4/5",
+            "-7/20",
+            "0/1",
+            "0/1"
+          ]
+        },
+        "name": "launch-A / scaled-omega-2 / tau-3/2",
+        "noise_precision_exact": "1/1",
+        "observation_time": {
+          "dimensionless_tau_exact": "3/2",
+          "physical_time_rule": "t=tau*sqrt(l1/g)"
+        },
+        "sensor": {
+          "dimensionless_output_definition": "sqrt(l1/g) times omega_2",
+          "name": "scaled_omega_2"
+        }
+      },
+      "response_centre_exact": [
+        [
+          "-201/788",
+          "1017/4331"
+        ]
+      ],
+      "response_radius_exact": [
+        [
+          "101/100000",
+          "101/100000"
+        ]
+      ],
+      "source_coordinates": [
+        "log_mass_ratio=log(m2/m1)",
+        "log_length_ratio=log(l2/l1)"
+      ]
+    },
+    {
+      "box_status": "exact rational declaration; external ODE membership unproved",
+      "candidate": {
+        "cost_exact": "1/1",
+        "launch": {
+          "state_convention": [
+            "theta1",
+            "theta2",
+            "omega1",
+            "omega2"
+          ],
+          "state_exact": [
+            "-3/5",
+            "9/10",
+            "0/1",
+            "0/1"
+          ]
+        },
+        "name": "launch-B / theta-1 / tau-3/4",
+        "noise_precision_exact": "1/1",
+        "observation_time": {
+          "dimensionless_tau_exact": "3/4",
+          "physical_time_rule": "t=tau*sqrt(l1/g)"
+        },
+        "sensor": {
+          "dimensionless_output_definition": "unwrapped absolute theta_1 (dimensionless radians)",
+          "name": "theta_1"
+        }
+      },
+      "response_centre_exact": [
+        [
+          "11/749",
+          "-132/8485"
+        ]
+      ],
+      "response_radius_exact": [
+        [
+          "101/100000",
+          "101/100000"
+        ]
+      ],
+      "source_coordinates": [
+        "log_mass_ratio=log(m2/m1)",
+        "log_length_ratio=log(l2/l1)"
+      ]
+    },
+    {
+      "box_status": "exact rational declaration; external ODE membership unproved",
+      "candidate": {
+        "cost_exact": "5/4",
+        "launch": {
+          "state_convention": [
+            "theta1",
+            "theta2",
+            "omega1",
+            "omega2"
+          ],
+          "state_exact": [
+            "-3/5",
+            "9/10",
+            "0/1",
+            "0/1"
+          ]
+        },
+        "name": "launch-B / scaled-omega-1 / tau-5/4",
+        "noise_precision_exact": "1/1",
+        "observation_time": {
+          "dimensionless_tau_exact": "5/4",
+          "physical_time_rule": "t=tau*sqrt(l1/g)"
+        },
+        "sensor": {
+          "dimensionless_output_definition": "sqrt(l1/g) times omega_1",
+          "name": "scaled_omega_1"
+        }
+      },
+      "response_centre_exact": [
+        [
+          "2357/5025",
+          "13/3140"
+        ]
+      ],
+      "response_radius_exact": [
+        [
+          "101/100000",
+          "101/100000"
+        ]
+      ],
+      "source_coordinates": [
+        "log_mass_ratio=log(m2/m1)",
+        "log_length_ratio=log(l2/l1)"
+      ]
+    },
+    {
+      "box_status": "exact rational declaration; external ODE membership unproved",
+      "candidate": {
+        "cost_exact": "1/1",
+        "launch": {
+          "state_convention": [
+            "theta1",
+            "theta2",
+            "omega1",
+            "omega2"
+          ],
+          "state_exact": [
+            "6/5",
+            "2/5",
+            "0/1",
+            "0/1"
+          ]
+        },
+        "name": "launch-C / theta-2 / tau-1",
+        "noise_precision_exact": "1/1",
+        "observation_time": {
+          "dimensionless_tau_exact": "1/1",
+          "physical_time_rule": "t=tau*sqrt(l1/g)"
+        },
+        "sensor": {
+          "dimensionless_output_definition": "unwrapped absolute theta_2 (dimensionless radians)",
+          "name": "theta_2"
+        }
+      },
+      "response_centre_exact": [
+        [
+          "212/2617",
+          "-663/2675"
+        ]
+      ],
+      "response_radius_exact": [
+        [
+          "101/100000",
+          "101/100000"
+        ]
+      ],
+      "source_coordinates": [
+        "log_mass_ratio=log(m2/m1)",
+        "log_length_ratio=log(l2/l1)"
+      ]
+    },
+    {
+      "box_status": "exact rational declaration; external ODE membership unproved",
+      "candidate": {
+        "cost_exact": "3/2",
+        "launch": {
+          "state_convention": [
+            "theta1",
+            "theta2",
+            "omega1",
+            "omega2"
+          ],
+          "state_exact": [
+            "6/5",
+            "2/5",
+            "0/1",
+            "0/1"
+          ]
+        },
+        "name": "launch-C / scaled-omega-2 / tau-3/2",
+        "noise_precision_exact": "1/1",
+        "observation_time": {
+          "dimensionless_tau_exact": "3/2",
+          "physical_time_rule": "t=tau*sqrt(l1/g)"
+        },
+        "sensor": {
+          "dimensionless_output_definition": "sqrt(l1/g) times omega_2",
+          "name": "scaled_omega_2"
+        }
+      },
+      "response_centre_exact": [
+        [
+          "-1598/6081",
+          "3946/8373"
+        ]
+      ],
+      "response_radius_exact": [
+        [
+          "101/100000",
+          "101/100000"
+        ]
+      ],
+      "source_coordinates": [
+        "log_mass_ratio=log(m2/m1)",
+        "log_length_ratio=log(l2/l1)"
+      ]
+    }
+  ],
+  "common_mass_scale_blindness_control": {
+    "candidate_actions_exact": [
+      {
+        "name": "launch-A / theta-1 / tau-1",
+        "response_on_control_exact": [
+          "0/1"
+        ]
+      },
+      {
+        "name": "launch-A / theta-2 / tau-1",
+        "response_on_control_exact": [
+          "0/1"
+        ]
+      },
+      {
+        "name": "launch-A / scaled-omega-2 / tau-3/2",
+        "response_on_control_exact": [
+          "0/1"
+        ]
+      },
+      {
+        "name": "launch-B / theta-1 / tau-3/4",
+        "response_on_control_exact": [
+          "0/1"
+        ]
+      },
+      {
+        "name": "launch-B / scaled-omega-1 / tau-5/4",
+        "response_on_control_exact": [
+          "0/1"
+        ]
+      },
+      {
+        "name": "launch-C / theta-2 / tau-1",
+        "response_on_control_exact": [
+          "0/1"
+        ]
+      },
+      {
+        "name": "launch-C / scaled-omega-2 / tau-3/2",
+        "response_on_control_exact": [
+          "0/1"
+        ]
+      }
+    ],
+    "control_conclusion": "common mass scale is a declared blind direction and is excluded from the two-dimensional identifiable design quotient",
+    "declared_exact_response_column": "0/1",
+    "extended_source_control_vector_exact": [
+      "0/1",
+      "0/1",
+      "1/1"
+    ],
+    "omitted_coordinate": "log_common_mass_scale=log(c), m1,m2 -> c*m1,c*m2",
+    "structural_identity": "M -> c*M and f -> c*f, hence M^{-1}f is unchanged"
+  },
+  "conditional_claim": {
+    "double_pendulum_ode_membership_certified": false,
+    "exact_design_is_conditional_on_box_membership": true,
+    "response_boxes_are_declared_assumptions": true,
+    "tier1_discovery_promoted_to_enclosure": false
+  },
+  "exact_enclosed_design": {
+    "certificate": {
+      "budget_exactly_one": true,
+      "certified_efficiency_lower_exact": "756522130884465853615895779432349369/757286444490472008341328125000000000",
+      "certified_optimality_gap_upper_exact": "764313606006154725432345567650631/9496383846007969390900000000000000000",
+      "dual_metric_trace_exactly_one": true,
+      "dual_optimum_upper_exact": "9693266489478041706769/121553713228902008203520",
+      "dual_witness_exact": [
+        [
+          "4442489104/10000042505",
+          "4968839948/10000042505"
+        ],
+        [
+          "4968839948/10000042505",
+          "5557553401/10000042505"
+        ]
+      ],
+      "dual_witness_integer_factor": [
+        [
+          66652,
+          0
+        ],
+        [
+          74549,
+          0
+        ]
+      ],
+      "dual_witness_psd_by_exact_factorization": true,
+      "primal_generalized_floor_lower_exact": "7966423252809941/100000000000000000",
+      "primal_shift_positive_by_exact_ldl": true,
+      "rationalized_design_gram_exact": [
+        [
+          "1223207477578270001/12416358528000000000",
+          "-92298989294454241/5501091976800000000"
+        ],
+        [
+          "-92298989294454241/5501091976800000000",
+          "57727014750403739/609317395051250000"
+        ]
+      ]
+    },
+    "declared_source_metric": [
+      [
+        "1/1",
+        "0/1"
+      ],
+      [
+        "0/1",
+        "1/1"
+      ]
+    ],
+    "exact_blind_dimension": 0,
+    "independent_exact_verification": {
+      "dual_upper_exact": "9693266489478041706769/121553713228902008203520",
+      "method": "independent exact-rational reconstruction of quotient, design, primal, dual, noise, and integer realization",
+      "passed": true,
+      "primal_lower_exact": "7966423252809941/100000000000000000"
+    },
+    "noise_performance": {
+      "approximate_design_measure": {
+        "amplitude_exact": "1/1",
+        "certified_squared_separation_lower_exact": "7966423252809941/10000000000000000",
+        "continuous_budget_exposure_multiplier": 10,
+        "descriptive_exact_gaussian_error": 0.3276996276926949,
+        "formula": "Phi(-amplitude*sqrt(exposure_multiplier*floor)/2)",
+        "gaussian_error_rational_upper_exact": "40000000000000000/87966423252809941",
+        "gaussian_error_rational_upper_method": "Q(d/2)<=exp(-d^2/8)/2<=4/(8+d^2)",
+        "role": "certified consequence of the floor under the already-whitened unit-covariance Gaussian model"
+      },
+      "integer_realization": {
+        "amplitude_exact": "1/1",
+        "certified_squared_separation_lower_exact": "7966423252809941/2000000000000",
+        "continuous_budget_exposure_multiplier": 50000,
+        "descriptive_exact_gaussian_error": 7.337272277746456e-219,
+        "formula": "Phi(-amplitude*sqrt(exposure_multiplier*floor)/2)",
+        "gaussian_error_rational_upper_exact": "8000000000000/7982423252809941",
+        "gaussian_error_rational_upper_method": "Q(d/2)<=exp(-d^2/8)/2<=4/(8+d^2)",
+        "minimum_budget_multiplier_exactly_realizing_weights": 50000,
+        "protocol_counts": [
+          0,
+          22945,
+          0,
+          0,
+          21644,
+          0,
+          0
+        ],
+        "realized_budget_multiplier": 50000,
+        "requested_multiplier_was_exactly_realizable": false,
+        "role": "certified consequence of the floor under the already-whitened unit-covariance Gaussian model"
+      }
+    },
+    "observable_quotient_dimension": 2,
+    "overall_passed": true,
+    "proof_boundary": "Floating point is used only to discover weights and a dual vector. The exact certificate covers the declared rational finite protocols; binary floating matrix declarations are rejected. It does not by itself certify continuum-to-finite model transfer or the completeness of the candidate protocol list.",
+    "protocols": [
+      {
+        "budget_share_exact": "0/1",
+        "cost_exact": "1/1",
+        "name": "launch-A / theta-1 / tau-1",
+        "noise_precision_exact": [
+          [
+            "1/1"
+          ]
+        ],
+        "physical_weight_exact": "0/1",
+        "response_exact": [
+          [
+            "-311/2971",
+            "50/1599"
+          ]
+        ]
+      },
+      {
+        "budget_share_exact": "4589/10000",
+        "cost_exact": "1/1",
+        "name": "launch-A / theta-2 / tau-1",
+        "noise_precision_exact": [
+          [
+            "1/1"
+          ]
+        ],
+        "physical_weight_exact": "4589/10000",
+        "response_exact": [
+          [
+            "265/3136",
+            "-4041/8894"
+          ]
+        ]
+      },
+      {
+        "budget_share_exact": "0/1",
+        "cost_exact": "3/2",
+        "name": "launch-A / scaled-omega-2 / tau-3/2",
+        "noise_precision_exact": [
+          [
+            "1/1"
+          ]
+        ],
+        "physical_weight_exact": "0/1",
+        "response_exact": [
+          [
+            "-201/788",
+            "1017/4331"
+          ]
+        ]
+      },
+      {
+        "budget_share_exact": "0/1",
+        "cost_exact": "1/1",
+        "name": "launch-B / theta-1 / tau-3/4",
+        "noise_precision_exact": [
+          [
+            "1/1"
+          ]
+        ],
+        "physical_weight_exact": "0/1",
+        "response_exact": [
+          [
+            "11/749",
+            "-132/8485"
+          ]
+        ]
+      },
+      {
+        "budget_share_exact": "5411/10000",
+        "cost_exact": "5/4",
+        "name": "launch-B / scaled-omega-1 / tau-5/4",
+        "noise_precision_exact": [
+          [
+            "1/1"
+          ]
+        ],
+        "physical_weight_exact": "5411/12500",
+        "response_exact": [
+          [
+            "2357/5025",
+            "13/3140"
+          ]
+        ]
+      },
+      {
+        "budget_share_exact": "0/1",
+        "cost_exact": "1/1",
+        "name": "launch-C / theta-2 / tau-1",
+        "noise_precision_exact": [
+          [
+            "1/1"
+          ]
+        ],
+        "physical_weight_exact": "0/1",
+        "response_exact": [
+          [
+            "212/2617",
+            "-663/2675"
+          ]
+        ]
+      },
+      {
+        "budget_share_exact": "0/1",
+        "cost_exact": "3/2",
+        "name": "launch-C / scaled-omega-2 / tau-3/2",
+        "noise_precision_exact": [
+          [
+            "1/1"
+          ]
+        ],
+        "physical_weight_exact": "0/1",
+        "response_exact": [
+          [
+            "-1598/6081",
+            "3946/8373"
+          ]
+        ]
+      }
+    ],
+    "quotient_injection": [
+      [
+        "1/1",
+        "0/1"
+      ],
+      [
+        "0/1",
+        "1/1"
+      ]
+    ],
+    "quotient_protocol_information": [
+      [
+        [
+          "96721/8826841",
+          "-15550/4750629"
+        ],
+        [
+          "-15550/4750629",
+          "2500/2556801"
+        ]
+      ],
+      [
+        [
+          "70225/9834496",
+          "-1070865/27891584"
+        ],
+        [
+          "-1070865/27891584",
+          "16329681/79103236"
+        ]
+      ],
+      [
+        [
+          "40401/620944",
+          "-204417/3412828"
+        ],
+        [
+          "-204417/3412828",
+          "1034289/18757561"
+        ]
+      ],
+      [
+        [
+          "121/561001",
+          "-1452/6355265"
+        ],
+        [
+          "-1452/6355265",
+          "17424/71995225"
+        ]
+      ],
+      [
+        [
+          "5555449/25250625",
+          "30641/15778500"
+        ],
+        [
+          "30641/15778500",
+          "169/9859600"
+        ]
+      ],
+      [
+        [
+          "44944/6848689",
+          "-140556/7000475"
+        ],
+        [
+          "-140556/7000475",
+          "439569/7155625"
+        ]
+      ],
+      [
+        [
+          "2553604/36978561",
+          "-6305708/50916213"
+        ],
+        [
+          "-6305708/50916213",
+          "15570916/70107129"
+        ]
+      ]
+    ],
+    "quotient_row_coordinates": [
+      [
+        "1/1",
+        "0/1"
+      ],
+      [
+        "0/1",
+        "1/1"
+      ]
+    ],
+    "quotient_source_metric": [
+      [
+        "1/1",
+        "0/1"
+      ],
+      [
+        "0/1",
+        "1/1"
+      ]
+    ],
+    "response_box_independent_verification": {
+      "method": "independent exact-rational reconstruction of every response box and the aggregate robust floor",
+      "passed": true,
+      "robust_physical_floor_lower_exact": "195932905640268820789/2500000000000000000000"
+    },
+    "response_box_robustness": {
+      "aggregate_metric_relative_information_error_upper_exact": "3227675679979704211/2500000000000000000000",
+      "nominal_floor_lower_exact": "7966423252809941/100000000000000000",
+      "proof_boundary": "The robust floor holds for every response in the declared entrywise rational boxes. It does not certify that an external numerical model lies in those boxes.",
+      "protocol_response_box_certificates": [
+        {
+          "diagonal_quadratic_bound_exact": [
+            [
+              "8332567016429/23753145000000000",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1603434372143/7917715000000000"
+            ]
+          ],
+          "entrywise_information_bound_exact": [
+            [
+              "6312507171/29710000000000",
+              "6571435066429/47506290000000000"
+            ],
+            [
+              "6571435066429/47506290000000000",
+              "1026311399/15990000000000"
+            ]
+          ],
+          "exact_ldl_decision": true,
+          "meaning": "for every enclosed response, -delta*S <= A_true-A_centre <= delta*S",
+          "metric_relative_information_error_upper_exact": "877873180945663/2500000000000000000",
+          "noise_precision_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "response_centre_exact": [
+            [
+              "-311/2971",
+              "50/1599"
+            ]
+          ],
+          "response_radius_exact": [
+            [
+              "101/100000",
+              "101/100000"
+            ]
+          ],
+          "schema_version": "oig-response-box-form-bound-v1",
+          "source_metric_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "diagonal_quadratic_bound_exact": [
+            [
+              "3124631792137/4358060000000000",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "6380513873387/4358060000000000"
+            ]
+          ],
+          "entrywise_information_bound_exact": [
+            [
+              "42070237/245000000000",
+              "2376286416381/4358060000000000"
+            ],
+            [
+              "2376286416381/4358060000000000",
+              "40859463847/44470000000000"
+            ]
+          ],
+          "exact_ldl_decision": true,
+          "meaning": "for every enclosed response, -delta*S <= A_true-A_centre <= delta*S",
+          "metric_relative_information_error_upper_exact": "3663840325316991/2500000000000000000",
+          "noise_precision_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "response_centre_exact": [
+            [
+              "265/3136",
+              "-4041/8894"
+            ]
+          ],
+          "response_radius_exact": [
+            [
+              "101/100000",
+              "101/100000"
+            ]
+          ],
+          "schema_version": "oig-response-box-form-bound-v1",
+          "source_metric_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "diagonal_quadratic_bound_exact": [
+            [
+              "4317602177107/4266035000000000",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "4143036302107/4266035000000000"
+            ]
+          ],
+          "entrywise_information_bound_exact": [
+            [
+              "1017059597/1970000000000",
+              "4230319239607/8532070000000000"
+            ],
+            [
+              "4230319239607/8532070000000000",
+              "20587580531/43310000000000"
+            ]
+          ],
+          "exact_ldl_decision": true,
+          "meaning": "for every enclosed response, -delta*S <= A_true-A_centre <= delta*S",
+          "metric_relative_information_error_upper_exact": "2532749836372713/2500000000000000000",
+          "noise_precision_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "response_centre_exact": [
+            [
+              "-201/788",
+              "1017/4331"
+            ]
+          ],
+          "response_radius_exact": [
+            [
+              "101/100000",
+              "101/100000"
+            ]
+          ],
+          "schema_version": "oig-response-box-form-bound-v1",
+          "source_metric_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "diagonal_quadratic_bound_exact": [
+            [
+              "395627741653/6355265000000000",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "406804401653/6355265000000000"
+            ]
+          ],
+          "entrywise_information_bound_exact": [
+            [
+              "229840549/7490000000000",
+              "401216071653/12710530000000000"
+            ],
+            [
+              "401216071653/12710530000000000",
+              "550591097/16970000000000"
+            ]
+          ],
+          "exact_ldl_decision": true,
+          "meaning": "for every enclosed response, -delta*S <= A_true-A_centre <= delta*S",
+          "metric_relative_information_error_upper_exact": "1601865563649403/25000000000000000000",
+          "noise_precision_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "response_centre_exact": [
+            [
+              "11/749",
+              "-132/8485"
+            ]
+          ],
+          "response_radius_exact": [
+            [
+              "101/100000",
+              "101/100000"
+            ]
+          ],
+          "schema_version": "oig-response-box-form-bound-v1",
+          "source_metric_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "diagonal_quadratic_bound_exact": [
+            [
+              "75077129819/52595000000000",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "77051158457/157785000000000"
+            ]
+          ],
+          "entrywise_information_bound_exact": [
+            [
+              "1906506401/2010000000000",
+              "151141273957/315570000000000"
+            ],
+            [
+              "151141273957/315570000000000",
+              "14731557/1570000000000"
+            ]
+          ],
+          "exact_ldl_decision": true,
+          "meaning": "for every enclosed response, -delta*S <= A_true-A_centre <= delta*S",
+          "metric_relative_information_error_upper_exact": "2857770014215001/2000000000000000000",
+          "noise_precision_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "response_centre_exact": [
+            [
+              "2357/5025",
+              "13/3140"
+            ]
+          ],
+          "response_radius_exact": [
+            [
+              "101/100000",
+              "101/100000"
+            ]
+          ],
+          "schema_version": "oig-response-box-form-bound-v1",
+          "source_metric_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "diagonal_quadratic_bound_exact": [
+            [
+              "697003415819/1400095000000000",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1168863699819/1400095000000000"
+            ]
+          ],
+          "entrywise_information_bound_exact": [
+            [
+              "4309096017/26170000000000",
+              "932933557819/2800190000000000"
+            ],
+            [
+              "932933557819/2800190000000000",
+              "536795507/1070000000000"
+            ]
+          ],
+          "exact_ldl_decision": true,
+          "meaning": "for every enclosed response, -delta*S <= A_true-A_centre <= delta*S",
+          "metric_relative_information_error_upper_exact": "2089202096141367/2500000000000000000",
+          "noise_precision_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "response_centre_exact": [
+            [
+              "212/2617",
+              "-663/2675"
+            ]
+          ],
+          "response_radius_exact": [
+            [
+              "101/100000",
+              "101/100000"
+            ]
+          ],
+          "schema_version": "oig-response-box-form-bound-v1",
+          "source_metric_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "diagonal_quadratic_bound_exact": [
+            [
+              "108135041896271/84860355000000000",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "143874134296271/84860355000000000"
+            ]
+          ],
+          "entrywise_information_bound_exact": [
+            [
+              "32341632281/60810000000000",
+              "126004588096271/169720710000000000"
+            ],
+            [
+              "126004588096271/169720710000000000",
+              "79794612973/83730000000000"
+            ]
+          ],
+          "exact_ldl_decision": true,
+          "meaning": "for every enclosed response, -delta*S <= A_true-A_centre <= delta*S",
+          "metric_relative_information_error_upper_exact": "424279418907001/250000000000000000",
+          "noise_precision_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "response_centre_exact": [
+            [
+              "-1598/6081",
+              "3946/8373"
+            ]
+          ],
+          "response_radius_exact": [
+            [
+              "101/100000",
+              "101/100000"
+            ]
+          ],
+          "schema_version": "oig-response-box-form-bound-v1",
+          "source_metric_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ]
+        }
+      ],
+      "robust_floor_is_positive": true,
+      "robust_noise_performance": {
+        "amplitude_exact": "1/1",
+        "continuous_exposure_gaussian_error_rational_upper_exact": "1000000000000000000000/2195932905640268820789",
+        "integer_realization_exposure": 50000,
+        "integer_realization_gaussian_error_rational_upper_exact": "200000000000000000/196332905640268820789"
+      },
+      "robust_physical_floor_lower_exact": "195932905640268820789/2500000000000000000000",
+      "schema_version": "oig-enclosed-protocol-design-v1"
+    },
+    "schema_version": "oig-protocol-design-engine-v1",
+    "source_dimension": 2,
+    "status": "exact quotient and exact rational primal/dual certificate"
+  },
+  "independent_verification": {
+    "candidate_count": 7,
+    "declared_box_adapter_verified": true,
+    "double_pendulum_ode_membership_verified": false,
+    "exact_enclosed_design_verified": true,
+    "method": "exact child verification and strict rational adapter reconstruction; no ODE solve or floating finite-difference acceptance",
+    "passed": true,
+    "tier1_numerics_recomputed": false
+  },
+  "proof_boundary": "The exact child proves protocol-design guarantees for every response in the explicitly declared rational boxes. This adapter verifier does not verify, and the report does not claim, that the double-pendulum ODE or its parameter derivatives lie in those boxes.",
+  "schema_version": "oig-double-pendulum-protocol-adapter-v1",
+  "source_model": {
+    "coordinates": [
+      "log_mass_ratio=log(m2/m1)",
+      "log_length_ratio=log(l2/l1)"
+    ],
+    "dimension": 2,
+    "dimensionless": true,
+    "metric_exact": [
+      [
+        "1/1",
+        "0/1"
+      ],
+      [
+        "0/1",
+        "1/1"
+      ]
+    ]
+  },
+  "status": "exact conditional design over declared double-pendulum response boxes",
+  "tier1_discovery_only": [
+    {
+      "base_log_ratios": {
+        "log_length_ratio": 0.0,
+        "log_mass_ratio": 0.0
+      },
+      "candidate": {
+        "cost_exact": "1/1",
+        "launch": {
+          "state_convention": [
+            "theta1",
+            "theta2",
+            "omega1",
+            "omega2"
+          ],
+          "state_exact": [
+            "4/5",
+            "-7/20",
+            "0/1",
+            "0/1"
+          ]
+        },
+        "name": "launch-A / theta-1 / tau-1",
+        "noise_precision_exact": "1/1",
+        "observation_time": {
+          "dimensionless_tau_exact": "1/1",
+          "physical_time_rule": "t=tau*sqrt(l1/g)"
+        },
+        "sensor": {
+          "dimensionless_output_definition": "unwrapped absolute theta_1 (dimensionless radians)",
+          "name": "theta_1"
+        }
+      },
+      "claim_tier": 1,
+      "finite_difference_steps": [
+        0.0002,
+        0.0001
+      ],
+      "max_refinement_spread_by_source": [
+        1.0783041126671833e-10,
+        3.3806291099836017e-10
+      ],
+      "maximum_sampled_scaled_energy_drift": 1.776475265163208e-15,
+      "proof_boundary": "Floating ODE integration, finite differences, and solver refinement are Tier-1 discovery evidence only. They neither enclose the exact nonlinear flow nor prove that its response derivative belongs to a declared box.",
+      "response_estimates": {
+        "coarse_half_step": [
+          -0.10467857261886593,
+          0.031269575536951866
+        ],
+        "coarse_step": [
+          -0.1046785727344679,
+          0.03126957520305229
+        ],
+        "refined_solver_half_step": [
+          -0.10467857262663749,
+          0.0312695755411152
+        ]
+      },
+      "schema_version": "oig-double-pendulum-response-discovery-v1",
+      "selected_tier1_response_estimate": [
+        -0.10467857262663749,
+        0.0312695755411152
+      ],
+      "source_coordinates": [
+        "log_mass_ratio=log(m2/m1)",
+        "log_length_ratio=log(l2/l1)"
+      ],
+      "status": "unverified numerical discovery evidence"
+    },
+    {
+      "base_log_ratios": {
+        "log_length_ratio": 0.0,
+        "log_mass_ratio": 0.0
+      },
+      "candidate": {
+        "cost_exact": "1/1",
+        "launch": {
+          "state_convention": [
+            "theta1",
+            "theta2",
+            "omega1",
+            "omega2"
+          ],
+          "state_exact": [
+            "4/5",
+            "-7/20",
+            "0/1",
+            "0/1"
+          ]
+        },
+        "name": "launch-A / theta-2 / tau-1",
+        "noise_precision_exact": "1/1",
+        "observation_time": {
+          "dimensionless_tau_exact": "1/1",
+          "physical_time_rule": "t=tau*sqrt(l1/g)"
+        },
+        "sensor": {
+          "dimensionless_output_definition": "unwrapped absolute theta_2 (dimensionless radians)",
+          "name": "theta_2"
+        }
+      },
+      "claim_tier": 1,
+      "finite_difference_steps": [
+        0.0002,
+        0.0001
+      ],
+      "max_refinement_spread_by_source": [
+        1.4641066137244252e-10,
+        1.5141360387715963e-09
+      ],
+      "maximum_sampled_scaled_energy_drift": 1.776475265163208e-15,
+      "proof_boundary": "Floating ODE integration, finite differences, and solver refinement are Tier-1 discovery evidence only. They neither enclose the exact nonlinear flow nor prove that its response derivative belongs to a declared box.",
+      "response_estimates": {
+        "coarse_half_step": [
+          0.08450255098303716,
+          -0.45435124563508733
+        ],
+        "coarse_step": [
+          0.08450255113326421,
+          -0.45435124714866826
+        ],
+        "refined_solver_half_step": [
+          0.08450255098685355,
+          -0.4543512456345322
+        ]
+      },
+      "schema_version": "oig-double-pendulum-response-discovery-v1",
+      "selected_tier1_response_estimate": [
+        0.08450255098685355,
+        -0.4543512456345322
+      ],
+      "source_coordinates": [
+        "log_mass_ratio=log(m2/m1)",
+        "log_length_ratio=log(l2/l1)"
+      ],
+      "status": "unverified numerical discovery evidence"
+    },
+    {
+      "base_log_ratios": {
+        "log_length_ratio": 0.0,
+        "log_mass_ratio": 0.0
+      },
+      "candidate": {
+        "cost_exact": "3/2",
+        "launch": {
+          "state_convention": [
+            "theta1",
+            "theta2",
+            "omega1",
+            "omega2"
+          ],
+          "state_exact": [
+            "4/5",
+            "-7/20",
+            "0/1",
+            "0/1"
+          ]
+        },
+        "name": "launch-A / scaled-omega-2 / tau-3/2",
+        "noise_precision_exact": "1/1",
+        "observation_time": {
+          "dimensionless_tau_exact": "3/2",
+          "physical_time_rule": "t=tau*sqrt(l1/g)"
+        },
+        "sensor": {
+          "dimensionless_output_definition": "sqrt(l1/g) times omega_2",
+          "name": "scaled_omega_2"
+        }
+      },
+      "claim_tier": 1,
+      "finite_difference_steps": [
+        0.0002,
+        0.0001
+      ],
+      "max_refinement_spread_by_source": [
+        1.3725132141928498e-09,
+        5.4184434716830765e-09
+      ],
+      "maximum_sampled_scaled_energy_drift": 3.552950530326416e-15,
+      "proof_boundary": "Floating ODE integration, finite differences, and solver refinement are Tier-1 discovery evidence only. They neither enclose the exact nonlinear flow nor prove that its response derivative belongs to a declared box.",
+      "response_estimates": {
+        "coarse_half_step": [
+          -0.2550760939085128,
+          0.23481876005371216
+        ],
+        "coarse_step": [
+          -0.25507609254266095,
+          0.23481876547937208
+        ],
+        "refined_solver_half_step": [
+          -0.25507609391517416,
+          0.2348187600609286
+        ]
+      },
+      "schema_version": "oig-double-pendulum-response-discovery-v1",
+      "selected_tier1_response_estimate": [
+        -0.25507609391517416,
+        0.2348187600609286
+      ],
+      "source_coordinates": [
+        "log_mass_ratio=log(m2/m1)",
+        "log_length_ratio=log(l2/l1)"
+      ],
+      "status": "unverified numerical discovery evidence"
+    },
+    {
+      "base_log_ratios": {
+        "log_length_ratio": 0.0,
+        "log_mass_ratio": 0.0
+      },
+      "candidate": {
+        "cost_exact": "1/1",
+        "launch": {
+          "state_convention": [
+            "theta1",
+            "theta2",
+            "omega1",
+            "omega2"
+          ],
+          "state_exact": [
+            "-3/5",
+            "9/10",
+            "0/1",
+            "0/1"
+          ]
+        },
+        "name": "launch-B / theta-1 / tau-3/4",
+        "noise_precision_exact": "1/1",
+        "observation_time": {
+          "dimensionless_tau_exact": "3/4",
+          "physical_time_rule": "t=tau*sqrt(l1/g)"
+        },
+        "sensor": {
+          "dimensionless_output_definition": "unwrapped absolute theta_1 (dimensionless radians)",
+          "name": "theta_1"
+        }
+      },
+      "claim_tier": 1,
+      "finite_difference_steps": [
+        0.0002,
+        0.0001
+      ],
+      "max_refinement_spread_by_source": [
+        3.885780586188048e-11,
+        8.701372955499664e-11
+      ],
+      "maximum_sampled_scaled_energy_drift": 4.44118816290802e-16,
+      "proof_boundary": "Floating ODE integration, finite differences, and solver refinement are Tier-1 discovery evidence only. They neither enclose the exact nonlinear flow nor prove that its response derivative belongs to a declared box.",
+      "response_estimates": {
+        "coarse_half_step": [
+          0.014686299814603565,
+          -0.015556885705203527
+        ],
+        "coarse_step": [
+          0.014686299780186651,
+          -0.015556885793882591
+        ],
+        "refined_solver_half_step": [
+          0.014686299819044457,
+          -0.015556885706868862
+        ]
+      },
+      "schema_version": "oig-double-pendulum-response-discovery-v1",
+      "selected_tier1_response_estimate": [
+        0.014686299819044457,
+        -0.015556885706868862
+      ],
+      "source_coordinates": [
+        "log_mass_ratio=log(m2/m1)",
+        "log_length_ratio=log(l2/l1)"
+      ],
+      "status": "unverified numerical discovery evidence"
+    },
+    {
+      "base_log_ratios": {
+        "log_length_ratio": 0.0,
+        "log_mass_ratio": 0.0
+      },
+      "candidate": {
+        "cost_exact": "5/4",
+        "launch": {
+          "state_convention": [
+            "theta1",
+            "theta2",
+            "omega1",
+            "omega2"
+          ],
+          "state_exact": [
+            "-3/5",
+            "9/10",
+            "0/1",
+            "0/1"
+          ]
+        },
+        "name": "launch-B / scaled-omega-1 / tau-5/4",
+        "noise_precision_exact": "1/1",
+        "observation_time": {
+          "dimensionless_tau_exact": "5/4",
+          "physical_time_rule": "t=tau*sqrt(l1/g)"
+        },
+        "sensor": {
+          "dimensionless_output_definition": "sqrt(l1/g) times omega_1",
+          "name": "scaled_omega_1"
+        }
+      },
+      "claim_tier": 1,
+      "finite_difference_steps": [
+        0.0002,
+        0.0001
+      ],
+      "max_refinement_spread_by_source": [
+        9.786615962070755e-10,
+        2.201294702075529e-08
+      ],
+      "maximum_sampled_scaled_energy_drift": 1.4505947076942148e-14,
+      "proof_boundary": "Floating ODE integration, finite differences, and solver refinement are Tier-1 discovery evidence only. They neither enclose the exact nonlinear flow nor prove that its response derivative belongs to a declared box.",
+      "response_estimates": {
+        "coarse_half_step": [
+          0.46905473769287553,
+          0.004140129364893497
+        ],
+        "coarse_step": [
+          0.4690547367020015,
+          0.0041401513800609635
+        ],
+        "refined_solver_half_step": [
+          0.4690547376806631,
+          0.004140129367113943
+        ]
+      },
+      "schema_version": "oig-double-pendulum-response-discovery-v1",
+      "selected_tier1_response_estimate": [
+        0.4690547376806631,
+        0.004140129367113943
+      ],
+      "source_coordinates": [
+        "log_mass_ratio=log(m2/m1)",
+        "log_length_ratio=log(l2/l1)"
+      ],
+      "status": "unverified numerical discovery evidence"
+    },
+    {
+      "base_log_ratios": {
+        "log_length_ratio": 0.0,
+        "log_mass_ratio": 0.0
+      },
+      "candidate": {
+        "cost_exact": "1/1",
+        "launch": {
+          "state_convention": [
+            "theta1",
+            "theta2",
+            "omega1",
+            "omega2"
+          ],
+          "state_exact": [
+            "6/5",
+            "2/5",
+            "0/1",
+            "0/1"
+          ]
+        },
+        "name": "launch-C / theta-2 / tau-1",
+        "noise_precision_exact": "1/1",
+        "observation_time": {
+          "dimensionless_tau_exact": "1/1",
+          "physical_time_rule": "t=tau*sqrt(l1/g)"
+        },
+        "sensor": {
+          "dimensionless_output_definition": "unwrapped absolute theta_2 (dimensionless radians)",
+          "name": "theta_2"
+        }
+      },
+      "claim_tier": 1,
+      "finite_difference_steps": [
+        0.0002,
+        0.0001
+      ],
+      "max_refinement_spread_by_source": [
+        7.993605777301127e-11,
+        4.5907722068250223e-10
+      ],
+      "maximum_sampled_scaled_energy_drift": 1.1101860165742324e-15,
+      "proof_boundary": "Floating ODE integration, finite differences, and solver refinement are Tier-1 discovery evidence only. They neither enclose the exact nonlinear flow nor prove that its response derivative belongs to a declared box.",
+      "response_estimates": {
+        "coarse_half_step": [
+          0.08100880456773929,
+          -0.247850464726862
+        ],
+        "coarse_step": [
+          0.08100880464934068,
+          -0.247850465189825
+        ],
+        "refined_solver_half_step": [
+          0.08100880456940462,
+          -0.2478504647307478
+        ]
+      },
+      "schema_version": "oig-double-pendulum-response-discovery-v1",
+      "selected_tier1_response_estimate": [
+        0.08100880456940462,
+        -0.2478504647307478
+      ],
+      "source_coordinates": [
+        "log_mass_ratio=log(m2/m1)",
+        "log_length_ratio=log(l2/l1)"
+      ],
+      "status": "unverified numerical discovery evidence"
+    },
+    {
+      "base_log_ratios": {
+        "log_length_ratio": 0.0,
+        "log_mass_ratio": 0.0
+      },
+      "candidate": {
+        "cost_exact": "3/2",
+        "launch": {
+          "state_convention": [
+            "theta1",
+            "theta2",
+            "omega1",
+            "omega2"
+          ],
+          "state_exact": [
+            "6/5",
+            "2/5",
+            "0/1",
+            "0/1"
+          ]
+        },
+        "name": "launch-C / scaled-omega-2 / tau-3/2",
+        "noise_precision_exact": "1/1",
+        "observation_time": {
+          "dimensionless_tau_exact": "3/2",
+          "physical_time_rule": "t=tau*sqrt(l1/g)"
+        },
+        "sensor": {
+          "dimensionless_output_definition": "sqrt(l1/g) times omega_2",
+          "name": "scaled_omega_2"
+        }
+      },
+      "claim_tier": 1,
+      "finite_difference_steps": [
+        0.0002,
+        0.0001
+      ],
+      "max_refinement_spread_by_source": [
+        6.35984320762617e-10,
+        6.762680693217504e-09
+      ],
+      "maximum_sampled_scaled_energy_drift": 1.1841984176791812e-15,
+      "proof_boundary": "Floating ODE integration, finite differences, and solver refinement are Tier-1 discovery evidence only. They neither enclose the exact nonlinear flow nor prove that its response derivative belongs to a declared box.",
+      "response_estimates": {
+        "coarse_half_step": [
+          -0.26278571910863524,
+          0.47127672433186496
+        ],
+        "coarse_step": [
+          -0.26278571846793247,
+          0.47127673109156193
+        ],
+        "refined_solver_half_step": [
+          -0.2627857191039168,
+          0.47127672432888124
+        ]
+      },
+      "schema_version": "oig-double-pendulum-response-discovery-v1",
+      "selected_tier1_response_estimate": [
+        -0.2627857191039168,
+        0.47127672432888124
+      ],
+      "source_coordinates": [
+        "log_mass_ratio=log(m2/m1)",
+        "log_length_ratio=log(l2/l1)"
+      ],
+      "status": "unverified numerical discovery evidence"
+    }
+  ]
+}

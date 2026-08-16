@@ -1,0 +1,485 @@
+{
+  "exact_active_enclosed_design": {
+    "certificate": {
+      "budget_exactly_one": true,
+      "certified_efficiency_lower_exact": "756522130884465853615895779432349369/757286444490472008341328125000000000",
+      "certified_optimality_gap_upper_exact": "764313606006154725432345567650631/9496383846007969390900000000000000000",
+      "dual_metric_trace_exactly_one": true,
+      "dual_optimum_upper_exact": "9693266489478041706769/121553713228902008203520",
+      "dual_witness_exact": [
+        [
+          "4442489104/10000042505",
+          "4968839948/10000042505"
+        ],
+        [
+          "4968839948/10000042505",
+          "5557553401/10000042505"
+        ]
+      ],
+      "dual_witness_integer_factor": [
+        [
+          66652,
+          0
+        ],
+        [
+          74549,
+          0
+        ]
+      ],
+      "dual_witness_psd_by_exact_factorization": true,
+      "primal_generalized_floor_lower_exact": "7966423252809941/100000000000000000",
+      "primal_shift_positive_by_exact_ldl": true,
+      "rationalized_design_gram_exact": [
+        [
+          "1223207477578270001/12416358528000000000",
+          "-92298989294454241/5501091976800000000"
+        ],
+        [
+          "-92298989294454241/5501091976800000000",
+          "57727014750403739/609317395051250000"
+        ]
+      ]
+    },
+    "declared_source_metric": [
+      [
+        "1/1",
+        "0/1"
+      ],
+      [
+        "0/1",
+        "1/1"
+      ]
+    ],
+    "exact_blind_dimension": 0,
+    "independent_exact_verification": {
+      "dual_upper_exact": "9693266489478041706769/121553713228902008203520",
+      "method": "independent exact-rational reconstruction of quotient, design, primal, dual, noise, and integer realization",
+      "passed": true,
+      "primal_lower_exact": "7966423252809941/100000000000000000"
+    },
+    "noise_performance": {
+      "approximate_design_measure": {
+        "amplitude_exact": "1/1",
+        "certified_squared_separation_lower_exact": "7966423252809941/10000000000000000",
+        "continuous_budget_exposure_multiplier": 10,
+        "descriptive_exact_gaussian_error": 0.3276996276926949,
+        "formula": "Phi(-amplitude*sqrt(exposure_multiplier*floor)/2)",
+        "gaussian_error_rational_upper_exact": "40000000000000000/87966423252809941",
+        "gaussian_error_rational_upper_method": "Q(d/2)<=exp(-d^2/8)/2<=4/(8+d^2)",
+        "role": "certified consequence of the floor under the already-whitened unit-covariance Gaussian model"
+      },
+      "integer_realization": {
+        "amplitude_exact": "1/1",
+        "certified_squared_separation_lower_exact": "7966423252809941/2000000000000",
+        "continuous_budget_exposure_multiplier": 50000,
+        "descriptive_exact_gaussian_error": 7.337272277746456e-219,
+        "formula": "Phi(-amplitude*sqrt(exposure_multiplier*floor)/2)",
+        "gaussian_error_rational_upper_exact": "8000000000000/7982423252809941",
+        "gaussian_error_rational_upper_method": "Q(d/2)<=exp(-d^2/8)/2<=4/(8+d^2)",
+        "minimum_budget_multiplier_exactly_realizing_weights": 50000,
+        "protocol_counts": [
+          22945,
+          21644
+        ],
+        "realized_budget_multiplier": 50000,
+        "requested_multiplier_was_exactly_realizable": false,
+        "role": "certified consequence of the floor under the already-whitened unit-covariance Gaussian model"
+      }
+    },
+    "observable_quotient_dimension": 2,
+    "overall_passed": true,
+    "proof_boundary": "Floating point is used only to discover weights and a dual vector. The exact certificate covers the declared rational finite protocols; binary floating matrix declarations are rejected. It does not by itself certify continuum-to-finite model transfer or the completeness of the candidate protocol list.",
+    "protocols": [
+      {
+        "budget_share_exact": "4589/10000",
+        "cost_exact": "1/1",
+        "name": "launch-A / theta-2 / tau-1",
+        "noise_precision_exact": [
+          [
+            "1/1"
+          ]
+        ],
+        "physical_weight_exact": "4589/10000",
+        "response_exact": [
+          [
+            "265/3136",
+            "-4041/8894"
+          ]
+        ]
+      },
+      {
+        "budget_share_exact": "5411/10000",
+        "cost_exact": "5/4",
+        "name": "launch-B / scaled-omega-1 / tau-5/4",
+        "noise_precision_exact": [
+          [
+            "1/1"
+          ]
+        ],
+        "physical_weight_exact": "5411/12500",
+        "response_exact": [
+          [
+            "2357/5025",
+            "13/3140"
+          ]
+        ]
+      }
+    ],
+    "quotient_injection": [
+      [
+        "1/1",
+        "0/1"
+      ],
+      [
+        "0/1",
+        "1/1"
+      ]
+    ],
+    "quotient_protocol_information": [
+      [
+        [
+          "70225/9834496",
+          "-1070865/27891584"
+        ],
+        [
+          "-1070865/27891584",
+          "16329681/79103236"
+        ]
+      ],
+      [
+        [
+          "5555449/25250625",
+          "30641/15778500"
+        ],
+        [
+          "30641/15778500",
+          "169/9859600"
+        ]
+      ]
+    ],
+    "quotient_row_coordinates": [
+      [
+        "1/1",
+        "0/1"
+      ],
+      [
+        "0/1",
+        "1/1"
+      ]
+    ],
+    "quotient_source_metric": [
+      [
+        "1/1",
+        "0/1"
+      ],
+      [
+        "0/1",
+        "1/1"
+      ]
+    ],
+    "response_box_independent_verification": {
+      "method": "independent exact-rational reconstruction of every response box and the aggregate robust floor",
+      "passed": true,
+      "robust_physical_floor_lower_exact": "195932905640268820789/2500000000000000000000"
+    },
+    "response_box_robustness": {
+      "aggregate_metric_relative_information_error_upper_exact": "3227675679979704211/2500000000000000000000",
+      "nominal_floor_lower_exact": "7966423252809941/100000000000000000",
+      "proof_boundary": "The robust floor holds for every response in the declared entrywise rational boxes. It does not certify that an external numerical model lies in those boxes.",
+      "protocol_response_box_certificates": [
+        {
+          "diagonal_quadratic_bound_exact": [
+            [
+              "3124631792137/4358060000000000",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "6380513873387/4358060000000000"
+            ]
+          ],
+          "entrywise_information_bound_exact": [
+            [
+              "42070237/245000000000",
+              "2376286416381/4358060000000000"
+            ],
+            [
+              "2376286416381/4358060000000000",
+              "40859463847/44470000000000"
+            ]
+          ],
+          "exact_ldl_decision": true,
+          "meaning": "for every enclosed response, -delta*S <= A_true-A_centre <= delta*S",
+          "metric_relative_information_error_upper_exact": "3663840325316991/2500000000000000000",
+          "noise_precision_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "response_centre_exact": [
+            [
+              "265/3136",
+              "-4041/8894"
+            ]
+          ],
+          "response_radius_exact": [
+            [
+              "101/100000",
+              "101/100000"
+            ]
+          ],
+          "schema_version": "oig-response-box-form-bound-v1",
+          "source_metric_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "diagonal_quadratic_bound_exact": [
+            [
+              "75077129819/52595000000000",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "77051158457/157785000000000"
+            ]
+          ],
+          "entrywise_information_bound_exact": [
+            [
+              "1906506401/2010000000000",
+              "151141273957/315570000000000"
+            ],
+            [
+              "151141273957/315570000000000",
+              "14731557/1570000000000"
+            ]
+          ],
+          "exact_ldl_decision": true,
+          "meaning": "for every enclosed response, -delta*S <= A_true-A_centre <= delta*S",
+          "metric_relative_information_error_upper_exact": "2857770014215001/2000000000000000000",
+          "noise_precision_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "response_centre_exact": [
+            [
+              "2357/5025",
+              "13/3140"
+            ]
+          ],
+          "response_radius_exact": [
+            [
+              "101/100000",
+              "101/100000"
+            ]
+          ],
+          "schema_version": "oig-response-box-form-bound-v1",
+          "source_metric_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ]
+        }
+      ],
+      "robust_floor_is_positive": true,
+      "robust_noise_performance": {
+        "amplitude_exact": "1/1",
+        "continuous_exposure_gaussian_error_rational_upper_exact": "1000000000000000000000/2195932905640268820789",
+        "integer_realization_exposure": 50000,
+        "integer_realization_gaussian_error_rational_upper_exact": "200000000000000000/196332905640268820789"
+      },
+      "robust_physical_floor_lower_exact": "195932905640268820789/2500000000000000000000",
+      "schema_version": "oig-enclosed-protocol-design-v1"
+    },
+    "schema_version": "oig-protocol-design-engine-v1",
+    "source_dimension": 2,
+    "status": "exact quotient and exact rational primal/dual certificate"
+  },
+  "logical_composition": "outward ODE response membership AND exact for-all-response-in-box design theorem imply the nominal physical double-pendulum floor",
+  "physical_positive_floor_certified": true,
+  "physical_scope_definition": "physical means the exact response of the declared nonlinear dimensionless double-pendulum equations; it does not mean that the equations, calibration, or apparatus have been empirically validated",
+  "reproduction_commands": [
+    "python -m pip install -r requirements.txt",
+    "python oig_double_pendulum_validated_transfer.py --physical-output artifacts/double_pendulum_physical_positive_floor.json",
+    "python oig_double_pendulum_validated_transfer.py --verify-physical artifacts/double_pendulum_physical_positive_floor.json",
+    "python -m unittest -v test_oig_double_pendulum_validated_transfer.py"
+  ],
+  "robust_physical_floor_lower_exact": "195932905640268820789/2500000000000000000000",
+  "schema_version": "oig-double-pendulum-physical-positive-floor-v1",
+  "scope_boundary": "The floor concerns the declared dimensionless model for the two-protocol experiment at u=v=0; it is not a uniform parameter-neighbourhood, model-adequacy, calibration, or hardware statement.",
+  "scope_flags": {
+    "declared_dimensionless_model_floor_certified": true,
+    "empirical_model_adequacy_certified": false,
+    "hardware_calibration_certified": false,
+    "parameter_neighborhood_uniformity_certified": false,
+    "seven_candidate_efficiency_certified": false,
+    "seven_candidate_selection_certified": false,
+    "two_active_protocol_fixed_mixture_certified": true
+  },
+  "status": "proved",
+  "unresolved_reason": null,
+  "validated_transfer": {
+    "all_active_declared_box_memberships_certified": true,
+    "configuration": {
+      "maximum_tube_iterations": 12,
+      "precision_bits": 160,
+      "step_size_exact": "1/100",
+      "taylor_order": 8,
+      "tube_inflation_exact": "6/5"
+    },
+    "dimensionless_representative_exact": {
+      "g": "1/1",
+      "l1": "1/1",
+      "l2": "exp(v)",
+      "m1": "1/1",
+      "m2": "exp(u)"
+    },
+    "enclosed_protocol_transfer_ready": true,
+    "method": "outward-arb-picard-taylor-self-mapping-v1",
+    "nominal_parameter_point_exact": {
+      "u": "0/1",
+      "v": "0/1"
+    },
+    "proof_dependency_contract": {
+      "exact_rational_arithmetic": "Python fractions.Fraction",
+      "install_command": "python -m pip install -r requirements.txt",
+      "ordinary_scipy_ode_solver_used_in_proof": false,
+      "outward_ball_arithmetic": "python-flint>=0.9,<0.10 (Arb)"
+    },
+    "protocols": [
+      {
+        "declared_box_inclusion_slack_exact": [
+          "6186249475362419/6125000000000000000",
+          "2245728544213952449/2223500000000000000000"
+        ],
+        "declared_box_membership_by_source": [
+          true,
+          true
+        ],
+        "declared_box_membership_certified": true,
+        "declared_response_centre_exact": [
+          "265/3136",
+          "-4041/8894"
+        ],
+        "declared_response_radius_exact": [
+          "101/100000",
+          "101/100000"
+        ],
+        "inclusion_slack_is_strictly_positive": true,
+        "launch_exact": [
+          "4/5",
+          "-7/20",
+          "0/1",
+          "0/1"
+        ],
+        "maximum_endpoint_radius_upper": 4.0237039909815295e-12,
+        "maximum_picard_tube_iterations": 2,
+        "maximum_tube_radius_upper": 4.706910181499452e-12,
+        "name": "launch-A / theta-2 / tau-1",
+        "response_enclosure": [
+          {
+            "decimal_midpoint": 0.08450255093508893,
+            "decimal_radius_upper": 3.3588249022048293e-13,
+            "lower_exact": "10562818866844131/125000000000000000",
+            "upper_exact": "42251275467712409/500000000000000000"
+          },
+          {
+            "decimal_midpoint": -0.4543512451293749,
+            "decimal_radius_upper": 4.277331480576996e-13,
+            "lower_exact": "-56793905641225329/125000000000000000",
+            "upper_exact": "-227175622564473567/500000000000000000"
+          }
+        ],
+        "sensor": "theta_2",
+        "status": "proved",
+        "terminal_time_exact": "1/1",
+        "unresolved_reason": null,
+        "validated_step_count": 100
+      },
+      {
+        "declared_box_inclusion_slack_exact": [
+          "25375956496375261/25125000000000000000",
+          "396422874971311/392500000000000000"
+        ],
+        "declared_box_membership_by_source": [
+          true,
+          true
+        ],
+        "declared_box_membership_certified": true,
+        "declared_response_centre_exact": [
+          "2357/5025",
+          "13/3140"
+        ],
+        "declared_response_radius_exact": [
+          "101/100000",
+          "101/100000"
+        ],
+        "inclusion_slack_is_strictly_positive": true,
+        "launch_exact": [
+          "-3/5",
+          "9/10",
+          "0/1",
+          "0/1"
+        ],
+        "maximum_endpoint_radius_upper": 7.660741290459183e-11,
+        "maximum_picard_tube_iterations": 6,
+        "maximum_tube_radius_upper": 8.95650684776342e-11,
+        "name": "launch-B / scaled-omega-1 / tau-5/4",
+        "response_enclosure": [
+          {
+            "decimal_midpoint": 0.46905473801917236,
+            "decimal_radius_upper": 3.0723174709607753e-11,
+            "lower_exact": "9381094759768983/20000000000000000",
+            "upper_exact": "58631842256236939/125000000000000000"
+          },
+          {
+            "decimal_midpoint": 0.00414012202889391,
+            "decimal_radius_upper": 5.444470839877785e-11,
+            "lower_exact": "10350304936123/2500000000000000",
+            "upper_exact": "4140122083338621/1000000000000000000"
+          }
+        ],
+        "sensor": "scaled_omega_1",
+        "status": "proved",
+        "terminal_time_exact": "5/4",
+        "unresolved_reason": null,
+        "validated_step_count": 125
+      }
+    ],
+    "schema_version": "oig-double-pendulum-validated-transfer-v1",
+    "scope_boundary": "Pointwise nominal-parameter transfer for exactly the two active protocols; no parameter-neighbourhood enclosure and no claim for the five inactive candidates. The word physical refers only to the declared nonlinear dimensionless double-pendulum model, not empirical hardware or nature.",
+    "scope_flags": {
+      "empirical_model_adequacy_certified": false,
+      "hardware_calibration_certified": false,
+      "parameter_neighborhood_uniformity_certified": false,
+      "seven_candidate_efficiency_certified": false,
+      "seven_candidate_selection_certified": false,
+      "two_active_protocol_responses_at_nominal_point_certified": true
+    },
+    "source_coordinates": [
+      "log_mass_ratio=log(m2/m1)",
+      "log_length_ratio=log(l2/l1)"
+    ],
+    "status": "proved",
+    "theorem_obligations": {
+      "defect_bound": "Taylor theorem with interval coefficient over every step",
+      "flow_to_box_link": "strict inclusion in each declared rational response box",
+      "outward_scalar_arithmetic": "Arb balls at the declared precision",
+      "state_and_parameter_sensitivity_ode": "joint 12-dimensional forward system",
+      "step_existence_and_containment": "componentwise Picard self-mapping inequality"
+    }
+  }
+}

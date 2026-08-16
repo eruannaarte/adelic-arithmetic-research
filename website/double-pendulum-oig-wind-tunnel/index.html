@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="A proof-oriented double-pendulum ensemble calibration chamber for comparing frozen Operational Information Geometry forecasts with independently solved numerical outcomes.">
+  <title>Double-Pendulum OIG Wind Tunnel · Ensemble Calibration Chamber</title>
+  <link rel="stylesheet" href="wind-tunnel.css">
+</head>
+<body>
+  <a class="skip-link" href="#wind-tunnel">Skip to the wind tunnel</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="../../README.md" aria-label="Operational Information Geometry home">
+      <span aria-hidden="true">OIG</span>
+      <strong>Operational Information Geometry</strong>
+    </a>
+    <nav aria-label="Research links">
+      <a href="../../DOUBLE_PENDULUM_OPERATIONAL_ATLAS.md">Formal atlas</a>
+      <a href="../../OPERATIONAL_INFORMATION_GEOMETRY_PROTOCOL_ENGINE.md">Protocol engine</a>
+    </nav>
+  </header>
+
+  <main id="wind-tunnel">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Interactive benchmark · declared nonlinear model</p>
+        <h1 id="page-title">Watch an information geometry make testable claims.</h1>
+        <p class="dek">Set a double pendulum in motion. OIG freezes its forecast first; then an independent solver reveals a held-out outcome. Compare what was promised with what actually appeared.</p>
+      </div>
+      <aside class="experiment-contract" aria-label="Experiment contract">
+        <span class="contract-icon" aria-hidden="true">01</span>
+        <p><strong>Forecast before outcome.</strong> The predicted sensor path, uncertainty tube, and information gains are sealed before the independent trajectory runs.</p>
+      </aside>
+    </section>
+
+    <section class="evidence-strip" aria-labelledby="evidence-heading">
+      <div class="strip-heading">
+        <p class="section-kicker">Evidence ladder</p>
+        <h2 id="evidence-heading">Three levels, kept visibly distinct</h2>
+      </div>
+      <ol class="tier-list">
+        <li id="live-tier" class="tier is-active" data-state="ready">
+          <span class="tier-index">1</span>
+          <span><strong>Live</strong><small>Fast numerical forecast</small></span>
+          <output id="live-tier-status" aria-live="polite">Ready</output>
+        </li>
+        <li id="refined-tier" class="tier" data-state="waiting">
+          <span class="tier-index">2</span>
+          <span><strong>Refined</strong><small>Solver, response &amp; energy gates</small></span>
+          <output id="refined-tier-status" aria-live="polite">Waiting</output>
+        </li>
+        <li id="certified-tier" class="tier" data-state="checking">
+          <span class="tier-index">3</span>
+          <span><strong>Certified</strong><small>Fixed A+B artifact provenance</small></span>
+          <output id="certified-tier-status" aria-live="polite">Checking</output>
+        </li>
+      </ol>
+    </section>
+
+    <section class="control-deck" aria-labelledby="controls-heading">
+      <div class="section-heading compact-heading">
+        <div>
+          <p class="section-kicker">Prepare the trial</p>
+          <h2 id="controls-heading">Choose the declared state and instrument</h2>
+        </div>
+        <p>Angles are measured from downward vertical. The held-out perturbation remains hidden until the forecast is frozen.</p>
+      </div>
+
+      <form id="experiment-controls" class="controls" aria-label="Double-pendulum experiment controls" onsubmit="return false">
+        <fieldset>
+          <legend>Initial state</legend>
+          <label for="theta-1">
+            <span>Angle θ₁ <output id="theta-1-value" for="theta-1">0.800 rad</output></span>
+            <input id="theta-1" name="theta1" type="range" min="-3.1416" max="3.1416" step="0.01" value="0.8">
+          </label>
+          <label for="theta-2">
+            <span>Angle θ₂ <output id="theta-2-value" for="theta-2">−0.350 rad</output></span>
+            <input id="theta-2" name="theta2" type="range" min="-3.1416" max="3.1416" step="0.01" value="-0.35">
+          </label>
+          <label for="omega-1">
+            <span>Velocity ω₁ <output id="omega-1-value" for="omega-1">0.000 rad/s</output></span>
+            <input id="omega-1" name="omega1" type="range" min="-4" max="4" step="0.05" value="0">
+          </label>
+          <label for="omega-2">
+            <span>Velocity ω₂ <output id="omega-2-value" for="omega-2">0.000 rad/s</output></span>
+            <input id="omega-2" name="omega2" type="range" min="-4" max="4" step="0.05" value="0">
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Observation</legend>
+          <label for="sensor">
+            <span>Sensor</span>
+            <select id="sensor" name="sensor">
+              <option value="tip-x" selected>Tip horizontal position</option>
+              <option value="tip-y">Tip vertical position</option>
+              <option value="sin-theta-1">Arm 1 phase (sin θ₁)</option>
+              <option value="sin-theta-2">Arm 2 phase (sin θ₂)</option>
+              <option value="omega-1">Scaled angular velocity ω₁</option>
+              <option value="omega-2">Scaled angular velocity ω₂</option>
+            </select>
+          </label>
+          <label for="duration">
+            <span>Horizon T <output id="duration-value" for="duration">4.00 s</output></span>
+            <input id="duration" name="duration" type="range" min="1" max="30" step="0.25" value="4">
+          </label>
+          <label for="preparation-radius">
+            <span>Preparation radius <output id="preparation-radius-value" for="preparation-radius">0.010 rad</output></span>
+            <input id="preparation-radius" name="preparationRadius" type="range" min="0.001" max="0.05" step="0.001" value="0.01">
+          </label>
+          <label for="noise-radius">
+            <span>Sensor noise radius <output id="noise-radius-value" for="noise-radius">0.015</output></span>
+            <input id="noise-radius" name="noiseRadius" type="range" min="0" max="0.08" step="0.0025" value="0.015">
+          </label>
+        </fieldset>
+
+        <div class="run-controls">
+          <button id="run-experiment" class="primary-button" type="button">
+            <span aria-hidden="true">▶</span> Freeze forecast &amp; run
+          </button>
+          <button id="reset-experiment" class="secondary-button" type="button">Reset trial</button>
+          <p id="run-status" class="run-status" role="status" aria-live="polite">Ready to prepare a forecast.</p>
+        </div>
+      </form>
+    </section>
+
+    <section class="ensemble-deck" aria-labelledby="ensemble-heading">
+      <div class="section-heading compact-heading">
+        <div>
+          <p class="section-kicker">Ensemble calibration</p>
+          <h2 id="ensemble-heading">One launch, or a finite cloud of declared alternatives</h2>
+        </div>
+        <p id="ensemble-mode-note">N = 1 preserves the detailed single-outcome wind tunnel. Larger N runs a deterministic seeded finite ensemble.</p>
+      </div>
+
+      <form id="ensemble-controls" class="ensemble-controls" aria-label="Finite ensemble calibration controls" onsubmit="return false">
+        <p class="ensemble-scope-note" id="ensemble-control-scope-note">N = 1 uses the deterministic held-out boundary experiment; realism, distribution, seed, and structured-law controls activate only for N &gt; 1.</p>
+        <div class="ensemble-primary-controls">
+          <label for="ensemble-size">
+            <span>Ensemble size N <output id="ensemble-size-value" for="ensemble-size">1</output></span>
+            <input id="ensemble-size" type="range" min="1" max="50" step="1" value="1">
+          </label>
+          <label for="realism-level">
+            <span>Realism dial <output id="realism-level-value" for="realism-level">20%</output></span>
+            <input id="realism-level" type="range" min="0" max="100" step="1" value="20"
+              aria-describedby="realism-endpoints realism-dial-help">
+            <span class="range-endpoints" id="realism-endpoints" aria-hidden="true">
+              <span><b>0</b> mathematically ideal</span>
+              <span><b>100</b> naturally noisy</span>
+            </span>
+            <small class="sr-only" id="realism-dial-help">Zero is mathematically ideal. One hundred is naturally noisy.</small>
+          </label>
+          <label for="uncertainty-mode">
+            <span>Uncertainty declaration</span>
+            <select id="uncertainty-mode">
+              <option value="bounded" selected>Bounded finite sample</option>
+              <option value="probabilistic">Seeded distribution sample</option>
+            </select>
+          </label>
+          <label for="ensemble-seed">
+            <span>Seed</span>
+            <input id="ensemble-seed" type="number" min="0" max="2147483647" step="1" value="1729" inputmode="numeric">
+          </label>
+          <label for="perturbation-law">
+            <span>Known design law</span>
+            <select id="perturbation-law">
+              <option value="off">Off</option>
+              <option value="linear" selected>Linear drift</option>
+              <option value="quadratic">Quadratic drift</option>
+              <option value="sinusoidal">Sinusoidal</option>
+              <option value="radial">Radial</option>
+              <option value="geometric">Geometric growth</option>
+            </select>
+          </label>
+          <label for="law-amplitude">
+            <span>Law amplitude α <output id="law-amplitude-value" for="law-amplitude">0.25×</output></span>
+            <input id="law-amplitude" type="range" min="0" max="2" step="0.05" value="0.25">
+          </label>
+          <label for="perturbation-direction">
+            <span>Launch-angle direction</span>
+            <select id="perturbation-direction">
+              <option value="custom">Custom angle</option>
+              <option value="weakest" selected>OIG weakest direction</option>
+              <option value="strongest">OIG strongest direction</option>
+            </select>
+          </label>
+          <label for="custom-direction-angle" id="custom-direction-label">
+            <span>Custom angle <output id="custom-direction-angle-value" for="custom-direction-angle">0°</output></span>
+            <input id="custom-direction-angle" type="range" min="-180" max="180" step="1" value="0" disabled>
+          </label>
+        </div>
+
+        <details class="realism-disclosure" id="realism-disclosure">
+          <summary>Disclose the actual uncertainty components</summary>
+          <div class="realism-body">
+            <dl class="component-grid">
+              <div><dt>Angle radius</dt><dd id="realism-preparation">—</dd><small id="realism-preparation-law">Law unavailable until declaration</small><small>propagated by the first-order live tube</small></div>
+              <div><dt>Velocity radius</dt><dd id="realism-velocity">—</dd><small id="realism-velocity-law">Law unavailable until declaration</small><small>angular-velocity displacement; not propagated by live tube</small></div>
+              <div><dt>Parameter radius</dt><dd id="realism-parameter">—</dd><small id="realism-parameter-law">Law unavailable until declaration</small><small>fractional m, ℓ, g; disclosed, not live-propagated</small></div>
+              <div><dt>Sensor scale</dt><dd id="realism-sensor">—</dd><small id="realism-sensor-law">Law unavailable until declaration</small><small>additive reading allowance included in the tube</small></div>
+              <div><dt>Clock radius</dt><dd id="realism-clock">—</dd><small id="realism-clock-law">Law unavailable until declaration</small><small>fractional time shift; disclosed, not live-propagated</small></div>
+            </dl>
+            <p id="uncertainty-mode-explanation"><strong>Bounded mode:</strong> members are deterministic seeded points inside the displayed component bounds. Coverage is an empirical count over those points, not a probability guarantee.</p>
+            <p class="law-boundary"><strong>Known design / hidden draws:</strong> <code id="structured-law-formula">f(s) = s</code> with the resolved α shown above is disclosed before freezing. Individual microscopic draws remain hidden until the outcome and are revealed only in the audit/export. The forecast displays a tube or distribution summary, never member-specific realization predictions.</p>
+          </div>
+        </details>
+      </form>
+    </section>
+
+    <section class="comparison" aria-labelledby="comparison-heading">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">The wind tunnel</p>
+          <h2 id="comparison-heading">Declared world / frozen OIG forecast</h2>
+        </div>
+        <div class="forecast-seal" id="forecast-seal" data-state="open" aria-live="polite">
+          <span class="seal-dot" aria-hidden="true"></span>
+          <span><small>Forecast seal</small><strong id="forecast-seal-label">Open — controls editable</strong></span>
+        </div>
+      </div>
+
+      <div class="comparison-grid">
+        <article class="instrument-panel dynamics-panel" aria-labelledby="dynamics-title">
+          <header class="panel-heading">
+            <div>
+              <p class="panel-kicker">Independent outcome</p>
+              <h3 id="dynamics-title">Double-pendulum dynamics</h3>
+            </div>
+            <div class="time-readout"><span>t</span><output id="simulation-time">0.000 s</output></div>
+          </header>
+          <div class="canvas-stage">
+            <canvas id="dynamics-canvas" width="960" height="720" role="img" aria-label="Perspective view of the double pendulum, showing the forecast centre and independent held-out outcome"></canvas>
+            <div class="stage-overlay top-left">
+              <span class="status-pill" id="animation-status" data-state="idle">Idle</span>
+            </div>
+            <div class="stage-overlay bottom-left canvas-legend" aria-label="Pendulum legend">
+              <span><i class="line-key actual-key" aria-hidden="true"></i>independent outcome</span>
+              <span><i class="line-key forecast-key" aria-hidden="true"></i>forecast centre</span>
+            </div>
+            <p class="canvas-hint">Drag to orbit · scroll to zoom</p>
+          </div>
+          <div class="playback-controls" aria-label="Animation controls">
+            <button id="play-pause" class="icon-button" type="button" disabled aria-label="Pause animation">Ⅱ</button>
+            <button id="replay-animation" class="icon-button" type="button" disabled aria-label="Replay animation">↺</button>
+            <label for="animation-scrubber" class="sr-only">Animation time</label>
+            <input id="animation-scrubber" type="range" min="0" max="1000" step="1" value="0" disabled>
+            <label for="animation-speed">
+              <span class="sr-only">Playback speed</span>
+              <select id="animation-speed">
+                <option value="0.5">½×</option>
+                <option value="1" selected>1×</option>
+                <option value="2">2×</option>
+              </select>
+            </label>
+          </div>
+        </article>
+
+        <article class="instrument-panel forecast-panel" aria-labelledby="forecast-title">
+          <header class="panel-heading">
+            <div>
+              <p class="panel-kicker">First-order numerical forecast · sealed before observation</p>
+              <h3 id="forecast-title">Sensor forecast vs outcome</h3>
+            </div>
+            <div class="forecast-id"><span>Forecast</span><code id="forecast-id">unsealed</code></div>
+          </header>
+          <div id="sensor-chart-wrap" class="sensor-chart-wrap">
+            <svg id="sensor-chart" viewBox="0 0 800 520" role="img" aria-labelledby="sensor-chart-title sensor-chart-desc">
+              <title id="sensor-chart-title">OIG sensor forecast and independent outcome</title>
+              <desc id="sensor-chart-desc">A frozen first-order numerical forecast centre, its declared tube or distribution band, and independently solved sensor outcomes over time.</desc>
+              <g id="sensor-chart-content"></g>
+            </svg>
+            <div id="chart-empty-state" class="chart-empty-state">
+              <span aria-hidden="true">⌁</span>
+              <strong>No forecast sealed yet</strong>
+              <small>Prepare a trial to draw the predicted sensor tube.</small>
+            </div>
+            <div id="sensor-tooltip" class="tooltip" role="tooltip" hidden></div>
+          </div>
+          <div class="plot-legend" aria-label="Sensor chart legend">
+            <span><i class="swatch forecast-line" aria-hidden="true"></i>forecast centre</span>
+            <span><i class="swatch uncertainty-band" aria-hidden="true"></i>declared tube / distribution band</span>
+            <span><i class="swatch actual-line" aria-hidden="true"></i>independent outcome</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="ensemble-results" class="ensemble-results" aria-labelledby="ensemble-results-heading" hidden>
+      <div class="section-heading compact-heading">
+        <div>
+          <p class="section-kicker">Finite-ensemble audit</p>
+          <h2 id="ensemble-results-heading">Where did the forecast survive, exit, or remain unresolved?</h2>
+        </div>
+        <p id="ensemble-statistical-note">Empirical numerical coverage over a finite seeded ensemble. A whole-horizon survival interval appears only for an eligible declared iid sample. This is not certified probability or physical truth.</p>
+      </div>
+
+      <div class="ensemble-metric-grid">
+        <article class="metric-card primary-metric">
+          <span>Member-time tube coverage</span>
+          <strong id="ensemble-coverage">—</strong>
+          <small id="ensemble-coverage-interval">fraction of all resolved member-time samples inside the frozen tube</small>
+        </article>
+        <article class="metric-card">
+          <span>Persistent exits</span>
+          <strong id="persistent-exits">—</strong>
+          <small id="persistence-gate-note">outside for ≥3 consecutive sampled times at the declared cadence</small>
+        </article>
+        <article class="metric-card">
+          <span>Survival at T</span>
+          <strong id="survival-endpoint">—</strong>
+          <small id="ensemble-survival-interval">whole-horizon no-exit members; interval awaiting a declared iid ensemble</small>
+        </article>
+        <article class="metric-card">
+          <span>Outliers</span>
+          <strong id="ensemble-outliers">—</strong>
+          <small id="ensemble-outlier-members">declared robust-spread rule; member IDs appear after the outcome</small>
+        </article>
+        <article class="metric-card">
+          <span>Projected output reconvergence</span>
+          <strong id="projected-reconvergence">—</strong>
+          <small>exited and later returned to the output tube</small>
+          <div class="metric-counterline">
+            <span>Full-state separation at output re-entry</span>
+            <output id="full-state-separation-at-reentry">—</output>
+            <small id="full-state-separation-note">median declared scaled norm; not attraction or synchronization</small>
+          </div>
+        </article>
+        <article class="metric-card">
+          <span>Unresolved</span>
+          <strong id="ensemble-unresolved">—</strong>
+          <small>invalid or incomplete member checks</small>
+        </article>
+      </div>
+
+      <div class="ensemble-plot-grid">
+        <figure class="ensemble-plot-card">
+          <figcaption><strong>Coverage and survival</strong><span>Pointwise output-tube coverage and never-exited survival over the declared horizon.</span></figcaption>
+          <svg id="ensemble-survival-chart" viewBox="0 0 800 420" role="img" aria-labelledby="ensemble-survival-title ensemble-survival-desc">
+            <title id="ensemble-survival-title">Finite ensemble coverage and survival over time</title>
+            <desc id="ensemble-survival-desc">Empirical percentages of finite seeded ensemble members inside the first-order tube and not yet exited.</desc>
+            <g id="ensemble-survival-content"></g>
+          </svg>
+          <div class="plot-legend"><span><i class="swatch coverage-series-key" aria-hidden="true"></i>pointwise coverage</span><span><i class="swatch survival-series-key" aria-hidden="true"></i>never-exited survival</span></div>
+        </figure>
+        <figure class="ensemble-plot-card">
+          <figcaption><strong>Predicted vs observed spread</strong><span>Observed percentile band against the frozen first-order predicted band.</span></figcaption>
+          <svg id="ensemble-spread-chart" viewBox="0 0 800 420" role="img" aria-labelledby="ensemble-spread-title ensemble-spread-desc">
+            <title id="ensemble-spread-title">Predicted and observed finite-ensemble sensor spread</title>
+            <desc id="ensemble-spread-desc">Frozen predicted fifth-to-ninety-fifth percentile band and median, with the observed fifth-to-ninety-fifth percentile band and median.</desc>
+            <g id="ensemble-spread-content"></g>
+          </svg>
+          <div class="plot-legend"><span><i class="swatch predicted-band-key" aria-hidden="true"></i>predicted P05–P95</span><span><i class="swatch predicted-median-key" aria-hidden="true"></i>predicted median</span><span><i class="swatch observed-band-key" aria-hidden="true"></i>observed P05–P95</span><span><i class="swatch median-key" aria-hidden="true"></i>observed median</span></div>
+        </figure>
+      </div>
+
+      <dl class="ensemble-spread-ledger">
+        <div><dt>Predicted amplification</dt><dd id="ensemble-predicted-amplification">—</dd></div>
+        <div><dt>Observed median amplification</dt><dd id="ensemble-observed-amplification">—</dd></div>
+        <div><dt>Observed P05 / P50 / P95 spread</dt><dd id="ensemble-percentiles">—</dd></div>
+        <div><dt>Display policy</dt><dd id="ensemble-display-policy">—</dd></div>
+      </dl>
+      <details class="member-disclosure" id="ensemble-member-details">
+        <summary>Reveal canonical member draws after the outcome</summary>
+        <div class="table-wrap">
+          <table>
+            <caption>Seeded finite member results; these microscopic draws were hidden until the forecast was frozen.</caption>
+            <thead><tr><th>Member</th><th>s</th><th>ξ</th><th>Base offset</th><th>Known-design offset</th><th>Total initial offset</th><th>Tube coverage</th><th>First persistent exit</th><th>Endpoint classification</th><th>Resolution</th></tr></thead>
+            <tbody id="ensemble-member-table"><tr><td colspan="10">No ensemble outcome yet.</td></tr></tbody>
+          </table>
+        </div>
+      </details>
+    </section>
+
+    <section id="single-results" class="results" aria-labelledby="results-heading">
+      <div class="section-heading compact-heading">
+        <div>
+          <p class="section-kicker">Prediction / result</p>
+          <h2 id="results-heading">Did the promised information appear?</h2>
+        </div>
+        <p id="result-summary" aria-live="polite">Run a trial to compare a frozen local forecast with a held-out outcome.</p>
+      </div>
+
+      <div class="metric-grid">
+        <article class="metric-card primary-metric">
+          <span>Tube coverage</span>
+          <strong id="tube-coverage">—</strong>
+          <small id="coverage-context">samples inside the frozen first-order numerical tube</small>
+        </article>
+        <article class="metric-card">
+          <span>Predicted amplification</span>
+          <strong id="predicted-amplification">—</strong>
+          <small>RMS local response per radian</small>
+        </article>
+        <article class="metric-card">
+          <span>Observed amplification</span>
+          <strong id="actual-amplification">—</strong>
+          <small>held-out RMS response per radian</small>
+        </article>
+        <article class="metric-card">
+          <span>Endpoint verdict</span>
+          <strong id="endpoint-classification">—</strong>
+          <small>at the declared sensor-noise radius</small>
+        </article>
+      </div>
+
+      <div class="diagnostic-grid">
+        <article class="gain-card" aria-labelledby="gain-title">
+          <header>
+            <div>
+              <p class="panel-kicker">Local response geometry</p>
+              <h3 id="gain-title">Observable and quiet directions</h3>
+            </div>
+            <span class="scope-chip">θ₁, θ₂</span>
+          </header>
+          <div class="gain-gauges">
+            <div>
+              <div class="gauge-label"><span>Weakest gain</span><output id="weakest-gain">—</output></div>
+              <div class="gauge-track" role="meter" aria-label="Weakest local gain relative to the strongest gain" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0" id="weakest-gain-meter"><i id="gain-gauge-fill"></i></div>
+              <small>least visible launch-angle direction</small>
+            </div>
+            <div>
+              <div class="gauge-label"><span>Strongest gain</span><output id="strongest-gain">—</output></div>
+              <div class="gauge-track strong" role="meter" aria-label="Strongest local gain" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0" id="strongest-gain-meter"><i></i></div>
+              <small>most amplified launch-angle direction</small>
+            </div>
+          </div>
+          <div class="direction-grid">
+            <div><span>Quiet direction</span><code id="weakest-direction">—</code></div>
+            <div><span>Observable direction</span><code id="strongest-direction">—</code></div>
+            <div><span>Held-out perturbation</span><code id="held-out-direction">hidden until run</code></div>
+            <div><span>Strong / weak gain ratio</span><code id="gain-ratio">—</code></div>
+          </div>
+        </article>
+
+        <article class="quality-card" aria-labelledby="quality-title">
+          <header>
+            <div>
+              <p class="panel-kicker">Independent numerical check</p>
+              <h3 id="quality-title">Refinement diagnostics</h3>
+            </div>
+          </header>
+          <dl class="quality-list">
+            <div><dt>Forecast / refined baseline</dt><dd id="refinement-error">—</dd></div>
+            <div><dt>Response h / h⁄2 relative discrepancy</dt><dd id="response-refinement-discrepancy">—</dd></div>
+            <div><dt>Weakest-gain relative shift</dt><dd id="weakest-gain-shift">—</dd></div>
+            <div><dt>Strongest-gain relative shift</dt><dd id="strongest-gain-shift">—</dd></div>
+            <div><dt>Relative energy drift</dt><dd id="energy-drift">—</dd></div>
+            <div><dt>Outcome solver</dt><dd id="outcome-solver">Dormand–Prince 5(4)</dd></div>
+            <div><dt>Forecast solver</dt><dd id="forecast-solver">Fixed-step RK4</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="atlas-section" aria-labelledby="atlas-heading">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">Initial-condition atlas</p>
+          <h2 id="atlas-heading">A torus of possible launches</h2>
+        </div>
+        <p>The seams meet: +π and −π are the same angle. The selected launch is marked on a committed 13 × 13 evidence field.</p>
+      </div>
+      <div class="atlas-grid">
+        <article class="atlas-figure">
+          <header class="panel-heading">
+            <div>
+              <p class="panel-kicker">Toroidal angle slice</p>
+              <h3 id="atlas-field-title">Weakest local gain</h3>
+            </div>
+            <label for="atlas-field-select">
+              <span class="sr-only">Atlas field</span>
+              <select id="atlas-field-select">
+                <option value="weakest" selected>Weakest local gain</option>
+                <option value="strongest">Strongest local gain</option>
+                <option value="stretch">Finite-time stretch</option>
+                <option value="energy">Initial energy</option>
+                <option value="resolved">Resolution status</option>
+              </select>
+            </label>
+          </header>
+          <div class="atlas-stage">
+            <canvas id="torus-atlas" width="1200" height="720" role="img" aria-label="Three-dimensional torus colored by the selected double-pendulum initial-condition atlas field"></canvas>
+            <div id="atlas-tooltip" class="tooltip" role="tooltip" hidden></div>
+            <p class="canvas-hint">Drag to orbit · select a torus cell to prepare that launch</p>
+          </div>
+          <div class="atlas-legend">
+            <span id="atlas-scale-min">low</span>
+            <i aria-hidden="true"></i>
+            <span id="atlas-scale-max">high</span>
+            <span class="unresolved-key"><b aria-hidden="true"></b> unresolved</span>
+          </div>
+        </article>
+
+        <aside class="atlas-reading" aria-labelledby="atlas-reading-title">
+          <p class="panel-kicker">Selected atlas cell</p>
+          <h3 id="atlas-reading-title">Launch coordinates</h3>
+          <dl>
+            <div><dt>Grid cell</dt><dd id="atlas-cell">custom launch</dd></div>
+            <div><dt>θ₁</dt><dd id="atlas-theta-1">0.800 rad</dd></div>
+            <div><dt>θ₂</dt><dd id="atlas-theta-2">−0.350 rad</dd></div>
+            <div><dt>Weakest gain</dt><dd id="atlas-weakest">—</dd></div>
+            <div><dt>Strongest gain</dt><dd id="atlas-strongest">—</dd></div>
+            <div><dt>Resolution</dt><dd id="atlas-status">—</dd></div>
+          </dl>
+          <p id="atlas-note">The atlas summarizes a fixed zero-velocity, four-second slice. Changing velocities or horizon creates a custom live trial; it does not alter the committed atlas.</p>
+          <p id="persistence-summary" class="persistence-summary">Loading the committed resolution, shift, and cadence audit…</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="design-section" aria-labelledby="design-heading">
+      <div class="section-heading compact-heading">
+        <div>
+          <p class="section-kicker">Active experimental design</p>
+          <h2 id="design-heading">What should we measure next?</h2>
+        </div>
+        <p>Live recommendation for resolving the current launch-angle geometry—not a certified global optimum.</p>
+      </div>
+      <article id="recommendation-card" class="recommendation-card" aria-live="polite">
+        <div class="recommendation-mark" aria-hidden="true">→</div>
+        <div>
+          <span>Recommended next reading</span>
+          <strong id="recommendation-sensor">Awaiting a forecast</strong>
+          <p id="recommendation-text">at <output id="recommendation-time">—</output>, with projected squared information floor <output id="recommendation-floor">—</output>.</p>
+        </div>
+        <button id="apply-recommendation" class="secondary-button" type="button" disabled>Use this sensor</button>
+      </article>
+    </section>
+
+    <section class="laboratory-section" aria-labelledby="laboratory-heading">
+      <details id="background-laboratory">
+        <summary>
+          <span><small>Background laboratory</small><strong id="laboratory-heading">Scale a live trial into a queued calibration study</strong></span>
+          <span class="scope-chip">N 50–1000 · T 1–30</span>
+        </summary>
+        <div class="laboratory-body">
+          <p class="laboratory-boundary">Runs remain synthetic, finite, seeded, and numerical. They can expose failure patterns; they do not establish physical adequacy or certified probability laws.</p>
+          <form id="laboratory-controls" class="laboratory-controls" onsubmit="return false">
+            <label for="laboratory-n-grid"><span>N grid</span><input id="laboratory-n-grid" type="text" value="50, 200" inputmode="numeric" aria-describedby="laboratory-grid-help"></label>
+            <label for="laboratory-t-grid"><span>T grid (seconds)</span><input id="laboratory-t-grid" type="text" value="4, 12" inputmode="decimal" aria-describedby="laboratory-grid-help"></label>
+            <label for="laboratory-repeats"><span>Repeated seeds <output id="laboratory-repeats-value" for="laboratory-repeats">2</output></span><input id="laboratory-repeats" type="range" min="1" max="20" step="1" value="2"></label>
+            <label for="laboratory-amplitudes"><span>Amplitude multipliers (× base preparation)</span><input id="laboratory-amplitudes" type="text" value="0, 0.25" inputmode="decimal"></label>
+            <fieldset class="law-sweep">
+              <legend>Law sweep</legend>
+              <label><input type="checkbox" value="off" data-laboratory-law checked> Off</label>
+              <label><input type="checkbox" value="linear" data-laboratory-law checked> Linear</label>
+              <label><input type="checkbox" value="quadratic" data-laboratory-law> Quadratic</label>
+              <label><input type="checkbox" value="sinusoidal" data-laboratory-law> Sinusoidal</label>
+              <label><input type="checkbox" value="radial" data-laboratory-law> Radial</label>
+              <label><input type="checkbox" value="geometric" data-laboratory-law> Geometric</label>
+            </fieldset>
+            <p id="laboratory-grid-help" class="form-help">Comma-separated grids are validated to N = 50…1000 and T = 1…30. Each cell is repeated with independently derived deterministic seeds.</p>
+            <div class="laboratory-actions">
+              <button id="run-laboratory" class="primary-button" type="button">Run queued study</button>
+              <button id="cancel-laboratory" class="secondary-button" type="button" disabled>Cancel</button>
+              <button id="export-laboratory" class="secondary-button" type="button" disabled>Export results</button>
+              <button id="laboratory-quick-preset" class="secondary-button" type="button">Quick preset</button>
+              <button id="laboratory-research-preset" class="secondary-button" type="button">Research-scale preset</button>
+              <output id="laboratory-job-count">32 jobs · estimating member-samples…</output>
+            </div>
+          </form>
+
+          <div class="laboratory-progress" aria-live="polite">
+            <label for="laboratory-progress"><span id="laboratory-status">Idle</span><output id="laboratory-progress-value">0%</output></label>
+            <progress id="laboratory-progress" max="1" value="0">0%</progress>
+          </div>
+
+          <div class="laboratory-results-grid">
+            <figure>
+              <figcaption><strong>N-by-T calibration surface</strong><span id="laboratory-figure-note">Coverage or survival summary appears after a queued study.</span></figcaption>
+              <svg id="laboratory-chart" viewBox="0 0 900 460" role="img" aria-labelledby="laboratory-chart-title laboratory-chart-desc">
+                <title id="laboratory-chart-title">Background laboratory N-by-T result surface</title>
+                <desc id="laboratory-chart-desc">Empirical finite-ensemble summary across ensemble sizes, horizons, laws, amplitudes, and repeated deterministic seeds.</desc>
+                <g id="laboratory-chart-content"></g>
+              </svg>
+            </figure>
+            <div class="table-wrap laboratory-table-wrap">
+              <table>
+                <caption>Compact completed-cell aggregates across repeated seeds</caption>
+                <thead><tr><th>N</th><th>T</th><th>Law</th><th>α</th><th>Repeats</th><th>Member-time coverage</th><th>Whole-horizon survival</th><th>Status</th></tr></thead>
+                <tbody id="laboratory-table-body"><tr id="laboratory-empty-row"><td colspan="8">No completed jobs yet.</td></tr></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="certification-section" aria-labelledby="certification-heading">
+      <div class="certificate-card">
+        <div class="certificate-copy">
+          <p class="section-kicker">Committed Tier-3 result</p>
+          <h2 id="certification-heading">A narrow theorem, not a blanket badge</h2>
+          <p>The certified result belongs to the fixed five-output A+B physical-parameter protocol with exact preparation and one shared clock direction. Slider-selected launch-angle trials remain live or refined evidence.</p>
+          <a href="../../artifacts/double_pendulum_grouped_physical_clock_floor.json">Inspect the certificate artifact</a>
+        </div>
+        <dl class="certificate-stats">
+          <div>
+            <dt>Certified response floor</dt>
+            <dd id="certified-floor">Unavailable until verified</dd>
+          </div>
+          <div>
+            <dt>Exact rational floor</dt>
+            <dd id="certified-exact">Unavailable until verified</dd>
+          </div>
+          <div>
+            <dt>Outputs</dt>
+            <dd id="certified-output-count">Awaiting verified data</dd>
+          </div>
+          <div>
+            <dt>Nuisance profiled</dt>
+            <dd id="certified-nuisance">Awaiting verified data</dd>
+          </div>
+          <div>
+            <dt>Artifact integrity</dt>
+            <dd id="certificate-integrity">Checking…</dd>
+          </div>
+          <div>
+            <dt>Two-row floor (no nuisance)</dt>
+            <dd id="two-row-floor">Unavailable until verified</dd>
+          </div>
+        </dl>
+        <div class="certificate-provenance">
+          <strong id="certificate-scope">Certificate unavailable until all source verifiers pass.</strong>
+          <ul id="provenance-list" aria-label="Certificate provenance checks">
+            <li>Waiting for committed evidence data…</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="ledger-section" aria-labelledby="ledger-heading">
+      <div class="section-heading compact-heading">
+        <div>
+          <p class="section-kicker">Auditable record</p>
+          <h2 id="ledger-heading">Prediction-versus-result ledger</h2>
+        </div>
+        <button id="export-ledger" class="secondary-button" type="button" disabled>Export current record</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <caption class="sr-only">Chronological record of forecast, outcome, and evidence events for the current experiment</caption>
+          <thead>
+            <tr>
+              <th scope="col">Test</th>
+              <th scope="col">Frozen claim</th>
+              <th scope="col">Observed</th>
+              <th scope="col">Verdict</th>
+            </tr>
+          </thead>
+          <tbody id="audit-ledger">
+            <tr id="ledger-empty-row">
+              <td colspan="4">No trial recorded. The ledger begins when a forecast is frozen.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="ledger-note">A mismatch can be <strong>falsified</strong> or <strong>unresolved</strong>; the interface does not silently convert either into agreement.</p>
+    </section>
+
+    <section class="interpretation" aria-labelledby="interpretation-heading">
+      <p class="section-kicker">What is being benchmarked?</p>
+      <h2 id="interpretation-heading">The pendulum is the wind tunnel. OIG is the aircraft.</h2>
+      <div class="interpretation-grid">
+        <p>The equations are deterministic, yet finite knowledge of the launch can make the future practically unpredictable. The animation shows that complex world.</p>
+        <p>OIG is tested on a harder question: which changes a sensor can see, which remain quiet, how uncertainty amplifies, and whether those claims survive an independent outcome.</p>
+        <p>A physical pendulum would add the next layer: calibration error, sensor behavior, preparation uncertainty, and the possibility that the declared model itself is inadequate.</p>
+      </div>
+    </section>
+
+    <noscript>
+      <p class="noscript">This laboratory needs JavaScript for simulation and plotting. The formal Atlas and committed certificate remain readable through the research links above.</p>
+    </noscript>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Scope:</strong> exploratory interface for the declared double-pendulum model. Live and refined calculations are not proofs. Only explicitly matched artifact-backed protocols receive the certified label.</p>
+  </footer>
+
+  <script src="wind-tunnel-data.js"></script>
+  <script src="wind-tunnel-core.js"></script>
+  <script src="wind-tunnel.js"></script>
+</body>
+</html>
