@@ -7,6 +7,7 @@ authors:
 version: 0.3.0
 date-released: 2026-08-16
 repository-code: "https://github.com/eruannaarte/adelic-arithmetic-research"
+license: Apache-2.0
 abstract: >-
   Executable theorem laboratories for adelic reconstruction, arithmetic
   sensing and observability, operational information geometry, certified
