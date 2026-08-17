@@ -204,7 +204,9 @@ python -m pip install -r requirements.txt -c reproducibility-constraints.txt
 The canonical numerical stack is NumPy 2.4.6, SciPy 1.15.2, mpmath 1.3.0,
 gmpy2 2.3.1, and python-flint 0.9.0. The separation between supported ranges
 and reproduction constraints prevents a newly released numerical library from
-silently changing byte-level artifact regeneration.
+silently changing artifact replay. Tier-1 floating reports use strict schemas,
+exact non-floating declarations, and a documented roundoff-scale comparator;
+byte equality of adaptive-solver diagnostics is not claimed across platforms.
 
 On Windows PowerShell, activate the environment with:
 

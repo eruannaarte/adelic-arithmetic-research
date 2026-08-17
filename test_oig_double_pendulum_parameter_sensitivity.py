@@ -25,6 +25,7 @@ from oig_double_pendulum_parameter_sensitivity import (
     simulate_log_ratio_sensitivities,
     verify_parameter_sensitivity_report,
 )
+from oig_numerical_replay import numerically_equivalent_json
 
 
 class AnalyticParameterForcingTests(unittest.TestCase):
@@ -185,7 +186,7 @@ class ParameterSensitivityReportTests(unittest.TestCase):
     def test_canonical_artifact_is_fresh(self):
         path = Path("artifacts/double_pendulum_parameter_sensitivity_tier1.json")
         stored = json.loads(path.read_text(encoding="utf-8"))
-        self.assertEqual(stored, self.report)
+        self.assertTrue(numerically_equivalent_json(stored, self.report))
 
 
 if __name__ == "__main__":

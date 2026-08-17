@@ -19,6 +19,7 @@ from oig_double_pendulum_structured_nuisance import (
 )
 from oig_query_protocol_design import verify_query_protocol_report
 from oig_structured_nuisance import verify_structured_nuisance_report
+from oig_numerical_replay import numerically_equivalent_json
 
 
 Q = Fraction
@@ -181,7 +182,7 @@ class DoublePendulumStructuredPhysicalNuisanceTests(unittest.TestCase):
         )
         committed = json.loads(path.read_text(encoding="utf-8"))
         self.assertTrue(verify_structured_physical_nuisance_report(committed)["passed"])
-        self.assertEqual(committed, self.report)
+        self.assertTrue(numerically_equivalent_json(committed, self.report))
 
 
 if __name__ == "__main__":

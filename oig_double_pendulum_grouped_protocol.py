@@ -52,6 +52,7 @@ from oig_query_protocol_design import (
     certify_query_protocol_mixture,
     verify_query_protocol_report,
 )
+from oig_numerical_replay import numerically_equivalent_json
 
 
 Q = Fraction
@@ -782,7 +783,7 @@ def verify_grouped_protocol_report(report: dict[str, object]) -> dict[str, objec
             raise ValueError("an outward or preparation-bound claim is forbidden")
         expected = build_grouped_protocol_report()
         recomputed = True
-        if not _strict_json_equal(report, expected):
+        if not numerically_equivalent_json(report, expected):
             raise ValueError("report does not strictly reproduce from the canonical finite library")
         children = report.get("exact_query_engine_children")
         if not isinstance(children, dict) or len(children) != 3:

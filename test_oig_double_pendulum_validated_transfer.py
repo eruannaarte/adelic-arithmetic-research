@@ -14,6 +14,7 @@ from flint import arb, ctx
 from double_pendulum_dynamics import DoublePendulumParameters, double_pendulum_rhs
 from oig_double_pendulum_protocol import canonical_protocol_candidates
 import oig_double_pendulum_validated_transfer as validated
+from oig_numerical_replay import numerically_equivalent_json
 
 
 Q = Fraction
@@ -246,7 +247,7 @@ class ValidatedTransferCertificateTests(unittest.TestCase):
             "double_pendulum_physical_positive_floor.json"
         )
         committed = json.loads(path.read_text())
-        self.assertEqual(committed, self.physical)
+        self.assertTrue(numerically_equivalent_json(committed, self.physical))
         self.assertIs(
             validated.verify_physical_positive_floor_certificate(committed)["passed"],
             True,

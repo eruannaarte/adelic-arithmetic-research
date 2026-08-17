@@ -46,6 +46,11 @@ from oig_double_pendulum_atlas import (
     cell_centred_torus_grid,
     trajectory_feature,
 )
+from oig_numerical_replay import (
+    REPLAY_ABSOLUTE_TOLERANCE,
+    REPLAY_RELATIVE_TOLERANCE,
+    replay_relative_float_equal,
+)
 
 
 Array = np.ndarray
@@ -1224,13 +1229,18 @@ def verify_variational_angle_slice_atlas_report(
                         values["fine_strongest_local_gain"],
                     )
                     if (
-                        values["gram_refinement_relative_discrepancy"]
-                        != _relative_difference(coarse_grams[cell], fine_grams[cell])
-                        or
-                        values["weakest_gain_refinement_relative_discrepancy"]
-                        != expected_weak_gain_error
-                        or values["strongest_gain_refinement_relative_discrepancy"]
-                        != expected_strong_gain_error
+                        not replay_relative_float_equal(
+                            values["gram_refinement_relative_discrepancy"],
+                            _relative_difference(coarse_grams[cell], fine_grams[cell]),
+                        )
+                        or not replay_relative_float_equal(
+                            values["weakest_gain_refinement_relative_discrepancy"],
+                            expected_weak_gain_error,
+                        )
+                        or not replay_relative_float_equal(
+                            values["strongest_gain_refinement_relative_discrepancy"],
+                            expected_strong_gain_error,
+                        )
                     ):
                         raise ValueError(
                             f"gain refinement discrepancy does not reproduce at {cell}"
@@ -1387,10 +1397,18 @@ def verify_variational_angle_slice_atlas_report(
                 variational_gram = _matrix2(
                     raw["variational_fine_gram"], "spot variational Gram"
                 )
-                if not np.array_equal(variational_gram, fine_grams[expected_cell]):
+                if not np.allclose(
+                    variational_gram,
+                    fine_grams[expected_cell],
+                    rtol=REPLAY_RELATIVE_TOLERANCE,
+                    atol=REPLAY_ABSOLUTE_TOLERANCE,
+                ):
                     raise ValueError("spot-check variational Gram differs from its grid field")
-                if response_error != _relative_difference(
-                    finite_difference_response, variational_response
+                if not replay_relative_float_equal(
+                    response_error,
+                    _relative_difference(
+                        finite_difference_response, variational_response
+                    ),
                 ):
                     raise ValueError("spot response discrepancy does not reproduce")
                 if not np.allclose(
@@ -1422,18 +1440,25 @@ def verify_variational_angle_slice_atlas_report(
                     -2.0e-11 * finite_scale
                 ):
                     raise ValueError("finite-difference Gram is not positive semidefinite")
-                if gram_error != _relative_difference(
-                    finite_difference_gram, variational_gram
+                if not replay_relative_float_equal(
+                    gram_error,
+                    _relative_difference(finite_difference_gram, variational_gram),
                 ):
                     raise ValueError("spot Gram discrepancy does not reproduce")
                 finite_difference_gains = _gram_gains(finite_difference_gram)
                 variational_gains = _gram_gains(variational_gram)
-                if weakest_gain_error != _positive_scalar_relative_difference(
-                    finite_difference_gains[0], variational_gains[0]
+                if not replay_relative_float_equal(
+                    weakest_gain_error,
+                    _positive_scalar_relative_difference(
+                        finite_difference_gains[0], variational_gains[0]
+                    ),
                 ):
                     raise ValueError("spot weakest-gain discrepancy does not reproduce")
-                if strongest_gain_error != _positive_scalar_relative_difference(
-                    finite_difference_gains[1], variational_gains[1]
+                if not replay_relative_float_equal(
+                    strongest_gain_error,
+                    _positive_scalar_relative_difference(
+                        finite_difference_gains[1], variational_gains[1]
+                    ),
                 ):
                     raise ValueError("spot strongest-gain discrepancy does not reproduce")
                 expected_pass = bool(

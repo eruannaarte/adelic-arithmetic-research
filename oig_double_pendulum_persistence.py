@@ -39,6 +39,12 @@ from oig_double_pendulum_atlas import (
     build_operational_atlas,
     toroidal_connected_components,
 )
+from oig_numerical_replay import (
+    REPLAY_ABSOLUTE_TOLERANCE,
+    REPLAY_RELATIVE_TOLERANCE,
+    numerically_equivalent_json,
+    replay_float_equal,
+)
 
 
 Array = np.ndarray
@@ -942,17 +948,7 @@ def build_research_persistence_report() -> dict[str, object]:
 
 
 def _same_json(left: object, right: object) -> bool:
-    if type(left) is not type(right):
-        return False
-    if isinstance(left, dict):
-        return left.keys() == right.keys() and all(
-            _same_json(left[key], right[key]) for key in left
-        )
-    if isinstance(left, list):
-        return len(left) == len(right) and all(
-            _same_json(a, b) for a, b in zip(left, right)
-        )
-    return left == right
+    return numerically_equivalent_json(left, right)
 
 
 def _numeric_grid(value: object, side: int, name: str) -> Array:
@@ -1201,7 +1197,12 @@ def verify_persistence_report(report: dict[str, object]) -> dict[str, object]:
             expected_energy = np.asarray(
                 total_energy(initial_states, parameters), dtype=float
             )
-            if not np.array_equal(initial_energy, expected_energy):
+            if not np.allclose(
+                initial_energy,
+                expected_energy,
+                rtol=REPLAY_RELATIVE_TOLERANCE,
+                atol=REPLAY_ABSOLUTE_TOLERANCE,
+            ):
                 raise ValueError("initial-energy field does not reconstruct")
             expected_resample = periodic_bilinear_resample(
                 source,
@@ -1209,7 +1210,12 @@ def verify_persistence_report(report: dict[str, object]) -> dict[str, object]:
                 target_side=config.common_side,
                 target_shift=config.common_shift,
             )
-            if not np.array_equal(common, expected_resample):
+            if not np.allclose(
+                common,
+                expected_resample,
+                rtol=REPLAY_RELATIVE_TOLERANCE,
+                atol=REPLAY_ABSOLUTE_TOLERANCE,
+            ):
                 raise ValueError("common-grid field does not reconstruct")
             drift = row.get("maximum_sampled_scaled_energy_drift")
             if isinstance(drift, bool) or not isinstance(drift, (int, float)):
@@ -1227,7 +1233,7 @@ def verify_persistence_report(report: dict[str, object]) -> dict[str, object]:
                 raise ValueError("no-turn fraction must be a JSON number")
             parsed_no_turn = _finite(no_turn, "no-turn fraction")
             expected_no_turn = float(np.mean(no_turn_mask))
-            if parsed_no_turn != expected_no_turn:
+            if not replay_float_equal(parsed_no_turn, expected_no_turn):
                 raise ValueError("no-turn fraction does not reconstruct from its mask")
             marked_count = row.get("source_reference_threshold_marked_count")
             if type(marked_count) is not int:

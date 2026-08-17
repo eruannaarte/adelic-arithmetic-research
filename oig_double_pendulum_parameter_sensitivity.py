@@ -47,6 +47,7 @@ from oig_double_pendulum_protocol import (
     PendulumProtocolCandidate,
     canonical_protocol_candidates,
 )
+from oig_numerical_replay import numerically_equivalent_json
 
 
 Array = np.ndarray
@@ -793,14 +794,14 @@ def verify_parameter_sensitivity_report(
     report: dict[str, object],
     config: ParameterSensitivityReportConfig = ParameterSensitivityReportConfig(),
 ) -> dict[str, object]:
-    """Recompute the canonical Tier-1 report and compare it strictly.
+    """Recompute the canonical Tier-1 report with portable float comparison.
 
     This is a numerical provenance check, not an outward verifier.
     """
 
     try:
         expected = build_parameter_sensitivity_report(config)
-        if report != expected:
+        if not numerically_equivalent_json(report, expected):
             raise ValueError("report does not reproduce from the declared configuration")
         if report.get("status") != "resolved":
             raise ValueError("the canonical Tier-1 gates are unresolved")

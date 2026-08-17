@@ -48,6 +48,11 @@ from oig_structured_nuisance import (
     certify_structured_nuisance_separation,
     verify_structured_nuisance_report,
 )
+from oig_numerical_replay import (
+    REPLAY_ABSOLUTE_TOLERANCE,
+    REPLAY_RELATIVE_TOLERANCE,
+    replay_float_equal,
+)
 
 
 Q = Fraction
@@ -666,7 +671,12 @@ def _verify_terminal_record(
     reconstructed_rhs = np.asarray(
         double_pendulum_rhs(tau, state, DIMENSIONLESS_PARAMETERS), dtype=float
     )
-    if not np.array_equal(rhs, reconstructed_rhs):
+    if not np.allclose(
+        rhs,
+        reconstructed_rhs,
+        rtol=REPLAY_RELATIVE_TOLERANCE,
+        atol=REPLAY_ABSOLUTE_TOLERANCE,
+    ):
         raise ValueError(f"{name} terminal RHS does not reconstruct from state")
     output = _numeric(record["sensor_output"], f"{name}.sensor_output")
     clock = _numeric(record["clock_log_dilation_column_entry"], f"{name}.clock")
@@ -674,11 +684,18 @@ def _verify_terminal_record(
     preparation = _numeric_array(
         record["initial_angle_preparation_row"], (2,), f"{name}.preparation"
     )
-    if output != float(state[index]) or gain != output:
+    if not replay_float_equal(
+        output, float(state[index])
+    ) or not replay_float_equal(gain, output):
         raise ValueError(f"{name} gain column does not equal the sensor output")
-    if clock != float(tau * rhs[index]):
+    if not replay_float_equal(clock, float(tau * rhs[index])):
         raise ValueError(f"{name} clock column does not equal tau*dy/dtau")
-    if not np.array_equal(preparation, tangent[index, :2]):
+    if not np.allclose(
+        preparation,
+        tangent[index, :2],
+        rtol=REPLAY_RELATIVE_TOLERANCE,
+        atol=REPLAY_ABSOLUTE_TOLERANCE,
+    ):
         raise ValueError(f"{name} preparation row does not come from the tangent")
     drift = _numeric(record["max_scaled_energy_drift"], f"{name}.energy drift")
     if config.energy_drift_tolerance is None or drift < 0 or drift > config.energy_drift_tolerance:
@@ -787,7 +804,10 @@ def verify_structured_physical_nuisance_report(
             if not isinstance(raw_discrepancies, dict) or set(raw_discrepancies) != set(expected_discrepancies):
                 raise ValueError(f"protocol {index} refinement discrepancies malformed")
             for field, expected in expected_discrepancies.items():
-                if _numeric(raw_discrepancies[field], f"protocol[{index}].{field}") != expected:
+                if not replay_float_equal(
+                    _numeric(raw_discrepancies[field], f"protocol[{index}].{field}"),
+                    expected,
+                ):
                     raise ValueError(f"protocol {index} {field} does not reconstruct")
 
             declaration = raw.get("declared_rational_point_columns")
@@ -815,7 +835,12 @@ def verify_structured_physical_nuisance_report(
             expected_errors = np.asarray(
                 [abs(float(value) - float(exact)) for value, exact in zip(fine_columns, exact_values)]
             )
-            if not np.array_equal(errors, expected_errors):
+            if not np.allclose(
+                errors,
+                expected_errors,
+                rtol=REPLAY_RELATIVE_TOLERANCE,
+                atol=REPLAY_ABSOLUTE_TOLERANCE,
+            ):
                 raise ValueError(f"protocol {index} rationalization errors do not reconstruct")
             passed = (
                 expected_discrepancies["state_relative"] <= REFINEMENT_GATES["state_relative"]

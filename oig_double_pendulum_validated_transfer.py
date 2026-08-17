@@ -50,6 +50,7 @@ from oig_interval_protocol_design import (
     design_enclosed_protocols,
     verify_enclosed_design_report,
 )
+from oig_numerical_replay import numerically_equivalent_json
 
 
 Q = Fraction
@@ -1052,7 +1053,7 @@ def verify_physical_positive_floor_certificate(
                 ],
             )
         )
-        if not _strict_json_equal(rebuilt, report):
+        if not numerically_equivalent_json(rebuilt, report):
             raise ValueError("composed certificate does not equal independent recomputation")
         return {
             "passed": True,
@@ -1085,7 +1086,7 @@ def verify_validated_transfer_report(report: dict[str, object]) -> dict[str, obj
             maximum_tube_iterations=configuration.get("maximum_tube_iterations"),  # type: ignore[arg-type]
         )
         rebuilt = build_validated_transfer_report(config)
-        if not _strict_json_equal(rebuilt, report):
+        if not numerically_equivalent_json(rebuilt, report):
             raise ValueError("serialized report does not equal an independent recomputation")
         if rebuilt["all_active_declared_box_memberships_certified"] is not True:
             raise ValueError("one or more physical response-box memberships remain unresolved")

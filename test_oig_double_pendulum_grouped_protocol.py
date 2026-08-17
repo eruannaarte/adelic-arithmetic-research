@@ -19,6 +19,7 @@ from oig_double_pendulum_grouped_protocol import (
     verify_grouped_protocol_report,
 )
 from oig_query_protocol_design import verify_query_protocol_report
+from oig_numerical_replay import numerically_equivalent_json
 
 
 Q = Fraction
@@ -190,7 +191,7 @@ class DoublePendulumGroupedProtocolTests(unittest.TestCase):
             / "double_pendulum_grouped_protocol_tier1.json"
         )
         committed = json.loads(artifact.read_text(encoding="utf-8"))
-        self.assertEqual(committed, self.report)
+        self.assertTrue(numerically_equivalent_json(committed, self.report))
         self.assertTrue(verify_grouped_protocol_report(committed)["passed"])
 
 
