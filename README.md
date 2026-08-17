@@ -192,6 +192,20 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
+The project metadata intentionally retains supported dependency ranges for
+ordinary use. To reproduce the committed numerical artifacts in their
+canonical environment, apply the checked-in constraints used by GitHub
+Actions:
+
+```sh
+python -m pip install -r requirements.txt -c reproducibility-constraints.txt
+```
+
+The canonical numerical stack is NumPy 2.4.6, SciPy 1.15.2, mpmath 1.3.0,
+gmpy2 2.3.1, and python-flint 0.9.0. The separation between supported ranges
+and reproduction constraints prevents a newly released numerical library from
+silently changing byte-level artifact regeneration.
+
 On Windows PowerShell, activate the environment with:
 
 ```powershell
