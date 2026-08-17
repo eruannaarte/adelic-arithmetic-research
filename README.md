@@ -1,7 +1,8 @@
 # Adelic Arithmetic Research
 
 This repository contains the manuscripts, executable laboratories, and tests
-for two TGN research publications:
+for two TGN research publications and one new operational-geometry research
+program:
 
 1. **The Geometry Arithmetic Remembers** — an eight-stage path from ordered
    multiplicative rigidity through adelic harmonic analysis, number-field
@@ -9,6 +10,26 @@ for two TGN research publications:
 2. **Arithmetic Sensing** — stable recovery of finite Dirichlet coefficients
    from noisy global traces, deterministic tapered quadrature, complete
    analytic-tail certificates, and explicit nonidentifiability results.
+3. **Operational Information Geometry** — a finite, falsifiable construction
+   in which restricted histories induce a quotient geometry, tested on a
+   factorization universe against degree-preserving random controls, followed
+   by protocol-invariance, common-kernel, composition, interaction, and
+   directed-intervention audits.
+
+The fifth operational-geometry layer supplies the first controlled scale flow:
+cell-centred continuum normalization, noncommuting spectral-dimension limits,
+target-mode response reduction, smooth-versus-atomic regularity, a diffusive
+signed-displacement leakage theorem, and exact protocol counterexamples. The
+adjacent Stage IV E-design is also independently bracketed with rational
+witnesses and 192-bit Arb arithmetic.
+
+Stages VI and VII then prove the fixed-mode continuum limit and resolve the
+smooth-to-atomic initial layer. A concentrating target of width
+\(\varepsilon\) has an explicit continuum phase function in
+\(t/\varepsilon^2\); at \(\varepsilon/h=O(1)\), an explicit lattice phase
+retains cell placement and preparation rules. The two charts match, while an
+adversarial audit separates multiplication-moment order from the complete
+noncommutative causal-word hierarchy.
 
 The active continuation includes continuum-certified arithmetic window design
 and a cancellation-aware log-Mellin certificate for higher-degree coefficient
@@ -163,6 +184,131 @@ python arithmetic_sensing_iv.py --ratio-study
 
 See `ARITHMETIC_SENSING_IV.md` for the interval divisor theorem, continuation
 tables, fixed-degree extension, and novelty boundary.
+
+## Reproduce Operational Information Geometry
+
+Run the focused theorem and falsification tests:
+
+```sh
+python -m unittest -v test_operational_information_geometry.py
+```
+
+Recompute the reference factorization universe and 32 connected
+degree-preserving controls:
+
+```sh
+python operational_information_geometry.py --controls 32
+```
+
+See `OPERATIONAL_INFORMATION_GEOMETRY_I.md` for the operational quotient
+metric, exact Gaussian testing interpretation, product-spectrum theorem,
+matched controls, negative result for arbitrary-mixture recovery, and scope.
+
+Run the Stage II protocol-invariance and mixture-recovery laboratory:
+
+```sh
+python -m unittest -v test_operational_information_geometry_ii.py
+python operational_information_geometry_ii.py --protocols 16
+```
+
+See `OPERATIONAL_INFORMATION_GEOMETRY_II.md` for the finite random-projection
+guarantee, schedule dependence, exact 125-dimensional common blind subspace,
+explicit nonnegative mixture collision, and early refreshed-sensor remedy.
+
+Run the Stage III composition and interaction laboratory:
+
+```sh
+python -m unittest -v test_operational_information_geometry_iii.py
+python operational_information_geometry_iii.py --interaction-strength 0.4
+```
+
+See `OPERATIONAL_INFORMATION_GEOMETRY_III.md` for exact Cartesian and tensor
+composition laws, the correlation kernel, signed mixed spectral witness,
+Markov no-go boundary and control, and positive multiscale interaction design.
+
+Run the Stage IV intervention and causal-envelope laboratory:
+
+```sh
+python -m unittest -v test_operational_information_geometry_iv.py
+python operational_information_geometry_iv.py --protocol-seeds 32
+```
+
+See `OPERATIONAL_INFORMATION_GEOMETRY_IV.md` for the directed response kernel,
+an exactly one-way subsystem response inside a symmetric Markov generator, the
+finite causal-jet theorem, passive-versus-interventional ranks, the
+uniformization Poisson propagation envelope, stationary-background control,
+compressed-protocol audits, and positive multiscale response design.
+
+Run the Stage V scale-flow and continuum laboratories:
+
+```sh
+python -m unittest -v test_operational_information_geometry_v.py
+python operational_information_geometry_v.py
+python -m unittest -v test_oig_v_scaling_continuum.py
+python oig_v_scaling_continuum.py --maximum-side-length 64
+```
+
+See `OPERATIONAL_INFORMATION_GEOMETRY_V.md` for the exact path scaling,
+mesoscopic dimension theorem, directed modal reduction, causal-jet regularity
+and symmetry bounds, diffusive leakage envelope, expanding-domain control,
+path-space sensor result, and next proof targets.
+
+Run the Stage VI fixed-mode continuum theorem, high-precision audit, and
+adversarial controls:
+
+    python -m pip install -r oig_vi_fixed_mode_requirements.txt
+    python oig_vi_fixed_mode_convergence.py
+    python -m unittest -v test_oig_vi_fixed_mode_convergence.py
+    python oig_vi_adversarial_controls.py
+    python -m unittest -v test_oig_vi_adversarial_controls.py
+
+See [OPERATIONAL_INFORMATION_GEOMETRY_VI.md](OPERATIONAL_INFORMATION_GEOMETRY_VI.md)
+for compact Mosco convergence, positive-time embedded semigroup convergence,
+fixed-response convergence through time zero, the smooth positive-time
+\(O(n^{-2})\) theorem, atomic and growing-band boundaries, and the next
+mollifier target.
+
+Run the Stage VII smooth-to-atomic phase laboratories:
+
+    python -m pip install -r oig_vii_mollifier_requirements.txt
+    python -m unittest -v test_oig_vii_mollifier_phase.py
+    python oig_vii_mollifier_phase.py --fast
+    python oig_vii_mollifier_phase.py
+    python oig_vii_adversarial_controls.py
+    python -m unittest -v test_oig_vii_adversarial_controls.py
+
+See [OPERATIONAL_INFORMATION_GEOMETRY_VII.md](OPERATIONAL_INFORMATION_GEOMETRY_VII.md)
+for the continuum and lattice phase laws, their matching limit, odd/even ramp
+critical widths, fixed-positive-time atomic universality, and the explicit
+boundary between multiplication moments and complete causal order.
+
+Run the Stage VIII uniform three-parameter atlas and adversarial controls:
+
+    python -m pip install -r oig_viii_three_parameter_requirements.txt
+    python -m unittest -v test_oig_viii_three_parameter.py
+    python -m unittest -v test_oig_viii_adversarial_controls.py
+    python oig_viii_three_parameter.py --fast
+    python oig_viii_three_parameter.py
+
+See [OPERATIONAL_INFORMATION_GEOMETRY_VIII.md](OPERATIONAL_INFORMATION_GEOMETRY_VIII.md)
+for the quantitative resolved and lattice charts, the direct simultaneous
+atomic theorem, reflecting-boundary crossover, critical-width resolution
+certificates, and the discrete-moment obstruction. The dedicated dependency
+surface, exact source digests, reference environment, and complete validation
+commands are frozen in
+[OIG_VIII_REPRODUCIBILITY_MANIFEST.md](OIG_VIII_REPRODUCIBILITY_MANIFEST.md).
+
+Run the outward-rounded finite-grid E-design certificate separately:
+
+```sh
+python -m pip install -r oig_iv_certificate_requirements.txt
+python oig_iv_certificate.py --grid both
+python -m unittest -v test_oig_iv_certificate.py
+```
+
+The certificate proves
+`4.982412e-9 <= z_* <= 4.982942e-9` on both the exact canonical grid and the
+frozen binary64 grid. It does not certify a continuum-time optimum.
 
 ## Reproduce Arithmetic Sensing V
 
@@ -328,6 +474,55 @@ For the public synthesis of the complete progression, see
   complete million-mode duals, and the finite pair-support stopping theorem
 - `STAGE_9_ARITHMETIC_SENSING_PLAN.md` — research plan and falsification rules
 
+### Research program 3 — Operational Information Geometry
+
+- `OPERATIONAL_INFORMATION_GEOMETRY_I.md` — first theorem-and-falsification
+  layer: geometry from distinguishable histories
+- `OPERATIONAL_INFORMATION_GEOMETRY_II.md` — protocol invariance, adversarial
+  observers, common kernels, and stable mixture recovery
+- `OPERATIONAL_INFORMATION_GEOMETRY_III.md` — independent composition, hidden
+  interactions, Markov boundaries, and multiscale observation
+- `OPERATIONAL_INFORMATION_GEOMETRY_IV.md` — interventions, finite causal jets,
+  one-way rate modulation, and approximate causal cones
+- `OPERATIONAL_INFORMATION_GEOMETRY_V.md` — continuum scale flow,
+  noncommuting dimension limits, response regularity, diffusive leakage, and
+  protocol boundaries
+- [OPERATIONAL_INFORMATION_GEOMETRY_VI.md](OPERATIONAL_INFORMATION_GEOMETRY_VI.md)
+  — fixed-mode continuum theorem, sharp positive-time response rate, and
+  time-zero boundary
+- [OIG_VI_FIXED_MODE_RESPONSE_THEOREM.md](OIG_VI_FIXED_MODE_RESPONSE_THEOREM.md)
+  — detailed Mosco and quantitative finite-element proof
+- [oig_vi_fixed_mode_convergence.md](oig_vi_fixed_mode_convergence.md) —
+  exact modal expansion, high-precision audit, and outward-rounded finite-block
+  checks
+- [OIG_VI_ADVERSARIAL_AUDIT.md](OIG_VI_ADVERSARIAL_AUDIT.md) — rate, atom,
+  endpoint, symmetry, and growing-band falsification controls
+- [OPERATIONAL_INFORMATION_GEOMETRY_VII.md](OPERATIONAL_INFORMATION_GEOMETRY_VII.md)
+  — smooth-to-atomic phase diagram, continuum/lattice matching, and critical
+  width boundary
+- [OIG_VII_CONTINUUM_MOLLIFIER_THEOREM.md](OIG_VII_CONTINUUM_MOLLIFIER_THEOREM.md)
+  — detailed balanced, early, atomic, and finite-cell proofs
+- [oig_vii_mollifier_phase.md](oig_vii_mollifier_phase.md) — full-generator,
+  high-precision, lattice, bridge, and phase-ridge audit
+- [OIG_VII_ADVERSARIAL_AUDIT.md](OIG_VII_ADVERSARIAL_AUDIT.md) — sampling,
+  boundary, operator-topology, and mixed-word counterexamples
+- [OPERATIONAL_INFORMATION_GEOMETRY_VIII.md](OPERATIONAL_INFORMATION_GEOMETRY_VIII.md)
+  — uniform three-parameter atlas, simultaneous atomic theorem, boundary
+  crossover, and critical-resolution barrier
+- [OIG_VIII_RESOLVED_UNIFORM_THEOREM.md](OIG_VIII_RESOLVED_UNIFORM_THEOREM.md)
+  — detailed balanced, early, ultra-early, and heat-resolved comparison proof
+- [OIG_VIII_LATTICE_UNIFORM_THEOREM.md](OIG_VIII_LATTICE_UNIFORM_THEOREM.md)
+  — finite-cell chart, joint atomic tail, variance criterion, and boundary law
+- [oig_viii_three_parameter.md](oig_viii_three_parameter.md) — rectangular
+  stress scan, overlap rates, critical slowdown, and explicit counterexamples
+- [OIG_VIII_ADVERSARIAL_AUDIT.md](OIG_VIII_ADVERSARIAL_AUDIT.md) — independent
+  normalization, rate, null-port, boundary, and proof-gap audit
+- [OIG_VIII_REPRODUCIBILITY_MANIFEST.md](OIG_VIII_REPRODUCIBILITY_MANIFEST.md)
+  — minimal dependencies, immutable theorem commit, source digests, and
+  validation commands
+- `oig_iv_certificate.md` — outward-rounded finite-grid E-design certificate
+- `oig_v_scaling_report.md` — independent continuum and propagation audit
+
 `RESEARCH_ROADMAP.md` records the overall sequence and the boundary between
 proved results, computation, conjecture, and interpretation.
 
@@ -339,6 +534,32 @@ proved results, computation, conjecture, and interpretation.
 - `optimized_arithmetic_quadrature.py` — convex arithmetic window design
 - `fixed_degree_arithmetic_sensing.py` — universal `d_d` coefficient envelopes
 - `arithmetic_sensing_iv.py` — Stage IV reproduction and continuation studies
+- `operational_information_geometry.py` — observable-history geometry,
+  factorization universe, matched controls, and finite diagnostics
+- `operational_information_geometry_ii.py` — protocol ensembles, scale-free
+  distortion, axis-blind controls, and simplex-tangent recovery
+- `operational_information_geometry_iii.py` — composition laws, interaction
+  witnesses, Markov controls, and positive multiscale design
+- `operational_information_geometry_iv.py` — directed response, finite causal
+  jets, uniformization envelopes, background controls, compressed response
+  protocols, and positive finite-grid response design
+- `operational_information_geometry_v.py` — canonical continuum-normalized
+  scale flow, spectral dimension, modal response, and protocol boundaries
+- `oig_v_scaling_continuum.py` — independent regularity, propagation, and
+  expanding-domain audit
+- [oig_vi_fixed_mode_convergence.py](oig_vi_fixed_mode_convergence.py) —
+  exact midpoint structure, fixed-block expansion, high-precision continuum
+  comparison, and Galerkin-tail audit
+- [oig_vi_adversarial_controls.py](oig_vi_adversarial_controls.py) —
+  nonsmooth, atomic, endpoint, symmetry, and growing-band controls
+- [oig_vii_mollifier_phase.py](oig_vii_mollifier_phase.py) — continuum and
+  lattice phase functions, full finite modal responses, bridge, and ridge
+  audits
+- [oig_vii_adversarial_controls.py](oig_vii_adversarial_controls.py) —
+  lattice-phase, boundary, sampling, topology, symmetry, and mixed-jet controls
+- [oig_viii_three_parameter.py](oig_viii_three_parameter.py) — finite,
+  lattice, continuum, early, and atomic chart comparisons plus hostile paths
+- `oig_iv_certificate.py` — rational/Arb finite-grid E-design checker
 - `arithmetic_sensing_v.py` — Stage V reproduction and boundary studies
 - `exact_trigonometric_positivity.py` — exact rational Sturm certificates
 - `verified_mellin_certificate.py` — directed MPFR and exact convolution core
