@@ -1121,6 +1121,20 @@ central sources are:
 
 ## License
 
-No reuse license has yet been assigned. The repository is public for
-inspection and reproducibility; copyright and reuse terms remain reserved
-until the human owner chooses a license.
+This work is openly licensed so it can be reused, tested, extended, and built
+upon:
+
+- The repository as a whole—including its software, tests, verifiers, and
+  executable laboratories—is available under the
+  [Apache License 2.0](LICENSE).
+- Original manuscripts, documentation, figures, diagrams, and non-software
+  explanatory content are additionally available under the
+  [Creative Commons Attribution 4.0 International License](LICENSE-CONTENT.md)
+  (CC BY 4.0).
+
+Both licenses permit modification, redistribution, and commercial use under
+their stated conditions. Preserve attribution and license notices, identify
+modified material, and cite the repository using [`CITATION.cff`](CITATION.cff)
+when the research contributes to your work. Third-party materials and external
+dependencies retain their own licenses. The licenses do not imply endorsement
+and provide the work without warranty.
