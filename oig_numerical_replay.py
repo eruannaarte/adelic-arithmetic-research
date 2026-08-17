@@ -18,6 +18,7 @@ import math
 
 REPLAY_RELATIVE_TOLERANCE = 5.0e-9
 REPLAY_ABSOLUTE_TOLERANCE = 5.0e-11
+REPLAY_DISCREPANCY_ABSOLUTE_TOLERANCE = 5.0e-14
 
 _VOLATILE_POSITIVE_INTEGER_KEYS = frozenset({"accepted_step_count", "nfev"})
 
@@ -38,14 +39,24 @@ def replay_float_equal(left: float, right: float) -> bool:
 
 
 def replay_relative_float_equal(left: float, right: float) -> bool:
-    """Compare a nonnegative derived discrepancy without a broad zero floor."""
+    """Compare a nonnegative derived discrepancy near the roundoff floor.
+
+    The absolute term is deliberately far below every scientific acceptance
+    threshold in the Tier-1 reports. It prevents a few ulps in a nearly equal
+    pair of singular values from becoming a large *relative* replay error,
+    while remaining small enough to reject material changes to the stored
+    discrepancy itself.
+    """
 
     if not math.isfinite(left) or not math.isfinite(right):
         return False
     scale = max(abs(left), abs(right))
     if scale == 0.0:
         return True
-    return abs(left - right) <= REPLAY_RELATIVE_TOLERANCE * scale
+    return abs(left - right) <= max(
+        REPLAY_DISCREPANCY_ABSOLUTE_TOLERANCE,
+        REPLAY_RELATIVE_TOLERANCE * scale,
+    )
 
 
 def numerically_equivalent_json(left: object, right: object) -> bool:

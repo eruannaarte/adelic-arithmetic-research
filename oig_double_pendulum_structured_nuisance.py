@@ -177,7 +177,12 @@ def _numeric_array(value: object, shape: tuple[int, ...], name: str) -> np.ndarr
 def _rationalize(value: float) -> Fraction:
     if not math.isfinite(float(value)):
         raise ValueError("cannot rationalize a non-finite value")
-    return Q(float(value)).limit_denominator(RATIONALIZATION_MAX_DENOMINATOR)
+    # The exact child theorems need a fixed rational declaration, not a
+    # platform-dependent best approximation to the last binary64 ulp emitted
+    # by an adaptive ODE solver. Nine decimal places give a reproducible grid
+    # with denominator at most 10^9 and worst-case error 5e-10, well inside the
+    # declared 1e-8 rationalization gate.
+    return Q(format(float(value), ".9f"))
 
 
 def _relative_discrepancy(left: np.ndarray, right: np.ndarray) -> float:

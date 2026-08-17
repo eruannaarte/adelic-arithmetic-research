@@ -207,6 +207,9 @@ and reproduction constraints prevents a newly released numerical library from
 silently changing artifact replay. Tier-1 floating reports use strict schemas,
 exact non-floating declarations, and a documented roundoff-scale comparator;
 byte equality of adaptive-solver diagnostics is not claimed across platforms.
+Numerically discovered structured-nuisance columns are mapped to a declared
+nine-decimal rational grid before the exact conditional certificates are
+built, so the rational surrogate is stable across supported runners.
 
 On Windows PowerShell, activate the environment with:
 

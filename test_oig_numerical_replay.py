@@ -27,6 +27,9 @@ class NumericalReplayComparisonTests(unittest.TestCase):
         )
         self.assertFalse(replay_relative_float_equal(1.0e-13, 2.0e-13))
 
+    def test_tiny_discrepancy_has_a_narrow_roundoff_floor(self) -> None:
+        self.assertTrue(replay_relative_float_equal(2.50e-12, 2.52e-12))
+
     def test_schema_and_exact_types_remain_strict(self) -> None:
         self.assertFalse(numerically_equivalent_json({"rank": 1}, {"rank": True}))
         self.assertFalse(numerically_equivalent_json({"rank": 1}, {"rank": 1.0}))
