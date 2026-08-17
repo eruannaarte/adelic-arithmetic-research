@@ -1,0 +1,1201 @@
+{
+  "payload": {
+    "atlas": {
+      "binding_direction": "corpus-payload-to-atlas; atlas names schema and payload key but no corpus artifact hash",
+      "bytes": 23993,
+      "path": "ARITHMETIC_OBSERVABILITY_ATLAS.md",
+      "sha256": "b381d3f9424de5ed5e6cfe35c27093ee2ce38b08d742299bfe7a1ee7a55db10f"
+    },
+    "corpus": {
+      "formal_package_count": 11,
+      "manuscript_count": 10,
+      "name": "Arithmetic Observability I-X",
+      "schema": "arithmetic-observability-corpus-v1",
+      "terminology": {
+        "confusability": "general response-fibre overlap; not asserted to be transitive",
+        "observational_equivalence": "deterministic response equality or equality after a declared common quotient",
+        "tail_set": "compact integer-selection image; not a discrete data-space set"
+      },
+      "triplet_file_count": 33
+    },
+    "dependency_dag": {
+      "edge_semantics": "source node depends directly on target node",
+      "formal_artifact_edges": [
+        [
+          "PKG-alias-circle",
+          "EXT-ASV"
+        ],
+        [
+          "PKG-alias-circle",
+          "EXT-MELLIN"
+        ],
+        [
+          "PKG-alias-circle",
+          "EXT-TRIG"
+        ],
+        [
+          "PKG-alias-circle",
+          "PKG-common-nuisance"
+        ],
+        [
+          "PKG-asv-bridge",
+          "EXT-ASV"
+        ],
+        [
+          "PKG-common-nuisance",
+          "EXT-ASV"
+        ],
+        [
+          "PKG-convexification-gap",
+          "EXT-ASV"
+        ],
+        [
+          "PKG-convexification-gap",
+          "EXT-MELLIN"
+        ],
+        [
+          "PKG-convexification-gap",
+          "EXT-TRIG"
+        ],
+        [
+          "PKG-convexification-gap",
+          "PKG-alias-circle"
+        ],
+        [
+          "PKG-convexification-gap",
+          "PKG-common-nuisance"
+        ],
+        [
+          "PKG-discrete-queries",
+          "EXT-ASV"
+        ],
+        [
+          "PKG-full-segre",
+          "AO-VI"
+        ]
+      ],
+      "logical_manuscript_edges": [
+        [
+          "AO-II",
+          "AO-I"
+        ],
+        [
+          "AO-III",
+          "AO-I"
+        ],
+        [
+          "AO-III",
+          "AO-II"
+        ],
+        [
+          "AO-IV",
+          "AO-III"
+        ],
+        [
+          "AO-IX",
+          "AO-I"
+        ],
+        [
+          "AO-IX",
+          "AO-VIII"
+        ],
+        [
+          "AO-IX",
+          "EXT-ASV"
+        ],
+        [
+          "AO-V",
+          "AO-IV"
+        ],
+        [
+          "AO-VI",
+          "AO-I"
+        ],
+        [
+          "AO-VI",
+          "AO-III"
+        ],
+        [
+          "AO-VI",
+          "AO-IV"
+        ],
+        [
+          "AO-VI",
+          "AO-V"
+        ],
+        [
+          "AO-VII",
+          "AO-I"
+        ],
+        [
+          "AO-VII",
+          "EXT-ASV"
+        ],
+        [
+          "AO-VIII",
+          "AO-I"
+        ],
+        [
+          "AO-VIII",
+          "AO-VII"
+        ],
+        [
+          "AO-VIII",
+          "EXT-ASV"
+        ],
+        [
+          "AO-X",
+          "AO-IX"
+        ],
+        [
+          "AO-X",
+          "AO-VIII"
+        ],
+        [
+          "AO-X",
+          "EXT-ASV"
+        ]
+      ],
+      "nodes": [
+        "AO-I",
+        "AO-II",
+        "AO-III",
+        "AO-IV",
+        "AO-IX",
+        "AO-V",
+        "AO-VI",
+        "AO-VII",
+        "AO-VIII",
+        "AO-X",
+        "EXT-ASV",
+        "EXT-MELLIN",
+        "EXT-TRIG",
+        "PKG-alias-circle",
+        "PKG-asv-bridge",
+        "PKG-common-nuisance",
+        "PKG-convexification-gap",
+        "PKG-discrete-queries",
+        "PKG-full-segre",
+        "PKG-global-design",
+        "PKG-harmonic-completion",
+        "PKG-multiplicative",
+        "PKG-prime-box",
+        "PKG-reading-complexity"
+      ],
+      "schedule_provenance_only_edge": [
+        "AO-VII",
+        "AO-V"
+      ]
+    },
+    "evidence_vocabulary": [
+      "framework",
+      "exact-equivalence",
+      "exact-reconstruction",
+      "quantitative-stability",
+      "matching-obstruction",
+      "distinguishability-geometry",
+      "model-boundary",
+      "formal-certificate"
+    ],
+    "external_dependencies": [
+      {
+        "bytes": 10206,
+        "formal_certificate_sha256": "89b316584d9179c13232ad99b9515067fdf67329e6df3db4c48220d6b8c3ff7b",
+        "id": "EXT-ASV",
+        "path": "certificates/arithmetic_sensing_v_multiscale_end_to_end.json",
+        "role": "Pinned N=50, sigma=2, degree-14 multiscale source measure and certificate.",
+        "schema": "arithmetic-sensing-v-time-ensemble-v1",
+        "sha256": "ad03df9d6325512074e6940602c1c888c81abd057a5856d6212f93dc8e780517"
+      },
+      {
+        "bytes": 25567,
+        "id": "EXT-MELLIN",
+        "path": "verified_mellin_certificate.py",
+        "role": "Pinned helper for verified Mellin/log-bin bounds.",
+        "sha256": "27f36ef566ff629bf9f77c649b657be7e672c61ab9ef7a785b90ec01fdf1ac1f"
+      },
+      {
+        "bytes": 7110,
+        "id": "EXT-TRIG",
+        "path": "exact_trigonometric_positivity.py",
+        "role": "Pinned exact trigonometric positivity helper.",
+        "sha256": "0ca3f3091a47138179638b0359e7a3b866fbbaddfd4306e84b254455366fb202"
+      }
+    ],
+    "formal_packages": [
+      {
+        "artifact_regeneration": "semantic-only-legacy-byte-layout",
+        "files": {
+          "certificate": {
+            "bytes": 3020,
+            "path": "arithmetic_observability_prime_box_certificate.json",
+            "sha256": "2adc6774b5f6b550d176b76c77120f58da430bf58f24c72c8b03cfe738444cbc"
+          },
+          "tests": {
+            "bytes": 6898,
+            "path": "test_arithmetic_observability_prime_box.py",
+            "sha256": "9230485b5e5df068638a45bfa460951d7bd95c4f29c7d0e4fc36bffb2e494fe1"
+          },
+          "verifier": {
+            "bytes": 15863,
+            "path": "arithmetic_observability_prime_box.py",
+            "sha256": "276a14360474e5276bbcb20273ed1b3a0aaf1a512540a9e6a6e4e2db262cbd75"
+          }
+        },
+        "formal_dependencies": [],
+        "formal_scope": "Exact finite prime-box response, quotient, and calibrated coefficient-noise geometry; no raw-sample-noise claim.",
+        "id": "PKG-prime-box",
+        "manuscript_ids": [
+          "AO-I"
+        ],
+        "payload_sha256": "3fe7461250815719b4e80c9ad73dc04325f7fb13e8fa0dd83f0906c9505dcc56",
+        "runtime": "python-standard-library-exact",
+        "schema": "arithmetic-observability-prime-box-v1",
+        "upstream_artifact_binds_manuscript_hash": false
+      },
+      {
+        "artifact_regeneration": "not-asserted-corpus-pins-committed-bytes",
+        "files": {
+          "certificate": {
+            "bytes": 2648,
+            "path": "arithmetic_observability_asv_bridge_certificate.json",
+            "sha256": "c9096e9de378fdcddc6563fa75e96c66b0b021459bf6c37ac08a4ebed032c374"
+          },
+          "tests": {
+            "bytes": 6131,
+            "path": "test_arithmetic_observability_asv_bridge.py",
+            "sha256": "815346ce249ff06867212b2b4afc493b270d9fade7cc71f8778cb85dc46f3dd0"
+          },
+          "verifier": {
+            "bytes": 8596,
+            "path": "arithmetic_observability_asv_bridge.py",
+            "sha256": "236d079c4b62ac600d3b1fa8ad58d23e048f6c0846f698a2aafe713761715c93"
+          }
+        },
+        "formal_dependencies": [
+          "EXT-ASV"
+        ],
+        "formal_scope": "Exact degree-fourteen fibre-distance bracket derived from the pinned Arithmetic Sensing V certificate.",
+        "id": "PKG-asv-bridge",
+        "manuscript_ids": [
+          "AO-I"
+        ],
+        "payload_sha256": "bf2e02334d9e2f68942d7ffba394d213c514ddf30c4db0ca277a3263adc8cd58",
+        "runtime": "python-standard-library-exact",
+        "schema": "arithmetic-observability-asv-fibre-bridge-v1",
+        "upstream_artifact_binds_manuscript_hash": false
+      },
+      {
+        "artifact_regeneration": "not-asserted-corpus-pins-committed-bytes",
+        "files": {
+          "certificate": {
+            "bytes": 32440,
+            "path": "arithmetic_observability_harmonic_completion_certificate.json",
+            "sha256": "cee9f56340ee4845da936086076dd871b38bffe894424f87404e15505ad4bb9d"
+          },
+          "tests": {
+            "bytes": 10863,
+            "path": "test_arithmetic_observability_harmonic_completion.py",
+            "sha256": "5f812f30a4fe4e417b59a64b0b17e7ffeb0c5d94bea1515ac1d793e63e5242b1"
+          },
+          "verifier": {
+            "bytes": 33985,
+            "path": "arithmetic_observability_harmonic_completion.py",
+            "sha256": "79793078626a2f49ea5c9ca0899714c97cc2294ab3e8772c0ed21b7a032089db"
+          }
+        },
+        "formal_dependencies": [],
+        "formal_scope": "Finite 2^a3^b5^c exact-time completion and near-Fourier conditioning; excludes off-box tails, clock jitter, and schedule optimality.",
+        "id": "PKG-harmonic-completion",
+        "manuscript_ids": [
+          "AO-II"
+        ],
+        "payload_sha256": "9692367b6b1ad26e713e2da4684726ccc43a9b1b3747f8e1e5f368ad74c70b6a",
+        "runtime": "python-flint-0.9.0-flint-3.6.0-arb256-one-thread",
+        "schema": "arithmetic-observability-harmonic-completion-v1",
+        "upstream_artifact_binds_manuscript_hash": false
+      },
+      {
+        "artifact_regeneration": "byte-identical-write-tested-upstream",
+        "files": {
+          "certificate": {
+            "bytes": 11293,
+            "path": "arithmetic_observability_multiplicative_certificate.json",
+            "sha256": "79d42f1a5d5ddf7f305647824918466700bb178ffd016c6fc50cf399c9bdbf6c"
+          },
+          "tests": {
+            "bytes": 18205,
+            "path": "test_arithmetic_observability_multiplicative.py",
+            "sha256": "84a59d8c5c96c60e8a5649bbf242be3e208c2a546e88dcd8b0d1fc410297b9fd"
+          },
+          "verifier": {
+            "bytes": 39719,
+            "path": "arithmetic_observability_multiplicative.py",
+            "sha256": "8a6debaf952abd47d25b7e3bb8b43d39b1694bc5e06210cb1a897dff958295f2"
+          }
+        },
+        "formal_dependencies": [],
+        "formal_scope": "Exact normalized-product reconstruction, collisions, total-variation bounds, and tangent geometry; excludes raw resonant-noise stability.",
+        "id": "PKG-multiplicative",
+        "manuscript_ids": [
+          "AO-III"
+        ],
+        "payload_sha256": "5805a3f385a6b5a0728d38413c9a0cb76d15b59285f671021ff749a6c4ea6a24",
+        "runtime": "python-standard-library-exact",
+        "schema": "arithmetic-observability-normalized-product-v1",
+        "upstream_artifact_binds_manuscript_hash": false
+      },
+      {
+        "artifact_regeneration": "byte-identical-write-tested-upstream",
+        "files": {
+          "certificate": {
+            "bytes": 25793,
+            "path": "arithmetic_observability_reading_complexity_certificate.json",
+            "sha256": "be668449767cf299295c5ecfc8445ca725e1f3858ce4b9b1e26a5aa52767153b"
+          },
+          "tests": {
+            "bytes": 15354,
+            "path": "test_arithmetic_observability_reading_complexity.py",
+            "sha256": "d343a3d915334702171d9d233193f362db3c7690c240b6e4d6253c0c16f7d4c0"
+          },
+          "verifier": {
+            "bytes": 36407,
+            "path": "arithmetic_observability_reading_complexity.py",
+            "sha256": "1fe0b19acae202ec9e196555f5cf73d5079ba7d990fbf678fbcc1e798a66ebb9"
+          }
+        },
+        "formal_dependencies": [],
+        "formal_scope": "Finite Jacobian ranks, resonance, degree, and node separation; global topological/intersection theorems and schedule optimality are not mechanized.",
+        "id": "PKG-reading-complexity",
+        "manuscript_ids": [
+          "AO-IV"
+        ],
+        "payload_sha256": "4b652c09feb7d68c6eb10c143086c390ee5f48e7618aee694e174d513804ef8e",
+        "runtime": "python-flint-0.9.0-flint-3.6.0-arb256-one-thread",
+        "schema": "arithmetic-observability-reading-complexity-v1",
+        "upstream_artifact_binds_manuscript_hash": false
+      },
+      {
+        "artifact_regeneration": "byte-identical-write-tested-upstream",
+        "files": {
+          "certificate": {
+            "bytes": 28544,
+            "path": "arithmetic_observability_global_design_certificate.json",
+            "sha256": "09fdde5f630121329228b8fb57f8ce4cce3b99bf786b53843bf0aa8d793efe37"
+          },
+          "tests": {
+            "bytes": 21024,
+            "path": "test_arithmetic_observability_global_design.py",
+            "sha256": "5e55044c8a4532bf6c671246c8d9dc570053e9982cd396a0e9be7bda63439751"
+          },
+          "verifier": {
+            "bytes": 43479,
+            "path": "arithmetic_observability_global_design.py",
+            "sha256": "9ecccaed11fb3114fb083a6efce1a97ea98fc7e2a5061c846c5430717b032521"
+          }
+        },
+        "formal_dependencies": [],
+        "formal_scope": "Certified finite interval/Krawczyk design instances; the general global theorem and schedule optimality remain manuscript mathematics.",
+        "id": "PKG-global-design",
+        "manuscript_ids": [
+          "AO-V"
+        ],
+        "payload_sha256": "ef58b99b5a1377878a7b9fd770c6a16fa5961bb46af40d74f0697e7f0454f2ab",
+        "runtime": "python-flint-0.9.0-flint-3.6.0-arb384-one-thread",
+        "schema": "arithmetic-observability-global-design-v1",
+        "upstream_artifact_binds_manuscript_hash": false
+      },
+      {
+        "artifact_regeneration": "byte-identical-write-tested-upstream",
+        "files": {
+          "certificate": {
+            "bytes": 23994,
+            "path": "arithmetic_observability_full_segre_certificate.json",
+            "sha256": "2b300bf974b94e8f5f8a6db21360940e174babc316d8481f48082d20268d5c2e"
+          },
+          "tests": {
+            "bytes": 17681,
+            "path": "test_arithmetic_observability_full_segre.py",
+            "sha256": "0dc5214d0a2359ed705604bf6e9b2dea1225800887552ca3c306eed6c706589f"
+          },
+          "verifier": {
+            "bytes": 26425,
+            "path": "arithmetic_observability_full_segre.py",
+            "sha256": "7fb4e662c02e2bf2854ba491bd00f2d2c9f2c866fe403526e2649140feac1348"
+          }
+        },
+        "formal_dependencies": [
+          "AO-VI"
+        ],
+        "formal_scope": "Eighteen phase inclusions and canonical six-reading inequalities; general complexity/lower-bound theorems and optimality are not mechanized.",
+        "id": "PKG-full-segre",
+        "manuscript_ids": [
+          "AO-VI"
+        ],
+        "payload_sha256": "02a00b4a1bb18ab366cd1de844f1f23101f5c3f424329b12e268d981b42179fc",
+        "runtime": "python-flint-0.9.0-flint-3.6.0-arb384-one-thread",
+        "schema": "arithmetic-observability-full-segre-v1",
+        "upstream_artifact_binds_manuscript_hash": true
+      },
+      {
+        "artifact_regeneration": "byte-identical-write-tested-upstream",
+        "files": {
+          "certificate": {
+            "bytes": 45955,
+            "path": "arithmetic_observability_discrete_queries_certificate.json",
+            "sha256": "786b39e7af8041f8a72be6ee291fd2abe105acd373d12a9c2052667c54ba5e87"
+          },
+          "tests": {
+            "bytes": 25534,
+            "path": "test_arithmetic_observability_discrete_queries.py",
+            "sha256": "b58147f7c5b741f9b15db353b342a354b68a4f1e6033fae96a4cf134d618d70a"
+          },
+          "verifier": {
+            "bytes": 48544,
+            "path": "arithmetic_observability_discrete_queries.py",
+            "sha256": "202c46df5fe5b0dddd092886a1437d3cff5d2b80d5050a11b51b5d2754247e6e"
+          }
+        },
+        "formal_dependencies": [
+          "EXT-ASV"
+        ],
+        "formal_scope": "Pinned localized inputs, six-mode Sylvester data, and continuous-tail collision witness; no exact minimax or integral-tail equivalence claim.",
+        "id": "PKG-discrete-queries",
+        "manuscript_ids": [
+          "AO-VII"
+        ],
+        "payload_sha256": "6dc2aa93d6919bd09928768ff6d5592782fdf2867cba50da039b4698be530996",
+        "runtime": "python-flint-0.9.0-flint-3.6.0-arb384-one-thread",
+        "schema": "arithmetic-observability-discrete-queries-v1",
+        "upstream_artifact_binds_manuscript_hash": false
+      },
+      {
+        "artifact_regeneration": "byte-identical-write-tested-upstream",
+        "files": {
+          "certificate": {
+            "bytes": 200117,
+            "path": "arithmetic_observability_common_nuisance_certificate.json",
+            "sha256": "1614d880c92d28ed19a40b2679b311a2cafd09033eb895b7f952750e84a2d63c"
+          },
+          "tests": {
+            "bytes": 19350,
+            "path": "test_arithmetic_observability_common_nuisance.py",
+            "sha256": "bad33828fb22ae8a2a7ee995c3acf5d8bf76ff5f4b0648f78a87ccddadefe1fe"
+          },
+          "verifier": {
+            "bytes": 44157,
+            "path": "arithmetic_observability_common_nuisance.py",
+            "sha256": "2455f901a0f937bea04162b5166e9b62ace4e9a7b473088df2cc3e5a6380f177"
+          }
+        },
+        "formal_dependencies": [
+          "EXT-ASV"
+        ],
+        "formal_scope": "Common continuous box, exact finite dual reductions, and integral upper witnesses; no exact global integral minimizer claim.",
+        "id": "PKG-common-nuisance",
+        "manuscript_ids": [
+          "AO-VIII"
+        ],
+        "payload_sha256": "96b874899b16e4502d815627c7b722b9ba0332266fb30c8cd4d0579b48ca0cfd",
+        "runtime": "python-flint-0.9.0-flint-3.6.0-arb512-one-thread",
+        "schema": "arithmetic-observability-common-nuisance-v1",
+        "upstream_artifact_binds_manuscript_hash": false
+      },
+      {
+        "artifact_regeneration": "not-asserted-corpus-pins-committed-bytes",
+        "files": {
+          "certificate": {
+            "bytes": 122999,
+            "path": "arithmetic_observability_alias_circle_certificate.json",
+            "sha256": "14167ed603a5c003e07f01f6939fea846707693ab0fc81d515267710f4fb95ad"
+          },
+          "tests": {
+            "bytes": 21634,
+            "path": "test_arithmetic_observability_alias_circle.py",
+            "sha256": "8dd7d601e6242f8c44d08fccab99f9bd67b202d18a9d2de4ce6db016a90db73d"
+          },
+          "verifier": {
+            "bytes": 56351,
+            "path": "arithmetic_observability_alias_circle.py",
+            "sha256": "48b21a06c9687a51f1774e802651570813823eb4d9fda29d0eb60e09f7c8dd00"
+          }
+        },
+        "formal_dependencies": [
+          "PKG-common-nuisance",
+          "EXT-ASV",
+          "EXT-MELLIN",
+          "EXT-TRIG"
+        ],
+        "formal_scope": "Fine tail support and global bracket from MPFR192/Arb512 components; exact optimizer, integral equality, and negative quadratic pilot are excluded.",
+        "id": "PKG-alias-circle",
+        "manuscript_ids": [
+          "AO-IX"
+        ],
+        "payload_sha256": "f97fb3a484bb4e598558b47d8217be05f31b63fe1925a854b43aecf216a66c6f",
+        "runtime": "python-flint-0.9.0-flint-3.6.0-gmpy2-2.3.1-mpfr-4.2.2-one-thread",
+        "schema": "arithmetic-observability-alias-circle-v1",
+        "upstream_artifact_binds_manuscript_hash": false
+      },
+      {
+        "artifact_regeneration": "byte-identical-write-tested-upstream",
+        "files": {
+          "certificate": {
+            "bytes": 99015,
+            "path": "arithmetic_observability_convexification_gap_certificate.json",
+            "sha256": "19e0d5fd20674e7191c6de75ced760cc663e3b1cafdc57ad8cd193b2465f11eb"
+          },
+          "tests": {
+            "bytes": 25169,
+            "path": "test_arithmetic_observability_convexification_gap.py",
+            "sha256": "297e6de872100fe07c1d3184bdceb460684799a8664f45a7ee48d8152815fb0e"
+          },
+          "verifier": {
+            "bytes": 44586,
+            "path": "arithmetic_observability_convexification_gap.py",
+            "sha256": "b98336ed3ff5ea9e9a15e876893a62ff5ba00a0b3ba9268202676535cadd8379"
+          }
+        },
+        "formal_dependencies": [
+          "PKG-common-nuisance",
+          "PKG-alias-circle",
+          "EXT-ASV",
+          "EXT-MELLIN",
+          "EXT-TRIG"
+        ],
+        "formal_scope": "Exact finite prefix/envelope inputs and rank-11, real-profile, and localization computations; analytic convexification theorems remain manuscript mathematics, with no exact optimizer, continuous-integral equality, number-field realization, or coarse-optimizer proof.",
+        "id": "PKG-convexification-gap",
+        "manuscript_ids": [
+          "AO-X"
+        ],
+        "payload_sha256": "fec0b1e43893794839afb4503975ba4f51b0c9c9980e1e43b38710a690e7348c",
+        "runtime": "python-flint-0.9.0-flint-3.6.0-arb512-one-thread",
+        "schema": "arithmetic-observability-convexification-gap-v1",
+        "upstream_artifact_binds_manuscript_hash": false
+      }
+    ],
+    "formal_scope": {
+      "claims": [
+        "byte integrity and canonical payload digests for every indexed package",
+        "presence of every cited theorem identifier in its pinned manuscript",
+        "acyclic typed dependency graphs and complete manuscript/package coverage",
+        "machine-readable coverage of every requested goal requirement"
+      ],
+      "nonclaims": [
+        "the manifest does not mechanize every theorem in the manuscripts",
+        "the manifest does not identify an exact infinite-tail optimizer",
+        "convex-hull equality is scoped to independent coefficient envelopes only",
+        "continuous-tail equality does not imply integral-tail equality",
+        "independent integer selections do not imply number-field or global arithmetic realizability",
+        "resource figures are reference-platform caveats, not portable performance guarantees"
+      ]
+    },
+    "goal_requirement_evidence": {
+      "definitions": {
+        "evidence_types": [
+          "framework",
+          "model-boundary"
+        ],
+        "model_ids": [
+          "theory-kernel",
+          "arithmetic-realizability-boundary"
+        ],
+        "package_ids": [
+          "PKG-prime-box",
+          "PKG-convexification-gap"
+        ],
+        "statement": "Exact equivalence, local identifiability, induced observation metric, and arithmetic defect are explicitly defined.",
+        "status": "satisfied",
+        "theorem_ids": [
+          "AO-I.2.1",
+          "AO-I.2.2",
+          "AO-V.5.3",
+          "AO-X.4.2"
+        ]
+      },
+      "exact_equivalence": {
+        "evidence_types": [
+          "exact-equivalence",
+          "model-boundary"
+        ],
+        "model_ids": [
+          "theory-kernel",
+          "continuous-common-box",
+          "independent-integral-envelope"
+        ],
+        "package_ids": [
+          "PKG-prime-box",
+          "PKG-full-segre",
+          "PKG-alias-circle",
+          "PKG-convexification-gap"
+        ],
+        "statement": "Observational equivalence is quotient equality in deterministic/common-nuisance models; general fibre overlap is recorded separately as confusability and need not be transitive.",
+        "status": "satisfied",
+        "theorem_ids": [
+          "AO-I.2.3",
+          "AO-VI.6.1",
+          "AO-IX.2.1",
+          "AO-X.3.3",
+          "AO-X.4.1"
+        ]
+      },
+      "framework": {
+        "evidence_types": [
+          "framework",
+          "exact-equivalence",
+          "distinguishability-geometry"
+        ],
+        "model_ids": [
+          "theory-kernel",
+          "normalized-product",
+          "independent-integral-envelope"
+        ],
+        "package_ids": [
+          "PKG-prime-box",
+          "PKG-full-segre",
+          "PKG-convexification-gap"
+        ],
+        "statement": "A common fibre/quotient/minimax framework specializes to lattice, near-model, and compact-tail observations.",
+        "status": "satisfied",
+        "theorem_ids": [
+          "AO-I.2.3",
+          "AO-I.3.1",
+          "AO-VI.6.1",
+          "AO-X.4.1"
+        ]
+      },
+      "geometry": {
+        "evidence_types": [
+          "distinguishability-geometry",
+          "quantitative-stability"
+        ],
+        "model_ids": [
+          "finite-prime-box",
+          "normalized-product",
+          "independent-integral-envelope"
+        ],
+        "package_ids": [
+          "PKG-prime-box",
+          "PKG-multiplicative",
+          "PKG-full-segre",
+          "PKG-alias-circle",
+          "PKG-convexification-gap"
+        ],
+        "statement": "Explicit quotient, tangent, zonoid, Pythagorean-defect, and Voronoi geometries quantify distinguishability.",
+        "status": "satisfied",
+        "theorem_ids": [
+          "AO-I.6.1",
+          "AO-III.5.1",
+          "AO-V.8.2",
+          "AO-VI.6.2",
+          "AO-IX.2.1",
+          "AO-X.4.1",
+          "AO-X.7.2"
+        ]
+      },
+      "nontrivial_models": {
+        "evidence_types": [
+          "exact-reconstruction",
+          "matching-obstruction",
+          "formal-certificate"
+        ],
+        "model_ids": [
+          "finite-prime-box",
+          "degree14-tail"
+        ],
+        "package_ids": [
+          "PKG-prime-box",
+          "PKG-harmonic-completion",
+          "PKG-multiplicative",
+          "PKG-reading-complexity",
+          "PKG-global-design",
+          "PKG-full-segre",
+          "PKG-discrete-queries",
+          "PKG-common-nuisance",
+          "PKG-alias-circle",
+          "PKG-convexification-gap",
+          "PKG-asv-bridge"
+        ],
+        "statement": "The theory is demonstrated on a finite 2^a3^b5^c prime box and the pinned N=50 degree-14 infinite-tail experiment.",
+        "status": "satisfied",
+        "theorem_ids": [
+          "AO-I.6.1",
+          "AO-II.4.1",
+          "AO-VI.4.2",
+          "AO-VII.5.1",
+          "AO-VII.9.1",
+          "AO-X.3.3"
+        ]
+      },
+      "obstruction": {
+        "evidence_types": [
+          "matching-obstruction",
+          "model-boundary"
+        ],
+        "model_ids": [
+          "theory-kernel",
+          "multiplicative-geometric",
+          "normalized-product",
+          "degree14-tail"
+        ],
+        "package_ids": [
+          "PKG-reading-complexity",
+          "PKG-full-segre",
+          "PKG-discrete-queries",
+          "PKG-convexification-gap"
+        ],
+        "statement": "Rank, symmetry, continuous-tail interior, quantitative blindness, and no-finite-support results match the positive theorems at explicit boundaries.",
+        "status": "satisfied",
+        "theorem_ids": [
+          "AO-I.3.1",
+          "AO-I.4.1",
+          "AO-I.4.3",
+          "AO-IV.4.1",
+          "AO-VI.4.1",
+          "AO-VI.4.2",
+          "AO-VII.8.2",
+          "AO-VII.9.1",
+          "AO-X.6.3"
+        ]
+      },
+      "reconstruction": {
+        "evidence_types": [
+          "exact-reconstruction",
+          "formal-certificate"
+        ],
+        "model_ids": [
+          "finite-prime-box",
+          "ambient-linear",
+          "multiplicative-geometric",
+          "normalized-product",
+          "separated-query"
+        ],
+        "package_ids": [
+          "PKG-prime-box",
+          "PKG-harmonic-completion",
+          "PKG-multiplicative",
+          "PKG-global-design",
+          "PKG-full-segre",
+          "PKG-discrete-queries"
+        ],
+        "statement": "Substantial exact reconstruction theorems cover valuation marginals, harmonic completion, product factors, and four-anchor tail queries.",
+        "status": "satisfied",
+        "theorem_ids": [
+          "AO-I.5.1",
+          "AO-II.4.1",
+          "AO-III.4.1",
+          "AO-V.6.2",
+          "AO-VI.4.2",
+          "AO-VII.5.1"
+        ]
+      },
+      "reproducibility": {
+        "evidence_types": [
+          "formal-certificate",
+          "model-boundary"
+        ],
+        "model_ids": [
+          "finite-prime-box",
+          "degree14-tail"
+        ],
+        "package_ids": [
+          "PKG-prime-box",
+          "PKG-asv-bridge",
+          "PKG-harmonic-completion",
+          "PKG-multiplicative",
+          "PKG-reading-complexity",
+          "PKG-global-design",
+          "PKG-full-segre",
+          "PKG-discrete-queries",
+          "PKG-common-nuisance",
+          "PKG-alias-circle",
+          "PKG-convexification-gap"
+        ],
+        "statement": "Every formal package triplet is byte-pinned and payload-verified; certificates mechanize declared finite instances, not every theorem in the manuscripts.",
+        "status": "satisfied",
+        "theorem_ids": [
+          "AO-I.8.1",
+          "AO-V.6.2",
+          "AO-VI.4.2",
+          "AO-VII.5.1",
+          "AO-VIII.6.1",
+          "AO-IX.7.1",
+          "AO-X.3.3"
+        ]
+      },
+      "stability": {
+        "evidence_types": [
+          "quantitative-stability",
+          "formal-certificate"
+        ],
+        "model_ids": [
+          "theory-kernel",
+          "normalized-product",
+          "separated-query",
+          "continuous-common-box"
+        ],
+        "package_ids": [
+          "PKG-multiplicative",
+          "PKG-global-design",
+          "PKG-discrete-queries",
+          "PKG-common-nuisance",
+          "PKG-alias-circle"
+        ],
+        "statement": "Exact inverse moduli, quotient distances, and certified interval lower bounds give falsifiable stability radii in their declared norms.",
+        "status": "satisfied",
+        "theorem_ids": [
+          "AO-I.2.3",
+          "AO-III.4.2",
+          "AO-V.5.1",
+          "AO-VII.5.1",
+          "AO-VIII.6.1",
+          "AO-IX.2.4"
+        ]
+      }
+    },
+    "manuscripts": [
+      {
+        "file": {
+          "bytes": 40956,
+          "path": "ARITHMETIC_OBSERVABILITY_I.md",
+          "sha256": "a576fb54f78026151460cb5bfe9b0ed771830330664043ea66cb5b2f141d0ad4"
+        },
+        "id": "AO-I",
+        "logical_dependencies": [],
+        "model_ids": [
+          "theory-kernel",
+          "finite-prime-box",
+          "degree14-tail"
+        ],
+        "theorem_ids": [
+          "AO-I.2.1",
+          "AO-I.2.2",
+          "AO-I.2.3",
+          "AO-I.3.1",
+          "AO-I.4.1",
+          "AO-I.4.2",
+          "AO-I.4.3",
+          "AO-I.5.1",
+          "AO-I.6.1",
+          "AO-I.8.1"
+        ]
+      },
+      {
+        "file": {
+          "bytes": 31855,
+          "path": "ARITHMETIC_OBSERVABILITY_II.md",
+          "sha256": "d3764f9cad2a5ef65b162918ce952b0e3b157b446d1d2a28e52d2a0d5e35e3a4"
+        },
+        "id": "AO-II",
+        "logical_dependencies": [
+          "AO-I"
+        ],
+        "model_ids": [
+          "finite-prime-box",
+          "ambient-linear"
+        ],
+        "theorem_ids": [
+          "AO-II.3.1",
+          "AO-II.4.1",
+          "AO-II.5.1"
+        ]
+      },
+      {
+        "file": {
+          "bytes": 25852,
+          "path": "ARITHMETIC_OBSERVABILITY_III.md",
+          "sha256": "75172cfe6b5948c5e926fa17eb3297be36fe4158972d729ca8e625a1e6caf169"
+        },
+        "id": "AO-III",
+        "logical_dependencies": [
+          "AO-I",
+          "AO-II"
+        ],
+        "model_ids": [
+          "finite-prime-box",
+          "multiplicative-geometric",
+          "normalized-product"
+        ],
+        "theorem_ids": [
+          "AO-III.2.1",
+          "AO-III.4.1",
+          "AO-III.4.2",
+          "AO-III.5.1"
+        ]
+      },
+      {
+        "file": {
+          "bytes": 31507,
+          "path": "ARITHMETIC_OBSERVABILITY_IV.md",
+          "sha256": "a12d6e09cefddbfadbafe142b23167254156259cb4a18d694693a92dcc6c5b17"
+        },
+        "id": "AO-IV",
+        "logical_dependencies": [
+          "AO-III"
+        ],
+        "model_ids": [
+          "finite-prime-box",
+          "multiplicative-geometric"
+        ],
+        "theorem_ids": [
+          "AO-IV.2.1",
+          "AO-IV.3.1",
+          "AO-IV.4.1",
+          "AO-IV.5.3",
+          "AO-IV.5.4"
+        ]
+      },
+      {
+        "file": {
+          "bytes": 39561,
+          "path": "ARITHMETIC_OBSERVABILITY_V.md",
+          "sha256": "784b0671047c70217b7c88ce7d87dda1fabfcb6f643c3ad651fb24bc61655f4f"
+        },
+        "id": "AO-V",
+        "logical_dependencies": [
+          "AO-IV"
+        ],
+        "model_ids": [
+          "finite-prime-box",
+          "multiplicative-geometric"
+        ],
+        "theorem_ids": [
+          "AO-V.4.1",
+          "AO-V.4.2",
+          "AO-V.5.1",
+          "AO-V.5.3",
+          "AO-V.6.2",
+          "AO-V.7.1",
+          "AO-V.8.1",
+          "AO-V.8.2"
+        ]
+      },
+      {
+        "file": {
+          "bytes": 40910,
+          "path": "ARITHMETIC_OBSERVABILITY_VI.md",
+          "sha256": "ee2e6f1f604362d72553073e4e721e7e4a56724c2dba12e4903d8015d0056df4"
+        },
+        "id": "AO-VI",
+        "logical_dependencies": [
+          "AO-I",
+          "AO-III",
+          "AO-IV",
+          "AO-V"
+        ],
+        "model_ids": [
+          "finite-prime-box",
+          "normalized-product"
+        ],
+        "theorem_ids": [
+          "AO-VI.3.2",
+          "AO-VI.4.1",
+          "AO-VI.4.2",
+          "AO-VI.6.1",
+          "AO-VI.6.2",
+          "AO-VI.7.2",
+          "AO-VI.7.3",
+          "AO-VI.8.1"
+        ]
+      },
+      {
+        "file": {
+          "bytes": 37557,
+          "path": "ARITHMETIC_OBSERVABILITY_VII.md",
+          "sha256": "7ea892a8dc4e9e6990f97d86a622fb4eeb949eaa33c47fad9948c819ee6c9d00"
+        },
+        "id": "AO-VII",
+        "logical_dependencies": [
+          "AO-I",
+          "EXT-ASV"
+        ],
+        "model_ids": [
+          "degree14-tail",
+          "separated-query"
+        ],
+        "theorem_ids": [
+          "AO-VII.2.1",
+          "AO-VII.4.1",
+          "AO-VII.5.1",
+          "AO-VII.7.2",
+          "AO-VII.8.1",
+          "AO-VII.8.2",
+          "AO-VII.9.1"
+        ]
+      },
+      {
+        "file": {
+          "bytes": 40949,
+          "path": "ARITHMETIC_OBSERVABILITY_VIII.md",
+          "sha256": "136b7e375404ddeee81b01d356f61ad75587b94bc0754dfc939040bbefc69a23"
+        },
+        "id": "AO-VIII",
+        "logical_dependencies": [
+          "AO-I",
+          "AO-VII",
+          "EXT-ASV"
+        ],
+        "model_ids": [
+          "degree14-tail",
+          "continuous-common-box"
+        ],
+        "theorem_ids": [
+          "AO-VIII.2.1",
+          "AO-VIII.2.2",
+          "AO-VIII.3.1",
+          "AO-VIII.4.1",
+          "AO-VIII.4.2",
+          "AO-VIII.6.1",
+          "AO-VIII.7.1",
+          "AO-VIII.8.1"
+        ]
+      },
+      {
+        "file": {
+          "bytes": 47158,
+          "path": "ARITHMETIC_OBSERVABILITY_IX.md",
+          "sha256": "8cf3d52cf6dbae6dedca2edf132268e56e422cb949f6517a0bb205b839a5c6af"
+        },
+        "id": "AO-IX",
+        "logical_dependencies": [
+          "AO-I",
+          "AO-VIII",
+          "EXT-ASV"
+        ],
+        "model_ids": [
+          "degree14-tail",
+          "continuous-common-box",
+          "independent-integral-envelope"
+        ],
+        "theorem_ids": [
+          "AO-IX.2.1",
+          "AO-IX.2.4",
+          "AO-IX.3.1",
+          "AO-IX.3.2",
+          "AO-IX.4.1",
+          "AO-IX.4.2",
+          "AO-IX.6.2",
+          "AO-IX.7.1"
+        ]
+      },
+      {
+        "file": {
+          "bytes": 52726,
+          "path": "ARITHMETIC_OBSERVABILITY_X.md",
+          "sha256": "04f9073812bf0c7de4ccd2778773e87f13f730b140f8bf6aab23207ae0b36526"
+        },
+        "id": "AO-X",
+        "logical_dependencies": [
+          "AO-VIII",
+          "AO-IX",
+          "EXT-ASV"
+        ],
+        "model_ids": [
+          "degree14-tail",
+          "continuous-common-box",
+          "independent-integral-envelope",
+          "arithmetic-realizability-boundary"
+        ],
+        "theorem_ids": [
+          "AO-X.2.1",
+          "AO-X.2.2",
+          "AO-X.2.3",
+          "AO-X.3.1",
+          "AO-X.3.2",
+          "AO-X.3.3",
+          "AO-X.4.1",
+          "AO-X.4.2",
+          "AO-X.5.3",
+          "AO-X.6.2",
+          "AO-X.6.3",
+          "AO-X.7.2",
+          "AO-X.9.1"
+        ]
+      }
+    ],
+    "model_taxonomy": [
+      {
+        "id": "theory-kernel",
+        "parent": null,
+        "scope": "General response fibres, common-subspace quotients, local query factorization, and image lattices.",
+        "status": "formal-model"
+      },
+      {
+        "id": "finite-prime-box",
+        "parent": "theory-kernel",
+        "scope": "Finite prime boxes; off-box coefficients are zero unless a mismatch tube is explicitly declared.",
+        "status": "formal-model"
+      },
+      {
+        "id": "ambient-linear",
+        "parent": "finite-prime-box",
+        "scope": "Unstructured finite coefficient vectors under harmonic completion.",
+        "status": "formal-model"
+      },
+      {
+        "id": "multiplicative-geometric",
+        "parent": "finite-prime-box",
+        "scope": "Rank-one multiplicative factors, with scale conventions stated per theorem.",
+        "status": "formal-model"
+      },
+      {
+        "id": "normalized-product",
+        "parent": "finite-prime-box",
+        "scope": "Labelled probability-simplex factors and full Segre products.",
+        "status": "formal-model"
+      },
+      {
+        "id": "degree14-tail",
+        "parent": "theory-kernel",
+        "scope": "Pinned Arithmetic Sensing V N=50, sigma=2, degree-14 measure and its infinite coefficient tail.",
+        "status": "formal-model"
+      },
+      {
+        "id": "separated-query",
+        "parent": "degree14-tail",
+        "scope": "Individual query labels separated with the declared tail nuisance model.",
+        "status": "formal-model"
+      },
+      {
+        "id": "continuous-common-box",
+        "parent": "degree14-tail",
+        "scope": "One common compact continuous tail box shared by all labels.",
+        "status": "relaxation-model"
+      },
+      {
+        "id": "independent-integral-envelope",
+        "parent": "degree14-tail",
+        "scope": "Independent integer coefficient envelopes and their compact integer-selection image; convex hull statements apply only to independent envelopes.",
+        "status": "relaxation-and-selection-model"
+      },
+      {
+        "id": "arithmetic-realizability-boundary",
+        "parent": "degree14-tail",
+        "scope": "Number-field/global arithmetic realization is not implied by membership in the independent integer envelope.",
+        "status": "nonclaim-boundary"
+      }
+    ],
+    "resource_and_platform_caveats": [
+      "The corpus verifier itself uses only the Python standard library and performs no floating-point arithmetic.",
+      "Arb/MPFR certificates are conditional on their pinned implementations and are not proof-assistant kernel proofs.",
+      "All formal Arb reconstructions require one FLINT thread; relevant packages pin python-flint 0.9.0 and FLINT 3.6.0.",
+      "The alias-circle full recomputation additionally pins gmpy2 2.3.1 and MPFR 4.2.2; the recorded reference run is approximately 342 seconds and 3.59 GB.",
+      "The corpus pins committed upstream bytes. Prime-box has a legacy byte layout and is required to regenerate semantically, not byte-identically, with its current producer.",
+      "Legacy prime-box and ASV-bridge packages do not themselves provide bounded strict JSON parsers; corpus ingestion of their artifacts is bounded and strict.",
+      "Canonical corpus output is ASCII JSON with sorted keys, two-space indentation, and exactly one LF; Windows reproduction must preserve LF bytes."
+    ]
+  },
+  "payload_sha256": "a64f515f770d316a3d6ecad4b70494af1a5cc90342b4076c7fd783fce0f1c0d6",
+  "reproduction_files": {
+    "tests": {
+      "bytes": 19073,
+      "path": "test_arithmetic_observability_corpus.py",
+      "sha256": "523801d9144272a1dfbf2a5284ce98a050afab48686b038a10159b078d0c1a66"
+    },
+    "verifier": {
+      "bytes": 57234,
+      "path": "arithmetic_observability_corpus.py",
+      "sha256": "01c75a062128db70a43b402241eca0fad96cc40bfbda04a867ed82951c1495f8"
+    }
+  },
+  "schema": "arithmetic-observability-corpus-v1"
+}

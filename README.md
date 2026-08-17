@@ -1,8 +1,7 @@
 # Adelic Arithmetic Research
 
 This repository contains the manuscripts, executable laboratories, and tests
-for two TGN research publications and one new operational-geometry research
-program:
+for four connected TGN research programmes:
 
 1. **The Geometry Arithmetic Remembers** — an eight-stage path from ordered
    multiplicative rigidity through adelic harmonic analysis, number-field
@@ -15,6 +14,14 @@ program:
    factorization universe against degree-preserving random controls, followed
    by protocol-invariance, common-kernel, composition, interaction, and
    directed-intervention audits.
+4. **Arithmetic Observability** — a theory of which local arithmetic
+   distinctions are exactly identifiable and stably recoverable from
+   incomplete global harmonic data.  It combines nuisance quotients, sharp
+   minimax constants, lattice and topological obstructions, nonlinear product
+   reconstruction, induced distinguishability geometry, and certified
+   Dirichlet-tail models.  See the
+   [Arithmetic Observability Atlas](ARITHMETIC_OBSERVABILITY_ATLAS.md) for
+   the model map, theorem index, and reproducibility manifest.
 
 The fifth operational-geometry layer supplies the first controlled scale flow:
 cell-centred continuum normalization, noncommuting spectral-dimension limits,
@@ -30,6 +37,111 @@ smooth-to-atomic initial layer. A concentrating target of width
 retains cell placement and preparation rules. The two charts match, while an
 adversarial audit separates multiplication-moment order from the complete
 noncommutative causal-word hierarchy.
+
+Stages VIII and IX make that phase diagram uniform and operator-valued. The
+declared atlas now carries complete source response Gramians with one exact
+conditional-expectation null quotient. Every fixed finite quotient is
+uniformly visible after calibration on the compactified sectors treated in
+the theorem; the raw lattice endpoint \(\tau\downarrow0\) remains separate.
+Compact Laplace factorization rules out an infinite-band coercivity floor. For
+the first \(K\) cosine ports, the early singular values form the exact flag
+\(q,q^2,\ldots,q^K\), while a finite grid is certified only when its Gram
+error is small relative to the shrinking continuum observability floor.
+
+Stage X replaces qualitative positivity and high-precision spectra by
+outward-rounded generalized-eigenvalue certificates. A common truncated
+Laplace Gram rigorously controls the continuous late resolved, one-cell
+lattice, and interior atomic charts through eight cosine ports in both
+\(L^2\) and \(H^1\) source metrics. For the first two ports, a second proof
+covers the calibrated early chart and every reflecting-boundary coordinate,
+giving the complete declared continuum-atlas bracket
+\(10^{-19}\le\gamma_2\le10^{-6}\). The source metric and calibration cost
+are part of every statement. A separate asymptotic proof gives
+squared-factorial upper ceilings, an explicit \(e^{-O(K^2)}\) lower frame,
+and an exact fixed-band contrast fan; a proposed spectral-ratio constant is
+kept explicitly conjectural.
+
+Stage XI supplies the finite-transfer theorem and the first complete finite
+Neumann crossing.  The invariant comparison is the fully normalized response,
+including source cost, target preparation, sensor map, boundary coordinate,
+and noise whitening.  Arb phase quadrature transfers the late lattice Gram
+through eight ports, while the actual noncommuting finite generator is
+rigorously transferred for one port at \(n=7\).  An exact three-port
+counterexample shows why pure moment fitting cannot replace mixed causal-word
+control.  At the end of Stage XI, the observed two-port crossing near
+\(n=383\) remained a clearly labeled target for the next certificate.
+
+Stage XII closes that two-port target and explains its scale.  On exactly
+centred odd grids, the complete noncommuting finite generator has the sharp
+law \(G_n-G=E/n^2+O(n^{-3})\).  A degree-32 centred-Taylor Arb checker gives
+adjacent local transfer brackets \(343/345\) in \(L^2\) and \(647/649\) in
+the declared continuum-\(H^1\) source cost.  Exact \(2\times2\) spectral
+geometry is essential: entrywise maxima can certify falsely, while safe row
+sums miss both true crossings.
+
+The protocol-engine continuation now closes the original application target.
+A fixed finite grid is proved unable to cover every late lattice time; the
+correct coupled theorem gives explicit errors \(23\sqrt{\tau}/n\) in
+\(L^2\) and \((23/10)\sqrt{\tau}/n\) in \(H^1\), together with rigorous
+continuum-to-atomic tails. A practical Arb cell certifies \(n=1001\)
+uniformly on \(1\le\tau\le6/5\). Exact rational quotient, noise, cost,
+E-optimal primal/dual, interval-response, and finite-frame certificates are
+implemented. In the finite Neumann benchmark, two matched linear sensors
+retain the information of 172 active modal outputs up to a certified \(L^2\)
+frame loss below \(1.95\times10^{-37}\); a separate nonreversible
+hidden-chain design is certified above 97.25 percent global efficiency.
+
+The Arithmetic-Observability integration makes this protocol engine
+query-directed and model aware. It now proves exact recovery and minimax
+amplification for a requested linear query after nuisance profiling; seals the
+difference between one nuisance shared across protocols and independent
+per-protocol refits; compares a finite library only under one common
+source/query/noise contract; preserves bounded nuisance correlations through
+exact zonotope support; and audits finite secants, tangent spaces, response
+tubes, and uncertain nominal null directions. A pinned integration report
+composes the independently verified layers while keeping continuum enclosure,
+tail, and model-exhaustiveness assumptions explicit.
+
+The Double-Pendulum Operational Atlas is the first nonlinear benchmark built
+on that engine. Independent conservative launches are indexed by a toroidal
+initial-angle grid; a seam-free finite-time observation map is examined with
+state and tangent refinement, resolution/half-cell-shift persistence, energy
+stratification, analytic dimensionless parameter sensitivities, and explicit
+unresolved masks. A seven-candidate launch/sensor/time library produces an
+exact positive response-box floor. Outward Arb Picard--Taylor enclosures now
+prove box membership for the two nonzero protocols and compose to a declared-
+model floor above \(0.0783731\). Selection and efficiency over all seven
+candidates, parameter-neighbourhood uniformity, empirical adequacy, and
+hardware calibration remain explicitly unproved. A structured-nuisance audit
+then proves that the current two scalar readings lose their full two-source
+floor under even one unrestricted shared clock or gain coefficient. Grouping
+the existing readings by launch supplies the constructive remedy: launch A is
+already a minimal three-output witness, and the selected A+B batch has an exact
+clock-profiled point floor above \(0.0180269\). Outward Picard--Taylor
+enclosures of all five A+B parameter rows and the shared-clock column now
+transfer that same strict bound to the declared nonlinear model. This is a
+narrow Tier-3 fixed-mixture theorem with exact preparation; preparation error,
+finite clock amplitude, grid optimality, and hardware/model adequacy remain
+unproved. See
+[DOUBLE_PENDULUM_OPERATIONAL_ATLAS.md](DOUBLE_PENDULUM_OPERATIONAL_ATLAS.md).
+For the proof-aware interactive companion, see the
+[Double-Pendulum OIG Ensemble Calibration
+Chamber](website/double-pendulum-oig-wind-tunnel/README.md). It preserves the
+single held-out launch at \(N=1\), adds seeded interactive ensembles through
+\(N=50\) and \(T=30\), and provides a cancellable background laboratory through
+\(N=1000\). The chamber freezes each declaration before outcomes, separates
+bounded from sampled uncertainty and structured perturbation laws, reports
+finite-sample survival, spread, persistent exits, and projected-output
+re-entry beside a declared full-state separation metric, and keeps every
+ensemble result numerical rather than attaching the fixed Tier-3 theorem to
+arbitrary sliders. A half-scale response/gain refinement gate makes the central
+horizon lesson executable: longer runs that destroy numerical response
+convergence remain Live/unresolved instead of being promoted to Refined.
+
+For a focused clean-room installation and proof-artifact map, see the
+[Operational Information Geometry protocol-engine reproducibility
+manifest](OIG_PROTOCOL_ENGINE_REPRODUCIBILITY_MANIFEST.md) and install
+`oig_protocol_engine_requirements.txt`.
 
 The active continuation includes continuum-certified arithmetic window design
 and a cancellation-aware log-Mellin certificate for higher-degree coefficient
@@ -80,6 +192,25 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
+The project metadata intentionally retains supported dependency ranges for
+ordinary use. To reproduce the committed numerical artifacts in their
+canonical environment, apply the checked-in constraints used by GitHub
+Actions:
+
+```sh
+python -m pip install -r requirements.txt -c reproducibility-constraints.txt
+```
+
+The canonical numerical stack is NumPy 2.4.6, SciPy 1.15.2, mpmath 1.3.0,
+gmpy2 2.3.1, and python-flint 0.9.0. The separation between supported ranges
+and reproduction constraints prevents a newly released numerical library from
+silently changing artifact replay. Tier-1 floating reports use strict schemas,
+exact non-floating declarations, and a documented roundoff-scale comparator;
+byte equality of adaptive-solver diagnostics is not claimed across platforms.
+Numerically discovered structured-nuisance columns are mapped to a declared
+nine-decimal rational grid before the exact conditional certificates are
+built, so the rational surrogate is stable across supported runners.
+
 On Windows PowerShell, activate the environment with:
 
 ```powershell
@@ -94,6 +225,32 @@ python -m unittest discover -v
 
 The test count is reported by the discovery command and grows with each
 research layer.
+
+## Reproduce Arithmetic Observability
+
+Verify the corpus manifest, run its focused hostile tests, and then run the
+complete ordinary Arithmetic Observability regression:
+
+```sh
+python arithmetic_observability_corpus.py \
+  arithmetic_observability_corpus_manifest.json
+python -m unittest -q test_arithmetic_observability_corpus.py
+python -m unittest discover -s . \
+  -p 'test_arithmetic_observability*.py' -q
+```
+
+The [Arithmetic Observability Atlas](ARITHMETIC_OBSERVABILITY_ATLAS.md)
+maps the two declared model branches, the sharp reconstruction--obstruction
+pairs, every induced geometry, and the certificate dependency graph.  The
+large AO-IX fine-grid reconstruction is deliberately opt-in; ordinary
+verification checks its committed proof objects without rebuilding the
+multi-gigabyte convolution.
+
+For a nontechnical introduction and an interactive finite-grid illustration,
+see [Can a Few Echoes Reveal a Hidden Arithmetic Shape?](ARITHMETIC_OBSERVABILITY_PUBLIC_COMPANION.md)
+and the [Arithmetic Observability Lab package](website/arithmetic-observability-companion/README.md).
+The companion is a science-communication layer, not part of the formal corpus;
+the Atlas and numbered manuscripts remain authoritative.
 
 ## Reproduce Arithmetic Sensing I
 
@@ -297,6 +454,169 @@ certificates, and the discrete-moment obstruction. The dedicated dependency
 surface, exact source digests, reference environment, and complete validation
 commands are frozen in
 [OIG_VIII_REPRODUCIBILITY_MANIFEST.md](OIG_VIII_REPRODUCIBILITY_MANIFEST.md).
+
+Run the Stage IX growing-band Gramian laboratory and adversarial controls:
+
+    python -m pip install -r oig_ix_growing_band_requirements.txt
+    python -m unittest -v test_oig_ix_growing_band.py
+    python -m unittest -v test_oig_ix_adversarial_controls.py
+    python oig_ix_growing_band.py --fast
+    python oig_ix_growing_band.py
+
+See [OPERATIONAL_INFORMATION_GEOMETRY_IX.md](OPERATIONAL_INFORMATION_GEOMETRY_IX.md)
+for the common Laplace quotient, exact three-chart Hankel Grams, fixed-band
+atlas theorem, causal singular flag, critical fan, compactness no-go, relative
+finite-grid certificate, and noise-thresholded effective dimension. The atlas
+theorem treats the lattice sector for \(\tau\ge\tau_0>0\); the raw early
+lattice endpoint is not claimed.
+
+Run the Stage X outward-rounded spectral certificates and adversarial
+controls:
+
+    python -m pip install -r oig_x_spectral_certificate_requirements.txt
+    python -m unittest -v test_oig_x_spectral_certificate.py
+    python -m unittest -v test_oig_x_full_atlas_certificate.py
+    python -m unittest -v test_oig_x_spectral_asymptotics.py
+    python -m unittest -v test_oig_x_adversarial_controls.py
+    python oig_x_spectral_certificate.py --max-band 8 --precision-bits 320
+    python oig_x_full_atlas_certificate.py --precision-bits 192
+    python oig_x_spectral_asymptotics.py --maximum-band 12 --digits 100
+
+See [OPERATIONAL_INFORMATION_GEOMETRY_X.md](OPERATIONAL_INFORMATION_GEOMETRY_X.md)
+for the coordinate-invariant certification theorem, common-window reduction,
+exact affine-ramp determinant law, rigorous late-core spectra through
+\(K=8\), complete four-stratum \(K=2\) certificate, effective-rank and
+Gaussian information budgets, factorial upper obstruction, and finite-model
+transfer target. The full-atlas result concerns continuum phase Grams; no
+finite-grid or finite-sensor certificate is implied.
+
+Run the Stage XI finite-transfer certificate and adversarial controls:
+
+    python -m pip install -r oig_xi_transfer_requirements.txt
+    python oig_xi_transfer_certificate.py \
+      --max-band 8 \
+      --precision-bits 320 \
+      --maximum-phase-side-length 24
+    python -m unittest -v test_oig_xi_transfer_certificate.py
+    python -m unittest -v test_oig_xi_adversarial_controls.py
+
+See [OPERATIONAL_INFORMATION_GEOMETRY_XI.md](OPERATIONAL_INFORMATION_GEOMETRY_XI.md)
+for the metric-normalized transfer theorem, exact error factorization,
+calibrated moment leakage, mixed-word obstruction, rigorous \(K\le8\)
+phase-grid transfer, and the first complete finite Neumann crossing at
+\(K=1,n=7\).  The phase-grid and full-dynamics statements are deliberately
+separate; the descriptive \(K=2\) crossing near \(n=383\) is not promoted to
+a certificate.
+
+Run the Stage XII two-port finite-Neumann certificate and adversarial
+controls:
+
+    python -m pip install -r oig_xii_two_port_requirements.txt
+    python oig_xii_two_port_certificate.py \
+      --precision-bits 256 \
+      --taylor-degree 32
+    python -m unittest -v test_oig_xii_two_port_certificate.py
+    python -m unittest -v test_oig_xii_adversarial_controls.py
+
+See [OPERATIONAL_INFORMATION_GEOMETRY_XII.md](OPERATIONAL_INFORMATION_GEOMETRY_XII.md)
+for the explicit mixed (n^{-2}) coefficient, its metric-dependent threshold
+predictions, the complete two-port finite-generator certificates at
+\(n=345\) and \(n=649\), and the exact boundary between a local adjacent
+bracket and a global minimal-grid theorem.
+
+Run the resolution-aware transfer and certified protocol-design application:
+
+    python -m unittest -v test_oig_uniform_lattice_transfer.py
+    python -m unittest -v test_oig_uniform_lattice_explicit_constants.py
+    python -m unittest -v test_oig_uniform_lattice_arb_cover.py
+    python -m unittest -v test_oig_protocol_design_engine.py
+    python -m unittest -v test_oig_interval_protocol_design.py
+    python -m unittest -v test_oig_neumann_matched_frame.py
+    python -m unittest -v test_oig_query_protocol_design.py
+    python -m unittest -v test_oig_query_protocol_design_adversarial.py
+    python -m unittest -v test_oig_query_candidate_library.py
+    python -m unittest -v test_oig_query_candidate_library_adversarial.py
+    python -m unittest -v test_oig_structured_nuisance.py
+    python -m unittest -v test_oig_structured_nuisance_adversarial.py
+    python -m unittest -v test_oig_robust_model_quotient.py
+    python -m unittest -v test_oig_robust_model_quotient_adversarial.py
+    python -m unittest -v test_oig_atlas_protocol_integration.py
+    python -m unittest -v test_oig_atlas_protocol_integration_adversarial.py
+    python oig_hidden_network_protocol_demo.py \
+      --output /tmp/oig-hidden-protocol-design.json
+    python oig_neumann_matched_frame.py \
+      --output /tmp/oig-neumann-matched-frame.json
+    python oig_structured_nuisance.py \
+      --output /tmp/oig-structured-nuisance.json
+    python oig_structured_nuisance.py \
+      --verify /tmp/oig-structured-nuisance.json
+    python oig_robust_model_quotient_demo.py \
+      --output /tmp/oig-robust-model.json
+    python oig_robust_model_quotient_demo.py \
+      --verify /tmp/oig-robust-model.json
+    python oig_atlas_protocol_integration.py \
+      --output /tmp/oig-atlas-protocol-integration.json
+    python oig_atlas_protocol_integration.py \
+      --verify /tmp/oig-atlas-protocol-integration.json
+    python -m unittest -v test_oig_protocol_artifacts.py
+
+See
+[OPERATIONAL_INFORMATION_GEOMETRY_PROTOCOL_ENGINE.md](OPERATIONAL_INFORMATION_GEOMETRY_PROTOCOL_ENGINE.md)
+for the coupled-resolution theorem, exact protocol optimizer, robust response
+boxes, two-channel Neumann compression, broader hidden-network validation,
+query-directed finite-library design, structured correlated nuisance,
+model-aware quotient audits, and the boundary between proved design
+performance and hardware or model interpretation. The detailed Atlas bridge
+is [OIG_ARITHMETIC_ATLAS_PROTOCOL_INTEGRATION.md](OIG_ARITHMETIC_ATLAS_PROTOCOL_INTEGRATION.md),
+and its pinned self-verifying report is
+[`certificates/oig_atlas_protocol_integration.json`](certificates/oig_atlas_protocol_integration.json).
+
+Run the nonlinear Double-Pendulum Operational Atlas benchmark:
+
+```sh
+python -m unittest -v \
+  test_double_pendulum_dynamics.py \
+  test_double_pendulum_variational.py \
+  test_oig_double_pendulum_atlas.py \
+  test_oig_double_pendulum_lab.py \
+  test_oig_double_pendulum_persistence.py \
+  test_oig_double_pendulum_variational_atlas.py \
+  test_oig_double_pendulum_parameter_sensitivity.py \
+  test_oig_double_pendulum_validated_transfer.py \
+  test_oig_double_pendulum_validated_transfer_audit.py \
+  test_oig_double_pendulum_structured_nuisance.py \
+  test_oig_double_pendulum_grouped_protocol.py \
+  test_oig_double_pendulum_grouped_validated_transfer.py \
+  test_oig_double_pendulum_grouped_validated_transfer_audit.py \
+  test_oig_double_pendulum_protocol.py \
+  test_oig_double_pendulum_protocol_artifact.py \
+  test_oig_double_pendulum_render.py \
+  test_double_pendulum_artifacts.py
+python oig_double_pendulum_lab.py \
+  --verify artifacts/double_pendulum_operational_atlas_stage1.json
+python oig_double_pendulum_persistence.py \
+  --verify artifacts/double_pendulum_persistence_13x13_t4_tier1.json
+python oig_double_pendulum_variational_atlas.py \
+  --verify artifacts/double_pendulum_variational_atlas_13x13_t4_tier1.json
+python oig_double_pendulum_parameter_sensitivity.py \
+  --verify artifacts/double_pendulum_parameter_sensitivity_tier1.json
+python oig_double_pendulum_validated_transfer.py \
+  --verify-physical artifacts/double_pendulum_physical_positive_floor.json
+python oig_double_pendulum_structured_nuisance.py \
+  --verify artifacts/double_pendulum_structured_physical_nuisance.json
+python oig_double_pendulum_grouped_protocol.py \
+  --verify artifacts/double_pendulum_grouped_protocol_tier1.json
+python oig_double_pendulum_grouped_validated_transfer.py \
+  --verify artifacts/double_pendulum_grouped_physical_clock_floor.json
+python oig_double_pendulum_protocol.py \
+  --verify artifacts/double_pendulum_protocol_design_conditional.json
+```
+
+See [DOUBLE_PENDULUM_OPERATIONAL_ATLAS.md](DOUBLE_PENDULUM_OPERATIONAL_ATLAS.md)
+for the full research contract. The numerical atlases are Tier 1. The
+seven-candidate selection remains conditional, while the separate composed
+artifacts prove both the fixed two-protocol no-nuisance floor and the selected
+five-output shared-clock-profiled floor for the declared nonlinear model.
 
 Run the outward-rounded finite-grid E-design certificate separately:
 
@@ -520,8 +840,153 @@ For the public synthesis of the complete progression, see
 - [OIG_VIII_REPRODUCIBILITY_MANIFEST.md](OIG_VIII_REPRODUCIBILITY_MANIFEST.md)
   — minimal dependencies, immutable theorem commit, source digests, and
   validation commands
+- [OPERATIONAL_INFORMATION_GEOMETRY_IX.md](OPERATIONAL_INFORMATION_GEOMETRY_IX.md)
+  — growing-band Gramians, common Laplace quotient, causal singular flag,
+  critical fan, and effective dimension
+- [OIG_IX_GROWING_BAND_THEOREM.md](OIG_IX_GROWING_BAND_THEOREM.md)
+  — detailed compact-atlas, Sobolev-lift, perturbation, and mixed-word proofs
+- [oig_ix_growing_band.md](oig_ix_growing_band.md) — finite-generator,
+  high-precision Hankel, effective-rank, and calibration-cost audit
+- [OIG_IX_ADVERSARIAL_AUDIT.md](OIG_IX_ADVERSARIAL_AUDIT.md) — compactness,
+  symmetry, finite-sampling, Sobolev, and causal-word counterexamples
+- [OPERATIONAL_INFORMATION_GEOMETRY_X.md](OPERATIONAL_INFORMATION_GEOMETRY_X.md)
+  — certified generalized spectra, effective rank, and finite-transfer target
+- [OIG_X_CERTIFIED_SPECTRUM_THEOREM.md](OIG_X_CERTIFIED_SPECTRUM_THEOREM.md)
+  — interval-atlas theorem, common-window proof, endpoint determinants, and
+  information inequalities
+- [OIG_X_SPECTRAL_ASYMPTOTICS.md](OIG_X_SPECTRAL_ASYMPTOTICS.md) —
+  squared-factorial ceilings, explicit lower frames, determinant scale, exact
+  interaction fan, and a falsifiable cosine constant
+- [oig_x_spectral_certificate.md](oig_x_spectral_certificate.md) — rigorous
+  late-core \(K\le8\) Arb certificates in \(L^2\) and \(H^1\)
+- [oig_x_full_atlas_certificate.md](oig_x_full_atlas_certificate.md) — complete
+  calibrated early/late/lattice/boundary certificate at \(K=2\)
+- [OIG_X_ADVERSARIAL_AUDIT.md](OIG_X_ADVERSARIAL_AUDIT.md) — coordinate,
+  sampling, interval, boundary, underflow, and degeneracy controls
+- [OPERATIONAL_INFORMATION_GEOMETRY_XI.md](OPERATIONAL_INFORMATION_GEOMETRY_XI.md)
+  — metric-normalized finite transfer, mixed causal words, and the first
+  complete finite Neumann crossing
+- [OIG_XI_FINITE_TRANSFER_THEOREM.md](OIG_XI_FINITE_TRANSFER_THEOREM.md) —
+  detailed response/Gram transfer proof, chartwise budgets, and growing-band
+  conditions
+- [oig_xi_transfer_certificate.md](oig_xi_transfer_certificate.md) — Arb
+  phase-grid and complete finite-Neumann proof trace
+- [OIG_XI_ADVERSARIAL_AUDIT.md](OIG_XI_ADVERSARIAL_AUDIT.md) — metric,
+  moment, mixed-word, target, boundary, sensor, and dispersion controls
+- [OPERATIONAL_INFORMATION_GEOMETRY_XII.md](OPERATIONAL_INFORMATION_GEOMETRY_XII.md)
+  — sharp two-port finite-Neumann asymptotics and certified metric-dependent
+  transfer brackets
+- [OIG_XII_TWO_PORT_NEUMANN_THEOREM.md](OIG_XII_TWO_PORT_NEUMANN_THEOREM.md)
+  — detailed weak-Dyson expansion, exact-centre quadrature, and mixed
+  \(n^{-2}\) coefficient
+- [oig_xii_two_port_certificate.md](oig_xii_two_port_certificate.md) — Arb
+  centred-Taylor, Rayleigh-rejection, and exact spectral-norm proof trace
+- [OIG_XII_ADVERSARIAL_AUDIT.md](OIG_XII_ADVERSARIAL_AUDIT.md) — parity,
+  normalization, norm, metric, and minimality controls
+- [OPERATIONAL_INFORMATION_GEOMETRY_PROTOCOL_ENGINE.md](OPERATIONAL_INFORMATION_GEOMETRY_PROTOCOL_ENGINE.md)
+  — resolution-aware finite transfer, proof-producing experiment design, and
+  certified finite sensing
+- [OIG_ARITHMETIC_ATLAS_PROTOCOL_INTEGRATION.md](OIG_ARITHMETIC_ATLAS_PROTOCOL_INTEGRATION.md)
+  — query-directed design, structured nuisance, model-aware quotients, and
+  exact certificate composition
+- [OIG_QUERY_PROTOCOL_DESIGN_THEOREM.md](OIG_QUERY_PROTOCOL_DESIGN_THEOREM.md)
+  — exact query identifiability, nuisance projection, minimax amplification,
+  and shared-versus-independent nuisance semantics
+- [OIG_QUERY_CANDIDATE_LIBRARY.md](OIG_QUERY_CANDIDATE_LIBRARY.md)
+  — globally certified selection within a finite common-contract library
+- [OIG_STRUCTURED_NUISANCE_THEOREM.md](OIG_STRUCTURED_NUISANCE_THEOREM.md)
+  — correlated zonotope support, primal/dual separation, and remote-tail
+  interface
+- [OIG_ROBUST_MODEL_AWARE_QUOTIENT.md](OIG_ROBUST_MODEL_AWARE_QUOTIENT.md)
+  — quotient tubes, finite secants, tangent angles, and uncertain nominal-null
+  rules
+- [OIG_QUERY_PROTOCOL_DESIGN_ADVERSARIAL_AUDIT.md](OIG_QUERY_PROTOCOL_DESIGN_ADVERSARIAL_AUDIT.md)
+  — metric covariance, report sealing, extreme rational scales, and
+  finite-library comparability attacks
+- [OIG_STRUCTURED_ROBUST_INTEGRATION_ADVERSARIAL_AUDIT.md](OIG_STRUCTURED_ROBUST_INTEGRATION_ADVERSARIAL_AUDIT.md)
+  — structured-support, model-null, trust-boundary, and cross-layer
+  integration attacks
+- [OIG_UNIFORM_LATTICE_TRANSFER_THEOREM.md](OIG_UNIFORM_LATTICE_TRANSFER_THEOREM.md)
+  — compact-\(\tau\) expansion, fixed-grid obstruction, and coupled tail
+  theorem
+- [OIG_UNIFORM_LATTICE_EXPLICIT_CONSTANTS.md](OIG_UNIFORM_LATTICE_EXPLICIT_CONSTANTS.md)
+  — global analytic constants and executable joint resolution schedules
+- [oig_uniform_lattice_arb_cover.md](oig_uniform_lattice_arb_cover.md) —
+  practical \(n=1001\), \(1\le\tau\le6/5\) full-generator Arb cover
+- [OIG_PROTOCOL_DESIGN_ENGINE.md](OIG_PROTOCOL_DESIGN_ENGINE.md) — exact
+  quotient, cost, noise, E-optimal primal/dual, and finite-frame engine
+- [OIG_PROTOCOL_ENGINE_ADVERSARIAL_AUDIT.md](OIG_PROTOCOL_ENGINE_ADVERSARIAL_AUDIT.md)
+  — calibration, verifier, CTMC, noise, and integer-realization controls
+- [OIG_INTERVAL_PROTOCOL_DESIGN_AUDIT.md](OIG_INTERVAL_PROTOCOL_DESIGN_AUDIT.md)
+  — response-box transfer theorem and tamper controls
 - `oig_iv_certificate.md` — outward-rounded finite-grid E-design certificate
 - `oig_v_scaling_report.md` — independent continuum and propagation audit
+
+### Nonlinear OIG benchmark — Double-Pendulum Operational Atlas
+
+- [DOUBLE_PENDULUM_OPERATIONAL_ATLAS.md](DOUBLE_PENDULUM_OPERATIONAL_ATLAS.md)
+  — canonical research contract, current results, claim tiers, and next
+  preparation-aware extension target
+- [DOUBLE_PENDULUM_VARIATIONAL_TIER1.md](DOUBLE_PENDULUM_VARIATIONAL_TIER1.md)
+  — analytic state/tangent system and local-response boundary
+- [DOUBLE_PENDULUM_VARIATIONAL_ATLAS_TIER1.md](DOUBLE_PENDULUM_VARIATIONAL_ATLAS_TIER1.md)
+  — two-angle RMS-matched gain field, refinement gates, and unresolved cells
+- [DOUBLE_PENDULUM_PERSISTENCE_TIER1.md](DOUBLE_PENDULUM_PERSISTENCE_TIER1.md)
+  — periodic common-grid scalar persistence, threshold filtration, cadence,
+  horizon, and energy ledgers
+- [DOUBLE_PENDULUM_PARAMETER_SENSITIVITY_TIER1.md](DOUBLE_PENDULUM_PARAMETER_SENSITIVITY_TIER1.md)
+  — analytic log-ratio sensitivity equations and similarity controls that
+  precede the outward proof
+- [DOUBLE_PENDULUM_VALIDATED_TRANSFER_TIER2.md](DOUBLE_PENDULUM_VALIDATED_TRANSFER_TIER2.md)
+  — outward Picard--Taylor response enclosures and exact positive-floor
+  composition for the two active protocols
+- [DOUBLE_PENDULUM_VALIDATED_TRANSFER_AUDIT.md](DOUBLE_PENDULUM_VALIDATED_TRANSFER_AUDIT.md)
+  — independent defect, Picard-tube, partition, membership, and scope attacks
+- [DOUBLE_PENDULUM_STRUCTURED_PHYSICAL_NUISANCE.md](DOUBLE_PENDULUM_STRUCTURED_PHYSICAL_NUISANCE.md)
+  — exact rank obstruction for shared clock/gain and per-launch preparation
+- [DOUBLE_PENDULUM_GROUPED_PROTOCOL_TIER1.md](DOUBLE_PENDULUM_GROUPED_PROTOCOL_TIER1.md)
+  — constructive grouped multi-output recovery after shared-clock profiling
+- [DOUBLE_PENDULUM_GROUPED_NUISANCE_TRANSFER_THEOREM.md](DOUBLE_PENDULUM_GROUPED_NUISANCE_TRANSFER_THEOREM.md)
+  — invariant robust-transfer and division-free augmented-Gram theorems
+- [DOUBLE_PENDULUM_GROUPED_VALIDATED_TRANSFER_TIER3.md](DOUBLE_PENDULUM_GROUPED_VALIDATED_TRANSFER_TIER3.md)
+  — outward five-row/shared-clock transfer and exact profiled physical floor
+- [DOUBLE_PENDULUM_GROUPED_VALIDATED_TRANSFER_AUDIT.md](DOUBLE_PENDULUM_GROUPED_VALIDATED_TRANSFER_AUDIT.md)
+  — independent interval, alternate-partition, incidence, and false-floor audit
+- `double_pendulum_dynamics.py` and `double_pendulum_variational.py` — declared
+  nonlinear mechanics, energy audit, analytic Jacobian, and tangent flow
+- `oig_double_pendulum_lab.py`, `oig_double_pendulum_persistence.py`, and
+  `oig_double_pendulum_variational_atlas.py` — state-refined portrait,
+  persistence laboratory, and two-angle pullback-information field
+- `oig_double_pendulum_protocol.py` — parameter-response discovery and sealed
+  exact design conditional on rational response boxes
+- `oig_double_pendulum_parameter_sensitivity.py` — active-protocol analytic
+  sensitivities and a strict Tier-1 recomputing verifier
+- `oig_double_pendulum_validated_transfer.py` — outward state/sensitivity
+  integration and the strict composed-certificate verifier
+- `oig_double_pendulum_structured_nuisance.py` — Tier-1 physical-nuisance
+  columns and exact conditional query/confounding controls
+- `oig_double_pendulum_grouped_protocol.py` — grouped launch batches,
+  cost-weighted finite-share search, and exact nuisance-profiled query children
+- `oig_double_pendulum_grouped_validated_transfer.py` — outward five-row and
+  clock-column enclosures plus exact rational interval nuisance profiling
+- `artifacts/double_pendulum_operational_atlas_stage1.json` — provisional
+  all-cell state-refined portrait
+- `artifacts/double_pendulum_persistence_13x13_t4_tier1.json` — atlas-matched
+  persistence family
+- `artifacts/double_pendulum_variational_atlas_13x13_t4_tier1.json` —
+  two-angle variational field with explicit unresolved mask
+- `artifacts/double_pendulum_protocol_design_conditional.json` — exact
+  finite-library design conditional on declared response boxes
+- `artifacts/double_pendulum_parameter_sensitivity_tier1.json` — recomputed
+  analytic responses with outward-validation flags kept false
+- `artifacts/double_pendulum_physical_positive_floor.json` — recomputed
+  outward model transfer plus exact fixed-mixture OIG child
+- `artifacts/double_pendulum_structured_physical_nuisance.json` — strict
+  nuisance-rank obstruction and surviving-query report
+- `artifacts/double_pendulum_grouped_protocol_tier1.json` — recomputed grouped
+  library and exact positive clock-profiled point-model certificates
+- `artifacts/double_pendulum_grouped_physical_clock_floor.json` — strict
+  Tier-3 fixed-mixture certificate with floor above \(0.0180269\)
 
 `RESEARCH_ROADMAP.md` records the overall sequence and the boundary between
 proved results, computation, conjecture, and interpretation.
@@ -559,6 +1024,44 @@ proved results, computation, conjecture, and interpretation.
   lattice-phase, boundary, sampling, topology, symmetry, and mixed-jet controls
 - [oig_viii_three_parameter.py](oig_viii_three_parameter.py) — finite,
   lattice, continuum, early, and atomic chart comparisons plus hostile paths
+- [oig_ix_growing_band.py](oig_ix_growing_band.py) — finite response Gramians,
+  high-precision Hankel spectra, causal flags, effective rank, and calibration
+  costs
+- [oig_x_spectral_certificate.py](oig_x_spectral_certificate.py) — continuous
+  late-core Arb spectrum, generalized inertia, and information budgets
+- [oig_x_full_atlas_certificate.py](oig_x_full_atlas_certificate.py) — exact
+  two-port early/late/lattice/boundary atlas certificate
+- [oig_x_spectral_asymptotics.py](oig_x_spectral_asymptotics.py) — exact
+  cosine-moment recurrence and high-precision nested-band conjecture audit
+- [oig_xi_transfer_certificate.py](oig_xi_transfer_certificate.py) — rigorous
+  phase-quadrature transfer through eight ports and complete one-port finite
+  Neumann transfer
+- [oig_xii_two_port_certificate.py](oig_xii_two_port_certificate.py) —
+  complete two-port finite-Neumann Arb transfer in the declared \(L^2\) and
+  continuum-\(H^1\) source metrics
+- [oig_uniform_lattice_transfer.py](oig_uniform_lattice_transfer.py) —
+  compact-\(\tau\), atomic-tail, fixed-grid obstruction, and coupled-limit lab
+- [oig_uniform_lattice_arb_cover.py](oig_uniform_lattice_arb_cover.py) —
+  proof-producing whole-cell compact-\(\tau\) certificate
+- [oig_protocol_design_engine.py](oig_protocol_design_engine.py) — exact
+  rational quotient, E-optimal design, finite-frame, and noise certificates
+- [oig_query_protocol_design.py](oig_query_protocol_design.py) — exact
+  query quotient, nuisance-invariant decoder, minimax amplification, and
+  shared/independent nuisance mixtures
+- [oig_query_candidate_library.py](oig_query_candidate_library.py) — sealed
+  common-contract finite-library selection and uniqueness certificates
+- [oig_structured_nuisance.py](oig_structured_nuisance.py) — exact correlated
+  zonotope support and primal/dual separation certificates
+- [oig_robust_model_quotient.py](oig_robust_model_quotient.py) — model secant,
+  tangent, tube, lattice, and uncertain-null audits
+- [oig_atlas_protocol_integration.py](oig_atlas_protocol_integration.py) —
+  pinned self-verifying composition of the Atlas-derived protocol layers
+- [oig_interval_protocol_design.py](oig_interval_protocol_design.py) —
+  outward rational response-box transfer and independent verification
+- [oig_neumann_matched_frame.py](oig_neumann_matched_frame.py) — Arb finite
+  response enclosure and 172-to-2 matched sensor certificate
+- [oig_hidden_network_protocol_demo.py](oig_hidden_network_protocol_demo.py) —
+  nonreversible finite CTMC protocol-design benchmark
 - `oig_iv_certificate.py` — rational/Arb finite-grid E-design checker
 - `arithmetic_sensing_v.py` — Stage V reproduction and boundary studies
 - `exact_trigonometric_positivity.py` — exact rational Sturm certificates

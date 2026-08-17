@@ -1,0 +1,161 @@
+{
+  "environment": {
+    "arb_precision_bits": 256,
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "python": "3.12.9",
+    "python_flint": "0.9.0"
+  },
+  "finite_trace": {
+    "largest_generator_norm": "[11.199982270203982051 +/- 1.39e-20]",
+    "largest_operator_tail": "[3.9088133902337254233e-36 +/- 2.94e-56]",
+    "target_modes_retained": 500
+  },
+  "independent_exact_verification": {
+    "method": "independent exact-rational replay of all compact-cover floor decisions and premise digest",
+    "metric_count": 3,
+    "passed": true
+  },
+  "metric_certificates": [
+    {
+      "eigenvalue_intervals": [
+        "[-1.76428452424595181007325e-8 +/- 9.99e-10]",
+        "[6.54188903723676169457153e-11 +/- 9.99e-10]"
+      ],
+      "error_matrix_intervals": [
+        [
+          "[-1.66895734139537577858272e-8 +/- 8.46e-10]",
+          "[-4.03163700205349633822252e-9 +/- 2.17e-10]"
+        ],
+        [
+          "[-4.03163700205349633822252e-9 +/- 2.17e-10]",
+          "[-8.87852938133392697959620e-10 +/- 9.00e-11]"
+        ]
+      ],
+      "metric": "L2",
+      "passed": true,
+      "spectral_error_upper_approx": 1.8641777991478482e-08,
+      "spectral_error_upper_exact": "70732035546530240563470957555140408319368565417462927659918841442041251225/3794275180128377091639574036764685364535950857523710002444946112771297432041422848",
+      "stage_x_floor_approx": 1.4315196512138325e-07,
+      "stage_x_floor_exact": "71575982560691627369082268261831253224317187234411991716471/500000000000000000000000000000000000000000000000000000000000000000",
+      "tau_taylor_entry_remainders": [
+        [
+          "[6.7600625009474399208e-11 +/- 4.30e-31]",
+          "[6.7600625009474399208e-11 +/- 4.30e-31]"
+        ],
+        [
+          "[6.7600625009474399208e-11 +/- 4.30e-31]",
+          "[6.7600625009474399208e-11 +/- 4.30e-31]"
+        ]
+      ],
+      "transferred_floor_approx": 1.2451018712990477e-07,
+      "transferred_floor_exact": "6402565011099202364117591541605586643417999994912718495092057469400606294191397827462159838311363419481697510938695861519/51422017416287688817342786954917203280710495801049370729644032000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "eigenvalue_intervals": [
+        "[-1.55830577131499650827708e-9 +/- 8.25e-11]",
+        "[9.36568962992183788415071e-13 +/- 8.25e-11]"
+      ],
+      "error_matrix_intervals": [
+        [
+          "[-1.53543521899298544815073e-9 +/- 7.79e-11]",
+          "[-1.92204163056583354634830e-10 +/- 1.04e-11]"
+        ],
+        [
+          "[-1.92204163056583354634830e-10 +/- 1.04e-11]",
+          "[-2.19339833590188763379313e-11 +/- 2.23e-12]"
+        ]
+      ],
+      "metric": "declared_H1",
+      "passed": true,
+      "spectral_error_upper_approx": 1.6408051800951587e-09,
+      "spectral_error_upper_exact": "778208296282641595796779688579948609917741736764808325339810550733026461/474284397516047136454946754595585670566993857190463750305618264096412179005177856",
+      "stage_x_floor_approx": 3.5523100221039936e-09,
+      "stage_x_floor_exact": "177615501105199674392110272222231543772504830490130249386911/50000000000000000000000000000000000000000000000000000000000000000000",
+      "tau_taylor_entry_remainders": [
+        [
+          "[6.2192350811497262835e-12 +/- 2.71e-32]",
+          "[3.2227905303552813796e-12 +/- 2.93e-32]"
+        ],
+        [
+          "[3.2227905303552813796e-12 +/- 2.93e-32]",
+          "[1.6700411975145318951e-12 +/- 1.90e-32]"
+        ]
+      ],
+      "transferred_floor_approx": 1.911504842008835e-09,
+      "transferred_floor_exact": "307166985240926705360513233295678179477142207769004251187020769017063286634074513525950309070213081552722387166436800947/160693804425899027554196209234116260252220299378279283530137600000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "eigenvalue_intervals": [
+        "[-1.46150163350044157763345e-9 +/- 8.61e-11]",
+        "[5.29808592228974679488260e-13 +/- 8.61e-11]"
+      ],
+      "error_matrix_intervals": [
+        [
+          "[-1.44050805762494149500452e-9 +/- 8.10e-11]",
+          "[-1.79502330676839321373612e-10 +/- 1.09e-11]"
+        ],
+        [
+          "[-1.79502330676839321373612e-10 +/- 1.09e-11]",
+          "[-2.04637672832711079494374e-11 +/- 2.31e-12]"
+        ]
+      ],
+      "metric": "natural_discrete_H1",
+      "passed": true,
+      "spectral_error_upper_approx": 1.5475021286371954e-09,
+      "spectral_error_upper_exact": "733956114735492676524980458966554479616726138404679000791074126414689437/474284397516047136454946754595585670566993857190463750305618264096412179005177856",
+      "stage_x_floor_approx": 3.5523100221039936e-09,
+      "stage_x_floor_exact": "177615501105199674392110272222231543772504830490130249386911/50000000000000000000000000000000000000000000000000000000000000000000",
+      "tau_taylor_entry_remainders": [
+        [
+          "[6.2192397152206020719e-12 +/- 1.57e-32]",
+          "[3.2227968897145649140e-12 +/- 3.44e-32]"
+        ],
+        [
+          "[3.2227968897145649140e-12 +/- 3.44e-32]",
+          "[1.6700465439424635132e-12 +/- 1.78e-32]"
+        ]
+      ],
+      "transferred_floor_approx": 2.004807893466798e-09,
+      "transferred_floor_exact": "322160207544252270684757285219636499325423162167314651187020769017063286634074513525950309070213081552722387166436800947/160693804425899027554196209234116260252220299378279283530137600000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "model": {
+    "band_dimension": 2,
+    "finite_generator": "L_n + omega_(n,l) V_n, no phase surrogate",
+    "interaction_strength_exact": "4/5",
+    "normalization": "sqrt(1+tau)",
+    "side_length": 1001,
+    "target": "one exactly central cell on an odd grid",
+    "tau_centre_exact": "11/10",
+    "tau_interval_exact": [
+      "1/1",
+      "6/5"
+    ],
+    "tau_radius_exact": "1/10"
+  },
+  "overall_passed": true,
+  "proof_method": {
+    "binary64_decides_no_inequality": true,
+    "continuum_integrator": {
+      "absolute_tolerance_power_of_two": -240,
+      "depth_limit": 32,
+      "evaluation_limit": 40000,
+      "reality_premise": "the explicit integrand is real on the real xi interval; the complex integrator is used only for validated quadrature",
+      "relative_tolerance_power_of_two": -216
+    },
+    "finite_exponential_degree": 48,
+    "finite_value_enclosure": "Arb centred B=A-cI operator polynomial at rational tau centre",
+    "spectral_norm": "closed symmetric 2x2 eigenvalue enclosure",
+    "tau_dependence": "Arb Taylor coefficients of the finite-continuum difference",
+    "tau_remainder": "global derivative majorants from contraction, ||A_n||<=56/5 and ||omega V||<=36/5",
+    "tau_taylor_order": 18
+  },
+  "schema_version": "oig-uniform-lattice-arb-cover-v1",
+  "stage_x_floor_provenance": {
+    "band_dimension": 2,
+    "module": "oig_xi_transfer_certificate.py",
+    "symbol": "STAGE_X_LOWER_BOUNDS",
+    "used_floor_sha256": "9589c16b96d8a00aafd72121d6f1553b7a47f414a5cef4b2d787d330cec6f457"
+  },
+  "status": "rigorous local compact-tau full-Neumann cover"
+}

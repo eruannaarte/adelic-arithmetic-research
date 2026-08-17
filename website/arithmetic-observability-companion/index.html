@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="An interactive public companion to the Arithmetic Observability Atlas: explore how a few harmonic readings separate hidden prime-exponent profiles.">
+  <title>Arithmetic Observability Lab</title>
+  <link rel="stylesheet" href="ao-lab.css">
+</head>
+<body>
+  <a class="skip-link" href="#ao-lab">Skip to the interactive laboratory</a>
+  <main>
+    <header class="hero">
+      <p class="eyebrow">Public companion · Not peer reviewed</p>
+      <h1>Can a few echoes reveal a hidden arithmetic shape?</h1>
+      <p class="dek">Change how three primes distribute weight across their exponent levels, then watch a small set of harmonic readings separate—or confuse—the resulting hidden profiles.</p>
+      <nav class="hero-links" aria-label="Companion links">
+        <a href="../../ARITHMETIC_OBSERVABILITY_ATLAS.md">Read the formal Atlas</a>
+        <a href="../../ARITHMETIC_OBSERVABILITY_PUBLIC_COMPANION.md">Read the public essay</a>
+      </nav>
+    </header>
+
+    <section class="orientation" aria-labelledby="orientation-title">
+      <div>
+        <p class="section-kicker">The idea</p>
+        <h2 id="orientation-title">An arithmetic object heard as a chord</h2>
+        <p>The primes 2, 3, and 5 act like three instruments. Each shape control changes how strongly its four exponent levels contribute. A reading combines all 64 components into one complex echo.</p>
+      </div>
+      <dl class="shape-key">
+        <div><dt>Shape below 0.5</dt><dd>low exponents dominate</dd></div>
+        <div><dt>Shape at 0.5</dt><dd>four levels are equally weighted</dd></div>
+        <div><dt>Shape above 0.5</dt><dd>high exponents dominate</dd></div>
+      </dl>
+    </section>
+
+    <section id="ao-lab" class="lab" aria-labelledby="lab-title">
+      <div class="lab-heading">
+        <div>
+          <p class="section-kicker">Interactive illustration — synthetic declared model</p>
+          <h2 id="lab-title">Arithmetic Observability Lab</h2>
+        </div>
+        <p class="lab-provenance">Normalized four-level factors · primes 2, 3, 5 · exact AO V three-reading schedule</p>
+      </div>
+
+      <form class="controls" aria-label="Laboratory controls" onsubmit="return false">
+        <label>
+          <span>Readings</span>
+          <select id="reading-count">
+            <option value="1">1 reading</option>
+            <option value="2">2 readings</option>
+            <option value="3" selected>3 readings</option>
+          </select>
+        </label>
+        <label>
+          <span>Prime 2 shape <output id="y2-value" for="y2">0.28</output></span>
+          <input id="y2" type="range" min="0.08" max="0.92" step="0.01" value="0.28">
+        </label>
+        <label>
+          <span>Prime 3 shape <output id="y3-value" for="y3">0.52</output></span>
+          <input id="y3" type="range" min="0.08" max="0.92" step="0.01" value="0.52">
+        </label>
+        <label>
+          <span>Prime 5 shape <output id="y5-value" for="y5">0.76</output></span>
+          <input id="y5" type="range" min="0.08" max="0.92" step="0.01" value="0.76">
+        </label>
+        <label>
+          <span>Pair cutoff (2ε) <output id="tolerance-value" for="tolerance">0.020</output></span>
+          <input id="tolerance" type="range" min="0.002" max="0.060" step="0.002" value="0.020">
+        </label>
+      </form>
+
+      <div class="stats" aria-label="Current laboratory summary">
+        <div><span>Projected ambiguous cells</span><strong id="ambiguous">—</strong><small id="tolerance-context">reading distance ≤ 0.020</small></div>
+        <div><span>Empirical secant floor</span><strong id="floor">—</strong><small>sampled lower ratio, shape gap ≥ 0.08</small></div>
+        <div><span>Closest separated competitor</span><strong id="nearest">—</strong><small>reading-space distance</small></div>
+      </div>
+
+      <div class="plots">
+        <figure>
+          <figcaption>
+            <strong>Confusability slice</strong>
+            <span>Candidate prime-2 and prime-3 shapes; candidate prime-5 shape is optimized on a grid.</span>
+          </figcaption>
+          <div id="heat-wrap" class="chart-wrap">
+            <svg id="heat-chart" role="img" aria-labelledby="heat-title heat-desc">
+              <title id="heat-title">Confusability heatmap</title>
+              <desc id="heat-desc">Minimum harmonic reading distance over the hidden prime-5 shape, plotted against candidate prime-2 and prime-3 shapes.</desc>
+            </svg>
+          </div>
+          <div class="legend" aria-label="Heatmap legend">
+            <span><i class="swatch hatch" aria-hidden="true"></i>within pair cutoff</span>
+            <span><i class="swatch source" aria-hidden="true"></i>source and nearest competitor</span>
+          </div>
+        </figure>
+
+        <figure>
+          <figcaption>
+            <strong>Observed separation envelope</strong>
+            <span>Smallest reading-space distance found for each sampled compact shape distance.</span>
+          </figcaption>
+          <div id="envelope-wrap" class="chart-wrap">
+            <svg id="envelope-chart" role="img" aria-labelledby="envelope-title envelope-desc">
+              <title id="envelope-title">Observed separation envelope</title>
+              <desc id="envelope-desc">A sampled lower envelope of harmonic reading distance as compact shape distance increases.</desc>
+            </svg>
+          </div>
+          <div class="legend" aria-label="Envelope legend">
+            <span><i class="swatch curve" aria-hidden="true"></i>sampled lower envelope</span>
+            <span><i class="swatch cutoff" aria-hidden="true"></i>pair cutoff</span>
+          </div>
+        </figure>
+      </div>
+
+      <p id="detail" class="detail" aria-live="polite"></p>
+      <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+      <noscript><p class="noscript">The interactive plots require JavaScript. The public essay and formal Atlas remain available from the links above.</p></noscript>
+    </section>
+
+    <section class="reading-guide" aria-labelledby="guide-title">
+      <p class="section-kicker">How to read it</p>
+      <h2 id="guide-title">Confusability moves when the hidden shape or the instrument changes</h2>
+      <div class="guide-grid">
+        <article><h3>Shape is an exponent profile</h3><p>The sliders do not alter the primes. They move probability among the four allowed exponent levels of each prime.</p></article>
+        <article><h3>Orange means possible overlap</h3><p>Hatched cells lie within the selected pair cutoff after the hidden candidate prime-5 shape is allowed to compensate.</p></article>
+        <article><h3>More readings cross-cut valleys</h3><p>One echo can leave broad near-collisions. Independent phase-separated readings observe different directions and reduce the surviving confusable region.</p></article>
+      </div>
+    </section>
+
+    <section class="analogy" aria-labelledby="analogy-title">
+      <p class="section-kicker">Controlled physical analogy</p>
+      <h2 id="analogy-title">A toy spectrum built from prime logarithms</h2>
+      <p>An engineered four-level quantum system can assign energy <code>ℏΩ(a log 2 + b log 3 + c log 5)</code> to the state <code>|a,b,c⟩</code>. Its survival amplitude then reproduces the lab's harmonic reading after a time rescaling. In that toy model, shape controls occupation bias and the envelope becomes an instrument-resolution curve.</p>
+      <p class="boundary"><strong>Boundary:</strong> this is an exact mathematical embedding, not evidence that elementary particles naturally have prime-logarithmic energy levels. The sampled envelope is not an energy spectrum.</p>
+    </section>
+
+    <footer>
+      <p><strong>Status:</strong> interactive finite-grid illustration. The formal three-reading theorem and its hypotheses are in Arithmetic Observability V; the full model map and open arithmetic-realizability boundary are in the Atlas.</p>
+    </footer>
+  </main>
+  <script src="ao-lab.js"></script>
+</body>
+</html>

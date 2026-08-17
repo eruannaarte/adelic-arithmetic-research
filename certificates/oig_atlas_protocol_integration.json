@@ -1,0 +1,2296 @@
+{
+  "independent_verification": {
+    "components_verified": [
+      "query_gain_library",
+      "shared_vs_independent_nuisance_library",
+      "structured_nuisance",
+      "robust_model_geometry",
+      "selected_protocol_structured_separation",
+      "selected_protocol_response_tube",
+      "integration_ledger"
+    ],
+    "method": "strict child reconstruction followed by deterministic pinned-report and cross-layer ledger reconstruction",
+    "passed": true,
+    "schema_version": "oig-atlas-protocol-integration-verification-v1"
+  },
+  "integration_ledger": {
+    "all_pinned_integration_obligations_pass": true,
+    "gain_library_unique_winner": true,
+    "response_box_information_composition_remains_external": true,
+    "robust_geometry_obligations_pass": true,
+    "selected_protocol_declaration_is_shared_across_followthrough": true,
+    "selected_protocol_metrics_are_shared_across_followthrough": true,
+    "selected_protocol_pair_is_disjoint_at_declared_noise": true,
+    "selected_protocol_remains_disjoint_under_structured_nuisance_and_declared_noise": true,
+    "selected_protocol_survives_declared_structured_nuisance": true,
+    "shared_nuisance_is_identifiable_while_independent_refit_is_not": true,
+    "structured_correlation_strictly_improves_support": true
+  },
+  "proof_boundary": "This pinned report proves exact finite rational statements for its embedded candidate libraries and nuisance/model declarations. External physical-model enclosure, remote-tail truth, model-family exhaustiveness, and response-box information transfer remain separately declared obligations.",
+  "query_gain_library": {
+    "candidate_count": 3,
+    "candidates": [
+      {
+        "child_exact_verification": {
+          "amplification_squared_lower_exact": "1/1",
+          "amplification_squared_upper_exact": "39614081257132168796771975169/39614081257132168796771975168",
+          "method": "exact rational reconstruction of the nuisance quotient, kernel condition, query factorization, and minimax amplification bracket",
+          "passed": true,
+          "query_identifiable": true
+        },
+        "classification": "identifiable-finite-loss",
+        "finite_minimax_eligible": true,
+        "index": 0,
+        "kappa_squared_lower_exact": "1/1",
+        "kappa_squared_upper_exact": "39614081257132168796771975169/39614081257132168796771975168",
+        "name": "unit gain",
+        "query_certificate": {
+          "declared_nuisance_dimension": 0,
+          "declared_nuisance_response_exact": null,
+          "declared_observation_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "declared_output_metric_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "declared_query_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "declared_query_metric_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "declared_source_metric_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "effective_response_rank": 1,
+          "factorization_and_minimax": {
+            "amplification_lower_witness_exact": [
+              "100000000/1"
+            ],
+            "decoder_annihilates_nuisance_exact": true,
+            "decoder_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "decoder_times_effective_response_equals_query_exact": true,
+            "decoder_times_raw_observation_equals_query_exact": true,
+            "descriptive_amplification_lower": 1.0,
+            "descriptive_amplification_upper": 1.0,
+            "factorization_exists": true,
+            "interpretation": "For data-noise radius epsilon, the exact minimax query error is kappa*epsilon; the true kappa squared lies in the certified rational interval.",
+            "kind": "identifiable-query-factorization",
+            "minimax_amplification_exactly_zero": false,
+            "minimax_amplification_squared_lower_exact": "1/1",
+            "minimax_amplification_squared_upper_exact": "39614081257132168796771975169/39614081257132168796771975168",
+            "quotient_injection_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "quotient_row_coordinates_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "quotient_source_metric_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "reduced_data_gram_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "reduced_effective_response_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "reduced_query_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "reduced_query_form_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "upper_shift_positive_by_exact_ldl": true
+          },
+          "identifiability": {
+            "kernel_condition_exact": true,
+            "kernel_counterexample_exact": null,
+            "query_identifiable_exact": true
+          },
+          "independent_exact_verification": {
+            "amplification_squared_lower_exact": "1/1",
+            "amplification_squared_upper_exact": "39614081257132168796771975169/39614081257132168796771975168",
+            "method": "exact rational reconstruction of the nuisance quotient, kernel condition, query factorization, and minimax amplification bracket",
+            "passed": true,
+            "query_identifiable": true
+          },
+          "model_kind": "single_experiment",
+          "nuisance_elimination": {
+            "effective_response_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "metric_orthogonal_projector_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "nuisance_basis_exact": null,
+            "profiled_information_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "projector_annihilates_nuisance_exact": true,
+            "projector_idempotent_exact": true,
+            "projector_is_output_metric_self_adjoint_exact": true
+          },
+          "nuisance_rank": 0,
+          "output_dimension": 1,
+          "proof_boundary": "This certificate proves a finite-dimensional real rational linear theorem for the declared metrics, response, query, and the declared unrestricted linear nuisance. It does not prove that an external physical or continuum model is enclosed by these data.",
+          "query_dimension": 1,
+          "report_valid": true,
+          "schema_version": "oig-query-protocol-certificate-v1",
+          "source_dimension": 1,
+          "status": "exact finite-linear query certificate"
+        }
+      },
+      {
+        "child_exact_verification": {
+          "amplification_squared_lower_exact": "1/4",
+          "amplification_squared_upper_exact": "19807040628566084398385987585/79228162514264337593543950336",
+          "method": "exact rational reconstruction of the nuisance quotient, kernel condition, query factorization, and minimax amplification bracket",
+          "passed": true,
+          "query_identifiable": true
+        },
+        "classification": "identifiable-finite-loss",
+        "finite_minimax_eligible": true,
+        "index": 1,
+        "kappa_squared_lower_exact": "1/4",
+        "kappa_squared_upper_exact": "19807040628566084398385987585/79228162514264337593543950336",
+        "name": "double gain",
+        "query_certificate": {
+          "declared_nuisance_dimension": 0,
+          "declared_nuisance_response_exact": null,
+          "declared_observation_exact": [
+            [
+              "2/1"
+            ]
+          ],
+          "declared_output_metric_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "declared_query_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "declared_query_metric_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "declared_source_metric_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "effective_response_rank": 1,
+          "factorization_and_minimax": {
+            "amplification_lower_witness_exact": [
+              "100000000/1"
+            ],
+            "decoder_annihilates_nuisance_exact": true,
+            "decoder_exact": [
+              [
+                "1/2"
+              ]
+            ],
+            "decoder_times_effective_response_equals_query_exact": true,
+            "decoder_times_raw_observation_equals_query_exact": true,
+            "descriptive_amplification_lower": 0.5,
+            "descriptive_amplification_upper": 0.5,
+            "factorization_exists": true,
+            "interpretation": "For data-noise radius epsilon, the exact minimax query error is kappa*epsilon; the true kappa squared lies in the certified rational interval.",
+            "kind": "identifiable-query-factorization",
+            "minimax_amplification_exactly_zero": false,
+            "minimax_amplification_squared_lower_exact": "1/4",
+            "minimax_amplification_squared_upper_exact": "19807040628566084398385987585/79228162514264337593543950336",
+            "quotient_injection_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "quotient_row_coordinates_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "quotient_source_metric_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "reduced_data_gram_exact": [
+              [
+                "4/1"
+              ]
+            ],
+            "reduced_effective_response_exact": [
+              [
+                "2/1"
+              ]
+            ],
+            "reduced_query_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "reduced_query_form_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "upper_shift_positive_by_exact_ldl": true
+          },
+          "identifiability": {
+            "kernel_condition_exact": true,
+            "kernel_counterexample_exact": null,
+            "query_identifiable_exact": true
+          },
+          "independent_exact_verification": {
+            "amplification_squared_lower_exact": "1/4",
+            "amplification_squared_upper_exact": "19807040628566084398385987585/79228162514264337593543950336",
+            "method": "exact rational reconstruction of the nuisance quotient, kernel condition, query factorization, and minimax amplification bracket",
+            "passed": true,
+            "query_identifiable": true
+          },
+          "model_kind": "single_experiment",
+          "nuisance_elimination": {
+            "effective_response_exact": [
+              [
+                "2/1"
+              ]
+            ],
+            "metric_orthogonal_projector_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "nuisance_basis_exact": null,
+            "profiled_information_exact": [
+              [
+                "4/1"
+              ]
+            ],
+            "projector_annihilates_nuisance_exact": true,
+            "projector_idempotent_exact": true,
+            "projector_is_output_metric_self_adjoint_exact": true
+          },
+          "nuisance_rank": 0,
+          "output_dimension": 1,
+          "proof_boundary": "This certificate proves a finite-dimensional real rational linear theorem for the declared metrics, response, query, and the declared unrestricted linear nuisance. It does not prove that an external physical or continuum model is enclosed by these data.",
+          "query_dimension": 1,
+          "report_valid": true,
+          "schema_version": "oig-query-protocol-certificate-v1",
+          "source_dimension": 1,
+          "status": "exact finite-linear query certificate"
+        }
+      },
+      {
+        "child_exact_verification": {
+          "method": "exact rational nuisance profiling and kernel counterexample",
+          "passed": true,
+          "query_identifiable": false
+        },
+        "classification": "unidentifiable-infinite-loss",
+        "finite_minimax_eligible": false,
+        "index": 2,
+        "kappa_squared_lower_exact": null,
+        "kappa_squared_upper_exact": null,
+        "name": "blind control",
+        "query_certificate": {
+          "declared_nuisance_dimension": 0,
+          "declared_nuisance_response_exact": null,
+          "declared_observation_exact": [
+            [
+              "0/1"
+            ]
+          ],
+          "declared_output_metric_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "declared_query_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "declared_query_metric_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "declared_source_metric_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "effective_response_rank": 0,
+          "factorization_and_minimax": {
+            "factorization_exists": false,
+            "kind": "unidentifiable-unbounded-source",
+            "reason": "ker(effective_response) is not contained in ker(query)",
+            "zero_noise_minimax_error": "infinite"
+          },
+          "identifiability": {
+            "kernel_condition_exact": false,
+            "kernel_counterexample_exact": [
+              "1/1"
+            ],
+            "query_identifiable_exact": false
+          },
+          "independent_exact_verification": {
+            "method": "exact rational nuisance profiling and kernel counterexample",
+            "passed": true,
+            "query_identifiable": false
+          },
+          "model_kind": "single_experiment",
+          "nuisance_elimination": {
+            "effective_response_exact": [
+              [
+                "0/1"
+              ]
+            ],
+            "metric_orthogonal_projector_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "nuisance_basis_exact": null,
+            "profiled_information_exact": [
+              [
+                "0/1"
+              ]
+            ],
+            "projector_annihilates_nuisance_exact": true,
+            "projector_idempotent_exact": true,
+            "projector_is_output_metric_self_adjoint_exact": true
+          },
+          "nuisance_rank": 0,
+          "output_dimension": 1,
+          "proof_boundary": "This certificate proves a finite-dimensional real rational linear theorem for the declared metrics, response, query, and the declared unrestricted linear nuisance. It does not prove that an external physical or continuum model is enclosed by these data.",
+          "query_dimension": 1,
+          "report_valid": true,
+          "schema_version": "oig-query-protocol-certificate-v1",
+          "source_dimension": 1,
+          "status": "exact finite-linear query certificate"
+        }
+      }
+    ],
+    "comparison_contract": {
+      "candidate_output_metrics_are_calibrated_design_declarations": true,
+      "common_contract_verified_exact": true,
+      "data_noise_radius_convention": "For every candidate i, the same numerical epsilon bounds ||eta_i|| in that candidate's declared output metric W_i; query error is measured in the common declared query metric. Candidate-specific W_i is part of the calibrated design.",
+      "declared_query_exact": [
+        [
+          "1/1"
+        ]
+      ],
+      "declared_query_metric_exact": [
+        [
+          "1/1"
+        ]
+      ],
+      "declared_source_metric_exact": [
+        [
+          "1/1"
+        ]
+      ],
+      "query_dimension": 1,
+      "same_numerical_epsilon_across_candidates": true,
+      "source_dimension": 1
+    },
+    "comparison_scope": "The comparison is exactly over the embedded finite candidate list under one exact common source/query/noise-radius contract; no unlisted protocol, budget mixture, or continuous design family is optimized or excluded.",
+    "continuous_design_optimality_claimed": false,
+    "finite_library_theorem": "For identifiable candidates i with true squared losses kappa_i^2 in [lower_i, upper_i], min_i kappa_i^2 lies in [min_i lower_i, min_i upper_i]. Unidentifiable candidates have infinite loss in the child unbounded-source model.",
+    "identifiable_candidate_count": 2,
+    "independent_exact_verification": {
+      "candidate_certificates_verified": 3,
+      "common_comparison_contract_verified_exactly": true,
+      "identifiable_candidates": 2,
+      "library_bracket_reconstructed_exactly": true,
+      "method": "standalone exact reconstruction of every sealed child certificate, rational common source/query/noise-radius contract, candidate interval, finite-library optimum bracket, deterministic selection, and strict uniqueness comparison",
+      "outcome": "finite-candidate-selected",
+      "passed": true,
+      "selection_reconstructed_exactly": true,
+      "unique_winner_test_reconstructed_exactly": true
+    },
+    "objective": "minimize squared minimax query amplification over the declared finite library",
+    "proof_boundary": "This certificate composes exact finite-dimensional rational child certificates. It proves a minimax bracket and, when separated, a unique winner only within the declared finite library and its embedded common comparison contract. It makes no continuous-design global-optimality, cross-query comparison, or external physical-model enclosure claim.",
+    "report_valid": true,
+    "schema_version": "oig-query-candidate-library-certificate-v1",
+    "selection": {
+      "competitor_checks": [
+        {
+          "competitor_index": 0,
+          "competitor_lower_exact": "1/1",
+          "competitor_name": "unit gain",
+          "selected_upper_exact": "19807040628566084398385987585/79228162514264337593543950336",
+          "selected_upper_strictly_below_competitor_lower": true
+        }
+      ],
+      "library_optimum_kappa_squared_lower_exact": "1/4",
+      "library_optimum_kappa_squared_upper_exact": "19807040628566084398385987585/79228162514264337593543950336",
+      "outcome": "finite-candidate-selected",
+      "selected_candidate_index": 1,
+      "selected_candidate_name": "double gain",
+      "selection_rule": "smallest certified upper bound, declaration-order tie break",
+      "unique_winner_basis": "selected upper is strictly below every other identifiable lower",
+      "unique_winner_certified": true
+    },
+    "status": "exact finite query-candidate-library certificate"
+  },
+  "robust_model_geometry": {
+    "combined_target": {
+      "aggregate_information_exact": [
+        [
+          "1/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "1/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "0/1",
+          "0/1"
+        ]
+      ],
+      "blind_dimension": 1,
+      "blind_source_radius_exact": "2/1",
+      "blind_uncertainty_certificate": {
+        "blind_basis_exact": [
+          [
+            "0/1"
+          ],
+          [
+            "0/1"
+          ],
+          [
+            "1/1"
+          ]
+        ],
+        "blind_dimension": 1,
+        "blind_leakage_gain_squared_upper_exact": "1/18000",
+        "blind_leakage_gain_upper_exact": "147632964261913091913418097/19807040628566084398385987584",
+        "blind_metric_exact": [
+          [
+            "9/1"
+          ]
+        ],
+        "blind_source_radius_exact": "2/1",
+        "bounded_blind_leakage_radius_upper_exact": "147632964261913091913418097/9903520314283042199192993792",
+        "box_preserves_nominal_blind_subspace": false,
+        "critical_fact": "the centre response is an admissible member of the symmetric box",
+        "declared_model_secants_exclude_kernel_collisions": true,
+        "exhaustive_model_secants_prove_task_irrelevance": true,
+        "leakage_diagonal_form_bound_exact": [
+          [
+            "1/2000"
+          ]
+        ],
+        "leakage_envelope_exact": [
+          [
+            "1/100"
+          ],
+          [
+            "1/50"
+          ]
+        ],
+        "model_secants_exact": [
+          [
+            "3/1",
+            "4/1",
+            "5/1"
+          ]
+        ],
+        "model_secants_exhaustive": true,
+        "model_secants_provenance": "the demo model is the declared two-point codebook with this sole nonzero secant",
+        "nominal_null_safe_to_ignore": true,
+        "nominal_null_task_irrelevant": true,
+        "output_metric_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "query_is_insensitive_to_nominal_kernel": true,
+        "query_matrix_exact": [
+          [
+            "1/1",
+            "0/1",
+            "0/1"
+          ]
+        ],
+        "query_relevance_rule": "Task irrelevance requires exact ker(H) subset ker(L) or an exhaustive model-secant proof. Full-family null preservation proves structural quotient stability only.",
+        "quotient_family_stable": false,
+        "quotient_rule": "retain the nominal quotient, but treat bounded blind-component leakage as additional output uncertainty; never count uncertain activation as guaranteed information",
+        "response_centre_exact": [
+          [
+            "1/1",
+            "0/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1",
+            "0/1"
+          ]
+        ],
+        "response_radius_exact": [
+          [
+            "0/1",
+            "0/1",
+            "1/100"
+          ],
+          [
+            "0/1",
+            "0/1",
+            "1/50"
+          ]
+        ],
+        "schema_version": "oig-nominal-blind-uncertainty-v1",
+        "source_metric_exact": [
+          [
+            "1/1",
+            "0/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "4/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "0/1",
+            "9/1"
+          ]
+        ],
+        "sqrt_bits": 96,
+        "worst_case_blind_information_floor_exact": "0/1"
+      },
+      "combined_target_passed": true,
+      "design_target": "partial model-geometry audit: quotient information floor, quotient-secant floor, tangent angle, nominal-null relevance, and blind-leakage safety",
+      "finite_secant_certificate": {
+        "common_separation_erosion_exact": "0/1",
+        "family_size": 1,
+        "finite_family_is_quotient_separated": true,
+        "minimum_eroded_gap_lower_exact": "338462858628250263645331452001/39614081257132168796771975168",
+        "minimum_quotient_ratio_lower_exact": "2450828370938386207940165259/4951760157141521099596496896",
+        "minimum_quotient_ratio_squared_exact": "73/298",
+        "minimum_quotient_ratio_upper_exact": "39213253935014179327042644145/79228162514264337593543950336",
+        "proof_boundary": "This is a global model certificate only when the supplied finite secant set is exhaustive.",
+        "quotient_noise_radius_exact": "0/1",
+        "response_exact": [
+          [
+            "1/1",
+            "0/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1",
+            "0/1"
+          ]
+        ],
+        "schema_version": "oig-finite-quotient-secants-v1",
+        "secant_declarations_exact": [
+          [
+            "3/1",
+            "4/1",
+            "5/1"
+          ]
+        ],
+        "secants": [
+          {
+            "ambient_norm_squared_exact": "298/1",
+            "eroded_gap_lower_exact": "338462858628250263645331452001/39614081257132168796771975168",
+            "eroded_gap_upper_exact": "676925717256500527290662904003/79228162514264337593543950336",
+            "index": 0,
+            "quotient_distance_squared_exact": "73/1",
+            "quotient_ratio_squared_exact": "73/298",
+            "secant_exact": [
+              "3/1",
+              "4/1",
+              "5/1"
+            ],
+            "tube_overlap_exact": false
+          }
+        ],
+        "source_metric_exact": [
+          [
+            "1/1",
+            "0/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "4/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "0/1",
+            "9/1"
+          ]
+        ],
+        "source_radius_exact": "0/1",
+        "sqrt_bits": 96
+      },
+      "model_secants_exact": [
+        [
+          "3/1",
+          "4/1",
+          "5/1"
+        ]
+      ],
+      "model_secants_exhaustive": true,
+      "model_secants_provenance": "the demo model is the declared two-point codebook with this sole nonzero secant",
+      "nominal_null_relevance_certificate": {
+        "blind_basis_exact": [
+          [
+            "0/1"
+          ],
+          [
+            "0/1"
+          ],
+          [
+            "1/1"
+          ]
+        ],
+        "blind_dimension": 1,
+        "declared_model_secants_exclude_kernel_collisions": true,
+        "entire_response_box_preserves_nominal_null": false,
+        "exhaustive_model_secants_prove_task_irrelevance": true,
+        "finite_model_warning": "The secant alternative is global only when the supplied list is an exhaustive difference set.",
+        "kernel_is_subset_of_query_kernel": true,
+        "model_secants_exact": [
+          [
+            "3/1",
+            "4/1",
+            "5/1"
+          ]
+        ],
+        "model_secants_exhaustive": true,
+        "model_secants_provenance": "the demo model is the declared two-point codebook with this sole nonzero secant",
+        "nominal_null_safe_to_ignore": true,
+        "nominal_null_task_irrelevant": true,
+        "query_matrix_exact": [
+          [
+            "1/1",
+            "0/1",
+            "0/1"
+          ]
+        ],
+        "quotient_family_stable": false,
+        "response_exact": [
+          [
+            "1/1",
+            "0/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1",
+            "0/1"
+          ]
+        ],
+        "response_radius_exact": [
+          [
+            "0/1",
+            "0/1",
+            "1/100"
+          ],
+          [
+            "0/1",
+            "0/1",
+            "1/50"
+          ]
+        ],
+        "rule": "Task irrelevance requires exact ker(H) subset ker(L) or an exhaustive model-secant proof. Full-family null preservation proves structural quotient stability only.",
+        "schema_version": "oig-nominal-null-relevance-v1",
+        "source_metric_exact": [
+          [
+            "1/1",
+            "0/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "4/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "0/1",
+            "9/1"
+          ]
+        ]
+      },
+      "obligations": {
+        "declared_finite_secants_avoid_kernel": true,
+        "declared_tangents_avoid_kernel": true,
+        "nominal_null_relevance_rule_satisfied": true,
+        "positive_information_on_nominal_quotient": true,
+        "uncertain_blind_direction_rule_satisfied": true
+      },
+      "output_metric_exact": [
+        [
+          "1/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "1/1"
+        ]
+      ],
+      "query_matrix_exact": [
+        [
+          "1/1",
+          "0/1",
+          "0/1"
+        ]
+      ],
+      "quotient_dimension": 2,
+      "quotient_information_exact": [
+        [
+          "1/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "1/1"
+        ]
+      ],
+      "quotient_information_floor_lower_exact": "99999999/400000000",
+      "quotient_information_floor_lower_kind": "strict exact-rational LDL lower",
+      "response_exact": [
+        [
+          "1/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "1/1",
+          "0/1"
+        ]
+      ],
+      "response_radius_exact": [
+        [
+          "0/1",
+          "0/1",
+          "1/100"
+        ],
+        [
+          "0/1",
+          "0/1",
+          "1/50"
+        ]
+      ],
+      "schema_version": "oig-combined-model-design-v1",
+      "source_dimension": 3,
+      "source_metric_exact": [
+        [
+          "1/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "4/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "0/1",
+          "9/1"
+        ]
+      ],
+      "sqrt_bits": 96,
+      "tangent_bases_exact": [
+        [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ],
+          [
+            "1/1",
+            "1/1"
+          ]
+        ]
+      ],
+      "tangent_certificates": [
+        {
+          "ambient_dimension": 3,
+          "kernel_witness": null,
+          "mismatch_amplification_upper_exact": "138649285093209034279154236723/39614081257132168796771975168",
+          "mu_lower_exact": "11318308874017644960365869145/39614081257132168796771975168",
+          "mu_squared_lower_exact": "4081632612244897/50000000000000000",
+          "mu_squared_lower_kind": "strict exact-rational LDL lower",
+          "mu_squared_upper_exact": "1/10",
+          "mu_upper_exact": "25054144837504793118641380157/79228162514264337593543950336",
+          "quotient_rank_on_tangent": 2,
+          "quotient_tangent_form_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "4/1"
+            ]
+          ],
+          "response_exact": [
+            [
+              "1/1",
+              "0/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1",
+              "0/1"
+            ]
+          ],
+          "schema_version": "oig-tangent-kernel-angle-v1",
+          "source_metric_exact": [
+            [
+              "1/1",
+              "0/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "4/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "0/1",
+              "9/1"
+            ]
+          ],
+          "sqrt_bits": 96,
+          "tangent_basis_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ],
+            [
+              "1/1",
+              "1/1"
+            ]
+          ],
+          "tangent_dimension": 2,
+          "tangent_is_transverse_to_kernel": true,
+          "tangent_metric_exact": [
+            [
+              "10/1",
+              "9/1"
+            ],
+            [
+              "9/1",
+              "13/1"
+            ]
+          ],
+          "theorem": "linearized source-mismatch minimax radius is rho/mu"
+        }
+      ],
+      "warning": "A positive E-optimal quotient floor alone does not prove latent-model identifiability; the model may contain a secant or tangent direction in the discarded common kernel. Response-box information-form loss remains an external certificate and is not computed here."
+    },
+    "independent_verification": {
+      "components_verified": [
+        "pair_quotient_tube",
+        "pair_raw_tube",
+        "tangent_angle",
+        "nominal_null",
+        "combined_target"
+      ],
+      "method": "strict per-schema exact reconstruction plus cross-component declaration checks",
+      "passed": true,
+      "schema_version": "oig-robust-model-quotient-demo-verification-v1"
+    },
+    "nominal_null": {
+      "blind_basis_exact": [
+        [
+          "0/1"
+        ],
+        [
+          "0/1"
+        ],
+        [
+          "1/1"
+        ]
+      ],
+      "blind_dimension": 1,
+      "blind_leakage_gain_squared_upper_exact": "1/18000",
+      "blind_leakage_gain_upper_exact": "147632964261913091913418097/19807040628566084398385987584",
+      "blind_metric_exact": [
+        [
+          "9/1"
+        ]
+      ],
+      "blind_source_radius_exact": "2/1",
+      "bounded_blind_leakage_radius_upper_exact": "147632964261913091913418097/9903520314283042199192993792",
+      "box_preserves_nominal_blind_subspace": false,
+      "critical_fact": "the centre response is an admissible member of the symmetric box",
+      "declared_model_secants_exclude_kernel_collisions": true,
+      "exhaustive_model_secants_prove_task_irrelevance": true,
+      "leakage_diagonal_form_bound_exact": [
+        [
+          "1/2000"
+        ]
+      ],
+      "leakage_envelope_exact": [
+        [
+          "1/100"
+        ],
+        [
+          "1/50"
+        ]
+      ],
+      "model_secants_exact": [
+        [
+          "3/1",
+          "4/1",
+          "5/1"
+        ]
+      ],
+      "model_secants_exhaustive": true,
+      "model_secants_provenance": "the demo model is the declared two-point codebook with this sole nonzero secant",
+      "nominal_null_safe_to_ignore": true,
+      "nominal_null_task_irrelevant": true,
+      "output_metric_exact": [
+        [
+          "1/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "1/1"
+        ]
+      ],
+      "query_is_insensitive_to_nominal_kernel": true,
+      "query_matrix_exact": [
+        [
+          "1/1",
+          "0/1",
+          "0/1"
+        ]
+      ],
+      "query_relevance_rule": "Task irrelevance requires exact ker(H) subset ker(L) or an exhaustive model-secant proof. Full-family null preservation proves structural quotient stability only.",
+      "quotient_family_stable": false,
+      "quotient_rule": "retain the nominal quotient, but treat bounded blind-component leakage as additional output uncertainty; never count uncertain activation as guaranteed information",
+      "response_centre_exact": [
+        [
+          "1/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "1/1",
+          "0/1"
+        ]
+      ],
+      "response_radius_exact": [
+        [
+          "0/1",
+          "0/1",
+          "1/100"
+        ],
+        [
+          "0/1",
+          "0/1",
+          "1/50"
+        ]
+      ],
+      "schema_version": "oig-nominal-blind-uncertainty-v1",
+      "source_metric_exact": [
+        [
+          "1/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "4/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "0/1",
+          "9/1"
+        ]
+      ],
+      "sqrt_bits": 96,
+      "worst_case_blind_information_floor_exact": "0/1"
+    },
+    "pair_quotient_tube": {
+      "blind_dimension": 1,
+      "erosion_exact": "3/1",
+      "quotient_distance_lower_exact": "338462858628250263645331452001/39614081257132168796771975168",
+      "quotient_distance_squared_exact": "73/1",
+      "quotient_distance_upper_exact": "676925717256500527290662904003/79228162514264337593543950336",
+      "quotient_gap_lower_exact": "219620614856853757255015526497/39614081257132168796771975168",
+      "quotient_gap_upper_exact": "439241229713707514510031052995/79228162514264337593543950336",
+      "quotient_noise_radius_exact": "1/2",
+      "quotient_rank": 2,
+      "response_exact": [
+        [
+          "1/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "1/1",
+          "0/1"
+        ]
+      ],
+      "response_tubes_overlap_exactly": false,
+      "schema_version": "oig-quotient-tube-pair-v1",
+      "secant_exact": [
+        "3/1",
+        "4/1",
+        "5/1"
+      ],
+      "source_metric_exact": [
+        [
+          "1/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "4/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "0/1",
+          "9/1"
+        ]
+      ],
+      "source_only_overlap_witness": null,
+      "source_radius_exact": "1/1",
+      "sqrt_bits": 96,
+      "theorem": "gap_Q=(dist_S(secant,ker H)-2*rho-2*epsilon_Q)_+"
+    },
+    "pair_raw_tube": {
+      "certified_disjoint": true,
+      "certified_overlap": false,
+      "data_noise_radius_exact": "1/1",
+      "decision_is_exact": false,
+      "noise_only_overlap_exact": false,
+      "output_metric_exact": [
+        [
+          "1/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "1/1"
+        ]
+      ],
+      "proof_boundary": "For positive ordinary data noise, an undecided result is not an overlap claim. Exact two-noise geometry is a convex trust-region problem unless noise is declared in quotient norm.",
+      "raw_centre_distance_lower_exact": "5/1",
+      "raw_centre_distance_squared_exact": "25/1",
+      "raw_centre_distance_upper_exact": "5/1",
+      "raw_image_erosion_upper_exact": "39614081356167371692014390541/9903520314283042199192993792",
+      "response_exact": [
+        [
+          "1/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "1/1",
+          "0/1"
+        ]
+      ],
+      "schema_version": "oig-raw-response-tube-pair-v1",
+      "secant_exact": [
+        "3/1",
+        "4/1",
+        "5/1"
+      ],
+      "source_metric_exact": [
+        [
+          "1/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "4/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "0/1",
+          "9/1"
+        ]
+      ],
+      "source_only_overlap_exact": false,
+      "source_radius_exact": "1/1",
+      "source_to_output_gain_squared_upper_exact": "100000001/100000000",
+      "source_to_output_gain_upper_exact": "19807040727601287293628402957/19807040628566084398385987584",
+      "sqrt_bits": 96,
+      "status": "certified_disjoint"
+    },
+    "schema_version": "oig-robust-model-quotient-demo-v1",
+    "tangent_angle": {
+      "ambient_dimension": 3,
+      "kernel_witness": null,
+      "mismatch_amplification_upper_exact": "138649285093209034279154236723/39614081257132168796771975168",
+      "mu_lower_exact": "11318308874017644960365869145/39614081257132168796771975168",
+      "mu_squared_lower_exact": "4081632612244897/50000000000000000",
+      "mu_squared_lower_kind": "strict exact-rational LDL lower",
+      "mu_squared_upper_exact": "1/10",
+      "mu_upper_exact": "25054144837504793118641380157/79228162514264337593543950336",
+      "quotient_rank_on_tangent": 2,
+      "quotient_tangent_form_exact": [
+        [
+          "1/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "4/1"
+        ]
+      ],
+      "response_exact": [
+        [
+          "1/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "1/1",
+          "0/1"
+        ]
+      ],
+      "schema_version": "oig-tangent-kernel-angle-v1",
+      "source_metric_exact": [
+        [
+          "1/1",
+          "0/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "4/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "0/1",
+          "9/1"
+        ]
+      ],
+      "sqrt_bits": 96,
+      "tangent_basis_exact": [
+        [
+          "1/1",
+          "0/1"
+        ],
+        [
+          "0/1",
+          "1/1"
+        ],
+        [
+          "1/1",
+          "1/1"
+        ]
+      ],
+      "tangent_dimension": 2,
+      "tangent_is_transverse_to_kernel": true,
+      "tangent_metric_exact": [
+        [
+          "10/1",
+          "9/1"
+        ],
+        [
+          "9/1",
+          "13/1"
+        ]
+      ],
+      "theorem": "linearized source-mismatch minimax radius is rho/mu"
+    }
+  },
+  "schema_version": "oig-atlas-protocol-integration-v1",
+  "selected_protocol_response_tube": {
+    "certified_disjoint": true,
+    "certified_overlap": false,
+    "data_noise_radius_exact": "1/2",
+    "decision_is_exact": true,
+    "noise_only_overlap_exact": false,
+    "output_metric_exact": [
+      [
+        "1/1"
+      ]
+    ],
+    "proof_boundary": "For positive ordinary data noise, an undecided result is not an overlap claim. Exact two-noise geometry is a convex trust-region problem unless noise is declared in quotient norm.",
+    "raw_centre_distance_lower_exact": "2/1",
+    "raw_centre_distance_squared_exact": "4/1",
+    "raw_centre_distance_upper_exact": "2/1",
+    "raw_image_erosion_upper_exact": "1/1",
+    "response_exact": [
+      [
+        "2/1"
+      ]
+    ],
+    "schema_version": "oig-raw-response-tube-pair-v1",
+    "secant_exact": [
+      "1/1"
+    ],
+    "source_metric_exact": [
+      [
+        "1/1"
+      ]
+    ],
+    "source_only_overlap_exact": false,
+    "source_radius_exact": "0/1",
+    "source_to_output_gain_squared_upper_exact": "4/1",
+    "source_to_output_gain_upper_exact": "2/1",
+    "sqrt_bits": 96,
+    "status": "certified_disjoint"
+  },
+  "selected_protocol_structured_separation": {
+    "certificate_kind": "point-to-zonoid",
+    "exact_calculation": {
+      "critical_equal_noise_radius_squared_lower_exact": "9/16",
+      "distance_squared_lower_exact": "9/4",
+      "distance_squared_upper_exact": "9/4",
+      "dual_feasible_exactly": true,
+      "dual_half_squared_lower_nonnegative_exact": "1/1",
+      "dual_half_squared_lower_raw_exact": "1/1",
+      "dual_linear_separation_numerator_exact": "3/2",
+      "dual_norm_squared_exact": "1/1",
+      "dual_nuisance_orthogonality_exact": [],
+      "dual_precision_representer_exact": [
+        "1/1"
+      ],
+      "exact_optimum_certified": true,
+      "finite_support_slack_exact": "0/1",
+      "gap_identity_verified_exactly": true,
+      "norm_dual_distance_squared_lower_exact": "9/4",
+      "positive_separation_certified": true,
+      "primal_dual_gap_upper_exact": "1/8",
+      "primal_feasible_exactly": true,
+      "primal_half_squared_upper_exact": "9/8",
+      "primal_nuisance_point_exact": [
+        "0/1"
+      ],
+      "primal_residual_exact": [
+        "3/2"
+      ],
+      "primal_zonotope_point_exact": [
+        "1/2"
+      ],
+      "residual_dual_mismatch_half_squared_exact": "1/8",
+      "squared_dual_gap_closes_exactly": false
+    },
+    "finite_zonotope_support_certificate": {
+      "attainment_verified_exactly": true,
+      "direction_generator_pairings_exact": [
+        "1/1"
+      ],
+      "exposed_point_exact": [
+        "1/2"
+      ],
+      "finite_support_exact": "1/2",
+      "maximizing_coefficients_exact": [
+        "1/2"
+      ]
+    },
+    "independent_verification": {
+      "distance_squared_lower_exact": "9/4",
+      "distance_squared_upper_exact": "9/4",
+      "method": "independent exact-rational reconstruction of support, feasibility, bounds, and gap",
+      "passed": true
+    },
+    "interpretation": "The distance is from the fixed query response plus the declared additive nuisance span to the fixed-response structured nuisance zonoid in the norm induced by the declared noise precision. Equal norm-bounded noise balls remain disjoint whenever their squared radius is strictly below the certified critical-radius square.",
+    "name": "selected double-gain protocol against correlated differential nuisance",
+    "problem": {
+      "coefficient_radii_exact": [
+        "1/2"
+      ],
+      "finite_generator_count": 1,
+      "finite_generators_by_rows_exact": [
+        [
+          "1/1"
+        ]
+      ],
+      "nuisance_basis_by_rows_exact": [
+        []
+      ],
+      "nuisance_subspace_dimension": 0,
+      "observation_dimension": 1,
+      "observation_noise_precision_exact": [
+        [
+          "1/1"
+        ]
+      ],
+      "query_response_exact": [
+        "2/1"
+      ]
+    },
+    "schema_version": "oig-structured-additive-nuisance-v1",
+    "scope_boundary": "This certificate preserves correlations induced by shared nuisance coefficients. It assumes the query response, generator matrix, nuisance basis, and noise norm are fixed exactly. It does not cover uncertainty in any response matrix, generator direction, calibration, or metric. Nonzero infinite-tail bounds are externally supplied analytic premises whose use, but not truth, is checked by this finite JSON verifier.",
+    "status": "exact rational structured-additive-nuisance certificate",
+    "tail_remainder": {
+      "declared_directional_support_upper_exact": null,
+      "declared_norm_remainder_upper_exact": null,
+      "effective_bound_method": "finite zonotope; no omitted tail premise",
+      "effective_directional_support_upper_exact": "0/1",
+      "external_analytic_assumption": false,
+      "l1_derived_directional_support_upper_exact": null,
+      "model": "countably generated absolutely summable zonoid tail",
+      "provenance": "finite zonotope; no omitted tail",
+      "required_meaning": "when present, the norm premise bounds sum d_k||v_k||_2; when present, the directional premise bounds omitted support in the serialized dual direction"
+    },
+    "witnesses": {
+      "dual_direction_exact": [
+        "1/1"
+      ],
+      "primal_nuisance_coefficients_exact": [],
+      "primal_zonotope_coefficients_exact": [
+        "1/2"
+      ]
+    }
+  },
+  "shared_vs_independent_nuisance_library": {
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "child_exact_verification": {
+          "amplification_squared_lower_exact": "4/1",
+          "amplification_squared_upper_exact": "316912650057057350374175801345/79228162514264337593543950336",
+          "method": "exact rational reconstruction of the nuisance quotient, kernel condition, query factorization, and minimax amplification bracket",
+          "passed": true,
+          "query_identifiable": true
+        },
+        "classification": "identifiable-finite-loss",
+        "finite_minimax_eligible": true,
+        "index": 0,
+        "kappa_squared_lower_exact": "4/1",
+        "kappa_squared_upper_exact": "316912650057057350374175801345/79228162514264337593543950336",
+        "name": "one nuisance shared across protocols",
+        "query_certificate": {
+          "declared_nuisance_dimension": 1,
+          "declared_nuisance_response_exact": [
+            [
+              "1/1"
+            ],
+            [
+              "1/1"
+            ]
+          ],
+          "declared_observation_exact": [
+            [
+              "1/1"
+            ],
+            [
+              "2/1"
+            ]
+          ],
+          "declared_output_metric_exact": [
+            [
+              "1/2",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/2"
+            ]
+          ],
+          "declared_query_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "declared_query_metric_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "declared_source_metric_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "effective_response_rank": 1,
+          "factorization_and_minimax": {
+            "amplification_lower_witness_exact": [
+              "100000000/1"
+            ],
+            "decoder_annihilates_nuisance_exact": true,
+            "decoder_exact": [
+              [
+                "-1/1",
+                "1/1"
+              ]
+            ],
+            "decoder_times_effective_response_equals_query_exact": true,
+            "decoder_times_raw_observation_equals_query_exact": true,
+            "descriptive_amplification_lower": 2.0,
+            "descriptive_amplification_upper": 2.0,
+            "factorization_exists": true,
+            "interpretation": "For data-noise radius epsilon, the exact minimax query error is kappa*epsilon; the true kappa squared lies in the certified rational interval.",
+            "kind": "identifiable-query-factorization",
+            "minimax_amplification_exactly_zero": false,
+            "minimax_amplification_squared_lower_exact": "4/1",
+            "minimax_amplification_squared_upper_exact": "316912650057057350374175801345/79228162514264337593543950336",
+            "quotient_injection_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "quotient_row_coordinates_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "quotient_source_metric_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "reduced_data_gram_exact": [
+              [
+                "1/4"
+              ]
+            ],
+            "reduced_effective_response_exact": [
+              [
+                "-1/2"
+              ],
+              [
+                "1/2"
+              ]
+            ],
+            "reduced_query_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "reduced_query_form_exact": [
+              [
+                "1/1"
+              ]
+            ],
+            "upper_shift_positive_by_exact_ldl": true
+          },
+          "identifiability": {
+            "kernel_condition_exact": true,
+            "kernel_counterexample_exact": null,
+            "query_identifiable_exact": true
+          },
+          "independent_exact_verification": {
+            "amplification_squared_lower_exact": "4/1",
+            "amplification_squared_upper_exact": "316912650057057350374175801345/79228162514264337593543950336",
+            "method": "exact rational reconstruction of the nuisance quotient, kernel condition, query factorization, and minimax amplification bracket",
+            "passed": true,
+            "query_identifiable": true
+          },
+          "model_kind": "shared_nuisance_protocol_mixture",
+          "nuisance_elimination": {
+            "effective_response_exact": [
+              [
+                "-1/2"
+              ],
+              [
+                "1/2"
+              ]
+            ],
+            "metric_orthogonal_projector_exact": [
+              [
+                "1/2",
+                "-1/2"
+              ],
+              [
+                "-1/2",
+                "1/2"
+              ]
+            ],
+            "nuisance_basis_exact": [
+              [
+                "1/1"
+              ],
+              [
+                "1/1"
+              ]
+            ],
+            "profiled_information_exact": [
+              [
+                "1/4"
+              ]
+            ],
+            "projector_annihilates_nuisance_exact": true,
+            "projector_idempotent_exact": true,
+            "projector_is_output_metric_self_adjoint_exact": true
+          },
+          "nuisance_rank": 1,
+          "output_dimension": 2,
+          "proof_boundary": "This certificate proves a finite-dimensional real rational linear theorem for the declared metrics, response, query, and one declared unrestricted nuisance shared across the active protocols. It does not prove that an external physical or continuum model is enclosed by these data.",
+          "protocol_mixture": {
+            "active_protocol_indices": [
+              0,
+              1
+            ],
+            "composition_rule": "stack active responses and nuisance maps; scale each output metric by budget_share/cost; profile the shared nuisance only after assembly",
+            "inactive_zero_share_protocols_omitted_from_assembly": true,
+            "nuisance_semantics": "one shared nuisance vector across every active protocol",
+            "protocols": [
+              {
+                "budget_share_exact": "1/2",
+                "cost_exact": "1/1",
+                "name": "first",
+                "nuisance_response_exact": [
+                  [
+                    "1/1"
+                  ]
+                ],
+                "output_metric_exact": [
+                  [
+                    "1/1"
+                  ]
+                ],
+                "physical_weight_exact": "1/2",
+                "response_exact": [
+                  [
+                    "1/1"
+                  ]
+                ]
+              },
+              {
+                "budget_share_exact": "1/2",
+                "cost_exact": "1/1",
+                "name": "second",
+                "nuisance_response_exact": [
+                  [
+                    "1/1"
+                  ]
+                ],
+                "output_metric_exact": [
+                  [
+                    "1/1"
+                  ]
+                ],
+                "physical_weight_exact": "1/2",
+                "response_exact": [
+                  [
+                    "2/1"
+                  ]
+                ]
+              }
+            ],
+            "schema_version": "oig-query-shared-nuisance-mixture-v1",
+            "unprofiled_information_sum_exact": [
+              [
+                "5/2"
+              ]
+            ],
+            "warning": "With a shared nuisance, profiling generally does not commute with summing individually profiled protocol information forms."
+          },
+          "query_dimension": 1,
+          "report_valid": true,
+          "schema_version": "oig-query-protocol-certificate-v1",
+          "source_dimension": 1,
+          "status": "exact finite-linear query certificate"
+        }
+      },
+      {
+        "child_exact_verification": {
+          "method": "exact rational nuisance profiling and kernel counterexample",
+          "passed": true,
+          "query_identifiable": false
+        },
+        "classification": "unidentifiable-infinite-loss",
+        "finite_minimax_eligible": false,
+        "index": 1,
+        "kappa_squared_lower_exact": null,
+        "kappa_squared_upper_exact": null,
+        "name": "one nuisance refit per protocol",
+        "query_certificate": {
+          "declared_nuisance_dimension": 2,
+          "declared_nuisance_response_exact": [
+            [
+              "1/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/1"
+            ]
+          ],
+          "declared_observation_exact": [
+            [
+              "1/1"
+            ],
+            [
+              "2/1"
+            ]
+          ],
+          "declared_output_metric_exact": [
+            [
+              "1/2",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/2"
+            ]
+          ],
+          "declared_query_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "declared_query_metric_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "declared_source_metric_exact": [
+            [
+              "1/1"
+            ]
+          ],
+          "effective_response_rank": 0,
+          "factorization_and_minimax": {
+            "factorization_exists": false,
+            "kind": "unidentifiable-unbounded-source",
+            "reason": "ker(effective_response) is not contained in ker(query)",
+            "zero_noise_minimax_error": "infinite"
+          },
+          "identifiability": {
+            "kernel_condition_exact": false,
+            "kernel_counterexample_exact": [
+              "1/1"
+            ],
+            "query_identifiable_exact": false
+          },
+          "independent_exact_verification": {
+            "method": "exact rational nuisance profiling and kernel counterexample",
+            "passed": true,
+            "query_identifiable": false
+          },
+          "model_kind": "independent_nuisance_protocol_mixture",
+          "nuisance_elimination": {
+            "effective_response_exact": [
+              [
+                "0/1"
+              ],
+              [
+                "0/1"
+              ]
+            ],
+            "metric_orthogonal_projector_exact": [
+              [
+                "0/1",
+                "0/1"
+              ],
+              [
+                "0/1",
+                "0/1"
+              ]
+            ],
+            "nuisance_basis_exact": [
+              [
+                "1/1",
+                "0/1"
+              ],
+              [
+                "0/1",
+                "1/1"
+              ]
+            ],
+            "profiled_information_exact": [
+              [
+                "0/1"
+              ]
+            ],
+            "projector_annihilates_nuisance_exact": true,
+            "projector_idempotent_exact": true,
+            "projector_is_output_metric_self_adjoint_exact": true
+          },
+          "nuisance_rank": 2,
+          "output_dimension": 2,
+          "proof_boundary": "This certificate proves a finite-dimensional real rational linear theorem for the declared metrics, response, query, and one declared unrestricted nuisance independently re-fit in each active protocol. It does not prove that an external physical or continuum model is enclosed by these data.",
+          "protocol_mixture": {
+            "active_protocol_indices": [
+              0,
+              1
+            ],
+            "composition_rule": "stack active responses; block-diagonalize active nuisance maps; scale each output metric by budget_share/cost; exact profiled information then adds linearly",
+            "e_design_compatibility": "For this independent-refit nuisance model, the candidate profiled information forms enter linearly with physical weights budget_share/cost.",
+            "inactive_zero_share_protocols_omitted_from_assembly": true,
+            "individually_profiled_information_sum_exact": [
+              [
+                "0/1"
+              ]
+            ],
+            "nuisance_semantics": "one independently re-fit nuisance vector per active protocol",
+            "profiled_information_adds_linearly_exact": true,
+            "protocols": [
+              {
+                "budget_share_exact": "1/2",
+                "cost_exact": "1/1",
+                "name": "first",
+                "nuisance_response_exact": [
+                  [
+                    "1/1"
+                  ]
+                ],
+                "output_metric_exact": [
+                  [
+                    "1/1"
+                  ]
+                ],
+                "physical_weight_exact": "1/2",
+                "response_exact": [
+                  [
+                    "1/1"
+                  ]
+                ]
+              },
+              {
+                "budget_share_exact": "1/2",
+                "cost_exact": "1/1",
+                "name": "second",
+                "nuisance_response_exact": [
+                  [
+                    "1/1"
+                  ]
+                ],
+                "output_metric_exact": [
+                  [
+                    "1/1"
+                  ]
+                ],
+                "physical_weight_exact": "1/2",
+                "response_exact": [
+                  [
+                    "2/1"
+                  ]
+                ]
+              }
+            ],
+            "schema_version": "oig-query-independent-nuisance-mixture-v1",
+            "unprofiled_information_sum_exact": [
+              [
+                "5/2"
+              ]
+            ]
+          },
+          "query_dimension": 1,
+          "report_valid": true,
+          "schema_version": "oig-query-protocol-certificate-v1",
+          "source_dimension": 1,
+          "status": "exact finite-linear query certificate"
+        }
+      }
+    ],
+    "comparison_contract": {
+      "candidate_output_metrics_are_calibrated_design_declarations": true,
+      "common_contract_verified_exact": true,
+      "data_noise_radius_convention": "For every candidate i, the same numerical epsilon bounds ||eta_i|| in that candidate's declared output metric W_i; query error is measured in the common declared query metric. Candidate-specific W_i is part of the calibrated design.",
+      "declared_query_exact": [
+        [
+          "1/1"
+        ]
+      ],
+      "declared_query_metric_exact": [
+        [
+          "1/1"
+        ]
+      ],
+      "declared_source_metric_exact": [
+        [
+          "1/1"
+        ]
+      ],
+      "query_dimension": 1,
+      "same_numerical_epsilon_across_candidates": true,
+      "source_dimension": 1
+    },
+    "comparison_scope": "The comparison is exactly over the embedded finite candidate list under one exact common source/query/noise-radius contract; no unlisted protocol, budget mixture, or continuous design family is optimized or excluded.",
+    "continuous_design_optimality_claimed": false,
+    "finite_library_theorem": "For identifiable candidates i with true squared losses kappa_i^2 in [lower_i, upper_i], min_i kappa_i^2 lies in [min_i lower_i, min_i upper_i]. Unidentifiable candidates have infinite loss in the child unbounded-source model.",
+    "identifiable_candidate_count": 1,
+    "independent_exact_verification": {
+      "candidate_certificates_verified": 2,
+      "common_comparison_contract_verified_exactly": true,
+      "identifiable_candidates": 1,
+      "library_bracket_reconstructed_exactly": true,
+      "method": "standalone exact reconstruction of every sealed child certificate, rational common source/query/noise-radius contract, candidate interval, finite-library optimum bracket, deterministic selection, and strict uniqueness comparison",
+      "outcome": "finite-candidate-selected",
+      "passed": true,
+      "selection_reconstructed_exactly": true,
+      "unique_winner_test_reconstructed_exactly": true
+    },
+    "objective": "minimize squared minimax query amplification over the declared finite library",
+    "proof_boundary": "This certificate composes exact finite-dimensional rational child certificates. It proves a minimax bracket and, when separated, a unique winner only within the declared finite library and its embedded common comparison contract. It makes no continuous-design global-optimality, cross-query comparison, or external physical-model enclosure claim.",
+    "report_valid": true,
+    "schema_version": "oig-query-candidate-library-certificate-v1",
+    "selection": {
+      "competitor_checks": [],
+      "library_optimum_kappa_squared_lower_exact": "4/1",
+      "library_optimum_kappa_squared_upper_exact": "316912650057057350374175801345/79228162514264337593543950336",
+      "outcome": "finite-candidate-selected",
+      "selected_candidate_index": 0,
+      "selected_candidate_name": "one nuisance shared across protocols",
+      "selection_rule": "smallest certified upper bound, declaration-order tie break",
+      "unique_winner_basis": "only identifiable candidate in the declared library",
+      "unique_winner_certified": true
+    },
+    "status": "exact finite query-candidate-library certificate"
+  },
+  "status": "self-verifying Arithmetic-Atlas protocol integration demonstrator",
+  "structured_nuisance": {
+    "correlation_control": {
+      "coordinate_radii_exact": [
+        "1/1",
+        "1/1"
+      ],
+      "correlation_loss_exact": "2/1",
+      "entrywise_box_support_upper_exact": "2/1",
+      "finite_zonotope_support_exact": "0/1",
+      "outer_relaxation_verified_exactly": true
+    },
+    "countable_tail_interface_certificate": {
+      "certificate_kind": "point-to-zonoid",
+      "exact_calculation": {
+        "critical_equal_noise_radius_squared_lower_exact": "1521/1600",
+        "distance_squared_lower_exact": "1521/400",
+        "distance_squared_upper_exact": "5/1",
+        "dual_feasible_exactly": true,
+        "dual_half_squared_lower_nonnegative_exact": "29/20",
+        "dual_half_squared_lower_raw_exact": "29/20",
+        "dual_linear_separation_numerator_exact": "39/20",
+        "dual_norm_squared_exact": "1/1",
+        "dual_nuisance_orthogonality_exact": [],
+        "dual_precision_representer_exact": [
+          "1/1",
+          "0/1"
+        ],
+        "exact_optimum_certified": false,
+        "finite_support_slack_exact": "0/1",
+        "gap_identity_verified_exactly": true,
+        "norm_dual_distance_squared_lower_exact": "1521/400",
+        "positive_separation_certified": true,
+        "primal_dual_gap_upper_exact": "21/20",
+        "primal_feasible_exactly": true,
+        "primal_half_squared_upper_exact": "5/2",
+        "primal_nuisance_point_exact": [
+          "0/1",
+          "0/1"
+        ],
+        "primal_residual_exact": [
+          "2/1",
+          "1/1"
+        ],
+        "primal_zonotope_point_exact": [
+          "1/1",
+          "0/1"
+        ],
+        "residual_dual_mismatch_half_squared_exact": "1/1",
+        "squared_dual_gap_closes_exactly": false
+      },
+      "finite_zonotope_support_certificate": {
+        "attainment_verified_exactly": true,
+        "direction_generator_pairings_exact": [
+          "1/1"
+        ],
+        "exposed_point_exact": [
+          "1/1",
+          "0/1"
+        ],
+        "finite_support_exact": "1/1",
+        "maximizing_coefficients_exact": [
+          "1/1"
+        ]
+      },
+      "independent_verification": {
+        "distance_squared_lower_exact": "1521/400",
+        "distance_squared_upper_exact": "5/1",
+        "method": "independent exact-rational reconstruction of support, feasibility, bounds, and gap",
+        "passed": true
+      },
+      "interpretation": "The distance is from the fixed query response plus the declared additive nuisance span to the fixed-response structured nuisance zonoid in the norm induced by the declared noise precision. Equal norm-bounded noise balls remain disjoint whenever their squared radius is strictly below the certified critical-radius square.",
+      "name": "finite prefix with a declared countable-tail support remainder",
+      "problem": {
+        "coefficient_radii_exact": [
+          "1/1"
+        ],
+        "finite_generator_count": 1,
+        "finite_generators_by_rows_exact": [
+          [
+            "1/1"
+          ],
+          [
+            "0/1"
+          ]
+        ],
+        "nuisance_basis_by_rows_exact": [
+          [],
+          []
+        ],
+        "nuisance_subspace_dimension": 0,
+        "observation_dimension": 2,
+        "observation_noise_precision_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "query_response_exact": [
+          "3/1",
+          "1/1"
+        ]
+      },
+      "schema_version": "oig-structured-additive-nuisance-v1",
+      "scope_boundary": "This certificate preserves correlations induced by shared nuisance coefficients. It assumes the query response, generator matrix, nuisance basis, and noise norm are fixed exactly. It does not cover uncertainty in any response matrix, generator direction, calibration, or metric. Nonzero infinite-tail bounds are externally supplied analytic premises whose use, but not truth, is checked by this finite JSON verifier.",
+      "status": "exact rational structured-additive-nuisance certificate",
+      "tail_remainder": {
+        "declared_directional_support_upper_exact": "1/20",
+        "declared_norm_remainder_upper_exact": "1/10",
+        "effective_bound_method": "minimum of the declared directional and l1 norm-remainder bounds",
+        "effective_directional_support_upper_exact": "1/20",
+        "external_analytic_assumption": true,
+        "l1_derived_directional_support_upper_exact": "1/10",
+        "model": "countably generated absolutely summable zonoid tail",
+        "provenance": "demo premise: omitted support in direction (1,0) is at most 1/20",
+        "required_meaning": "when present, the norm premise bounds sum d_k||v_k||_2; when present, the directional premise bounds omitted support in the serialized dual direction"
+      },
+      "witnesses": {
+        "dual_direction_exact": [
+          "1/1",
+          "0/1"
+        ],
+        "primal_nuisance_coefficients_exact": [],
+        "primal_zonotope_coefficients_exact": [
+          "1/1"
+        ]
+      }
+    },
+    "independent_verification": {
+      "method": "independent reconstruction of all three certificates and the correlation control",
+      "passed": true
+    },
+    "point_certificate": {
+      "certificate_kind": "point-to-zonoid",
+      "exact_calculation": {
+        "critical_equal_noise_radius_squared_lower_exact": "17/16",
+        "distance_squared_lower_exact": "17/4",
+        "distance_squared_upper_exact": "17/4",
+        "dual_feasible_exactly": true,
+        "dual_half_squared_lower_nonnegative_exact": "17/8",
+        "dual_half_squared_lower_raw_exact": "17/8",
+        "dual_linear_separation_numerator_exact": "17/4",
+        "dual_norm_squared_exact": "17/4",
+        "dual_nuisance_orthogonality_exact": [],
+        "dual_precision_representer_exact": [
+          "2/1",
+          "1/2"
+        ],
+        "exact_optimum_certified": true,
+        "finite_support_slack_exact": "0/1",
+        "gap_identity_verified_exactly": true,
+        "norm_dual_distance_squared_lower_exact": "17/4",
+        "positive_separation_certified": true,
+        "primal_dual_gap_upper_exact": "0/1",
+        "primal_feasible_exactly": true,
+        "primal_half_squared_upper_exact": "17/8",
+        "primal_nuisance_point_exact": [
+          "0/1",
+          "0/1"
+        ],
+        "primal_residual_exact": [
+          "2/1",
+          "1/2"
+        ],
+        "primal_zonotope_point_exact": [
+          "1/1",
+          "1/2"
+        ],
+        "residual_dual_mismatch_half_squared_exact": "0/1",
+        "squared_dual_gap_closes_exactly": true
+      },
+      "finite_zonotope_support_certificate": {
+        "attainment_verified_exactly": true,
+        "direction_generator_pairings_exact": [
+          "2/1",
+          "1/2"
+        ],
+        "exposed_point_exact": [
+          "1/1",
+          "1/2"
+        ],
+        "finite_support_exact": "9/4",
+        "maximizing_coefficients_exact": [
+          "1/1",
+          "1/2"
+        ]
+      },
+      "independent_verification": {
+        "distance_squared_lower_exact": "17/4",
+        "distance_squared_upper_exact": "17/4",
+        "method": "independent exact-rational reconstruction of support, feasibility, bounds, and gap",
+        "passed": true
+      },
+      "interpretation": "The distance is from the fixed query response plus the declared additive nuisance span to the fixed-response structured nuisance zonoid in the norm induced by the declared noise precision. Equal norm-bounded noise balls remain disjoint whenever their squared radius is strictly below the certified critical-radius square.",
+      "name": "point versus rectangle zonotope",
+      "problem": {
+        "coefficient_radii_exact": [
+          "1/1",
+          "1/2"
+        ],
+        "finite_generator_count": 2,
+        "finite_generators_by_rows_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "nuisance_basis_by_rows_exact": [
+          [],
+          []
+        ],
+        "nuisance_subspace_dimension": 0,
+        "observation_dimension": 2,
+        "observation_noise_precision_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "query_response_exact": [
+          "3/1",
+          "1/1"
+        ]
+      },
+      "schema_version": "oig-structured-additive-nuisance-v1",
+      "scope_boundary": "This certificate preserves correlations induced by shared nuisance coefficients. It assumes the query response, generator matrix, nuisance basis, and noise norm are fixed exactly. It does not cover uncertainty in any response matrix, generator direction, calibration, or metric. Nonzero infinite-tail bounds are externally supplied analytic premises whose use, but not truth, is checked by this finite JSON verifier.",
+      "status": "exact rational structured-additive-nuisance certificate",
+      "tail_remainder": {
+        "declared_directional_support_upper_exact": null,
+        "declared_norm_remainder_upper_exact": null,
+        "effective_bound_method": "finite zonotope; no omitted tail premise",
+        "effective_directional_support_upper_exact": "0/1",
+        "external_analytic_assumption": false,
+        "l1_derived_directional_support_upper_exact": null,
+        "model": "countably generated absolutely summable zonoid tail",
+        "provenance": "finite zonotope; no omitted tail",
+        "required_meaning": "when present, the norm premise bounds sum d_k||v_k||_2; when present, the directional premise bounds omitted support in the serialized dual direction"
+      },
+      "witnesses": {
+        "dual_direction_exact": [
+          "2/1",
+          "1/2"
+        ],
+        "primal_nuisance_coefficients_exact": [],
+        "primal_zonotope_coefficients_exact": [
+          "1/1",
+          "1/2"
+        ]
+      }
+    },
+    "query_response_certificate": {
+      "certificate_kind": "query-response quotient",
+      "exact_calculation": {
+        "critical_equal_noise_radius_squared_lower_exact": "1/4",
+        "distance_squared_lower_exact": "1/1",
+        "distance_squared_upper_exact": "1/1",
+        "dual_feasible_exactly": true,
+        "dual_half_squared_lower_nonnegative_exact": "1/2",
+        "dual_half_squared_lower_raw_exact": "1/2",
+        "dual_linear_separation_numerator_exact": "1/1",
+        "dual_norm_squared_exact": "1/1",
+        "dual_nuisance_orthogonality_exact": [
+          "0/1"
+        ],
+        "dual_precision_representer_exact": [
+          "0/1",
+          "1/1"
+        ],
+        "exact_optimum_certified": true,
+        "finite_support_slack_exact": "0/1",
+        "gap_identity_verified_exactly": true,
+        "norm_dual_distance_squared_lower_exact": "1/1",
+        "positive_separation_certified": true,
+        "primal_dual_gap_upper_exact": "0/1",
+        "primal_feasible_exactly": true,
+        "primal_half_squared_upper_exact": "1/2",
+        "primal_nuisance_point_exact": [
+          "-3/1",
+          "0/1"
+        ],
+        "primal_residual_exact": [
+          "0/1",
+          "1/1"
+        ],
+        "primal_zonotope_point_exact": [
+          "0/1",
+          "1/1"
+        ],
+        "residual_dual_mismatch_half_squared_exact": "0/1",
+        "squared_dual_gap_closes_exactly": true
+      },
+      "finite_zonotope_support_certificate": {
+        "attainment_verified_exactly": true,
+        "direction_generator_pairings_exact": [
+          "1/1"
+        ],
+        "exposed_point_exact": [
+          "0/1",
+          "1/1"
+        ],
+        "finite_support_exact": "1/1",
+        "maximizing_coefficients_exact": [
+          "1/1"
+        ]
+      },
+      "independent_verification": {
+        "distance_squared_lower_exact": "1/1",
+        "distance_squared_upper_exact": "1/1",
+        "method": "independent exact-rational reconstruction of support, feasibility, bounds, and gap",
+        "passed": true
+      },
+      "interpretation": "The distance is from the fixed query response plus the declared additive nuisance span to the fixed-response structured nuisance zonoid in the norm induced by the declared noise precision. Equal norm-bounded noise balls remain disjoint whenever their squared radius is strictly below the certified critical-radius square.",
+      "name": "query response after profiling one additive nuisance direction",
+      "problem": {
+        "coefficient_radii_exact": [
+          "1/1"
+        ],
+        "finite_generator_count": 1,
+        "finite_generators_by_rows_exact": [
+          [
+            "0/1"
+          ],
+          [
+            "1/1"
+          ]
+        ],
+        "nuisance_basis_by_rows_exact": [
+          [
+            "1/1"
+          ],
+          [
+            "0/1"
+          ]
+        ],
+        "nuisance_subspace_dimension": 1,
+        "observation_dimension": 2,
+        "observation_noise_precision_exact": [
+          [
+            "1/1",
+            "0/1"
+          ],
+          [
+            "0/1",
+            "1/1"
+          ]
+        ],
+        "query_response_exact": [
+          "3/1",
+          "2/1"
+        ]
+      },
+      "schema_version": "oig-structured-additive-nuisance-v1",
+      "scope_boundary": "This certificate preserves correlations induced by shared nuisance coefficients. It assumes the query response, generator matrix, nuisance basis, and noise norm are fixed exactly. It does not cover uncertainty in any response matrix, generator direction, calibration, or metric. Nonzero infinite-tail bounds are externally supplied analytic premises whose use, but not truth, is checked by this finite JSON verifier.",
+      "status": "exact rational structured-additive-nuisance certificate",
+      "tail_remainder": {
+        "declared_directional_support_upper_exact": null,
+        "declared_norm_remainder_upper_exact": null,
+        "effective_bound_method": "finite zonotope; no omitted tail premise",
+        "effective_directional_support_upper_exact": "0/1",
+        "external_analytic_assumption": false,
+        "l1_derived_directional_support_upper_exact": null,
+        "model": "countably generated absolutely summable zonoid tail",
+        "provenance": "finite zonotope; no omitted tail",
+        "required_meaning": "when present, the norm premise bounds sum d_k||v_k||_2; when present, the directional premise bounds omitted support in the serialized dual direction"
+      },
+      "witnesses": {
+        "dual_direction_exact": [
+          "0/1",
+          "1/1"
+        ],
+        "primal_nuisance_coefficients_exact": [
+          "-3/1"
+        ],
+        "primal_zonotope_coefficients_exact": [
+          "1/1"
+        ]
+      }
+    },
+    "schema_version": "oig-structured-additive-nuisance-demo-v1"
+  }
+}

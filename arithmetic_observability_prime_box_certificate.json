@@ -1,0 +1,88 @@
+{
+  "payload": {
+    "exact_geometry": {
+      "ambient_dimension": 64,
+      "common_kernel_dimension": 27,
+      "exact_tensor_eigenbasis_sha256": "161216aef1779af610a017fd9164435f0d497185ee1af5c52da7ead938cdf6ad",
+      "gram_sha256": "1afddbeba2a7edb32b2b98f003ff1b5ec36bae129fa2a3ad614a131a59d5cccd",
+      "minimax_noise_amplification_squared": "3/1",
+      "observable_rank": 37,
+      "positive_spectral_floor": "1/3",
+      "simplex_tangent_quotient_dimension": 36,
+      "spectrum_by_anova_subspace": [
+        {
+          "eigenvalue": "1/1",
+          "mean_zero_axes": [],
+          "multiplicity": 1
+        },
+        {
+          "eigenvalue": "2/3",
+          "mean_zero_axes": [0],
+          "multiplicity": 3
+        },
+        {
+          "eigenvalue": "2/3",
+          "mean_zero_axes": [1],
+          "multiplicity": 3
+        },
+        {
+          "eigenvalue": "2/3",
+          "mean_zero_axes": [2],
+          "multiplicity": 3
+        },
+        {
+          "eigenvalue": "1/3",
+          "mean_zero_axes": [0, 1],
+          "multiplicity": 9
+        },
+        {
+          "eigenvalue": "1/3",
+          "mean_zero_axes": [0, 2],
+          "multiplicity": 9
+        },
+        {
+          "eigenvalue": "1/3",
+          "mean_zero_axes": [1, 2],
+          "multiplicity": 9
+        },
+        {
+          "eigenvalue": "0/1",
+          "mean_zero_axes": [0, 1, 2],
+          "multiplicity": 27
+        }
+      ],
+      "uniform_weight_e_optimal_floor": "1/3"
+    },
+    "exact_probability_collision": {
+      "collision_vector_sha256": "d0460e3f6c0ebf7489f45b778e8a6394f87b5af6fb3063bad770dd295faf10fc",
+      "common_denominator": 128,
+      "difference_l2_squared": "1/512",
+      "difference_total_variation": "1/16",
+      "numerator_range": [1, 3],
+      "p_minus_numerators_sha256": "b7c5674b98a83fe3637bf1d78d390f6f13887b2e8e46ae8272a8725357026174",
+      "p_plus_numerators_sha256": "8d9ad644f2f3b75d2c3aa32c9dba5786c3e965f4e2a3fd060e52f31573839533",
+      "pooled_distance_squared": "0/1",
+      "vector_rule": "h=(1,-1,0,...,0) tensor-power r"
+    },
+    "formal_scope": {
+      "claim": "exact equivalence and calibrated quotient geometry on the finite prime box",
+      "raw_sample_noise_geometry_certified": false,
+      "vandermonde_node_distinctness": "proved symbolically by unique factorization"
+    },
+    "parameters": {
+      "exponents_per_axis": 4,
+      "output_calibration": "inverse-Vandermonde then root-s normalized marginal",
+      "primes": [2, 3, 5],
+      "samples_per_resonant_protocol": 16,
+      "trace_line_real_part": 0,
+      "weights": ["1/3", "1/3", "1/3"]
+    },
+    "pure_monomial_geometry": {
+      "one_axis_distance_squared_example": "1/3",
+      "rule": "2/s times total weight, except the sole differing-axis protocol contributes zero",
+      "two_or_more_axis_distance_squared_example": "1/2"
+    }
+  },
+  "payload_sha256": "3fe7461250815719b4e80c9ad73dc04325f7fb13e8fa0dd83f0906c9505dcc56",
+  "schema": "arithmetic-observability-prime-box-v1"
+}

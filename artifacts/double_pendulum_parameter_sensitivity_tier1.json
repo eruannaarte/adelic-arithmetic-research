@@ -1,0 +1,323 @@
+{
+  "active_protocols": [
+    {
+      "absolute_solver_refinement_discrepancy": [
+        1.1102230246251565e-16,
+        2.220446049250313e-16
+      ],
+      "analytic_equation": "S'=D_z F S + D_(u,v) F; S(0)=0",
+      "candidate": {
+        "launch_dimensionless_exact": [
+          "4/5",
+          "-7/20",
+          "0/1",
+          "0/1"
+        ],
+        "name": "launch-A / theta-2 / tau-1",
+        "observation_time_tau_exact": "1/1",
+        "sensor": "theta_2"
+      },
+      "coarse_analytic_response": [
+        0.08450255093508384,
+        -0.45435124512936326
+      ],
+      "finite_difference_comparisons": [
+        {
+          "absolute_discrepancy_from_analytic": [
+            3.1756509644154107e-09,
+            3.2307238384543524e-08
+          ],
+          "max_absolute_discrepancy": 3.2307238384543524e-08,
+          "response": [
+            0.08450255411073491,
+            -0.45435127743660186
+          ],
+          "step": 0.0008
+        },
+        {
+          "absolute_discrepancy_from_analytic": [
+            7.941965557423103e-10,
+            8.076837698656192e-09
+          ],
+          "max_absolute_discrepancy": 8.076837698656192e-09,
+          "response": [
+            0.0845025517292805,
+            -0.4543512532062012
+          ],
+          "step": 0.0004
+        },
+        {
+          "absolute_discrepancy_from_analytic": [
+            1.979720970490817e-10,
+            2.0189231397793606e-09
+          ],
+          "max_absolute_discrepancy": 2.0189231397793606e-09,
+          "response": [
+            0.08450255113305605,
+            -0.4543512471482866
+          ],
+          "step": 0.0002
+        },
+        {
+          "absolute_discrepancy_from_analytic": [
+            4.8716489176037214e-11,
+            5.044748507820884e-10
+          ],
+          "max_absolute_discrepancy": 5.044748507820884e-10,
+          "response": [
+            0.08450255098380044,
+            -0.45435124563383833
+          ],
+          "step": 0.0001
+        }
+      ],
+      "gates_passed": true,
+      "max_absolute_solver_refinement_discrepancy": 2.220446049250313e-16,
+      "refined_analytic_response": [
+        0.08450255093508395,
+        -0.4543512451293635
+      ]
+    },
+    {
+      "absolute_solver_refinement_discrepancy": [
+        4.996003610813204e-16,
+        2.3002433291452462e-15
+      ],
+      "analytic_equation": "S'=D_z F S + D_(u,v) F; S(0)=0",
+      "candidate": {
+        "launch_dimensionless_exact": [
+          "-3/5",
+          "9/10",
+          "0/1",
+          "0/1"
+        ],
+        "name": "launch-B / scaled-omega-1 / tau-5/4",
+        "observation_time_tau_exact": "5/4",
+        "sensor": "scaled_omega_1"
+      },
+      "coarse_analytic_response": [
+        0.46905473801960634,
+        0.004140122027466567
+      ],
+      "finite_difference_comparisons": [
+        {
+          "absolute_discrepancy_from_analytic": [
+            2.1131199567925307e-08,
+            4.696537209865348e-07
+          ],
+          "max_absolute_discrepancy": 4.696537209865348e-07,
+          "response": [
+            0.4690547168884063,
+            0.0041405916811898535
+          ],
+          "step": 0.0008
+        },
+        {
+          "absolute_discrepancy_from_analytic": [
+            5.282765891401198e-09,
+            1.17414372186736e-07
+          ],
+          "max_absolute_discrepancy": 1.17414372186736e-07,
+          "response": [
+            0.46905473273683995,
+            0.004140239441841054
+          ],
+          "step": 0.0004
+        },
+        {
+          "absolute_discrepancy_from_analytic": [
+            1.317604358952451e-09,
+            2.935592276556709e-08
+          ],
+          "max_absolute_discrepancy": 2.935592276556709e-08,
+          "response": [
+            0.4690547367020015,
+            0.004140151383391633
+          ],
+          "step": 0.0002
+        },
+        {
+          "absolute_discrepancy_from_analytic": [
+            3.311712015729995e-10,
+            7.335204183639421e-09
+          ],
+          "max_absolute_discrepancy": 7.335204183639421e-09,
+          "response": [
+            0.46905473768843464,
+            0.004140129362673051
+          ],
+          "step": 0.0001
+        }
+      ],
+      "gates_passed": true,
+      "max_absolute_solver_refinement_discrepancy": 2.3002433291452462e-15,
+      "refined_analytic_response": [
+        0.46905473801960584,
+        0.004140122027468867
+      ]
+    }
+  ],
+  "analytic_parameter_derivative": {
+    "acceleration_rule": "d_p a=M^{-1}(d_p b-(d_p M)a)",
+    "parameter_forcing_is_analytic": true,
+    "sensitivity_rule": "S'=D_z F S+D_(u,v)F; S(0)=0"
+  },
+  "claim_tier": 1,
+  "common_mass_and_dimensionless_similarity_control": {
+    "exact_common_mass_response": [
+      "0/1"
+    ],
+    "gate_passed": true,
+    "max_absolute_tau_state_discrepancy": 1.3322676295501878e-15,
+    "physical_time_rule": "t=tau*sqrt(l1/g)",
+    "physical_velocity_rule": "omega=nu*sqrt(g/l1)",
+    "protocols": [
+      {
+        "candidate_name": "launch-A / theta-2 / tau-1",
+        "physical_representatives": [
+          {
+            "common_mass_scale": 0.2,
+            "first_length": 1.0,
+            "gravity": 1.0,
+            "max_absolute_tau_state_discrepancy": 6.661338147750939e-16,
+            "name": "common-mass-low"
+          },
+          {
+            "common_mass_scale": 5.0,
+            "first_length": 1.0,
+            "gravity": 1.0,
+            "max_absolute_tau_state_discrepancy": 3.469446951953614e-16,
+            "name": "common-mass-high"
+          },
+          {
+            "common_mass_scale": 1.0,
+            "first_length": 0.4,
+            "gravity": 3.2,
+            "max_absolute_tau_state_discrepancy": 2.220446049250313e-16,
+            "name": "length-gravity-a"
+          },
+          {
+            "common_mass_scale": 1.0,
+            "first_length": 2.5,
+            "gravity": 7.7,
+            "max_absolute_tau_state_discrepancy": 1.1102230246251565e-15,
+            "name": "length-gravity-b"
+          },
+          {
+            "common_mass_scale": 3.0,
+            "first_length": 1.7,
+            "gravity": 4.6,
+            "max_absolute_tau_state_discrepancy": 1.1102230246251565e-15,
+            "name": "all-scales"
+          }
+        ]
+      },
+      {
+        "candidate_name": "launch-B / scaled-omega-1 / tau-5/4",
+        "physical_representatives": [
+          {
+            "common_mass_scale": 0.2,
+            "first_length": 1.0,
+            "gravity": 1.0,
+            "max_absolute_tau_state_discrepancy": 1.3322676295501878e-15,
+            "name": "common-mass-low"
+          },
+          {
+            "common_mass_scale": 5.0,
+            "first_length": 1.0,
+            "gravity": 1.0,
+            "max_absolute_tau_state_discrepancy": 1.1102230246251565e-15,
+            "name": "common-mass-high"
+          },
+          {
+            "common_mass_scale": 1.0,
+            "first_length": 0.4,
+            "gravity": 3.2,
+            "max_absolute_tau_state_discrepancy": 8.881784197001252e-16,
+            "name": "length-gravity-a"
+          },
+          {
+            "common_mass_scale": 1.0,
+            "first_length": 2.5,
+            "gravity": 7.7,
+            "max_absolute_tau_state_discrepancy": 8.881784197001252e-16,
+            "name": "length-gravity-b"
+          },
+          {
+            "common_mass_scale": 3.0,
+            "first_length": 1.7,
+            "gravity": 4.6,
+            "max_absolute_tau_state_discrepancy": 1.2906342661267445e-15,
+            "name": "all-scales"
+          }
+        ]
+      }
+    ],
+    "structural_common_mass_identity": "m1,m2 -> c*m1,c*m2 multiplies M and b by c, so a and D_log(c) F are unchanged; the exact common-scale response is zero"
+  },
+  "configuration": {
+    "base_log_ratios": {
+      "log_length_ratio": 0.0,
+      "log_mass_ratio": 0.0
+    },
+    "finite_difference_steps": [
+      0.0008,
+      0.0004,
+      0.0002,
+      0.0001
+    ],
+    "gates": {
+      "max_analytic_solver_refinement_discrepancy": 2e-09,
+      "max_dimensionless_similarity_discrepancy": 2e-09,
+      "max_smallest_step_finite_difference_discrepancy": 8e-08
+    },
+    "integration": {
+      "atol": 1e-12,
+      "max_step_in_tau": 0.01,
+      "method": "DOP853",
+      "rtol": 1e-10,
+      "sampled_scaled_energy_drift_tolerance": 1e-09
+    },
+    "refined_integration": {
+      "atol": 1e-13,
+      "max_step_in_tau": 0.005,
+      "method": "DOP853",
+      "rtol": 1.0000000000000001e-11,
+      "sampled_scaled_energy_drift_tolerance": 1e-09
+    }
+  },
+  "dimensionless_convention": {
+    "fixed_tau_endpoint_has_no_parameter_endpoint_term": true,
+    "normalized_representative": "m1=l1=g=1; m2=exp(u); l2=exp(v)",
+    "time": "tau=t*sqrt(g/l1)",
+    "velocities": "nu_i=omega_i*sqrt(l1/g)=d theta_i/d tau"
+  },
+  "evidence_tier": "tier_1_numerical_not_outward_validated",
+  "internal_recomputation_verification": {
+    "method": "analytic inhomogeneous sensitivity integration, stricter-solver comparison, multiscale independent centred differences, and physical-scale similarity integrations",
+    "outward_validation_performed": false,
+    "passed": true,
+    "tier1_numerics_recomputed": true
+  },
+  "maximum_sampled_scaled_energy_drift": 8.884152356906164e-16,
+  "outward_validation": {
+    "exact_response_box_membership_certified": false,
+    "parameter_sensitivity_enclosed": false,
+    "state_enclosed": false
+  },
+  "proof_boundary": "Analytic variational equations, DOP853 integration, solver refinement, and multiscale centred differences are Tier-1 numerical evidence. They do not provide outward containment of the exact state or parameter sensitivity and do not certify membership in an exact response box.",
+  "schema_version": "oig-double-pendulum-parameter-sensitivity-v1",
+  "source_model": {
+    "base_point": [
+      0.0,
+      0.0
+    ],
+    "common_mass_scale_in_source": false,
+    "coordinates": [
+      "u=log(m2/m1)",
+      "v=log(l2/l1)"
+    ],
+    "dimension": 2
+  },
+  "status": "resolved"
+}

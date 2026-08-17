@@ -713,9 +713,13 @@ pass; the full Stage VIII laboratory completes in about 13 seconds.
 
 ## 14. Next research order
 
-1. **Develop the growing-band theorem.** Replace the fixed source port by a
-   finite or Sobolev-bounded family, assemble response Gramians, and control
-   the smallest nonzero singular value uniformly across the three charts.
+1. **Growing-band theorem — completed in Stage IX.** The source family now
+   has a common conditional-expectation null quotient, exact chart Gramians,
+   a fixed-band singular floor, a causal singular flag, and the relative
+   finite-grid criterion \(\delta_K/\gamma_K\to0\). Compactness also proves
+   that a dimension-independent infinite-band floor is impossible. The raw
+   lattice endpoint \(\tau\downarrow0\) is deliberately left as a separate
+   growing moment-filtration target.
 2. **Classify diffusion-scale target shapes.** Treat
    \(\sigma_h^2/t\to\lambda\in(0,\infty)\) and combine their characteristic
    functions with the reflecting boundary profile.
@@ -732,7 +736,8 @@ pass; the full Stage VIII laboratory completes in about 13 seconds.
    finite-speed propagation and determine which preparation and boundary
    phases survive.
 
-The most immediate target is the growing-band response Gramian.  Stage VIII
-has controlled one declared source direction across resolution; the next
-question is whether a whole operational source space remains stably visible,
-not merely pointwise convergent.
+The growing-band target is taken up in
+[Operational Information Geometry IX](OPERATIONAL_INFORMATION_GEOMETRY_IX.md).
+Within this Stage VIII list, the next unresolved target is the diffusion-scale
+target-shape class \(\sigma_h^2/t\to\lambda\in(0,\infty)\); Stage IX records
+the newer operator-level research order.

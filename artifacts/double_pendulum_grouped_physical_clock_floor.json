@@ -1,0 +1,652 @@
+{
+  "all_five_outward_joint_boxes_certified": true,
+  "evidence_tier": "tier_3_fixed_model_local_nuisance_profile_certificate",
+  "exact_rational_interval_profile": {
+    "augmented_coordinate_order": [
+      "shared_log_clock_dilation",
+      "u=log(m2/m1)",
+      "v=log(l2/l1)"
+    ],
+    "augmented_gram_formula": "J=sum_i w_i [b_i,h_iu,h_iv]^T[b_i,h_iu,h_iv]",
+    "augmented_gram_outer_interval_exact": [
+      [
+        {
+          "lower_exact": "11056842271774931587166494643791/6750000000000000000000000000000",
+          "upper_exact": "38698947952668238427791661014699/23625000000000000000000000000000"
+        },
+        {
+          "lower_exact": "3122594372965888642169107920121/15750000000000000000000000000000",
+          "upper_exact": "1040864791323337876700537005897/5250000000000000000000000000000"
+        },
+        {
+          "lower_exact": "-3271625652321063114629573971517/15750000000000000000000000000000",
+          "upper_exact": "-4907438476586930937442855484077/23625000000000000000000000000000"
+        }
+      ],
+      [
+        {
+          "lower_exact": "3122594372965888642169107920121/15750000000000000000000000000000",
+          "upper_exact": "1040864791323337876700537005897/5250000000000000000000000000000"
+        },
+        {
+          "lower_exact": "458011025891121343455896109533/9450000000000000000000000000000",
+          "upper_exact": "63612642510857642301030998671/1312500000000000000000000000000"
+        },
+        {
+          "lower_exact": "-300693138249833503092481822421/15750000000000000000000000000000",
+          "upper_exact": "-300693137936945591793009480673/15750000000000000000000000000000"
+        }
+      ],
+      [
+        {
+          "lower_exact": "-3271625652321063114629573971517/15750000000000000000000000000000",
+          "upper_exact": "-4907438476586930937442855484077/23625000000000000000000000000000"
+        },
+        {
+          "lower_exact": "-300693138249833503092481822421/15750000000000000000000000000000",
+          "upper_exact": "-300693137936945591793009480673/15750000000000000000000000000000"
+        },
+        {
+          "lower_exact": "591197076660781127359897307047/11812500000000000000000000000000",
+          "upper_exact": "262754256362993497362447962833/5250000000000000000000000000000"
+        }
+      ]
+    ],
+    "clock_information_outer_interval_exact": {
+      "lower_exact": "11056842271774931587166494643791/6750000000000000000000000000000",
+      "upper_exact": "38698947952668238427791661014699/23625000000000000000000000000000"
+    },
+    "clock_profiled_information_outer_interval_exact": [
+      [
+        {
+          "lower_exact": "11186260987659465919385344566169136598907305921117272245980347/457131322673694827806914762929234156250000000000000000000000000",
+          "upper_exact": "9943343115196735991100387595168677407720537109098246927065591/406338953503016503491812440654339500000000000000000000000000000"
+        },
+        {
+          "lower_exact": "1843715832905930790948568220882665948042156960447209257323519/304754215127262377618859330490754625000000000000000000000000000",
+          "upper_exact": "368743168920204505060786984356174934013856763177403090683117/60950843023159310374255301723897887500000000000000000000000000"
+        }
+      ],
+      [
+        {
+          "lower_exact": "1843715832905930790948568220882665948042156960447209257323519/304754215127262377618859330490754625000000000000000000000000000",
+          "upper_exact": "368743168920204505060786984356174934013856763177403090683117/60950843023159310374255301723897887500000000000000000000000000"
+        },
+        {
+          "lower_exact": "17339565901701662534949700165035799711013135939633291357826671/731410116277911724491063620686774650000000000000000000000000000",
+          "upper_exact": "8669782963806015793453264644559710742955180748596695193411309/365705058152714853142631196588905550000000000000000000000000000"
+        }
+      ]
+    ],
+    "interval_semantics": "exact Cartesian rational interval arithmetic; every discarded correlation only enlarges the certified set",
+    "sharp_floor_certificate": {
+      "all_interval_ldl_pivots_strictly_positive": true,
+      "block_tested": "J - diag(0,L,L)",
+      "candidate_profiled_floor_exact": "180269/10000000",
+      "clock_pivot_outer_interval_exact": {
+        "lower_exact": "11056842271774931587166494643791/6750000000000000000000000000000",
+        "upper_exact": "38698947952668238427791661014699/23625000000000000000000000000000"
+      },
+      "logical_implication": "uniform block positivity and the positive clock pivot imply by the exact Schur-complement theorem that every enclosed clock-profiled two-source information form is strictly greater than L times identity",
+      "sampled_eigenvalue_used_for_decision": false,
+      "second_ldl_pivot_outer_interval_exact": {
+        "lower_exact": "2945600346953036627992872826320125387604180921117272245980347/457131322673694827806914762929234156250000000000000000000000000",
+        "upper_exact": "2618311434293207784303833908736964675170537109098246927065591/406338953503016503491812440654339500000000000000000000000000000"
+      },
+      "source_schur_after_clock_outer_interval_exact": [
+        [
+          {
+            "lower_exact": "2945600346953036627992872826320125387604180921117272245980347/457131322673694827806914762929234156250000000000000000000000000",
+            "upper_exact": "2618311434293207784303833908736964675170537109098246927065591/406338953503016503491812440654339500000000000000000000000000000"
+          },
+          {
+            "lower_exact": "1843715832905930790948568220882665948042156960447209257323519/304754215127262377618859330490754625000000000000000000000000000",
+            "upper_exact": "368743168920204505060786984356174934013856763177403090683117/60950843023159310374255301723897887500000000000000000000000000"
+          }
+        ],
+        [
+          {
+            "lower_exact": "1843715832905930790948568220882665948042156960447209257323519/304754215127262377618859330490754625000000000000000000000000000",
+            "upper_exact": "368743168920204505060786984356174934013856763177403090683117/60950843023159310374255301723897887500000000000000000000000000"
+          },
+          {
+            "lower_exact": "4154508876571375668721745381277381772928135939633291357826671/731410116277911724491063620686774650000000000000000000000000000",
+            "upper_exact": "2077254450992840407336366326771169283660180748596695193411309/365705058152714853142631196588905550000000000000000000000000000"
+          }
+        ]
+      ],
+      "strict_lower_pivot_margins_exact": [
+        "11056842271774931587166494643791/6750000000000000000000000000000",
+        "2945600346953036627992872826320125387604180921117272245980347/457131322673694827806914762929234156250000000000000000000000000",
+        "157944437293315308287975390299059222800497185826367261714013452775380984837661166453/3976560468386599447790378315532169273265644243508317532073468450000000000000000000000000000"
+      ],
+      "third_ldl_pivot_outer_interval_exact": {
+        "lower_exact": "157944437293315308287975390299059222800497185826367261714013452775380984837661166453/3976560468386599447790378315532169273265644243508317532073468450000000000000000000000000000",
+        "upper_exact": "4931007200036848171256220378144413818155336474621576788241715622914251964212570630893/123715215270354067808356152187821580901807878404892167303849174750000000000000000000000000000"
+      }
+    },
+    "simple_floor_certificate": {
+      "all_interval_ldl_pivots_strictly_positive": true,
+      "block_tested": "J - diag(0,L,L)",
+      "candidate_profiled_floor_exact": "9/500",
+      "clock_pivot_outer_interval_exact": {
+        "lower_exact": "11056842271774931587166494643791/6750000000000000000000000000000",
+        "upper_exact": "38698947952668238427791661014699/23625000000000000000000000000000"
+      },
+      "logical_implication": "uniform block positivity and the positive clock pivot imply by the exact Schur-complement theorem that every enclosed clock-profiled two-source information form is strictly greater than L times identity",
+      "sampled_eigenvalue_used_for_decision": false,
+      "second_ldl_pivot_outer_interval_exact": {
+        "lower_exact": "2957897179532959018860878833442921786407305921117272245980347/457131322673694827806914762929234156250000000000000000000000000",
+        "upper_exact": "2629241952142438928247763663390566407720537109098246927065591/406338953503016503491812440654339500000000000000000000000000000"
+      },
+      "source_schur_after_clock_outer_interval_exact": [
+        [
+          {
+            "lower_exact": "2957897179532959018860878833442921786407305921117272245980347/457131322673694827806914762929234156250000000000000000000000000",
+            "upper_exact": "2629241952142438928247763663390566407720537109098246927065591/406338953503016503491812440654339500000000000000000000000000000"
+          },
+          {
+            "lower_exact": "1843715832905930790948568220882665948042156960447209257323519/304754215127262377618859330490754625000000000000000000000000000",
+            "upper_exact": "368743168920204505060786984356174934013856763177403090683117/60950843023159310374255301723897887500000000000000000000000000"
+          }
+        ],
+        [
+          {
+            "lower_exact": "1843715832905930790948568220882665948042156960447209257323519/304754215127262377618859330490754625000000000000000000000000000",
+            "upper_exact": "368743168920204505060786984356174934013856763177403090683117/60950843023159310374255301723897887500000000000000000000000000"
+          },
+          {
+            "lower_exact": "4174183808699251494110554992673856011013135939633291357826671/731410116277911724491063620686774650000000000000000000000000000",
+            "upper_exact": "2087091917057148436885903105959410842955180748596695193411309/365705058152714853142631196588905550000000000000000000000000000"
+          }
+        ]
+      ],
+      "strict_lower_pivot_margins_exact": [
+        "11056842271774931587166494643791/6750000000000000000000000000000",
+        "2957897179532959018860878833442921786407305921117272245980347/457131322673694827806914762929234156250000000000000000000000000",
+        "201868349169963664209239654927458838323610097116064468661662538110900380984837661166453/3993161192369494675462186425147944411649862993508317532073468450000000000000000000000000000"
+      ],
+      "third_ldl_pivot_outer_interval_exact": {
+        "lower_exact": "201868349169963664209239654927458838323610097116064468661662538110900380984837661166453/3993161192369494675462186425147944411649862993508317532073468450000000000000000000000000000",
+        "upper_exact": "6280365857836519152208153375621722903040241277771903664156905651647914251964212570630893/124231682238730239359706833095204262764795378404892167303849174750000000000000000000000000000"
+      }
+    }
+  },
+  "fixed_grouped_mixture": {
+    "active_output_count": 5,
+    "batch_weight_rule": "budget_share/group_cost multiplies the full within-group output metric",
+    "budget_shares_exact": [
+      "2/3",
+      "1/3",
+      "0/1"
+    ],
+    "candidate_selection_or_grid_optimality_claimed": false,
+    "groups": [
+      {
+        "active": true,
+        "budget_share_exact": "2/3",
+        "group_cost_exact": "7/2",
+        "name": "launch-A grouped trajectory",
+        "physical_batch_weight_exact": "4/21",
+        "validated_member_names": [
+          "launch-A / theta-1 / tau-1",
+          "launch-A / theta-2 / tau-1",
+          "launch-A / scaled-omega-2 / tau-3/2"
+        ]
+      },
+      {
+        "active": true,
+        "budget_share_exact": "1/3",
+        "group_cost_exact": "9/4",
+        "name": "launch-B grouped trajectory",
+        "physical_batch_weight_exact": "4/27",
+        "validated_member_names": [
+          "launch-B / theta-1 / tau-3/4",
+          "launch-B / scaled-omega-1 / tau-5/4"
+        ]
+      },
+      {
+        "active": false,
+        "budget_share_exact": "0/1",
+        "group_cost_exact": "5/2",
+        "name": "launch-C grouped trajectory",
+        "physical_batch_weight_exact": "0/1",
+        "validated_member_names": []
+      }
+    ],
+    "within_group_output_metric": "diagonal with the five canonical scalar noise precisions, all equal to one; this declares independent scalar readout noise"
+  },
+  "method": "outward-arb-picard-taylor-plus-exact-rational-interval-ldl-v1",
+  "observations": [
+    {
+      "clock_chain_rule": "at epsilon=0, d y(tau*exp(epsilon))/d epsilon = tau*d y/d tau",
+      "group_budget_share_exact": "2/3",
+      "group_cost_exact": "7/2",
+      "group_name": "launch-A grouped trajectory",
+      "joint_augmented_row_outer_box_exact": {
+        "coordinates": [
+          "shared_log_clock_dilation",
+          "u=log(m2/m1)",
+          "v=log(l2/l1)"
+        ],
+        "entries": [
+          {
+            "lower_exact": "-32159521431293/31250000000000",
+            "upper_exact": "-514552342900353/500000000000000"
+          },
+          {
+            "lower_exact": "-1308482157297/12500000000000",
+            "upper_exact": "-104678572583257/1000000000000000"
+          },
+          {
+            "lower_exact": "1563478782551/50000000000000",
+            "upper_exact": "31269575651603/1000000000000000"
+          }
+        ],
+        "semantics": "one Cartesian outer box; discarded trajectory correlations make the subsequent interval theorem conservative"
+      },
+      "launch_exact": [
+        "4/5",
+        "-7/20",
+        "0/1",
+        "0/1"
+      ],
+      "legacy_scalar_cost_exact": "1/1",
+      "maximum_endpoint_radius_upper": 4.0237039909815295e-12,
+      "maximum_picard_tube_iterations": 2,
+      "maximum_tube_radius_upper": 4.706910181499452e-12,
+      "name": "launch-A / theta-1 / tau-1",
+      "noise_precision_exact": "1/1",
+      "observation_time_tau_exact": "1/1",
+      "outward_joint_box_certified": true,
+      "parameter_response_outer_box_exact": {
+        "coordinates": [
+          "u=log(m2/m1)",
+          "v=log(l2/l1)"
+        ],
+        "u": {
+          "lower_exact": "-1308482157297/12500000000000",
+          "upper_exact": "-104678572583257/1000000000000000"
+        },
+        "v": {
+          "lower_exact": "1563478782551/50000000000000",
+          "upper_exact": "31269575651603/1000000000000000"
+        }
+      },
+      "physical_scalar_weight_exact": "4/21",
+      "sensor": "theta_1",
+      "sensor_output_outer_box_exact": {
+        "lower_exact": "324871938066491/1000000000000000",
+        "upper_exact": "40608992258321/125000000000000"
+      },
+      "sensor_state_index": 0,
+      "shared_clock_response_outer_box_exact": {
+        "lower_exact": "-32159521431293/31250000000000",
+        "upper_exact": "-514552342900353/500000000000000"
+      },
+      "validated_step_count": 100
+    },
+    {
+      "clock_chain_rule": "at epsilon=0, d y(tau*exp(epsilon))/d epsilon = tau*d y/d tau",
+      "group_budget_share_exact": "2/3",
+      "group_cost_exact": "7/2",
+      "group_name": "launch-A grouped trajectory",
+      "joint_augmented_row_outer_box_exact": {
+        "coordinates": [
+          "shared_log_clock_dilation",
+          "u=log(m2/m1)",
+          "v=log(l2/l1)"
+        ],
+        "entries": [
+          {
+            "lower_exact": "1051553824399497/1000000000000000",
+            "upper_exact": "262888456100109/250000000000000"
+          },
+          {
+            "lower_exact": "84502550934751/1000000000000000",
+            "upper_exact": "84502550935427/1000000000000000"
+          },
+          {
+            "lower_exact": "-90870249025961/200000000000000",
+            "upper_exact": "-90870249025789/200000000000000"
+          }
+        ],
+        "semantics": "one Cartesian outer box; discarded trajectory correlations make the subsequent interval theorem conservative"
+      },
+      "launch_exact": [
+        "4/5",
+        "-7/20",
+        "0/1",
+        "0/1"
+      ],
+      "legacy_scalar_cost_exact": "1/1",
+      "maximum_endpoint_radius_upper": 4.0237039909815295e-12,
+      "maximum_picard_tube_iterations": 2,
+      "maximum_tube_radius_upper": 4.706910181499452e-12,
+      "name": "launch-A / theta-2 / tau-1",
+      "noise_precision_exact": "1/1",
+      "observation_time_tau_exact": "1/1",
+      "outward_joint_box_certified": true,
+      "parameter_response_outer_box_exact": {
+        "coordinates": [
+          "u=log(m2/m1)",
+          "v=log(l2/l1)"
+        ],
+        "u": {
+          "lower_exact": "84502550934751/1000000000000000",
+          "upper_exact": "84502550935427/1000000000000000"
+        },
+        "v": {
+          "lower_exact": "-90870249025961/200000000000000",
+          "upper_exact": "-90870249025789/200000000000000"
+        }
+      },
+      "physical_scalar_weight_exact": "4/21",
+      "sensor": "theta_2",
+      "sensor_output_outer_box_exact": {
+        "lower_exact": "9604744304897/100000000000000",
+        "upper_exact": "24011860762269/250000000000000"
+      },
+      "sensor_state_index": 1,
+      "shared_clock_response_outer_box_exact": {
+        "lower_exact": "1051553824399497/1000000000000000",
+        "upper_exact": "262888456100109/250000000000000"
+      },
+      "validated_step_count": 100
+    },
+    {
+      "clock_chain_rule": "at epsilon=0, d y(tau*exp(epsilon))/d epsilon = tau*d y/d tau",
+      "group_budget_share_exact": "2/3",
+      "group_cost_exact": "7/2",
+      "group_name": "launch-A grouped trajectory",
+      "joint_augmented_row_outer_box_exact": {
+        "coordinates": [
+          "shared_log_clock_dilation",
+          "u=log(m2/m1)",
+          "v=log(l2/l1)"
+        ],
+        "entries": [
+          {
+            "lower_exact": "-24603796659341/10000000000000",
+            "upper_exact": "-615094916467987/250000000000000"
+          },
+          {
+            "lower_exact": "-3188451180269/12500000000000",
+            "upper_exact": "-255076094306139/1000000000000000"
+          },
+          {
+            "lower_exact": "5870468954419/25000000000000",
+            "upper_exact": "234818758321113/1000000000000000"
+          }
+        ],
+        "semantics": "one Cartesian outer box; discarded trajectory correlations make the subsequent interval theorem conservative"
+      },
+      "launch_exact": [
+        "4/5",
+        "-7/20",
+        "0/1",
+        "0/1"
+      ],
+      "legacy_scalar_cost_exact": "3/2",
+      "maximum_endpoint_radius_upper": 7.217401177574134e-11,
+      "maximum_picard_tube_iterations": 2,
+      "maximum_tube_radius_upper": 8.462386335296727e-11,
+      "name": "launch-A / scaled-omega-2 / tau-3/2",
+      "noise_precision_exact": "1/1",
+      "observation_time_tau_exact": "3/2",
+      "outward_joint_box_certified": true,
+      "parameter_response_outer_box_exact": {
+        "coordinates": [
+          "u=log(m2/m1)",
+          "v=log(l2/l1)"
+        ],
+        "u": {
+          "lower_exact": "-3188451180269/12500000000000",
+          "upper_exact": "-255076094306139/1000000000000000"
+        },
+        "v": {
+          "lower_exact": "5870468954419/25000000000000",
+          "upper_exact": "234818758321113/1000000000000000"
+        }
+      },
+      "physical_scalar_weight_exact": "4/21",
+      "sensor": "scaled_omega_2",
+      "sensor_output_outer_box_exact": {
+        "lower_exact": "579154846727793/1000000000000000",
+        "upper_exact": "289577423370461/500000000000000"
+      },
+      "sensor_state_index": 3,
+      "shared_clock_response_outer_box_exact": {
+        "lower_exact": "-24603796659341/10000000000000",
+        "upper_exact": "-615094916467987/250000000000000"
+      },
+      "validated_step_count": 150
+    },
+    {
+      "clock_chain_rule": "at epsilon=0, d y(tau*exp(epsilon))/d epsilon = tau*d y/d tau",
+      "group_budget_share_exact": "1/3",
+      "group_cost_exact": "9/4",
+      "group_name": "launch-B grouped trajectory",
+      "joint_augmented_row_outer_box_exact": {
+        "coordinates": [
+          "shared_log_clock_dilation",
+          "u=log(m2/m1)",
+          "v=log(l2/l1)"
+        ],
+        "entries": [
+          {
+            "lower_exact": "194941147472711/500000000000000",
+            "upper_exact": "389882294945429/1000000000000000"
+          },
+          {
+            "lower_exact": "14686299828303/1000000000000000",
+            "upper_exact": "14686299828309/1000000000000000"
+          },
+          {
+            "lower_exact": "-15556885676877/1000000000000000",
+            "upper_exact": "-1555688567687/100000000000000"
+          }
+        ],
+        "semantics": "one Cartesian outer box; discarded trajectory correlations make the subsequent interval theorem conservative"
+      },
+      "launch_exact": [
+        "-3/5",
+        "9/10",
+        "0/1",
+        "0/1"
+      ],
+      "legacy_scalar_cost_exact": "1/1",
+      "maximum_endpoint_radius_upper": 1.1275594438329794e-14,
+      "maximum_picard_tube_iterations": 6,
+      "maximum_tube_radius_upper": 1.331900769056034e-14,
+      "name": "launch-B / theta-1 / tau-3/4",
+      "noise_precision_exact": "1/1",
+      "observation_time_tau_exact": "3/4",
+      "outward_joint_box_certified": true,
+      "parameter_response_outer_box_exact": {
+        "coordinates": [
+          "u=log(m2/m1)",
+          "v=log(l2/l1)"
+        ],
+        "u": {
+          "lower_exact": "14686299828303/1000000000000000",
+          "upper_exact": "14686299828309/1000000000000000"
+        },
+        "v": {
+          "lower_exact": "-15556885676877/1000000000000000",
+          "upper_exact": "-1555688567687/100000000000000"
+        }
+      },
+      "physical_scalar_weight_exact": "4/27",
+      "sensor": "theta_1",
+      "sensor_output_outer_box_exact": {
+        "lower_exact": "-210095563814989/500000000000000",
+        "upper_exact": "-420191127629973/1000000000000000"
+      },
+      "sensor_state_index": 0,
+      "shared_clock_response_outer_box_exact": {
+        "lower_exact": "194941147472711/500000000000000",
+        "upper_exact": "389882294945429/1000000000000000"
+      },
+      "validated_step_count": 75
+    },
+    {
+      "clock_chain_rule": "at epsilon=0, d y(tau*exp(epsilon))/d epsilon = tau*d y/d tau",
+      "group_budget_share_exact": "1/3",
+      "group_cost_exact": "9/4",
+      "group_name": "launch-B grouped trajectory",
+      "joint_augmented_row_outer_box_exact": {
+        "coordinates": [
+          "shared_log_clock_dilation",
+          "u=log(m2/m1)",
+          "v=log(l2/l1)"
+        ],
+        "entries": [
+          {
+            "lower_exact": "72721774000911/125000000000000",
+            "upper_exact": "581774192023153/1000000000000000"
+          },
+          {
+            "lower_exact": "469054737988447/1000000000000000",
+            "upper_exact": "234527369024949/500000000000000"
+          },
+          {
+            "lower_exact": "4140121974447/1000000000000000",
+            "upper_exact": "4140122083341/1000000000000000"
+          }
+        ],
+        "semantics": "one Cartesian outer box; discarded trajectory correlations make the subsequent interval theorem conservative"
+      },
+      "launch_exact": [
+        "-3/5",
+        "9/10",
+        "0/1",
+        "0/1"
+      ],
+      "legacy_scalar_cost_exact": "5/4",
+      "maximum_endpoint_radius_upper": 7.660741290459183e-11,
+      "maximum_picard_tube_iterations": 6,
+      "maximum_tube_radius_upper": 8.95650684776342e-11,
+      "name": "launch-B / scaled-omega-1 / tau-5/4",
+      "noise_precision_exact": "1/1",
+      "observation_time_tau_exact": "5/4",
+      "outward_joint_box_certified": true,
+      "parameter_response_outer_box_exact": {
+        "coordinates": [
+          "u=log(m2/m1)",
+          "v=log(l2/l1)"
+        ],
+        "u": {
+          "lower_exact": "469054737988447/1000000000000000",
+          "upper_exact": "234527369024949/500000000000000"
+        },
+        "v": {
+          "lower_exact": "4140121974447/1000000000000000",
+          "upper_exact": "4140122083341/1000000000000000"
+        }
+      },
+      "physical_scalar_weight_exact": "4/27",
+      "sensor": "scaled_omega_1",
+      "sensor_output_outer_box_exact": {
+        "lower_exact": "279481735653907/250000000000000",
+        "upper_exact": "1117926942622569/1000000000000000"
+      },
+      "sensor_state_index": 2,
+      "shared_clock_response_outer_box_exact": {
+        "lower_exact": "72721774000911/125000000000000",
+        "upper_exact": "581774192023153/1000000000000000"
+      },
+      "validated_step_count": 125
+    }
+  ],
+  "outward_box_summary": {
+    "maximum_parameter_response_half_width_decimal": 7.21765e-11,
+    "maximum_parameter_response_half_width_exact": "144353/2000000000000000",
+    "maximum_picard_tube_radius_upper": 8.95650684776342e-11,
+    "maximum_sensor_output_half_width_decimal": 6.5645e-12,
+    "maximum_sensor_output_half_width_exact": "13129/2000000000000000",
+    "maximum_shared_clock_response_half_width_decimal": 3.1076e-11,
+    "maximum_shared_clock_response_half_width_exact": "7769/250000000000000",
+    "maximum_trajectory_endpoint_radius_upper": 7.660741290459183e-11,
+    "rational_outer_box_half_width_definition": "(upper-lower)/2"
+  },
+  "physical_scope_definition": "Physical means the exact local parameter and clock response of the declared dimensionless nonlinear double-pendulum equations with m1=l1=g=1, m2=exp(u), and l2=exp(v). It does not mean that the equations, apparatus, calibration, noise model, or launch preparation have been empirically validated.",
+  "proof_dependency_contract": {
+    "exact_interval_and_ldl_arithmetic": "Python fractions.Fraction",
+    "install_command": "python -m pip install -r requirements.txt",
+    "ordinary_scipy_ode_solver_used_in_proof": false,
+    "outward_scalar_arithmetic": "python-flint>=0.9,<0.10 (Arb)",
+    "sampled_eigenvalue_used_in_floor_decision": false
+  },
+  "reproduction_commands": [
+    "python -m pip install -r requirements.txt",
+    "python oig_double_pendulum_grouped_validated_transfer.py --output artifacts/double_pendulum_grouped_physical_clock_floor.json",
+    "python oig_double_pendulum_grouped_validated_transfer.py --verify artifacts/double_pendulum_grouped_physical_clock_floor.json",
+    "python -m unittest -v test_oig_double_pendulum_grouped_validated_transfer.py"
+  ],
+  "schema_version": "oig-double-pendulum-grouped-physical-clock-floor-v1",
+  "scope_boundary": "The theorem is pointwise at u=v=0 for the fixed grouped shares (2/3,1/3,0). It profiles one local unrestricted shared log-clock column after stacking all five outputs. Launch preparation is exact. The within-group output metric is the declared diagonal unit-precision metric. No parameter neighbourhood, finite clock-dilation amplitude, preparation error, model discrepancy, hardware calibration, candidate-selection transfer, grid optimality, or efficiency claim is made.",
+  "scope_flags": {
+    "candidate_selection_transfer_certified": false,
+    "declared_dimensionless_model_five_row_transfer_certified": true,
+    "empirical_model_adequacy_certified": false,
+    "exact_launch_preparation_assumed": true,
+    "finite_clock_dilation_amplitude_certified": false,
+    "finite_grid_optimality_certified": false,
+    "fixed_grouped_mixture_shared_clock_floor_certified": true,
+    "hardware_calibration_certified": false,
+    "launch_preparation_error_bounded": false,
+    "parameter_neighborhood_uniformity_certified": false
+  },
+  "shared_clock_nuisance": {
+    "finite_epsilon_nonlinear_robustness_claimed": false,
+    "linear_response_at_epsilon_zero": "tau*d(sensor output)/d tau",
+    "parameter": "one unrestricted local log-clock dilation epsilon",
+    "scope": "one column is shared across every repetition, output, and active group and is profiled only after all five weighted rows are stacked",
+    "time_rule": "tau_actual=exp(epsilon)*tau_declared"
+  },
+  "source_model": {
+    "base_point_exact": [
+      "0/1",
+      "0/1"
+    ],
+    "coordinates": [
+      "u=log(m2/m1)",
+      "v=log(l2/l1)"
+    ],
+    "dimensionless_representative": "m1=l1=g=1, m2=exp(u), l2=exp(v), tau=t*sqrt(g/l1), nu=dtheta/dtau",
+    "query": "the full identity query in (u,v)"
+  },
+  "status": "proved",
+  "strict_internal_verification": {
+    "exact_interval_gram_recomputed": true,
+    "exact_interval_ldl_recomputed": true,
+    "outward_ode_rows_recomputed": true,
+    "passed": true
+  },
+  "theorem": {
+    "positive_two_source_floor_certified": true,
+    "proof": "exact rational interval enclosure of J, followed by a no-pivot interval LDL proof of J-diag(0,L,L)>0 and the exact Schur theorem",
+    "sharp_physical_clock_profiled_floor_lower_exact": "180269/10000000",
+    "simple_human_readable_floor_lower_exact": "9/500",
+    "source_metric_exact": [
+      [
+        "1/1",
+        "0/1"
+      ],
+      [
+        "0/1",
+        "1/1"
+      ]
+    ],
+    "strict_inequality": "lambda_min(I_profiled)>180269/10000000>9/500 for every response-and-clock row in the five outward boxes"
+  },
+  "validated_transfer_configuration": {
+    "maximum_tube_iterations": 12,
+    "precision_bits": 160,
+    "rational_outer_hull_denominator_before_reduction": 1000000000000000,
+    "step_size_exact": "1/100",
+    "taylor_order": 8,
+    "tube_inflation_exact": "6/5"
+  }
+}
