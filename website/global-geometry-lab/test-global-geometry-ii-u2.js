@@ -8,6 +8,7 @@ const path = require("path");
 const Ensembles = require("./global-geometry-ii-ensembles.js");
 const U2 = require("./global-geometry-ii-u2.js");
 const CLI = require("./generate-global-geometry-ii-u2.js");
+const SourceBoundary = require("./global-geometry-ii-u2-source-boundary.js");
 
 let passed = 0;
 function test(name, fn) {
@@ -153,6 +154,10 @@ test("CLI refuses implicit production and requires normalization for campaign va
   assert.throws(function () { CLI.parseArgs(["--validate-campaign", "--input", "x"]); }, /normalization/);
   const parsed = CLI.parseArgs(["--calibration", "--output", "x", "--source-commit", "a".repeat(40)]);
   assert.strictEqual(parsed.mode, "calibration");
+});
+
+test("source boundary rejects a nonexistent 40-hex commit", function () {
+  assert.throws(function () { SourceBoundary.buildSourceBoundary("a".repeat(40)); }, /Command failed|bad object|unknown revision|ambiguous argument/);
 });
 
 test("production writer refuses to replace an existing artifact", function () {

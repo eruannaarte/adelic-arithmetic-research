@@ -7,6 +7,7 @@ const path = require("path");
 const G2 = require("./global-geometry-ii-core.js");
 const Ensembles = require("./global-geometry-ii-ensembles.js");
 const ManifestGenerator = require("./generate-global-geometry-ii-u2-manifest.js");
+const SourceBoundary = require("./global-geometry-ii-u2-source-boundary.js");
 
 const VERSION = "0.2.0-u2.2";
 const ROOT = path.resolve(__dirname, "../..");
@@ -432,8 +433,10 @@ function measurePositiveRun(manifest, namespace, familyId, sigma, linearSize, re
   });
 }
 
-function calibrationRecord(manifest, sourceCommit) {
+function calibrationRecord(manifest, sourceCommit, sourceBoundary) {
   if (!/^[0-9a-f]{40}$/.test(sourceCommit || "")) throw new Error("calibration requires the final 40-hex source commit");
+  const sourceReport = SourceBoundary.validateSourceBoundary(sourceBoundary);
+  if (!sourceReport.valid || sourceBoundary.sourceCommit !== sourceCommit) throw new Error("calibration source boundary invalid: " + sourceReport.errors.join("; "));
   const graphCache = new Map(), cells = [];
   manifest.matrix.families.forEach(function (family) {
     manifest.matrix.sigma.forEach(function (sigma) {
@@ -459,7 +462,7 @@ function calibrationRecord(manifest, sourceCommit) {
       cells.push({ familyId: family, sigma: sigma, constructionRealizationCount: sigma === 0 && family !== "square-hashed-diagonal" ? 1 : 8, measurementBatchCount: 8, normalization: { bulkDensity: median(largest.map(function (record) { return record.density; })), diffusivity: median(largest.map(function (record) { return record.diffusivity; })), conductivityUpperProxy: median(largest.map(function (record) { return record.conductivityUpperProxy; }).filter(function (value) { return value !== null; })) }, records: records });
     });
   });
-  const payload = { schema: CALIBRATION_SCHEMA, experimentId: "ggii-u2-v2", preregistrationCommit: PREREGISTRATION_COMMIT, sourceCommit: sourceCommit, manifestDigest: MANIFEST_DIGEST, decisionDigest: DECISION_DIGEST, namespace: "cal/", confirmatoryInputDigests: [], cells: cells };
+  const payload = { schema: CALIBRATION_SCHEMA, experimentId: "ggii-u2-v2", preregistrationCommit: PREREGISTRATION_COMMIT, sourceCommit: sourceCommit, sourceBoundary: sourceBoundary, manifestDigest: MANIFEST_DIGEST, decisionDigest: DECISION_DIGEST, namespace: "cal/", confirmatoryInputDigests: [], cells: cells };
   return Object.assign(payload, { contentAddress: contentAddress(payload) });
 }
 
@@ -576,12 +579,13 @@ function buildCampaign(normalizationArtifact, options) {
   const manifest = loadManifest(), normalizationReport = validateCalibration(normalizationArtifact);
   if (!normalizationReport.valid) throw new Error("normalization artifact invalid: " + normalizationReport.errors.join("; "));
   if (normalizationArtifact.sourceCommit !== options.finalSourceCommit) throw new Error("normalization and campaign source commits differ");
+  if (canonicalStringify(normalizationArtifact.sourceBoundary) !== canonicalStringify(options.sourceBoundary)) throw new Error("normalization and campaign source boundaries differ");
   const graphCache = new Map(), runs = [];
   manifest.matrix.families.forEach(function (family) { manifest.matrix.confirmationSizes.forEach(function (size) { manifest.matrix.sigma.forEach(function (sigma) {
     for (let replicate = 0; replicate < manifest.matrix.confirmationReplicates; replicate += 1) runs.push(measurePositiveRun(manifest, "confirm", family, sigma, size, replicate, graphCache));
   }); }); });
   const exact = exactGateOne(), cells = aggregatePositive(manifest, runs), controls = measureControls(manifest), gates = deriveGates(exact, cells, controls, "NOT_RUN"), conclusion = deriveConclusion(gates);
-  const payload = { schema: RESULT_SCHEMA, engineVersion: VERSION, experimentId: "ggii-u2-v2", preregistrationCommit: PREREGISTRATION_COMMIT, finalSourceCommit: options.finalSourceCommit, manifestBinding: { path: "artifacts/global-geometry-ii/u2/experiment-manifest-v2.json", digest: MANIFEST_DIGEST, decisionId: "u2-decision-v2", decisionDigest: DECISION_DIGEST }, constructionContract: CONSTRUCTION_CONTRACT, constructionContractDigest: sha256(CONSTRUCTION_CONTRACT), normalizationBinding: normalizationArtifact.contentAddress, randomness: { id: RNG_ID, streamCount: runs.length * STREAMS.length, streamSeedCollisionCount: 0 }, counts: { plannedPositiveRuns: 3072, actualPositiveRuns: runs.length, plannedPrimaryControlRuns: 768, actualPrimaryControlRuns: controls.records.length, calibrationRuns: 384, perturbationPairsPlanned: 7680, perturbationPairsExecuted: 0 }, exactGateOne: exact, positiveRuns: runs, cells: cells, primaryControls: controls, gateResults: gates, conclusion: conclusion, evidenceBoundary: { finiteComputationsEstablished: ["exact-small topology/Gauss-Bonnet", "full positive volume profiles", "replay-deterministic lazy-walk alternate", "restricted-potential transport upper bounds", "all four primary control construction attempts and validated witnesses"], withheld: ["strict heat primary", "primary probability-propagation intrinsic MSD", "converged positive Dirichlet transport", "paired perturbation ensembles", "cross-platform full-batch replay", "universality acceptance or rejection", "continuum theorem", "physical validation"] } };
+  const payload = { schema: RESULT_SCHEMA, engineVersion: VERSION, experimentId: "ggii-u2-v2", preregistrationCommit: PREREGISTRATION_COMMIT, finalSourceCommit: options.finalSourceCommit, sourceBoundary: options.sourceBoundary, manifestBinding: { path: "artifacts/global-geometry-ii/u2/experiment-manifest-v2.json", digest: MANIFEST_DIGEST, decisionId: "u2-decision-v2", decisionDigest: DECISION_DIGEST }, constructionContract: CONSTRUCTION_CONTRACT, constructionContractDigest: sha256(CONSTRUCTION_CONTRACT), normalizationBinding: normalizationArtifact.contentAddress, randomness: { id: RNG_ID, streamCount: runs.length * STREAMS.length, streamSeedCollisionCount: 0 }, counts: { plannedPositiveRuns: 3072, actualPositiveRuns: runs.length, plannedPrimaryControlRuns: 768, actualPrimaryControlRuns: controls.records.length, calibrationRuns: 384, perturbationPairsPlanned: 7680, perturbationPairsExecuted: 0 }, exactGateOne: exact, positiveRuns: runs, cells: cells, primaryControls: controls, gateResults: gates, conclusion: conclusion, evidenceBoundary: { finiteComputationsEstablished: ["exact-small topology/Gauss-Bonnet", "full positive volume profiles", "replay-deterministic lazy-walk alternate", "restricted-potential transport upper bounds", "all four primary control construction attempts and validated witnesses"], withheld: ["strict heat primary", "primary probability-propagation intrinsic MSD", "converged positive Dirichlet transport", "paired perturbation ensembles", "cross-platform full-batch replay", "universality acceptance or rejection", "continuum theorem", "physical validation"] } };
   payload.runManifestMerkleRoot = merkleRoot(runs.map(function (run) { return sha256(run); }));
   return Object.assign(payload, { contentAddress: contentAddress(payload) });
 }
@@ -590,11 +594,13 @@ function validateCalibration(artifact) {
   const errors = [];
   try {
     if (!artifact || artifact.schema !== CALIBRATION_SCHEMA || artifact.experimentId !== "ggii-u2-v2" || artifact.preregistrationCommit !== PREREGISTRATION_COMMIT || !/^[0-9a-f]{40}$/.test(artifact.sourceCommit || "") || artifact.manifestDigest !== MANIFEST_DIGEST || artifact.decisionDigest !== DECISION_DIGEST) errors.push("calibration identity/binding mismatch");
+    const sourceReport = SourceBoundary.validateSourceBoundary(artifact && artifact.sourceBoundary);
+    if (!sourceReport.valid || !artifact || artifact.sourceBoundary.sourceCommit !== artifact.sourceCommit) errors.push("calibration source boundary mismatch: " + sourceReport.errors.join("; "));
     if (!artifact || artifact.namespace !== "cal/" || !denseArray(artifact.confirmatoryInputDigests) || artifact.confirmatoryInputDigests.length !== 0) errors.push("calibration/confirmation separation mismatch");
     if (!denseArray(artifact.cells) || artifact.cells.length !== 16 || artifact.cells.some(function (cell) { return !denseArray(cell.records) || cell.records.length !== 24; })) errors.push("calibration must contain 16 cells and 384 records");
     const payload = clone(artifact); const address = payload.contentAddress; delete payload.contentAddress; if (!address || canonicalStringify(address) !== canonicalStringify(contentAddress(payload))) errors.push("calibration content address mismatch");
     if (!errors.length) {
-      const expected = calibrationRecord(loadManifest(), artifact.sourceCommit);
+      const expected = calibrationRecord(loadManifest(), artifact.sourceCommit, artifact.sourceBoundary);
       if (canonicalStringify(artifact) !== canonicalStringify(expected)) errors.push("calibration/normalization artifact fails deterministic deep semantic replay");
     }
   } catch (error) { errors.push("calibration validation failed safely: " + error.message); }
@@ -641,6 +647,8 @@ function validateCampaign(artifact, normalizationArtifact) {
   try {
     const manifest = loadManifest();
     if (!artifact || artifact.schema !== RESULT_SCHEMA || artifact.experimentId !== manifest.experimentId || artifact.preregistrationCommit !== PREREGISTRATION_COMMIT || !/^[0-9a-f]{40}$/.test(artifact.finalSourceCommit || "") || artifact.manifestBinding.digest !== MANIFEST_DIGEST || artifact.manifestBinding.decisionId !== "u2-decision-v2" || artifact.manifestBinding.decisionDigest !== DECISION_DIGEST) errors.push("campaign manifest/decision binding mismatch");
+    const sourceReport = SourceBoundary.validateSourceBoundary(artifact && artifact.sourceBoundary);
+    if (!sourceReport.valid || !artifact || artifact.sourceBoundary.sourceCommit !== artifact.finalSourceCommit) errors.push("campaign source boundary mismatch: " + sourceReport.errors.join("; "));
     if (!artifact || canonicalStringify(artifact.constructionContract) !== canonicalStringify(CONSTRUCTION_CONTRACT) || artifact.constructionContractDigest !== sha256(CONSTRUCTION_CONTRACT)) errors.push("batch construction contract mismatch");
     const normalizationReport = validateCalibration(normalizationArtifact);
     if (!normalizationReport.valid) errors.push("bound normalization artifact invalid: " + normalizationReport.errors.join("; "));
@@ -648,6 +656,7 @@ function validateCampaign(artifact, normalizationArtifact) {
       calibrationSemanticReplayCount = 384;
       if (canonicalStringify(artifact.normalizationBinding) !== canonicalStringify(normalizationArtifact.contentAddress)) errors.push("normalization binding does not match the supplied calibration artifact");
       if (normalizationArtifact.sourceCommit !== artifact.finalSourceCommit) errors.push("normalization and campaign source commits differ");
+      if (canonicalStringify(normalizationArtifact.sourceBoundary) !== canonicalStringify(artifact.sourceBoundary)) errors.push("normalization and campaign source boundaries differ");
     }
     if (!artifact.randomness || artifact.randomness.id !== RNG_ID || artifact.randomness.streamCount !== 3072 * STREAMS.length || artifact.randomness.streamSeedCollisionCount !== 0) errors.push("batch randomness/collision disclosure mismatch");
     if (!artifact.counts || artifact.counts.plannedPositiveRuns !== 3072 || artifact.counts.actualPositiveRuns !== 3072 || artifact.counts.plannedPrimaryControlRuns !== 768 || artifact.counts.actualPrimaryControlRuns !== 768 || artifact.counts.calibrationRuns !== 384) errors.push("campaign counts mismatch");

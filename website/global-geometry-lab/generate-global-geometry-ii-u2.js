@@ -4,6 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 const U2 = require("./global-geometry-ii-u2.js");
+const SourceBoundary = require("./global-geometry-ii-u2-source-boundary.js");
 
 function valueAfter(argv, flag) {
   const index = argv.indexOf(flag); if (index < 0) return null;
@@ -40,7 +41,8 @@ function main() {
   const args = parseArgs(process.argv.slice(2));
   if (args.mode === "calibration") {
     requireUnusedOutput(args.output);
-    const artifact = U2.calibrationRecord(U2.loadManifest(), args.sourceCommit), report = U2.validateCalibration(artifact);
+    const sourceBoundary = SourceBoundary.buildSourceBoundary(args.sourceCommit);
+    const artifact = U2.calibrationRecord(U2.loadManifest(), args.sourceCommit, sourceBoundary), report = U2.validateCalibration(artifact);
     if (!report.valid) throw new Error("calibration failed validation: " + report.errors.join("; "));
     const output = writeArtifact(args.output, artifact);
     process.stdout.write(JSON.stringify({ mode: args.mode, output: output, digest: artifact.contentAddress.digest, cells: artifact.cells.length, records: artifact.cells.reduce(function (sum, cell) { return sum + cell.records.length; }, 0) }) + "\n");
@@ -48,7 +50,8 @@ function main() {
   }
   if (args.mode === "campaign") {
     requireUnusedOutput(args.output);
-    const normalization = readJSON(args.normalization), artifact = U2.buildCampaign(normalization, { finalSourceCommit: args.sourceCommit }), report = U2.validateCampaign(artifact, normalization);
+    const sourceBoundary = SourceBoundary.buildSourceBoundary(args.sourceCommit);
+    const normalization = readJSON(args.normalization), artifact = U2.buildCampaign(normalization, { finalSourceCommit: args.sourceCommit, sourceBoundary: sourceBoundary }), report = U2.validateCampaign(artifact, normalization);
     if (!report.valid) throw new Error("campaign failed validation: " + report.errors.join("; "));
     const output = writeArtifact(args.output, artifact);
     process.stdout.write(JSON.stringify({ mode: args.mode, output: output, digest: artifact.contentAddress.digest, positiveRuns: artifact.counts.actualPositiveRuns, controlRuns: artifact.counts.actualPrimaryControlRuns, conclusion: artifact.conclusion.status }) + "\n");
