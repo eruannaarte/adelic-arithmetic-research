@@ -4,6 +4,9 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   unittest:
     runs-on: ubuntu-latest
@@ -11,8 +14,10 @@ jobs:
       matrix:
         python-version: ["3.11", "3.12"]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python-version }}
           cache: pip
@@ -23,10 +28,14 @@ jobs:
   browser-labs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
+          package-manager-cache: false
       - run: node --test website/double-pendulum-oig-wind-tunnel/test-wind-tunnel-core.js
       - run: node --test website/double-pendulum-oig-wind-tunnel/test-wind-tunnel-ensemble-adversarial.js
       - run: node --test website/global-geometry-lab/test-global-geometry-core.js
@@ -43,4 +52,13 @@ jobs:
       - run: node website/global-geometry-lab/test-global-geometry-ii-u2-evaluation-index-v2.js
       - run: node website/global-geometry-lab/test-global-geometry-ii-release-v2.js
       - run: node website/global-geometry-lab/test-global-geometry-ii-static-publication-v2.js
-      - run: node website/global-geometry-lab/reproduce-global-geometry-ii-v2.js --verify --mode quick
+      # CI maintenance commits are intentionally outside the immutable release-v2
+      # source boundary. Verify that sealed snapshot rather than weakening its
+      # source-drift checks at the current workflow commit.
+      - uses: actions/checkout@v7
+        with:
+          ref: 67f82de0a0b4152a102d984b096e6e3549376dd8
+          path: .release-v2-snapshot
+          persist-credentials: false
+      - working-directory: .release-v2-snapshot
+        run: node website/global-geometry-lab/reproduce-global-geometry-ii-v2.js --verify --mode quick
