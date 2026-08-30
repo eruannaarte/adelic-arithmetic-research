@@ -1,0 +1,109 @@
+{
+  "schema": "gg.u2.screening.source-boundary/2",
+  "boundaryId": "ggii-u2-screening-v2-source-boundary",
+  "sourceCommit": "1c3373267057b8a018ad5039e0f3b2b4e8eb2b1d",
+  "sourceTree": "c21acf2c5f1f3c1b3415f0ee05a46a4a069b4a25",
+  "activeSupplementDigest": "21d69b11b12277e228e2934e033fd8f366b3c8d5d89f1b8833aa781a36118888",
+  "verificationModes": {
+    "git": "verify commit object, commit:path bytes, local bytes, and every listed digest; any Git error is fatal",
+    "portable": "without invoking Git, verify exact required path set, local bytes/sizes/digests, boundary content address, commit/tree syntax, and active supplement digest"
+  },
+  "files": [
+    {
+      "path": "GLOBAL_GEOMETRY_II_EVALUATION_REPAIR_AUDIT.md",
+      "role": "governing-repair-audit",
+      "bytes": 9042,
+      "sha256": "3810154ff591ca42a0e85d4ceb90900c09f85e79a6e3ff403525003bac6e0313"
+    },
+    {
+      "path": "GLOBAL_GEOMETRY_II_U2_ADVERSARIAL_PREREGISTRATION.md",
+      "role": "decision-contract",
+      "bytes": 23688,
+      "sha256": "faffef2526d16f79b700102057d59745f0a4359ea7c386c318cc0ee4afd0d5dc"
+    },
+    {
+      "path": "GLOBAL_GEOMETRY_II_UNIVERSALITY_SPEC.md",
+      "role": "governing-specification",
+      "bytes": 52967,
+      "sha256": "d49a4e7b3cf31ed47c6cab462b6340f6dfa15434f56e4df4d7e70737e1afe885"
+    },
+    {
+      "path": "artifacts/global-geometry-ii/u2/experiment-manifest-v2.json",
+      "role": "parent-experiment",
+      "bytes": 35194,
+      "sha256": "337b22a86b6f7b6b4d842c12d03f3eb580d8097e90746e55f9f1d8456c6cf9c6"
+    },
+    {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-manifest-v1.json",
+      "role": "base-screening-preregistration",
+      "bytes": 8299,
+      "sha256": "2b60f5ca51bfa37c7de068b92928c17664b36f81ff931a8851316b47f135cc25"
+    },
+    {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-implementation-supplement-v2.json",
+      "role": "prior-implementation-preregistration",
+      "bytes": 9285,
+      "sha256": "5380552dc7c6ee91d6e632b7bfec6a6031d49ab0b98a2aa6f95b71b4c73ab8d6"
+    },
+    {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-implementation-supplement-v3.json",
+      "role": "active-implementation-preregistration",
+      "bytes": 10114,
+      "sha256": "3bd284f7b19a5c4caa790c3e25a177a603e81e74e265a526cc99407a691b18da"
+    },
+    {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-pilot-abort-macos-v1.json",
+      "role": "aborted-pilot-metadata",
+      "bytes": 1531,
+      "sha256": "ce1f7100730a68775fcc80f8fa6155f8b97b48dd9c6aa5e64d14461c0dd25228"
+    },
+    {
+      "path": "website/global-geometry-lab/global-geometry-ii-u2-screening.js",
+      "role": "measurement-kernel-v1-base",
+      "bytes": 63217,
+      "sha256": "d4fb0022e9b6347c23cf0e740a8d1de5b9196c224a43207c8d8180675ab6b41d"
+    },
+    {
+      "path": "website/global-geometry-lab/global-geometry-ii-u2-screening-v2.js",
+      "role": "measurement-kernel-v2",
+      "bytes": 18980,
+      "sha256": "3976809ec412580975852540166147d870c354672d055e243861ea7046e19873"
+    },
+    {
+      "path": "website/global-geometry-lab/run-global-geometry-ii-u2-screening-v2.js",
+      "role": "production-runner-v2",
+      "bytes": 37803,
+      "sha256": "25012302339f4b7d1cc27eb55c969ae3d3888642b33ade30e02d2a8f22b552c8"
+    },
+    {
+      "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-screening-supplement-v3.js",
+      "role": "active-supplement-builder",
+      "bytes": 12999,
+      "sha256": "9e2b374f895b11f42aef774008792e175400792bd5ee4ccfc7b45a095dc4d96a"
+    },
+    {
+      "path": "website/global-geometry-lab/test-global-geometry-ii-u2-screening-v2.js",
+      "role": "implementation-tests-v2",
+      "bytes": 11823,
+      "sha256": "aa444f28cc6029a7f44c0921f83798368844c0e2f81feec11d5091bd5384551a"
+    },
+    {
+      "path": "website/global-geometry-lab/test-global-geometry-ii-u2-screening-v2-adversarial.js",
+      "role": "adversarial-tests-v2",
+      "bytes": 30121,
+      "sha256": "f35e04e1537429646c32457b4241a6af16eea6197990a61d5833b2fb9270f71a"
+    },
+    {
+      "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-screening-source-boundary-v2.js",
+      "role": "source-boundary-generator",
+      "bytes": 10343,
+      "sha256": "1a031a2b83317c8de19f99a3aa8507650f18a6cf3d063f09816ad8332b64cbad"
+    }
+  ],
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "a1b1b9bb525ba9c172be48af60b9881a13ce58ebed9862a60fec18a25f07fae0",
+    "canonicalBytes": 3688
+  }
+}
