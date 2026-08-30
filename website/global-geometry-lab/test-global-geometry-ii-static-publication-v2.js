@@ -186,6 +186,13 @@ test("reference parser separates local files from fragments and external URLs", 
     allowedPendingReferences: ["pending.json"]
   });
   assert.deepStrictEqual(pending.pending, ["pending.json"]);
+  const materialized = assertLocalTargets('<a href="pending.json">pending</a>', fixturePage, {
+    repoRoot: fixtureRoot,
+    exists: () => true,
+    allowedPendingReferences: ["pending.json"]
+  });
+  assert.deepStrictEqual(materialized.pending, []);
+  assert.strictEqual(materialized.checked.length, 1);
 });
 
 test("evidence-language helper keeps preview/evaluation/physical states distinct and rejects promotion", () => {
@@ -216,7 +223,12 @@ test("published Global Geometry II page has closed local links and the release-v
   assert.ok(report.localTargetCount >= REQUIRED_V2_LINKS.length);
   assert.ok(report.referenceCount >= REQUIRED_V2_LINKS.length);
   if (requireComparison) assert.deepStrictEqual(report.pendingTargets, []);
-  else assert.ok(report.pendingTargets.length >= 1 && report.pendingTargets.every((entry) => entry === externalComparison));
+  else {
+    assert.ok(
+      report.pendingTargets.length === 0 ||
+      (report.pendingTargets.length >= 1 && report.pendingTargets.every((entry) => entry === externalComparison))
+    );
+  }
 });
 
 const filter = process.env.GGII_STATIC_PUBLICATION_V2_TEST_FILTER || "";

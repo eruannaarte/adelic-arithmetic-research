@@ -499,8 +499,8 @@
       },
       {
         "path": "website/global-geometry-lab/test-global-geometry-ii-static-publication-v2.js",
-        "sha256": "6093a42df41e6463bfbe5f6497cad764621e1ad17fb203d3f832048474a9a1a0",
-        "bytes": 11621
+        "sha256": "33f18b37f6f687e8028c01869d76110c6fd970c8c7109e67b12a9f8001f6bf29",
+        "bytes": 11994
       },
       {
         "path": "website/global-geometry-lab/test-global-geometry-ii-u2-adversarial.js",
@@ -1235,7 +1235,7 @@
   "contentAddress": {
     "algorithm": "sha256",
     "canonicalization": "ggii-release-json-v2",
-    "digest": "c2e1d181f1b88958f76f0e6f23f5542a677ccf2b919d0d400822a76bcfdfa081",
+    "digest": "e2733a652297f6997ea6949e8b85aa4f7410289fd53008b2786f47a1436cf238",
     "canonicalBytes": 44344
   }
 }
