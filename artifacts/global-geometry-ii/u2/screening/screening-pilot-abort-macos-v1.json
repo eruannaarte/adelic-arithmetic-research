@@ -1,0 +1,44 @@
+{
+  "schema": "gg.u2.screening.pilot-abort/1",
+  "pilotId": "ggii-u2-screening-macos-pilot-v1",
+  "status": "ABORTED_BEFORE_COMPLETION",
+  "process": {
+    "pid": 950,
+    "platformLabel": "macos",
+    "sourceBoundaryCommit": "1fb1f6c100f90dd40f27764689547ed2a47d19dd"
+  },
+  "partialArtifact": {
+    "path": "artifacts/global-geometry-ii/u2/screening/screening-raw-macos-v1.jsonl.partial-950",
+    "recordLineCount": 3589,
+    "expectedRecordLineCount": 3840,
+    "bytes": 21276553,
+    "sha256": "bdb04416c4531658105de04ebeb65680ef8e022d6c743cc4752f1dd05687c1c6",
+    "preservation": "PRESERVE_BYTE_FOR_BYTE_DO_NOT_ASSEMBLE_OR_RESUME"
+  },
+  "audit": {
+    "stoppedBeforeCompletion": true,
+    "scientificValuesInspectedDuringAbortAudit": false,
+    "abortAuditReadOnlyOperations": [
+      "process-presence-check",
+      "line-count",
+      "byte-count",
+      "sha256",
+      "filesystem-stat"
+    ],
+    "inferentialUse": "PROHIBITED",
+    "decisionAuthority": "NONE",
+    "u2StatusEffect": "NONE_U2_REMAINS_UNRESOLVED",
+    "reason": "The pilot turn was interrupted and the implementation required outcome-blind repairs before any new outcome run."
+  },
+  "supersession": {
+    "resumeAllowed": false,
+    "newProductionVersionRequired": true,
+    "replacementOutputVersion": "screening-v2"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "8db910463c3fbf0fa0e4610ffdba6e6c4c7b70bf04e99ae91bce2f811e2d9166",
+    "canonicalBytes": 1107
+  }
+}
