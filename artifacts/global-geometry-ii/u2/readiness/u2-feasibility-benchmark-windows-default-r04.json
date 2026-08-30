@@ -1,0 +1,56 @@
+{
+  "schema": "ggii.u2.feasibility-benchmark/1",
+  "scientificOutcome": false,
+  "purpose": "synthetic numerical-kernel throughput only",
+  "environment": {
+    "platform": "win32",
+    "arch": "x64",
+    "node": "v22.22.2",
+    "cpuModel": "AMD Ryzen 5 5600XT 6-Core Processor            ",
+    "logicalCpus": 12,
+    "totalMemoryBytes": 17098805248
+  },
+  "syntheticGraph": {
+    "rows": 171,
+    "cols": 171,
+    "vertices": 29241,
+    "undirectedEdges": 87040,
+    "buildSeconds": 0.032444
+  },
+  "sparseApply": {
+    "repeats": 256,
+    "seconds": 0.054686,
+    "undirectedEdgeApplicationsPerSecond": 407458595,
+    "checksum": 0.499351153424
+  },
+  "dijkstra": {
+    "roots": 8,
+    "seconds": 0.020868,
+    "rootsPerSecond": 383.356574,
+    "checksum": 136
+  },
+  "conjugateGradient": {
+    "cap": 960,
+    "seconds": 0.268767,
+    "iterations": 574,
+    "relativeResidual": 9.6026894058675e-9,
+    "checksum": 339.260377679
+  },
+  "exitBallSolve": {
+    "syntheticSide": 49,
+    "vertices": 2401,
+    "undirectedEdges": 7008,
+    "repeats": 8,
+    "seconds": 0.046933,
+    "solvesPerSecond": 170.455756,
+    "iterationsPerSolve": 91,
+    "relativeResidual": 7.686426952328e-9,
+    "checksum": 1075.09292485
+  },
+  "processMemory": {
+    "rssBytes": 86827008,
+    "heapUsedBytes": 27313120,
+    "externalBytes": 6655663
+  },
+  "contentDigest": "89db79c8e9cbe23dc0edc5dff43e724b8ad1494065a601f21b41a5d2b2929385"
+}

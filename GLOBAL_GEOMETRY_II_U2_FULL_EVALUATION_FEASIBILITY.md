@@ -16,8 +16,9 @@ The audit is bound to:
   `337b22a86b6f7b6b4d842c12d03f3eb580d8097e90746e55f9f1d8456c6cf9c6`
   and declared semantic digest
   `80252bca7951da99d9e7de778d98e3ad7147b7b9a76bb585d7ca266ddad348b3`;
-- the estimator and numerical policies in
-  `GLOBAL_GEOMETRY_II_UNIVERSALITY_SPEC.md`.
+- `GLOBAL_GEOMETRY_II_UNIVERSALITY_SPEC.md`, 52,967 bytes, SHA-256
+  `d49a4e7b3cf31ed47c6cab462b6340f6dfa15434f56e4df4d7e70737e1afe885`,
+  including its estimator and numerical policies.
 
 The feasibility benchmark is
 `scripts/benchmark-global-geometry-ii-u2-full-evaluation.js`. It constructs a
@@ -346,17 +347,23 @@ wall-clock promises.
 | Scope | volume/Dijkstra | lazy walk | heat | transport CG | sum |
 |---|---:|---:|---:|---:|---:|
 | 3,072 positives + 384 calibration | 0.060e12 | 1.330e12 | 0.864e12 | 0.040e12 | 2.294e12 |
-| baseline plus targeted reuse-aware perturbations | 0.837e12 | 21.075e12 | 5.526e12 | 0.270e12 | 27.708e12 |
+| baseline plus targeted reuse-aware perturbations, metric-pulse conductance invariant | 0.837e12 | 21.075e12 | 5.526e12 | 0.270e12 | 27.708300422624e12 |
 
 The second line assumes the literal eight root streams and four crop offsets,
-while reusing only observables guaranteed unaffected by a channel. It excludes
+while reusing only observables guaranteed unaffected by a channel. Its exact
+total also assumes the still-unfrozen convention that a metric pulse leaves
+conductance invariant. If the implementation supplement instead couples
+metric length to conductance and therefore recomputes heat and transport for
+that channel, the corresponding total is `28.523654291936e12`. This planning
+range does not choose between those scientific conventions. It excludes
 ball-exit solves, exact-small eigensolves, bootstrap aggregation, validation,
 canonical serialization, hashing, and I/O. Those omissions are why dividing
 the table by a microbenchmark throughput gives only an optimistic lower bound.
 
 ### 6.2 Measured macOS primitive throughput
 
-Hardware at audit time:
+Hardware at audit time (an engineering observation, not a separately
+content-addressed readiness certificate):
 
 ```text
 Apple M4, 8 logical CPUs, 16 GiB RAM, Node v22.22.2, arm64 Darwin.
@@ -408,15 +415,29 @@ with 6 cores/12 threads, about 16.3 GiB RAM, about 195 GiB free storage, and the
 same portable Node `v22.22.2`. Memory and storage are sufficient under the
 streaming architecture.
 
-Windows throughput is **not budget-certified** until the same synthetic utility
-runs there. A provisional x64 scheduling envelope is 36–120 hours for the full
-reuse-aware measurement layer. Production should not begin on Windows until
-its measured aggregate sparse rate, Dijkstra rate, CG time, and peak RSS have
-been inserted into a content-addressed preflight record. The exact projection
-is then:
+Windows synthetic primitive throughput is now recorded in
+`artifacts/global-geometry-ii/u2/readiness/windows-budget-certificate-v1.json`.
+The certificate is 8,897 bytes with raw SHA-256
+`d0379ed4a1a77a9aad1da69ce80f3c875e475114519b36f7d05459790d1b9d85`
+and canonical digest
+`4de10b1401854e7a0027f831864e05170c17140fff0f639ac1d4394398d953c6`.
+Five sequential default probes reported medians of 408.1 million sparse
+edge-applications/s, 380.2 Dijkstra roots/s, 0.271 s for the full-grid CG
+solve, 170.5 exit-ball solves/s, and about 82.5 MiB RSS. All raw byte counts,
+SHA-256 values, embedded content digests, deterministic checksums, and solver
+residuals were independently rechecked by the certificate generator.
+
+A four-process probe observed a 1.043 s group wall time and a 0.487 s interval
+in which all four processes overlapped. It was deliberately short and its
+kernel phases were not synchronized. Consequently, summed per-process rates
+are descriptive only: they are **not** a decision-grade aggregate-throughput
+or full-wall-time certificate. The provisional x64 scheduling envelope remains
+36–120 hours for the full reuse-aware measurement layer. The exact projection,
+once a decision-grade aggregate measurement exists, is:
 
 ```text
-sparse lower bound = 27.708e12 / measured aggregate edge-applications-per-second
+sparse lower bound = [27.708300422624e12, 28.523654291936e12]
+                     / measured aggregate edge-applications-per-second
 Dijkstra lower bound = expanded root executions / measured aggregate roots-per-second
 ```
 
@@ -451,10 +472,12 @@ minimum honest checkpoint is:
    makes no continuum or physical-validation claim.
 
 This checkpoint meets section 8 because incompleteness is represented as data,
-not hidden or reclassified. It cannot support `ACCEPTED`; a resource failure
-also cannot support `REJECTED`. If strict baseline alternates, controls, or the
-independent host run are themselves absent, the package does **not** yet meet
-the section 8 minimum.
+not hidden or reclassified. It cannot support `ACCEPTED`. A resource-limited
+Gate 6 is `UNRESOLVED`; it does not, however, override the frozen precedence of
+a separately valid cross-platform scientific `FAIL` in Gates 2–5. Such a
+reproduced counterexample can still make the global candidate `REJECTED`. If
+strict baseline alternates, controls, or the independent host run are
+themselves absent, the package does **not** yet meet the section 8 minimum.
 
 ## 8. Pre-production test gate
 

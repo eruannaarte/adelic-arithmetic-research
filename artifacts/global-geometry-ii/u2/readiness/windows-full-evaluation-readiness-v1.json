@@ -1,0 +1,160 @@
+{
+  "schema": "ggii.u2.windows-full-evaluation-readiness/1",
+  "recordedAtUtc": "2026-08-30T18:58:45Z",
+  "updatedAtUtc": "2026-08-30T19:02:53Z",
+  "scientificOutcome": false,
+  "purpose": "Outcome-blind Windows throughput and portable-runtime readiness only",
+  "sanitization": {
+    "credentialsIncluded": false,
+    "transportAliasIncluded": false,
+    "hostNameIncluded": false,
+    "userNameIncluded": false,
+    "note": "Commands below begin at the Windows process boundary; SSH addressing and authentication details are intentionally omitted."
+  },
+  "evidenceBoundary": {
+    "repositoryHeadAtTransfer": "e240c1bdc2037ecd597bbfc535e233109194c4f8",
+    "benchmarkPath": "scripts/benchmark-global-geometry-ii-u2-full-evaluation.js",
+    "benchmarkCommit": "e240c1bdc2037ecd597bbfc535e233109194c4f8",
+    "benchmarkGitBlob": "263ce459a35bc7f688b984ccdc0952f7bc47cab9",
+    "benchmarkBytes": 11976,
+    "benchmarkSha256": "68c839dabace59d67274f8c1df48eff59ada23f128f2705042c92b0697dc187a",
+    "workingCopyMatchedCommit": true,
+    "onlyOutcomeBlindBenchmarkTransferred": true,
+    "u2ScientificSourceTransferred": false,
+    "u2ScientificOutcomesRun": false
+  },
+  "windowsEnvironment": {
+    "operatingSystem": {
+      "caption": "Microsoft Windows 10 Pro",
+      "version": "10.0.19045",
+      "build": "19045",
+      "architecture": "64 bits"
+    },
+    "processor": {
+      "model": "AMD Ryzen 5 5600XT 6-Core Processor",
+      "logicalProcessors": 12
+    },
+    "totalVisibleMemoryBytes": 17098805248,
+    "replicationRoot": "C:\\Users\\Public\\ggii-u2-replication"
+  },
+  "nodeRuntime": {
+    "version": "v22.22.2",
+    "executable": "C:\\Users\\Public\\ggii-u2-replication\\runtime\\node-v22.22.2-win-x64\\node.exe",
+    "executableSha256": "ae1a50511be58e987483fdbc12125407443926d2d394669ade2352776e920dd3",
+    "archiveUrl": "https://nodejs.org/dist/v22.22.2/node-v22.22.2-win-x64.zip",
+    "archiveSha256": "7c93e9d92bf68c07182b471aa187e35ee6cd08ef0f24ab060dfff605fcc1c57c",
+    "archiveChecksumVerifiedInPriorReadinessStep": true
+  },
+  "benchmarkTransfer": {
+    "remotePath": "C:\\Users\\Public\\ggii-u2-replication\\readiness\\benchmark-global-geometry-ii-u2-full-evaluation.js",
+    "remoteSha256": "68c839dabace59d67274f8c1df48eff59ada23f128f2705042c92b0697dc187a",
+    "hashMatchedCommittedSource": true,
+    "windowsVerificationCommand": "Get-FileHash -Algorithm SHA256 -LiteralPath 'C:\\Users\\Public\\ggii-u2-replication\\readiness\\benchmark-global-geometry-ii-u2-full-evaluation.js'"
+  },
+  "benchmarkRuns": {
+    "smoke": {
+      "command": "& 'C:\\Users\\Public\\ggii-u2-replication\\runtime\\node-v22.22.2-win-x64\\node.exe' 'C:\\Users\\Public\\ggii-u2-replication\\readiness\\benchmark-global-geometry-ii-u2-full-evaluation.js' '--rows=12' '--cols=12' '--apply-repeats=2' '--dijkstra-roots=1' '--cg-cap=10' '--exit-side=7' '--exit-repeats=1'",
+      "artifact": "u2-feasibility-benchmark-windows-smoke.json",
+      "artifactBytes": 1471,
+      "artifactSha256": "aea0bccfe9fec779f530068726c254278ba2e406482185aab623eca9652f305e",
+      "embeddedContentDigest": "21ec47a225d8027eac51f7d8d9cfd8730caf7c4b3824faa864fc5364bd86b871",
+      "embeddedContentDigestIndependentlyVerified": true,
+      "structuralSmokeOnly": true,
+      "note": "The deliberately tiny CG cap checks invocation and serialization, not solver convergence."
+    },
+    "default": {
+      "command": "& 'C:\\Users\\Public\\ggii-u2-replication\\runtime\\node-v22.22.2-win-x64\\node.exe' 'C:\\Users\\Public\\ggii-u2-replication\\readiness\\benchmark-global-geometry-ii-u2-full-evaluation.js'",
+      "artifact": "u2-feasibility-benchmark-windows-default.json",
+      "artifactBytes": 1475,
+      "artifactSha256": "47d8073afee76e2c057abb4dd09ed6b079e510b6cf5cff5de67f998b9da2033c",
+      "embeddedContentDigest": "6b5417d3702282061101ba345948ea343614ff8bc9838cc6617ddc2e5d5979de",
+      "embeddedContentDigestIndependentlyVerified": true,
+      "syntheticGraph": {
+        "vertices": 29241,
+        "undirectedEdges": 87040
+      },
+      "sparseApplyUndirectedEdgeApplicationsPerSecond": 407245611,
+      "dijkstraRootsPerSecond": 383.509108,
+      "conjugateGradient": {
+        "iterations": 574,
+        "relativeResidual": 9.6026894058675e-9,
+        "meetsProbeTolerance1e-8": true
+      },
+      "exitBallSolve": {
+        "solvesPerSecond": 170.711461,
+        "iterationsPerSolve": 91,
+        "relativeResidual": 7.686426952328e-9,
+        "meetsProbeTolerance1e-8": true
+      },
+      "processRssBytes": 86499328,
+      "readinessProbePassed": true
+    },
+    "canonicalRepeatedAndConcurrentEvaluation": {
+      "wrapper": "scripts/run-global-geometry-ii-u2-windows-readiness.ps1",
+      "wrapperSha256": "5146e19ab65ea58882088d4574271ee8b6fed457ab8567f5ec9748c954eed18a",
+      "wrapperReport": "windows-readiness-wrapper-run-v2.json",
+      "wrapperReportBytes": 6153,
+      "wrapperReportSha256": "dd477ea9118bc578d570df85c5bf5d7e1fecea2bc242bf4b2e78072d19d8400f",
+      "budgetCertificate": "windows-budget-certificate-v1.json",
+      "budgetCertificateGenerator": "scripts/generate-global-geometry-ii-u2-windows-budget-certificate.js",
+      "budgetCertificateGeneratorSha256": "eb3458771bb3cd8e4efa7ad2f4cce1d637ac87273a2c4bcbb275c5944660cd69",
+      "budgetCertificateBytes": 8897,
+      "budgetCertificateRawSha256": "d0379ed4a1a77a9aad1da69ce80f3c875e475114519b36f7d05459790d1b9d85",
+      "budgetCertificateCanonicalDigest": "4de10b1401854e7a0027f831864e05170c17140fff0f639ac1d4394398d953c6",
+      "sequentialRepetitions": 5,
+      "sequentialMedianProcessWallSeconds": 0.472481,
+      "concurrentWorkers": 4,
+      "concurrentGroupWallSeconds": 1.042637,
+      "allFourWorkersOverlapSeconds": 0.4869999885559082,
+      "rawEncoding": "UTF-8 without BOM, CRLF, exactly one trailing CRLF",
+      "rawFilesRewrittenAfterRetrieval": false,
+      "allRawHashesByteCountsContentDigestsAndSolverChecksPassed": true
+    },
+    "supersededEngineeringRun": {
+      "status": "RETAINED_NONCANONICAL",
+      "scientificOutcome": false,
+      "wrapperSha256": "8d38e4241983cc00ebcbb2c42c3c348fb44fbf22e1cd8b0985f46ebd303c3d4b",
+      "wrapperReport": "windows-readiness-wrapper-run-v1.json",
+      "wrapperReportBytes": 4622,
+      "wrapperReportSha256": "f9b9a3c3b3a00c75f54497939b450fc0b4b15d3a958a8db1a48471d63c2a327c",
+      "reason": "Retained for audit continuity. The canonical v2 run removes transient PowerShell job metadata, records per-worker timestamps, and demonstrates four-way overlap."
+    }
+  },
+  "portableGitRuntime": {
+    "distribution": "Git for Windows MinGit portable ZIP",
+    "release": "v2.55.0.windows.5",
+    "versionOutput": "git version 2.55.0.windows.5",
+    "releasePublishedAtUtc": "2026-08-20T16:21:31Z",
+    "officialReleasePage": "https://github.com/git-for-windows/git/releases/tag/v2.55.0.windows.5",
+    "officialReleaseApi": "https://api.github.com/repos/git-for-windows/git/releases/tags/v2.55.0.windows.5",
+    "officialReleaseId": 373873197,
+    "asset": {
+      "officialAssetId": 522489786,
+      "name": "MinGit-2.55.0.5-64-bit.zip",
+      "url": "https://github.com/git-for-windows/git/releases/download/v2.55.0.windows.5/MinGit-2.55.0.5-64-bit.zip",
+      "bytes": 38989688,
+      "githubPublishedDigest": "sha256:56d7b226b7693196cfc71fef26568f536c4a021ab6c37ff2db4287bed908e96e",
+      "downloadedSha256": "56d7b226b7693196cfc71fef26568f536c4a021ab6c37ff2db4287bed908e96e",
+      "checksumMatched": true,
+      "downloadPath": "C:\\Users\\Public\\ggii-u2-replication\\downloads\\MinGit-2.55.0.5-64-bit.zip"
+    },
+    "extractionCommand": "Expand-Archive -LiteralPath 'C:\\Users\\Public\\ggii-u2-replication\\downloads\\MinGit-2.55.0.5-64-bit.zip' -DestinationPath 'C:\\Users\\Public\\ggii-u2-replication\\runtime\\mingit-2.55.0.5-x64'",
+    "runtimeRoot": "C:\\Users\\Public\\ggii-u2-replication\\runtime\\mingit-2.55.0.5-x64",
+    "executable": "C:\\Users\\Public\\ggii-u2-replication\\runtime\\mingit-2.55.0.5-x64\\cmd\\git.exe",
+    "executableSha256": "78211c7ed73988da93a6d8a33d47ec6187f464d7ea2a9a00c182bbd7a1ecf30f",
+    "directInvocationVerified": true,
+    "installedSystemWide": false,
+    "globalPathModified": false,
+    "unqualifiedGitFoundOnPathAfterPreparation": false,
+    "reversibleByRemovingDedicatedArchiveAndRuntimeDirectory": true,
+    "repositoryOrBundleResolutionProbePerformed": false,
+    "repositoryOrBundleResolutionProbeReason": "No narrow test repository or bundle was supplied; outcome/source transfer boundary was preserved."
+  },
+  "verdict": {
+    "windowsSyntheticThroughputReady": true,
+    "repeatedAndConcurrentBudgetCertificateReady": true,
+    "portableGitRuntimeReady": true,
+    "scientificReplicationAuthorizedByThisRecord": false,
+    "nextRequiredInput": "A frozen, hash-verified source snapshot or narrow Git bundle and its execution contract."
+  }
+}

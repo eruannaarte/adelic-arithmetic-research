@@ -1,0 +1,95 @@
+{
+    "schema":  "ggii.u2.windows-readiness-wrapper-run/2",
+    "scientificOutcome":  false,
+    "purpose":  "Repeated and concurrent synthetic numerical-kernel throughput only",
+    "generatedAtUtc":  "2026-08-30T19:02:53.3876768Z",
+    "wrapperSha256":  "5146e19ab65ea58882088d4574271ee8b6fed457ab8567f5ec9748c954eed18a",
+    "benchmarkSha256":  "68c839dabace59d67274f8c1df48eff59ada23f128f2705042c92b0697dc187a",
+    "benchmarkSourceCommit":  "e240c1bdc2037ecd597bbfc535e233109194c4f8",
+    "nodeVersion":  "v22.22.2",
+    "exactBenchmarkArgs":  [
+
+                           ],
+    "repetitions":  5,
+    "sequential":  [
+                       {
+                           "path":  "C:\\Users\\Public\\ggii-u2-replication\\readiness\\u2-feasibility-benchmark-windows-default-v2-r01.json",
+                           "bytes":  1472,
+                           "sha256":  "728ebc0693c94c2632bfe4b25add90809b333e163b6ff3441f25cd22634b8eab",
+                           "processWallSeconds":  0.47913
+                       },
+                       {
+                           "path":  "C:\\Users\\Public\\ggii-u2-replication\\readiness\\u2-feasibility-benchmark-windows-default-v2-r02.json",
+                           "bytes":  1475,
+                           "sha256":  "2be0c8fb0b416f0aa93b4c06fbe70c04359c595950b712b5beaf88cdf1790eda",
+                           "processWallSeconds":  0.472481
+                       },
+                       {
+                           "path":  "C:\\Users\\Public\\ggii-u2-replication\\readiness\\u2-feasibility-benchmark-windows-default-v2-r03.json",
+                           "bytes":  1476,
+                           "sha256":  "80ac081c4c6bacd729097950166b01848bac413a5093d53202fb9f36e20e9bea",
+                           "processWallSeconds":  0.472889
+                       },
+                       {
+                           "path":  "C:\\Users\\Public\\ggii-u2-replication\\readiness\\u2-feasibility-benchmark-windows-default-v2-r04.json",
+                           "bytes":  1476,
+                           "sha256":  "e69ce2bc1c64eba8c90b808234528bea93d111f5f2df18deeebf3c618aef6a37",
+                           "processWallSeconds":  0.472144
+                       },
+                       {
+                           "path":  "C:\\Users\\Public\\ggii-u2-replication\\readiness\\u2-feasibility-benchmark-windows-default-v2-r05.json",
+                           "bytes":  1476,
+                           "sha256":  "83378fef9728af1e8ff336e33cc589b143187a81bac661ddd3ed54df0f26dbef",
+                           "processWallSeconds":  0.47098
+                       }
+                   ],
+    "concurrent":  {
+                       "workers":  4,
+                       "groupStartedAtUtc":  "2026-08-30T19:02:52.3320401Z",
+                       "groupEndedAtUtc":  "2026-08-30T19:02:53.4033027Z",
+                       "groupWallSeconds":  1.042637,
+                       "items":  [
+                                     {
+                                         "path":  "C:\\Users\\Public\\ggii-u2-replication\\readiness\\u2-feasibility-benchmark-windows-concurrent-v2-c01.json",
+                                         "bytes":  1475,
+                                         "sha256":  "52d5a164b99b65ddba7b2e1d78059c0ff7f7288fbcaaa30b1f1ea40514642679",
+                                         "startedAtUtc":  "2026-08-30T19:02:52.5606451Z",
+                                         "endedAtUtc":  "2026-08-30T19:02:53.2274123Z",
+                                         "processWallSeconds":  0.575541
+                                     },
+                                     {
+                                         "path":  "C:\\Users\\Public\\ggii-u2-replication\\readiness\\u2-feasibility-benchmark-windows-concurrent-v2-c02.json",
+                                         "bytes":  1475,
+                                         "sha256":  "22428f15a4fe7e5706ff241b6ee87131f2e1563fb7168d86cafee7773a896b83",
+                                         "startedAtUtc":  "2026-08-30T19:02:52.6075225Z",
+                                         "endedAtUtc":  "2026-08-30T19:02:53.2851893Z",
+                                         "processWallSeconds":  0.58858
+                                     },
+                                     {
+                                         "path":  "C:\\Users\\Public\\ggii-u2-replication\\readiness\\u2-feasibility-benchmark-windows-concurrent-v2-c03.json",
+                                         "bytes":  1476,
+                                         "sha256":  "42caddb3fe2f438cfc32f6a3a212f76cfd2272cfd3b31504b3d630f84b4aaf1d",
+                                         "startedAtUtc":  "2026-08-30T19:02:52.6759483Z",
+                                         "endedAtUtc":  "2026-08-30T19:02:53.2851893Z",
+                                         "processWallSeconds":  0.517265
+                                     },
+                                     {
+                                         "path":  "C:\\Users\\Public\\ggii-u2-replication\\readiness\\u2-feasibility-benchmark-windows-concurrent-v2-c04.json",
+                                         "bytes":  1476,
+                                         "sha256":  "cb7f1eb335ebbb76d3a3e67d5eb1d40ec624e140bc6446aab7285270b3dfd76e",
+                                         "startedAtUtc":  "2026-08-30T19:02:52.7405553Z",
+                                         "endedAtUtc":  "2026-08-30T19:02:53.3564230Z",
+                                         "processWallSeconds":  0.536496
+                                     }
+                                 ]
+                   },
+    "rawEncoding":  {
+                        "characterEncoding":  "UTF-8",
+                        "byteOrderMark":  false,
+                        "lineEnding":  "CRLF",
+                        "trailingLineEndingCount":  1
+                    },
+    "outcomeBlindBenchmarkTransferred":  true,
+    "u2ScientificSourceTransferred":  false,
+    "scientificOutcomesRun":  false
+}

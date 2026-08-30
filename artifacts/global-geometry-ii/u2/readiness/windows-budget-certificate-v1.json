@@ -1,0 +1,239 @@
+{
+  "schema": "ggii.u2.windows-budget-certificate/1",
+  "scientificOutcome": false,
+  "purpose": "Canonical outcome-blind budget observation for the strict U2 implementation plan",
+  "evidenceBoundary": {
+    "benchmarkSourceCommit": "e240c1bdc2037ecd597bbfc535e233109194c4f8",
+    "benchmarkPath": "scripts/benchmark-global-geometry-ii-u2-full-evaluation.js",
+    "benchmarkSha256": "68c839dabace59d67274f8c1df48eff59ada23f128f2705042c92b0697dc187a",
+    "exactCliArguments": [],
+    "resolvedDefaults": {
+      "rows": 171,
+      "cols": 171,
+      "applyRepeats": 256,
+      "dijkstraRoots": 8,
+      "cgCap": 960,
+      "exitSide": 49,
+      "exitRepeats": 8
+    },
+    "u2ScientificSourceTransferred": false,
+    "u2ScientificOutcomesRun": false
+  },
+  "executionWrapper": {
+    "path": "scripts/run-global-geometry-ii-u2-windows-readiness.ps1",
+    "sha256": "5146e19ab65ea58882088d4574271ee8b6fed457ab8567f5ec9748c954eed18a",
+    "reportArtifact": "windows-readiness-wrapper-run-v2.json",
+    "reportBytes": 6153,
+    "reportRawSha256": "dd477ea9118bc578d570df85c5bf5d7e1fecea2bc242bf4b2e78072d19d8400f",
+    "reportGeneratedAtUtc": "2026-08-30T19:02:53.3876768Z"
+  },
+  "environment": {
+    "platform": "win32",
+    "architecture": "x64",
+    "node": "v22.22.2",
+    "cpuModel": "AMD Ryzen 5 5600XT 6-Core Processor",
+    "logicalCpus": 12,
+    "totalMemoryBytes": 17098805248
+  },
+  "rawEncoding": {
+    "characterEncoding": "UTF-8",
+    "byteOrderMark": false,
+    "lineEnding": "CRLF",
+    "exactlyOneTrailingCrlf": true,
+    "rawFilesRewrittenAfterRetrieval": false
+  },
+  "sequentialObservation": {
+    "repetitions": 5,
+    "artifacts": [
+      {
+        "artifact": "u2-feasibility-benchmark-windows-default-v2-r01.json",
+        "bytes": 1472,
+        "rawSha256": "728ebc0693c94c2632bfe4b25add90809b333e163b6ff3441f25cd22634b8eab",
+        "contentDigest": "d74e1fa3421f1e4125a3af1774207edf71c75c0c2a838a7d20b655781bf83020",
+        "processWallSeconds": 0.47913
+      },
+      {
+        "artifact": "u2-feasibility-benchmark-windows-default-v2-r02.json",
+        "bytes": 1475,
+        "rawSha256": "2be0c8fb0b416f0aa93b4c06fbe70c04359c595950b712b5beaf88cdf1790eda",
+        "contentDigest": "402301573b4edc1175a7072128e2a1f1813135777f570f89b12840b51274be99",
+        "processWallSeconds": 0.472481
+      },
+      {
+        "artifact": "u2-feasibility-benchmark-windows-default-v2-r03.json",
+        "bytes": 1476,
+        "rawSha256": "80ac081c4c6bacd729097950166b01848bac413a5093d53202fb9f36e20e9bea",
+        "contentDigest": "82c9fb3ae595aa4a829142bf03a7b9b716c41cec5a3f8341e7b9606393adc3cd",
+        "processWallSeconds": 0.472889
+      },
+      {
+        "artifact": "u2-feasibility-benchmark-windows-default-v2-r04.json",
+        "bytes": 1476,
+        "rawSha256": "e69ce2bc1c64eba8c90b808234528bea93d111f5f2df18deeebf3c618aef6a37",
+        "contentDigest": "83d1ede8f5f2f16f9575dbdadb60f20b9f615df144c445a186d232e2fcd0e976",
+        "processWallSeconds": 0.472144
+      },
+      {
+        "artifact": "u2-feasibility-benchmark-windows-default-v2-r05.json",
+        "bytes": 1476,
+        "rawSha256": "83378fef9728af1e8ff336e33cc589b143187a81bac661ddd3ed54df0f26dbef",
+        "contentDigest": "f0fa9458e8cbf4182b30fa05dafefe9375cbd39c2e96a78ef4ad62179d0db736",
+        "processWallSeconds": 0.47098
+      }
+    ],
+    "processWallSeconds": {
+      "minimum": 0.47098,
+      "median": 0.472481,
+      "maximum": 0.47913
+    },
+    "graphBuildSeconds": {
+      "minimum": 0.030978,
+      "median": 0.031812,
+      "maximum": 0.032585
+    },
+    "sparseApplySeconds": {
+      "minimum": 0.054492,
+      "median": 0.054604,
+      "maximum": 0.054791
+    },
+    "sparseApplyUndirectedEdgeApplicationsPerSecond": {
+      "minimum": 406675525,
+      "median": 408068991,
+      "maximum": 408909214
+    },
+    "dijkstraSeconds": {
+      "minimum": 0.020739,
+      "median": 0.021043,
+      "maximum": 0.022106
+    },
+    "dijkstraRootsPerSecond": {
+      "minimum": 361.886151,
+      "median": 380.173929,
+      "maximum": 385.750381
+    },
+    "conjugateGradientSeconds": {
+      "minimum": 0.268473,
+      "median": 0.270831,
+      "maximum": 0.271083
+    },
+    "exitBallSolveSeconds": {
+      "minimum": 0.046688,
+      "median": 0.046915,
+      "maximum": 0.047234
+    },
+    "exitBallSolvesPerSecond": {
+      "minimum": 169.368446,
+      "median": 170.520065,
+      "maximum": 171.351708
+    },
+    "processRssBytes": {
+      "minimum": 86454272,
+      "median": 86515712,
+      "maximum": 86712320
+    }
+  },
+  "concurrentObservation": {
+    "workers": 4,
+    "artifacts": [
+      {
+        "artifact": "u2-feasibility-benchmark-windows-concurrent-v2-c01.json",
+        "bytes": 1475,
+        "rawSha256": "52d5a164b99b65ddba7b2e1d78059c0ff7f7288fbcaaa30b1f1ea40514642679",
+        "contentDigest": "e14f60a3fa73e3e0765345efc5bea1cb6b4a7a9697c953f6fd1b67935cc468af",
+        "processWallSeconds": 0.575541,
+        "startedAtUtc": "2026-08-30T19:02:52.5606451Z",
+        "endedAtUtc": "2026-08-30T19:02:53.2274123Z"
+      },
+      {
+        "artifact": "u2-feasibility-benchmark-windows-concurrent-v2-c02.json",
+        "bytes": 1475,
+        "rawSha256": "22428f15a4fe7e5706ff241b6ee87131f2e1563fb7168d86cafee7773a896b83",
+        "contentDigest": "b478ee69cda324926d1260fe83a93e0b1644ca4f3f3d58e009374337b40b9f4d",
+        "processWallSeconds": 0.58858,
+        "startedAtUtc": "2026-08-30T19:02:52.6075225Z",
+        "endedAtUtc": "2026-08-30T19:02:53.2851893Z"
+      },
+      {
+        "artifact": "u2-feasibility-benchmark-windows-concurrent-v2-c03.json",
+        "bytes": 1476,
+        "rawSha256": "42caddb3fe2f438cfc32f6a3a212f76cfd2272cfd3b31504b3d630f84b4aaf1d",
+        "contentDigest": "85d62c3f7b8bd631cbca139065d82d0287042b9cdb9468a87ccb6d70ac65e84c",
+        "processWallSeconds": 0.517265,
+        "startedAtUtc": "2026-08-30T19:02:52.6759483Z",
+        "endedAtUtc": "2026-08-30T19:02:53.2851893Z"
+      },
+      {
+        "artifact": "u2-feasibility-benchmark-windows-concurrent-v2-c04.json",
+        "bytes": 1476,
+        "rawSha256": "cb7f1eb335ebbb76d3a3e67d5eb1d40ec624e140bc6446aab7285270b3dfd76e",
+        "contentDigest": "53adae3b52637340ebe2431aa64244070b0dc3128afd2b72814eef461807e0b5",
+        "processWallSeconds": 0.536496,
+        "startedAtUtc": "2026-08-30T19:02:52.7405553Z",
+        "endedAtUtc": "2026-08-30T19:02:53.3564230Z"
+      }
+    ],
+    "groupStartedAtUtc": "2026-08-30T19:02:52.3320401Z",
+    "groupEndedAtUtc": "2026-08-30T19:02:53.4033027Z",
+    "groupWallSeconds": 1.042637,
+    "processWallSeconds": {
+      "minimum": 0.517265,
+      "median": 0.5560185,
+      "maximum": 0.58858
+    },
+    "sumProcessWallSeconds": 2.217882,
+    "processOverlapFactor": 2.1271852044383612,
+    "allWorkerOverlapSeconds": 0.4869999885559082,
+    "benchmarkCompletionsPerGroupSecond": 3.8364262921803083,
+    "sparseApplyUndirectedEdgeApplicationsPerSecond": {
+      "minimum": 355193950,
+      "median": 383093620,
+      "maximum": 397013787
+    },
+    "sumReportedSparseApplyRates": 1518394977,
+    "dijkstraRootsPerSecond": {
+      "minimum": 312.354804,
+      "median": 345.776473,
+      "maximum": 377.271291
+    },
+    "sumReportedDijkstraRates": 1381.179041,
+    "conjugateGradientSeconds": {
+      "minimum": 0.293253,
+      "median": 0.321951,
+      "maximum": 0.339446
+    },
+    "exitBallSolvesPerSecond": {
+      "minimum": 113.869278,
+      "median": 144.579394,
+      "maximum": 167.266736
+    },
+    "sumReportedExitBallSolveRates": 570.294802,
+    "processRssBytes": {
+      "minimum": 86523904,
+      "median": 86640640,
+      "maximum": 86679552
+    },
+    "sumReportedProcessRssBytes": 346484736,
+    "note": "Summed per-process rates and RSS are descriptive aggregates; the timestamp interval proves four-way overlap, but the per-kernel timers were not phase-synchronized."
+  },
+  "deterministicChecks": {
+    "vertices": 29241,
+    "undirectedEdges": 87040,
+    "conjugateGradientIterations": 574,
+    "conjugateGradientRelativeResidual": 9.6026894058675e-9,
+    "exitBallIterationsPerSolve": 91,
+    "exitBallRelativeResidual": 7.686426952328e-9,
+    "allPrimaryChecksumsInvariant": true,
+    "allEmbeddedContentDigestsVerified": true,
+    "allRawHashesAndByteCountsVerified": true,
+    "allRawEncodingChecksPassed": true,
+    "allDefaultSolverResidualsAtMost1eMinus8": true
+  },
+  "interpretation": {
+    "windowsSyntheticBudgetObserved": true,
+    "decisionGradeRuntimeProjectionMade": false,
+    "scientificReplicationAuthorizedByThisCertificate": false,
+    "note": "This times reusable synthetic numerical primitives. It does not estimate the full strict U2 wall time or evaluate any scientific gate."
+  },
+  "canonicalDigestAlgorithm": "sha256(sorted-key canonical JSON of the certificate without canonicalDigest)",
+  "canonicalDigest": "4de10b1401854e7a0027f831864e05170c17140fff0f639ac1d4394398d953c6"
+}

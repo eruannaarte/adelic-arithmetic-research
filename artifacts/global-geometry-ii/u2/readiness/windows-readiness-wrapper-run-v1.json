@@ -1,0 +1,77 @@
+{
+    "schema":  "ggii.u2.windows-readiness-wrapper-run/1",
+    "scientificOutcome":  false,
+    "purpose":  "Repeated and concurrent synthetic numerical-kernel throughput only",
+    "generatedAtUtc":  "2026-08-30T19:01:27.7959910Z",
+    "wrapperSha256":  "8d38e4241983cc00ebcbb2c42c3c348fb44fbf22e1cd8b0985f46ebd303c3d4b",
+    "benchmarkSha256":  "68c839dabace59d67274f8c1df48eff59ada23f128f2705042c92b0697dc187a",
+    "nodeVersion":  "v22.22.2",
+    "exactBenchmarkArgs":  [
+
+                           ],
+    "repetitions":  5,
+    "sequential":  [
+                       {
+                           "path":  "C:\\Users\\Public\\ggii-u2-replication\\readiness\\u2-feasibility-benchmark-windows-default-r01.json",
+                           "bytes":  1475,
+                           "sha256":  "b6fd60d6de574beb991c3295c51e9a21487cc457e3186fa02c8cf5a28c8d5c7d",
+                           "processWallSeconds":  0.478209
+                       },
+                       {
+                           "path":  "C:\\Users\\Public\\ggii-u2-replication\\readiness\\u2-feasibility-benchmark-windows-default-r02.json",
+                           "bytes":  1476,
+                           "sha256":  "973769b67874e822a93bd5bfda0fe8c081aa5b10736cf4df73d0cfc72dfbef3f",
+                           "processWallSeconds":  0.470438
+                       },
+                       {
+                           "path":  "C:\\Users\\Public\\ggii-u2-replication\\readiness\\u2-feasibility-benchmark-windows-default-r03.json",
+                           "bytes":  1475,
+                           "sha256":  "d85b37459a3ecb56463047a900ea9424acb5bf1cc76c47db587550a5fee1d853",
+                           "processWallSeconds":  0.469945
+                       },
+                       {
+                           "path":  "C:\\Users\\Public\\ggii-u2-replication\\readiness\\u2-feasibility-benchmark-windows-default-r04.json",
+                           "bytes":  1476,
+                           "sha256":  "544bbadadd28e76df85794ff1f722c0d6495c4c1f78ec1a254274a41d6284312",
+                           "processWallSeconds":  0.470654
+                       },
+                       {
+                           "path":  "C:\\Users\\Public\\ggii-u2-replication\\readiness\\u2-feasibility-benchmark-windows-default-r05.json",
+                           "bytes":  1476,
+                           "sha256":  "f0aeaefc4416516cb79cd69348dcb402050ad7c279ad2d0f42cc6f40a4a04040",
+                           "processWallSeconds":  0.471597
+                       }
+                   ],
+    "concurrent":  {
+                       "workers":  2,
+                       "groupWallSeconds":  1.222804,
+                       "items":  [
+                                     {
+                                         "path":  "C:\\Users\\Public\\ggii-u2-replication\\readiness\\u2-feasibility-benchmark-windows-concurrent-c01.json",
+                                         "bytes":  1476,
+                                         "sha256":  "7d937be4cc34620f209a4c230c2c8bb91dfe8c9ba162c9b168a5b797aeff9a48",
+                                         "processWallSeconds":  0.482423,
+                                         "PSComputerName":  "localhost",
+                                         "RunspaceId":  "6b8b7916-5e24-450f-a410-182ec1ac2843",
+                                         "PSShowComputerName":  false
+                                     },
+                                     {
+                                         "path":  "C:\\Users\\Public\\ggii-u2-replication\\readiness\\u2-feasibility-benchmark-windows-concurrent-c02.json",
+                                         "bytes":  1476,
+                                         "sha256":  "24475908ec4e1d1c4a2a556aa2e264abbd780b5bf4407af7023f0123da274273",
+                                         "processWallSeconds":  0.477343,
+                                         "PSComputerName":  "localhost",
+                                         "RunspaceId":  "28097b89-9e83-4fc0-9b2b-57125359a359",
+                                         "PSShowComputerName":  false
+                                     }
+                                 ]
+                   },
+    "rawEncoding":  {
+                        "characterEncoding":  "UTF-8",
+                        "byteOrderMark":  false,
+                        "lineEnding":  "CRLF",
+                        "trailingLineEndingCount":  1
+                    },
+    "sourceTransferred":  false,
+    "scientificOutcomesRun":  false
+}
