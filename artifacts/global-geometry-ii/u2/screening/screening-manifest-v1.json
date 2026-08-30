@@ -1,0 +1,213 @@
+{
+  "schema": "gg.u2.screening.experiment/1",
+  "screeningId": "ggii-u2-v2-screening-v1",
+  "freezeStatus": {
+    "status": "FROZEN_BEFORE_SCREENING_OUTCOMES",
+    "productionOutcomeRecordsReadBeforeFreeze": false,
+    "criteriaMutableAfterFreeze": false,
+    "decisionAuthority": "NONE",
+    "forcedU2Status": "UNRESOLVED"
+  },
+  "bindings": {
+    "parentExperimentManifest": {
+      "path": "artifacts/global-geometry-ii/u2/experiment-manifest-v2.json",
+      "sha256": "337b22a86b6f7b6b4d842c12d03f3eb580d8097e90746e55f9f1d8456c6cf9c6",
+      "bytes": 35194,
+      "experimentId": "ggii-u2-v2",
+      "semanticContentAddress": "80252bca7951da99d9e7de778d98e3ad7147b7b9a76bb585d7ca266ddad348b3"
+    },
+    "decisionContract": {
+      "path": "GLOBAL_GEOMETRY_II_U2_ADVERSARIAL_PREREGISTRATION.md",
+      "sha256": "faffef2526d16f79b700102057d59745f0a4359ea7c386c318cc0ee4afd0d5dc",
+      "bytes": 23688
+    },
+    "governingSpecification": {
+      "path": "GLOBAL_GEOMETRY_II_UNIVERSALITY_SPEC.md",
+      "sha256": "d49a4e7b3cf31ed47c6cab462b6340f6dfa15434f56e4df4d7e70737e1afe885",
+      "bytes": 52967
+    }
+  },
+  "scope": {
+    "purpose": "outcome-bearing, lower-cost screening and implementation validation",
+    "claimLimit": "Screening records cannot PASS or FAIL decision Gates 2-8 and cannot promote or reject U2.",
+    "positiveMatrix": {
+      "families": [
+        "square-alternating",
+        "triangular-clipped",
+        "cell-center-fan",
+        "square-hashed-diagonal"
+      ],
+      "sizes": [
+        16,
+        24,
+        36,
+        54,
+        81,
+        120
+      ],
+      "sigma": [
+        0,
+        0.25,
+        0.75,
+        1.3862943611198906
+      ],
+      "replicates": 32,
+      "recordCount": 3072
+    },
+    "controls": {
+      "ids": [
+        "comb-trap",
+        "small-world-shortcuts",
+        "vanishing-neck",
+        "perforated-disk"
+      ],
+      "sizes": [
+        16,
+        24,
+        36,
+        54,
+        81,
+        120
+      ],
+      "replicates": 32,
+      "recordCount": 768
+    }
+  },
+  "estimators": {
+    "constructionAudit": {
+      "coverage": "all positive and control records",
+      "measurements": [
+        "vertex-count",
+        "edge-count",
+        "face-count-when-simplicial",
+        "component-count",
+        "degree-range",
+        "boundary-edge-incidence",
+        "surface-link-witness-when-applicable",
+        "structure-sha256"
+      ],
+      "topologyLabelRule": "Exact Betti numbers are emitted only after connectedness, edge incidence, boundary-manifold, vertex-link, orientability, and nonempty-boundary witnesses validate; otherwise only the observed witness and graph cycle rank are emitted."
+    },
+    "conductanceAudit": {
+      "coverage": "all 3072 positive records",
+      "law": "w_e=exp(sigma*(2*u_e-1))",
+      "bounds": "[exp(-sigma),exp(sigma)]",
+      "measurements": [
+        "minimum",
+        "maximum",
+        "arithmetic-mean",
+        "geometric-mean",
+        "strict-positivity",
+        "bound-residual"
+      ],
+      "exactness": "binary64 evaluation of every constructed edge conductance"
+    },
+    "volumeGrowthScreen": {
+      "coverage": "all 3072 positive records",
+      "metric": "unweighted graph-hop distance",
+      "rootCount": 8,
+      "rootSelection": "eight SHA-256-ranked canonical vertices whose multi-source boundary distance is at least the maximum sampled hop radius",
+      "rho": [
+        0.03125,
+        0.041666666666666664,
+        0.05,
+        0.0625,
+        0.08333333333333333,
+        0.125,
+        0.16666666666666666,
+        0.2
+      ],
+      "radiusMap": "max(1,floor(rho*realizedEuclideanDiameter)) with duplicates removed",
+      "fit": "ordinary least squares of log mean ball count on log hop radius when at least three unique radii exist",
+      "decisionDifference": "8 rather than 64 roots, hop rather than registered intrinsic metric, no hierarchical bootstrap; screening only"
+    },
+    "randomWalkScreen": {
+      "coverage": "every positive record at L=81 and L=120",
+      "process": "lazy weighted nearest-neighbor walk with laziness 0.5",
+      "rootCount": 4,
+      "walkersPerRoot": 8,
+      "totalWalkersPerRecord": 32,
+      "nativeTimes": [
+        8,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "distance": "unweighted graph-hop distance from each starting root",
+      "fit": "per-root OLS slope of log mean squared displacement on log time; d_w=2/slope when positive",
+      "interval": "two-sided 95% Student-t interval across four root-block estimates (df=3); sampling error is nonzero and the interval is non-hierarchical",
+      "decisionDifference": "4 roots x 8 walkers, no exit-time alternate, no hierarchical bootstrap, and no diffusivity calibration; screening only"
+    },
+    "transportScreen": {
+      "coverage": "every positive record at L=81 and L=120 and vanishing-neck controls",
+      "observables": {
+        "linearTrialDirichletEnergy": "sum_e w_e*((x_v-x_u)/(x_max-x_min))^2, a rigorous upper bound for the left-right Dirichlet conductance when the linear trial potential obeys the boundary values",
+        "layeredSeriesProxy": "reciprocal of the sum over registered half-integer x cuts of reciprocal total crossing conductance",
+        "minimumCutRatio": "minimum registered cut conductance divided by median registered cut conductance"
+      },
+      "decisionDifference": "No residual-certified Dirichlet solve, calibration normalization, effective-resistance alternate, or hierarchical interval; screening only"
+    },
+    "controlDiscriminants": {
+      "comb-trap": "actual axial lazy-walk MSD and occupied-tooth fraction on a backbone with floor(L/4)-long teeth",
+      "small-world-shortcuts": "actual accepted shortcut count/separation plus root-ball inflation relative to the same graph with shortcuts removed",
+      "vanishing-neck": "actual corridor cross-section and minimum-cut ratio on two comparable triangulated patches joined by a two-cell-wide floor(L/4)-long corridor",
+      "perforated-disk": "actual removed mutually separated interior face stars, exact beta_1 only when the surface witness validates, and giant-component fraction"
+    }
+  },
+  "randomness": {
+    "id": "gg-sha256-object-u53-v1",
+    "streamSeed": "SHA-256(JCS([screeningId,namespace,familyOrControl,size,sigmaIndex,replicate,role]))",
+    "objectUniform": "top 53 bits of SHA-256(JCS([streamSeed,objectCanonicalKey,counter])) divided by 2^53",
+    "streamRoles": [
+      "construction",
+      "conductance",
+      "volume-roots",
+      "walk",
+      "control"
+    ],
+    "collisionAudit": "all effective stream seeds; per-record conductance and Monte Carlo u53 outputs; deterministic irrelevance explicitly counted"
+  },
+  "failureSemantics": {
+    "codes": [
+      "INVALID_CONFIG",
+      "INVALID_COMPLEX",
+      "INSUFFICIENT_BULK_ROOTS",
+      "INSUFFICIENT_VOLUME_WINDOW",
+      "ESTIMATOR_UNDEFINED",
+      "RESOURCE_FAILURE",
+      "INTERNAL_REPLAY_MISMATCH"
+    ],
+    "anyFailureEffect": "record remains present with failure ledger entry; U2 remains UNRESOLVED",
+    "missingCellLimit": 0.05,
+    "scientificRejectionAllowed": false
+  },
+  "artifactContract": {
+    "raw": "newline-delimited canonical JSON records with per-record SHA-256 and a whole-file SHA-256",
+    "summary": "canonical JSON with census, screening aggregates, failures, seed audit, Merkle root, raw-file binding, and telemetry",
+    "writePolicy": "write-once: an existing artifact may be accepted only when bytes are identical",
+    "semanticReplay": "validators reconstruct census identities/seeds, recompute hashes and summaries, and can remeasure selected records",
+    "expectedRawRecords": 3840,
+    "outputDirectory": "artifacts/global-geometry-ii/u2/screening"
+  },
+  "resourcePlan": {
+    "runtimeEstimateMinutesSingleNode": [
+      4,
+      12
+    ],
+    "rawArtifactEstimateBytes": [
+      5000000,
+      15000000
+    ],
+    "checkpointEveryRecords": 32,
+    "maximumResidentGraphs": 1,
+    "noScientificMatrixReductionAuthorized": true
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "25fea0bad6f4b60ae27a75fd13c13be117c28a288a5f6b3bd9e25859c4b1d309",
+    "canonicalBytes": 6598
+  }
+}

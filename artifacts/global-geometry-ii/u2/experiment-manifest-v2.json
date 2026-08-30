@@ -1,0 +1,829 @@
+{
+  "schema": "gg.atlas.experiment/2",
+  "experimentId": "ggii-u2-v2",
+  "hypothesis": {
+    "id": "U2",
+    "version": 2,
+    "supersedesForFutureOutcomeProduction": "ggii-u2-v1",
+    "versionReason": "outcome-blind correction of the internally infeasible L=81 spatial grid, as required by the adopted adversarial preregistration",
+    "claimClass": "universality-candidate",
+    "outcomeAtFreeze": "NOT_EVALUATED"
+  },
+  "protocolAdoption": {
+    "outcomeBlindAtFreeze": true,
+    "scientificOutcomesReadBeforeFreeze": false,
+    "criteriaRelaxed": false,
+    "resourceAmendments": [],
+    "protocols": {
+      "decisionContract": {
+        "id": "u2-decision-v2",
+        "path": "GLOBAL_GEOMETRY_II_U2_ADVERSARIAL_PREREGISTRATION.md",
+        "sha256": "faffef2526d16f79b700102057d59745f0a4359ea7c386c318cc0ee4afd0d5dc",
+        "bytes": 23688
+      },
+      "governingSpecification": {
+        "path": "GLOBAL_GEOMETRY_II_UNIVERSALITY_SPEC.md",
+        "sha256": "d49a4e7b3cf31ed47c6cab462b6340f6dfa15434f56e4df4d7e70737e1afe885",
+        "bytes": 52967
+      }
+    }
+  },
+  "matrix": {
+    "families": [
+      "square-alternating",
+      "triangular-clipped",
+      "cell-center-fan",
+      "square-hashed-diagonal"
+    ],
+    "confirmationSizes": [
+      16,
+      24,
+      36,
+      54,
+      81,
+      120
+    ],
+    "calibrationSizes": [
+      16,
+      24,
+      36
+    ],
+    "sigma": [
+      0,
+      0.25,
+      0.75,
+      1.3862943611198906
+    ],
+    "confirmationReplicates": 32,
+    "calibrationReplicates": 8,
+    "reflectingDiskPositiveMeasurementUnits": 3072,
+    "calibrationMeasurementUnits": 384,
+    "primaryControlMeasurementUnitsMaximum": 768,
+    "periodicCalibrationInterpretation": "two analytic square/triangular spectral carriers plus capped filled-periodic overlap tests; not a second full factorial boundary mode",
+    "primaryControls": [
+      {
+        "id": "comb-trap",
+        "parameters": {
+          "toothLength": "floor(L/4)"
+        }
+      },
+      {
+        "id": "small-world-shortcuts",
+        "parameters": {
+          "shortcutDensity": 0.02,
+          "maximumEndpointsPerVertex": 1,
+          "minimumIntrinsicEndpointSeparation": "L/3"
+        }
+      },
+      {
+        "id": "vanishing-neck",
+        "parameters": {
+          "corridorWidthInH": 2,
+          "corridorLength": "floor(L/4)h"
+        }
+      },
+      {
+        "id": "perforated-disk",
+        "parameters": {
+          "holeDensity": 0.05,
+          "minimumEdgeSeparation": 3
+        }
+      }
+    ]
+  },
+  "independence": {
+    "experimentalUnit": "weighted construction realization identified by generatorStream, conductanceStream, and structure digest",
+    "deterministicSigmaZeroGeometryCount": 1,
+    "nestedMeasurementBatchCount": 32,
+    "productionBulkRootsPerBatch": 64,
+    "heatProbePrefixes": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "bootstrapHierarchy": [
+      "construction-realization",
+      "spatial-root-block",
+      "heat-probe"
+    ],
+    "bootstrapReplicates": 4096,
+    "confidence": 0.95,
+    "disjointNamespaces": {
+      "calibration": "cal/",
+      "confirmation": "confirm/"
+    }
+  },
+  "normalization": {
+    "fittedFrom": "independent calibration split only",
+    "frozenBeforeConfirmatoryMeasurement": true,
+    "fields": [
+      "bulk-density",
+      "scalar-or-tensor-diffusivity",
+      "conductivity"
+    ],
+    "confirmatoryOutcomeMayEnterFit": false
+  },
+  "commonGrids": {
+    "rho": [
+      0.03125,
+      0.041666666666666664,
+      0.05,
+      0.0625,
+      0.08333333333333333,
+      0.125,
+      0.16666666666666666,
+      0.2
+    ],
+    "tau": [
+      0.001953125,
+      0.0026041666666666665,
+      0.00390625,
+      0.005208333333333333,
+      0.0078125,
+      0.010416666666666666
+    ],
+    "nativeTimeSchedule": "ceil(8*2^(k/2)), duplicates removed, through last bulk-admissible step",
+    "interpolation": "between two admissible native samples only; no extrapolation"
+  },
+  "gates": {
+    "decisionContract": "u2-decision-v2 adopted verbatim by SHA-256 binding",
+    "statuses": [
+      "PASS",
+      "FAIL",
+      "UNRESOLVED"
+    ],
+    "allComparisonsStrict": true,
+    "acceptedRequiresEveryPositiveAtomPass": true,
+    "rejectedRequiresReproducedScientificFail": true,
+    "infrastructureFailureOutcome": "UNRESOLVED",
+    "missingRecordCellLimit": 0.05,
+    "alternateEstimatorRequiredForFail": true,
+    "thresholdsMutableAfterFreeze": false
+  },
+  "perturbations": [
+    "one-cell-metric-pulse-v1",
+    "one-percent-weight-defects-v1",
+    "root-resampling-v1",
+    "canonical-relabel-v1",
+    "half-cell-crop-v1"
+  ],
+  "inference": {
+    "familyDistance": "joint-mad-v1 as disambiguated by adopted decision contract",
+    "constrainedFitDiagnosticOnly": true,
+    "conservativeThreeLargestSizeRule": true,
+    "estimatorWindowReselectedInsideEveryBootstrap": true,
+    "floatComparison": "gg-float-compare-v1"
+  },
+  "resourcePolicy": {
+    "tier": "batch",
+    "noSizeReplicateObservableOrControlReductionAuthorized": true,
+    "checkpointEveryMeasurementUnits": 8,
+    "dryRunGeneratedBeforeOutcomes": true,
+    "rows": [
+      {
+        "familyId": "square-alternating",
+        "linearSize": 16,
+        "predictedVertices": 289,
+        "predictedEdges": 800,
+        "predictedFaces": 512,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 569760,
+          "deterministicLazyWalkUpperModel": 563200,
+          "heat256Probe64OrderUpperModel": 13107200,
+          "transportCg8LIterationUpperModel": 102400,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 742032,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 32,
+          "pairedPerturbationMeasurements": 0
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "square-alternating",
+        "linearSize": 24,
+        "predictedVertices": 625,
+        "predictedEdges": 1776,
+        "predictedFaces": 1152,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 1427188,
+          "deterministicLazyWalkUpperModel": 2727936,
+          "heat256Probe64OrderUpperModel": 29097984,
+          "transportCg8LIterationUpperModel": 340992,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 1611152,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 32,
+          "pairedPerturbationMeasurements": 0
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "square-alternating",
+        "linearSize": 36,
+        "predictedVertices": 1369,
+        "predictedEdges": 3960,
+        "predictedFaces": 2592,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 3553431,
+          "deterministicLazyWalkUpperModel": 13178880,
+          "heat256Probe64OrderUpperModel": 64880640,
+          "transportCg8LIterationUpperModel": 1140480,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 3538832,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 32,
+          "pairedPerturbationMeasurements": 0
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "square-alternating",
+        "linearSize": 54,
+        "predictedVertices": 3025,
+        "predictedEdges": 8856,
+        "predictedFaces": 5832,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 8792107,
+          "deterministicLazyWalkUpperModel": 66313728,
+          "heat256Probe64OrderUpperModel": 145096704,
+          "transportCg8LIterationUpperModel": 3825792,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 7834352,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 0,
+          "pairedPerturbationMeasurements": 640
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "square-alternating",
+        "linearSize": 81,
+        "predictedVertices": 6724,
+        "predictedEdges": 19845,
+        "predictedFaces": 13122,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 21620967,
+          "deterministicLazyWalkUpperModel": 334031040,
+          "heat256Probe64OrderUpperModel": 325140480,
+          "transportCg8LIterationUpperModel": 12859560,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 17436632,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 0,
+          "pairedPerturbationMeasurements": 640
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "square-alternating",
+        "linearSize": 120,
+        "predictedVertices": 14641,
+        "predictedEdges": 43440,
+        "predictedFaces": 28800,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 51437376,
+          "deterministicLazyWalkUpperModel": 1601372160,
+          "heat256Probe64OrderUpperModel": 711720960,
+          "transportCg8LIterationUpperModel": 41702400,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 37998992,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 0,
+          "pairedPerturbationMeasurements": 640
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "triangular-clipped",
+        "linearSize": 16,
+        "predictedVertices": 314,
+        "predictedEdges": 871,
+        "predictedFaces": 558,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 629065,
+          "deterministicLazyWalkUpperModel": 613184,
+          "heat256Probe64OrderUpperModel": 14270464,
+          "transportCg8LIterationUpperModel": 111488,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 806472,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 32,
+          "pairedPerturbationMeasurements": 0
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "triangular-clipped",
+        "linearSize": 24,
+        "predictedVertices": 686,
+        "predictedEdges": 1954,
+        "predictedFaces": 1269,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 1591953,
+          "deterministicLazyWalkUpperModel": 3001344,
+          "heat256Probe64OrderUpperModel": 32014336,
+          "transportCg8LIterationUpperModel": 375168,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 1769052,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 32,
+          "pairedPerturbationMeasurements": 0
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "triangular-clipped",
+        "linearSize": 36,
+        "predictedVertices": 1533,
+        "predictedEdges": 4443,
+        "predictedFaces": 2911,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 4047289,
+          "deterministicLazyWalkUpperModel": 14786304,
+          "heat256Probe64OrderUpperModel": 72794112,
+          "transportCg8LIterationUpperModel": 1279584,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 3963972,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 32,
+          "pairedPerturbationMeasurements": 0
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "triangular-clipped",
+        "linearSize": 54,
+        "predictedVertices": 3434,
+        "predictedEdges": 10067,
+        "predictedFaces": 6634,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 10149015,
+          "deterministicLazyWalkUpperModel": 75381696,
+          "heat256Probe64OrderUpperModel": 164937728,
+          "transportCg8LIterationUpperModel": 4348944,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 8895512,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 0,
+          "pairedPerturbationMeasurements": 640
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "triangular-clipped",
+        "linearSize": 81,
+        "predictedVertices": 7661,
+        "predictedEdges": 22633,
+        "predictedFaces": 14973,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 25017158,
+          "deterministicLazyWalkUpperModel": 380958656,
+          "heat256Probe64OrderUpperModel": 370819072,
+          "transportCg8LIterationUpperModel": 14666184,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 19869612,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 0,
+          "pairedPerturbationMeasurements": 640
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "triangular-clipped",
+        "linearSize": 120,
+        "predictedVertices": 16750,
+        "predictedEdges": 49731,
+        "predictedFaces": 32982,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 59702591,
+          "deterministicLazyWalkUpperModel": 1833283584,
+          "heat256Probe64OrderUpperModel": 814792704,
+          "transportCg8LIterationUpperModel": 47741760,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 43477352,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 0,
+          "pairedPerturbationMeasurements": 640
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "cell-center-fan",
+        "linearSize": 16,
+        "predictedVertices": 545,
+        "predictedEdges": 1568,
+        "predictedFaces": 1024,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 1229275,
+          "deterministicLazyWalkUpperModel": 1103872,
+          "heat256Probe64OrderUpperModel": 25690112,
+          "transportCg8LIterationUpperModel": 200704,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 1407632,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 32,
+          "pairedPerturbationMeasurements": 0
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "cell-center-fan",
+        "linearSize": 24,
+        "predictedVertices": 1201,
+        "predictedEdges": 3504,
+        "predictedFaces": 2304,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 3080464,
+          "deterministicLazyWalkUpperModel": 5382144,
+          "heat256Probe64OrderUpperModel": 57409536,
+          "transportCg8LIterationUpperModel": 672768,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 3108752,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 32,
+          "pairedPerturbationMeasurements": 0
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "cell-center-fan",
+        "linearSize": 36,
+        "predictedVertices": 2665,
+        "predictedEdges": 7848,
+        "predictedFaces": 5184,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 7656775,
+          "deterministicLazyWalkUpperModel": 26118144,
+          "heat256Probe64OrderUpperModel": 128581632,
+          "transportCg8LIterationUpperModel": 2260224,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 6908432,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 32,
+          "pairedPerturbationMeasurements": 0
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "cell-center-fan",
+        "linearSize": 54,
+        "predictedVertices": 5941,
+        "predictedEdges": 17604,
+        "predictedFaces": 11664,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 18890987,
+          "deterministicLazyWalkUpperModel": 131818752,
+          "heat256Probe64OrderUpperModel": 288423936,
+          "transportCg8LIterationUpperModel": 7604928,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 15415952,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 0,
+          "pairedPerturbationMeasurements": 640
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "cell-center-fan",
+        "linearSize": 81,
+        "predictedVertices": 13285,
+        "predictedEdges": 39528,
+        "predictedFaces": 26244,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 46298025,
+          "deterministicLazyWalkUpperModel": 665335296,
+          "heat256Probe64OrderUpperModel": 647626752,
+          "transportCg8LIterationUpperModel": 25614144,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 34495232,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 0,
+          "pairedPerturbationMeasurements": 640
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "cell-center-fan",
+        "linearSize": 120,
+        "predictedVertices": 29041,
+        "predictedEdges": 86640,
+        "predictedFaces": 57600,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 109764082,
+          "deterministicLazyWalkUpperModel": 3193896960,
+          "heat256Probe64OrderUpperModel": 1419509760,
+          "transportCg8LIterationUpperModel": 83174400,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 75438992,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 0,
+          "pairedPerturbationMeasurements": 640
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "square-hashed-diagonal",
+        "linearSize": 16,
+        "predictedVertices": 289,
+        "predictedEdges": 800,
+        "predictedFaces": 512,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 569760,
+          "deterministicLazyWalkUpperModel": 563200,
+          "heat256Probe64OrderUpperModel": 13107200,
+          "transportCg8LIterationUpperModel": 102400,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 742032,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 32,
+          "pairedPerturbationMeasurements": 0
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "square-hashed-diagonal",
+        "linearSize": 24,
+        "predictedVertices": 625,
+        "predictedEdges": 1776,
+        "predictedFaces": 1152,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 1427188,
+          "deterministicLazyWalkUpperModel": 2727936,
+          "heat256Probe64OrderUpperModel": 29097984,
+          "transportCg8LIterationUpperModel": 340992,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 1611152,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 32,
+          "pairedPerturbationMeasurements": 0
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "square-hashed-diagonal",
+        "linearSize": 36,
+        "predictedVertices": 1369,
+        "predictedEdges": 3960,
+        "predictedFaces": 2592,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 3553431,
+          "deterministicLazyWalkUpperModel": 13178880,
+          "heat256Probe64OrderUpperModel": 64880640,
+          "transportCg8LIterationUpperModel": 1140480,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 3538832,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 32,
+          "pairedPerturbationMeasurements": 0
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "square-hashed-diagonal",
+        "linearSize": 54,
+        "predictedVertices": 3025,
+        "predictedEdges": 8856,
+        "predictedFaces": 5832,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 8792107,
+          "deterministicLazyWalkUpperModel": 66313728,
+          "heat256Probe64OrderUpperModel": 145096704,
+          "transportCg8LIterationUpperModel": 3825792,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 7834352,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 0,
+          "pairedPerturbationMeasurements": 640
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "square-hashed-diagonal",
+        "linearSize": 81,
+        "predictedVertices": 6724,
+        "predictedEdges": 19845,
+        "predictedFaces": 13122,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 21620967,
+          "deterministicLazyWalkUpperModel": 334031040,
+          "heat256Probe64OrderUpperModel": 325140480,
+          "transportCg8LIterationUpperModel": 12859560,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 17436632,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 0,
+          "pairedPerturbationMeasurements": 640
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      },
+      {
+        "familyId": "square-hashed-diagonal",
+        "linearSize": 120,
+        "predictedVertices": 14641,
+        "predictedEdges": 43440,
+        "predictedFaces": 28800,
+        "predictedOperations": {
+          "volume64RootDijkstraUpperModel": 51437376,
+          "deterministicLazyWalkUpperModel": 1601372160,
+          "heat256Probe64OrderUpperModel": 711720960,
+          "transportCg8LIterationUpperModel": 41702400,
+          "caveat": "operation counts are deterministic planning models, not wall-clock promises"
+        },
+        "predictedPeakBytes": 37998992,
+        "runCounts": {
+          "positiveConfirmatory": 128,
+          "calibrationSplit": 0,
+          "pairedPerturbationMeasurements": 640
+        },
+        "checkpointLayout": {
+          "order": "sigma ascending, confirmation replicate ascending, measurement channel lexicographic",
+          "checkpointEveryMeasurementUnits": 8,
+          "immutableRecordDirectoryTemplate": "u2-v2/runs/{familyId}/L{linearSize}/{parameterCell}/{runId}.json"
+        },
+        "memoryCaveat": "binary payload estimate excludes JavaScript object headers, allocator fragmentation, runtime, and transient garbage-collection overhead"
+      }
+    ]
+  },
+  "sourcePolicy": {
+    "externalRuntimeDependencies": [],
+    "implementationLanguage": "dependency-free Node.js standard library plus existing Global Geometry II modules",
+    "batchRandomness": {
+      "id": "gg-sha256-object-u53-v1",
+      "uniform": "top 53 bits of SHA-256(JCS([streamSeed,objectCanonicalKey,counter])) divided by 2^53",
+      "streamSeed": "SHA-256(JCS([experimentId,hypothesisVersion,namespace,familyId,parameterCell,linearSize,replicate,streamName]))",
+      "collisionPolicy": "duplicate effective stream seeds and object draws are enumerated and fail validation unless exact deterministic sigma=0 irrelevance is declared",
+      "previewCompatibilityOnly": "gg-fnv1a32-mulberry32-v1"
+    },
+    "cleanCommitRequiredForGate8": true,
+    "sourceCommitBoundByPlatformCertificateAfterImplementationFreeze": true
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "80252bca7951da99d9e7de778d98e3ad7147b7b9a76bb585d7ca266ddad348b3",
+    "canonicalBytes": 27116
+  }
+}
