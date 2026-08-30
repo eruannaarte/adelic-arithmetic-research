@@ -3,12 +3,12 @@
   "releaseId": "global-geometry-ii-evaluation-checkpoint-v2",
   "manifest": {
     "path": "global_geometry_ii_reproducibility_manifest_v2.json",
-    "rawSha256": "856070903ff1c9be214ada1116a2273a57f41fe589560080748f70c11043cd4c",
+    "rawSha256": "b84d40786b7aa9ccf9029015e20d89b0036c98221e8500a57bf472932aae76b2",
     "rawBytes": 55074,
     "contentAddress": {
       "algorithm": "sha256",
       "canonicalization": "ggii-release-json-v2",
-      "digest": "491a8d87ad4bc9a49c71b61be1df5f85749f0bc8cf07cc90a088635e07614d05",
+      "digest": "89ab7fa34196f75ee2d1b7e3a6b84d6e95a523d2d516aa029ab1545e714a2b7f",
       "canonicalBytes": 44636
     }
   },
@@ -569,7 +569,7 @@
   "contentAddress": {
     "algorithm": "sha256",
     "canonicalization": "ggii-release-json-v2",
-    "digest": "dc0d7b67275e3cbf428b2d512ad83b4c1422ce8052b023e97e62044032d74573",
+    "digest": "b9202dafd05ca6c161eb6832054f3e478a5bde5e07997d7a7aeeeb44e9b9136c",
     "canonicalBytes": 21401
   }
 }

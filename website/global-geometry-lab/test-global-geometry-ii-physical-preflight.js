@@ -28,6 +28,17 @@ test("sanitized printer profile exposes no physical-output claim", () => {
   profile.dryRasterObservations.forEach((entry) => assert.strictEqual(entry.jobSubmitted, false));
 });
 
+test("embedded repository paths use a platform-independent POSIX encoding", () => {
+  assert.strictEqual(
+    Generator.normalizeRepoRelativePath("artifacts\\global-geometry-ii\\fabrication\\physical-preflight-profile-v1.json"),
+    "artifacts/global-geometry-ii/fabrication/physical-preflight-profile-v1.json"
+  );
+  assert.throws(() => Generator.normalizeRepoRelativePath("..\\private.json"), /escapes/);
+  const payload = Generator.buildPayload();
+  assert.strictEqual(payload.normalizedPrinterProfile.source.path, "artifacts/global-geometry-ii/fabrication/physical-preflight-profile-v1.json");
+  assert.strictEqual(payload.operatorWorksheet.path, "artifacts/global-geometry-ii/fabrication/physical-trial-worksheet-v1.json");
+});
+
 test("analytic printable box and four-sided clearances are frozen", () => {
   const payload = Generator.buildPayload();
   assert.deepStrictEqual(payload.templates.map((entry) => entry.q), [5, 6, 7]);

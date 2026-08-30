@@ -22,9 +22,19 @@ function sha256Bytes(bytes) {
   return crypto.createHash("sha256").update(bytes).digest("hex");
 }
 
+function normalizeRepoRelativePath(relativePath) {
+  if (typeof relativePath !== "string" || !relativePath) throw new Error("repository-relative path must be a non-empty string");
+  const normalized = relativePath.replace(/\\/g, "/");
+  if (normalized.startsWith("/") || /^[A-Za-z]:\//.test(normalized) || normalized.split("/").includes("..")) {
+    throw new Error("path escapes the repository boundary");
+  }
+  return normalized;
+}
+
 function fileRecord(relativePath) {
-  const bytes = fs.readFileSync(path.join(REPO_ROOT, relativePath));
-  return { path: relativePath, sha256: sha256Bytes(bytes), bytes: bytes.length };
+  const normalizedPath = normalizeRepoRelativePath(relativePath);
+  const bytes = fs.readFileSync(path.join(REPO_ROOT, ...normalizedPath.split("/")));
+  return { path: normalizedPath, sha256: sha256Bytes(bytes), bytes: bytes.length };
 }
 
 function round(value) {
@@ -288,6 +298,7 @@ module.exports = {
   clearanceMm,
   contentAddress,
   imagingBoxMm,
+  normalizeRepoRelativePath,
   parseArguments,
   rendererClearance,
   serializeArtifact,
