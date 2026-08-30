@@ -290,6 +290,11 @@ test("release-v2 paths, schemas, and CLI contracts are versioned independently f
     manifest: Release.DEFAULT_MANIFEST,
     index: Release.DEFAULT_INDEX
   });
+  const quickIds = Release.QUICK_SUITES.map((suite) => suite.id);
+  assert.strictEqual(quickIds.includes("global-geometry-ii-u2-screening-v2"), false);
+  assert.strictEqual(quickIds.includes("global-geometry-ii-u2-screening-v2-adversarial"), false);
+  assert.strictEqual(quickIds.includes("global-geometry-ii-u2-screening-v3"), true);
+  assert.strictEqual(quickIds.includes("global-geometry-ii-u2-screening-v3-adversarial"), true);
 });
 
 test("public release certificates minimize host fingerprinting", () => {

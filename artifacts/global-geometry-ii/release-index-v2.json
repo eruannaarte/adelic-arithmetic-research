@@ -3,13 +3,13 @@
   "releaseId": "global-geometry-ii-evaluation-checkpoint-v2",
   "manifest": {
     "path": "global_geometry_ii_reproducibility_manifest_v2.json",
-    "rawSha256": "b84d40786b7aa9ccf9029015e20d89b0036c98221e8500a57bf472932aae76b2",
-    "rawBytes": 55074,
+    "rawSha256": "5d7aad264c1e8c58481382ce350067c61d64114aa0b87486333e076b323063cf",
+    "rawBytes": 54694,
     "contentAddress": {
       "algorithm": "sha256",
       "canonicalization": "ggii-release-json-v2",
-      "digest": "89ab7fa34196f75ee2d1b7e3a6b84d6e95a523d2d516aa029ab1545e714a2b7f",
-      "canonicalBytes": 44636
+      "digest": "c2e1d181f1b88958f76f0e6f23f5542a677ccf2b919d0d400822a76bcfdfa081",
+      "canonicalBytes": 44344
     }
   },
   "inputRegistry": {
@@ -556,7 +556,7 @@
     ]
   },
   "executionSurface": {
-    "quickSuiteCount": 20,
+    "quickSuiteCount": 18,
     "deepSuiteCount": 2,
     "deepRevalidationSeparatedFromQuick": true
   },
@@ -569,7 +569,7 @@
   "contentAddress": {
     "algorithm": "sha256",
     "canonicalization": "ggii-release-json-v2",
-    "digest": "b9202dafd05ca6c161eb6832054f3e478a5bde5e07997d7a7aeeeb44e9b9136c",
+    "digest": "ac138820d735e8a8782b6bd061712261037c9e3d7697dc25d4dee81dd615a3e7",
     "canonicalBytes": 21401
   }
 }

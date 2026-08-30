@@ -149,8 +149,9 @@ const QUICK_SUITES = Object.freeze([
   { id: "global-geometry-ii-u2-kernel-adversarial", path: "website/global-geometry-lab/test-global-geometry-ii-u2-adversarial.js", args: [] },
   { id: "global-geometry-ii-u2-screening", path: "website/global-geometry-lab/test-global-geometry-ii-u2-screening.js", args: [] },
   { id: "global-geometry-ii-u2-screening-adversarial", path: "website/global-geometry-lab/test-global-geometry-ii-u2-screening-adversarial.js", args: [] },
-  { id: "global-geometry-ii-u2-screening-v2", path: "website/global-geometry-lab/test-global-geometry-ii-u2-screening-v2.js", args: [] },
-  { id: "global-geometry-ii-u2-screening-v2-adversarial", path: "website/global-geometry-lab/test-global-geometry-ii-u2-screening-v2-adversarial.js", args: [] },
+  // Screening-v2 is a frozen, nonportable historical execution surface. Its
+  // exact source boundary and Windows abort record remain release inputs, while
+  // the portable v3 implementation owns the active writer/replay gate.
   { id: "global-geometry-ii-u2-screening-v3", path: "website/global-geometry-lab/test-global-geometry-ii-u2-screening-execution-v3.js", args: [] },
   { id: "global-geometry-ii-u2-screening-v3-adversarial", path: "website/global-geometry-lab/test-global-geometry-ii-u2-screening-execution-v3-adversarial.js", args: [] },
   { id: "global-geometry-ii-u2-evaluation-v2", path: "website/global-geometry-lab/test-global-geometry-ii-u2-evaluation-index-v2.js", args: [] },
