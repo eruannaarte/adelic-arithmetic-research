@@ -613,6 +613,19 @@ function validateRunIdentityRecord(run) {
     return { valid: errors.length === 0, errors: errors };
   } catch (error) { return { valid: false, errors: [error.message] }; }
 }
+function replayPositiveRunRecord(manifest, run, cache) {
+  try {
+    const key = run.runKey;
+    const replay = measurePositiveRun(manifest, "confirm", key.familyId, key.parameterCell.sigma, key.linearSize, key.replicate, cache || new Map());
+    return {
+      valid: canonicalStringify(run) === canonicalStringify(replay),
+      suppliedDigest: sha256(run),
+      replayDigest: sha256(replay)
+    };
+  } catch (error) {
+    return { valid: false, suppliedDigest: null, replayDigest: null, error: error.message };
+  }
+}
 function validateDecisionLedger(ledger) {
   try {
     const expectedGates = deriveGates(ledger.exactGateOne, ledger.cells, ledger.primaryControls, ledger.crossPlatformStatus);
@@ -622,12 +635,20 @@ function validateDecisionLedger(ledger) {
     return { valid: errors.length === 0, errors: errors };
   } catch (error) { return { valid: false, errors: [error.message] }; }
 }
-function validateCampaign(artifact) {
+function validateCampaign(artifact, normalizationArtifact) {
   const errors = [];
+  let positiveSemanticReplayCount = 0, controlSemanticReplayCount = 0, calibrationSemanticReplayCount = 0;
   try {
     const manifest = loadManifest();
     if (!artifact || artifact.schema !== RESULT_SCHEMA || artifact.experimentId !== manifest.experimentId || artifact.preregistrationCommit !== PREREGISTRATION_COMMIT || !/^[0-9a-f]{40}$/.test(artifact.finalSourceCommit || "") || artifact.manifestBinding.digest !== MANIFEST_DIGEST || artifact.manifestBinding.decisionId !== "u2-decision-v2" || artifact.manifestBinding.decisionDigest !== DECISION_DIGEST) errors.push("campaign manifest/decision binding mismatch");
     if (!artifact || canonicalStringify(artifact.constructionContract) !== canonicalStringify(CONSTRUCTION_CONTRACT) || artifact.constructionContractDigest !== sha256(CONSTRUCTION_CONTRACT)) errors.push("batch construction contract mismatch");
+    const normalizationReport = validateCalibration(normalizationArtifact);
+    if (!normalizationReport.valid) errors.push("bound normalization artifact invalid: " + normalizationReport.errors.join("; "));
+    else {
+      calibrationSemanticReplayCount = 384;
+      if (canonicalStringify(artifact.normalizationBinding) !== canonicalStringify(normalizationArtifact.contentAddress)) errors.push("normalization binding does not match the supplied calibration artifact");
+      if (normalizationArtifact.sourceCommit !== artifact.finalSourceCommit) errors.push("normalization and campaign source commits differ");
+    }
     if (!artifact.randomness || artifact.randomness.id !== RNG_ID || artifact.randomness.streamCount !== 3072 * STREAMS.length || artifact.randomness.streamSeedCollisionCount !== 0) errors.push("batch randomness/collision disclosure mismatch");
     if (!artifact.counts || artifact.counts.plannedPositiveRuns !== 3072 || artifact.counts.actualPositiveRuns !== 3072 || artifact.counts.plannedPrimaryControlRuns !== 768 || artifact.counts.actualPrimaryControlRuns !== 768 || artifact.counts.calibrationRuns !== 384) errors.push("campaign counts mismatch");
     if (!denseArray(artifact.positiveRuns) || artifact.positiveRuns.length !== 3072) errors.push("positive run ledger mismatch");
@@ -655,10 +676,10 @@ function validateCampaign(artifact) {
       if (canonicalStringify(artifact.cells) !== canonicalStringify(expectedCells)) errors.push("cell summaries do not regenerate from immutable positive runs");
 
       const replayCache = new Map();
-      artifact.positiveRuns.filter(function (run) { return run.runKey.replicate === 0; }).forEach(function (run) {
-        const key = run.runKey;
-        const replay = measurePositiveRun(manifest, "confirm", key.familyId, key.parameterCell.sigma, key.linearSize, key.replicate, replayCache);
-        if (canonicalStringify(run) !== canonicalStringify(replay)) errors.push("semantic replay mismatch for sampled run " + run.runId);
+      artifact.positiveRuns.forEach(function (run) {
+        const replay = replayPositiveRunRecord(manifest, run, replayCache);
+        if (!replay.valid) errors.push("semantic replay mismatch for positive run " + run.runId);
+        positiveSemanticReplayCount += 1;
       });
     }
     if (!artifact.primaryControls || !denseArray(artifact.primaryControls.summaries) || canonicalStringify(artifact.primaryControls.summaries.map(function (control) { return control.id; })) !== canonicalStringify(PRIMARY_CONTROLS)) errors.push("primary control set/order mismatch");
@@ -677,12 +698,21 @@ function validateCampaign(artifact) {
     if (canonicalStringify(artifact.primaryControls.summaries) !== canonicalStringify(expectedSummaries)) errors.push("control summaries do not derive from all control witnesses");
     const replayedControls = measureControls(manifest);
     if (canonicalStringify(artifact.primaryControls) !== canonicalStringify(replayedControls)) errors.push("primary control records fail deterministic deep semantic replay");
+    else controlSemanticReplayCount = replayedControls.records.length;
     const derivedGates = deriveGates(artifact.exactGateOne, artifact.cells, artifact.primaryControls, "NOT_RUN");
     if (canonicalStringify(artifact.gateResults) !== canonicalStringify(derivedGates)) errors.push("gate ledger is not mechanically derived");
     const derivedConclusion = deriveConclusion(derivedGates); if (canonicalStringify(artifact.conclusion) !== canonicalStringify(derivedConclusion)) errors.push("conclusion is not mechanically derived");
     const payload = clone(artifact); const address = payload.contentAddress; delete payload.contentAddress; if (!address || canonicalStringify(address) !== canonicalStringify(contentAddress(payload))) errors.push("campaign content address mismatch");
   } catch (error) { errors.push("campaign validation failed safely: " + error.message); }
-  return { valid: errors.length === 0, errors: errors };
+  return {
+    valid: errors.length === 0,
+    errors: errors,
+    semanticReplayCounts: {
+      positive: positiveSemanticReplayCount,
+      controls: controlSemanticReplayCount,
+      calibration: calibrationSemanticReplayCount
+    }
+  };
 }
 
 module.exports = {
@@ -698,5 +728,5 @@ module.exports = {
   exactGateOne: exactGateOne, bootstrapInterval: bootstrapInterval, aggregatePositive: aggregatePositive,
   measureControls: measureControls, deriveGates: deriveGates, deriveConclusion: deriveConclusion,
   buildCampaign: buildCampaign, validateCampaign: validateCampaign
-  ,validateRunIdentityRecord: validateRunIdentityRecord, validateDecisionLedger: validateDecisionLedger
+  ,validateRunIdentityRecord: validateRunIdentityRecord, replayPositiveRunRecord: replayPositiveRunRecord, validateDecisionLedger: validateDecisionLedger
 };

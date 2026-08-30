@@ -2,6 +2,9 @@
 "use strict";
 
 const assert = require("assert");
+const fs = require("fs");
+const os = require("os");
+const path = require("path");
 const Ensembles = require("./global-geometry-ii-ensembles.js");
 const U2 = require("./global-geometry-ii-u2.js");
 const CLI = require("./generate-global-geometry-ii-u2.js");
@@ -127,6 +130,14 @@ test("run identity validator rejects a forged seed", function () {
   assert.strictEqual(U2.validateRunIdentityRecord(run).valid, false);
 });
 
+test("semantic replay rejects a changed nonzero replicate", function () {
+  const manifest = U2.loadManifest(), cache = new Map();
+  const run = U2.measurePositiveRun(manifest, "confirm", "square-alternating", 0, 16, 31, cache);
+  assert.strictEqual(U2.replayPositiveRunRecord(manifest, run, new Map()).valid, true);
+  run.observables.volume.meanCounts[0] += 1;
+  assert.strictEqual(U2.replayPositiveRunRecord(manifest, run, new Map()).valid, false);
+});
+
 test("decision ledger is mechanically derived and fail-closed", function () {
   const exact = { status: "PASS" }, cells = [], controls = { summaries: U2.PRIMARY_CONTROLS.map(function (id) { return { id: id, countsForGate7: false }; }) }, gates = U2.deriveGates(exact, cells, controls, "NOT_RUN"), conclusion = U2.deriveConclusion(gates), ledger = { exactGateOne: exact, cells: cells, primaryControls: controls, crossPlatformStatus: "NOT_RUN", gateResults: gates, conclusion: conclusion };
   assert.strictEqual(U2.validateDecisionLedger(ledger).valid, true);
@@ -136,11 +147,25 @@ test("decision ledger is mechanically derived and fail-closed", function () {
   assert.strictEqual(U2.validateDecisionLedger(ledger).valid, false);
 });
 
-test("CLI refuses implicit production and requires a committed source", function () {
+test("CLI refuses implicit production and requires normalization for campaign validation", function () {
   assert.throws(function () { CLI.parseArgs([]); }, /select exactly one/);
   assert.throws(function () { CLI.parseArgs(["--campaign", "--output", "x", "--normalization", "n"]); }, /40-hex/);
+  assert.throws(function () { CLI.parseArgs(["--validate-campaign", "--input", "x"]); }, /normalization/);
   const parsed = CLI.parseArgs(["--calibration", "--output", "x", "--source-commit", "a".repeat(40)]);
   assert.strictEqual(parsed.mode, "calibration");
+});
+
+test("production writer refuses to replace an existing artifact", function () {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), "ggii-u2-exclusive-"));
+  const output = path.join(directory, "artifact.json");
+  try {
+    CLI.writeArtifact(output, { first: true });
+    assert.throws(function () { CLI.requireUnusedOutput(output); }, /overwrite is forbidden/);
+    assert.throws(function () { CLI.writeArtifact(output, { second: true }); }, /EEXIST/);
+    assert.deepStrictEqual(JSON.parse(fs.readFileSync(output, "utf8")), { first: true });
+  } finally {
+    fs.rmSync(directory, { recursive: true });
+  }
 });
 
 if (!process.exitCode) process.stdout.write("Global Geometry II U2 kernel: " + passed + "/" + passed + " tests passed.\n");

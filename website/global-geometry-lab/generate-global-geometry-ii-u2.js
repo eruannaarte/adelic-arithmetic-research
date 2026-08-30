@@ -23,15 +23,23 @@ function parseArgs(argv) {
   if ((mode === "--calibration" || mode === "--campaign") && (!parsed.output || !/^[0-9a-f]{40}$/.test(parsed.sourceCommit || ""))) throw new Error("production modes require --output and a 40-hex --source-commit");
   if (mode === "--campaign" && !parsed.normalization) throw new Error("--campaign requires --normalization");
   if ((mode === "--validate-calibration" || mode === "--validate-campaign") && !parsed.input) throw new Error("validation modes require --input");
+  if (mode === "--validate-campaign" && !parsed.normalization) throw new Error("--validate-campaign requires --normalization");
   return parsed;
 }
 function writeArtifact(output, artifact) {
-  const resolved = path.resolve(output); fs.mkdirSync(path.dirname(resolved), { recursive: true }); fs.writeFileSync(resolved, JSON.stringify(artifact, null, 2) + "\n", "utf8"); return resolved;
+  const resolved = path.resolve(output), bytes = JSON.stringify(artifact, null, 2) + "\n";
+  fs.mkdirSync(path.dirname(resolved), { recursive: true });
+  const descriptor = fs.openSync(resolved, "wx", 0o644);
+  try { fs.writeFileSync(descriptor, bytes, "utf8"); fs.fsyncSync(descriptor); }
+  finally { fs.closeSync(descriptor); }
+  return resolved;
 }
+function requireUnusedOutput(output) { if (fs.existsSync(path.resolve(output))) throw new Error("production output already exists; overwrite is forbidden"); }
 function readJSON(input) { return JSON.parse(fs.readFileSync(path.resolve(input), "utf8")); }
 function main() {
   const args = parseArgs(process.argv.slice(2));
   if (args.mode === "calibration") {
+    requireUnusedOutput(args.output);
     const artifact = U2.calibrationRecord(U2.loadManifest(), args.sourceCommit), report = U2.validateCalibration(artifact);
     if (!report.valid) throw new Error("calibration failed validation: " + report.errors.join("; "));
     const output = writeArtifact(args.output, artifact);
@@ -39,16 +47,18 @@ function main() {
     return;
   }
   if (args.mode === "campaign") {
-    const normalization = readJSON(args.normalization), artifact = U2.buildCampaign(normalization, { finalSourceCommit: args.sourceCommit }), report = U2.validateCampaign(artifact);
+    requireUnusedOutput(args.output);
+    const normalization = readJSON(args.normalization), artifact = U2.buildCampaign(normalization, { finalSourceCommit: args.sourceCommit }), report = U2.validateCampaign(artifact, normalization);
     if (!report.valid) throw new Error("campaign failed validation: " + report.errors.join("; "));
     const output = writeArtifact(args.output, artifact);
     process.stdout.write(JSON.stringify({ mode: args.mode, output: output, digest: artifact.contentAddress.digest, positiveRuns: artifact.counts.actualPositiveRuns, controlRuns: artifact.counts.actualPrimaryControlRuns, conclusion: artifact.conclusion.status }) + "\n");
     return;
   }
-  const artifact = readJSON(args.input), report = args.mode === "validate-calibration" ? U2.validateCalibration(artifact) : U2.validateCampaign(artifact);
+  const artifact = readJSON(args.input), normalization = args.mode === "validate-campaign" ? readJSON(args.normalization) : null;
+  const report = args.mode === "validate-calibration" ? U2.validateCalibration(artifact) : U2.validateCampaign(artifact, normalization);
   if (!report.valid) throw new Error(args.mode + " failed: " + report.errors.join("; "));
   process.stdout.write(JSON.stringify({ mode: args.mode, input: path.resolve(args.input), valid: true }) + "\n");
 }
 
 if (require.main === module) main();
-module.exports = { parseArgs: parseArgs, writeArtifact: writeArtifact, readJSON: readJSON };
+module.exports = { parseArgs: parseArgs, writeArtifact: writeArtifact, requireUnusedOutput: requireUnusedOutput, readJSON: readJSON };
