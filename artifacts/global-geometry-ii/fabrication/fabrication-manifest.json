@@ -95,33 +95,60 @@
     {
       "path": "GLOBAL_GEOMETRY_II_SHEET_EXPERIMENT.md",
       "role": "protocol, calibration, uncertainty, HIL, safety, and falsification document",
-      "sha256": "c95d9e964fadae32d292549d3b13e3bd1001945e61dbbcbba08bab5895a3f131"
+      "sha256": "89906fcd81eaaf228f3fcbfe6ba08ba4a0a06880e91b0191a0b3744c1a1a4a70"
     },
     {
       "path": "artifacts/global-geometry-ii/fabrication/q5-star-template.svg",
       "role": "q=5 printable vector template",
-      "sha256": "379cc7d5551a954ad15335255609ec0341f0f92e09aa10db586f93bd352a4b82"
+      "sha256": "eaab5ef8bc0ee323429813808361b63962d0499625df488ca820ddc8cd0d9739"
     },
     {
       "path": "artifacts/global-geometry-ii/fabrication/q6-star-template.svg",
       "role": "q=6 printable vector template",
-      "sha256": "3e158317ab2be17e24d7072140df3ac86ecde25572396552e55c6a08bf13b42d"
+      "sha256": "d2329b8c7285a08ac2cace58a4749abed74b4a88b87839c27e9df78592e612a1"
     },
     {
       "path": "artifacts/global-geometry-ii/fabrication/q7-star-template.svg",
       "role": "q=7 printable vector template",
-      "sha256": "8bbdcad534a87f6136fbc6331c0cf23f57110f88108ef16fab298dccf39626c2"
+      "sha256": "cf60c6b32c7f93eb8975e9750314db29c7811aa68645299d357dea04744263d4"
     },
     {
       "path": "artifacts/global-geometry-ii/fabrication/validate-fabrication.js",
       "role": "cross-platform dependency-free vector and exact-identity audit",
-      "sha256": "af13a8e942fdf2dd2e289c13fc5d7a6e33a3f9c9a4cd69e05e2a44ef83672c27"
+      "sha256": "37507b52427812913b29ec119c20d96d339d66a8c43da35a9507a4b08be6c23b"
+    },
+    {
+      "path": "artifacts/global-geometry-ii/fabrication/physical-preflight-profile-v1.json",
+      "role": "sanitized A4 printer capability and dry-filter profile",
+      "sha256": "817a942a68b9903ebe739995db7f3f0b61068bfad34b617d91793109ff8b379c"
+    },
+    {
+      "path": "artifacts/global-geometry-ii/fabrication/physical-preflight-v1.json",
+      "role": "content-addressed nonphysical driver and vector preflight evidence",
+      "sha256": "5e2a25ee6816c4f49c4d33f45bdbed9120c3bbb573058c97d18c2bef44a9eafa"
+    },
+    {
+      "path": "artifacts/global-geometry-ii/fabrication/physical-trial-worksheet-v1.json",
+      "role": "blank copy-before-use physical trial and measurement worksheet",
+      "sha256": "4e1c8996819256555ad6fa2f77aa3313465a2876c83867e0c91c45f97df59e19"
+    },
+    {
+      "path": "website/global-geometry-lab/generate-global-geometry-ii-physical-preflight.js",
+      "role": "deterministic preflight generator and read-only artifact validator",
+      "sha256": "f84241bad7df3a046a2ec080e054b447e041c4a121e427c7025f507cbe158664"
+    },
+    {
+      "path": "website/global-geometry-lab/test-global-geometry-ii-physical-preflight.js",
+      "role": "physical-preflight semantic, mutation, and exclusive-write test suite",
+      "sha256": "f15eb5d61dcbcbe0fa6dfd271704e69fe00e1d658198e2ef8f6a2d5a2a73c161"
     }
   ],
   "validationCommands": [
     "node artifacts/global-geometry-ii/fabrication/validate-fabrication.js",
     "xmllint --noout artifacts/global-geometry-ii/fabrication/q5-star-template.svg artifacts/global-geometry-ii/fabrication/q6-star-template.svg artifacts/global-geometry-ii/fabrication/q7-star-template.svg",
-    "node website/global-geometry-lab/test-global-geometry-ii-sheet.js"
+    "node website/global-geometry-lab/test-global-geometry-ii-sheet.js",
+    "node website/global-geometry-lab/test-global-geometry-ii-physical-preflight.js",
+    "node website/global-geometry-lab/generate-global-geometry-ii-physical-preflight.js --validate-only"
   ],
   "evidence": {
     "intrinsicIdentity": {
@@ -131,7 +158,12 @@
     },
     "printableVectors": {
       "evidenceClass": "deterministic-design-artifact",
-      "claimBoundary": "Nominal vector dimensions; print scale and cut geometry remain unmeasured."
+      "claimBoundary": "Nominal vector dimensions and positive clearance in the frozen sanitized A4 dry-driver profile; physical print scale and cut geometry remain unmeasured."
+    },
+    "driverPreflight": {
+      "status": "PASS_DRIVER_PROFILE_DRY_PREFLIGHT_ONLY",
+      "evidenceClass": "finite-computational-and-driver-preflight",
+      "claimBoundary": "No print job was submitted; connectivity, paper, ink, scale, fabrication, camera, and material response remain untested."
     },
     "physicalExperiment": {
       "status": "NOT_RUN",

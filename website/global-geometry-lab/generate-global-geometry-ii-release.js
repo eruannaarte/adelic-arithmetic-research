@@ -587,15 +587,20 @@ function verifyFabricationPackage() {
   if (manifest.hardwareAuthorization !== false || manifest.purchaseAuthorization !== false) {
     throw new Error("fabrication package may not grant hardware or purchase authorization");
   }
-  if (!Array.isArray(manifest.artifacts) || manifest.artifacts.length !== 5) {
-    throw new Error("fabrication package must address exactly its protocol, three SVGs, and validator");
+  if (!Array.isArray(manifest.artifacts) || manifest.artifacts.length !== 10) {
+    throw new Error("fabrication package must address exactly its protocol, three SVGs, validator, and five dry-preflight resources");
   }
   const expectedPaths = [
     "GLOBAL_GEOMETRY_II_SHEET_EXPERIMENT.md",
     "artifacts/global-geometry-ii/fabrication/q5-star-template.svg",
     "artifacts/global-geometry-ii/fabrication/q6-star-template.svg",
     "artifacts/global-geometry-ii/fabrication/q7-star-template.svg",
-    "artifacts/global-geometry-ii/fabrication/validate-fabrication.js"
+    "artifacts/global-geometry-ii/fabrication/validate-fabrication.js",
+    "artifacts/global-geometry-ii/fabrication/physical-preflight-profile-v1.json",
+    "artifacts/global-geometry-ii/fabrication/physical-preflight-v1.json",
+    "artifacts/global-geometry-ii/fabrication/physical-trial-worksheet-v1.json",
+    "website/global-geometry-lab/generate-global-geometry-ii-physical-preflight.js",
+    "website/global-geometry-lab/test-global-geometry-ii-physical-preflight.js"
   ];
   if (canonicalStringify(manifest.artifacts.map((entry) => entry.path)) !== canonicalStringify(expectedPaths)) {
     throw new Error("fabrication manifest artifact order/set is not canonical");
@@ -609,6 +614,12 @@ function verifyFabricationPackage() {
   });
   if (!Array.isArray(manifest.validationCommands) || !manifest.validationCommands.includes("node artifacts/global-geometry-ii/fabrication/validate-fabrication.js")) {
     throw new Error("fabrication package omits its dependency-free validation command");
+  }
+  if (!manifest.validationCommands.includes("node website/global-geometry-lab/generate-global-geometry-ii-physical-preflight.js --validate-only")) {
+    throw new Error("fabrication package omits its read-only physical-preflight validation command");
+  }
+  if (!manifest.evidence || !manifest.evidence.driverPreflight || manifest.evidence.driverPreflight.status !== "PASS_DRIVER_PROFILE_DRY_PREFLIGHT_ONLY") {
+    throw new Error("fabrication package omits the scoped dry-driver preflight evidence boundary");
   }
   return {
     id: "programmable-sheet-fabrication-package-v1",

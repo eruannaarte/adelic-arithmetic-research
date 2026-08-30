@@ -31,12 +31,18 @@ function round(value) {
   return Math.round(value * 1e12) / 1e12;
 }
 
-function parseOutput(argv) {
-  if (!argv.length) return DEFAULT_OUTPUT;
-  if (argv.length !== 2 || argv[0] !== "--output" || !argv[1] || argv[1].startsWith("--")) {
-    throw new Error("expected no arguments or exactly --output <path>");
+function parseArguments(argv) {
+  if (!argv.length) return { mode: "generate", output: DEFAULT_OUTPUT };
+  if (argv.length === 1 && argv[0] === "--validate-only") {
+    return { mode: "validate", input: DEFAULT_OUTPUT };
   }
-  return path.resolve(argv[1]);
+  if (argv.length === 2 && argv[0] === "--validate-only" && argv[1] && !argv[1].startsWith("--")) {
+    return { mode: "validate", input: path.resolve(argv[1]) };
+  }
+  if (argv.length === 2 && argv[0] === "--output" && argv[1] && !argv[1].startsWith("--")) {
+    return { mode: "generate", output: path.resolve(argv[1]) };
+  }
+  throw new Error("expected no arguments, --validate-only [path], or --output <path>");
 }
 
 function readJson(filePath) {
@@ -225,17 +231,52 @@ function validateArtifact(artifact) {
   return { valid: errors.length === 0, errors };
 }
 
+function serializeArtifact(artifact) {
+  return `${JSON.stringify(artifact, null, 2)}\n`;
+}
+
+function validateArtifactFile(input) {
+  const raw = fs.readFileSync(input, "utf8");
+  let artifact;
+  try {
+    artifact = JSON.parse(raw);
+  } catch (error) {
+    return { valid: false, errors: [`artifact JSON parse failed: ${error.message}`] };
+  }
+  const validation = validateArtifact(artifact);
+  const errors = validation.errors.slice();
+  if (raw !== serializeArtifact(artifact)) errors.push("artifact bytes are not in the frozen pretty-JSON encoding");
+  return { valid: errors.length === 0, errors, artifact };
+}
+
+function writeExclusive(output, bytes) {
+  fs.mkdirSync(path.dirname(output), { recursive: true });
+  const descriptor = fs.openSync(output, "wx", 0o644);
+  try {
+    fs.writeFileSync(descriptor, bytes, "utf8");
+    fs.fsyncSync(descriptor);
+  } finally {
+    fs.closeSync(descriptor);
+  }
+}
+
 function main() {
-  const output = parseOutput(process.argv.slice(2));
+  const args = parseArguments(process.argv.slice(2));
+  if (args.mode === "validate") {
+    const report = validateArtifactFile(args.input);
+    if (!report.valid) throw new Error(`preflight artifact invalid: ${report.errors.join("; ")}`);
+    process.stdout.write(`${JSON.stringify({ input: args.input, valid: true, sha256: report.artifact.contentAddress.digest, status: report.artifact.evidenceStatus, physicalValidation: report.artifact.physicalValidation })}\n`);
+    return;
+  }
+  const output = args.output;
   const payload = buildPayload();
   const validation = validatePayload(payload);
   if (!validation.valid) throw new Error(`preflight payload invalid: ${validation.errors.join("; ")}`);
   const artifact = { ...payload, contentAddress: contentAddress(payload) };
-  fs.mkdirSync(path.dirname(output), { recursive: true });
-  fs.writeFileSync(output, `${JSON.stringify(artifact, null, 2)}\n`, "utf8");
-  const replay = readJson(output);
-  const replayValidation = validateArtifact(replay);
+  writeExclusive(output, serializeArtifact(artifact));
+  const replayValidation = validateArtifactFile(output);
   if (!replayValidation.valid) throw new Error(`post-write artifact validation failed: ${replayValidation.errors.join("; ")}`);
+  const replay = replayValidation.artifact;
   process.stdout.write(`${JSON.stringify({ output, sha256: replay.contentAddress.digest, status: replay.evidenceStatus, physicalValidation: replay.physicalValidation, minimumClearanceMm: Math.min(...replay.templates.map((entry) => entry.minimumClearanceMm)) })}\n`);
 }
 
@@ -247,10 +288,13 @@ module.exports = {
   clearanceMm,
   contentAddress,
   imagingBoxMm,
-  parseOutput,
+  parseArguments,
   rendererClearance,
+  serializeArtifact,
+  validateArtifactFile,
   validatePayload,
   validateArtifact,
   validateProfile,
-  validateWorksheetTemplate
+  validateWorksheetTemplate,
+  writeExclusive
 };

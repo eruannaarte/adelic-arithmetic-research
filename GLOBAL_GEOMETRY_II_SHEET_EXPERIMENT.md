@@ -469,7 +469,7 @@ From the repository root, validate the mathematical/HIL implementation with:
 ```sh
 node website/global-geometry-lab/test-global-geometry-ii-sheet.js
 node website/global-geometry-lab/test-global-geometry-ii-physical-preflight.js
-node website/global-geometry-lab/generate-global-geometry-ii-physical-preflight.js
+node website/global-geometry-lab/generate-global-geometry-ii-physical-preflight.js --validate-only
 ```
 
 Validate the SVG package with an XML parser and the deterministic geometry

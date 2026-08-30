@@ -3,6 +3,7 @@
 
 const assert = require("assert");
 const fs = require("fs");
+const os = require("os");
 const path = require("path");
 const Generator = require("./generate-global-geometry-ii-physical-preflight.js");
 
@@ -72,7 +73,7 @@ test("content-addressed artifact has an exact semantic replay", () => {
 });
 
 test("committed preflight artifact validates against current inputs", () => {
-  const validation = Generator.validateArtifact(readJson(artifactPath));
+  const validation = Generator.validateArtifactFile(artifactPath);
   assert.strictEqual(validation.valid, true, validation.errors.join("; "));
 });
 
@@ -130,10 +131,24 @@ test("blank worksheet cannot silently claim authorization or a passed gate", () 
   assert.strictEqual(Generator.validateWorksheetTemplate(measured).valid, false);
 });
 
-test("generator CLI rejects ambiguous arguments", () => {
-  assert.throws(() => Generator.parseOutput(["--unknown"]), /expected/);
-  assert.throws(() => Generator.parseOutput(["--output"]), /expected/);
-  assert.throws(() => Generator.parseOutput(["--output", "a", "--output", "b"]), /expected/);
+test("generator CLI separates read-only validation from exclusive generation", () => {
+  assert.deepStrictEqual(Generator.parseArguments([]), { mode: "generate", output: artifactPath });
+  assert.deepStrictEqual(Generator.parseArguments(["--validate-only"]), { mode: "validate", input: artifactPath });
+  assert.throws(() => Generator.parseArguments(["--unknown"]), /expected/);
+  assert.throws(() => Generator.parseArguments(["--output"]), /expected/);
+  assert.throws(() => Generator.parseArguments(["--output", "a", "--output", "b"]), /expected/);
+});
+
+test("exclusive writer cannot replace an existing evidence artifact", () => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), "ggii-physical-preflight-"));
+  const output = path.join(directory, "evidence.json");
+  try {
+    Generator.writeExclusive(output, "first\n");
+    assert.throws(() => Generator.writeExclusive(output, "second\n"), /EEXIST/);
+    assert.strictEqual(fs.readFileSync(output, "utf8"), "first\n");
+  } finally {
+    fs.rmSync(directory, { recursive: true });
+  }
 });
 
 let passed = 0;

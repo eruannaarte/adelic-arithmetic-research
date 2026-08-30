@@ -345,7 +345,9 @@ test("source manifest selection is closed, sorted, relative, and byte-addressed"
 test("fabrication resources are internally addressed while physical validation stays NOT_RUN", () => {
   const resource = Release.verifyFabricationPackage();
   assert.strictEqual(resource.id, "programmable-sheet-fabrication-package-v1");
-  assert.strictEqual(resource.files.length, 5);
+  assert.strictEqual(resource.files.length, 10);
+  assert.ok(resource.files.some((entry) => entry.path === "artifacts/global-geometry-ii/fabrication/physical-preflight-v1.json"));
+  assert.ok(resource.files.some((entry) => entry.path === "website/global-geometry-lab/test-global-geometry-ii-physical-preflight.js"));
   assert.strictEqual(resource.validation, "INTERNAL_HASHES_PASS");
   assert.strictEqual(resource.physicalValidation, "NOT_RUN");
   assert.strictEqual(resource.hardwareAuthorization, false);
