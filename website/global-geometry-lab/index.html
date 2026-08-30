@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="A programmable numerical laboratory for exploring how local rules generate global shape, topology, curvature, and effective dimension.">
+  <title>Global Geometry Lab</title>
+  <link rel="stylesheet" href="global-geometry-lab.css">
+</head>
+<body>
+  <a class="skip-link" href="#laboratory">Skip to the laboratory</a>
+  <main>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Executable research programme · finite numerical laboratory</p>
+        <h1>Global Geometry Lab</h1>
+        <p class="dek">Compose local relations. Measure the world they make.</p>
+      </div>
+      <div class="hero-definition">
+        <span>Local rule</span><i aria-hidden="true">+</i>
+        <span>compatibility</span><i aria-hidden="true">+</i>
+        <span>iteration</span><i aria-hidden="true">+</i>
+        <span>scale</span><i aria-hidden="true">→</i>
+        <strong>global geometry</strong>
+      </div>
+      <nav aria-label="Research links">
+        <a href="../../GLOBAL_GEOMETRY_LAB.md">Read the research contract</a>
+      </nav>
+    </header>
+
+    <section class="programme" aria-labelledby="programme-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">One model, three directions</p>
+          <h2 id="programme-title">Generate, design, and recognize geometry</h2>
+        </div>
+        <p>The presets share the same metric-measure-cell-complex engine. Their application names are disclosed interpretations of that common mathematics.</p>
+      </div>
+      <div class="programme-grid">
+        <article><span>01</span><h3>Forward</h3><p>Iterate a finite-radius rule and measure the global trajectory.</p></article>
+        <article><span>02</span><h3>Inverse</h3><p>Give local curvature feedback a target satisfying the necessary Gauss–Bonnet sum.</p></article>
+        <article><span>03</span><h3>Recognition</h3><p>Compute descriptors of a supplied finite complex and expose what local observations cannot identify.</p></article>
+      </div>
+    </section>
+
+    <section id="laboratory" class="laboratory" aria-labelledby="lab-title">
+      <div class="lab-heading">
+        <div>
+          <p class="section-kicker">Interactive finite model</p>
+          <h2 id="lab-title">Local rule chamber</h2>
+        </div>
+        <div class="evidence-legend" aria-label="Evidence labels">
+          <span class="evidence exact">Exact finite identity</span>
+          <span class="evidence numerical">Finite numerical estimate</span>
+          <span class="evidence hypothesis">Research target</span>
+          <span class="evidence analogy">Application analogy</span>
+        </div>
+      </div>
+
+      <form class="controls" onsubmit="return false" aria-label="Global Geometry controls">
+        <label class="control-wide">
+          <span>Application preset</span>
+          <select id="preset-select"></select>
+        </label>
+        <label>
+          <span>Seed</span>
+          <input id="seed-input" type="text" value="geometry-1" maxlength="64" spellcheck="false">
+        </label>
+        <label>
+          <span>Rule strength <output id="rate-output" for="rate-input">1.00</output></span>
+          <input id="rate-input" type="range" min="0" max="2" step="0.05" value="1">
+        </label>
+        <label>
+          <span>Microscopic disorder <output id="disorder-output" for="disorder-input">0.08</output></span>
+          <input id="disorder-input" type="range" min="0" max="0.35" step="0.01" value="0.08">
+        </label>
+        <label>
+          <span>Observation scale <output id="scale-output" for="scale-input">mesoscopic</output></span>
+          <input id="scale-input" type="range" min="0" max="100" step="1" value="48">
+        </label>
+        <div class="button-group" aria-label="Simulation actions">
+          <button id="run-button" type="button" class="primary">Run</button>
+          <button id="step-button" type="button">Step</button>
+          <button id="reset-button" type="button">Reset</button>
+          <button id="event-button" type="button">Declared intervention</button>
+        </div>
+      </form>
+
+      <div class="scenario-line">
+        <div>
+          <span id="mode-badge" class="mode">Forward</span>
+          <strong id="scenario-question">—</strong>
+        </div>
+        <p id="scenario-boundary">—</p>
+      </div>
+
+      <div class="measurements" aria-label="Current global measurements">
+        <article>
+          <div><span>Topology</span><span id="topology-evidence" class="evidence exact">exact</span></div>
+          <strong id="topology-value">—</strong>
+          <small id="topology-detail">—</small>
+        </article>
+        <article>
+          <div><span>Curvature closure</span><span id="curvature-evidence" class="evidence exact">identity</span></div>
+          <strong id="curvature-value">—</strong>
+          <small id="curvature-detail">—</small>
+        </article>
+        <article>
+          <div><span>Effective dimension</span><span class="evidence numerical">estimate</span></div>
+          <strong id="dimension-value">—</strong>
+          <small id="dimension-detail">—</small>
+        </article>
+        <article>
+          <div><span>Global response</span><span class="evidence numerical">estimate</span></div>
+          <strong id="response-value">—</strong>
+          <small id="response-detail">—</small>
+        </article>
+      </div>
+
+      <div class="visual-grid">
+        <figure class="world-figure">
+          <figcaption>
+            <div><strong id="world-title">Generated world</strong><span id="world-subtitle">Intrinsic geometry comes from local lengths; screen position is a view.</span></div>
+            <div class="visual-key" aria-label="World color key">
+              <span><i class="key-low"></i><b id="world-key-low">low signal</b></span>
+              <span><i class="key-mid"></i><b id="world-key-mid">middle signal</b></span>
+              <span><i class="key-high"></i><b id="world-key-high">high signal</b></span>
+            </div>
+          </figcaption>
+          <div class="world-wrap">
+            <svg id="world-view" role="img" aria-labelledby="world-svg-title world-svg-desc">
+              <title id="world-svg-title">Current finite geometry</title>
+              <desc id="world-svg-desc">A graph or triangular complex colored by its current local field or curvature error.</desc>
+              <g id="face-layer"></g>
+              <g id="edge-layer"></g>
+              <g id="node-layer"></g>
+            </svg>
+            <div id="world-tooltip" class="tooltip" role="tooltip" hidden></div>
+          </div>
+          <p id="selection-detail" class="selection-detail" aria-live="polite">Select a vertex to inspect local state or target error.</p>
+        </figure>
+
+        <figure class="profile-figure">
+          <figcaption>
+            <div><strong>Dimensional profile</strong><span>Dimension is measured across scale, not assigned once.</span></div>
+          </figcaption>
+          <div class="profile-wrap">
+            <svg id="profile-chart" role="img" aria-labelledby="profile-title profile-desc">
+              <title id="profile-title">Finite-scale dimension profile</title>
+              <desc id="profile-desc">Volume-growth, spectral, and walk-dimension estimates from microscopic to macroscopic observation scales.</desc>
+            </svg>
+          </div>
+          <div class="profile-legend" aria-label="Dimension profile legend">
+            <button type="button" data-series="volume" aria-pressed="true"><i class="series-volume"></i>volume growth</button>
+            <button type="button" data-series="spectral" aria-pressed="true"><i class="series-spectral"></i>spectral</button>
+            <button type="button" data-series="walk" aria-pressed="true"><i class="series-walk"></i>walk</button>
+          </div>
+          <p id="profile-detail" class="selection-detail">Move the observation-scale control to compare each estimator on its own normalized logarithmic scale.</p>
+        </figure>
+      </div>
+
+      <div class="process-strip" aria-label="Local-to-global process">
+        <div><span>1</span><strong>Neighbourhood</strong><small id="process-local">local data</small></div>
+        <i aria-hidden="true">→</i>
+        <div><span>2</span><strong>Composition</strong><small id="process-compose">paths and loops</small></div>
+        <i aria-hidden="true">→</i>
+        <div><span>3</span><strong>Global observable</strong><small id="process-global">metric, topology, dimension</small></div>
+      </div>
+
+      <section class="comparison-panel" aria-labelledby="comparison-title">
+        <div>
+          <span class="evidence hypothesis">observable universality test</span>
+          <h3 id="comparison-title">Compare two microscopic worlds</h3>
+          <p>Replay this preset with a different seed at the same time and compare topology, spectrum, and dimension signatures. Agreement is finite observable collapse—not proof of isometry or a continuum universality class.</p>
+        </div>
+        <div class="comparison-controls">
+          <label for="comparison-seed">Comparison seed</label>
+          <input id="comparison-seed" type="text" value="geometry-2" maxlength="64" spellcheck="false">
+          <button id="compare-button" type="button">Compare worlds</button>
+        </div>
+        <dl class="comparison-results" aria-live="polite">
+          <div><dt>Topology</dt><dd id="comparison-topology">not compared</dd></div>
+          <div><dt>Dimension profile distance</dt><dd id="comparison-profile">—</dd></div>
+          <div><dt>Spectral signature distance</dt><dd id="comparison-spectrum">—</dd></div>
+        </dl>
+        <p id="comparison-status" class="configuration-status">The comparison is deterministic and matched by preset, parameters, step, and observation schedule.</p>
+      </section>
+
+      <details class="programmer-panel">
+        <summary>Programmable configuration and reproducibility record</summary>
+        <div class="programmer-grid">
+          <div>
+            <label for="configuration-json">Validated configuration JSON</label>
+            <textarea id="configuration-json" rows="18" spellcheck="false"></textarea>
+            <p id="configuration-status" class="configuration-status" aria-live="polite">The editor accepts the closed schema only; it never evaluates code.</p>
+            <div class="button-group">
+              <button id="apply-config-button" type="button" class="primary">Apply configuration</button>
+              <button id="restore-config-button" type="button">Restore current</button>
+            </div>
+          </div>
+          <div>
+            <h3>Finite-run record</h3>
+            <dl class="run-record">
+              <div><dt>Core / analysis schema</dt><dd id="record-schema">—</dd></div>
+              <div><dt>Step / time</dt><dd id="record-time">—</dd></div>
+              <div><dt>Vertices / edges / faces</dt><dd id="record-size">—</dd></div>
+              <div><dt>Method</dt><dd id="record-method">—</dd></div>
+              <div><dt>Replay id</dt><dd id="record-replay">—</dd></div>
+            </dl>
+            <button id="export-button" type="button">Export run JSON</button>
+          </div>
+        </div>
+      </details>
+
+      <noscript><p class="noscript">The executable laboratory requires JavaScript. The research contract remains available above.</p></noscript>
+    </section>
+
+    <section class="application-map" aria-labelledby="application-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">Application map</p>
+          <h2 id="application-title">The mathematics transfers; the claims do not</h2>
+        </div>
+        <p>Each preset exposes the same local-to-global mechanism while preserving the boundary between a mathematical model and an empirical application.</p>
+      </div>
+      <div id="application-cards" class="application-grid"></div>
+    </section>
+
+    <footer>
+      <p><strong>Evidence boundary:</strong> this laboratory computes finite examples. It does not establish continuum convergence, material calibration, biological adequacy, robot safety, learned-manifold uniqueness, or physical spacetime emergence.</p>
+    </footer>
+  </main>
+  <script src="global-geometry-core.js"></script>
+  <script src="global-geometry-lab.js"></script>
+</body>
+</html>
