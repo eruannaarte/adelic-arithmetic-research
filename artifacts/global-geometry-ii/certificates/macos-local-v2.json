@@ -1,0 +1,258 @@
+{
+  "schema": "ggii.local-reproduction-certificate/2",
+  "verifierVersion": "1.0.0-alpha.2",
+  "generatedAtUtc": "2026-08-30T17:40:38.103Z",
+  "verificationStatus": "PASS",
+  "readOnlyVerification": "PASS_SOURCE_ARTIFACT_AND_RELEASE_SURFACE_UNCHANGED",
+  "environment": {
+    "platform": "darwin",
+    "architecture": "arm64",
+    "operatingSystemRelease": "25.6.0",
+    "endianness": "LE",
+    "nodeVersion": "v22.22.2",
+    "v8Version": "12.4.254.21-node.39",
+    "uvVersion": "1.51.0",
+    "logicalCpuCount": 8,
+    "cpuModel": "Apple M4",
+    "totalMemoryBytes": 17179869184
+  },
+  "suites": [
+    {
+      "id": "global-geometry-i-core",
+      "path": "website/global-geometry-lab/test-global-geometry-core.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 361.426,
+      "stdoutBytes": 1984,
+      "stdoutSha256": "b3b75c418f346603a99407c8eb5fcbcb5b97f7a7904a19a9e1963f680ec2ab3b",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "global-geometry-ii-core",
+      "path": "website/global-geometry-lab/test-global-geometry-ii-core.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 8384.686,
+      "stdoutBytes": 1213,
+      "stdoutSha256": "b84fcdbe419d415590d9c28d824fd90af075828e768c47679ddc8f71ad684ca2",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "global-geometry-ii-ensembles",
+      "path": "website/global-geometry-lab/test-global-geometry-ii-ensembles.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 650.931,
+      "stdoutBytes": 1187,
+      "stdoutSha256": "d8208a1b580e83863e4a9f14aa9f811610d160766c43fe1ddf15d8a485a42eec",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "global-geometry-ii-atlas",
+      "path": "website/global-geometry-lab/test-global-geometry-ii-atlas.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 150.326,
+      "stdoutBytes": 1177,
+      "stdoutSha256": "79eb068f8cb24c1c96ae603434a032980d1af9ff59b26b5c6d9115f62cf6c790",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "global-geometry-ii-inverse",
+      "path": "website/global-geometry-lab/test-global-geometry-ii-inverse.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 1579.752,
+      "stdoutBytes": 2461,
+      "stdoutSha256": "6f024eebc8a1b890d7345b7fe76ebe05c3ab014867ecb32489bd02678cb7292d",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "global-geometry-ii-sheet",
+      "path": "website/global-geometry-lab/test-global-geometry-ii-sheet.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 346.949,
+      "stdoutBytes": 2504,
+      "stdoutSha256": "3c9e0736f96cd547ef563e3514daf9956b6bfe46312307dc3d10b8d42502a76e",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "global-geometry-ii-artifacts",
+      "path": "website/global-geometry-lab/test-global-geometry-ii-artifacts.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 3222.869,
+      "stdoutBytes": 459,
+      "stdoutSha256": "758d1b9875af1de7c22967f6a9d38ec94dcafb3447ad3bf3105f6d20eb3a6153",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "global-geometry-ii-fabrication-vectors",
+      "path": "artifacts/global-geometry-ii/fabrication/validate-fabrication.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 34.108,
+      "stdoutBytes": 184,
+      "stdoutSha256": "fa452eb6db97724ea7909e909ebc3c6234414eeaf007e19e323cf1368e3e504d",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "global-geometry-ii-reproduction",
+      "path": "website/global-geometry-lab/test-global-geometry-ii-reproduction.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 21675.297,
+      "stdoutBytes": 2446,
+      "stdoutSha256": "4a47e6a3a19265d3a5a898c59974335c11597e285dc3d01550f46b640d824707",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scientificDigests": {
+    "manifestContentAddress": {
+      "algorithm": "sha256",
+      "canonicalization": "ggii-release-json-v1",
+      "digest": "222f2c9051799f69c3c345f4c6ced006fa1aaadd605fb047fae8eb2e0fcfbe52",
+      "canonicalBytes": 17040
+    },
+    "releaseIndexContentAddress": {
+      "algorithm": "sha256",
+      "canonicalization": "ggii-release-json-v1",
+      "digest": "4e769922c38c335029c3f9dcf26ab46f9aeb35dcd199bba063413ca8de6c5c33",
+      "canonicalBytes": 2901
+    },
+    "sourceSnapshotSha256": "82fd850a372c6ac5546da443c995acb42b4f17965a9f5f7d39f0b0b569993db0",
+    "artifacts": [
+      {
+        "id": "calibration-v1",
+        "schema": "ggii.calibration-artifact/1",
+        "rawSha256": "c85d69d756866956a0d856a318b318c32268b89321c49ee141f9ccc66c3611ce",
+        "semanticAddress": {
+          "algorithm": "sha256",
+          "canonicalization": "ggii-stable-json-alpha1",
+          "digest": "e97eb7187994a58e7c637d489ac2d03e8b2e3990a40e1963df0ee3fb0a948091",
+          "canonicalBytes": 934524
+        }
+      },
+      {
+        "id": "atlas-pilot-v1",
+        "schema": "ggii.atlas-pilot-artifact/1",
+        "rawSha256": "0a6d977ac815bc43f3a312ac25199b4c101287675a4167d37b5d865155aa154e",
+        "semanticAddress": {
+          "algorithm": "sha256",
+          "canonicalization": "ggii-stable-json-alpha1",
+          "digest": "f9c4345529fc6122d11899d028ccf569989ce8122e78c84969fba0c87d79423f",
+          "canonicalBytes": 447232
+        }
+      },
+      {
+        "id": "inverse-certificates-v1",
+        "schema": "ggii.inverse-certificates-artifact/1",
+        "rawSha256": "a5e41762d61b100b6d319474d8f78b2326c16ae9f3686acd80789b29cc7fe906",
+        "semanticAddress": {
+          "algorithm": "sha256",
+          "canonicalization": "ggii-inverse-ieee754-json-alpha2",
+          "digest": "53be9aa4cdc3765a7e8b9a902cf184f552e60600ad880ed9f34fd7cd2423cccd",
+          "canonicalBytes": 92429
+        }
+      },
+      {
+        "id": "sheet-hil-v1",
+        "schema": "ggii.sheet-hil-artifact/1",
+        "rawSha256": "3b20eb43cd08af95cdb5bddf58c94923baef43a9e721912d53fb8353966b14ad",
+        "semanticAddress": {
+          "algorithm": "sha256",
+          "canonicalization": "ggii-sheet-jcs-subset-v2",
+          "digest": "eb6fd9253acb5b2133ee2466a14e280c2ca59dc07cfc2acc09e84090eb4d4fa7",
+          "canonicalBytes": 96746
+        }
+      }
+    ],
+    "reproductionResources": [
+      {
+        "id": "programmable-sheet-fabrication-package-v1",
+        "manifestPath": "artifacts/global-geometry-ii/fabrication/fabrication-manifest.json",
+        "rawSha256": "c8f89fcce1911fdade965266152e8173837b438620cf2133af1a82c9ee252c60",
+        "semanticAddress": {
+          "algorithm": "sha256",
+          "canonicalization": "ggii-release-json-v1",
+          "digest": "08170dc008d05682546907cd2f66743c1f244c0f290dd2c32510f96fb9d659d4",
+          "canonicalBytes": 4898
+        },
+        "physicalValidation": "NOT_RUN"
+      }
+    ]
+  },
+  "localReplayObservations": {
+    "schema": "ggii.local-replay-observations/1",
+    "atlas": {
+      "policyId": "ggii.atlas-cross-platform-replay/1",
+      "continuousTolerance": {
+        "absolute": 1e-12,
+        "relative": 1e-12,
+        "formula": "|a-b| <= 1e-12 + 1e-12*max(1,|a|,|b|)"
+      },
+      "pilotValidation": {
+        "committed": "PASS",
+        "replay": "PASS"
+      },
+      "exactComparisonCounts": {
+        "objects": 2363,
+        "arrays": 404,
+        "exactScalars": 2984,
+        "exactIntegerNumbers": 4335
+      },
+      "continuousComparisonCounts": {
+        "numbers": 10574,
+        "differences": 0,
+        "toleratedDifferences": 0
+      },
+      "mismatchCount": 0,
+      "derivedFieldCounts": {
+        "comparedInternallyOnly": 8,
+        "differences": 0
+      },
+      "maxima": {
+        "absoluteDifference": {
+          "value": 0,
+          "path": null
+        },
+        "scaledRelativeDifference": {
+          "value": 0,
+          "path": null
+        },
+        "toleranceFraction": {
+          "value": 0,
+          "path": null
+        }
+      }
+    }
+  },
+  "certification": {
+    "interpretation": "This is one local execution record. It does not prove equality with any other machine, operating system, or certificate.",
+    "observedPlatform": "darwin",
+    "observedPlatformIsRequiredClass": true,
+    "requiredIndependentPlatforms": [
+      "darwin",
+      "win32"
+    ],
+    "crossPlatformEqualityClaim": "NOT_MADE",
+    "windowsCertificate": "ABSENT_REQUIRED_INPUT_NOT_SIMULATED",
+    "releaseGate": "OPEN_PENDING_REVIEWED_INDEPENDENT_DARWIN_AND_WIN32_CERTIFICATES"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "ggii-release-json-v1",
+    "digest": "cba14013545665e4a119bb33c64532b7443c84317938966366275cebfa71102e",
+    "canonicalBytes": 7194
+  }
+}

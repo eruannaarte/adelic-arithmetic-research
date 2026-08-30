@@ -32,7 +32,19 @@ for five connected TGN research programmes:
    application analogies.  The
    [reproducibility manifest](global_geometry_reproducibility_manifest.json)
    and [Website Manager handoff](GLOBAL_GEOMETRY_WEBSITE_MANAGER_HANDOFF.md)
-   bind the public release package.
+   bind the public release package.  Its active
+   [Global Geometry II manuscript](GLOBAL_GEOMETRY_II_MANUSCRIPT.md) and
+   [interactive atlas](website/global-geometry-lab/global-geometry-ii.html)
+   add scoped finite-dimensional diffusion universality alongside graph-metric
+   nonuniversality, an
+   obstruction-aware compiler, a 5-by-5 anisotropy resolution map, and a
+   fabrication-ready passive q-star package with a virtual HIL emulator.  The
+   [Global Geometry II reproducibility manifest](global_geometry_ii_reproducibility_manifest.json)
+   keeps physical validation outside the computational evidence boundary;
+   platform-local certificates and their separately addressed comparison
+   record report only the scoped macOS / Windows digest-and-test-surface replay.
+   That attestation does not establish peer review, physical validation,
+   publication, or merge status.
 
 Within Operational Information Geometry, its fifth layer supplies the first
 controlled scale flow:

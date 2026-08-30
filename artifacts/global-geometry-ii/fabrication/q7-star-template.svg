@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="210mm" height="297mm" viewBox="0 0 210 297"
+     role="img" aria-labelledby="title desc"
+     data-design="ggii-q-star" data-q="7" data-units="mm"
+     data-page="A4-portrait" data-nominal-side-mm="60"
+     data-hinge-gap-mm="1.0" data-physical-validation="NOT_RUN">
+  <title id="title">Global Geometry II q=7 programmable-sheet template</title>
+  <desc id="desc">Seven detached 60 millimetre equilateral paper faces with cut, hinge, fiducial, center, scale, assembly, and safety markings.</desc>
+  <metadata>
+    Evidence: ideal q-star defect is an exact finite identity; this printable
+    drawing is a nominal vector design; fabrication and physical validation
+    have not been performed. Fiducial squares are locations, not encoded tags.
+  </metadata>
+  <defs>
+    <style><![CDATA[
+      text { font-family: Arial, Helvetica, sans-serif; fill: #111; }
+      .cut { fill: #fff; stroke: #111; stroke-width: .45; }
+      .hinge { fill: none; stroke: #075a6c; stroke-width: .35; stroke-dasharray: 4 2; }
+      .no-cut { fill: none; stroke: #555; stroke-width: .3; stroke-dasharray: 1 1.4; }
+      .fiducial { fill: #fafafa; stroke: #7a1f1f; stroke-width: .35; stroke-dasharray: 5 1 1 1; }
+      .fid-cross { fill: none; stroke: #7a1f1f; stroke-width: .25; stroke-dasharray: 1 1; }
+      .center { fill: none; stroke: #5a2b82; stroke-width: .4; stroke-dasharray: 1 .8; }
+      .guide { fill: none; stroke: #333; stroke-width: .3; }
+      .small { font-size: 2.45px; }
+      .tiny { font-size: 2.05px; }
+      .face-id { font-size: 2.8px; font-weight: 700; }
+      .fid-id { font-size: 2.5px; font-weight: 700; text-anchor: middle; }
+      .heading { font-size: 4px; font-weight: 700; }
+      .subheading { font-size: 2.55px; }
+      .warning { font-size: 2.55px; font-weight: 700; fill: #7a1f1f; text-anchor: middle; }
+      .formula { font-size: 3.15px; font-weight: 700; }
+      .bar { fill: #111; stroke: none; }
+      .bar-light { fill: #fff; stroke: #111; stroke-width: .25; }
+    ]]></style>
+    <g id="nominal-face">
+      <polygon class="cut" data-role="cut-perimeter" data-side-mm="60"
+               points="0,0 60,0 30,51.9615242271"/>
+      <line class="hinge" data-role="left-hinge-guide"
+            x1="2.799" y1="1.848" x2="29.799" y2="48.613"/>
+      <line class="hinge" data-role="right-hinge-guide"
+            x1="57.201" y1="1.848" x2="30.201" y2="48.613"/>
+      <rect class="no-cut" data-role="fiducial-clearance"
+            x="19" y="8" width="22" height="22"/>
+      <rect class="fiducial" data-role="fiducial-location"
+            x="20" y="9" width="20" height="20"/>
+      <path class="fid-cross" d="M20,9 L40,29 M40,9 L20,29"/>
+      <circle class="center" data-role="identified-center-corner"
+              cx="30" cy="51.9615242271" r="1.4"/>
+      <path class="guide" data-role="orientation-arrow"
+            d="M47,13 L41,25 M41,25 L41.5,21.8 M41,25 L44,23.6"/>
+      <text class="small" x="30" y="4" text-anchor="middle">B: boundary edge</text>
+      <text class="small" x="21" y="34">L</text>
+      <text class="small" x="37.5" y="34">R</text>
+      <text class="tiny" x="44" y="11">TO C</text>
+      <text class="small" x="30" y="48.3" text-anchor="middle">C</text>
+    </g>
+  </defs>
+
+  <rect id="page-background" x="0" y="0" width="210" height="297" fill="#fff"/>
+
+  <text class="heading" x="6" y="6">GLOBAL GEOMETRY II — q=7 STAR / −π/3 CENTER DEFECT</text>
+  <rect x="5.5" y="9" width="199" height="14" rx="1.2"
+        fill="#fff4f4" stroke="#7a1f1f" stroke-width=".5" stroke-dasharray="3 1"/>
+  <text class="warning" x="105" y="14">PASSIVE PAPER RESEARCH TEMPLATE — NO ACTUATORS — NOT A CONTROL DRAWING</text>
+  <text class="warning" x="105" y="19">PRINT 100% / ACTUAL SIZE • PHYSICAL VALIDATION NOT PERFORMED • KEEP THIS BANNER</text>
+
+  <g id="face-00" transform="translate(8 28)" data-face-id="face-00" data-marker-location-id="F00" data-nominal-side-mm="60">
+    <use href="#nominal-face"/><text class="face-id" x="7" y="8">face-00</text><text class="fid-id" x="30" y="20">F00</text><text class="tiny" x="30" y="23" text-anchor="middle">PLACEHOLDER</text>
+  </g>
+  <g id="face-01" transform="translate(75 28)" data-face-id="face-01" data-marker-location-id="F01" data-nominal-side-mm="60">
+    <use href="#nominal-face"/><text class="face-id" x="7" y="8">face-01</text><text class="fid-id" x="30" y="20">F01</text><text class="tiny" x="30" y="23" text-anchor="middle">PLACEHOLDER</text>
+  </g>
+  <g id="face-02" transform="translate(142 28)" data-face-id="face-02" data-marker-location-id="F02" data-nominal-side-mm="60">
+    <use href="#nominal-face"/><text class="face-id" x="7" y="8">face-02</text><text class="fid-id" x="30" y="20">F02</text><text class="tiny" x="30" y="23" text-anchor="middle">PLACEHOLDER</text>
+  </g>
+  <g id="face-03" transform="translate(8 88)" data-face-id="face-03" data-marker-location-id="F03" data-nominal-side-mm="60">
+    <use href="#nominal-face"/><text class="face-id" x="7" y="8">face-03</text><text class="fid-id" x="30" y="20">F03</text><text class="tiny" x="30" y="23" text-anchor="middle">PLACEHOLDER</text>
+  </g>
+  <g id="face-04" transform="translate(75 88)" data-face-id="face-04" data-marker-location-id="F04" data-nominal-side-mm="60">
+    <use href="#nominal-face"/><text class="face-id" x="7" y="8">face-04</text><text class="fid-id" x="30" y="20">F04</text><text class="tiny" x="30" y="23" text-anchor="middle">PLACEHOLDER</text>
+  </g>
+  <g id="face-05" transform="translate(142 88)" data-face-id="face-05" data-marker-location-id="F05" data-nominal-side-mm="60">
+    <use href="#nominal-face"/><text class="face-id" x="7" y="8">face-05</text><text class="fid-id" x="30" y="20">F05</text><text class="tiny" x="30" y="23" text-anchor="middle">PLACEHOLDER</text>
+  </g>
+  <g id="face-06" transform="translate(8 148)" data-face-id="face-06" data-marker-location-id="F06" data-nominal-side-mm="60">
+    <use href="#nominal-face"/><text class="face-id" x="7" y="8">face-06</text><text class="fid-id" x="30" y="20">F06</text><text class="tiny" x="30" y="23" text-anchor="middle">PLACEHOLDER</text>
+  </g>
+
+  <g id="program-note" transform="translate(75 153)">
+    <text class="formula" x="0" y="0">EXACT IDEAL PROGRAM: Kc=(6−7)π/3=−π/3</text>
+    <text class="subheading" x="0" y="5">Each boundary defect: +π/3 • total: 2π • χ=1</text>
+    <text class="subheading" x="0" y="10">Hinges: R0↔L1 ... R5↔L6</text>
+    <text class="subheading" x="0" y="15">FINAL SEAM: R6↔L0 — lift into a low-strain fold first.</text>
+    <text class="subheading" x="0" y="20">DO NOT FORCE FLAT. Saddle/fold response is nonunique and unvalidated.</text>
+  </g>
+
+  <line class="guide" data-role="vertical-100mm-scale" data-length-mm="100" x1="206" y1="88" x2="206" y2="188"/>
+  <line class="guide" x1="203.5" y1="88" x2="208.5" y2="88"/>
+  <line class="guide" x1="203.5" y1="188" x2="208.5" y2="188"/>
+  <text class="tiny" transform="translate(208.5 151) rotate(-90)" text-anchor="middle">100 mm vertical check</text>
+
+  <g id="legend">
+    <rect x="6" y="204" width="198" height="51" rx="1.2" fill="#fbfbfb" stroke="#555" stroke-width=".35"/>
+    <text class="face-id" x="10" y="210">CUT / FOLD-HINGE / FIDUCIAL LEGEND</text>
+    <line class="cut" x1="11" y1="216" x2="37" y2="216"/><text class="small" x="41" y="217">solid heavy: CUT perimeter</text>
+    <line class="hinge" x1="11" y1="222" x2="37" y2="222"/><text class="small" x="41" y="223">long dash: fold/hinge-edge guide; do not cut</text>
+    <rect class="no-cut" x="11" y="227" width="26" height="5"/><text class="small" x="41" y="231">short dots: no-cut / no-hinge clearance</text>
+    <rect class="fiducial" x="11" y="236" width="10" height="10"/><path class="fid-cross" d="M11,236 L21,246 M21,236 L11,246"/>
+    <text class="small" x="25" y="240">dash-dot: 20 mm tag LOCATION</text><text class="tiny" x="25" y="244">drawn X is not a decodable camera tag</text>
+
+    <text class="face-id" x="112" y="210">HINGE GAP DETAIL</text>
+    <line class="cut" x1="126" y1="214" x2="126" y2="239"/><line class="cut" x1="127" y1="214" x2="127" y2="239"/>
+    <line class="hinge" x1="126.5" y1="211" x2="126.5" y2="242"/>
+    <line class="guide" x1="126" y1="245" x2="127" y2="245"/><line class="guide" x1="126" y1="243.5" x2="126" y2="246.5"/><line class="guide" x1="127" y1="243.5" x2="127" y2="246.5"/>
+    <text class="small" x="131" y="219">two cut radial edges</text><text class="small" x="131" y="225">nominal gap = 1.0 mm</text>
+    <text class="small" x="131" y="231">tape bridges gap; hinge axis dashed</text><text class="tiny" x="131" y="238">gap is not removed from 60 mm face</text><text class="tiny" x="131" y="244">no fold line lies inside a rigid face</text>
+  </g>
+
+  <g id="horizontal-scale-bars" data-role="horizontal-100mm-scale" data-length-mm="100" data-start-x-mm="8" data-end-x-mm="108">
+    <rect class="bar" data-role="horizontal-10mm-scale" data-length-mm="10" x="8" y="263" width="10" height="2"/>
+    <line class="guide" x1="8" y1="261.5" x2="8" y2="266.5"/><line class="guide" x1="18" y1="261.5" x2="18" y2="266.5"/><text class="small" x="21" y="265">10 mm</text>
+    <rect class="bar" x="8" y="273" width="10" height="3"/><rect class="bar-light" x="18" y="273" width="10" height="3"/>
+    <rect class="bar" x="28" y="273" width="10" height="3"/><rect class="bar-light" x="38" y="273" width="10" height="3"/>
+    <rect class="bar" x="48" y="273" width="10" height="3"/><rect class="bar-light" x="58" y="273" width="10" height="3"/>
+    <rect class="bar" x="68" y="273" width="10" height="3"/><rect class="bar-light" x="78" y="273" width="10" height="3"/>
+    <rect class="bar" x="88" y="273" width="10" height="3"/><rect class="bar-light" x="98" y="273" width="10" height="3"/>
+    <text class="small" x="112" y="276">100 mm total</text>
+  </g>
+
+  <text class="warning" x="105" y="286">CUT ONLY SOLID FACE PERIMETERS • VERIFY BOTH SCALE DIRECTIONS • DO NOT FORCE q=7 FLAT</text>
+  <text class="tiny" x="105" y="291" text-anchor="middle">Nominal geometry only • 60 mm face side • 1.0 mm assembly gap • fiducials/calibration/physical trials NOT RUN</text>
+</svg>

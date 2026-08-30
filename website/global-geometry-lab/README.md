@@ -1,7 +1,12 @@
 # Global Geometry Lab
 
-This directory contains a dependency-free browser laboratory for the research
-programme described in [`../../GLOBAL_GEOMETRY_LAB.md`](../../GLOBAL_GEOMETRY_LAB.md).
+This directory contains two dependency-free browser laboratories.  Global
+Geometry I implements the finite local-to-global engine described in
+[`../../GLOBAL_GEOMETRY_LAB.md`](../../GLOBAL_GEOMETRY_LAB.md).  The separate
+[`global-geometry-ii.html`](global-geometry-ii.html) interface develops the
+observable-relative universality, recognition, inverse-design, and virtual
+programmable-sheet programme documented in
+[`../../GLOBAL_GEOMETRY_II_MANUSCRIPT.md`](../../GLOBAL_GEOMETRY_II_MANUSCRIPT.md).
 
 The lab asks a single operational question across several declared application
 analogies:
@@ -24,6 +29,22 @@ analogies:
 - `../../global_geometry_reproducibility_manifest.json` — machine-readable
   source identities, commands, scope labels, and expected verification gates.
 
+Global Geometry II adds:
+
+- `global-geometry-ii.html`, `global-geometry-ii-lab.css`, and
+  `global-geometry-ii-lab.js` — six evidence-bounded interactive modes;
+- `global-geometry-ii-core.js`, `global-geometry-ii-ensembles.js`, and
+  `global-geometry-ii-atlas.js` — the exact metric/diffusion controls,
+  anisotropy map, bounded disk families, and nonconfirmatory preview atlas;
+- `global-geometry-ii-inverse.js` — exact finite admissions and obstruction
+  reports for sphere, disk, annulus, and torus examples;
+- `global-geometry-ii-sheet.js` — the q-star intrinsic model and
+  observation-bound virtual HIL protocol;
+- focused test/generator/reproduction scripts; and
+- `../../global_geometry_ii_reproducibility_manifest.json` plus the
+  fabrication-ready protocol and SVGs under
+  `../../artifacts/global-geometry-ii/fabrication/`.
+
 No package installation, build system, remote request, analytics, dynamic
 import, or user-code evaluation is required.
 
@@ -35,9 +56,14 @@ The page distinguishes:
    Gauss--Bonnet for a valid finite triangulation;
 2. **finite numerical estimates** — eigenspectra, heat traces, dimension
    slopes, and local-flow trajectories;
-3. **research targets** — continuum limits, universality, robustness, and
-   recognition claims that the finite page can probe but cannot prove; and
-4. **application analogies** — materials, tissue, networks, learned
+3. **scoped proved limits** — P8.1 graph-metric nonuniversality and the
+   covariance-whitened finite-dimensional diffusion limits of P8.2 and P8.3,
+   only under their declared hypotheses;
+4. **research targets** — bounded-disk or object-level universality,
+   path/operator limits, robustness beyond the proved P8.3 basin, and
+   recognition-identifiability claims that the finite page can probe but does
+   not prove; and
+5. **application analogies** — materials, tissue, networks, learned
    manifolds, swarms, and a relational-graph physics toy.
 
 Finite agreement is not labeled continuum convergence or universality.  A
@@ -57,11 +83,34 @@ Open:
 http://127.0.0.1:8000/website/global-geometry-lab/
 ```
 
+Global Geometry II is at:
+
+```text
+http://127.0.0.1:8000/website/global-geometry-lab/global-geometry-ii.html
+```
+
 ## Run tests
 
 ```bash
 node --test website/global-geometry-lab/test-global-geometry-core.js
+node website/global-geometry-lab/reproduce-global-geometry-ii.js --verify
 ```
+
+On Windows, the same Global Geometry II verification is wrapped by
+`reproduce-global-geometry-ii.ps1`.  The platform-local
+[macOS v2](../../artifacts/global-geometry-ii/certificates/macos-local-v2.json)
+and [Windows v1](../../artifacts/global-geometry-ii/certificates/windows-local-v1.json)
+certificates remain single-run records and never claim cross-platform parity.
+Only the separately addressed
+[macOS / Windows comparison](../../artifacts/global-geometry-ii/certificates/macos-windows-comparison-v1.json)
+may close the declared digest-and-test-surface gate.  It does not validate
+bounded-disk universality, camera or hardware behavior, a physical sheet,
+peer review, publication, or merge status.  The earlier `macos-local-v1.json`
+is a historical development record and is not the designated comparison input.
+
+When transferring a tar archive from macOS, create it with
+`COPYFILE_DISABLE=1` and reject any `._*` AppleDouble entry before Windows
+extraction.
 
 ## Programmability
 

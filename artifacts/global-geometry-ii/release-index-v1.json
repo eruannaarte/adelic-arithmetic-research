@@ -1,0 +1,92 @@
+{
+  "schema": "ggii.release-index/1",
+  "releaseId": "global-geometry-ii-alpha-reproduction-v1",
+  "manifest": {
+    "path": "global_geometry_ii_reproducibility_manifest.json",
+    "rawSha256": "0531e0f7c386411766d7ce44dcf047f3960a85331ef699cceb19486d354c7346",
+    "rawBytes": 21577,
+    "contentAddress": {
+      "algorithm": "sha256",
+      "canonicalization": "ggii-release-json-v1",
+      "digest": "222f2c9051799f69c3c345f4c6ced006fa1aaadd605fb047fae8eb2e0fcfbe52",
+      "canonicalBytes": 17040
+    }
+  },
+  "scientificArtifacts": [
+    {
+      "id": "calibration-v1",
+      "path": "artifacts/global-geometry-ii/calibration-v1.json",
+      "schema": "ggii.calibration-artifact/1",
+      "rawSha256": "c85d69d756866956a0d856a318b318c32268b89321c49ee141f9ccc66c3611ce",
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-stable-json-alpha1",
+        "digest": "e97eb7187994a58e7c637d489ac2d03e8b2e3990a40e1963df0ee3fb0a948091",
+        "canonicalBytes": 934524
+      }
+    },
+    {
+      "id": "atlas-pilot-v1",
+      "path": "artifacts/global-geometry-ii/atlas-pilot-v1.json",
+      "schema": "ggii.atlas-pilot-artifact/1",
+      "rawSha256": "0a6d977ac815bc43f3a312ac25199b4c101287675a4167d37b5d865155aa154e",
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-stable-json-alpha1",
+        "digest": "f9c4345529fc6122d11899d028ccf569989ce8122e78c84969fba0c87d79423f",
+        "canonicalBytes": 447232
+      }
+    },
+    {
+      "id": "inverse-certificates-v1",
+      "path": "artifacts/global-geometry-ii/inverse-certificates-v1.json",
+      "schema": "ggii.inverse-certificates-artifact/1",
+      "rawSha256": "a5e41762d61b100b6d319474d8f78b2326c16ae9f3686acd80789b29cc7fe906",
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-inverse-ieee754-json-alpha2",
+        "digest": "53be9aa4cdc3765a7e8b9a902cf184f552e60600ad880ed9f34fd7cd2423cccd",
+        "canonicalBytes": 92429
+      }
+    },
+    {
+      "id": "sheet-hil-v1",
+      "path": "artifacts/global-geometry-ii/sheet-hil-v1.json",
+      "schema": "ggii.sheet-hil-artifact/1",
+      "rawSha256": "3b20eb43cd08af95cdb5bddf58c94923baef43a9e721912d53fb8353966b14ad",
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-sheet-jcs-subset-v2",
+        "digest": "eb6fd9253acb5b2133ee2466a14e280c2ca59dc07cfc2acc09e84090eb4d4fa7",
+        "canonicalBytes": 96746
+      }
+    }
+  ],
+  "reproductionResources": [
+    {
+      "id": "programmable-sheet-fabrication-package-v1",
+      "manifestPath": "artifacts/global-geometry-ii/fabrication/fabrication-manifest.json",
+      "rawSha256": "c8f89fcce1911fdade965266152e8173837b438620cf2133af1a82c9ee252c60",
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-release-json-v1",
+        "digest": "08170dc008d05682546907cd2f66743c1f244c0f290dd2c32510f96fb9d659d4",
+        "canonicalBytes": 4898
+      },
+      "physicalValidation": "NOT_RUN"
+    }
+  ],
+  "hashTopology": "Scientific artifacts -> manifest -> release index. No file hashes itself and the manifest does not hash the index.",
+  "certificationStatus": {
+    "crossPlatformEqualityClaim": "NOT_MADE",
+    "windowsCertificate": "EXTERNAL_NOT_BUNDLED_IN_INDEX",
+    "externalComparisonRecord": "artifacts/global-geometry-ii/certificates/macos-windows-comparison-v1.json",
+    "releaseGate": "STATUS_DELEGATED_TO_EXTERNAL_COMPARISON_RECORD"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "ggii-release-json-v1",
+    "digest": "4e769922c38c335029c3f9dcf26ab46f9aeb35dcd199bba063413ca8de6c5c33",
+    "canonicalBytes": 2901
+  }
+}

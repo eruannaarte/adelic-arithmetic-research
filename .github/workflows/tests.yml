@@ -30,3 +30,13 @@ jobs:
       - run: node --test website/double-pendulum-oig-wind-tunnel/test-wind-tunnel-core.js
       - run: node --test website/double-pendulum-oig-wind-tunnel/test-wind-tunnel-ensemble-adversarial.js
       - run: node --test website/global-geometry-lab/test-global-geometry-core.js
+      - run: node website/global-geometry-lab/test-global-geometry-ii-core.js
+      - run: node website/global-geometry-lab/test-global-geometry-ii-ensembles.js
+      - run: node website/global-geometry-lab/test-global-geometry-ii-atlas.js
+      - run: node website/global-geometry-lab/test-global-geometry-ii-inverse.js
+      - run: node website/global-geometry-lab/test-global-geometry-ii-sheet.js
+      - run: node website/global-geometry-lab/test-global-geometry-ii-artifacts.js
+      - run: node artifacts/global-geometry-ii/fabrication/validate-fabrication.js
+      - run: node website/global-geometry-lab/test-global-geometry-ii-reproduction.js
+      - run: node website/global-geometry-lab/test-global-geometry-ii-certificates.js
+      - run: node website/global-geometry-lab/reproduce-global-geometry-ii.js --verify

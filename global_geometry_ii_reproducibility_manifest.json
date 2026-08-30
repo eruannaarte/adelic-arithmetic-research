@@ -1,0 +1,503 @@
+{
+  "schema": "ggii.reproducibility-manifest/1",
+  "releaseId": "global-geometry-ii-alpha-reproduction-v1",
+  "purpose": "Clean-room, dependency-free replay metadata for the bounded Global Geometry I/II research release.",
+  "deterministicMetadata": "No generation timestamp, hostname, checkout path, or git state is included in this addressable payload.",
+  "execution": {
+    "entrypoint": "website/global-geometry-lab/reproduce-global-geometry-ii.js",
+    "command": "node website/global-geometry-lab/reproduce-global-geometry-ii.js --verify",
+    "powershellWrapper": "website/global-geometry-lab/reproduce-global-geometry-ii.ps1",
+    "network": "not used",
+    "packageInstallation": "not used",
+    "runtimeDependency": "Node.js standard library only",
+    "runtimePolicy": "Node.js 22.x is the declared alpha baseline; every local certificate records the actual runtime. Exact payload replay is required except for the atlas policy frozen in scientificArtifacts[].replayPolicy.",
+    "pathPolicy": "All repository inputs are resolved from the verifier location rather than the caller's working directory.",
+    "suites": [
+      {
+        "id": "global-geometry-i-core",
+        "path": "website/global-geometry-lab/test-global-geometry-core.js"
+      },
+      {
+        "id": "global-geometry-ii-core",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-core.js"
+      },
+      {
+        "id": "global-geometry-ii-ensembles",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-ensembles.js"
+      },
+      {
+        "id": "global-geometry-ii-atlas",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-atlas.js"
+      },
+      {
+        "id": "global-geometry-ii-inverse",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-inverse.js"
+      },
+      {
+        "id": "global-geometry-ii-sheet",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-sheet.js"
+      },
+      {
+        "id": "global-geometry-ii-artifacts",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-artifacts.js"
+      },
+      {
+        "id": "global-geometry-ii-fabrication-vectors",
+        "path": "artifacts/global-geometry-ii/fabrication/validate-fabrication.js"
+      },
+      {
+        "id": "global-geometry-ii-reproduction",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-reproduction.js"
+      }
+    ]
+  },
+  "sourceManifest": {
+    "selection": "All js/html/css/md/ps1 files below website/global-geometry-lab; fabrication js/json/svg resources; .github/workflows/tests.yml; plus GLOBAL_GEOMETRY_LAB.md and GLOBAL_GEOMETRY_II_*.md at repository root.",
+    "count": 44,
+    "entries": [
+      {
+        "path": ".github/workflows/tests.yml",
+        "sha256": "7d94ac5ca464e2f9f68f5d045c5e015d12d8a033f79ed1bce49da8df2c68c71d",
+        "bytes": 1783
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_FOUNDATIONS.md",
+        "sha256": "c5aa7de08c3f3818a8e3ed1f3f6d196b0fc7efa80847f76b1cf87034ec789c16",
+        "bytes": 73773
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_IMPLEMENTATION_PLAN.md",
+        "sha256": "80803cb2aa114df4c08184a03ee80ea5447b5a02a5674a5ea14d5d727deadb4d",
+        "bytes": 12630
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_INVERSE_SHEET_SPEC.md",
+        "sha256": "c1c439f998e92395ea0f3bad1c1cb93ac94172fdc14ec789b3c8b9cbed7f4292",
+        "bytes": 56661
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_MANUSCRIPT.md",
+        "sha256": "abcad7a1e33cbac08611c1c0ed69ad11362d7377bfa7b6b6546087805cd87e01",
+        "bytes": 55834
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_SHEET_EXPERIMENT.md",
+        "sha256": "c95d9e964fadae32d292549d3b13e3bd1001945e61dbbcbba08bab5895a3f131",
+        "bytes": 23307
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_UNIVERSALITY_SPEC.md",
+        "sha256": "d49a4e7b3cf31ed47c6cab462b6340f6dfa15434f56e4df4d7e70737e1afe885",
+        "bytes": 52967
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_LAB.md",
+        "sha256": "59154a8c13a8856af7a04810d692efb9198dd3c770c6e2da9128fb87b564378b",
+        "bytes": 16426
+      },
+      {
+        "path": "artifacts/global-geometry-ii/fabrication/fabrication-manifest.json",
+        "sha256": "c8f89fcce1911fdade965266152e8173837b438620cf2133af1a82c9ee252c60",
+        "bytes": 5829
+      },
+      {
+        "path": "artifacts/global-geometry-ii/fabrication/q5-star-template.svg",
+        "sha256": "379cc7d5551a954ad15335255609ec0341f0f92e09aa10db586f93bd352a4b82",
+        "bytes": 9832
+      },
+      {
+        "path": "artifacts/global-geometry-ii/fabrication/q6-star-template.svg",
+        "sha256": "3e158317ab2be17e24d7072140df3ac86ecde25572396552e55c6a08bf13b42d",
+        "bytes": 9986
+      },
+      {
+        "path": "artifacts/global-geometry-ii/fabrication/q7-star-template.svg",
+        "sha256": "8bbdcad534a87f6136fbc6331c0cf23f57110f88108ef16fab298dccf39626c2",
+        "bytes": 10247
+      },
+      {
+        "path": "artifacts/global-geometry-ii/fabrication/validate-fabrication.js",
+        "sha256": "af13a8e942fdf2dd2e289c13fc5d7a6e33a3f9c9a4cd69e05e2a44ef83672c27",
+        "bytes": 5737
+      },
+      {
+        "path": "website/global-geometry-lab/README.md",
+        "sha256": "2644dca01faad3e75c4efe0410cdfe82475cb51a86acfb97fd45f9bbe05df204",
+        "bytes": 7482
+      },
+      {
+        "path": "website/global-geometry-lab/compare-global-geometry-ii-certificates.js",
+        "sha256": "4744d7532a741deeac46a34b5ca1190861920d932d56a9704c116801bae32ee4",
+        "bytes": 26766
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-atlas.js",
+        "sha256": "af90bc695b849f416bfdc543e714a307b7a9d70e92e64e0b55432f34960a068d",
+        "bytes": 3541
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-calibration.js",
+        "sha256": "549bfb030bacdad5d4c7aadd5f8f4f251d04f146f49029b5c3eb7c3a41e2e13b",
+        "bytes": 3735
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-inverse.js",
+        "sha256": "409b9250ab3a2e20d59f4dc9c481527bba65d329d1b0d79ce9cbd57e10d37af9",
+        "bytes": 4931
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-release.js",
+        "sha256": "3527c0feaa5874848f4ecda577a2b846d3c487537f038bbf99d415625ec535fd",
+        "bytes": 38042
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-sheet.js",
+        "sha256": "dece94b4086c1b70cfd23d18ea4f5b637624e7bc8b343c874733990dc10f8a05",
+        "bytes": 6913
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-core.js",
+        "sha256": "9c461080b306b4304e4aa0d266d86d55ee31a9c90690a6f01e83022d55f4d77d",
+        "bytes": 94164
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-atlas.js",
+        "sha256": "4e6a9d09ec63b32f539ed8546a1b06adb45cb48b8f9a0742b81dc0351ee5228e",
+        "bytes": 53656
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-claims.js",
+        "sha256": "0d5af6a26d54c34b57eae2895447bda6a1601857762e7c908e974526b2cf2bfe",
+        "bytes": 13609
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-core.js",
+        "sha256": "65d2cd1073765670cbfb98ad9da645e6ea957219ac7306c86ee92f9753b5d98c",
+        "bytes": 65769
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-ensembles.js",
+        "sha256": "e13119cbf7b32e7a9da89d72006e4fcfd118baab7b65235509bd903f9a0ec92d",
+        "bytes": 46707
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-inverse.js",
+        "sha256": "1abf659381656600576e1416cfa9ea9c0f142aa64cc9c392eea4b8755b59a402",
+        "bytes": 99677
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-lab.css",
+        "sha256": "4053f069f3a90a181d476a45e3886f4b8a3dd664a3fd1b4699a93f62e3d09a18",
+        "bytes": 9192
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-lab.js",
+        "sha256": "3c7fb55c57f538ebdb06d5d305f3a7d784359bc154b9f5ca9eedf3214be0fc50",
+        "bytes": 31664
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-sheet.js",
+        "sha256": "a8ef40dabf215bb44c9cf8be0c6f1ca9606a406592a258852ef918d99c7ae6a8",
+        "bytes": 107301
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii.html",
+        "sha256": "92822caa0448c154c7b49cc7a8271d7e2a5e272cfc2cedec4399e85609c9cda3",
+        "bytes": 20731
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-lab.css",
+        "sha256": "80d0a3e0294ceea4b284f40f23317fe087eaea60d07b2de88bb15d2ec89d6991",
+        "bytes": 16107
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-lab.js",
+        "sha256": "a078750217d83e1940b3a96a33d5ba6bcacc59880d15866d1aadce24159618a1",
+        "bytes": 48355
+      },
+      {
+        "path": "website/global-geometry-lab/index.html",
+        "sha256": "a25440ebb7d4aac6b812a747280e4f9c05a5f636eea6d2b073df9883a75d663a",
+        "bytes": 12678
+      },
+      {
+        "path": "website/global-geometry-lab/reproduce-global-geometry-ii.js",
+        "sha256": "3d0f6eecc85241d55d619bb4ff81604ded06812ef95f6250da3608b026dc236b",
+        "bytes": 21711
+      },
+      {
+        "path": "website/global-geometry-lab/reproduce-global-geometry-ii.ps1",
+        "sha256": "09bace09ecd249b0ca5e1e12dc541ed6830afcec8684cf1d1aa3f1830b90d0e2",
+        "bytes": 779
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-core.js",
+        "sha256": "cabf274a7cacd763107cfed9afe3e2d6f174170195a244ff1c473894b8006fb9",
+        "bytes": 18792
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-artifacts.js",
+        "sha256": "10dd1449d14e0f7cc320a4f5773967e03d364a1f1ecdece8a4fc1fcaf457a2fc",
+        "bytes": 5027
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-atlas.js",
+        "sha256": "ae21e5ac897fb44c6b7ff17f46ee8bf2ad3f4e0fa99b4ad48c50ba030e4dd21c",
+        "bytes": 19931
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-certificates.js",
+        "sha256": "6800ea90d178e6a8c755c8e2273d888b43c6631d93e8aee2f34ba0911f07a0ad",
+        "bytes": 18125
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-core.js",
+        "sha256": "1f76d4c884dfd7938344fe9fae457598d692eaff2861de137df6e3fa721aa704",
+        "bytes": 27407
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-ensembles.js",
+        "sha256": "4815d1a26cecc63b3df9b44c2d22b50d80af57f4160782233603ce953edbda2f",
+        "bytes": 26310
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-inverse.js",
+        "sha256": "f6a55a799af948706db353ed9a8fa9464b9e45ec5ec8a3ddeea3801dc06b82d6",
+        "bytes": 29862
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-reproduction.js",
+        "sha256": "95cc336a3574a470a0504b4b1f63782504f6f494e0cd7893f4ad3a6672be47d6",
+        "bytes": 29153
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-sheet.js",
+        "sha256": "a03b75480223ed536a85349a459bdd523b2c9a52b630d0921d7f8f49e8d83a12",
+        "bytes": 28125
+      }
+    ]
+  },
+  "scientificArtifacts": [
+    {
+      "id": "calibration-v1",
+      "path": "artifacts/global-geometry-ii/calibration-v1.json",
+      "schema": "ggii.calibration-artifact/1",
+      "rawSha256": "c85d69d756866956a0d856a318b318c32268b89321c49ee141f9ccc66c3611ce",
+      "rawBytes": 1779682,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-stable-json-alpha1",
+        "digest": "e97eb7187994a58e7c637d489ac2d03e8b2e3990a40e1963df0ee3fb0a948091",
+        "canonicalBytes": 934524
+      },
+      "semanticReplay": "PASS",
+      "replayPolicy": {
+        "id": "exact-canonical-payload/1"
+      }
+    },
+    {
+      "id": "atlas-pilot-v1",
+      "path": "artifacts/global-geometry-ii/atlas-pilot-v1.json",
+      "schema": "ggii.atlas-pilot-artifact/1",
+      "rawSha256": "0a6d977ac815bc43f3a312ac25199b4c101287675a4167d37b5d865155aa154e",
+      "rawBytes": 808234,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-stable-json-alpha1",
+        "digest": "f9c4345529fc6122d11899d028ccf569989ce8122e78c84969fba0c87d79423f",
+        "canonicalBytes": 447232
+      },
+      "semanticReplay": "PASS",
+      "replayPolicy": {
+        "id": "ggii.atlas-cross-platform-replay/1",
+        "continuousTolerance": {
+          "absolute": 1e-12,
+          "relative": 1e-12,
+          "formula": "|a-b| <= 1e-12 + 1e-12*max(1,|a|,|b|)"
+        },
+        "declaredIntegerPaths": [
+          "root.pilot.cells[*].duplicateRealizationCount",
+          "root.pilot.cells[*].familyIndex",
+          "root.pilot.cells[*].identity.familyIndex",
+          "root.pilot.cells[*].identity.linearSize",
+          "root.pilot.cells[*].identity.sigmaIndex",
+          "root.pilot.cells[*].identity.sizeIndex",
+          "root.pilot.cells[*].linearSize",
+          "root.pilot.cells[*].replicateCount",
+          "root.pilot.cells[*].requiredReplicateCount",
+          "root.pilot.cells[*].sigmaIndex",
+          "root.pilot.cells[*].sizeIndex",
+          "root.pilot.cells[*].uniqueRealizationCount",
+          "root.pilot.evidence.result.cellCount",
+          "root.pilot.evidence.result.runCount",
+          "root.pilot.evidence.result.uniqueRealizationCount",
+          "root.pilot.evidence.schemaVersion",
+          "root.pilot.manifest.parameters.maximumSynchronousRuns",
+          "root.pilot.manifest.parameters.replicates",
+          "root.pilot.manifest.parameters.transportPolicy.maxIterations",
+          "root.pilot.manifest.refinements[*]",
+          "root.pilot.manifest.schemaVersion",
+          "root.pilot.runs[*].complexSummary.edges",
+          "root.pilot.runs[*].complexSummary.faces",
+          "root.pilot.runs[*].complexSummary.vertices",
+          "root.pilot.runs[*].familyIndex",
+          "root.pilot.runs[*].identity.familyIndex",
+          "root.pilot.runs[*].identity.linearSize",
+          "root.pilot.runs[*].identity.replicate",
+          "root.pilot.runs[*].identity.sigmaIndex",
+          "root.pilot.runs[*].identity.sizeIndex",
+          "root.pilot.runs[*].linearSize",
+          "root.pilot.runs[*].measurements.dimensions.volumeProfile[*].maxVolume",
+          "root.pilot.runs[*].measurements.dimensions.volumeProfile[*].minVolume",
+          "root.pilot.runs[*].measurements.dimensions.walkProfile[*].scale",
+          "root.pilot.runs[*].measurements.dimensions.walkProfile[*].step",
+          "root.pilot.runs[*].measurements.exact.betti[*]",
+          "root.pilot.runs[*].measurements.exact.boundaryComponents",
+          "root.pilot.runs[*].measurements.exact.eulerCharacteristic",
+          "root.pilot.runs[*].measurements.exact.eulerPoincareResidual",
+          "root.pilot.runs[*].measurements.oneEdgeSensitivity.edgeIndex",
+          "root.pilot.runs[*].measurements.oneEdgeSensitivity.perturbedTransport.iterations",
+          "root.pilot.runs[*].measurements.oneEdgeSensitivity.perturbedTransport.leftBoundaryCount",
+          "root.pilot.runs[*].measurements.oneEdgeSensitivity.perturbedTransport.maxIterations",
+          "root.pilot.runs[*].measurements.oneEdgeSensitivity.perturbedTransport.rightBoundaryCount",
+          "root.pilot.runs[*].measurements.spectrum.solver.sweeps",
+          "root.pilot.runs[*].measurements.spectrum.zeroMultiplicity",
+          "root.pilot.runs[*].measurements.transport.iterations",
+          "root.pilot.runs[*].measurements.transport.leftBoundaryCount",
+          "root.pilot.runs[*].measurements.transport.maxIterations",
+          "root.pilot.runs[*].measurements.transport.rightBoundaryCount",
+          "root.pilot.runs[*].replicate",
+          "root.pilot.runs[*].sigmaIndex",
+          "root.pilot.runs[*].sizeIndex",
+          "root.pilot.spec.replicates",
+          "root.pilot.spec.sizes[*]"
+        ],
+        "continuousNumbers": "frozen tolerance, including integer-valued endpoints and residual zeros",
+        "structuralAndOtherScalars": "exact",
+        "derivedFieldsComparedInternallyOnly": [
+          "root.pilot.evidence.artifacts[0]",
+          "root.pilot.evidence.artifacts[1]",
+          "root.pilot.evidence.digest",
+          "root.pilot.evidence.id",
+          "root.pilot.evidence.result.resultDigest",
+          "root.pilot.manifest.digest",
+          "root.pilot.manifest.resultArtifacts[0]",
+          "root.pilot.resultDigest"
+        ]
+      }
+    },
+    {
+      "id": "inverse-certificates-v1",
+      "path": "artifacts/global-geometry-ii/inverse-certificates-v1.json",
+      "schema": "ggii.inverse-certificates-artifact/1",
+      "rawSha256": "a5e41762d61b100b6d319474d8f78b2326c16ae9f3686acd80789b29cc7fe906",
+      "rawBytes": 205564,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-inverse-ieee754-json-alpha2",
+        "digest": "53be9aa4cdc3765a7e8b9a902cf184f552e60600ad880ed9f34fd7cd2423cccd",
+        "canonicalBytes": 92429
+      },
+      "semanticReplay": "PASS",
+      "replayPolicy": {
+        "id": "exact-canonical-payload/1"
+      }
+    },
+    {
+      "id": "sheet-hil-v1",
+      "path": "artifacts/global-geometry-ii/sheet-hil-v1.json",
+      "schema": "ggii.sheet-hil-artifact/1",
+      "rawSha256": "3b20eb43cd08af95cdb5bddf58c94923baef43a9e721912d53fb8353966b14ad",
+      "rawBytes": 194347,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-sheet-jcs-subset-v2",
+        "digest": "eb6fd9253acb5b2133ee2466a14e280c2ca59dc07cfc2acc09e84090eb4d4fa7",
+        "canonicalBytes": 96746
+      },
+      "semanticReplay": "PASS",
+      "replayPolicy": {
+        "id": "exact-canonical-payload/1"
+      }
+    }
+  ],
+  "reproductionResources": [
+    {
+      "id": "programmable-sheet-fabrication-package-v1",
+      "manifestPath": "artifacts/global-geometry-ii/fabrication/fabrication-manifest.json",
+      "schemaVersion": 1,
+      "rawSha256": "c8f89fcce1911fdade965266152e8173837b438620cf2133af1a82c9ee252c60",
+      "rawBytes": 5829,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-release-json-v1",
+        "digest": "08170dc008d05682546907cd2f66743c1f244c0f290dd2c32510f96fb9d659d4",
+        "canonicalBytes": 4898
+      },
+      "files": [
+        {
+          "path": "GLOBAL_GEOMETRY_II_SHEET_EXPERIMENT.md",
+          "role": "protocol, calibration, uncertainty, HIL, safety, and falsification document",
+          "sha256": "c95d9e964fadae32d292549d3b13e3bd1001945e61dbbcbba08bab5895a3f131",
+          "bytes": 23307
+        },
+        {
+          "path": "artifacts/global-geometry-ii/fabrication/q5-star-template.svg",
+          "role": "q=5 printable vector template",
+          "sha256": "379cc7d5551a954ad15335255609ec0341f0f92e09aa10db586f93bd352a4b82",
+          "bytes": 9832
+        },
+        {
+          "path": "artifacts/global-geometry-ii/fabrication/q6-star-template.svg",
+          "role": "q=6 printable vector template",
+          "sha256": "3e158317ab2be17e24d7072140df3ac86ecde25572396552e55c6a08bf13b42d",
+          "bytes": 9986
+        },
+        {
+          "path": "artifacts/global-geometry-ii/fabrication/q7-star-template.svg",
+          "role": "q=7 printable vector template",
+          "sha256": "8bbdcad534a87f6136fbc6331c0cf23f57110f88108ef16fab298dccf39626c2",
+          "bytes": 10247
+        },
+        {
+          "path": "artifacts/global-geometry-ii/fabrication/validate-fabrication.js",
+          "role": "cross-platform dependency-free vector and exact-identity audit",
+          "sha256": "af13a8e942fdf2dd2e289c13fc5d7a6e33a3f9c9a4cd69e05e2a44ef83672c27",
+          "bytes": 5737
+        }
+      ],
+      "validation": "INTERNAL_HASHES_PASS",
+      "physicalValidation": "NOT_RUN",
+      "hardwareAuthorization": false,
+      "purchaseAuthorization": false
+    }
+  ],
+  "certificationPolicy": {
+    "localVerificationMeaning": "A PASS certifies only this invocation, environment, source snapshot, artifact replay, and focused test outcomes.",
+    "crossPlatformEqualityClaim": "NOT_MADE",
+    "requiredIndependentPlatforms": [
+      "darwin",
+      "win32"
+    ],
+    "requiredIndependentCertificates": 2,
+    "windowsCertificate": "REQUIRED_EXTERNAL_INPUT_NOT_BUNDLED_OR_SIMULATED",
+    "externalComparisonRecord": "artifacts/global-geometry-ii/certificates/macos-windows-comparison-v1.json",
+    "releaseGate": "STATUS_DELEGATED_TO_EXTERNAL_COMPARISON_RECORD"
+  },
+  "approvalGates": {
+    "publication": "requires explicit user approval",
+    "merge": "requires explicit user approval",
+    "hardwarePurchaseOrFabrication": "requires explicit user approval"
+  },
+  "exclusions": [
+    "No certificate is bundled in the deterministic release manifest.",
+    "No passing local run proves numerical equality with a different operating system or machine.",
+    "No network service, package manager, browser session, camera, actuator, or physical sheet is exercised."
+  ],
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "ggii-release-json-v1",
+    "digest": "222f2c9051799f69c3c345f4c6ced006fa1aaadd605fb047fae8eb2e0fcfbe52",
+    "canonicalBytes": 17040
+  }
+}

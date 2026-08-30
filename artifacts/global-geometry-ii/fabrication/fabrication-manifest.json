@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "designId": "ggii-passive-equilateral-q-star-v1",
+  "releaseStatus": "DIGITAL_FABRICATION_PACKAGE_ONLY",
+  "physicalValidation": "NOT_RUN",
+  "hardwareAuthorization": false,
+  "purchaseAuthorization": false,
+  "protocolBinding": {
+    "module": "website/global-geometry-lab/global-geometry-ii-sheet.js",
+    "moduleVersionObservedAtGeneration": "0.2.0-alpha.1",
+    "schemaVersion": 2,
+    "protocol": "ggii-hil/2",
+    "safetyMode": "OBSERVATION_BOUND",
+    "transport": "in-memory-only",
+    "virtualOnly": true,
+    "hardwareAccess": false
+  },
+  "page": {
+    "format": "A4 portrait",
+    "widthMm": 210,
+    "heightMm": 297,
+    "viewBox": [0, 0, 210, 297],
+    "printInstruction": "Print at 100 percent or actual size; never fit to page.",
+    "rejectIfMeasured100MmBarErrorExceedsMm": 0.5
+  },
+  "faceGeometry": {
+    "units": "mm",
+    "nominalSideLengthMm": 60,
+    "localVerticesMm": [[0, 0], [60, 0], [30, 51.9615242271]],
+    "exactThirdVertexY": "30*sqrt(3)",
+    "provisionalMaximumFabricatedEdgeErrorMm": 0.5,
+    "authoritativeIdealShape": "equilateral triangle",
+    "hingeGapMm": 1,
+    "hingeGapExcludedFromFaceDimensions": true
+  },
+  "fiducialLocation": {
+    "cameraDecodableMarkerIncluded": false,
+    "placeholderOnly": true,
+    "outerSizeMm": 20,
+    "localTopLeftMm": [20, 9],
+    "localCornersMm": [[20, 9], [40, 9], [40, 29], [20, 29]],
+    "clearanceTopLeftMm": [19, 8],
+    "clearanceSizeMm": [22, 22],
+    "installationRequirement": "Install a separately validated tag from a frozen dictionary and record its measured marker-to-face transform before any camera trial."
+  },
+  "lineSemantics": {
+    "cut": "solid heavy perimeter",
+    "hingeGuide": "long dash inside radial edge; do not cut",
+    "fiducialClearance": "short-dot no-cut/no-hinge box",
+    "fiducialLocation": "dash-dot 20 mm placeholder square",
+    "identifiedCenter": "dotted circular center-corner mark"
+  },
+  "assembly": {
+    "topology": "disk",
+    "cyclicRule": "R_i <-> L_((i+1) mod q)",
+    "initialHinges": "Join R_i to L_(i+1) for i=0 through q-2.",
+    "finalSeam": "Join R_(q-1) to L_0 only after the q-specific lifting instruction.",
+    "q5Instruction": "Lift and close without creasing a face.",
+    "q6Instruction": "Close on a flat reference plane without forcing it.",
+    "q7Instruction": "Lift into a low-strain nonplanar fold before closure; do not force flat."
+  },
+  "exactIntrinsicPrograms": [
+    {
+      "q": 5,
+      "vertices": 6,
+      "edges": 10,
+      "faces": 5,
+      "eulerCharacteristic": 1,
+      "centerDefectPiCoefficient": {"numerator": 1, "denominator": 3},
+      "eachBoundaryDefectPiCoefficient": {"numerator": 1, "denominator": 3},
+      "totalDefectPiCoefficient": {"numerator": 2, "denominator": 1}
+    },
+    {
+      "q": 6,
+      "vertices": 7,
+      "edges": 12,
+      "faces": 6,
+      "eulerCharacteristic": 1,
+      "centerDefectPiCoefficient": {"numerator": 0, "denominator": 1},
+      "eachBoundaryDefectPiCoefficient": {"numerator": 1, "denominator": 3},
+      "totalDefectPiCoefficient": {"numerator": 2, "denominator": 1}
+    },
+    {
+      "q": 7,
+      "vertices": 8,
+      "edges": 14,
+      "faces": 7,
+      "eulerCharacteristic": 1,
+      "centerDefectPiCoefficient": {"numerator": -1, "denominator": 3},
+      "eachBoundaryDefectPiCoefficient": {"numerator": 1, "denominator": 3},
+      "totalDefectPiCoefficient": {"numerator": 2, "denominator": 1}
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "GLOBAL_GEOMETRY_II_SHEET_EXPERIMENT.md",
+      "role": "protocol, calibration, uncertainty, HIL, safety, and falsification document",
+      "sha256": "c95d9e964fadae32d292549d3b13e3bd1001945e61dbbcbba08bab5895a3f131"
+    },
+    {
+      "path": "artifacts/global-geometry-ii/fabrication/q5-star-template.svg",
+      "role": "q=5 printable vector template",
+      "sha256": "379cc7d5551a954ad15335255609ec0341f0f92e09aa10db586f93bd352a4b82"
+    },
+    {
+      "path": "artifacts/global-geometry-ii/fabrication/q6-star-template.svg",
+      "role": "q=6 printable vector template",
+      "sha256": "3e158317ab2be17e24d7072140df3ac86ecde25572396552e55c6a08bf13b42d"
+    },
+    {
+      "path": "artifacts/global-geometry-ii/fabrication/q7-star-template.svg",
+      "role": "q=7 printable vector template",
+      "sha256": "8bbdcad534a87f6136fbc6331c0cf23f57110f88108ef16fab298dccf39626c2"
+    },
+    {
+      "path": "artifacts/global-geometry-ii/fabrication/validate-fabrication.js",
+      "role": "cross-platform dependency-free vector and exact-identity audit",
+      "sha256": "af13a8e942fdf2dd2e289c13fc5d7a6e33a3f9c9a4cd69e05e2a44ef83672c27"
+    }
+  ],
+  "validationCommands": [
+    "node artifacts/global-geometry-ii/fabrication/validate-fabrication.js",
+    "xmllint --noout artifacts/global-geometry-ii/fabrication/q5-star-template.svg artifacts/global-geometry-ii/fabrication/q6-star-template.svg artifacts/global-geometry-ii/fabrication/q7-star-template.svg",
+    "node website/global-geometry-lab/test-global-geometry-ii-sheet.js"
+  ],
+  "evidence": {
+    "intrinsicIdentity": {
+      "evidenceClass": "exact-finite-identity",
+      "basis": "combinatorial-identity",
+      "claimBoundary": "Exact only for the declared equilateral finite incidence complex."
+    },
+    "printableVectors": {
+      "evidenceClass": "deterministic-design-artifact",
+      "claimBoundary": "Nominal vector dimensions; print scale and cut geometry remain unmeasured."
+    },
+    "physicalExperiment": {
+      "status": "NOT_RUN",
+      "evidenceClass": "none"
+    }
+  },
+  "claimsNotEstablished": [
+    "fabrication accuracy",
+    "camera calibration or observability",
+    "unique extrinsic embedding",
+    "elastic equilibrium or constitutive law",
+    "physical repeatability",
+    "hardware safety validation",
+    "active actuator performance"
+  ]
+}
