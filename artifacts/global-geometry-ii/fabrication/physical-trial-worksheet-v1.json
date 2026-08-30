@@ -1,0 +1,124 @@
+{
+  "schema": "ggii.physical-trial-worksheet/1",
+  "templateStatus": "BLANK_NOT_RUN",
+  "copyBeforeUse": true,
+  "instructions": "Copy this file to a new trial record, preserve every raw measurement, and change a gate only from observed evidence. Never overwrite this blank template with a completed run.",
+  "authorization": {
+    "operatorAcceptedPassiveProtocol": false,
+    "printerUseAuthorized": false,
+    "cuttingAndAssemblyAuthorized": false,
+    "apparatusOnlyCameraCaptureAuthorized": false
+  },
+  "trialIdentity": {
+    "trialId": null,
+    "targetQ": null,
+    "templateSha256": null,
+    "softwareCommit": null,
+    "operatorStudyId": null,
+    "environmentNotes": null
+  },
+  "materials": {
+    "stockDescription": null,
+    "hingeDescription": null,
+    "closureDescription": null,
+    "lengthInstrument": null,
+    "instrumentResolutionMm": null
+  },
+  "frozenThresholds": {
+    "absolute100MmScaleErrorMaxMm": 0.5,
+    "faceEdgeErrorMaxMm": 0.5,
+    "cameraReprojectionRmsMaxPx": 1,
+    "expectedTagVisibilityMinFraction": 0.8,
+    "sharedEdgeEndpointDiscrepancyMaxMm": 1.5,
+    "flatQ6PlaneRmsMaxMm": 2,
+    "wedgeDihedralErrorMaxDeg": 3,
+    "independentAssembliesPerQMin": 5
+  },
+  "printAudit": {
+    "printerStudyId": null,
+    "pageSize": null,
+    "resolutionDpi": null,
+    "actualSizeSelected": null,
+    "horizontal10MmObservedMm": null,
+    "horizontal100MmObservedMm": null,
+    "vertical100MmObservedMm": null,
+    "accepted": null,
+    "rawEvidenceFiles": []
+  },
+  "faceAudit": {
+    "edgeMeasurementsMmByFace": [],
+    "hingeGapMeasurementsMm": [],
+    "fiducialCornerMeasurementsMmByFace": [],
+    "acceptedFaceIds": [],
+    "rejectedFaceIds": []
+  },
+  "incidenceAudit": {
+    "observedFaceIds": [],
+    "observedCyclicSeams": [],
+    "eulerCharacteristic": null,
+    "accepted": null
+  },
+  "cameraCalibration": {
+    "cameraStudyId": null,
+    "resolutionPx": null,
+    "lensMode": null,
+    "usableBoardViews": null,
+    "reprojectionRmsPx": null,
+    "distortionModel": null,
+    "markerDictionary": null,
+    "tagSizeMm": null,
+    "expectedTags": null,
+    "observedTags": null,
+    "peopleAbsentFromFrameConfirmed": null,
+    "audioDisabledConfirmed": null,
+    "accepted": null,
+    "rawEvidenceFiles": []
+  },
+  "referenceChecks": {
+    "flatQ6PlaneRmsMm": null,
+    "wedgeErrorsDeg": {
+      "0": null,
+      "30": null,
+      "60": null
+    },
+    "accepted": null
+  },
+  "trialMeasurements": {
+    "assemblyOrderSeed": null,
+    "assemblyIndex": null,
+    "unfusedFaceCornerEstimates": [],
+    "sharedEdgeEndpointDiscrepanciesMm": [],
+    "centerDefectRad": null,
+    "centerDefect95IntervalRad": null,
+    "totalDefectRad": null,
+    "totalDefect95IntervalRad": null,
+    "centerHeightMm": null,
+    "bestFitPlaneRmsMm": null,
+    "dihedralAnglesDeg": [],
+    "rawEvidenceFiles": []
+  },
+  "gates": {
+    "print": "NOT_RUN",
+    "faces": "NOT_RUN",
+    "incidence": "NOT_RUN",
+    "camera": "NOT_RUN",
+    "visibility": "NOT_RUN",
+    "sharedEdges": "NOT_RUN",
+    "referencePlane": "NOT_RUN",
+    "wedges": "NOT_RUN",
+    "intrinsicSign": "NOT_RUN",
+    "totalDefect": "NOT_RUN"
+  },
+  "stopConditionsChecked": {
+    "damagedFace": null,
+    "sharpEdge": null,
+    "forcedQ7Flattening": null,
+    "uncontrolledSnapThrough": null,
+    "failedCameraGate": null,
+    "personEnteredFrame": null,
+    "staleCalibration": null,
+    "unexpectedPowerOrActuatorActivity": null
+  },
+  "finalDecision": "NOT_RUN",
+  "notes": []
+}

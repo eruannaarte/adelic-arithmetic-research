@@ -1,0 +1,53 @@
+{
+  "schema": "ggii.physical-printer-profile/1",
+  "profileId": "a4-border-6.35x12.7-dry-filter-v1",
+  "evidenceBoundary": "Sanitized capability values transcribed from a local PPD and CUPS dry-filter run. No printer job was submitted and no host, user, queue, URI, serial number, timestamp, or device nickname is retained.",
+  "hostVolatileIdentifiersRetained": false,
+  "page": {
+    "name": "A4",
+    "widthMm": 210,
+    "heightMm": 297,
+    "widthPt": 595,
+    "heightPt": 842
+  },
+  "imagingBoxPt": {
+    "left": 18,
+    "top": 36,
+    "right": 577,
+    "bottom": 806
+  },
+  "supportedResolutionDpi": [300, 600],
+  "dryRasterObservations": [
+    {
+      "dpi": 300,
+      "rasterWidthPx": 2329,
+      "rasterHeightPx": 3208,
+      "fitToPage": false,
+      "drawingMode": "unscaled",
+      "jobSubmitted": false
+    },
+    {
+      "dpi": 600,
+      "rasterWidthPx": 4658,
+      "rasterHeightPx": 6417,
+      "fitToPage": false,
+      "drawingMode": "unscaled",
+      "jobSubmitted": false
+    }
+  ],
+  "rendererObservation300Dpi": {
+    "fullPageWidthPx": 2481,
+    "fullPageHeightPx": 3508,
+    "foregroundBounds": {
+      "x": 91,
+      "y": 162,
+      "width": 2298,
+      "height": 3180
+    },
+    "printableOriginPx": [75, 150],
+    "printableSizePx": [2329, 3208],
+    "scope": "Renderer-specific visual preflight only; analytic millimetre clearance is authoritative."
+  },
+  "connectivity": "NOT_EVALUATED",
+  "physicalOutput": "NOT_RUN"
+}

@@ -4,6 +4,8 @@
      role="img" aria-labelledby="title desc"
      data-design="ggii-q-star" data-q="5" data-units="mm"
      data-page="A4-portrait" data-nominal-side-mm="60"
+     data-layout-revision="printer-safe-v2"
+     data-required-printable-box-mm="7.75 13.75 202.25 283.25"
      data-hinge-gap-mm="1.0" data-physical-validation="NOT_RUN">
   <title id="title">Global Geometry II q=5 programmable-sheet template</title>
   <desc id="desc">Five detached 60 millimetre equilateral paper faces with cut, hinge, fiducial, center, scale, assembly, and safety markings.</desc>
@@ -59,13 +61,13 @@
 
   <rect id="page-background" x="0" y="0" width="210" height="297" fill="#fff"/>
 
-  <text class="heading" x="6" y="6">GLOBAL GEOMETRY II — q=5 STAR / +π/3 CENTER DEFECT</text>
-  <rect x="5.5" y="9" width="199" height="14" rx="1.2"
+  <rect data-role="print-safe-header" x="8" y="14" width="194" height="13" rx="1.2"
         fill="#fff4f4" stroke="#7a1f1f" stroke-width=".5" stroke-dasharray="3 1"/>
-  <text class="warning" x="105" y="14">PASSIVE PAPER RESEARCH TEMPLATE — NO ACTUATORS — NOT A CONTROL DRAWING</text>
-  <text class="warning" x="105" y="19">PRINT 100% / ACTUAL SIZE • PHYSICAL VALIDATION NOT PERFORMED • KEEP THIS BANNER</text>
+  <text class="heading" x="105" y="17.9" text-anchor="middle">GLOBAL GEOMETRY II — q=5 STAR / +π/3 CENTER DEFECT</text>
+  <text class="warning" x="105" y="21.7">PASSIVE PAPER RESEARCH TEMPLATE — NO ACTUATORS — NOT A CONTROL DRAWING</text>
+  <text class="warning" x="105" y="25.2">PRINT 100% / ACTUAL SIZE • PHYSICAL VALIDATION NOT PERFORMED • KEEP THIS BANNER</text>
 
-  <g id="face-00" transform="translate(8 28)" data-face-id="face-00" data-marker-location-id="F00" data-nominal-side-mm="60">
+  <g id="face-00" transform="translate(10 28)" data-face-id="face-00" data-marker-location-id="F00" data-nominal-side-mm="60">
     <use href="#nominal-face"/>
     <text class="face-id" x="7" y="8">face-00</text>
     <text class="fid-id" x="30" y="20">F00</text>
@@ -77,13 +79,13 @@
     <text class="fid-id" x="30" y="20">F01</text>
     <text class="tiny" x="30" y="23" text-anchor="middle">PLACEHOLDER</text>
   </g>
-  <g id="face-02" transform="translate(142 28)" data-face-id="face-02" data-marker-location-id="F02" data-nominal-side-mm="60">
+  <g id="face-02" transform="translate(140 28)" data-face-id="face-02" data-marker-location-id="F02" data-nominal-side-mm="60">
     <use href="#nominal-face"/>
     <text class="face-id" x="7" y="8">face-02</text>
     <text class="fid-id" x="30" y="20">F02</text>
     <text class="tiny" x="30" y="23" text-anchor="middle">PLACEHOLDER</text>
   </g>
-  <g id="face-03" transform="translate(8 88)" data-face-id="face-03" data-marker-location-id="F03" data-nominal-side-mm="60">
+  <g id="face-03" transform="translate(10 88)" data-face-id="face-03" data-marker-location-id="F03" data-nominal-side-mm="60">
     <use href="#nominal-face"/>
     <text class="face-id" x="7" y="8">face-03</text>
     <text class="fid-id" x="30" y="20">F03</text>
@@ -96,7 +98,7 @@
     <text class="tiny" x="30" y="23" text-anchor="middle">PLACEHOLDER</text>
   </g>
 
-  <g id="program-note" transform="translate(8 153)">
+  <g id="program-note" transform="translate(10 153)">
     <text class="formula" x="0" y="0">EXACT IDEAL PROGRAM: Kc=(6−5)π/3=+π/3</text>
     <text class="subheading" x="0" y="5">Each boundary defect: +π/3 • total: 2π • χ=1</text>
     <text class="subheading" x="0" y="10">Cyclic hinges: R0↔L1, R1↔L2, R2↔L3, R3↔L4</text>
@@ -105,13 +107,13 @@
   </g>
 
   <line class="guide" data-role="vertical-100mm-scale" data-length-mm="100"
-        x1="206" y1="88" x2="206" y2="188"/>
-  <line class="guide" x1="203.5" y1="88" x2="208.5" y2="88"/>
-  <line class="guide" x1="203.5" y1="188" x2="208.5" y2="188"/>
-  <text class="tiny" transform="translate(208.5 151) rotate(-90)" text-anchor="middle">100 mm vertical check</text>
+        x1="201" y1="88" x2="201" y2="188"/>
+  <line class="guide" x1="200.4" y1="88" x2="202" y2="88"/>
+  <line class="guide" x1="200.4" y1="188" x2="202" y2="188"/>
+  <text class="tiny" transform="translate(202 151) rotate(-90)" text-anchor="middle">100 mm vertical check</text>
 
   <g id="legend">
-    <rect x="6" y="204" width="198" height="51" rx="1.2"
+    <rect data-role="print-safe-legend" x="8" y="204" width="194" height="51" rx="1.2"
           fill="#fbfbfb" stroke="#555" stroke-width=".35"/>
     <text class="face-id" x="10" y="210">CUT / FOLD-HINGE / FIDUCIAL LEGEND</text>
     <line class="cut" x1="11" y1="216" x2="37" y2="216"/>
@@ -159,6 +161,6 @@
     <text class="small" x="112" y="276">100 mm total</text>
   </g>
 
-  <text class="warning" x="105" y="286">CUT ONLY SOLID FACE PERIMETERS • VERIFY BOTH SCALE DIRECTIONS • KEEP q=7 AWAY FROM FACE/EYES</text>
-  <text class="tiny" x="105" y="291" text-anchor="middle">Nominal geometry only • 60 mm face side • 1.0 mm assembly gap • fiducials/calibration/physical trials NOT RUN</text>
+  <text class="warning" x="105" y="279">CUT ONLY SOLID FACE PERIMETERS • VERIFY BOTH SCALE DIRECTIONS • KEEP ASSEMBLY AWAY FROM FACE/EYES</text>
+  <text class="tiny" x="105" y="282.5" text-anchor="middle">Nominal geometry only • 60 mm face side • 1.0 mm assembly gap • fiducials/calibration/physical trials NOT RUN</text>
 </svg>

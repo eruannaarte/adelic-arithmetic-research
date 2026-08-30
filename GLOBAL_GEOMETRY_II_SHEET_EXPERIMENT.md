@@ -3,8 +3,10 @@
 ## Fabrication-ready protocol, evidence boundary, and acceptance plan
 
 **Release status:** digital fabrication package; passive bench protocol ready
-for review; no object fabricated; no camera calibrated; no hardware connected;
-no physical result claimed.
+for review; A4 vector and printer-driver dry preflight passed on the frozen
+sanitized profile; no print job was submitted; no object was fabricated; no
+camera was calibrated; no hardware was connected; no physical result is
+claimed.
 
 This package turns the protocol-v2 q-star model into a small, reproducible
 experiment about a sharply scoped question:
@@ -22,7 +24,7 @@ physical experiment. They must never be reported at the same evidence level.
 | Layer | Statement | Status |
 |---|---|---|
 | Ideal intrinsic complex | A disk made from q equilateral triangles has center defect \((6-q)\pi/3\), boundary defect \(\pi/3\) at each outer vertex, and total defect \(2\pi\) | `exact-finite-identity`; proved below and implemented by `createQStar` |
-| Printable geometry | Each face in the SVGs is a nominal 60 mm equilateral triangle; face IDs and cyclic seam graph are explicit | Deterministic vector construction; dimensions still require print-scale inspection |
+| Printable geometry | Each face in the SVGs is a nominal 60 mm equilateral triangle; face IDs and cyclic seam graph are explicit | Deterministic vector construction; `PASS_DRIVER_PROFILE_DRY_PREFLIGHT_ONLY` with 1.05 mm minimum analytic clearance; physical print scale still unmeasured |
 | Fabricated intrinsic geometry | Cut faces approximate the nominal side lengths and angles | `finite-numerical-estimate`; not measured |
 | Virtual hinge/height plant | Bounded q-star response implemented by the in-memory HIL emulator | Engineering model; not a constitutive law |
 | Camera reconstruction | Proposed calibrated pose and vertex-fusion pipeline | Protocol only; not executed |
@@ -83,7 +85,15 @@ The printable files are:
 
 The same directory contains `fabrication-manifest.json`, which records the
 protocol binding, dimensions, exact programs, claim boundaries, and SHA-256
-digests, plus the read-only `validate-fabrication.js` reproduction audit.
+digests, plus the read-only `validate-fabrication.js` reproduction audit. It
+also contains:
+
+- `physical-preflight-profile-v1.json`, a sanitized A4 printer profile with no
+  host, queue, URI, serial number, user, nickname, or timestamp;
+- `physical-preflight-v1.json`, the content-addressed dry-preflight evidence;
+  and
+- `physical-trial-worksheet-v1.json`, a blank, copy-before-use measurement
+  record whose authorization, gates, and decision all remain `NOT_RUN`.
 
 Each file is an A4 portrait SVG with `width="210mm"`, `height="297mm"`, and a
 matching `viewBox`. It contains q detached faces. Every face uses the nominal
@@ -97,6 +107,15 @@ local coordinates
 The artwork has no external font, image, script, or web dependency. Print at
 100% or “actual size”; never use “fit to page.” The 10 mm and 100 mm scale bars
 are acceptance gauges, not decoration.
+
+The `printer-safe-v2` layout was checked analytically against the frozen A4
+imaging box and through unscaled 300 and 600 dpi CUPS dry filters. All three
+templates have 1.05 mm minimum analytic clearance; the 300 dpi renderer check
+has 12 pixels of minimum foreground clearance. These are file/driver
+compatibility results only. They establish neither printer connectivity nor
+paper feed, ink output, physical scale, cut accuracy, or material response.
+The committed preflight artifact keeps each of those fields explicitly
+`NOT_RUN`.
 
 Line semantics do not depend on color:
 
@@ -449,6 +468,8 @@ From the repository root, validate the mathematical/HIL implementation with:
 
 ```sh
 node website/global-geometry-lab/test-global-geometry-ii-sheet.js
+node website/global-geometry-lab/test-global-geometry-ii-physical-preflight.js
+node website/global-geometry-lab/generate-global-geometry-ii-physical-preflight.js
 ```
 
 Validate the SVG package with an XML parser and the deterministic geometry

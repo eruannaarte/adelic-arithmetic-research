@@ -1,0 +1,204 @@
+{
+  "schema": "ggii.physical-preflight-evidence/1",
+  "evidenceStatus": "PASS_DRIVER_PROFILE_DRY_PREFLIGHT_ONLY",
+  "physicalValidation": "NOT_RUN",
+  "cameraValidation": "NOT_RUN",
+  "printJobSubmitted": false,
+  "scope": {
+    "established": [
+      "the q=5,6,7 vector foreground envelopes fit the frozen sanitized A4 imaging box with positive analytic clearance",
+      "the frozen 300/600 dpi dry-filter observations used 100 percent unscaled placement",
+      "the renderer-specific 300 dpi foreground envelope remains inside the dry printable raster"
+    ],
+    "notEstablished": [
+      "printer connectivity, paper feed, ink output, or physical print scale",
+      "cut dimensions, hinge gaps, incidence, assembly, or material response",
+      "camera line of sight, permission, calibration, fiducial decoding, or 3-D reconstruction",
+      "intrinsic or extrinsic physical measurements and repeatability"
+    ]
+  },
+  "normalizedPrinterProfile": {
+    "schema": "ggii.physical-printer-profile/1",
+    "profileId": "a4-border-6.35x12.7-dry-filter-v1",
+    "evidenceBoundary": "Sanitized capability values transcribed from a local PPD and CUPS dry-filter run. No printer job was submitted and no host, user, queue, URI, serial number, timestamp, or device nickname is retained.",
+    "hostVolatileIdentifiersRetained": false,
+    "page": {
+      "name": "A4",
+      "widthMm": 210,
+      "heightMm": 297,
+      "widthPt": 595,
+      "heightPt": 842
+    },
+    "imagingBoxPt": {
+      "left": 18,
+      "top": 36,
+      "right": 577,
+      "bottom": 806
+    },
+    "supportedResolutionDpi": [
+      300,
+      600
+    ],
+    "dryRasterObservations": [
+      {
+        "dpi": 300,
+        "rasterWidthPx": 2329,
+        "rasterHeightPx": 3208,
+        "fitToPage": false,
+        "drawingMode": "unscaled",
+        "jobSubmitted": false
+      },
+      {
+        "dpi": 600,
+        "rasterWidthPx": 4658,
+        "rasterHeightPx": 6417,
+        "fitToPage": false,
+        "drawingMode": "unscaled",
+        "jobSubmitted": false
+      }
+    ],
+    "rendererObservation300Dpi": {
+      "fullPageWidthPx": 2481,
+      "fullPageHeightPx": 3508,
+      "foregroundBounds": {
+        "x": 91,
+        "y": 162,
+        "width": 2298,
+        "height": 3180
+      },
+      "printableOriginPx": [
+        75,
+        150
+      ],
+      "printableSizePx": [
+        2329,
+        3208
+      ],
+      "scope": "Renderer-specific visual preflight only; analytic millimetre clearance is authoritative."
+    },
+    "connectivity": "NOT_EVALUATED",
+    "physicalOutput": "NOT_RUN",
+    "source": {
+      "path": "artifacts/global-geometry-ii/fabrication/physical-preflight-profile-v1.json",
+      "sha256": "817a942a68b9903ebe739995db7f3f0b61068bfad34b617d91793109ff8b379c",
+      "bytes": 1452
+    }
+  },
+  "templates": [
+    {
+      "path": "artifacts/global-geometry-ii/fabrication/q5-star-template.svg",
+      "sha256": "eaab5ef8bc0ee323429813808361b63962d0499625df488ca820ddc8cd0d9739",
+      "bytes": 10032,
+      "q": 5,
+      "layoutRevision": "printer-safe-v2",
+      "requiredPrintableBoxMm": [
+        7.75,
+        13.75,
+        202.25,
+        283.25
+      ],
+      "availablePrintableBoxMm": [
+        6.35,
+        12.7,
+        203.552777777778,
+        284.338888888889
+      ],
+      "clearanceMm": {
+        "left": 1.4,
+        "top": 1.05,
+        "right": 1.302777777778,
+        "bottom": 1.088888888889
+      },
+      "minimumClearanceMm": 1.05
+    },
+    {
+      "path": "artifacts/global-geometry-ii/fabrication/q6-star-template.svg",
+      "sha256": "d2329b8c7285a08ac2cace58a4749abed74b4a88b87839c27e9df78592e612a1",
+      "bytes": 10181,
+      "q": 6,
+      "layoutRevision": "printer-safe-v2",
+      "requiredPrintableBoxMm": [
+        7.75,
+        13.75,
+        202.25,
+        283.25
+      ],
+      "availablePrintableBoxMm": [
+        6.35,
+        12.7,
+        203.552777777778,
+        284.338888888889
+      ],
+      "clearanceMm": {
+        "left": 1.4,
+        "top": 1.05,
+        "right": 1.302777777778,
+        "bottom": 1.088888888889
+      },
+      "minimumClearanceMm": 1.05
+    },
+    {
+      "path": "artifacts/global-geometry-ii/fabrication/q7-star-template.svg",
+      "sha256": "cf60c6b32c7f93eb8975e9750314db29c7811aa68645299d357dea04744263d4",
+      "bytes": 10442,
+      "q": 7,
+      "layoutRevision": "printer-safe-v2",
+      "requiredPrintableBoxMm": [
+        7.75,
+        13.75,
+        202.25,
+        283.25
+      ],
+      "availablePrintableBoxMm": [
+        6.35,
+        12.7,
+        203.552777777778,
+        284.338888888889
+      ],
+      "clearanceMm": {
+        "left": 1.4,
+        "top": 1.05,
+        "right": 1.302777777778,
+        "bottom": 1.088888888889
+      },
+      "minimumClearanceMm": 1.05
+    }
+  ],
+  "rendererClearance300DpiPx": {
+    "left": 16,
+    "top": 12,
+    "right": 15,
+    "bottom": 16,
+    "minimum": 12
+  },
+  "operatorWorksheet": {
+    "path": "artifacts/global-geometry-ii/fabrication/physical-trial-worksheet-v1.json",
+    "sha256": "4e1c8996819256555ad6fa2f77aa3313465a2876c83867e0c91c45f97df59e19",
+    "bytes": 3469,
+    "schema": "ggii.physical-trial-worksheet/1",
+    "templateStatus": "BLANK_NOT_RUN"
+  },
+  "reproductionCommands": {
+    "vectorAudit": "node artifacts/global-geometry-ii/fabrication/validate-fabrication.js",
+    "xmlAudit": "xmllint --noout artifacts/global-geometry-ii/fabrication/q5-star-template.svg artifacts/global-geometry-ii/fabrication/q6-star-template.svg artifacts/global-geometry-ii/fabrication/q7-star-template.svg",
+    "pdfRender": "rsvg-convert --format=pdf --output=<tmp>/q<q>.pdf artifacts/global-geometry-ii/fabrication/q<q>-star-template.svg",
+    "foregroundRender": "pdftoppm -png -r 300 -singlefile <tmp>/q<q>.pdf <tmp>/q<q>-full",
+    "foregroundBounds": "magick identify -format 'page=%wx%h foreground=%@\\n' <tmp>/q<q>-full.png",
+    "dryRaster300": "cupsfilter -p <ppd> -i application/pdf -m application/vnd.cups-raster -o PageSize=A4 -o Resolution=300dpi -o scaling=100 <tmp>/q<q>.pdf > <tmp>/q<q>-a4-300.raster",
+    "dryRaster600": "cupsfilter -p <ppd> -i application/pdf -m application/vnd.cups-raster -o PageSize=A4 -o Resolution=600dpi -o scaling=100 <tmp>/q<q>.pdf > <tmp>/q<q>-a4-600.raster"
+  },
+  "handoffRequired": [
+    "operator powers and loads an approved printer and explicitly selects actual size",
+    "operator measures both scale directions and every face edge before cutting",
+    "operator cuts, hinges, audits incidence, and assembles each q-star",
+    "operator installs a frozen decodable marker dictionary and records tag-to-face transforms",
+    "operator positions an apparatus-only camera, grants capture permission, and completes calibration/reference gates",
+    "operator performs at least five independently seeded assemblies per q and retains every valid trial"
+  ],
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "ggii-physical-preflight-jcs-subset-v1",
+    "digest": "44ceee5021ff84cbf2e65648eb37e1d0f486641b48b207dabba7eea470a0c34f",
+    "canonicalBytes": 5427
+  }
+}
