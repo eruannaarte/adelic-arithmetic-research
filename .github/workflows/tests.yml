@@ -59,6 +59,7 @@ jobs:
         with:
           ref: 67f82de0a0b4152a102d984b096e6e3549376dd8
           path: .release-v2-snapshot
+          fetch-depth: 0
           persist-credentials: false
       - working-directory: .release-v2-snapshot
         run: node website/global-geometry-lab/reproduce-global-geometry-ii-v2.js --verify --mode quick
