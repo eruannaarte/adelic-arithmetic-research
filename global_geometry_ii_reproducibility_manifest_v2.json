@@ -1,0 +1,1251 @@
+{
+  "schema": "ggii.reproducibility-manifest/2",
+  "releaseId": "global-geometry-ii-evaluation-checkpoint-v2",
+  "purpose": "Reproducible, compact evidence checkpoint for Global Geometry II and its bounded U2 evaluation.",
+  "deterministicMetadata": "No generation timestamp, hostname, checkout path, git state, or machine-specific outcome is included in this addressable payload.",
+  "claimBoundary": {
+    "checkpointStatus": "UNRESOLVED",
+    "u2Decision": "NO_ACCEPTANCE_OR_REJECTION_CLAIM",
+    "universalityClaim": "NONE",
+    "fullConfirmatoryEvaluation": "NOT_RUN",
+    "physicalValidation": "NOT_RUN",
+    "publicationMeaning": "SHAREABLE_EVIDENCE_CHECKPOINT_NOT_A_CONFIRMATORY_DECISION",
+    "interpretation": "This release packages an evidence checkpoint. It makes no U2 acceptance or rejection decision, no universality claim, and no physical-validation claim."
+  },
+  "historicalV1": {
+    "classification": "HISTORICAL_PRIOR_RELEASE_ONLY_DOES_NOT_CERTIFY_V2",
+    "releaseIndexPath": "artifacts/global-geometry-ii/release-index-v1.json",
+    "comparisonPath": "artifacts/global-geometry-ii/certificates/macos-windows-comparison-v1.json",
+    "interpretation": "The v1 index and comparison are retained as historical prior-release records only; neither certifies the v2 source, artifact, evaluation, or suite surface."
+  },
+  "execution": {
+    "entrypoint": "website/global-geometry-lab/reproduce-global-geometry-ii-v2.js",
+    "quickCommand": "node website/global-geometry-lab/reproduce-global-geometry-ii-v2.js --verify --mode quick",
+    "deepCommand": "node website/global-geometry-lab/reproduce-global-geometry-ii-v2.js --verify --mode deep",
+    "comparator": "website/global-geometry-lab/compare-global-geometry-ii-certificates-v2.js",
+    "network": "not used",
+    "packageInstallation": "not used",
+    "runtimeDependency": "Node.js standard library only",
+    "quickMeaning": "Closed source/artifact hashes plus focused deterministic unit and adversarial suites; no expensive current-artifact revalidation.",
+    "deepMeaning": "The complete quick surface plus the registry-frozen read-only current-artifact validators.",
+    "quickSuites": [
+      {
+        "id": "global-geometry-i-core",
+        "path": "website/global-geometry-lab/test-global-geometry-core.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-core",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-core.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-ensembles",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-ensembles.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-atlas",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-atlas.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-inverse",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-inverse.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-sheet",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-sheet.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-artifacts",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-artifacts.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-fabrication-vectors",
+        "path": "artifacts/global-geometry-ii/fabrication/validate-fabrication.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-physical-preflight",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-physical-preflight.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-u2-kernel",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-u2-kernel-adversarial",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-adversarial.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-u2-screening",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-screening.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-u2-screening-adversarial",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-screening-adversarial.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-u2-screening-v2",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-screening-v2.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-u2-screening-v2-adversarial",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-screening-v2-adversarial.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-u2-screening-v3",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-screening-execution-v3.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-u2-screening-v3-adversarial",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-screening-execution-v3-adversarial.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-u2-evaluation-v2",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-evaluation-index-v2.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-static-publication-v2",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-static-publication-v2.js",
+        "args": []
+      },
+      {
+        "id": "global-geometry-ii-release-v2",
+        "path": "website/global-geometry-lab/test-global-geometry-ii-release-v2.js",
+        "args": []
+      }
+    ],
+    "deepSuites": [
+      {
+        "id": "screening-v3-artifact-validation",
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-evaluation-index-v2.js",
+        "args": [
+          "--validate-screening"
+        ],
+        "timeoutMs": 1800000,
+        "readOnly": true,
+        "coverage": "screening-v3"
+      },
+      {
+        "id": "strict-partial-artifact-validation",
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-evaluation-index-v2.js",
+        "args": [
+          "--validate-strict"
+        ],
+        "timeoutMs": 1800000,
+        "readOnly": true,
+        "coverage": "strict-partial"
+      }
+    ]
+  },
+  "sourceManifest": {
+    "selection": "Portable js/html/css/md/ps1 sources below website/global-geometry-lab, fabrication validation JavaScript, the test workflow, root README, and Global Geometry II root documentation. Outcome directories are excluded.",
+    "count": 80,
+    "entries": [
+      {
+        "path": ".github/workflows/tests.yml",
+        "sha256": "83f9e913b777618011628f8b4bd0e273e6e5cb62e6ac803a9888240257923ba6",
+        "bytes": 2157
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_EVALUATION_REPAIR_AUDIT.md",
+        "sha256": "3810154ff591ca42a0e85d4ceb90900c09f85e79a6e3ff403525003bac6e0313",
+        "bytes": 9042
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_FOUNDATIONS.md",
+        "sha256": "c5aa7de08c3f3818a8e3ed1f3f6d196b0fc7efa80847f76b1cf87034ec789c16",
+        "bytes": 73773
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_IMPLEMENTATION_PLAN.md",
+        "sha256": "893f47060029170a8f8b28b4977a3f9e0266bc4caf8435de6a7b51d0c41fb974",
+        "bytes": 15922
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_INVERSE_SHEET_SPEC.md",
+        "sha256": "c1c439f998e92395ea0f3bad1c1cb93ac94172fdc14ec789b3c8b9cbed7f4292",
+        "bytes": 56661
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_MANUSCRIPT.md",
+        "sha256": "b0d47a577877f8dc9f102449ce188b235fb037a8cb33c4813967589493f3d0af",
+        "bytes": 60141
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_SHEET_EXPERIMENT.md",
+        "sha256": "89906fcd81eaaf228f3fcbfe6ba08ba4a0a06880e91b0191a0b3744c1a1a4a70",
+        "bytes": 24612
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_U2_ADVERSARIAL_PREREGISTRATION.md",
+        "sha256": "faffef2526d16f79b700102057d59745f0a4359ea7c386c318cc0ee4afd0d5dc",
+        "bytes": 23688
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_U2_EVALUATION_REPORT.md",
+        "sha256": "29315afc0624363ad0b2889d5b21dec7c9700eac2de769b5ac7f7446afd461c4",
+        "bytes": 11450
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_U2_FULL_EVALUATION_FEASIBILITY.md",
+        "sha256": "4f43bfafdfc31caac5b5e1b53d952507b998bbb0dbe7aef58a81d7994150acf4",
+        "bytes": 34133
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_UNIVERSALITY_SPEC.md",
+        "sha256": "d49a4e7b3cf31ed47c6cab462b6340f6dfa15434f56e4df4d7e70737e1afe885",
+        "bytes": 52967
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_WEBSITE_MANAGER_HANDOFF.md",
+        "sha256": "75b4268f41a4be94ed3e982d3c1437157381f05c0221d9a4e7f854cb020644da",
+        "bytes": 4487
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_LAB.md",
+        "sha256": "c988e23e0a6283cd21edec15939beb67d55c9090adea6212bfbab21004f0e17c",
+        "bytes": 17582
+      },
+      {
+        "path": "README.md",
+        "sha256": "481f89cb5fff6cda6e5117905fb7f664fe667dfc95e08f4334e5d4f97be55a45",
+        "bytes": 61466
+      },
+      {
+        "path": "artifacts/global-geometry-ii/fabrication/validate-fabrication.js",
+        "sha256": "37507b52427812913b29ec119c20d96d339d66a8c43da35a9507a4b08be6c23b",
+        "bytes": 7469
+      },
+      {
+        "path": "website/global-geometry-lab/README.md",
+        "sha256": "af32a6fd075e66bb9e1e2be950013cf0df46eac12946b306c69d8cf114512de5",
+        "bytes": 9567
+      },
+      {
+        "path": "website/global-geometry-lab/compare-global-geometry-ii-certificates-v2.js",
+        "sha256": "2a405bc6e055447e8aae7048681772fb1a6df866c4f473c2a5ae775a2c0fc5d7",
+        "bytes": 33426
+      },
+      {
+        "path": "website/global-geometry-lab/compare-global-geometry-ii-certificates.js",
+        "sha256": "4744d7532a741deeac46a34b5ca1190861920d932d56a9704c116801bae32ee4",
+        "bytes": 26766
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-atlas.js",
+        "sha256": "af90bc695b849f416bfdc543e714a307b7a9d70e92e64e0b55432f34960a068d",
+        "bytes": 3541
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-calibration.js",
+        "sha256": "549bfb030bacdad5d4c7aadd5f8f4f251d04f146f49029b5c3eb7c3a41e2e13b",
+        "bytes": 3735
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-inverse.js",
+        "sha256": "409b9250ab3a2e20d59f4dc9c481527bba65d329d1b0d79ce9cbd57e10d37af9",
+        "bytes": 4931
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-physical-preflight.js",
+        "sha256": "f84241bad7df3a046a2ec080e054b447e041c4a121e427c7025f507cbe158664",
+        "bytes": 16125
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-release-v2.js",
+        "sha256": "5917a02cba638d3421d4940a3e2e08ac5fc4ca053f27d014bc6269707b7a32e6",
+        "bytes": 54161
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-release.js",
+        "sha256": "8ff02e25ae69807698b065b7a8cf675ef3226601f5c1923c05a9ba23f5f7bb3c",
+        "bytes": 38992
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-sheet.js",
+        "sha256": "dece94b4086c1b70cfd23d18ea4f5b637624e7bc8b343c874733990dc10f8a05",
+        "bytes": 6913
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-evaluation-index-v2.js",
+        "sha256": "d519d21b67b4dd3f8f94cfff0228a36ef25aa17583ed10963725cb9a2383262d",
+        "bytes": 63216
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-manifest.js",
+        "sha256": "cbee2fe2e1ea6d72ee90decdc5e74bfd0c87d22833a5a5e2e9c65677e2927474",
+        "bytes": 12808
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-native-validation-certificates-v2.js",
+        "sha256": "5323b55370484c4726cec262df140596e8d65b2248e714cc075b0d34466ca42b",
+        "bytes": 16145
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-screening-execution-v3-supplement.js",
+        "sha256": "9b89684b381d99eb37c56a3d05c310eb295c3e6bae15ef432e0ff81365320455",
+        "bytes": 10205
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-screening-manifest.js",
+        "sha256": "cd2545ca479682fa59e8106b25e4cc15273f86147f36c0568a09ea4b1473b147",
+        "bytes": 13241
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-screening-source-boundary-v2.js",
+        "sha256": "1a031a2b83317c8de19f99a3aa8507650f18a6cf3d063f09816ad8332b64cbad",
+        "bytes": 10343
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-screening-source-boundary-v3.js",
+        "sha256": "9ae1c87f38bd242f8c158588ca3a08911a9d32d54be92164618101016e026e91",
+        "bytes": 11716
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-screening-supplement-v3.js",
+        "sha256": "9e2b374f895b11f42aef774008792e175400792bd5ee4ccfc7b45a095dc4d96a",
+        "bytes": 12999
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-screening-supplement.js",
+        "sha256": "692e7d2f8881d21561aaf3a7086bb6b8a75c9324cb870282b4a17d11dfd98664",
+        "bytes": 13427
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-u2.js",
+        "sha256": "489dcfd24f04384e1eb89c54b8e4602fdfe6e9409ae02296990f2dc537c78c1f",
+        "bytes": 5068
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-core.js",
+        "sha256": "9c461080b306b4304e4aa0d266d86d55ee31a9c90690a6f01e83022d55f4d77d",
+        "bytes": 94164
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-atlas.js",
+        "sha256": "4e6a9d09ec63b32f539ed8546a1b06adb45cb48b8f9a0742b81dc0351ee5228e",
+        "bytes": 53656
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-claims.js",
+        "sha256": "0d5af6a26d54c34b57eae2895447bda6a1601857762e7c908e974526b2cf2bfe",
+        "bytes": 13609
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-core.js",
+        "sha256": "65d2cd1073765670cbfb98ad9da645e6ea957219ac7306c86ee92f9753b5d98c",
+        "bytes": 65769
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-ensembles.js",
+        "sha256": "e13119cbf7b32e7a9da89d72006e4fcfd118baab7b65235509bd903f9a0ec92d",
+        "bytes": 46707
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-inverse.js",
+        "sha256": "1abf659381656600576e1416cfa9ea9c0f142aa64cc9c392eea4b8755b59a402",
+        "bytes": 99677
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-lab.css",
+        "sha256": "4053f069f3a90a181d476a45e3886f4b8a3dd664a3fd1b4699a93f62e3d09a18",
+        "bytes": 9192
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-lab.js",
+        "sha256": "5e1f2d4f0db99f39e3f50c44a1b10b9fe642467ee7a7beb160ef13d3cb448df6",
+        "bytes": 31857
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-sheet.js",
+        "sha256": "a8ef40dabf215bb44c9cf8be0c6f1ca9606a406592a258852ef918d99c7ae6a8",
+        "bytes": 107301
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-u2-screening-execution-v3.js",
+        "sha256": "7de7014ee4a897b1f3e1f31b74b3687d45d01834b04a52b947b1e45454df4668",
+        "bytes": 17119
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-u2-screening-v2.js",
+        "sha256": "3976809ec412580975852540166147d870c354672d055e243861ea7046e19873",
+        "bytes": 18980
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-u2-screening.js",
+        "sha256": "d4fb0022e9b6347c23cf0e740a8d1de5b9196c224a43207c8d8180675ab6b41d",
+        "bytes": 63217
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-u2-source-boundary.js",
+        "sha256": "38ee2b57d6fb3ad54cf133ade3e05a3100adc4fb83e3c0b86c11b3417169191c",
+        "bytes": 5344
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-u2.js",
+        "sha256": "a03afff20cb46fba4e17d42cd3879028bc554c8fbd4b0ece0af0663ec5d5ced7",
+        "bytes": 70399
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii.html",
+        "sha256": "cabc1ee5d1072a438fd89b0ce4d483a1bd78ab3ef2f7a2bfdf7839389c289ecf",
+        "bytes": 23992
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-lab.css",
+        "sha256": "80d0a3e0294ceea4b284f40f23317fe087eaea60d07b2de88bb15d2ec89d6991",
+        "bytes": 16107
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-lab.js",
+        "sha256": "a078750217d83e1940b3a96a33d5ba6bcacc59880d15866d1aadce24159618a1",
+        "bytes": 48355
+      },
+      {
+        "path": "website/global-geometry-lab/index.html",
+        "sha256": "a25440ebb7d4aac6b812a747280e4f9c05a5f636eea6d2b073df9883a75d663a",
+        "bytes": 12678
+      },
+      {
+        "path": "website/global-geometry-lab/reproduce-global-geometry-ii-v2.js",
+        "sha256": "a6ea59c8d5e22dd672a4346c5fd2f7b90225f03fec636e11692bd671f0644e59",
+        "bytes": 21104
+      },
+      {
+        "path": "website/global-geometry-lab/reproduce-global-geometry-ii.js",
+        "sha256": "3d0f6eecc85241d55d619bb4ff81604ded06812ef95f6250da3608b026dc236b",
+        "bytes": 21711
+      },
+      {
+        "path": "website/global-geometry-lab/reproduce-global-geometry-ii.ps1",
+        "sha256": "09bace09ecd249b0ca5e1e12dc541ed6830afcec8684cf1d1aa3f1830b90d0e2",
+        "bytes": 779
+      },
+      {
+        "path": "website/global-geometry-lab/run-global-geometry-ii-u2-screening-execution-v3.js",
+        "sha256": "8a3c2114984d2b24c1f494981555109d5583786e7fd50d5d4413c2a19a4bfc4f",
+        "bytes": 46574
+      },
+      {
+        "path": "website/global-geometry-lab/run-global-geometry-ii-u2-screening-v2.js",
+        "sha256": "25012302339f4b7d1cc27eb55c969ae3d3888642b33ade30e02d2a8f22b552c8",
+        "bytes": 37803
+      },
+      {
+        "path": "website/global-geometry-lab/run-global-geometry-ii-u2-screening.js",
+        "sha256": "53e90bfffe2a98d29ca64f2f8629f4d8c2e958fb9bf826f9a3c400ab4869b1de",
+        "bytes": 10633
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-core.js",
+        "sha256": "cabf274a7cacd763107cfed9afe3e2d6f174170195a244ff1c473894b8006fb9",
+        "bytes": 18792
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-artifacts.js",
+        "sha256": "10dd1449d14e0f7cc320a4f5773967e03d364a1f1ecdece8a4fc1fcaf457a2fc",
+        "bytes": 5027
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-atlas.js",
+        "sha256": "ae21e5ac897fb44c6b7ff17f46ee8bf2ad3f4e0fa99b4ad48c50ba030e4dd21c",
+        "bytes": 19931
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-certificates.js",
+        "sha256": "6800ea90d178e6a8c755c8e2273d888b43c6631d93e8aee2f34ba0911f07a0ad",
+        "bytes": 18125
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-core.js",
+        "sha256": "1f76d4c884dfd7938344fe9fae457598d692eaff2861de137df6e3fa721aa704",
+        "bytes": 27407
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-ensembles.js",
+        "sha256": "4815d1a26cecc63b3df9b44c2d22b50d80af57f4160782233603ce953edbda2f",
+        "bytes": 26310
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-inverse.js",
+        "sha256": "f6a55a799af948706db353ed9a8fa9464b9e45ec5ec8a3ddeea3801dc06b82d6",
+        "bytes": 29862
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-physical-preflight.js",
+        "sha256": "f15eb5d61dcbcbe0fa6dfd271704e69fe00e1d658198e2ef8f6a2d5a2a73c161",
+        "bytes": 7647
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-release-v2.js",
+        "sha256": "c518d9955590ab51b6d173bdca5008618d512c85311b7416472983d02deeb4f1",
+        "bytes": 31673
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-reproduction.js",
+        "sha256": "f3d5b8f8e6d42267901938ef4bc6e51ee65eaa92319896cc2682326e803fb5a0",
+        "bytes": 29422
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-sheet.js",
+        "sha256": "a03b75480223ed536a85349a459bdd523b2c9a52b630d0921d7f8f49e8d83a12",
+        "bytes": 28125
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-static-publication-v2.js",
+        "sha256": "6093a42df41e6463bfbe5f6497cad764621e1ad17fb203d3f832048474a9a1a0",
+        "bytes": 11621
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-adversarial.js",
+        "sha256": "76bd93430174d400c2d73f3d41bbd61d63094504569e7e045cf7d84070e29df4",
+        "bytes": 10311
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-evaluation-index-v2.js",
+        "sha256": "646f63a768ee3c42d3743dfe5df95c625d7b9bd9c63b086934530f43345ac111",
+        "bytes": 20818
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-screening-adversarial.js",
+        "sha256": "12fdb107ae0b6621abd129f76561206a3844e09b7594aabb8367064842c9d9f6",
+        "bytes": 11921
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-screening-execution-v3-adversarial.js",
+        "sha256": "c12dc45b2b034e5fc03c9de5507bd88e215cfe3efb8f98c4117db95f0037ecf8",
+        "bytes": 12169
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-screening-execution-v3.js",
+        "sha256": "9b6488d1092df8b5c005a73ec0320830039d82d5b5f1e956b66b7bde5aa4f5be",
+        "bytes": 8805
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-screening-v2-adversarial.js",
+        "sha256": "f35e04e1537429646c32457b4241a6af16eea6197990a61d5833b2fb9270f71a",
+        "bytes": 30121
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-screening-v2.js",
+        "sha256": "aa444f28cc6029a7f44c0921f83798368844c0e2f81feec11d5091bd5384551a",
+        "bytes": 11823
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-screening.js",
+        "sha256": "c67ee306605a77228e9c6fe7420265342e4da838036b4761bd89d3ead190031d",
+        "bytes": 12219
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2.js",
+        "sha256": "86a7ab541d35d81756eef55dc2e00e056d48329e80411eb601331013eaa95a61",
+        "bytes": 11011
+      }
+    ]
+  },
+  "inputRegistry": {
+    "path": "artifacts/global-geometry-ii/release-input-registry-v2.json",
+    "rawSha256": "1fb712a41a3e695dda884deb85c2128fb8c0089e098c80b1433eb730a45ab4cf",
+    "rawBytes": 14607,
+    "semanticAddress": {
+      "algorithm": "sha256",
+      "canonicalization": "ggii-release-json-v2",
+      "digest": "41e1a965cf0a82c2ca9ab60eabf2c15fdd8521220f219cedafb983e32200bc20",
+      "canonicalBytes": 11743
+    }
+  },
+  "registeredArtifacts": [
+    {
+      "id": "calibration-v1",
+      "path": "artifacts/global-geometry-ii/calibration-v1.json",
+      "role": "principal-artifact",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "ggii.calibration-artifact/1",
+      "observedSchema": "ggii.calibration-artifact/1",
+      "rawSha256": "c85d69d756866956a0d856a318b318c32268b89321c49ee141f9ccc66c3611ce",
+      "rawBytes": 1779682,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-stable-json-alpha1",
+        "digest": "e97eb7187994a58e7c637d489ac2d03e8b2e3990a40e1963df0ee3fb0a948091",
+        "canonicalBytes": 934524
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "atlas-pilot-v1",
+      "path": "artifacts/global-geometry-ii/atlas-pilot-v1.json",
+      "role": "principal-artifact",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "ggii.atlas-pilot-artifact/1",
+      "observedSchema": "ggii.atlas-pilot-artifact/1",
+      "rawSha256": "0a6d977ac815bc43f3a312ac25199b4c101287675a4167d37b5d865155aa154e",
+      "rawBytes": 808234,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-stable-json-alpha1",
+        "digest": "f9c4345529fc6122d11899d028ccf569989ce8122e78c84969fba0c87d79423f",
+        "canonicalBytes": 447232
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "inverse-certificates-v1",
+      "path": "artifacts/global-geometry-ii/inverse-certificates-v1.json",
+      "role": "principal-artifact",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "ggii.inverse-certificates-artifact/1",
+      "observedSchema": "ggii.inverse-certificates-artifact/1",
+      "rawSha256": "a5e41762d61b100b6d319474d8f78b2326c16ae9f3686acd80789b29cc7fe906",
+      "rawBytes": 205564,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-inverse-ieee754-json-alpha2",
+        "digest": "53be9aa4cdc3765a7e8b9a902cf184f552e60600ad880ed9f34fd7cd2423cccd",
+        "canonicalBytes": 92429
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "sheet-hil-v1",
+      "path": "artifacts/global-geometry-ii/sheet-hil-v1.json",
+      "role": "principal-artifact",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "ggii.sheet-hil-artifact/1",
+      "observedSchema": "ggii.sheet-hil-artifact/1",
+      "rawSha256": "3b20eb43cd08af95cdb5bddf58c94923baef43a9e721912d53fb8353966b14ad",
+      "rawBytes": 194347,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-sheet-jcs-subset-v2",
+        "digest": "eb6fd9253acb5b2133ee2466a14e280c2ca59dc07cfc2acc09e84090eb4d4fa7",
+        "canonicalBytes": 96746
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "u2-evaluation-index-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/evaluation-index-v2.json",
+      "role": "evaluation-index",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.evaluation.index/2",
+      "observedSchema": "gg.u2.evaluation.index/2",
+      "rawSha256": "cbb672db2e31473180ecd871df0731f2021b1a2f014ba0fc0805f887b39f6320",
+      "rawBytes": 7931,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "44205808aa06644cdb81072adafd55640c4352c1667e13270277984284f49e6c",
+        "canonicalBytes": 6693
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "u2-evaluation-report-v2",
+      "path": "GLOBAL_GEOMETRY_II_U2_EVALUATION_REPORT.md",
+      "role": "evaluation-report",
+      "platform": "shared",
+      "mediaType": "text/markdown",
+      "addressing": "utf8-text",
+      "expectedSchema": null,
+      "observedSchema": null,
+      "rawSha256": "29315afc0624363ad0b2889d5b21dec7c9700eac2de769b5ac7f7446afd461c4",
+      "rawBytes": 11450,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-release-json-v2",
+        "digest": "0359c06547a825c29e637ee2dfd529bfc6b4cec0736d0b8d9619b4ff570130c0",
+        "canonicalBytes": 11715
+      },
+      "semanticReplay": "UTF8_TEXT_ADDRESS_COMPUTED"
+    },
+    {
+      "id": "screening-summary-darwin-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-summary-envelope-v3.json",
+      "role": "screening-summary",
+      "platform": "darwin",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.summary-envelope/3",
+      "observedSchema": "gg.u2.screening.summary-envelope/3",
+      "rawSha256": "6d8f4c25b65088a9840958e63f1e284ea8e8ebff20594ae499388a62c9b8410b",
+      "rawBytes": 180019,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "e60eec48a471cb1caab05f46a8444c92a608853d9bfc8cfe34563b234ae4b4d7",
+        "canonicalBytes": 123697
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-summary-win32-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-summary-envelope-v3.json",
+      "role": "screening-summary",
+      "platform": "win32",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.summary-envelope/3",
+      "observedSchema": "gg.u2.screening.summary-envelope/3",
+      "rawSha256": "d901efadb6e60f65621f1e373d4a9747db03ec2bc3ddd2caabc0223a83843974",
+      "rawBytes": 180009,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "59f05a30cfeb84eaba541acf3c124a651d0f1ff7fba4f3fac14faf5e70011514",
+        "canonicalBytes": 123687
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-runtime-darwin-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-runtime-v3.json",
+      "role": "screening-runtime",
+      "platform": "darwin",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.runtime-certificate/3",
+      "observedSchema": "gg.u2.screening.runtime-certificate/3",
+      "rawSha256": "050d29cad22aeecb9f9378045c7e06dbe41ab5f2a80d749031706454bb53c631",
+      "rawBytes": 3665,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "138e9d482d334807da827b8dfd21299377e71bcd4553162aa660d13f8a2864af",
+        "canonicalBytes": 3004
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-runtime-win32-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-runtime-v3.json",
+      "role": "screening-runtime",
+      "platform": "win32",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.runtime-certificate/3",
+      "observedSchema": "gg.u2.screening.runtime-certificate/3",
+      "rawSha256": "ba29854ea5363c8461bedbf36b30d96388e2167a71e52cd2a070ea89c2ddcf06",
+      "rawBytes": 3671,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "c8f1303319216b00a5eddaa9466369debe5924bab1f233bb67dd4345d8835aba",
+        "canonicalBytes": 3010
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-writer-darwin-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/writer-capability-v3.json",
+      "role": "screening-writer-capability",
+      "platform": "darwin",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.writer-capability/3",
+      "observedSchema": "gg.u2.screening.writer-capability/3",
+      "rawSha256": "53524c7a40e2157a22c48ab1789514350a2d1ed66b8e13e81a9141748683dad5",
+      "rawBytes": 2220,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "22de7a37c244d132fcdf203ff57d842ea272e07dff36a5cfa4fc597221bc4e30",
+        "canonicalBytes": 1632
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-writer-win32-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/writer-capability-v3.json",
+      "role": "screening-writer-capability",
+      "platform": "win32",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.writer-capability/3",
+      "observedSchema": "gg.u2.screening.writer-capability/3",
+      "rawSha256": "b793033a8bf3470a82e544691cac06589316fbeb194583085aeace4445caffe1",
+      "rawBytes": 2244,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "2012a207c0038396f77699ca52a7931a3ec2adac264745765ccacfc0f15a00a8",
+        "canonicalBytes": 1656
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-checkpoint-darwin-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-checkpoint-manifest-v3.json",
+      "role": "screening-checkpoint",
+      "platform": "darwin",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.checkpoint-manifest/3",
+      "observedSchema": "gg.u2.screening.checkpoint-manifest/3",
+      "rawSha256": "0e787b99074ec88a674bad18fc95848c1687ea7e85495abf593f5937a7481f45",
+      "rawBytes": 77020,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "a59ac0798f6f9679d564c9aea8e20da3be6c107aed9a6a50beac027259da0314",
+        "canonicalBytes": 62368
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-checkpoint-win32-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-checkpoint-manifest-v3.json",
+      "role": "screening-checkpoint",
+      "platform": "win32",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.checkpoint-manifest/3",
+      "observedSchema": "gg.u2.screening.checkpoint-manifest/3",
+      "rawSha256": "85908bafadd852a24004944253b7538a69f3be7ce3a5a188aa8e13ae4f17fd48",
+      "rawBytes": 77506,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "efba658f7bac9bb1f5c54f2868ee75ad0f1db2ea31240bf65a7402c7000b19af",
+        "canonicalBytes": 62854
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-certificate-darwin-v2",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-v3-macos-validation-certificate-v2.json",
+      "role": "screening-certificate",
+      "platform": "darwin",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.evaluation.native-screening-v3-validation-certificate/2",
+      "observedSchema": "gg.u2.evaluation.native-screening-v3-validation-certificate/2",
+      "rawSha256": "e1af4692511eafea048d049bebc046c23a306e6399c1aee89718300c8cdeb428",
+      "rawBytes": 7042,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "85a13831d82129b6052501c9e8c000d17a8806421ff823e63817efb0718a26e0",
+        "canonicalBytes": 5771
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-certificate-win32-v2",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-v3-windows-validation-certificate-v2.json",
+      "role": "screening-certificate",
+      "platform": "win32",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.evaluation.native-screening-v3-validation-certificate/2",
+      "observedSchema": "gg.u2.evaluation.native-screening-v3-validation-certificate/2",
+      "rawSha256": "357a46028e65853c3e1c9bd4ca107ae7ece5836d171bb9df3294afa8798f387f",
+      "rawBytes": 7080,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "487360b5481d6b8a7f0feeb099a0bdc9d7540146d2fde5c6cc3692cdf7d6371d",
+        "canonicalBytes": 5809
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-source-boundary-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/source-boundary-v3.json",
+      "role": "screening-source-boundary",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.source-boundary/3",
+      "observedSchema": "gg.u2.screening.source-boundary/3",
+      "rawSha256": "022fec64e8b82d243cf6eda171da54337215718e960ff60b9f746c4f16d3b06d",
+      "rawBytes": 6453,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "369a05d51458b8b770f7d19fa1bbacfaf051e1d917e9c7db4967a0c1a37211de",
+        "canonicalBytes": 5279
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-cross-comparison-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-cross-comparison-v1.json",
+      "role": "screening-comparison",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.evaluation.screening-v3-cross-comparison/2",
+      "observedSchema": "gg.u2.evaluation.screening-v3-cross-comparison/2",
+      "rawSha256": "1467a20d73d0444c3d39edee13ea94358c11abbfb40bbb5140b6407581681132",
+      "rawBytes": 10347,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "a896c04316516c5dc4ed6661093acfdfb062793d8810f91b20a79095bfdf9ebe",
+        "canonicalBytes": 7901
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "strict-normalization-darwin-v2",
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/macos/u2-normalization-v2.json",
+      "role": "strict-normalization",
+      "platform": "darwin",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.atlas.u2-normalization/2",
+      "observedSchema": "gg.atlas.u2-normalization/2",
+      "rawSha256": "dd2409eb52e1b90de4f7690631a53c48811f8d18eaad43f516655e3411bea0f7",
+      "rawBytes": 533353,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "1a2324166fba3699446a1769e90a9739d8feeb61056b392835ade6650cc90810",
+        "canonicalBytes": 392937
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "strict-normalization-win32-v2",
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/windows/u2-normalization-v2.json",
+      "role": "strict-normalization",
+      "platform": "win32",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.atlas.u2-normalization/2",
+      "observedSchema": "gg.atlas.u2-normalization/2",
+      "rawSha256": "dd2409eb52e1b90de4f7690631a53c48811f8d18eaad43f516655e3411bea0f7",
+      "rawBytes": 533353,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "1a2324166fba3699446a1769e90a9739d8feeb61056b392835ade6650cc90810",
+        "canonicalBytes": 392937
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "strict-summary-darwin-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-macos-compact-v1.json",
+      "role": "strict-partial-summary",
+      "platform": "darwin",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.evaluation.strict-partial-compact/2",
+      "observedSchema": "gg.u2.evaluation.strict-partial-compact/2",
+      "rawSha256": "e56f4902ac9412f1774e4443420cdf3471405e7413cf6b29fb2f68bb2579cab8",
+      "rawBytes": 10418,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "04f4f9f8ddbf80a485b145c7bb967cea3ddd6ede7c74d8c207e089c494e17307",
+        "canonicalBytes": 7856
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "strict-summary-win32-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-windows-compact-v1.json",
+      "role": "strict-partial-summary",
+      "platform": "win32",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.evaluation.strict-partial-compact/2",
+      "observedSchema": "gg.u2.evaluation.strict-partial-compact/2",
+      "rawSha256": "1eb1c176d58f00be0e814a55f3495ac61d04a2ac43891bc75674c3daee65a4af",
+      "rawBytes": 10416,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "65afaa14e1fbb6a32ef1b674b02244e59481c47e7e1f9e40d825cb4a9c95896d",
+        "canonicalBytes": 7854
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "strict-certificate-darwin-v2",
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/macos/u2-strict-partial-macos-validation-certificate-v2.json",
+      "role": "strict-partial-certificate",
+      "platform": "darwin",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.evaluation.native-strict-validation-certificate/2",
+      "observedSchema": "gg.u2.evaluation.native-strict-validation-certificate/2",
+      "rawSha256": "7116f43696b934aba9fa0a5e8f484c456fe74558922f9fba035a559aee385920",
+      "rawBytes": 8149,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "ba7f688166b8e72b04221a3a100aa6bf860dc5fb634ff782f5e98ba875559f86",
+        "canonicalBytes": 6552
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "strict-certificate-win32-v1",
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/windows/u2-strict-partial-windows-certificate-v1.json",
+      "role": "strict-partial-certificate",
+      "platform": "win32",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.strict-partial.windows-run-certificate/1",
+      "observedSchema": "gg.u2.strict-partial.windows-run-certificate/1",
+      "rawSha256": "896d38af32de13c5a39f72b5313c1add3e120c6f79bf59497a495cf05e46181d",
+      "rawBytes": 7456,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "dad329b405cd531d5403ca370c8ca6eb38072b8ba1fbdb9c35f6167bc384fa44",
+        "canonicalBytes": 6033
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "strict-cross-comparison-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-cross-comparison-v1.json",
+      "role": "strict-partial-comparison",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.evaluation.strict-cross-comparison/2",
+      "observedSchema": "gg.u2.evaluation.strict-cross-comparison/2",
+      "rawSha256": "489cf2bf8d0b467cd69caed7b2aebd67f07b92162b2b797a9f09952064c778c2",
+      "rawBytes": 2358,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "7be612b6f5a0555126a387197beb8f6c2d4491c95dd97081b28a9a2411750221",
+        "canonicalBytes": 1805
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "physical-preflight-v1",
+      "path": "artifacts/global-geometry-ii/fabrication/physical-preflight-v1.json",
+      "role": "physical-preflight",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "ggii.physical-preflight-evidence/1",
+      "observedSchema": "ggii.physical-preflight-evidence/1",
+      "rawSha256": "5e2a25ee6816c4f49c4d33f45bdbed9120c3bbb573058c97d18c2bef44a9eafa",
+      "rawBytes": 7079,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-physical-preflight-jcs-subset-v1",
+        "digest": "44ceee5021ff84cbf2e65648eb37e1d0f486641b48b207dabba7eea470a0c34f",
+        "canonicalBytes": 5427
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "strict-archive-darwin-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-macos-campaign-v2.json.gz",
+      "role": "strict-campaign-archive",
+      "platform": "darwin",
+      "mediaType": "application/gzip",
+      "addressing": "raw-bytes-only",
+      "expectedSchema": null,
+      "observedSchema": null,
+      "rawSha256": "e6464e61058d780c8ac8e7ad3481c4775565fa62a2f6d9ba1f077722a9bd97b4",
+      "rawBytes": 3398520,
+      "semanticAddress": null,
+      "semanticReplay": "NOT_APPLICABLE_GZIP_CONVENIENCE_COPY_DECOMPRESSED_ADDRESS_RECORDED_BY_EVALUATION_INDEX"
+    },
+    {
+      "id": "strict-archive-win32-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-windows-campaign-v2.json.gz",
+      "role": "strict-campaign-archive",
+      "platform": "win32",
+      "mediaType": "application/gzip",
+      "addressing": "raw-bytes-only",
+      "expectedSchema": null,
+      "observedSchema": null,
+      "rawSha256": "0fed8f548fa101a16c75da0d7587f75b8e41393b1843860bea6033275cb9b99b",
+      "rawBytes": 3398403,
+      "semanticAddress": null,
+      "semanticReplay": "NOT_APPLICABLE_GZIP_CONVENIENCE_COPY_DECOMPRESSED_ADDRESS_RECORDED_BY_EVALUATION_INDEX"
+    },
+    {
+      "id": "screening-archive-darwin-v3",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-macos-raw.jsonl.gz",
+      "role": "screening-raw-archive",
+      "platform": "darwin",
+      "mediaType": "application/gzip",
+      "addressing": "raw-bytes-only",
+      "expectedSchema": null,
+      "observedSchema": null,
+      "rawSha256": "cf827f1e200d2a0cd1fcd15babf63666efb0c637cd7adfd8a8de887b51c79c38",
+      "rawBytes": 3274582,
+      "semanticAddress": null,
+      "semanticReplay": "NOT_APPLICABLE_GZIP_CONVENIENCE_COPY_DECOMPRESSED_ADDRESS_RECORDED_BY_EVALUATION_INDEX"
+    },
+    {
+      "id": "screening-archive-win32-v3",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-windows-raw.jsonl.gz",
+      "role": "screening-raw-archive",
+      "platform": "win32",
+      "mediaType": "application/gzip",
+      "addressing": "raw-bytes-only",
+      "expectedSchema": null,
+      "observedSchema": null,
+      "rawSha256": "a7f07e8738b5f75abf9f47dd0bf46b2add0a15b3b4203655578e055eb1605343",
+      "rawBytes": 3274255,
+      "semanticAddress": null,
+      "semanticReplay": "NOT_APPLICABLE_GZIP_CONVENIENCE_COPY_DECOMPRESSED_ADDRESS_RECORDED_BY_EVALUATION_INDEX"
+    },
+    {
+      "id": "historical-v1-index",
+      "path": "artifacts/global-geometry-ii/release-index-v1.json",
+      "role": "historical-v1-metadata",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "canonical-json",
+      "expectedSchema": null,
+      "observedSchema": "ggii.release-index/1",
+      "rawSha256": "8285e3b76282110f35bdb6dec9c5873c7285825e358fcd89e860b0be2bce7352",
+      "rawBytes": 3724,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-release-json-v2",
+        "digest": "aa65f203407583674508b0b14248a2c754113995142be66d3077c8e184a4c550",
+        "canonicalBytes": 3081
+      },
+      "semanticReplay": "CANONICAL_JSON_ADDRESS_COMPUTED"
+    },
+    {
+      "id": "historical-v1-comparison",
+      "path": "artifacts/global-geometry-ii/certificates/macos-windows-comparison-v1.json",
+      "role": "historical-v1-metadata",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "canonical-json",
+      "expectedSchema": null,
+      "observedSchema": "ggii.cross-platform-reproduction-comparison/2",
+      "rawSha256": "48eb1e9ddb696966ba16f9b54ff9c0ff744102689d207e6c8c9a3d81112653e2",
+      "rawBytes": 9412,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-release-json-v2",
+        "digest": "33f3af6d02ff6a7c5b0a6726397d1833ded9a3d79f6b4c103fb64c5fbd36947f",
+        "canonicalBytes": 6929
+      },
+      "semanticReplay": "CANONICAL_JSON_ADDRESS_COMPUTED"
+    }
+  ],
+  "archiveIndexBindings": {
+    "evaluationIndexId": "u2-evaluation-index-v2",
+    "evaluationIndexPath": "artifacts/global-geometry-ii/u2/evaluation-v2/evaluation-index-v2.json",
+    "policy": "RAW_GZIP_BYTES_ADDRESSED_ONLY; DECOMPRESSED_BYTE_ADDRESS_IMPORTED_FROM_CONTENT_ADDRESSED_EVALUATION_INDEX; NO_GZIP_SEMANTIC_REPLAY",
+    "bindings": [
+      {
+        "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-macos-campaign-v2.json.gz",
+        "rawSha256": "e6464e61058d780c8ac8e7ad3481c4775565fa62a2f6d9ba1f077722a9bd97b4",
+        "rawBytes": 3398520,
+        "decompressedSha256": "51a7dde9f06aee6cc6fadf0a5244bb1f683c9ad46b8c85d9211221bdd43dc415",
+        "decompressedBytes": 74959716,
+        "correspondingSourcePath": "artifacts/global-geometry-ii/u2/strict-partial/macos/u2-campaign-partial-v2.json",
+        "correspondingSourceSemanticDigest": "5997e4b068f994b3c5b860869cb7c976d31e0b62a3545117dc1e8d81cac4bec8",
+        "sourceKind": "STRICT_PARTIAL_CAMPAIGN",
+        "scientificAuthority": "NONE",
+        "role": "deterministic gzip -n -9 convenience transport; decompressed bytes are the authoritative bound source artifact"
+      },
+      {
+        "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-windows-campaign-v2.json.gz",
+        "rawSha256": "0fed8f548fa101a16c75da0d7587f75b8e41393b1843860bea6033275cb9b99b",
+        "rawBytes": 3398403,
+        "decompressedSha256": "0411e4e665ca6bc5656b5579e4734bbdc930089f6479bf9c33731e61524d2a47",
+        "decompressedBytes": 74959750,
+        "correspondingSourcePath": "artifacts/global-geometry-ii/u2/strict-partial/windows/u2-campaign-partial-v2.json",
+        "correspondingSourceSemanticDigest": "a00f123d9747378dbe734f9b4b5b57387060f031211ef36f867092f888cd6d14",
+        "sourceKind": "STRICT_PARTIAL_CAMPAIGN",
+        "scientificAuthority": "NONE",
+        "role": "deterministic gzip -n -9 convenience transport; decompressed bytes are the authoritative bound source artifact"
+      },
+      {
+        "path": "artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-macos-raw.jsonl.gz",
+        "rawSha256": "cf827f1e200d2a0cd1fcd15babf63666efb0c637cd7adfd8a8de887b51c79c38",
+        "rawBytes": 3274582,
+        "decompressedSha256": "47bbf6da93da1270ea5b8b6120bfa0351be3c0386050d989ef614f2a3802d1d4",
+        "decompressedBytes": 29396798,
+        "correspondingSourcePath": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-raw-v3.jsonl",
+        "correspondingSourceSemanticDigest": null,
+        "sourceKind": "SCREENING_V3_RAW_JSONL",
+        "scientificAuthority": "NONE",
+        "role": "deterministic gzip -n -9 convenience transport; decompressed bytes are the authoritative bound source artifact"
+      },
+      {
+        "path": "artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-windows-raw.jsonl.gz",
+        "rawSha256": "a7f07e8738b5f75abf9f47dd0bf46b2add0a15b3b4203655578e055eb1605343",
+        "rawBytes": 3274255,
+        "decompressedSha256": "d44aed2b3556fdb929118649fde5c59aa8cb834dbc6ec7ce6346f8a1a276937e",
+        "decompressedBytes": 29395142,
+        "correspondingSourcePath": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-raw-v3.jsonl",
+        "correspondingSourceSemanticDigest": null,
+        "sourceKind": "SCREENING_V3_RAW_JSONL",
+        "scientificAuthority": "NONE",
+        "role": "deterministic gzip -n -9 convenience transport; decompressed bytes are the authoritative bound source artifact"
+      }
+    ]
+  },
+  "compactnessPolicy": {
+    "maximumRegisteredBytes": 16777216,
+    "gzipTransportPolicy": "Exactly two strict-campaign and two screening-raw gzip transports are raw-addressed; decompressed byte addresses come from the content-addressed evaluation index and the gzip files receive no semantic authority.",
+    "excludedClasses": [
+      "raw JSONL observations",
+      "chunk payloads and chunk certificates",
+      "partial files and active or stale locks",
+      "working checkpoints, transfer helpers, and execution logs",
+      "any unregistered file discovered by directory scan"
+    ]
+  },
+  "certificationPolicy": {
+    "localVerificationMeaning": "A PASS certifies only the selected mode, this invocation/environment, the exact v2 source and compact-artifact snapshot, and the recorded suite outcomes.",
+    "requiredIndependentPlatforms": [
+      "darwin",
+      "win32"
+    ],
+    "requiredIndependentCertificates": 2,
+    "crossPlatformEqualityClaim": "NOT_MADE_BY_LOCAL_CERTIFICATE",
+    "externalComparisonRecord": "artifacts/global-geometry-ii/certificates/macos-windows-comparison-v2.json",
+    "comparisonScope": "DECLARED_V2_DIGEST_AND_SELECTED_TEST_SURFACE_ONLY"
+  },
+  "approvalGates": {
+    "publication": "requires explicit user approval",
+    "merge": "requires explicit user approval",
+    "hardwarePurchaseOrFabrication": "requires explicit user approval"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "ggii-release-json-v2",
+    "digest": "491a8d87ad4bc9a49c71b61be1df5f85749f0bc8cf07cc90a088635e07614d05",
+    "canonicalBytes": 44636
+  }
+}

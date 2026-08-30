@@ -37,6 +37,10 @@ jobs:
       - run: node website/global-geometry-lab/test-global-geometry-ii-sheet.js
       - run: node website/global-geometry-lab/test-global-geometry-ii-artifacts.js
       - run: node artifacts/global-geometry-ii/fabrication/validate-fabrication.js
-      - run: node website/global-geometry-lab/test-global-geometry-ii-reproduction.js
-      - run: node website/global-geometry-lab/test-global-geometry-ii-certificates.js
-      - run: node website/global-geometry-lab/reproduce-global-geometry-ii.js --verify
+      # Release v1 is a frozen historical snapshot; release-v2 tests verify that
+      # it is retained but never promoted as certification of the evolved source.
+      - run: node website/global-geometry-lab/test-global-geometry-ii-physical-preflight.js
+      - run: node website/global-geometry-lab/test-global-geometry-ii-u2-evaluation-index-v2.js
+      - run: node website/global-geometry-lab/test-global-geometry-ii-release-v2.js
+      - run: node website/global-geometry-lab/test-global-geometry-ii-static-publication-v2.js
+      - run: node website/global-geometry-lab/reproduce-global-geometry-ii-v2.js --verify --mode quick

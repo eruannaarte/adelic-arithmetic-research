@@ -7,6 +7,15 @@ This is an outcome-blind engineering and mathematical audit of the frozen
 or permission to reinterpret a threshold. No production result artifact was
 read or used while preparing it.
 
+**Post-audit execution note (2026-08-30).** The outcome-blind audit below is
+preserved as the pre-execution implementation map.  Outcome-bearing work is
+reported separately in the
+[U2 evaluation checkpoint report](GLOBAL_GEOMETRY_II_U2_EVALUATION_REPORT.md)
+and its
+[evaluation-v2 index](artifacts/global-geometry-ii/u2/evaluation-v2/evaluation-index-v2.json).
+That checkpoint is `UNRESOLVED`; it does not amend this audit or claim that the
+full confirmatory programme described here was run.
+
 The audit is bound to:
 
 - `GLOBAL_GEOMETRY_II_U2_ADVERSARIAL_PREREGISTRATION.md`, 23,688 bytes,
@@ -33,6 +42,12 @@ kernel. The dominant constraint is compute time, not memory. The current
 frozen documents leave several decision-bearing implementation choices
 undefined; silently choosing them in production would make the result
 non-preregistered.
+
+This verdict records the planning state at which the audit was written.  A
+later source-bound screening and strict-partial implementation was executed,
+but the full decision-grade measurement and perturbation campaign remains
+`NOT_RUN`.  The execution therefore does not supersede the estimator and
+aggregation requirements below.
 
 The smallest defensible route is therefore:
 
@@ -450,6 +465,11 @@ If the full perturbation layer exceeds the predeclared resource cap, the
 project can still meet section 8 with an immutable `UNRESOLVED` package. The
 minimum honest checkpoint is:
 
+The current evaluation-v2 publication is intentionally labeled a **partial
+evaluation checkpoint**, not a claim that every minimum item in the following
+confirmatory package has been completed.  In particular, it does not promote
+the bounded screen or the incomplete robustness layer into decision evidence.
+
 1. the original manifest/decision contract and the frozen implementation
    supplement, all content addressed;
 2. all normative mathematical, estimator-overlap, false-positive, bootstrap,
@@ -471,8 +491,8 @@ minimum honest checkpoint is:
 9. public UI/prose that exposes negative, failed, and unresolved records and
    makes no continuum or physical-validation claim.
 
-This checkpoint meets section 8 because incompleteness is represented as data,
-not hidden or reclassified. It cannot support `ACCEPTED`. A resource-limited
+A package satisfying items 1--9 meets section 8 because incompleteness is
+represented as data, not hidden or reclassified. It cannot support `ACCEPTED`. A resource-limited
 Gate 6 is `UNRESOLVED`; it does not, however, override the frozen precedence of
 a separately valid cross-platform scientific `FAIL` in Gates 2–5. Such a
 reproduced counterexample can still make the global candidate `REJECTED`. If
@@ -504,3 +524,33 @@ Production must remain disabled until all of the following pass:
 
 Only after this gate should calibration be generated. Only after calibration is
 frozen should confirmation start.
+
+## 9. Executed partial checkpoint
+
+The later execution reached a narrower but reviewable state:
+
+| Surface | Executed result | Authority |
+|---|---|---|
+| Finite preview | `NOT_EVALUATED` | `NONE` |
+| Screening v3 | 3,840/3,840 records completed on each host; exact raw cross-host comparison `FAIL` | `NONE`; all confirmatory gates remain outside screening authority |
+| Strict partial campaign | Gate 1 `PASS`; Gates 2--8 `UNRESOLVED` | Partial evidence only |
+| Strict host comparison | exact replication `FAIL`; \(10^{-12}\) diagnostic projection `PASS` | diagnostic authority `NONE`; Gate 8 is not satisfied |
+| Full confirmatory campaign | `NOT_RUN` | `NONE` |
+| Digital passive-sheet preflight | declared analytic/render dry checks `PASS` | Engineering dry-preflight only |
+| Physical and camera validation | `NOT_RUN` | `NONE` |
+
+The exact comparison records are the
+[strict-partial comparison](artifacts/global-geometry-ii/u2/evaluation-v2/strict-cross-comparison-v1.json)
+and
+[screening-v3 comparison](artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-cross-comparison-v1.json).
+Neither comparison supplies a U2 decision.  The top-level checkpoint is
+`UNRESOLVED`, with no acceptance or rejection claim.
+
+The release-v2 deep verifier is:
+
+```bash
+node website/global-geometry-lab/reproduce-global-geometry-ii-v2.js --verify --mode deep
+```
+
+Release-v1 metadata is retained as historical prior-release evidence and does
+not certify this enlarged evaluation surface.

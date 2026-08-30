@@ -1,0 +1,164 @@
+{
+  "schema": "gg.u2.evaluation.native-screening-v3-validation-certificate/2",
+  "semanticRole": "write-once evidence that every screening-v3 record and all published containers actually replayed on the artifact's native host class",
+  "command": "node website/global-geometry-lab/generate-global-geometry-ii-u2-native-validation-certificates-v2.js --write-native-screening",
+  "invocation": {
+    "executable": "node",
+    "execArgv": [],
+    "script": "website/global-geometry-lab/generate-global-geometry-ii-u2-native-validation-certificates-v2.js",
+    "mode": "--write-native-screening",
+    "argv": [
+      "website/global-geometry-lab/generate-global-geometry-ii-u2-native-validation-certificates-v2.js",
+      "--write-native-screening"
+    ],
+    "command": "node website/global-geometry-lab/generate-global-geometry-ii-u2-native-validation-certificates-v2.js --write-native-screening"
+  },
+  "validationPolicy": "validate raw census/order/hash, freshly rebuild every record with Screen.validateRecord remeasure=true, and replay summary/runtime/writer/checkpoint bindings; any error prevents certificate creation",
+  "environment": {
+    "environmentClass": "native-windows-x64-node-22.22.2",
+    "platformLabel": "windows",
+    "platform": "win32",
+    "arch": "x64",
+    "node": "v22.22.2",
+    "execArgv": []
+  },
+  "sourceBindings": {
+    "certificateBuilder": {
+      "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-native-validation-certificates-v2.js",
+      "bytes": 16145,
+      "sha256": "5323b55370484c4726cec262df140596e8d65b2248e714cc075b0d34466ca42b",
+      "semanticDigest": null
+    },
+    "evaluationBuilder": {
+      "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-evaluation-index-v2.js",
+      "bytes": 63216,
+      "sha256": "d519d21b67b4dd3f8f94cfff0228a36ef25aa17583ed10963725cb9a2383262d",
+      "semanticDigest": null
+    },
+    "strictValidator": {
+      "path": "website/global-geometry-lab/global-geometry-ii-u2.js",
+      "bytes": 70399,
+      "sha256": "a03afff20cb46fba4e17d42cd3879028bc554c8fbd4b0ece0af0663ec5d5ced7",
+      "semanticDigest": null
+    },
+    "strictSourceBoundaryValidator": {
+      "path": "website/global-geometry-lab/global-geometry-ii-u2-source-boundary.js",
+      "bytes": 5344,
+      "sha256": "38ee2b57d6fb3ad54cf133ade3e05a3100adc4fb83e3c0b86c11b3417169191c",
+      "semanticDigest": null
+    },
+    "screeningSemanticBase": {
+      "path": "website/global-geometry-lab/global-geometry-ii-u2-screening-v2.js",
+      "bytes": 18980,
+      "sha256": "3976809ec412580975852540166147d870c354672d055e243861ea7046e19873",
+      "semanticDigest": null
+    },
+    "screeningV3Adapter": {
+      "path": "website/global-geometry-lab/global-geometry-ii-u2-screening-execution-v3.js",
+      "bytes": 17119,
+      "sha256": "7de7014ee4a897b1f3e1f31b74b3687d45d01834b04a52b947b1e45454df4668",
+      "semanticDigest": null
+    },
+    "screeningV3Runner": {
+      "path": "website/global-geometry-lab/run-global-geometry-ii-u2-screening-execution-v3.js",
+      "bytes": 46574,
+      "sha256": "8a3c2114984d2b24c1f494981555109d5583786e7fd50d5d4413c2a19a4bfc4f",
+      "semanticDigest": null
+    },
+    "screeningSourceBoundary": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/source-boundary-v3.json",
+      "bytes": 6453,
+      "sha256": "022fec64e8b82d243cf6eda171da54337215718e960ff60b9f746c4f16d3b06d",
+      "semanticDigest": "369a05d51458b8b770f7d19fa1bbacfaf051e1d917e9c7db4967a0c1a37211de"
+    }
+  },
+  "artifactSourceBoundary": {
+    "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/source-boundary-v3.json",
+    "fileSha256": "022fec64e8b82d243cf6eda171da54337215718e960ff60b9f746c4f16d3b06d",
+    "semanticDigest": "369a05d51458b8b770f7d19fa1bbacfaf051e1d917e9c7db4967a0c1a37211de",
+    "sourceCommit": "e62970c349b3dfa2d94a46baaf72886b6124de27",
+    "sourceTree": "5ba6659c077655a5c8c09425d20042b36995bc7b",
+    "verificationMode": "git"
+  },
+  "artifacts": {
+    "raw": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-raw-v3.jsonl",
+      "bytes": 29395142,
+      "sha256": "d44aed2b3556fdb929118649fde5c59aa8cb834dbc6ec7ce6346f8a1a276937e",
+      "semanticDigest": null
+    },
+    "summary": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-summary-envelope-v3.json",
+      "bytes": 180009,
+      "sha256": "d901efadb6e60f65621f1e373d4a9747db03ec2bc3ddd2caabc0223a83843974",
+      "semanticDigest": "59f05a30cfeb84eaba541acf3c124a651d0f1ff7fba4f3fac14faf5e70011514"
+    },
+    "runtime": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-runtime-v3.json",
+      "bytes": 3671,
+      "sha256": "ba29854ea5363c8461bedbf36b30d96388e2167a71e52cd2a070ea89c2ddcf06",
+      "semanticDigest": "c8f1303319216b00a5eddaa9466369debe5924bab1f233bb67dd4345d8835aba"
+    },
+    "checkpoint": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-checkpoint-manifest-v3.json",
+      "bytes": 77506,
+      "sha256": "85908bafadd852a24004944253b7538a69f3be7ce3a5a188aa8e13ae4f17fd48",
+      "semanticDigest": "efba658f7bac9bb1f5c54f2868ee75ad0f1db2ea31240bf65a7402c7000b19af"
+    },
+    "writerCapability": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/writer-capability-v3.json",
+      "bytes": 2244,
+      "sha256": "b793033a8bf3470a82e544691cac06589316fbeb194583085aeace4445caffe1",
+      "semanticDigest": "2012a207c0038396f77699ca52a7931a3ec2adac264745765ccacfc0f15a00a8"
+    }
+  },
+  "validation": {
+    "status": "PASS_NATIVE",
+    "recordsRemeasured": 3840,
+    "expectedRecords": 3840,
+    "recordHashProjection": "722caafad937877f543ce50952a196210f8d4cdccc8b67813790ab16ec1957d0",
+    "scientificSummaryProjection": {
+      "keys": [
+        "schema",
+        "screeningId",
+        "manifestDigest",
+        "preregistrationCommit",
+        "outcome",
+        "census",
+        "gates",
+        "positiveCells",
+        "controlCells",
+        "failureLedger",
+        "randomnessAudit",
+        "telemetryBinding",
+        "screeningVersion",
+        "implementation",
+        "semanticBaseSupplementDigest",
+        "semanticBaseImplementation",
+        "semanticBase",
+        "executionSupplementDigest",
+        "semanticAmendment"
+      ],
+      "digest": "7827edd3d2aa168e7b70c0c2669f5eaa4a914a2fcef51651a54f7e3dc6c37f58"
+    },
+    "screeningOutcome": "UNRESOLVED",
+    "containerDecisionAuthority": "NONE"
+  },
+  "timing": {
+    "startedAt": "2026-08-30T21:01:22.792Z",
+    "completedAt": "2026-08-30T21:06:10.709Z",
+    "elapsedMilliseconds": 287910.65119999996
+  },
+  "outcome": {
+    "u2Status": "UNRESOLVED",
+    "acceptanceAllowed": false,
+    "rejectionClaimed": false,
+    "decisionAuthority": "NONE"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "487360b5481d6b8a7f0feeb099a0bdc9d7540146d2fde5c6cc3692cdf7d6371d",
+    "canonicalBytes": 5809
+  }
+}

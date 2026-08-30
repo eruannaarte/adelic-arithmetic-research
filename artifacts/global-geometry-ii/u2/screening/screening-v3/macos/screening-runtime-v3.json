@@ -1,0 +1,81 @@
+{
+  "schema": "gg.u2.screening.runtime-certificate/3",
+  "executionVersion": "screening-v3",
+  "semanticPayloadVersion": "screening-v3",
+  "semanticKernel": {
+    "semanticBaseVersion": "screening-v2",
+    "semanticPayloadVersion": "screening-v3",
+    "recordSchema": "gg.u2.screening.record/3",
+    "implementationCommit": "1c3373267057b8a018ad5039e0f3b2b4e8eb2b1d",
+    "kernelPath": "website/global-geometry-lab/global-geometry-ii-u2-screening-v2.js",
+    "kernelSha256": "3976809ec412580975852540166147d870c354672d055e243861ea7046e19873",
+    "semanticSupplementDigest": "21d69b11b12277e228e2934e033fd8f366b3c8d5d89f1b8833aa781a36118888",
+    "sourceBoundary": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v2/source-boundary-v2.json",
+      "fileSha256": "c60331209247fccee700d10d38b9ae03da3f81e9013f19281a1f5918fb9e6c73",
+      "semanticDigest": "a1b1b9bb525ba9c172be48af60b9881a13ce58ebed9862a60fec18a25f07fae0",
+      "commit": "ed624f4ff42b4e5488a1889c3d55ba1195e5a952"
+    }
+  },
+  "executionSupplementDigest": "1524f69ef343a1048e3cfd05c9b4f6d93f9c6783233611094a345b3d4863885d",
+  "platformLabel": "macos",
+  "sourceBoundary": {
+    "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/source-boundary-v3.json",
+    "fileSha256": "022fec64e8b82d243cf6eda171da54337215718e960ff60b9f746c4f16d3b06d",
+    "semanticDigest": "369a05d51458b8b770f7d19fa1bbacfaf051e1d917e9c7db4967a0c1a37211de",
+    "sourceCommit": "e62970c349b3dfa2d94a46baaf72886b6124de27",
+    "sourceTree": "5ba6659c077655a5c8c09425d20042b36995bc7b",
+    "verificationMode": "git"
+  },
+  "writerCapability": {
+    "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/writer-capability-v3.json",
+    "bytes": 2220,
+    "sha256": "53524c7a40e2157a22c48ab1789514350a2d1ed66b8e13e81a9141748683dad5",
+    "semanticDigest": "22de7a37c244d132fcdf203ff57d842ea272e07dff36a5cfa4fc597221bc4e30"
+  },
+  "artifacts": {
+    "raw": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-raw-v3.jsonl",
+      "bytes": 29396798,
+      "sha256": "47bbf6da93da1270ea5b8b6120bfa0351be3c0386050d989ef614f2a3802d1d4"
+    },
+    "summary": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-summary-envelope-v3.json",
+      "bytes": 180019,
+      "sha256": "6d8f4c25b65088a9840958e63f1e284ea8e8ebff20594ae499388a62c9b8410b",
+      "semanticDigest": "e60eec48a471cb1caab05f46a8444c92a608853d9bfc8cfe34563b234ae4b4d7"
+    },
+    "checkpointManifest": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-checkpoint-manifest-v3.json",
+      "bytes": 77020,
+      "sha256": "0e787b99074ec88a674bad18fc95848c1687ea7e85495abf593f5937a7481f45",
+      "semanticDigest": "a59ac0798f6f9679d564c9aea8e20da3be6c107aed9a6a50beac027259da0314"
+    }
+  },
+  "runtime": {
+    "startWallTime": "2026-08-30T19:58:30.659Z",
+    "endWallTime": "2026-08-30T20:06:12.437Z",
+    "elapsedMilliseconds": 461779.795417,
+    "recoveredChunkCount": 0,
+    "generatedChunkCount": 120,
+    "staleLockRecovery": null,
+    "validationPolicy": "fresh v2-base plus closed v3 adapter replay at chunk and final boundaries",
+    "peakRssBytes": 642318336,
+    "environment": {
+      "platform": "darwin",
+      "arch": "arm64",
+      "node": "v22.22.2",
+      "cpuCount": 8
+    }
+  },
+  "outcome": {
+    "u2Status": "UNRESOLVED",
+    "decisionAuthority": "NONE"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "138e9d482d334807da827b8dfd21299377e71bcd4553162aa660d13f8a2864af",
+    "canonicalBytes": 3004
+  }
+}

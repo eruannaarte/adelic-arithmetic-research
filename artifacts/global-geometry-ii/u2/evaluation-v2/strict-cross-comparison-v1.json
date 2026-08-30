@@ -1,0 +1,63 @@
+{
+  "schema": "gg.u2.evaluation.strict-cross-comparison/2",
+  "semanticRole": "strict exact and explicitly nondecisional 1e-12 diagnostic comparison of independent host projections",
+  "inputs": {
+    "macos": {
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-macos-compact-v1.json",
+      "bytes": 10418,
+      "sha256": "e56f4902ac9412f1774e4443420cdf3471405e7413cf6b29fb2f68bb2579cab8",
+      "semanticDigest": "04f4f9f8ddbf80a485b145c7bb967cea3ddd6ede7c74d8c207e089c494e17307"
+    },
+    "windows": {
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-windows-compact-v1.json",
+      "bytes": 10416,
+      "sha256": "1eb1c176d58f00be0e814a55f3495ac61d04a2ac43891bc75674c3daee65a4af",
+      "semanticDigest": "65afaa14e1fbb6a32ef1b674b02244e59481c47e7e1f9e40d825cb4a9c95896d"
+    }
+  },
+  "normalization": {
+    "rawExact": true,
+    "semanticExact": true
+  },
+  "campaign": {
+    "rawExact": false,
+    "semanticExact": false,
+    "protocolProjectionExact": true,
+    "scientificProjectionExact": false,
+    "criticalProjectionExact": {
+      "sourceBoundary": true,
+      "normalizationBinding": true,
+      "counts": true,
+      "cells": true,
+      "gateResults": true,
+      "conclusion": true,
+      "evidenceBoundary": true
+    },
+    "exactCrossPlatformReplication": "FAIL"
+  },
+  "diagnosticToleranceProjection": {
+    "tolerance": 1e-12,
+    "policy": "omit only positiveRuns[].conductance.digest; round every finite exposed number to nearest 1e-12; normalize -0 to 0",
+    "macosDigest": "8f6ba8ff1da1d5acf872fc68bd1dca91a3441390ffac61062d39d6b14fc3289a",
+    "windowsDigest": "8f6ba8ff1da1d5acf872fc68bd1dca91a3441390ffac61062d39d6b14fc3289a",
+    "equal": true,
+    "status": "PASS",
+    "decisionAuthority": "NONE"
+  },
+  "gateEight": {
+    "status": "NOT_SATISFIED",
+    "reason": "the strict partial campaign is not byte/scientific-projection exact across hosts; a rounded diagnostic cannot satisfy Gate 8"
+  },
+  "outcome": {
+    "u2Status": "UNRESOLVED",
+    "acceptanceAllowed": false,
+    "rejectionClaimed": false,
+    "decisionAuthority": "NONE"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "7be612b6f5a0555126a387197beb8f6c2d4491c95dd97081b28a9a2411750221",
+    "canonicalBytes": 1805
+  }
+}

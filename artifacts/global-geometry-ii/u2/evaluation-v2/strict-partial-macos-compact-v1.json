@@ -1,0 +1,295 @@
+{
+  "schema": "gg.u2.evaluation.strict-partial-compact/2",
+  "semanticRole": "mechanically derived compact projection of one content-addressed strict-partial host result",
+  "platformLabel": "macos",
+  "inputs": {
+    "normalization": {
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/macos/u2-normalization-v2.json",
+      "bytes": 533353,
+      "sha256": "dd2409eb52e1b90de4f7690631a53c48811f8d18eaad43f516655e3411bea0f7",
+      "semanticDigest": "1a2324166fba3699446a1769e90a9739d8feeb61056b392835ade6650cc90810"
+    },
+    "campaign": {
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/macos/u2-campaign-partial-v2.json",
+      "bytes": 74959716,
+      "sha256": "51a7dde9f06aee6cc6fadf0a5244bb1f683c9ad46b8c85d9211221bdd43dc415",
+      "semanticDigest": "5997e4b068f994b3c5b860869cb7c976d31e0b62a3545117dc1e8d81cac4bec8"
+    },
+    "hostCertificate": {
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/macos/u2-strict-partial-macos-validation-certificate-v2.json",
+      "bytes": 8149,
+      "sha256": "7116f43696b934aba9fa0a5e8f484c456fe74558922f9fba035a559aee385920",
+      "semanticDigest": "ba7f688166b8e72b04221a3a100aa6bf860dc5fb634ff782f5e98ba875559f86"
+    }
+  },
+  "sourceBoundary": {
+    "sourceCommit": "9721d2b02197f18821846938b9494bfc8a865fcb",
+    "sourceTree": "4e262abdf9720b335890635ddec2a6f0a53f1eb5",
+    "semanticDigest": "5523f05ad72c20b32a6e44c4d9ffa3a0b9ca7a405c7f3595f6b6db3e50a8e18c"
+  },
+  "normalization": {
+    "semanticReplay": "PASS",
+    "cellCount": 16,
+    "recordCount": 384,
+    "confirmatoryInputDigestCount": 0,
+    "constructionRealizationCounts": {
+      "1": 3,
+      "8": 13
+    },
+    "measurementBatchCounts": {
+      "8": 16
+    }
+  },
+  "campaign": {
+    "counts": {
+      "plannedPositiveRuns": 3072,
+      "actualPositiveRuns": 3072,
+      "plannedPrimaryControlRuns": 768,
+      "actualPrimaryControlRuns": 768,
+      "calibrationRuns": 384,
+      "perturbationPairsPlanned": 7680,
+      "perturbationPairsExecuted": 0
+    },
+    "protocolProjection": {
+      "keys": [
+        "schema",
+        "engineVersion",
+        "experimentId",
+        "preregistrationCommit",
+        "finalSourceCommit",
+        "sourceBoundary",
+        "manifestBinding",
+        "constructionContract",
+        "constructionContractDigest",
+        "normalizationBinding",
+        "randomness"
+      ],
+      "digest": "09a4636c37b71425f29f86f18701653ef780fbb7dc261b84578c7d300987d2ae"
+    },
+    "scientificProjection": {
+      "keys": [
+        "exactGateOne",
+        "positiveRuns",
+        "cells",
+        "primaryControls",
+        "gateResults",
+        "counts",
+        "conclusion",
+        "evidenceBoundary"
+      ],
+      "digest": "413a85c9618fcf2190112661649defc92d41f626ef10cff0aa1e9820fa71d5a5"
+    },
+    "diagnosticToleranceProjection": {
+      "scientificKeys": [
+        "exactGateOne",
+        "positiveRuns",
+        "cells",
+        "primaryControls",
+        "gateResults",
+        "counts",
+        "conclusion",
+        "evidenceBoundary"
+      ],
+      "tolerance": 1e-12,
+      "policy": "omit only positiveRuns[].conductance.digest; round every finite exposed number to nearest 1e-12; normalize -0 to 0",
+      "digest": "8f6ba8ff1da1d5acf872fc68bd1dca91a3441390ffac61062d39d6b14fc3289a",
+      "decisionAuthority": "NONE"
+    },
+    "criticalProjectionDigests": {
+      "sourceBoundary": "b8d8e28ac7e2b9806140dc77998eb4310ac1e94662365faaef82f2dd2b2a2a10",
+      "normalizationBinding": "4fef405ea05e0033f52f6b8c66a909ba2f267b2d0dc92fb401a7fc7fbe7f1a11",
+      "counts": "093041bf3ef1515a0de740b851888160b8648a9a9b7086fbf7396cdf9a366e13",
+      "cells": "225a0b1b0b003164fad412de4791e2272c79a65043a2dbf75e72d59f72770969",
+      "gateResults": "698aa59ce10db0514118530c720ad6e7e96432f25ba448878d406bdb19e6ac59",
+      "conclusion": "9ed95232e7283127fd5ed59508ddf03ed5dda9a8cda8701ffc45975a7a1db416",
+      "evidenceBoundary": "60dbc6c9a44ee9b35614e915d92d2f97d011be6061432647c0c547b25298f47c"
+    },
+    "runManifestMerkleRoot": "0308755406b847a3efd4b74c6d9ef87577c1cc9d0f48702f5caf4ecd342574fd",
+    "gates": [
+      {
+        "gate": 1,
+        "status": "PASS",
+        "reason": "periodic analytic/dense spectra and four exact-small disk topology/Gauss-Bonnet certificates"
+      },
+      {
+        "gate": 2,
+        "status": "UNRESOLVED",
+        "subatoms": {
+          "dV": "UNRESOLVED",
+          "dVDescriptiveIntervalInsideMargin": true,
+          "dS": "UNRESOLVED",
+          "dW": "UNRESOLVED"
+        },
+        "reason": "volume was evaluated descriptively, but full hierarchical root-block reselection, strict primary heat, and deterministic-propagation walk atoms are absent"
+      },
+      {
+        "gate": 3,
+        "status": "UNRESOLVED",
+        "reason": "joint volume/heat/MSD profile distances cannot be decided without the strict heat primary"
+      },
+      {
+        "gate": 4,
+        "status": "UNRESOLVED",
+        "reason": "Einstein diagnostic lacks strict dS and dW intervals"
+      },
+      {
+        "gate": 5,
+        "status": "UNRESOLVED",
+        "reason": "positive runs contain certified restricted-potential conductance upper bounds, not converged Dirichlet values and lower bounds"
+      },
+      {
+        "gate": 6,
+        "status": "UNRESOLVED",
+        "reason": "the five full paired perturbation ensembles were not executed"
+      },
+      {
+        "gate": 7,
+        "status": "UNRESOLVED",
+        "countedControls": 1,
+        "reason": "1 of four primary controls meet their exact preregistered mechanism"
+      },
+      {
+        "gate": 8,
+        "status": "UNRESOLVED",
+        "reason": "independent full macOS/Windows campaign certificates are absent"
+      }
+    ],
+    "conclusion": {
+      "candidateId": "U2",
+      "hypothesisVersion": 2,
+      "status": "UNRESOLVED",
+      "acceptanceAllowed": false,
+      "rejectionClaimed": false,
+      "determiningAtoms": [
+        "Gate 2: volume was evaluated descriptively, but full hierarchical root-block reselection, strict primary heat, and deterministic-propagation walk atoms are absent",
+        "Gate 3: joint volume/heat/MSD profile distances cannot be decided without the strict heat primary",
+        "Gate 4: Einstein diagnostic lacks strict dS and dW intervals",
+        "Gate 5: positive runs contain certified restricted-potential conductance upper bounds, not converged Dirichlet values and lower bounds",
+        "Gate 6: the five full paired perturbation ensembles were not executed",
+        "Gate 7: 1 of four primary controls meet their exact preregistered mechanism",
+        "Gate 8: independent full macOS/Windows campaign certificates are absent"
+      ]
+    },
+    "finiteFindings": {
+      "gateOne": {
+        "status": "PASS",
+        "periodicCertificateCount": 6,
+        "exactSmallDiskCertificateCount": 4,
+        "maximumSpectralAbsoluteDiscrepancy": 9.9920072216264e-15,
+        "maximumAbsoluteGaussBonnetResidual": 1.5099033134902e-14
+      },
+      "descriptiveVolume": {
+        "decisionCellCount": 32,
+        "successfulRunCount": 1024,
+        "everyIntervalStrictlyInsidePreregisteredMargin": true,
+        "intervalEnvelope": {
+          "lower": 1.8831510467869048,
+          "upper": 2.023716691572191
+        },
+        "decisionStatus": "UNRESOLVED",
+        "reason": "descriptive intervals lack the preregistered hierarchical construction/root-block/probe reselection"
+      }
+    },
+    "failureCensus": {
+      "positiveDiagnosticStatus": {
+        "PARTIAL": 3072
+      },
+      "positiveFailureCodes": {
+        "RESOURCE_LIMIT": 3072
+      },
+      "spectralPrimaryStatus": {
+        "RESOURCE_LIMIT": 3072
+      },
+      "volumeStatus": {
+        "NO_SCALING_WINDOW": 2048,
+        "OK": 1024
+      },
+      "alternateWalkStatus": {
+        "NO_SCALING_WINDOW": 1024,
+        "OK_ALTERNATE_ONLY": 2048
+      },
+      "transportStatus": {
+        "CERTIFIED_UPPER_BOUND_ONLY": 3072
+      }
+    },
+    "controls": [
+      {
+        "id": "comb-trap",
+        "recordCount": 192,
+        "constructedCount": 192,
+        "countsForGate7Count": 0,
+        "measurementStatuses": {
+          "UNRESOLVED": 192
+        },
+        "summaryCountsForGate7": false,
+        "summaryStatus": "UNRESOLVED"
+      },
+      {
+        "id": "small-world-shortcuts",
+        "recordCount": 192,
+        "constructedCount": 192,
+        "countsForGate7Count": 0,
+        "measurementStatuses": {
+          "UNRESOLVED": 192
+        },
+        "summaryCountsForGate7": false,
+        "summaryStatus": "UNRESOLVED"
+      },
+      {
+        "id": "vanishing-neck",
+        "recordCount": 192,
+        "constructedCount": 192,
+        "countsForGate7Count": 0,
+        "measurementStatuses": {
+          "CERTIFIED_UPPER_BOUND_DIAGNOSTIC": 192
+        },
+        "summaryCountsForGate7": false,
+        "summaryStatus": "UNRESOLVED"
+      },
+      {
+        "id": "perforated-disk",
+        "recordCount": 192,
+        "constructedCount": 192,
+        "countsForGate7Count": 192,
+        "measurementStatuses": {
+          "STRONG_FAIL_TOPOLOGY": 192
+        },
+        "summaryCountsForGate7": true,
+        "summaryStatus": "FAILS_U2_AS_PREREGISTERED"
+      }
+    ],
+    "evidenceBoundary": {
+      "finiteComputationsEstablished": [
+        "exact-small topology/Gauss-Bonnet",
+        "full positive volume profiles",
+        "replay-deterministic lazy-walk alternate",
+        "restricted-potential transport upper bounds",
+        "all four primary control construction attempts and validated witnesses"
+      ],
+      "withheld": [
+        "strict heat primary",
+        "primary probability-propagation intrinsic MSD",
+        "converged positive Dirichlet transport",
+        "paired perturbation ensembles",
+        "cross-platform full-batch replay",
+        "universality acceptance or rejection",
+        "continuum theorem",
+        "physical validation"
+      ]
+    }
+  },
+  "interpretation": {
+    "evaluationClass": "STRICT_PARTIAL",
+    "completeConfirmatoryU2": false,
+    "u2Status": "UNRESOLVED",
+    "acceptanceAllowed": false,
+    "rejectionClaimed": false,
+    "decisionAuthority": "PARTIAL_EVIDENCE_ONLY"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "04f4f9f8ddbf80a485b145c7bb967cea3ddd6ede7c74d8c207e089c494e17307",
+    "canonicalBytes": 7856
+  }
+}

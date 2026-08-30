@@ -45,6 +45,13 @@ Global Geometry II adds:
   fabrication-ready protocol and SVGs under
   `../../artifacts/global-geometry-ii/fabrication/`.
 
+The later U2 evaluation publication adds the
+[`../../GLOBAL_GEOMETRY_II_U2_EVALUATION_REPORT.md`](../../GLOBAL_GEOMETRY_II_U2_EVALUATION_REPORT.md),
+[`evaluation-v2` index](../../artifacts/global-geometry-ii/u2/evaluation-v2/evaluation-index-v2.json),
+[`release-v2` manifest](../../global_geometry_ii_reproducibility_manifest_v2.json),
+and
+[`release-v2` evidence index](../../artifacts/global-geometry-ii/release-index-v2.json).
+
 No package installation, build system, remote request, analytics, dynamic
 import, or user-code evaluation is required.
 
@@ -68,6 +75,23 @@ The page distinguishes:
 
 Finite agreement is not labeled continuum convergence or universality.  A
 preset is not labeled an empirically adequate model of its application domain.
+
+### U2 evaluation checkpoint
+
+The finite preview remains `NOT_EVALUATED`.  A distinct cross-platform
+screening and strict-partial checkpoint is `UNRESOLVED`: screening v3 completed
+3,840/3,840 records on each host, while exact raw cross-host comparison is
+`FAIL`; strict Gate 1 is `PASS`, Gates 2--8 are `UNRESOLVED`, and exact strict
+cross-host replication is `FAIL`.  The strict \(10^{-12}\)-rounded diagnostic
+projection is `PASS` with decision authority `NONE`.  The full confirmatory
+campaign, physical validation, and camera validation are all `NOT_RUN`.
+
+The authoritative comparisons are the
+[strict-partial comparison](../../artifacts/global-geometry-ii/u2/evaluation-v2/strict-cross-comparison-v1.json)
+and
+[screening-v3 comparison](../../artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-cross-comparison-v1.json).
+Compressed macOS/Windows strict campaigns and screening streams are indexed as
+non-authoritative convenience transports by the evaluation-v2 index.
 
 ## Run locally
 
@@ -94,19 +118,30 @@ http://127.0.0.1:8000/website/global-geometry-lab/global-geometry-ii.html
 ```bash
 node --test website/global-geometry-lab/test-global-geometry-core.js
 node website/global-geometry-lab/reproduce-global-geometry-ii.js --verify
+node website/global-geometry-lab/reproduce-global-geometry-ii-v2.js --verify --mode deep
 ```
 
-On Windows, the same Global Geometry II verification is wrapped by
+The last command is the current release-v2 deep verifier.  It checks the
+registered compact release surface and runs the platform-native evaluation
+validators; it does not execute full confirmation or any physical experiment.
+
+For the historical v1 surface, Windows verification is wrapped by
 `reproduce-global-geometry-ii.ps1`.  The platform-local
 [macOS v2](../../artifacts/global-geometry-ii/certificates/macos-local-v2.json)
 and [Windows v1](../../artifacts/global-geometry-ii/certificates/windows-local-v1.json)
 certificates remain single-run records and never claim cross-platform parity.
 Only the separately addressed
 [macOS / Windows comparison](../../artifacts/global-geometry-ii/certificates/macos-windows-comparison-v1.json)
-may close the declared digest-and-test-surface gate.  It does not validate
+may close that historical declared digest-and-test-surface gate.  It does not
+certify release v2 and does not validate
 bounded-disk universality, camera or hardware behavior, a physical sheet,
 peer review, publication, or merge status.  The earlier `macos-local-v1.json`
 is a historical development record and is not the designated comparison input.
+
+The current enlarged surface uses the separately addressed
+[release-v2 macOS / Windows comparison](../../artifacts/global-geometry-ii/certificates/macos-windows-comparison-v2.json).
+That record compares only the v2 release and declared deep-test surface; it has
+no U2 decision or physical-validation authority.
 
 When transferring a tar archive from macOS, create it with
 `COPYFILE_DISABLE=1` and reject any `._*` AppleDouble entry before Windows

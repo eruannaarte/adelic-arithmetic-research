@@ -1,0 +1,575 @@
+{
+  "schema": "ggii.release-index/2",
+  "releaseId": "global-geometry-ii-evaluation-checkpoint-v2",
+  "manifest": {
+    "path": "global_geometry_ii_reproducibility_manifest_v2.json",
+    "rawSha256": "856070903ff1c9be214ada1116a2273a57f41fe589560080748f70c11043cd4c",
+    "rawBytes": 55074,
+    "contentAddress": {
+      "algorithm": "sha256",
+      "canonicalization": "ggii-release-json-v2",
+      "digest": "491a8d87ad4bc9a49c71b61be1df5f85749f0bc8cf07cc90a088635e07614d05",
+      "canonicalBytes": 44636
+    }
+  },
+  "inputRegistry": {
+    "path": "artifacts/global-geometry-ii/release-input-registry-v2.json",
+    "rawSha256": "1fb712a41a3e695dda884deb85c2128fb8c0089e098c80b1433eb730a45ab4cf",
+    "rawBytes": 14607,
+    "semanticAddress": {
+      "algorithm": "sha256",
+      "canonicalization": "ggii-release-json-v2",
+      "digest": "41e1a965cf0a82c2ca9ab60eabf2c15fdd8521220f219cedafb983e32200bc20",
+      "canonicalBytes": 11743
+    }
+  },
+  "claimBoundary": {
+    "checkpointStatus": "UNRESOLVED",
+    "u2Decision": "NO_ACCEPTANCE_OR_REJECTION_CLAIM",
+    "universalityClaim": "NONE",
+    "fullConfirmatoryEvaluation": "NOT_RUN",
+    "physicalValidation": "NOT_RUN",
+    "publicationMeaning": "SHAREABLE_EVIDENCE_CHECKPOINT_NOT_A_CONFIRMATORY_DECISION",
+    "interpretation": "This release packages an evidence checkpoint. It makes no U2 acceptance or rejection decision, no universality claim, and no physical-validation claim."
+  },
+  "historicalV1": {
+    "classification": "HISTORICAL_PRIOR_RELEASE_ONLY_DOES_NOT_CERTIFY_V2",
+    "releaseIndexPath": "artifacts/global-geometry-ii/release-index-v1.json",
+    "comparisonPath": "artifacts/global-geometry-ii/certificates/macos-windows-comparison-v1.json",
+    "interpretation": "The v1 index and comparison are retained as historical prior-release records only; neither certifies the v2 source, artifact, evaluation, or suite surface."
+  },
+  "registeredArtifacts": [
+    {
+      "id": "calibration-v1",
+      "path": "artifacts/global-geometry-ii/calibration-v1.json",
+      "role": "principal-artifact",
+      "platform": "shared",
+      "rawSha256": "c85d69d756866956a0d856a318b318c32268b89321c49ee141f9ccc66c3611ce",
+      "rawBytes": 1779682,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-stable-json-alpha1",
+        "digest": "e97eb7187994a58e7c637d489ac2d03e8b2e3990a40e1963df0ee3fb0a948091",
+        "canonicalBytes": 934524
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "atlas-pilot-v1",
+      "path": "artifacts/global-geometry-ii/atlas-pilot-v1.json",
+      "role": "principal-artifact",
+      "platform": "shared",
+      "rawSha256": "0a6d977ac815bc43f3a312ac25199b4c101287675a4167d37b5d865155aa154e",
+      "rawBytes": 808234,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-stable-json-alpha1",
+        "digest": "f9c4345529fc6122d11899d028ccf569989ce8122e78c84969fba0c87d79423f",
+        "canonicalBytes": 447232
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "inverse-certificates-v1",
+      "path": "artifacts/global-geometry-ii/inverse-certificates-v1.json",
+      "role": "principal-artifact",
+      "platform": "shared",
+      "rawSha256": "a5e41762d61b100b6d319474d8f78b2326c16ae9f3686acd80789b29cc7fe906",
+      "rawBytes": 205564,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-inverse-ieee754-json-alpha2",
+        "digest": "53be9aa4cdc3765a7e8b9a902cf184f552e60600ad880ed9f34fd7cd2423cccd",
+        "canonicalBytes": 92429
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "sheet-hil-v1",
+      "path": "artifacts/global-geometry-ii/sheet-hil-v1.json",
+      "role": "principal-artifact",
+      "platform": "shared",
+      "rawSha256": "3b20eb43cd08af95cdb5bddf58c94923baef43a9e721912d53fb8353966b14ad",
+      "rawBytes": 194347,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-sheet-jcs-subset-v2",
+        "digest": "eb6fd9253acb5b2133ee2466a14e280c2ca59dc07cfc2acc09e84090eb4d4fa7",
+        "canonicalBytes": 96746
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "u2-evaluation-index-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/evaluation-index-v2.json",
+      "role": "evaluation-index",
+      "platform": "shared",
+      "rawSha256": "cbb672db2e31473180ecd871df0731f2021b1a2f014ba0fc0805f887b39f6320",
+      "rawBytes": 7931,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "44205808aa06644cdb81072adafd55640c4352c1667e13270277984284f49e6c",
+        "canonicalBytes": 6693
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "u2-evaluation-report-v2",
+      "path": "GLOBAL_GEOMETRY_II_U2_EVALUATION_REPORT.md",
+      "role": "evaluation-report",
+      "platform": "shared",
+      "rawSha256": "29315afc0624363ad0b2889d5b21dec7c9700eac2de769b5ac7f7446afd461c4",
+      "rawBytes": 11450,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-release-json-v2",
+        "digest": "0359c06547a825c29e637ee2dfd529bfc6b4cec0736d0b8d9619b4ff570130c0",
+        "canonicalBytes": 11715
+      },
+      "semanticReplay": "UTF8_TEXT_ADDRESS_COMPUTED"
+    },
+    {
+      "id": "screening-summary-darwin-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-summary-envelope-v3.json",
+      "role": "screening-summary",
+      "platform": "darwin",
+      "rawSha256": "6d8f4c25b65088a9840958e63f1e284ea8e8ebff20594ae499388a62c9b8410b",
+      "rawBytes": 180019,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "e60eec48a471cb1caab05f46a8444c92a608853d9bfc8cfe34563b234ae4b4d7",
+        "canonicalBytes": 123697
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-summary-win32-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-summary-envelope-v3.json",
+      "role": "screening-summary",
+      "platform": "win32",
+      "rawSha256": "d901efadb6e60f65621f1e373d4a9747db03ec2bc3ddd2caabc0223a83843974",
+      "rawBytes": 180009,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "59f05a30cfeb84eaba541acf3c124a651d0f1ff7fba4f3fac14faf5e70011514",
+        "canonicalBytes": 123687
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-runtime-darwin-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-runtime-v3.json",
+      "role": "screening-runtime",
+      "platform": "darwin",
+      "rawSha256": "050d29cad22aeecb9f9378045c7e06dbe41ab5f2a80d749031706454bb53c631",
+      "rawBytes": 3665,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "138e9d482d334807da827b8dfd21299377e71bcd4553162aa660d13f8a2864af",
+        "canonicalBytes": 3004
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-runtime-win32-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-runtime-v3.json",
+      "role": "screening-runtime",
+      "platform": "win32",
+      "rawSha256": "ba29854ea5363c8461bedbf36b30d96388e2167a71e52cd2a070ea89c2ddcf06",
+      "rawBytes": 3671,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "c8f1303319216b00a5eddaa9466369debe5924bab1f233bb67dd4345d8835aba",
+        "canonicalBytes": 3010
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-writer-darwin-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/writer-capability-v3.json",
+      "role": "screening-writer-capability",
+      "platform": "darwin",
+      "rawSha256": "53524c7a40e2157a22c48ab1789514350a2d1ed66b8e13e81a9141748683dad5",
+      "rawBytes": 2220,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "22de7a37c244d132fcdf203ff57d842ea272e07dff36a5cfa4fc597221bc4e30",
+        "canonicalBytes": 1632
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-writer-win32-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/writer-capability-v3.json",
+      "role": "screening-writer-capability",
+      "platform": "win32",
+      "rawSha256": "b793033a8bf3470a82e544691cac06589316fbeb194583085aeace4445caffe1",
+      "rawBytes": 2244,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "2012a207c0038396f77699ca52a7931a3ec2adac264745765ccacfc0f15a00a8",
+        "canonicalBytes": 1656
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-checkpoint-darwin-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-checkpoint-manifest-v3.json",
+      "role": "screening-checkpoint",
+      "platform": "darwin",
+      "rawSha256": "0e787b99074ec88a674bad18fc95848c1687ea7e85495abf593f5937a7481f45",
+      "rawBytes": 77020,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "a59ac0798f6f9679d564c9aea8e20da3be6c107aed9a6a50beac027259da0314",
+        "canonicalBytes": 62368
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-checkpoint-win32-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-checkpoint-manifest-v3.json",
+      "role": "screening-checkpoint",
+      "platform": "win32",
+      "rawSha256": "85908bafadd852a24004944253b7538a69f3be7ce3a5a188aa8e13ae4f17fd48",
+      "rawBytes": 77506,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "efba658f7bac9bb1f5c54f2868ee75ad0f1db2ea31240bf65a7402c7000b19af",
+        "canonicalBytes": 62854
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-certificate-darwin-v2",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-v3-macos-validation-certificate-v2.json",
+      "role": "screening-certificate",
+      "platform": "darwin",
+      "rawSha256": "e1af4692511eafea048d049bebc046c23a306e6399c1aee89718300c8cdeb428",
+      "rawBytes": 7042,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "85a13831d82129b6052501c9e8c000d17a8806421ff823e63817efb0718a26e0",
+        "canonicalBytes": 5771
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-certificate-win32-v2",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-v3-windows-validation-certificate-v2.json",
+      "role": "screening-certificate",
+      "platform": "win32",
+      "rawSha256": "357a46028e65853c3e1c9bd4ca107ae7ece5836d171bb9df3294afa8798f387f",
+      "rawBytes": 7080,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "487360b5481d6b8a7f0feeb099a0bdc9d7540146d2fde5c6cc3692cdf7d6371d",
+        "canonicalBytes": 5809
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-source-boundary-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/source-boundary-v3.json",
+      "role": "screening-source-boundary",
+      "platform": "shared",
+      "rawSha256": "022fec64e8b82d243cf6eda171da54337215718e960ff60b9f746c4f16d3b06d",
+      "rawBytes": 6453,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "369a05d51458b8b770f7d19fa1bbacfaf051e1d917e9c7db4967a0c1a37211de",
+        "canonicalBytes": 5279
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "screening-cross-comparison-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-cross-comparison-v1.json",
+      "role": "screening-comparison",
+      "platform": "shared",
+      "rawSha256": "1467a20d73d0444c3d39edee13ea94358c11abbfb40bbb5140b6407581681132",
+      "rawBytes": 10347,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "a896c04316516c5dc4ed6661093acfdfb062793d8810f91b20a79095bfdf9ebe",
+        "canonicalBytes": 7901
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "strict-normalization-darwin-v2",
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/macos/u2-normalization-v2.json",
+      "role": "strict-normalization",
+      "platform": "darwin",
+      "rawSha256": "dd2409eb52e1b90de4f7690631a53c48811f8d18eaad43f516655e3411bea0f7",
+      "rawBytes": 533353,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "1a2324166fba3699446a1769e90a9739d8feeb61056b392835ade6650cc90810",
+        "canonicalBytes": 392937
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "strict-normalization-win32-v2",
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/windows/u2-normalization-v2.json",
+      "role": "strict-normalization",
+      "platform": "win32",
+      "rawSha256": "dd2409eb52e1b90de4f7690631a53c48811f8d18eaad43f516655e3411bea0f7",
+      "rawBytes": 533353,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "1a2324166fba3699446a1769e90a9739d8feeb61056b392835ade6650cc90810",
+        "canonicalBytes": 392937
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "strict-summary-darwin-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-macos-compact-v1.json",
+      "role": "strict-partial-summary",
+      "platform": "darwin",
+      "rawSha256": "e56f4902ac9412f1774e4443420cdf3471405e7413cf6b29fb2f68bb2579cab8",
+      "rawBytes": 10418,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "04f4f9f8ddbf80a485b145c7bb967cea3ddd6ede7c74d8c207e089c494e17307",
+        "canonicalBytes": 7856
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "strict-summary-win32-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-windows-compact-v1.json",
+      "role": "strict-partial-summary",
+      "platform": "win32",
+      "rawSha256": "1eb1c176d58f00be0e814a55f3495ac61d04a2ac43891bc75674c3daee65a4af",
+      "rawBytes": 10416,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "65afaa14e1fbb6a32ef1b674b02244e59481c47e7e1f9e40d825cb4a9c95896d",
+        "canonicalBytes": 7854
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "strict-certificate-darwin-v2",
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/macos/u2-strict-partial-macos-validation-certificate-v2.json",
+      "role": "strict-partial-certificate",
+      "platform": "darwin",
+      "rawSha256": "7116f43696b934aba9fa0a5e8f484c456fe74558922f9fba035a559aee385920",
+      "rawBytes": 8149,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "ba7f688166b8e72b04221a3a100aa6bf860dc5fb634ff782f5e98ba875559f86",
+        "canonicalBytes": 6552
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "strict-certificate-win32-v1",
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/windows/u2-strict-partial-windows-certificate-v1.json",
+      "role": "strict-partial-certificate",
+      "platform": "win32",
+      "rawSha256": "896d38af32de13c5a39f72b5313c1add3e120c6f79bf59497a495cf05e46181d",
+      "rawBytes": 7456,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "dad329b405cd531d5403ca370c8ca6eb38072b8ba1fbdb9c35f6167bc384fa44",
+        "canonicalBytes": 6033
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "strict-cross-comparison-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-cross-comparison-v1.json",
+      "role": "strict-partial-comparison",
+      "platform": "shared",
+      "rawSha256": "489cf2bf8d0b467cd69caed7b2aebd67f07b92162b2b797a9f09952064c778c2",
+      "rawBytes": 2358,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "RFC8785-compatible closed JSON subset",
+        "digest": "7be612b6f5a0555126a387197beb8f6c2d4491c95dd97081b28a9a2411750221",
+        "canonicalBytes": 1805
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "physical-preflight-v1",
+      "path": "artifacts/global-geometry-ii/fabrication/physical-preflight-v1.json",
+      "role": "physical-preflight",
+      "platform": "shared",
+      "rawSha256": "5e2a25ee6816c4f49c4d33f45bdbed9120c3bbb573058c97d18c2bef44a9eafa",
+      "rawBytes": 7079,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-physical-preflight-jcs-subset-v1",
+        "digest": "44ceee5021ff84cbf2e65648eb37e1d0f486641b48b207dabba7eea470a0c34f",
+        "canonicalBytes": 5427
+      },
+      "semanticReplay": "VERIFIED_SUPPLIED_CONTENT_ADDRESS"
+    },
+    {
+      "id": "strict-archive-darwin-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-macos-campaign-v2.json.gz",
+      "role": "strict-campaign-archive",
+      "platform": "darwin",
+      "rawSha256": "e6464e61058d780c8ac8e7ad3481c4775565fa62a2f6d9ba1f077722a9bd97b4",
+      "rawBytes": 3398520,
+      "semanticAddress": null,
+      "semanticReplay": "NOT_APPLICABLE_GZIP_CONVENIENCE_COPY_DECOMPRESSED_ADDRESS_RECORDED_BY_EVALUATION_INDEX"
+    },
+    {
+      "id": "strict-archive-win32-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-windows-campaign-v2.json.gz",
+      "role": "strict-campaign-archive",
+      "platform": "win32",
+      "rawSha256": "0fed8f548fa101a16c75da0d7587f75b8e41393b1843860bea6033275cb9b99b",
+      "rawBytes": 3398403,
+      "semanticAddress": null,
+      "semanticReplay": "NOT_APPLICABLE_GZIP_CONVENIENCE_COPY_DECOMPRESSED_ADDRESS_RECORDED_BY_EVALUATION_INDEX"
+    },
+    {
+      "id": "screening-archive-darwin-v3",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-macos-raw.jsonl.gz",
+      "role": "screening-raw-archive",
+      "platform": "darwin",
+      "rawSha256": "cf827f1e200d2a0cd1fcd15babf63666efb0c637cd7adfd8a8de887b51c79c38",
+      "rawBytes": 3274582,
+      "semanticAddress": null,
+      "semanticReplay": "NOT_APPLICABLE_GZIP_CONVENIENCE_COPY_DECOMPRESSED_ADDRESS_RECORDED_BY_EVALUATION_INDEX"
+    },
+    {
+      "id": "screening-archive-win32-v3",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-windows-raw.jsonl.gz",
+      "role": "screening-raw-archive",
+      "platform": "win32",
+      "rawSha256": "a7f07e8738b5f75abf9f47dd0bf46b2add0a15b3b4203655578e055eb1605343",
+      "rawBytes": 3274255,
+      "semanticAddress": null,
+      "semanticReplay": "NOT_APPLICABLE_GZIP_CONVENIENCE_COPY_DECOMPRESSED_ADDRESS_RECORDED_BY_EVALUATION_INDEX"
+    },
+    {
+      "id": "historical-v1-index",
+      "path": "artifacts/global-geometry-ii/release-index-v1.json",
+      "role": "historical-v1-metadata",
+      "platform": "shared",
+      "rawSha256": "8285e3b76282110f35bdb6dec9c5873c7285825e358fcd89e860b0be2bce7352",
+      "rawBytes": 3724,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-release-json-v2",
+        "digest": "aa65f203407583674508b0b14248a2c754113995142be66d3077c8e184a4c550",
+        "canonicalBytes": 3081
+      },
+      "semanticReplay": "CANONICAL_JSON_ADDRESS_COMPUTED"
+    },
+    {
+      "id": "historical-v1-comparison",
+      "path": "artifacts/global-geometry-ii/certificates/macos-windows-comparison-v1.json",
+      "role": "historical-v1-metadata",
+      "platform": "shared",
+      "rawSha256": "48eb1e9ddb696966ba16f9b54ff9c0ff744102689d207e6c8c9a3d81112653e2",
+      "rawBytes": 9412,
+      "semanticAddress": {
+        "algorithm": "sha256",
+        "canonicalization": "ggii-release-json-v2",
+        "digest": "33f3af6d02ff6a7c5b0a6726397d1833ded9a3d79f6b4c103fb64c5fbd36947f",
+        "canonicalBytes": 6929
+      },
+      "semanticReplay": "CANONICAL_JSON_ADDRESS_COMPUTED"
+    }
+  ],
+  "archiveIndexBindings": {
+    "evaluationIndexId": "u2-evaluation-index-v2",
+    "evaluationIndexPath": "artifacts/global-geometry-ii/u2/evaluation-v2/evaluation-index-v2.json",
+    "policy": "RAW_GZIP_BYTES_ADDRESSED_ONLY; DECOMPRESSED_BYTE_ADDRESS_IMPORTED_FROM_CONTENT_ADDRESSED_EVALUATION_INDEX; NO_GZIP_SEMANTIC_REPLAY",
+    "bindings": [
+      {
+        "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-macos-campaign-v2.json.gz",
+        "rawSha256": "e6464e61058d780c8ac8e7ad3481c4775565fa62a2f6d9ba1f077722a9bd97b4",
+        "rawBytes": 3398520,
+        "decompressedSha256": "51a7dde9f06aee6cc6fadf0a5244bb1f683c9ad46b8c85d9211221bdd43dc415",
+        "decompressedBytes": 74959716,
+        "correspondingSourcePath": "artifacts/global-geometry-ii/u2/strict-partial/macos/u2-campaign-partial-v2.json",
+        "correspondingSourceSemanticDigest": "5997e4b068f994b3c5b860869cb7c976d31e0b62a3545117dc1e8d81cac4bec8",
+        "sourceKind": "STRICT_PARTIAL_CAMPAIGN",
+        "scientificAuthority": "NONE",
+        "role": "deterministic gzip -n -9 convenience transport; decompressed bytes are the authoritative bound source artifact"
+      },
+      {
+        "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-windows-campaign-v2.json.gz",
+        "rawSha256": "0fed8f548fa101a16c75da0d7587f75b8e41393b1843860bea6033275cb9b99b",
+        "rawBytes": 3398403,
+        "decompressedSha256": "0411e4e665ca6bc5656b5579e4734bbdc930089f6479bf9c33731e61524d2a47",
+        "decompressedBytes": 74959750,
+        "correspondingSourcePath": "artifacts/global-geometry-ii/u2/strict-partial/windows/u2-campaign-partial-v2.json",
+        "correspondingSourceSemanticDigest": "a00f123d9747378dbe734f9b4b5b57387060f031211ef36f867092f888cd6d14",
+        "sourceKind": "STRICT_PARTIAL_CAMPAIGN",
+        "scientificAuthority": "NONE",
+        "role": "deterministic gzip -n -9 convenience transport; decompressed bytes are the authoritative bound source artifact"
+      },
+      {
+        "path": "artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-macos-raw.jsonl.gz",
+        "rawSha256": "cf827f1e200d2a0cd1fcd15babf63666efb0c637cd7adfd8a8de887b51c79c38",
+        "rawBytes": 3274582,
+        "decompressedSha256": "47bbf6da93da1270ea5b8b6120bfa0351be3c0386050d989ef614f2a3802d1d4",
+        "decompressedBytes": 29396798,
+        "correspondingSourcePath": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-raw-v3.jsonl",
+        "correspondingSourceSemanticDigest": null,
+        "sourceKind": "SCREENING_V3_RAW_JSONL",
+        "scientificAuthority": "NONE",
+        "role": "deterministic gzip -n -9 convenience transport; decompressed bytes are the authoritative bound source artifact"
+      },
+      {
+        "path": "artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-windows-raw.jsonl.gz",
+        "rawSha256": "a7f07e8738b5f75abf9f47dd0bf46b2add0a15b3b4203655578e055eb1605343",
+        "rawBytes": 3274255,
+        "decompressedSha256": "d44aed2b3556fdb929118649fde5c59aa8cb834dbc6ec7ce6346f8a1a276937e",
+        "decompressedBytes": 29395142,
+        "correspondingSourcePath": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-raw-v3.jsonl",
+        "correspondingSourceSemanticDigest": null,
+        "sourceKind": "SCREENING_V3_RAW_JSONL",
+        "scientificAuthority": "NONE",
+        "role": "deterministic gzip -n -9 convenience transport; decompressed bytes are the authoritative bound source artifact"
+      }
+    ]
+  },
+  "executionSurface": {
+    "quickSuiteCount": 20,
+    "deepSuiteCount": 2,
+    "deepRevalidationSeparatedFromQuick": true
+  },
+  "hashTopology": "Registered compact artifacts -> input registry -> manifest -> release index. No file hashes itself; v1 is historical and does not certify v2.",
+  "certificationStatus": {
+    "crossPlatformEqualityClaim": "NOT_MADE_BY_INDEX",
+    "externalComparisonRecord": "artifacts/global-geometry-ii/certificates/macos-windows-comparison-v2.json",
+    "releaseGate": "STATUS_DELEGATED_TO_V2_EXTERNAL_COMPARISON_WITH_BOUNDED_SCOPE"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "ggii-release-json-v2",
+    "digest": "dc0d7b67275e3cbf428b2d512ad83b4c1422ce8052b023e97e62044032d74573",
+    "canonicalBytes": 21401
+  }
+}

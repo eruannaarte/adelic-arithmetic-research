@@ -1,0 +1,156 @@
+{
+  "schema": "gg.u2.evaluation.index/2",
+  "evaluationId": "global-geometry-ii-u2-evaluation-v2",
+  "semanticRole": "closed, content-addressed index of completed partial/screening evaluations and explicitly unperformed work",
+  "artifacts": {
+    "strictPartialMacos": {
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-macos-compact-v1.json",
+      "bytes": 10418,
+      "sha256": "e56f4902ac9412f1774e4443420cdf3471405e7413cf6b29fb2f68bb2579cab8",
+      "semanticDigest": "04f4f9f8ddbf80a485b145c7bb967cea3ddd6ede7c74d8c207e089c494e17307"
+    },
+    "strictPartialWindows": {
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-windows-compact-v1.json",
+      "bytes": 10416,
+      "sha256": "1eb1c176d58f00be0e814a55f3495ac61d04a2ac43891bc75674c3daee65a4af",
+      "semanticDigest": "65afaa14e1fbb6a32ef1b674b02244e59481c47e7e1f9e40d825cb4a9c95896d"
+    },
+    "strictCrossComparison": {
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-cross-comparison-v1.json",
+      "bytes": 2358,
+      "sha256": "489cf2bf8d0b467cd69caed7b2aebd67f07b92162b2b797a9f09952064c778c2",
+      "semanticDigest": "7be612b6f5a0555126a387197beb8f6c2d4491c95dd97081b28a9a2411750221"
+    },
+    "screeningV3CrossComparison": {
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-cross-comparison-v1.json",
+      "bytes": 10347,
+      "sha256": "1467a20d73d0444c3d39edee13ea94358c11abbfb40bbb5140b6407581681132",
+      "semanticDigest": "a896c04316516c5dc4ed6661093acfdfb062793d8810f91b20a79095bfdf9ebe"
+    },
+    "nativeScreeningMacosCertificate": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-v3-macos-validation-certificate-v2.json",
+      "bytes": 7042,
+      "sha256": "e1af4692511eafea048d049bebc046c23a306e6399c1aee89718300c8cdeb428",
+      "semanticDigest": "85a13831d82129b6052501c9e8c000d17a8806421ff823e63817efb0718a26e0"
+    },
+    "nativeScreeningWindowsCertificate": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-v3-windows-validation-certificate-v2.json",
+      "bytes": 7080,
+      "sha256": "357a46028e65853c3e1c9bd4ca107ae7ece5836d171bb9df3294afa8798f387f",
+      "semanticDigest": "487360b5481d6b8a7f0feeb099a0bdc9d7540146d2fde5c6cc3692cdf7d6371d"
+    }
+  },
+  "convenienceArchives": [
+    {
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-macos-campaign-v2.json.gz",
+      "rawSha256": "e6464e61058d780c8ac8e7ad3481c4775565fa62a2f6d9ba1f077722a9bd97b4",
+      "rawBytes": 3398520,
+      "decompressedSha256": "51a7dde9f06aee6cc6fadf0a5244bb1f683c9ad46b8c85d9211221bdd43dc415",
+      "decompressedBytes": 74959716,
+      "correspondingSourcePath": "artifacts/global-geometry-ii/u2/strict-partial/macos/u2-campaign-partial-v2.json",
+      "correspondingSourceSemanticDigest": "5997e4b068f994b3c5b860869cb7c976d31e0b62a3545117dc1e8d81cac4bec8",
+      "sourceKind": "STRICT_PARTIAL_CAMPAIGN",
+      "scientificAuthority": "NONE",
+      "role": "deterministic gzip -n -9 convenience transport; decompressed bytes are the authoritative bound source artifact"
+    },
+    {
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-windows-campaign-v2.json.gz",
+      "rawSha256": "0fed8f548fa101a16c75da0d7587f75b8e41393b1843860bea6033275cb9b99b",
+      "rawBytes": 3398403,
+      "decompressedSha256": "0411e4e665ca6bc5656b5579e4734bbdc930089f6479bf9c33731e61524d2a47",
+      "decompressedBytes": 74959750,
+      "correspondingSourcePath": "artifacts/global-geometry-ii/u2/strict-partial/windows/u2-campaign-partial-v2.json",
+      "correspondingSourceSemanticDigest": "a00f123d9747378dbe734f9b4b5b57387060f031211ef36f867092f888cd6d14",
+      "sourceKind": "STRICT_PARTIAL_CAMPAIGN",
+      "scientificAuthority": "NONE",
+      "role": "deterministic gzip -n -9 convenience transport; decompressed bytes are the authoritative bound source artifact"
+    },
+    {
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-macos-raw.jsonl.gz",
+      "rawSha256": "cf827f1e200d2a0cd1fcd15babf63666efb0c637cd7adfd8a8de887b51c79c38",
+      "rawBytes": 3274582,
+      "decompressedSha256": "47bbf6da93da1270ea5b8b6120bfa0351be3c0386050d989ef614f2a3802d1d4",
+      "decompressedBytes": 29396798,
+      "correspondingSourcePath": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-raw-v3.jsonl",
+      "correspondingSourceSemanticDigest": null,
+      "sourceKind": "SCREENING_V3_RAW_JSONL",
+      "scientificAuthority": "NONE",
+      "role": "deterministic gzip -n -9 convenience transport; decompressed bytes are the authoritative bound source artifact"
+    },
+    {
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-windows-raw.jsonl.gz",
+      "rawSha256": "a7f07e8738b5f75abf9f47dd0bf46b2add0a15b3b4203655578e055eb1605343",
+      "rawBytes": 3274255,
+      "decompressedSha256": "d44aed2b3556fdb929118649fde5c59aa8cb834dbc6ec7ce6346f8a1a276937e",
+      "decompressedBytes": 29395142,
+      "correspondingSourcePath": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-raw-v3.jsonl",
+      "correspondingSourceSemanticDigest": null,
+      "sourceKind": "SCREENING_V3_RAW_JSONL",
+      "scientificAuthority": "NONE",
+      "role": "deterministic gzip -n -9 convenience transport; decompressed bytes are the authoritative bound source artifact"
+    }
+  ],
+  "stages": {
+    "strictPartial": {
+      "status": "COMPLETED_PARTIAL",
+      "exactCrossPlatformReplication": "FAIL",
+      "diagnosticToleranceProjection": "PASS",
+      "diagnosticDecisionAuthority": "NONE",
+      "u2Status": "UNRESOLVED"
+    },
+    "screeningV3": {
+      "status": "COMPLETED_SCREENING",
+      "exactRawReplication": "FAIL",
+      "exactScientificProjection": "FAIL",
+      "decisionAuthority": "NONE",
+      "u2Status": "UNRESOLVED"
+    },
+    "preview": {
+      "status": "NOT_EVALUATED",
+      "decisionAuthority": "NONE"
+    },
+    "fullConfirmatory": {
+      "status": "NOT_RUN",
+      "decisionAuthority": "NONE"
+    },
+    "physicalValidation": {
+      "status": "NOT_RUN",
+      "decisionAuthority": "NONE"
+    }
+  },
+  "overall": {
+    "u2Status": "UNRESOLVED",
+    "acceptanceAllowed": false,
+    "rejectionClaimed": false,
+    "decisionAuthority": "NONE",
+    "shareableAs": "content-addressed strict-partial and cross-platform-evaluated screening checkpoint",
+    "prohibitedClaim": "this index is not a completed confirmatory U2 evaluation and contains no physical validation"
+  },
+  "cleanCloneReplay": {
+    "command": "node website/global-geometry-lab/generate-global-geometry-ii-u2-evaluation-index-v2.js --validate-only",
+    "targetedCommands": {
+      "strict": "node website/global-geometry-lab/generate-global-geometry-ii-u2-evaluation-index-v2.js --validate-strict",
+      "screening": "node website/global-geometry-lab/generate-global-geometry-ii-u2-evaluation-index-v2.js --validate-screening"
+    },
+    "sourceMode": "FOUR_TRACKED_GZIP_TRANSPORTS",
+    "uncompressedStrictCampaignsRequired": false,
+    "uncompressedScreeningRawRequired": false,
+    "screeningChunksRequired": false,
+    "validates": [
+      "gzip decompression-to-source byte equality",
+      "raw and semantic bindings",
+      "platform-native frozen strict campaign semantic replay plus foreign-host certificate/content/ledger verification",
+      "all 3840 native screening records by fresh semantic remeasurement; foreign records require their native certificate when raw bytes differ",
+      "screening summaries/runtime/writer/checkpoint",
+      "compact summaries",
+      "both comparisons",
+      "evaluation index"
+    ]
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "44205808aa06644cdb81072adafd55640c4352c1667e13270277984284f49e6c",
+    "canonicalBytes": 6693
+  }
+}

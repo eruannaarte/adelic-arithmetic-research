@@ -1,0 +1,199 @@
+{
+  "schema": "gg.u2.evaluation.native-strict-validation-certificate/2",
+  "semanticRole": "write-once evidence that the frozen strict numerical validators actually replayed on the artifact's native host class",
+  "command": "node website/global-geometry-lab/generate-global-geometry-ii-u2-native-validation-certificates-v2.js --write-native-all",
+  "invocation": {
+    "executable": "node",
+    "execArgv": [],
+    "script": "website/global-geometry-lab/generate-global-geometry-ii-u2-native-validation-certificates-v2.js",
+    "mode": "--write-native-all",
+    "argv": [
+      "website/global-geometry-lab/generate-global-geometry-ii-u2-native-validation-certificates-v2.js",
+      "--write-native-all"
+    ],
+    "command": "node website/global-geometry-lab/generate-global-geometry-ii-u2-native-validation-certificates-v2.js --write-native-all"
+  },
+  "validationPolicy": "invoke Strict.validateCalibration and Strict.validateCampaign on exact native-host artifact bytes; any error prevents certificate creation",
+  "environment": {
+    "environmentClass": "native-macos-arm64-node-22.22.2",
+    "platformLabel": "macos",
+    "platform": "darwin",
+    "arch": "arm64",
+    "node": "v22.22.2",
+    "execArgv": []
+  },
+  "sourceBindings": {
+    "certificateBuilder": {
+      "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-native-validation-certificates-v2.js",
+      "bytes": 16145,
+      "sha256": "5323b55370484c4726cec262df140596e8d65b2248e714cc075b0d34466ca42b",
+      "semanticDigest": null
+    },
+    "evaluationBuilder": {
+      "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-evaluation-index-v2.js",
+      "bytes": 63216,
+      "sha256": "d519d21b67b4dd3f8f94cfff0228a36ef25aa17583ed10963725cb9a2383262d",
+      "semanticDigest": null
+    },
+    "strictValidator": {
+      "path": "website/global-geometry-lab/global-geometry-ii-u2.js",
+      "bytes": 70399,
+      "sha256": "a03afff20cb46fba4e17d42cd3879028bc554c8fbd4b0ece0af0663ec5d5ced7",
+      "semanticDigest": null
+    },
+    "strictSourceBoundaryValidator": {
+      "path": "website/global-geometry-lab/global-geometry-ii-u2-source-boundary.js",
+      "bytes": 5344,
+      "sha256": "38ee2b57d6fb3ad54cf133ade3e05a3100adc4fb83e3c0b86c11b3417169191c",
+      "semanticDigest": null
+    },
+    "screeningSemanticBase": {
+      "path": "website/global-geometry-lab/global-geometry-ii-u2-screening-v2.js",
+      "bytes": 18980,
+      "sha256": "3976809ec412580975852540166147d870c354672d055e243861ea7046e19873",
+      "semanticDigest": null
+    },
+    "screeningV3Adapter": {
+      "path": "website/global-geometry-lab/global-geometry-ii-u2-screening-execution-v3.js",
+      "bytes": 17119,
+      "sha256": "7de7014ee4a897b1f3e1f31b74b3687d45d01834b04a52b947b1e45454df4668",
+      "semanticDigest": null
+    },
+    "screeningV3Runner": {
+      "path": "website/global-geometry-lab/run-global-geometry-ii-u2-screening-execution-v3.js",
+      "bytes": 46574,
+      "sha256": "8a3c2114984d2b24c1f494981555109d5583786e7fd50d5d4413c2a19a4bfc4f",
+      "semanticDigest": null
+    },
+    "screeningSourceBoundary": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/source-boundary-v3.json",
+      "bytes": 6453,
+      "sha256": "022fec64e8b82d243cf6eda171da54337215718e960ff60b9f746c4f16d3b06d",
+      "semanticDigest": "369a05d51458b8b770f7d19fa1bbacfaf051e1d917e9c7db4967a0c1a37211de"
+    }
+  },
+  "artifactSourceBoundary": {
+    "schema": "gg.atlas.u2-source-boundary/1",
+    "sourceCommit": "9721d2b02197f18821846938b9494bfc8a865fcb",
+    "sourceTree": "4e262abdf9720b335890635ddec2a6f0a53f1eb5",
+    "verification": "actual Git commit/tree plus exact local=commit:path bytes",
+    "files": [
+      {
+        "path": "GLOBAL_GEOMETRY_II_EVALUATION_REPAIR_AUDIT.md",
+        "bytes": 9042,
+        "sha256": "3810154ff591ca42a0e85d4ceb90900c09f85e79a6e3ff403525003bac6e0313"
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_U2_ADVERSARIAL_PREREGISTRATION.md",
+        "bytes": 23688,
+        "sha256": "faffef2526d16f79b700102057d59745f0a4359ea7c386c318cc0ee4afd0d5dc"
+      },
+      {
+        "path": "GLOBAL_GEOMETRY_II_UNIVERSALITY_SPEC.md",
+        "bytes": 52967,
+        "sha256": "d49a4e7b3cf31ed47c6cab462b6340f6dfa15434f56e4df4d7e70737e1afe885"
+      },
+      {
+        "path": "artifacts/global-geometry-ii/u2/experiment-manifest-v2.json",
+        "bytes": 35194,
+        "sha256": "337b22a86b6f7b6b4d842c12d03f3eb580d8097e90746e55f9f1d8456c6cf9c6"
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-manifest.js",
+        "bytes": 12808,
+        "sha256": "cbee2fe2e1ea6d72ee90decdc5e74bfd0c87d22833a5a5e2e9c65677e2927474"
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-core.js",
+        "bytes": 94164,
+        "sha256": "9c461080b306b4304e4aa0d266d86d55ee31a9c90690a6f01e83022d55f4d77d"
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-core.js",
+        "bytes": 65769,
+        "sha256": "65d2cd1073765670cbfb98ad9da645e6ea957219ac7306c86ee92f9753b5d98c"
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-ensembles.js",
+        "bytes": 46707,
+        "sha256": "e13119cbf7b32e7a9da89d72006e4fcfd118baab7b65235509bd903f9a0ec92d"
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-u2-source-boundary.js",
+        "bytes": 5344,
+        "sha256": "38ee2b57d6fb3ad54cf133ade3e05a3100adc4fb83e3c0b86c11b3417169191c"
+      },
+      {
+        "path": "website/global-geometry-lab/global-geometry-ii-u2.js",
+        "bytes": 70399,
+        "sha256": "a03afff20cb46fba4e17d42cd3879028bc554c8fbd4b0ece0af0663ec5d5ced7"
+      },
+      {
+        "path": "website/global-geometry-lab/generate-global-geometry-ii-u2.js",
+        "bytes": 5068,
+        "sha256": "489dcfd24f04384e1eb89c54b8e4602fdfe6e9409ae02296990f2dc537c78c1f"
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2.js",
+        "bytes": 11011,
+        "sha256": "86a7ab541d35d81756eef55dc2e00e056d48329e80411eb601331013eaa95a61"
+      },
+      {
+        "path": "website/global-geometry-lab/test-global-geometry-ii-u2-adversarial.js",
+        "bytes": 10311,
+        "sha256": "76bd93430174d400c2d73f3d41bbd61d63094504569e7e045cf7d84070e29df4"
+      }
+    ],
+    "contentAddress": {
+      "algorithm": "sha256",
+      "canonicalization": "RFC8785-compatible closed JSON subset",
+      "digest": "5523f05ad72c20b32a6e44c4d9ffa3a0b9ca7a405c7f3595f6b6db3e50a8e18c",
+      "canonicalBytes": 2300
+    }
+  },
+  "artifacts": {
+    "normalization": {
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/macos/u2-normalization-v2.json",
+      "bytes": 533353,
+      "sha256": "dd2409eb52e1b90de4f7690631a53c48811f8d18eaad43f516655e3411bea0f7",
+      "semanticDigest": "1a2324166fba3699446a1769e90a9739d8feeb61056b392835ade6650cc90810"
+    },
+    "campaign": {
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/macos/u2-campaign-partial-v2.json",
+      "bytes": 74959716,
+      "sha256": "51a7dde9f06aee6cc6fadf0a5244bb1f683c9ad46b8c85d9211221bdd43dc415",
+      "semanticDigest": "5997e4b068f994b3c5b860869cb7c976d31e0b62a3545117dc1e8d81cac4bec8"
+    },
+    "priorHostCertificate": null
+  },
+  "validation": {
+    "normalization": {
+      "status": "PASS_NATIVE",
+      "recordsRemeasured": 384
+    },
+    "campaign": {
+      "status": "PASS_NATIVE",
+      "positiveRecordsRemeasured": 3072,
+      "controlRecordsRemeasured": 768,
+      "calibrationRecordsRemeasured": 384
+    },
+    "conclusion": "UNRESOLVED"
+  },
+  "timing": {
+    "startedAt": "2026-08-30T20:59:43.562Z",
+    "completedAt": "2026-08-30T21:02:08.707Z",
+    "elapsedMilliseconds": 145143.745042
+  },
+  "outcome": {
+    "u2Status": "UNRESOLVED",
+    "acceptanceAllowed": false,
+    "rejectionClaimed": false,
+    "decisionAuthority": "NONE"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "ba7f688166b8e72b04221a3a100aa6bf860dc5fb634ff782f5e98ba875559f86",
+    "canonicalBytes": 6552
+  }
+}

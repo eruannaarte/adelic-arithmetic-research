@@ -1,0 +1,250 @@
+{
+  "schema": "gg.u2.evaluation.screening-v3-cross-comparison/2",
+  "semanticRole": "exact cross-host comparison of independently validated screening-v3 raw records and scientific summary projections",
+  "hosts": {
+    "macos": {
+      "platformLabel": "macos",
+      "inputs": {
+        "raw": {
+          "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-raw-v3.jsonl",
+          "bytes": 29396798,
+          "sha256": "47bbf6da93da1270ea5b8b6120bfa0351be3c0386050d989ef614f2a3802d1d4"
+        },
+        "summary": {
+          "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-summary-envelope-v3.json",
+          "bytes": 180019,
+          "sha256": "6d8f4c25b65088a9840958e63f1e284ea8e8ebff20594ae499388a62c9b8410b",
+          "semanticDigest": "e60eec48a471cb1caab05f46a8444c92a608853d9bfc8cfe34563b234ae4b4d7"
+        },
+        "runtime": {
+          "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-runtime-v3.json",
+          "bytes": 3665,
+          "sha256": "050d29cad22aeecb9f9378045c7e06dbe41ab5f2a80d749031706454bb53c631",
+          "semanticDigest": "138e9d482d334807da827b8dfd21299377e71bcd4553162aa660d13f8a2864af"
+        },
+        "checkpoint": {
+          "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-checkpoint-manifest-v3.json",
+          "bytes": 77020,
+          "sha256": "0e787b99074ec88a674bad18fc95848c1687ea7e85495abf593f5937a7481f45",
+          "semanticDigest": "a59ac0798f6f9679d564c9aea8e20da3be6c107aed9a6a50beac027259da0314"
+        },
+        "writerCapability": {
+          "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/writer-capability-v3.json",
+          "bytes": 2220,
+          "sha256": "53524c7a40e2157a22c48ab1789514350a2d1ed66b8e13e81a9141748683dad5",
+          "semanticDigest": "22de7a37c244d132fcdf203ff57d842ea272e07dff36a5cfa4fc597221bc4e30"
+        },
+        "nativeValidationCertificate": {
+          "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-v3-macos-validation-certificate-v2.json",
+          "bytes": 7042,
+          "sha256": "e1af4692511eafea048d049bebc046c23a306e6399c1aee89718300c8cdeb428",
+          "semanticDigest": "85a13831d82129b6052501c9e8c000d17a8806421ff823e63817efb0718a26e0"
+        }
+      },
+      "sourceBoundary": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/source-boundary-v3.json",
+        "fileSha256": "022fec64e8b82d243cf6eda171da54337215718e960ff60b9f746c4f16d3b06d",
+        "semanticDigest": "369a05d51458b8b770f7d19fa1bbacfaf051e1d917e9c7db4967a0c1a37211de",
+        "sourceCommit": "e62970c349b3dfa2d94a46baaf72886b6124de27",
+        "sourceTree": "5ba6659c077655a5c8c09425d20042b36995bc7b",
+        "verificationMode": "git"
+      },
+      "recordCount": 3840,
+      "rawSha256": "47bbf6da93da1270ea5b8b6120bfa0351be3c0386050d989ef614f2a3802d1d4",
+      "recordHashProjection": "382ad193c897e0b74fc97cd6da2f6122fa2f5448b501ba3755f2286c5eb84ded",
+      "scientificSummaryProjection": {
+        "keys": [
+          "schema",
+          "screeningId",
+          "manifestDigest",
+          "preregistrationCommit",
+          "outcome",
+          "census",
+          "gates",
+          "positiveCells",
+          "controlCells",
+          "failureLedger",
+          "randomnessAudit",
+          "telemetryBinding",
+          "screeningVersion",
+          "implementation",
+          "semanticBaseSupplementDigest",
+          "semanticBaseImplementation",
+          "semanticBase",
+          "executionSupplementDigest",
+          "semanticAmendment"
+        ],
+        "digest": "9f100cc1bfe1b9bd05256b38e2353acddb9c9b5b3914ad16ac57bb9a38d4f50b"
+      },
+      "census": {
+        "expectedRecords": 3840,
+        "observedRecords": 3840,
+        "positiveExpected": 3072,
+        "positiveObserved": 3072,
+        "controlExpected": 768,
+        "controlObserved": 768,
+        "uniqueRunIds": 3840
+      },
+      "screenOutcome": {
+        "u2Status": "UNRESOLVED",
+        "acceptanceAllowed": false,
+        "rejectionAllowed": false,
+        "evidenceClass": "outcome-bearing-screening",
+        "reason": "This screen lacks decision-grade estimators, hierarchical inference, robustness channels, and independent Gate 8 reproduction."
+      },
+      "containerOutcome": {
+        "u2Status": "UNRESOLVED",
+        "decisionAuthority": "NONE"
+      }
+    },
+    "windows": {
+      "platformLabel": "windows",
+      "inputs": {
+        "raw": {
+          "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-raw-v3.jsonl",
+          "bytes": 29395142,
+          "sha256": "d44aed2b3556fdb929118649fde5c59aa8cb834dbc6ec7ce6346f8a1a276937e"
+        },
+        "summary": {
+          "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-summary-envelope-v3.json",
+          "bytes": 180009,
+          "sha256": "d901efadb6e60f65621f1e373d4a9747db03ec2bc3ddd2caabc0223a83843974",
+          "semanticDigest": "59f05a30cfeb84eaba541acf3c124a651d0f1ff7fba4f3fac14faf5e70011514"
+        },
+        "runtime": {
+          "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-runtime-v3.json",
+          "bytes": 3671,
+          "sha256": "ba29854ea5363c8461bedbf36b30d96388e2167a71e52cd2a070ea89c2ddcf06",
+          "semanticDigest": "c8f1303319216b00a5eddaa9466369debe5924bab1f233bb67dd4345d8835aba"
+        },
+        "checkpoint": {
+          "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-checkpoint-manifest-v3.json",
+          "bytes": 77506,
+          "sha256": "85908bafadd852a24004944253b7538a69f3be7ce3a5a188aa8e13ae4f17fd48",
+          "semanticDigest": "efba658f7bac9bb1f5c54f2868ee75ad0f1db2ea31240bf65a7402c7000b19af"
+        },
+        "writerCapability": {
+          "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/writer-capability-v3.json",
+          "bytes": 2244,
+          "sha256": "b793033a8bf3470a82e544691cac06589316fbeb194583085aeace4445caffe1",
+          "semanticDigest": "2012a207c0038396f77699ca52a7931a3ec2adac264745765ccacfc0f15a00a8"
+        },
+        "nativeValidationCertificate": {
+          "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-v3-windows-validation-certificate-v2.json",
+          "bytes": 7080,
+          "sha256": "357a46028e65853c3e1c9bd4ca107ae7ece5836d171bb9df3294afa8798f387f",
+          "semanticDigest": "487360b5481d6b8a7f0feeb099a0bdc9d7540146d2fde5c6cc3692cdf7d6371d"
+        }
+      },
+      "sourceBoundary": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/source-boundary-v3.json",
+        "fileSha256": "022fec64e8b82d243cf6eda171da54337215718e960ff60b9f746c4f16d3b06d",
+        "semanticDigest": "369a05d51458b8b770f7d19fa1bbacfaf051e1d917e9c7db4967a0c1a37211de",
+        "sourceCommit": "e62970c349b3dfa2d94a46baaf72886b6124de27",
+        "sourceTree": "5ba6659c077655a5c8c09425d20042b36995bc7b",
+        "verificationMode": "git"
+      },
+      "recordCount": 3840,
+      "rawSha256": "d44aed2b3556fdb929118649fde5c59aa8cb834dbc6ec7ce6346f8a1a276937e",
+      "recordHashProjection": "722caafad937877f543ce50952a196210f8d4cdccc8b67813790ab16ec1957d0",
+      "scientificSummaryProjection": {
+        "keys": [
+          "schema",
+          "screeningId",
+          "manifestDigest",
+          "preregistrationCommit",
+          "outcome",
+          "census",
+          "gates",
+          "positiveCells",
+          "controlCells",
+          "failureLedger",
+          "randomnessAudit",
+          "telemetryBinding",
+          "screeningVersion",
+          "implementation",
+          "semanticBaseSupplementDigest",
+          "semanticBaseImplementation",
+          "semanticBase",
+          "executionSupplementDigest",
+          "semanticAmendment"
+        ],
+        "digest": "7827edd3d2aa168e7b70c0c2669f5eaa4a914a2fcef51651a54f7e3dc6c37f58"
+      },
+      "census": {
+        "expectedRecords": 3840,
+        "observedRecords": 3840,
+        "positiveExpected": 3072,
+        "positiveObserved": 3072,
+        "controlExpected": 768,
+        "controlObserved": 768,
+        "uniqueRunIds": 3840
+      },
+      "screenOutcome": {
+        "u2Status": "UNRESOLVED",
+        "acceptanceAllowed": false,
+        "rejectionAllowed": false,
+        "evidenceClass": "outcome-bearing-screening",
+        "reason": "This screen lacks decision-grade estimators, hierarchical inference, robustness channels, and independent Gate 8 reproduction."
+      },
+      "containerOutcome": {
+        "u2Status": "UNRESOLVED",
+        "decisionAuthority": "NONE"
+      }
+    }
+  },
+  "sourceBoundaryExact": true,
+  "raw": {
+    "bytesExact": false,
+    "macosSha256": "47bbf6da93da1270ea5b8b6120bfa0351be3c0386050d989ef614f2a3802d1d4",
+    "windowsSha256": "d44aed2b3556fdb929118649fde5c59aa8cb834dbc6ec7ce6346f8a1a276937e",
+    "status": "FAIL"
+  },
+  "recordHashProjection": {
+    "exact": false,
+    "status": "FAIL"
+  },
+  "scientificSummaryProjection": {
+    "exact": false,
+    "status": "FAIL",
+    "keys": [
+      "schema",
+      "screeningId",
+      "manifestDigest",
+      "preregistrationCommit",
+      "outcome",
+      "census",
+      "gates",
+      "positiveCells",
+      "controlCells",
+      "failureLedger",
+      "randomnessAudit",
+      "telemetryBinding",
+      "screeningVersion",
+      "implementation",
+      "semanticBaseSupplementDigest",
+      "semanticBaseImplementation",
+      "semanticBase",
+      "executionSupplementDigest",
+      "semanticAmendment"
+    ]
+  },
+  "interpretation": {
+    "screeningReplication": "FAIL",
+    "decisionAuthority": "NONE",
+    "gateEightSatisfied": false,
+    "reason": "screening-v3 was evaluated independently across hosts but did not reproduce exactly; it also lacks decision-grade estimators, robustness ensembles, and full confirmatory authority"
+  },
+  "outcome": {
+    "u2Status": "UNRESOLVED",
+    "acceptanceAllowed": false,
+    "rejectionClaimed": false,
+    "decisionAuthority": "NONE"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "a896c04316516c5dc4ed6661093acfdfb062793d8810f91b20a79095bfdf9ebe",
+    "canonicalBytes": 7901
+  }
+}

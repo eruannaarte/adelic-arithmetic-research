@@ -1,0 +1,81 @@
+{
+  "schema": "gg.u2.screening.runtime-certificate/3",
+  "executionVersion": "screening-v3",
+  "semanticPayloadVersion": "screening-v3",
+  "semanticKernel": {
+    "semanticBaseVersion": "screening-v2",
+    "semanticPayloadVersion": "screening-v3",
+    "recordSchema": "gg.u2.screening.record/3",
+    "implementationCommit": "1c3373267057b8a018ad5039e0f3b2b4e8eb2b1d",
+    "kernelPath": "website/global-geometry-lab/global-geometry-ii-u2-screening-v2.js",
+    "kernelSha256": "3976809ec412580975852540166147d870c354672d055e243861ea7046e19873",
+    "semanticSupplementDigest": "21d69b11b12277e228e2934e033fd8f366b3c8d5d89f1b8833aa781a36118888",
+    "sourceBoundary": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v2/source-boundary-v2.json",
+      "fileSha256": "c60331209247fccee700d10d38b9ae03da3f81e9013f19281a1f5918fb9e6c73",
+      "semanticDigest": "a1b1b9bb525ba9c172be48af60b9881a13ce58ebed9862a60fec18a25f07fae0",
+      "commit": "ed624f4ff42b4e5488a1889c3d55ba1195e5a952"
+    }
+  },
+  "executionSupplementDigest": "1524f69ef343a1048e3cfd05c9b4f6d93f9c6783233611094a345b3d4863885d",
+  "platformLabel": "windows",
+  "sourceBoundary": {
+    "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/source-boundary-v3.json",
+    "fileSha256": "022fec64e8b82d243cf6eda171da54337215718e960ff60b9f746c4f16d3b06d",
+    "semanticDigest": "369a05d51458b8b770f7d19fa1bbacfaf051e1d917e9c7db4967a0c1a37211de",
+    "sourceCommit": "e62970c349b3dfa2d94a46baaf72886b6124de27",
+    "sourceTree": "5ba6659c077655a5c8c09425d20042b36995bc7b",
+    "verificationMode": "git"
+  },
+  "writerCapability": {
+    "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/writer-capability-v3.json",
+    "bytes": 2244,
+    "sha256": "b793033a8bf3470a82e544691cac06589316fbeb194583085aeace4445caffe1",
+    "semanticDigest": "2012a207c0038396f77699ca52a7931a3ec2adac264745765ccacfc0f15a00a8"
+  },
+  "artifacts": {
+    "raw": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-raw-v3.jsonl",
+      "bytes": 29395142,
+      "sha256": "d44aed2b3556fdb929118649fde5c59aa8cb834dbc6ec7ce6346f8a1a276937e"
+    },
+    "summary": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-summary-envelope-v3.json",
+      "bytes": 180009,
+      "sha256": "d901efadb6e60f65621f1e373d4a9747db03ec2bc3ddd2caabc0223a83843974",
+      "semanticDigest": "59f05a30cfeb84eaba541acf3c124a651d0f1ff7fba4f3fac14faf5e70011514"
+    },
+    "checkpointManifest": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-checkpoint-manifest-v3.json",
+      "bytes": 77506,
+      "sha256": "85908bafadd852a24004944253b7538a69f3be7ce3a5a188aa8e13ae4f17fd48",
+      "semanticDigest": "efba658f7bac9bb1f5c54f2868ee75ad0f1db2ea31240bf65a7402c7000b19af"
+    }
+  },
+  "runtime": {
+    "startWallTime": "2026-08-30T20:15:25.748Z",
+    "endWallTime": "2026-08-30T20:29:53.403Z",
+    "elapsedMilliseconds": 867640.4782,
+    "recoveredChunkCount": 0,
+    "generatedChunkCount": 120,
+    "staleLockRecovery": null,
+    "validationPolicy": "fresh v2-base plus closed v3 adapter replay at chunk and final boundaries",
+    "peakRssBytes": 645505024,
+    "environment": {
+      "platform": "win32",
+      "arch": "x64",
+      "node": "v22.22.2",
+      "cpuCount": 12
+    }
+  },
+  "outcome": {
+    "u2Status": "UNRESOLVED",
+    "decisionAuthority": "NONE"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "c8f1303319216b00a5eddaa9466369debe5924bab1f233bb67dd4345d8835aba",
+    "canonicalBytes": 3010
+  }
+}

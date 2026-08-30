@@ -1,0 +1,5287 @@
+{
+  "schema": "gg.u2.screening.summary-envelope/3",
+  "executionVersion": "screening-v3",
+  "semanticPayloadVersion": "screening-v3",
+  "semanticKernel": {
+    "semanticBaseVersion": "screening-v2",
+    "semanticPayloadVersion": "screening-v3",
+    "recordSchema": "gg.u2.screening.record/3",
+    "implementationCommit": "1c3373267057b8a018ad5039e0f3b2b4e8eb2b1d",
+    "kernelPath": "website/global-geometry-lab/global-geometry-ii-u2-screening-v2.js",
+    "kernelSha256": "3976809ec412580975852540166147d870c354672d055e243861ea7046e19873",
+    "semanticSupplementDigest": "21d69b11b12277e228e2934e033fd8f366b3c8d5d89f1b8833aa781a36118888",
+    "sourceBoundary": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v2/source-boundary-v2.json",
+      "fileSha256": "c60331209247fccee700d10d38b9ae03da3f81e9013f19281a1f5918fb9e6c73",
+      "semanticDigest": "a1b1b9bb525ba9c172be48af60b9881a13ce58ebed9862a60fec18a25f07fae0",
+      "commit": "ed624f4ff42b4e5488a1889c3d55ba1195e5a952"
+    }
+  },
+  "executionSupplementDigest": "1524f69ef343a1048e3cfd05c9b4f6d93f9c6783233611094a345b3d4863885d",
+  "sourceBoundary": {
+    "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/source-boundary-v3.json",
+    "fileSha256": "022fec64e8b82d243cf6eda171da54337215718e960ff60b9f746c4f16d3b06d",
+    "semanticDigest": "369a05d51458b8b770f7d19fa1bbacfaf051e1d917e9c7db4967a0c1a37211de",
+    "sourceCommit": "e62970c349b3dfa2d94a46baaf72886b6124de27",
+    "sourceTree": "5ba6659c077655a5c8c09425d20042b36995bc7b",
+    "verificationMode": "git"
+  },
+  "raw": {
+    "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-raw-v3.jsonl",
+    "bytes": 29396798,
+    "sha256": "47bbf6da93da1270ea5b8b6120bfa0351be3c0386050d989ef614f2a3802d1d4"
+  },
+  "checkpointManifest": {
+    "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-checkpoint-manifest-v3.json",
+    "bytes": 77020,
+    "sha256": "0e787b99074ec88a674bad18fc95848c1687ea7e85495abf593f5937a7481f45",
+    "semanticDigest": "a59ac0798f6f9679d564c9aea8e20da3be6c107aed9a6a50beac027259da0314"
+  },
+  "semanticSummary": {
+    "schema": "gg.u2.screening.semantic-summary/3",
+    "screeningId": "ggii-u2-screening-v3",
+    "manifestDigest": "25fea0bad6f4b60ae27a75fd13c13be117c28a288a5f6b3bd9e25859c4b1d309",
+    "preregistrationCommit": "150e4e7",
+    "outcome": {
+      "u2Status": "UNRESOLVED",
+      "acceptanceAllowed": false,
+      "rejectionAllowed": false,
+      "evidenceClass": "outcome-bearing-screening",
+      "reason": "This screen lacks decision-grade estimators, hierarchical inference, robustness channels, and independent Gate 8 reproduction."
+    },
+    "census": {
+      "expectedRecords": 3840,
+      "observedRecords": 3840,
+      "positiveExpected": 3072,
+      "positiveObserved": 3072,
+      "controlExpected": 768,
+      "controlObserved": 768,
+      "uniqueRunIds": 3840
+    },
+    "gates": [
+      {
+        "gate": 1,
+        "status": "NOT_EVALUATED_BY_SCREEN",
+        "decisionAuthority": "NONE"
+      },
+      {
+        "gate": 2,
+        "status": "NOT_EVALUATED_BY_SCREEN",
+        "decisionAuthority": "NONE"
+      },
+      {
+        "gate": 3,
+        "status": "NOT_EVALUATED_BY_SCREEN",
+        "decisionAuthority": "NONE"
+      },
+      {
+        "gate": 4,
+        "status": "NOT_EVALUATED_BY_SCREEN",
+        "decisionAuthority": "NONE"
+      },
+      {
+        "gate": 5,
+        "status": "NOT_EVALUATED_BY_SCREEN",
+        "decisionAuthority": "NONE"
+      },
+      {
+        "gate": 6,
+        "status": "NOT_EVALUATED_BY_SCREEN",
+        "decisionAuthority": "NONE"
+      },
+      {
+        "gate": 7,
+        "status": "NOT_EVALUATED_BY_SCREEN",
+        "decisionAuthority": "NONE"
+      },
+      {
+        "gate": 8,
+        "status": "NOT_EVALUATED_BY_SCREEN",
+        "decisionAuthority": "NONE"
+      }
+    ],
+    "positiveCells": [
+      {
+        "family": "square-alternating",
+        "size": 16,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7454509624937002,
+          "minimum": 1.616588036680982,
+          "maximum": 1.8498285567789754
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "square-alternating",
+        "size": 16,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7401711103367201,
+          "minimum": 1.616588036680982,
+          "maximum": 1.8498285567789754
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 16,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7632044786768055,
+          "minimum": 1.6566345653739154,
+          "maximum": 1.9091648707141249
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 16,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7358712154108475,
+          "minimum": 1.616588036680982,
+          "maximum": 1.9091648707141249
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 24,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.768342220585769,
+          "minimum": 1.6691579518476631,
+          "maximum": 1.8490038684985721
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "square-alternating",
+        "size": 24,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7622325221939918,
+          "minimum": 1.6691579518476631,
+          "maximum": 1.8938669176872363
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 24,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7720142786076867,
+          "minimum": 1.6691579518476631,
+          "maximum": 1.8938669176872363
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 24,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7714923604461843,
+          "minimum": 1.6691579518476631,
+          "maximum": 1.8938669176872363
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 36,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8110695533353045,
+          "minimum": 1.7250761507781533,
+          "maximum": 1.891134781814183
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "square-alternating",
+        "size": 36,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.801632938918467,
+          "minimum": 1.7250761507781533,
+          "maximum": 1.891134781814183
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 36,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8053668753081062,
+          "minimum": 1.7485220266613768,
+          "maximum": 1.8583608515801349
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 36,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.791181145234921,
+          "minimum": 1.7028738667737833,
+          "maximum": 1.8583608515801349
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 54,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8585142023925567,
+          "minimum": 1.8279292876986593,
+          "maximum": 1.8839459077336247
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "square-alternating",
+        "size": 54,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.856154373715946,
+          "minimum": 1.8279292876986593,
+          "maximum": 1.8839459077336247
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 54,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8546983075499597,
+          "minimum": 1.8279292876986593,
+          "maximum": 1.87414953410679
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 54,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8535215707018164,
+          "minimum": 1.8279292876986593,
+          "maximum": 1.8839459077336247
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 81,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8897206765189998,
+          "minimum": 1.8794518303666155,
+          "maximum": 1.9064505727401249
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.077417423790261,
+          "minimum": 1.743143794077457,
+          "maximum": 2.571315129814583
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "square-alternating",
+        "size": 81,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8911201395194945,
+          "minimum": 1.8750909519380905,
+          "maximum": 1.901847776638705
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.117470176872701,
+          "minimum": 1.8497546154240085,
+          "maximum": 2.4616863965954856
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.9737707985761546,
+          "minimum": 0.961880316394478,
+          "maximum": 0.9832095312883126
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 81,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8911215508506998,
+          "minimum": 1.8794518303666155,
+          "maximum": 1.9064505727401249
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.0821061263553418,
+          "minimum": 1.765894484055322,
+          "maximum": 2.497439524429077
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.9187353705232757,
+          "minimum": 0.883889089719289,
+          "maximum": 0.9400268819133886
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 81,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8930936692072104,
+          "minimum": 1.8794518303666155,
+          "maximum": 1.901847776638705
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.083675499818907,
+          "minimum": 1.7738202063590904,
+          "maximum": 2.541908038140341
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.8640848625211726,
+          "minimum": 0.8128715494914737,
+          "maximum": 0.9099334760332126
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 120,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9278641410067598,
+          "minimum": 1.9238469564270555,
+          "maximum": 1.9312101757250635
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.075835445756434,
+          "minimum": 1.7468963658565186,
+          "maximum": 2.5108607170606865
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "square-alternating",
+        "size": 120,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.927234118754898,
+          "minimum": 1.9220223306815285,
+          "maximum": 1.9330674025789498
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.07346979798138,
+          "minimum": 1.8478073999298215,
+          "maximum": 2.398937790975871
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.9754238606182074,
+          "minimum": 0.9619412910000512,
+          "maximum": 0.9840221821221116
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 120,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9271756759208387,
+          "minimum": 1.9238469564270555,
+          "maximum": 1.9312101757250635
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.0705804361255127,
+          "minimum": 1.8459886166658357,
+          "maximum": 2.3963587600521272
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.9323833411696072,
+          "minimum": 0.9127021016648111,
+          "maximum": 0.9504048361031805
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-alternating",
+        "size": 120,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9270032000695199,
+          "minimum": 1.9238469564270555,
+          "maximum": 1.9312101757250635
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.068864399794349,
+          "minimum": 1.78914140537331,
+          "maximum": 2.5561000498116515
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.8751490067076942,
+          "minimum": 0.8209137363555641,
+          "maximum": 0.9038475516053901
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 16,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.555324011845526,
+          "minimum": 1.5553240118455258,
+          "maximum": 1.5553240118455258
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 16,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.555324011845526,
+          "minimum": 1.5553240118455258,
+          "maximum": 1.5553240118455258
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 16,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.555324011845526,
+          "minimum": 1.5553240118455258,
+          "maximum": 1.5553240118455258
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 16,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.555324011845526,
+          "minimum": 1.5553240118455258,
+          "maximum": 1.5553240118455258
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 24,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.6208597675046763,
+          "minimum": 1.6208597675046763,
+          "maximum": 1.6208597675046763
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 24,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.6208597675046763,
+          "minimum": 1.6208597675046763,
+          "maximum": 1.6208597675046763
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 24,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.6208597675046763,
+          "minimum": 1.6208597675046763,
+          "maximum": 1.6208597675046763
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 24,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.6208597675046763,
+          "minimum": 1.6208597675046763,
+          "maximum": 1.6208597675046763
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 36,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.6886983813002778,
+          "minimum": 1.688698381300279,
+          "maximum": 1.688698381300279
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 36,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.6886983813002778,
+          "minimum": 1.688698381300279,
+          "maximum": 1.688698381300279
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 36,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.6886983813002778,
+          "minimum": 1.688698381300279,
+          "maximum": 1.688698381300279
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 36,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.6886983813002778,
+          "minimum": 1.688698381300279,
+          "maximum": 1.688698381300279
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 54,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8134473872536585,
+          "minimum": 1.8134473872536574,
+          "maximum": 1.8134473872536574
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 54,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8134473872536585,
+          "minimum": 1.8134473872536574,
+          "maximum": 1.8134473872536574
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 54,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8134473872536585,
+          "minimum": 1.8134473872536574,
+          "maximum": 1.8134473872536574
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 54,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8134473872536585,
+          "minimum": 1.8134473872536574,
+          "maximum": 1.8134473872536574
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 81,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8722047262483612,
+          "minimum": 1.8722047262483608,
+          "maximum": 1.8722047262483608
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.0283824377922315,
+          "minimum": 1.7134877863238362,
+          "maximum": 2.509143273576697
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.42813455657492344,
+          "minimum": 0.42813455657492355,
+          "maximum": 0.42813455657492355
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 81,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8722047262483612,
+          "minimum": 1.8722047262483608,
+          "maximum": 1.8722047262483608
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 1.9969728146486596,
+          "minimum": 1.6745000012115685,
+          "maximum": 2.3764269258665145
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.4282506273570849,
+          "minimum": 0.4184472894726821,
+          "maximum": 0.43675542773776244
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 81,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8722047262483612,
+          "minimum": 1.8722047262483608,
+          "maximum": 1.8722047262483608
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.0514296962369016,
+          "minimum": 1.6944219468670016,
+          "maximum": 2.360877859261689
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.42740631253451405,
+          "minimum": 0.3963114686039606,
+          "maximum": 0.46092358639788833
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 81,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8722047262483612,
+          "minimum": 1.8722047262483608,
+          "maximum": 1.8722047262483608
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.0917028325634703,
+          "minimum": 1.618825275523439,
+          "maximum": 2.3416220054100534
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.42669321552534106,
+          "minimum": 0.3567770366821339,
+          "maximum": 0.4812768838005849
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 120,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9189954345834739,
+          "minimum": 1.9189954345834748,
+          "maximum": 1.9189954345834748
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 1.9848071396954967,
+          "minimum": 1.7152607460804785,
+          "maximum": 2.3646960915601465
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.4297520661157023,
+          "minimum": 0.4297520661157025,
+          "maximum": 0.4297520661157025
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 120,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9189954345834739,
+          "minimum": 1.9189954345834748,
+          "maximum": 1.9189954345834748
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.010711874623529,
+          "minimum": 1.8110550311766547,
+          "maximum": 2.3138460201332762
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.4293859825781801,
+          "minimum": 0.4215196607416943,
+          "maximum": 0.4374757503391445
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 120,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9189954345834739,
+          "minimum": 1.9189954345834748,
+          "maximum": 1.9189954345834748
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.046721810283563,
+          "minimum": 1.7215305377826282,
+          "maximum": 2.604713019314482
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.42635174795652936,
+          "minimum": 0.38049484098569547,
+          "maximum": 0.458542526883736
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "triangular-clipped",
+        "size": 120,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9189954345834739,
+          "minimum": 1.9189954345834748,
+          "maximum": 1.9189954345834748
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.0774046346584423,
+          "minimum": 1.7903846884049244,
+          "maximum": 2.293761837933703
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.43026313064508476,
+          "minimum": 0.3596226136380379,
+          "maximum": 0.47492844605349155
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 16,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7817428852497494,
+          "minimum": 1.6566345653739154,
+          "maximum": 1.9091648707141249
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 16,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7467577346636343,
+          "minimum": 1.616588036680982,
+          "maximum": 1.8498285567789754
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 16,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7609558798590004,
+          "minimum": 1.616588036680982,
+          "maximum": 1.9091648707141249
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 16,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7720867833745744,
+          "minimum": 1.5790696437257274,
+          "maximum": 1.9745765812118974
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 24,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7855840723697092,
+          "minimum": 1.7004732450753366,
+          "maximum": 1.8490038684985721
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 24,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7843354708715489,
+          "minimum": 1.7004732450753366,
+          "maximum": 1.8938669176872363
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 24,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8022790136066416,
+          "minimum": 1.7004732450753366,
+          "maximum": 1.8938669176872363
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 24,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7885968907826284,
+          "minimum": 1.7004732450753366,
+          "maximum": 1.8938669176872363
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 36,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8010041630414366,
+          "minimum": 1.7485220266613768,
+          "maximum": 1.8583608515801349
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 36,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8092860350200435,
+          "minimum": 1.7250761507781533,
+          "maximum": 1.891134781814183
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 36,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8009426592330888,
+          "minimum": 1.7485220266613768,
+          "maximum": 1.891134781814183
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 36,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8025781128264313,
+          "minimum": 1.7028738667737833,
+          "maximum": 1.8583608515801349
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 54,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8579198832474713,
+          "minimum": 1.8279292876986593,
+          "maximum": 1.8839459077336247
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 54,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.859063979213205,
+          "minimum": 1.8368290493389456,
+          "maximum": 1.8839459077336247
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 54,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8561899797841852,
+          "minimum": 1.8368290493389456,
+          "maximum": 1.8839459077336247
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 54,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8524260175940888,
+          "minimum": 1.8279292876986593,
+          "maximum": 1.87414953410679
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 81,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8929601254737483,
+          "minimum": 1.8794518303666155,
+          "maximum": 1.9064505727401249
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.048725826177884,
+          "minimum": 1.78656503982232,
+          "maximum": 2.31179514383746
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.6009852216748768,
+          "minimum": 0.6009852216748769,
+          "maximum": 0.6009852216748769
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 81,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8933533513131169,
+          "minimum": 1.8838511738228145,
+          "maximum": 1.901847776638705
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.0656436080742786,
+          "minimum": 1.8226804238867482,
+          "maximum": 2.3528330780381377
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.5986012106400203,
+          "minimum": 0.5905717251504622,
+          "maximum": 0.6071343773425867
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 81,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.89324774867957,
+          "minimum": 1.8794518303666155,
+          "maximum": 1.9064505727401249
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.087940372669957,
+          "minimum": 1.8062227197411165,
+          "maximum": 2.5285330446545355
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.5925153181798876,
+          "minimum": 0.5679319952756935,
+          "maximum": 0.6116494200384077
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 81,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.893773276714895,
+          "minimum": 1.8838511738228145,
+          "maximum": 1.901847776638705
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.1043547166388636,
+          "minimum": 1.7700826308377644,
+          "maximum": 2.591857215503939
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.5868583033141267,
+          "minimum": 0.5378439530706858,
+          "maximum": 0.6274798534681182
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 120,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9280973038939238,
+          "minimum": 1.9238469564270555,
+          "maximum": 1.9330674025789498
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.077134463454789,
+          "minimum": 1.7416795377137022,
+          "maximum": 3.013221217264741
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.6006655574043264,
+          "minimum": 0.6006655574043261,
+          "maximum": 0.6006655574043261
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier and one deterministic conductance field with 32 randomized nested measurement batches; not 32 independent geometries"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 1,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 120,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9269472007550685,
+          "minimum": 1.9220223306815285,
+          "maximum": 1.9312101757250635
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.0832830250412164,
+          "minimum": 1.7212565512300693,
+          "maximum": 2.5299610404676764
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.597183548566075,
+          "minimum": 0.5879455583295657,
+          "maximum": 0.6035798283134185
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 120,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.926887336294526,
+          "minimum": 1.9238469564270555,
+          "maximum": 1.9312101757250635
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.0456255984635696,
+          "minimum": 1.7728940126170873,
+          "maximum": 2.4461006393683022
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.5924825710198196,
+          "minimum": 0.5610377997247479,
+          "maximum": 0.6107400602838762
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "cell-center-fan",
+        "size": 120,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9277519554056584,
+          "minimum": 1.9238469564270555,
+          "maximum": 1.934931297462902
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.1300887065394134,
+          "minimum": 1.8401291115409393,
+          "maximum": 2.4586625165619993
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.5874408630351662,
+          "minimum": 0.5635458237357703,
+          "maximum": 0.6263270449124013
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 conductance/joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 16,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.618616680847324,
+          "minimum": 1.5569098058198283,
+          "maximum": 1.6795034886963163
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction realizations sharing one deterministic unit-conductance law"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 16,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.6345376748940836,
+          "minimum": 1.5795740711325064,
+          "maximum": 1.7137702175143044
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 16,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.6311110645248008,
+          "minimum": 1.5686989142167598,
+          "maximum": 1.7042494400536188
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 16,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.6359481764232344,
+          "minimum": 1.548569832735095,
+          "maximum": 1.716701438539393
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 24,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.693985683180776,
+          "minimum": 1.634980486278109,
+          "maximum": 1.7361211352707397
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction realizations sharing one deterministic unit-conductance law"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 24,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7005876106983369,
+          "minimum": 1.6396421523150966,
+          "maximum": 1.793466363724311
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 24,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.6950375117769154,
+          "minimum": 1.650042476164532,
+          "maximum": 1.7460597242338325
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 24,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.6972355725413324,
+          "minimum": 1.6425374344352015,
+          "maximum": 1.779624537867527
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 36,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7593127044430354,
+          "minimum": 1.7266521453626549,
+          "maximum": 1.789215926301721
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction realizations sharing one deterministic unit-conductance law"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 36,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.760896819632941,
+          "minimum": 1.7313631934123432,
+          "maximum": 1.8010389288304596
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 36,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.7633044287111126,
+          "minimum": 1.7289042176622964,
+          "maximum": 1.7922947959413122
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 36,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.759944626334522,
+          "minimum": 1.715011699552196,
+          "maximum": 1.810295772671895
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 54,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8763294363330787,
+          "minimum": 1.8429339006701202,
+          "maximum": 1.904967822721583
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction realizations sharing one deterministic unit-conductance law"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 54,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8773427041376172,
+          "minimum": 1.8522937713640106,
+          "maximum": 1.912272309588407
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 54,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8741004090471713,
+          "minimum": 1.8517819868704617,
+          "maximum": 1.9088194536745244
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 54,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.8778289330623508,
+          "minimum": 1.8454205868665081,
+          "maximum": 1.9090908411746188
+        },
+        "walkDimensionDescriptor": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "minimumCutRatio": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 81,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9226962288213936,
+          "minimum": 1.906930242765591,
+          "maximum": 1.9374469434020745
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.1167984219545692,
+          "minimum": 1.6520460191557063,
+          "maximum": 2.515767677603428
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction realizations sharing one deterministic unit-conductance law"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 81,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9234770165811543,
+          "minimum": 1.8975987746253402,
+          "maximum": 1.9427707952604325
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.068789362474386,
+          "minimum": 1.8402287300761815,
+          "maximum": 2.3759807636057224
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.9723423177852679,
+          "minimum": 0.9562754091734441,
+          "maximum": 0.9840379478812659
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 81,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9240088770327273,
+          "minimum": 1.8979495380969802,
+          "maximum": 1.9453583355532542
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.1335494870979885,
+          "minimum": 1.7801875790684905,
+          "maximum": 2.456819678319415
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.918484527346946,
+          "minimum": 0.8796962329908619,
+          "maximum": 0.9449205188429917
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 81,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9213717337443987,
+          "minimum": 1.9029294885973485,
+          "maximum": 1.9416727720560778
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.1399535403962484,
+          "minimum": 1.8228555064036005,
+          "maximum": 2.835565888914122
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.8608750711500665,
+          "minimum": 0.803170162160405,
+          "maximum": 0.9028968390056678
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 120,
+        "sigmaIndex": 0,
+        "sigma": 0,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9578177588298458,
+          "minimum": 1.9455025784054862,
+          "maximum": 1.9752276639362403
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.0658639615285868,
+          "minimum": 1.6699123548254682,
+          "maximum": 2.341838934438438
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 1,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction realizations sharing one deterministic unit-conductance law"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 120,
+        "sigmaIndex": 1,
+        "sigma": 0.25,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9598058081434753,
+          "minimum": 1.9502300605289398,
+          "maximum": 1.976762027613395
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.1284757490536474,
+          "minimum": 1.8556810577857161,
+          "maximum": 2.4352238655621683
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.9760233503160167,
+          "minimum": 0.967092089028192,
+          "maximum": 0.9823076604880501
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 120,
+        "sigmaIndex": 2,
+        "sigma": 0.75,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.9595850971202473,
+          "minimum": 1.9489427845699476,
+          "maximum": 1.9812786392812716
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.1166524554251627,
+          "minimum": 1.6949632242404713,
+          "maximum": 2.9238091555981383
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.9339834044640767,
+          "minimum": 0.9047369227956746,
+          "maximum": 0.9610360693236318
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "family": "square-hashed-diagonal",
+        "size": 120,
+        "sigmaIndex": 3,
+        "sigma": 1.3862943611198906,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "volumeSlopeDescriptor": {
+          "count": 32,
+          "mean": 1.960546018580918,
+          "minimum": 1.944236631381784,
+          "maximum": 1.9745244742937802
+        },
+        "walkDimensionDescriptor": {
+          "count": 32,
+          "mean": 2.1711646537951292,
+          "minimum": 1.7819731680946354,
+          "maximum": 2.8772616275769094
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.8819179432459058,
+          "minimum": 0.8523022862149573,
+          "maximum": 0.9160852640985222
+        },
+        "maximumConductanceBoundResidual": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 32,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 construction and joint weighted realizations"
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 32,
+        "uniqueJointDigestCount": 32
+      }
+    ],
+    "controlCells": [
+      {
+        "control": "comb-trap",
+        "size": 16,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 randomized walk batches"
+        },
+        "axialWalkDimensionDescriptor": {
+          "count": 32,
+          "mean": 3.7162269422814265,
+          "minimum": 2.1290868396704643,
+          "maximum": 6.95323893395423
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "control": "comb-trap",
+        "size": 24,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 randomized walk batches"
+        },
+        "axialWalkDimensionDescriptor": {
+          "count": 32,
+          "mean": 4.931797108805262,
+          "minimum": 2.2120926005159753,
+          "maximum": 20.678238762135805
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "control": "comb-trap",
+        "size": 36,
+        "recordCount": 32,
+        "failureRecordCount": 5,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 randomized walk batches"
+        },
+        "axialWalkDimensionDescriptor": {
+          "count": 32,
+          "mean": 5.181339469288541,
+          "minimum": 2.3178176581175527,
+          "maximum": 16.519462367697212
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "control": "comb-trap",
+        "size": 54,
+        "recordCount": 32,
+        "failureRecordCount": 4,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 randomized walk batches"
+        },
+        "axialWalkDimensionDescriptor": {
+          "count": 32,
+          "mean": 13.403089181714288,
+          "minimum": 1.873248577885787,
+          "maximum": 272.2122237384141
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "control": "comb-trap",
+        "size": 81,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 randomized walk batches"
+        },
+        "axialWalkDimensionDescriptor": {
+          "count": 32,
+          "mean": 4.231484564994467,
+          "minimum": 2.420975608620018,
+          "maximum": 7.631579611080947
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "control": "comb-trap",
+        "size": 120,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 32,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "one deterministic carrier with 32 randomized walk batches"
+        },
+        "axialWalkDimensionDescriptor": {
+          "count": 32,
+          "mean": 4.970247239373224,
+          "minimum": 2.995237280584336,
+          "maximum": 12.495365738188063
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "control": "small-world-shortcuts",
+        "size": 16,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 independently streamed control constructions"
+        },
+        "acceptedShortcutCount": {
+          "count": 32,
+          "mean": 6,
+          "minimum": 6,
+          "maximum": 6
+        },
+        "meanBallInflation": {
+          "count": 32,
+          "mean": 1.0284375000000001,
+          "minimum": 1,
+          "maximum": 1.115
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "control": "small-world-shortcuts",
+        "size": 24,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 independently streamed control constructions"
+        },
+        "acceptedShortcutCount": {
+          "count": 32,
+          "mean": 13,
+          "minimum": 13,
+          "maximum": 13
+        },
+        "meanBallInflation": {
+          "count": 32,
+          "mean": 1.0473513719512197,
+          "minimum": 1,
+          "maximum": 1.128048780487805
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "control": "small-world-shortcuts",
+        "size": 36,
+        "recordCount": 32,
+        "failureRecordCount": 7,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 independently streamed control constructions"
+        },
+        "acceptedShortcutCount": {
+          "count": 32,
+          "mean": 28,
+          "minimum": 28,
+          "maximum": 28
+        },
+        "meanBallInflation": {
+          "count": 25,
+          "mean": 1.1115044247787613,
+          "minimum": 1.0011061946902655,
+          "maximum": 1.5243362831858407
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "control": "small-world-shortcuts",
+        "size": 54,
+        "recordCount": 32,
+        "failureRecordCount": 32,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 independently streamed control constructions"
+        },
+        "acceptedShortcutCount": {
+          "count": 32,
+          "mean": 61,
+          "minimum": 61,
+          "maximum": 61
+        },
+        "meanBallInflation": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "control": "small-world-shortcuts",
+        "size": 81,
+        "recordCount": 32,
+        "failureRecordCount": 32,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 independently streamed control constructions"
+        },
+        "acceptedShortcutCount": {
+          "count": 32,
+          "mean": 135,
+          "minimum": 135,
+          "maximum": 135
+        },
+        "meanBallInflation": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "control": "small-world-shortcuts",
+        "size": 120,
+        "recordCount": 32,
+        "failureRecordCount": 32,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 independently streamed control constructions"
+        },
+        "acceptedShortcutCount": {
+          "count": 32,
+          "mean": 293,
+          "minimum": 293,
+          "maximum": 293
+        },
+        "meanBallInflation": {
+          "count": 0,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "control": "vanishing-neck",
+        "size": 16,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 31,
+          "measurementBatchCount": 32,
+          "label": "one unique deterministic evaluation plus 31 exact repeated evaluations; not randomized nested batches"
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.15151515151515146,
+          "minimum": 0.15151515151515152,
+          "maximum": 0.15151515151515152
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "control": "vanishing-neck",
+        "size": 24,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 31,
+          "measurementBatchCount": 32,
+          "label": "one unique deterministic evaluation plus 31 exact repeated evaluations; not randomized nested batches"
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.10204081632653055,
+          "minimum": 0.10204081632653061,
+          "maximum": 0.10204081632653061
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "control": "vanishing-neck",
+        "size": 36,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 31,
+          "measurementBatchCount": 32,
+          "label": "one unique deterministic evaluation plus 31 exact repeated evaluations; not randomized nested batches"
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.06849315068493153,
+          "minimum": 0.0684931506849315,
+          "maximum": 0.0684931506849315
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "control": "vanishing-neck",
+        "size": 54,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 31,
+          "measurementBatchCount": 32,
+          "label": "one unique deterministic evaluation plus 31 exact repeated evaluations; not randomized nested batches"
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.04587155963302749,
+          "minimum": 0.045871559633027525,
+          "maximum": 0.045871559633027525
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "control": "vanishing-neck",
+        "size": 81,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 31,
+          "measurementBatchCount": 32,
+          "label": "one unique deterministic evaluation plus 31 exact repeated evaluations; not randomized nested batches"
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.03067484662576689,
+          "minimum": 0.03067484662576687,
+          "maximum": 0.03067484662576687
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "control": "vanishing-neck",
+        "size": 120,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 1,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 1,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 31,
+          "measurementBatchCount": 32,
+          "label": "one unique deterministic evaluation plus 31 exact repeated evaluations; not randomized nested batches"
+        },
+        "minimumCutRatio": {
+          "count": 32,
+          "mean": 0.020746887966804982,
+          "minimum": 0.02074688796680498,
+          "maximum": 0.02074688796680498
+        },
+        "uniqueStructureDigestCount": 1,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 1
+      },
+      {
+        "control": "perforated-disk",
+        "size": 16,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 independently streamed control constructions"
+        },
+        "beta1": {
+          "count": 32,
+          "mean": 6,
+          "minimum": 6,
+          "maximum": 6
+        },
+        "giantComponentFraction": {
+          "count": 32,
+          "mean": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "removedFaceStarCount": {
+          "count": 32,
+          "mean": 6,
+          "minimum": 6,
+          "maximum": 6
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "control": "perforated-disk",
+        "size": 24,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 independently streamed control constructions"
+        },
+        "beta1": {
+          "count": 32,
+          "mean": 18,
+          "minimum": 18,
+          "maximum": 18
+        },
+        "giantComponentFraction": {
+          "count": 32,
+          "mean": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "removedFaceStarCount": {
+          "count": 32,
+          "mean": 18,
+          "minimum": 18,
+          "maximum": 18
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "control": "perforated-disk",
+        "size": 36,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 independently streamed control constructions"
+        },
+        "beta1": {
+          "count": 32,
+          "mean": 48,
+          "minimum": 48,
+          "maximum": 48
+        },
+        "giantComponentFraction": {
+          "count": 32,
+          "mean": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "removedFaceStarCount": {
+          "count": 32,
+          "mean": 48,
+          "minimum": 48,
+          "maximum": 48
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "control": "perforated-disk",
+        "size": 54,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 independently streamed control constructions"
+        },
+        "beta1": {
+          "count": 32,
+          "mean": 120,
+          "minimum": 120,
+          "maximum": 120
+        },
+        "giantComponentFraction": {
+          "count": 32,
+          "mean": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "removedFaceStarCount": {
+          "count": 32,
+          "mean": 120,
+          "minimum": 120,
+          "maximum": 120
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "control": "perforated-disk",
+        "size": 81,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 independently streamed control constructions"
+        },
+        "beta1": {
+          "count": 32,
+          "mean": 288,
+          "minimum": 288,
+          "maximum": 288
+        },
+        "giantComponentFraction": {
+          "count": 32,
+          "mean": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "removedFaceStarCount": {
+          "count": 32,
+          "mean": 288,
+          "minimum": 288,
+          "maximum": 288
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 32
+      },
+      {
+        "control": "perforated-disk",
+        "size": 120,
+        "recordCount": 32,
+        "failureRecordCount": 0,
+        "independence": {
+          "carrierConstructionRealizationCount": 32,
+          "conductanceRealizationCount": 0,
+          "jointWeightedRealizationCount": 32,
+          "randomizedNestedMeasurementBatchCount": 0,
+          "repeatedDeterministicEvaluationCount": 0,
+          "measurementBatchCount": 32,
+          "label": "32 independently streamed control constructions"
+        },
+        "beta1": {
+          "count": 32,
+          "mean": 661,
+          "minimum": 661,
+          "maximum": 661
+        },
+        "giantComponentFraction": {
+          "count": 32,
+          "mean": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "removedFaceStarCount": {
+          "count": 32,
+          "mean": 661,
+          "minimum": 661,
+          "maximum": 661
+        },
+        "uniqueStructureDigestCount": 32,
+        "uniqueWeightDigestCount": 0,
+        "uniqueJointDigestCount": 32
+      }
+    ],
+    "failureLedger": {
+      "count": 112,
+      "records": [
+        {
+          "runId": "control/comb-trap/L36/r00",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "comb-discriminant",
+          "detail": "four root-block axial walk descriptors were not all defined"
+        },
+        {
+          "runId": "control/comb-trap/L36/r15",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "comb-discriminant",
+          "detail": "four root-block axial walk descriptors were not all defined"
+        },
+        {
+          "runId": "control/comb-trap/L36/r18",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "comb-discriminant",
+          "detail": "four root-block axial walk descriptors were not all defined"
+        },
+        {
+          "runId": "control/comb-trap/L36/r22",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "comb-discriminant",
+          "detail": "four root-block axial walk descriptors were not all defined"
+        },
+        {
+          "runId": "control/comb-trap/L36/r29",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "comb-discriminant",
+          "detail": "four root-block axial walk descriptors were not all defined"
+        },
+        {
+          "runId": "control/comb-trap/L54/r16",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "comb-discriminant",
+          "detail": "four root-block axial walk descriptors were not all defined"
+        },
+        {
+          "runId": "control/comb-trap/L54/r17",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "comb-discriminant",
+          "detail": "four root-block axial walk descriptors were not all defined"
+        },
+        {
+          "runId": "control/comb-trap/L54/r21",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "comb-discriminant",
+          "detail": "four root-block axial walk descriptors were not all defined"
+        },
+        {
+          "runId": "control/comb-trap/L54/r28",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "comb-discriminant",
+          "detail": "four root-block axial walk descriptors were not all defined"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L36/r01",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L36/r02",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L36/r15",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L36/r21",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L36/r23",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L36/r27",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L36/r28",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r00",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r01",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r02",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r03",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r04",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r05",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r06",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r07",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r08",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r09",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r10",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r11",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r12",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r13",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r14",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r15",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r16",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r17",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r18",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r19",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r20",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r21",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r22",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r23",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r24",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r25",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r26",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r27",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r28",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r29",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r30",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L54/r31",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r00",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r01",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r02",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r03",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r04",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r05",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r06",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r07",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r08",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r09",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r10",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r11",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r12",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r13",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r14",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r15",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r16",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r17",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r18",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r19",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r20",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r21",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r22",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r23",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r24",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r25",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r26",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r27",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r28",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r29",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r30",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L81/r31",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r00",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r01",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r02",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r03",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r04",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r05",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r06",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r07",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r08",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r09",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r10",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r11",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r12",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r13",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r14",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r15",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r16",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r17",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r18",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r19",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r20",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r21",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r22",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r23",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r24",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r25",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r26",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r27",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r28",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r29",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r30",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        },
+        {
+          "runId": "control/small-world-shortcuts/L120/r31",
+          "code": "ESTIMATOR_UNDEFINED",
+          "channel": "small-world-discriminant",
+          "detail": "root-ball inflation discriminant was unavailable"
+        }
+      ]
+    },
+    "randomnessAudit": {
+      "algorithm": "gg-sha256-object-u53-v1",
+      "effectiveStreamSeedCount": 19200,
+      "uniqueEffectiveStreamSeedCount": 19200,
+      "seedCollisionCount": 0,
+      "seedCollisions": [],
+      "perRecordDrawCollisionCount": 0
+    },
+    "integrity": {
+      "recordMerkleRoot": "8818f64118885fd1b4624426fb45bb3a6e5c5309c7fe3dfb08d5ebb68f6c2a87",
+      "raw": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-raw-v3.jsonl",
+        "bytes": 29396798,
+        "sha256": "47bbf6da93da1270ea5b8b6120bfa0351be3c0386050d989ef614f2a3802d1d4"
+      }
+    },
+    "telemetryBinding": "runtime telemetry is a separately validated non-semantic artifact",
+    "screeningVersion": "screening-v3",
+    "implementation": {
+      "version": "3.0.0-screening",
+      "semanticBaseVersion": "screening-v2",
+      "amendment": "small-world-no-bulk-root-target-ledger-v1"
+    },
+    "sourceBoundary": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v2/source-boundary-v2.json",
+      "fileSha256": "c60331209247fccee700d10d38b9ae03da3f81e9013f19281a1f5918fb9e6c73",
+      "semanticDigest": "a1b1b9bb525ba9c172be48af60b9881a13ce58ebed9862a60fec18a25f07fae0",
+      "commit": "ed624f4ff42b4e5488a1889c3d55ba1195e5a952"
+    },
+    "checkpointManifest": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-checkpoint-manifest-v3.json",
+      "bytes": 77020,
+      "sha256": "0e787b99074ec88a674bad18fc95848c1687ea7e85495abf593f5937a7481f45",
+      "semanticDigest": "a59ac0798f6f9679d564c9aea8e20da3be6c107aed9a6a50beac027259da0314"
+    },
+    "semanticBaseSupplementDigest": "21d69b11b12277e228e2934e033fd8f366b3c8d5d89f1b8833aa781a36118888",
+    "semanticBaseImplementation": {
+      "version": "2.0.0-screening",
+      "repairAuditSha256": "3810154ff591ca42a0e85d4ceb90900c09f85e79a6e3ff403525003bac6e0313",
+      "repairAuditCommit": "c2bc19072c29c3e8f76b190dd598307d70f843a3"
+    },
+    "semanticBase": {
+      "semanticBaseVersion": "screening-v2",
+      "semanticPayloadVersion": "screening-v3",
+      "recordSchema": "gg.u2.screening.record/3",
+      "implementationCommit": "1c3373267057b8a018ad5039e0f3b2b4e8eb2b1d",
+      "kernelPath": "website/global-geometry-lab/global-geometry-ii-u2-screening-v2.js",
+      "kernelSha256": "3976809ec412580975852540166147d870c354672d055e243861ea7046e19873",
+      "semanticSupplementDigest": "21d69b11b12277e228e2934e033fd8f366b3c8d5d89f1b8833aa781a36118888",
+      "sourceBoundary": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v2/source-boundary-v2.json",
+        "fileSha256": "c60331209247fccee700d10d38b9ae03da3f81e9013f19281a1f5918fb9e6c73",
+        "semanticDigest": "a1b1b9bb525ba9c172be48af60b9881a13ce58ebed9862a60fec18a25f07fae0",
+        "commit": "ed624f4ff42b4e5488a1889c3d55ba1195e5a952"
+      }
+    },
+    "executionSupplementDigest": "1524f69ef343a1048e3cfd05c9b4f6d93f9c6783233611094a345b3d4863885d",
+    "semanticAmendment": "small-world-no-bulk-root-target-ledger-v1",
+    "contentAddress": {
+      "algorithm": "sha256",
+      "canonicalization": "RFC8785-compatible closed JSON subset",
+      "digest": "c57fbcd0e6a04dc77bb587a27afe50e8e2913be3c22abb1116e36692b6f7f7de",
+      "canonicalBytes": 121507
+    }
+  },
+  "outcome": {
+    "u2Status": "UNRESOLVED",
+    "decisionAuthority": "NONE"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "e60eec48a471cb1caab05f46a8444c92a608853d9bfc8cfe34563b234ae4b4d7",
+    "canonicalBytes": 123697
+  }
+}

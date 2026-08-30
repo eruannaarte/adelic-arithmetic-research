@@ -478,6 +478,9 @@
   }
 
   function initializeControls() {
+    Array.prototype.forEach.call(document.querySelectorAll("form.ggii-controls"), function (form) {
+      form.addEventListener("submit", function (event) { event.preventDefault(); });
+    });
     populateSelect(byId("ggii-forward-family"), Ensembles.FAMILY_IDS, familyLabels);
     populateSelect(byId("ggii-recognition-family"), Ensembles.FAMILY_IDS, familyLabels);
     populateSelect(byId("ggii-inverse-case"), Inverse.listRepresentativeRequests(), inverseLabels);

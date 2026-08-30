@@ -41,6 +41,13 @@ of this model, not independent animations.
 does not mean that the continuum, universality, realizability, or empirical
 research targets listed later have been proved.
 
+Global Geometry II now also has a separately addressed
+[U2 evaluation checkpoint](GLOBAL_GEOMETRY_II_U2_EVALUATION_REPORT.md).  It
+does not retroactively change this first-release ledger.  The original finite
+preview remains `NOT_EVALUATED`; the later strict-partial and screening work
+has top-level status `UNRESOLVED`; the full confirmatory campaign, camera
+validation, and physical validation remain `NOT_RUN`.
+
 ## 1. Mathematical state
 
 At simulation step \(n\), the laboratory state is
@@ -339,6 +346,22 @@ page never evaluates configuration text as code.  Exports contain the normalized
 configuration, finite state, measurements, optional paired-world comparison,
 and method labels.  Equal configurations and seeds must produce equal initial
 states and equal deterministic runs.
+
+The enlarged Global Geometry II evaluation surface is bound by the
+[evaluation-v2 index](artifacts/global-geometry-ii/u2/evaluation-v2/evaluation-index-v2.json),
+[release-v2 manifest](global_geometry_ii_reproducibility_manifest_v2.json),
+and
+[release-v2 evidence index](artifacts/global-geometry-ii/release-index-v2.json).
+Its exact deep verifier is:
+
+```bash
+node website/global-geometry-lab/reproduce-global-geometry-ii-v2.js --verify --mode deep
+```
+
+That verifier establishes only its declared computational replay surface.  It
+does not turn screening or partial diagnostics into a U2 decision and does not
+perform a camera or physical experiment.  Release v1 remains a historical
+prior-release surface and does not certify release v2.
 
 ## 10. Verification gates
 

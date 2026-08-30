@@ -44,7 +44,37 @@ for five connected TGN research programmes:
    platform-local certificates and their separately addressed comparison
    record report only the scoped macOS / Windows digest-and-test-surface replay.
    That attestation does not establish peer review, physical validation,
-   publication, or merge status.
+   publication, or merge status.  The later
+   [U2 evaluation checkpoint report](GLOBAL_GEOMETRY_II_U2_EVALUATION_REPORT.md)
+   publishes a distinct, content-addressed release-v2 surface.  The finite
+   preview remains `NOT_EVALUATED`; the executed checkpoint is `UNRESOLVED`;
+   full confirmatory U2 and physical validation remain `NOT_RUN`.  The
+   [evaluation-v2 index](artifacts/global-geometry-ii/u2/evaluation-v2/evaluation-index-v2.json),
+   [release-v2 manifest](global_geometry_ii_reproducibility_manifest_v2.json),
+   and
+   [release-v2 evidence index](artifacts/global-geometry-ii/release-index-v2.json)
+   bind that enlarged review surface.  The v1 index and comparison are
+   retained as historical prior-release records only.  Publication maintainers
+   should use the
+   [Global Geometry II Website Manager addendum](GLOBAL_GEOMETRY_II_WEBSITE_MANAGER_HANDOFF.md),
+   which supersedes the first-release package list for this checkpoint.
+
+## Reproduce the Global Geometry II evaluation checkpoint
+
+From the repository root, run the current release-v2 deep verifier:
+
+```bash
+node website/global-geometry-lab/reproduce-global-geometry-ii-v2.js --verify --mode deep
+```
+
+The
+[strict-partial comparison](artifacts/global-geometry-ii/u2/evaluation-v2/strict-cross-comparison-v1.json)
+and
+[screening-v3 comparison](artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-cross-comparison-v1.json)
+expose the observed exact cross-platform failures.  The strict
+\(10^{-12}\)-rounded diagnostic agrees but has decision authority `NONE`.
+The checkpoint remains `UNRESOLVED`; the full confirmatory campaign and all
+physical and camera validation remain `NOT_RUN`.
 
 Within Operational Information Geometry, its fifth layer supplies the first
 controlled scale flow:

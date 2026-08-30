@@ -1,0 +1,64 @@
+{
+  "schema": "gg.u2.screening.writer-capability/3",
+  "executionVersion": "screening-v3",
+  "platformLabel": "windows",
+  "sourceBoundary": {
+    "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/source-boundary-v3.json",
+    "fileSha256": "022fec64e8b82d243cf6eda171da54337215718e960ff60b9f746c4f16d3b06d",
+    "semanticDigest": "369a05d51458b8b770f7d19fa1bbacfaf051e1d917e9c7db4967a0c1a37211de",
+    "sourceCommit": "e62970c349b3dfa2d94a46baaf72886b6124de27",
+    "sourceTree": "5ba6659c077655a5c8c09425d20042b36995bc7b",
+    "verificationMode": "git"
+  },
+  "executionSupplementDigest": "1524f69ef343a1048e3cfd05c9b4f6d93f9c6783233611094a345b3d4863885d",
+  "observation": {
+    "platform": "win32",
+    "arch": "x64",
+    "node": "v22.22.2",
+    "writerDisposition": {
+      "status": "CREATED_EXCLUSIVE_HARDLINK_FSYNC_POSTFLIGHT",
+      "temporaryHandleMode": "wx+",
+      "finalHandleMode": "r+",
+      "originalWritableHandleFsyncCount": 2,
+      "finalWritableHandleFsyncCount": 1,
+      "exactBytePostflight": true,
+      "directoryAfterLink": {
+        "status": "DIRECTORY_BARRIER_UNAVAILABLE_WIN32",
+        "attempted": false,
+        "required": false
+      },
+      "directoryAfterTempUnlink": {
+        "status": "DIRECTORY_BARRIER_UNAVAILABLE_WIN32",
+        "attempted": false,
+        "required": false
+      }
+    },
+    "exactProbeBytes": 31,
+    "exactProbeSha256": "88e2a818a03fe9fe52ced1836762fddbdb96f0373fe5e716182be6507d53a5cc",
+    "collisionRefusals": {
+      "existingTarget": true,
+      "temporaryName": true,
+      "hardLinkPublication": true,
+      "collisionBytesPreserved": true,
+      "temporaryWriterResidueAbsent": true
+    },
+    "completedBeforeRecord0": true
+  },
+  "interpretation": {
+    "scientificOutcome": false,
+    "recordZeroStarted": false,
+    "directoryBarrierCompleted": false,
+    "powerLossDirectoryPersistenceProved": false,
+    "decisionAuthority": "NONE"
+  },
+  "outcome": {
+    "u2Status": "UNRESOLVED",
+    "decisionAuthority": "NONE"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "2012a207c0038396f77699ca52a7931a3ec2adac264745765ccacfc0f15a00a8",
+    "canonicalBytes": 1656
+  }
+}

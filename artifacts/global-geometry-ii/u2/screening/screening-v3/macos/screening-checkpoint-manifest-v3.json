@@ -1,0 +1,1738 @@
+{
+  "schema": "gg.u2.screening.checkpoint-manifest/3",
+  "executionVersion": "screening-v3",
+  "semanticPayloadVersion": "screening-v3",
+  "semanticKernel": {
+    "semanticBaseVersion": "screening-v2",
+    "semanticPayloadVersion": "screening-v3",
+    "recordSchema": "gg.u2.screening.record/3",
+    "implementationCommit": "1c3373267057b8a018ad5039e0f3b2b4e8eb2b1d",
+    "kernelPath": "website/global-geometry-lab/global-geometry-ii-u2-screening-v2.js",
+    "kernelSha256": "3976809ec412580975852540166147d870c354672d055e243861ea7046e19873",
+    "semanticSupplementDigest": "21d69b11b12277e228e2934e033fd8f366b3c8d5d89f1b8833aa781a36118888",
+    "sourceBoundary": {
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v2/source-boundary-v2.json",
+      "fileSha256": "c60331209247fccee700d10d38b9ae03da3f81e9013f19281a1f5918fb9e6c73",
+      "semanticDigest": "a1b1b9bb525ba9c172be48af60b9881a13ce58ebed9862a60fec18a25f07fae0",
+      "commit": "ed624f4ff42b4e5488a1889c3d55ba1195e5a952"
+    }
+  },
+  "executionSupplementDigest": "1524f69ef343a1048e3cfd05c9b4f6d93f9c6783233611094a345b3d4863885d",
+  "platformLabel": "macos",
+  "sourceBoundary": {
+    "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/source-boundary-v3.json",
+    "fileSha256": "022fec64e8b82d243cf6eda171da54337215718e960ff60b9f746c4f16d3b06d",
+    "semanticDigest": "369a05d51458b8b770f7d19fa1bbacfaf051e1d917e9c7db4967a0c1a37211de",
+    "sourceCommit": "e62970c349b3dfa2d94a46baaf72886b6124de27",
+    "sourceTree": "5ba6659c077655a5c8c09425d20042b36995bc7b",
+    "verificationMode": "git"
+  },
+  "writerCapability": {
+    "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/writer-capability-v3.json",
+    "bytes": 2220,
+    "sha256": "53524c7a40e2157a22c48ab1789514350a2d1ed66b8e13e81a9141748683dad5",
+    "semanticDigest": "22de7a37c244d132fcdf203ff57d842ea272e07dff36a5cfa4fc597221bc4e30"
+  },
+  "chunkSizeRecords": 32,
+  "chunkCount": 120,
+  "recordCount": 3840,
+  "chunks": [
+    {
+      "index": 0,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0000.jsonl",
+        "bytes": 188175,
+        "sha256": "4ac80be419973fe341ae424cee0c8b076f5bae1ded3cccaaa0da8a19648a6171"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0000.certificate.json",
+        "bytes": 2380,
+        "sha256": "fe904816e37f7f548213956a107d2d4c706849118ffb3303a1a9f5ceeb92d5e3",
+        "semanticDigest": "9d91ad23b70289f197569126b4f375f75d937eb7a7bfd0327b9df81738136fb7"
+      }
+    },
+    {
+      "index": 1,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0001.jsonl",
+        "bytes": 189426,
+        "sha256": "7756b399e3c44986d2dd8b3c2a815e3c0e189eb51493f34b33f1cbd6a5d479e5"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0001.certificate.json",
+        "bytes": 2381,
+        "sha256": "e457152cc62eff0e45f86f077a778b46e67f6042f0465e106d3741acc5b31754",
+        "semanticDigest": "60e1a8b22caf86128d69741607007831b19f313eaefb67d25a5aefef60611bb9"
+      }
+    },
+    {
+      "index": 2,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0002.jsonl",
+        "bytes": 189413,
+        "sha256": "8576698590186b72c5d2e4d5a35006970d399033d1c1253e721fafbf5315b055"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0002.certificate.json",
+        "bytes": 2381,
+        "sha256": "997d1e6a0a6f72df6d8b5fe3a86eabb8d1e210cd5b1d878dca263fd0b1e4db35",
+        "semanticDigest": "9b1b0ffbba12f9512b78fa915daeea77312bdc9d0dd9862fa8467ac0a5903203"
+      }
+    },
+    {
+      "index": 3,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0003.jsonl",
+        "bytes": 189369,
+        "sha256": "d22b16529f67be8a0fed9837691f4aed885508a3100f3fe923410f28e5f3a460"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0003.certificate.json",
+        "bytes": 2382,
+        "sha256": "b1a52c16731fe0cabe6e42f6714a0651fe2069fc3a04b49c59e2a8c1463a9575",
+        "semanticDigest": "4e87cf992ce54d8934467e48bb333c273749e02ab1a722f3bb1275f464d72f92"
+      }
+    },
+    {
+      "index": 4,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0004.jsonl",
+        "bytes": 189721,
+        "sha256": "63e8d5aa79e20f6a19089060d0b9f5eb37e94480d7f336ab8d2675d9ab3cacf6"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0004.certificate.json",
+        "bytes": 2383,
+        "sha256": "40dc88febe3eedd00e2d1444c8bdd61c1da3302dd6fbd7df92186d03f3cea092",
+        "semanticDigest": "9755379ce739242aeb9161b84b602fce1e92e4b91f2f7e2cdfdb3167244a4413"
+      }
+    },
+    {
+      "index": 5,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0005.jsonl",
+        "bytes": 190987,
+        "sha256": "c1b80166c489d236b681b3b60e4859dd26d87ea694e046ae83bde2d983c07872"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0005.certificate.json",
+        "bytes": 2383,
+        "sha256": "1094be5053ad002306979207e09aba1294b536d6498f26d4cdb9c024250fe657",
+        "semanticDigest": "9e1388c934ae233362195b026257135d056c91518e38c897bc7c5f2a13b10501"
+      }
+    },
+    {
+      "index": 6,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0006.jsonl",
+        "bytes": 191020,
+        "sha256": "73662e3373df324a27a1e4f0b7a9d5e9c06087c7786ed7b2e8ac15e4c9d1ef4e"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0006.certificate.json",
+        "bytes": 2383,
+        "sha256": "e4d14b1b44ce37aa63140ac16f7e18bcb783ba416c1e3d14de56f9f1c32fa2f6",
+        "semanticDigest": "fe726663a27fbdf4c380b3e68241ddd36694ad9d8bfed2616fa72947f8c13755"
+      }
+    },
+    {
+      "index": 7,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0007.jsonl",
+        "bytes": 190913,
+        "sha256": "fe03e869df641727c8dcf0c39cf15f1e6e2d4a512dee93d680926d86de68f98c"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0007.certificate.json",
+        "bytes": 2383,
+        "sha256": "b9328c9b3e001d19efc886ab69442812693940062572ba77b9be22bcc5516de7",
+        "semanticDigest": "4ef9891848e8385b839f76aacffd76c5fc2ed17431f7ec114f0ea1c73c4db0ee"
+      }
+    },
+    {
+      "index": 8,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0008.jsonl",
+        "bytes": 192773,
+        "sha256": "3e36d0f06105276a04471a66e8dcb4afe2021e687f6ee7c5709753a9d616641b"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0008.certificate.json",
+        "bytes": 2383,
+        "sha256": "e8559412b5bbe464030d7aa539d3c035be69df0c9fa461e9613b99bd6fcc4f17",
+        "semanticDigest": "553cbcf384a4abafb6af20c89c584e03d30470a8ed32dc013e6ab5a4538ec1d3"
+      }
+    },
+    {
+      "index": 9,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0009.jsonl",
+        "bytes": 194111,
+        "sha256": "550e9b12465b4f97c00b6c5fd2bf39436f856bf9df2edd545d8b99c03ee8241e"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0009.certificate.json",
+        "bytes": 2383,
+        "sha256": "11c26ac23a365827e6973429802b001dcec92aa40174d8f30c99e29e1960486c",
+        "semanticDigest": "57f24492f0a0eb3c2cc4807f4df2b149e99ae198373412cf7693eb3e820c1bd4"
+      }
+    },
+    {
+      "index": 10,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0010.jsonl",
+        "bytes": 194064,
+        "sha256": "ee5b7d1422b191285388174a9486cd835afce48a5b634dc8fbbc3bb903c24120"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0010.certificate.json",
+        "bytes": 2384,
+        "sha256": "fbfc9de66060ff5761a5c9946d9336d47b993043619eaea28151e656191f6a1c",
+        "semanticDigest": "d33475dbda35b09c016de3d186821ca6f81170212b853a679fec4aac2769a818"
+      }
+    },
+    {
+      "index": 11,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0011.jsonl",
+        "bytes": 194014,
+        "sha256": "e3922b8a256b518eca85eef16d814bbaf3f25dd50470427c30dca1d5f3ab79ca"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0011.certificate.json",
+        "bytes": 2384,
+        "sha256": "ee6a2d1755d5cd8710829ba3916309df758a728823e16936d209ceeed0c2f894",
+        "semanticDigest": "c8ec781529cb0841414a9a24524d559734f5d54948f933c4e1062a8751697408"
+      }
+    },
+    {
+      "index": 12,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0012.jsonl",
+        "bytes": 193360,
+        "sha256": "cdf89109799ee81d72003397ead39fbdf9fd4c630541cde2f6a866bca02f7c1d"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0012.certificate.json",
+        "bytes": 2384,
+        "sha256": "8167be7442ff5a3d8b545cdcf9ce5d7632bc16cf7e4dd748ee7ede939d3571d2",
+        "semanticDigest": "cfb7caf38f01fb4f7796eab21f6100df4841364f6030bba6efba5bfbd8fccf8f"
+      }
+    },
+    {
+      "index": 13,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0013.jsonl",
+        "bytes": 194633,
+        "sha256": "6b6f4bb0a0ee99ef20a02d8042fb254318d4ff710fd947f6370427d8bc3e63ad"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0013.certificate.json",
+        "bytes": 2384,
+        "sha256": "808c30dbde5220d140033fd58a6776f26f07376d819862595460e28bae853c3a",
+        "semanticDigest": "40ebd911bdf40364d30df1382d728de79d704cd3c2a1239540ff3d453f05be5b"
+      }
+    },
+    {
+      "index": 14,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0014.jsonl",
+        "bytes": 194574,
+        "sha256": "bb7ad145f7010a7b9f091fc77086061f2229893f53f211089e582b37f7d865f4"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0014.certificate.json",
+        "bytes": 2384,
+        "sha256": "55b55b73a3ee64f368d425bc713e2c9e17e240efb43effa7b2f7654bc13b5eb4",
+        "semanticDigest": "08239590b7bbbdef06f40aabf9b2a4233de349bf87af256b1ed89522d9c97ca7"
+      }
+    },
+    {
+      "index": 15,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0015.jsonl",
+        "bytes": 194390,
+        "sha256": "201d610ca2a178f1636fc957d7cc995f39aea6aa7e156f7371a6ec41acfa99cd"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0015.certificate.json",
+        "bytes": 2384,
+        "sha256": "e04ef618ff847b4fab92b3d9c1024b701331d6b5f46ab8d9e2e6fd1afaa33f39",
+        "semanticDigest": "d29b6f34e4f4d12644cd8b31bcf4f44e1b0b15a4106b65664441ffa5708980c6"
+      }
+    },
+    {
+      "index": 16,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0016.jsonl",
+        "bytes": 321408,
+        "sha256": "1f058ca0e3f37817f30c3a517a42b02d55ed9031145df489c054fd5d8b6bfde0"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0016.certificate.json",
+        "bytes": 2384,
+        "sha256": "180a5323a751f3f06873da6fd110bbc57e4895b2a30ebefc917fe47ccea26927",
+        "semanticDigest": "4dfb0c1a79425a90048a250ff4990e4ef8ad87d646f5bd79ffd741cc838dab5d"
+      }
+    },
+    {
+      "index": 17,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0017.jsonl",
+        "bytes": 361947,
+        "sha256": "b9f50bba91de468adea6e7e61f03743ece0f2c9c56335df8d47a0cdff80334af"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0017.certificate.json",
+        "bytes": 2384,
+        "sha256": "2771c78029aa67f60189ba2ec850339bcd5d4a078e4edafaeed9d250334300e1",
+        "semanticDigest": "5ddf6de8944061b612387affda4f2c10fbd85fc9183ef724424f4f419b5d4271"
+      }
+    },
+    {
+      "index": 18,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0018.jsonl",
+        "bytes": 362207,
+        "sha256": "752065b5b3022217afcb81b797cd3579ac43439c2689e2541b70f3db8f6ce453"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0018.certificate.json",
+        "bytes": 2384,
+        "sha256": "5ec5c844f4ffd7c0099ab3cf160493d77d197322ca710cd23a93e30f18b4d929",
+        "semanticDigest": "1b36e39f7fc7b4cbd44c74922af5bc5012f6bc0589aa1e3c840f54d5c5bc300c"
+      }
+    },
+    {
+      "index": 19,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0019.jsonl",
+        "bytes": 362073,
+        "sha256": "b64ca04c4be4b45ce25c4ba3902c6a8770e01e7daf96013f516b6f1727121f56"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0019.certificate.json",
+        "bytes": 2384,
+        "sha256": "c8bb2c3af0eb79a62c281bf7afa78049c3b0925140677d4fb23f219c5d3fa732",
+        "semanticDigest": "d6fcd279ed47aaa74043f77fc0ae4ddd5adf07916f7e8537a7ff9c39df0753f9"
+      }
+    },
+    {
+      "index": 20,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0020.jsonl",
+        "bytes": 355467,
+        "sha256": "5a562c4a60d2735cd37985948004dd6b02f23daa8e249773ead23dd122e594e3"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0020.certificate.json",
+        "bytes": 2386,
+        "sha256": "c63c97bc11d03cd2dd9fabf3a7494ca97d1fea72a44d05b2f5d9c769a9324517",
+        "semanticDigest": "ec186a5bc2fb9f1050b2df12cae47cfcc86c3491b7d30a5ad67d351551455d9e"
+      }
+    },
+    {
+      "index": 21,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0021.jsonl",
+        "bytes": 414539,
+        "sha256": "24825887885f0a02220967eae63e7993d75c941b9ea9a88cd9f35a40b861b7f6"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0021.certificate.json",
+        "bytes": 2386,
+        "sha256": "5083c182d2c3185b44ce93076795934f8e9f33d92393d04a7f739e9b5dbcc617",
+        "semanticDigest": "e7fbd7777cd5d293e3137deec253602c616d259ec51d454f9c9e7df28362c95b"
+      }
+    },
+    {
+      "index": 22,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0022.jsonl",
+        "bytes": 413513,
+        "sha256": "6a8718169443c3113b2b3e65bfbed2312bd5189601afbd86f2433d08c8b8f099"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0022.certificate.json",
+        "bytes": 2386,
+        "sha256": "229de3f3dc8d996a053eb6cc55c398dedd730a8dd94cc459ebbc1510d972c176",
+        "semanticDigest": "7761084458e784a2c4523e6e8c2f0908b171e454422d2a009f4c9812a644f904"
+      }
+    },
+    {
+      "index": 23,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0023.jsonl",
+        "bytes": 413223,
+        "sha256": "b6703cb40fe60e97a77cb25d1163034bc1663e6a6f89dfa7b75eee959636a031"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0023.certificate.json",
+        "bytes": 2386,
+        "sha256": "580f15609d1c486eff9c775aeb9c6a7763701f356fc76d1fe7edb518f7d2a2c5",
+        "semanticDigest": "4792b50b466b0f5b215ef53cd426186267ce65f68b54a64821a7c7a72b257229"
+      }
+    },
+    {
+      "index": 24,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0024.jsonl",
+        "bytes": 187517,
+        "sha256": "406192eaf8fd6c450acefab4638d3fb6216dd3c21244612900e2063379a5d697"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0024.certificate.json",
+        "bytes": 2384,
+        "sha256": "a688af560d34fe649d27226a8d4f996d336c7c8d679d25f149d0e72a07dc1d47",
+        "semanticDigest": "f4b07e69aabc8282b214731956461fc218d6992dcf9665c4c8af9feaada54d78"
+      }
+    },
+    {
+      "index": 25,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0025.jsonl",
+        "bytes": 188753,
+        "sha256": "4745b6a10847aa079be24ac5aab9530e20c742c6ac8a0dac6171e27cb7c1d4ae"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0025.certificate.json",
+        "bytes": 2384,
+        "sha256": "1f644be52cca8762befa6fe2079cf64049632b216836c528766c9d43b896f92f",
+        "semanticDigest": "2cf8223830b58023d8db5cf3e3cd575cdc4c1b9110ab8917cc70f9ad00b52596"
+      }
+    },
+    {
+      "index": 26,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0026.jsonl",
+        "bytes": 188745,
+        "sha256": "b55f22aee2a22a29135d056e2ca9ed24edd09754496e1ec055e19ba496ee9fc5"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0026.certificate.json",
+        "bytes": 2384,
+        "sha256": "dcd296193c439aa53ab8248fbb451afed580d2a331e15c7980ad263e1b1261d6",
+        "semanticDigest": "1b619e399e04bff646fe4d92bf8c183fc6e986ed80c1ffb0a31d6a9d43966a8d"
+      }
+    },
+    {
+      "index": 27,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0027.jsonl",
+        "bytes": 188680,
+        "sha256": "7f89238ac5595a6a6af405e6b545c42db3293d7ad174b08dfe0870719b844efc"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0027.certificate.json",
+        "bytes": 2384,
+        "sha256": "81a80e34bfb9ea588549d9d0c97815beb83c56bf5dc5a7b225b987292d54fc04",
+        "semanticDigest": "6ad166027773ebc411eaa6439a4a98d08f6a075bafa2dcbcec4f78386f28cc67"
+      }
+    },
+    {
+      "index": 28,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0028.jsonl",
+        "bytes": 189102,
+        "sha256": "7d39d964fad07e57c9795e1fbc0dfc6f75d51ebbcbcb9e02562718be96e4a787"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0028.certificate.json",
+        "bytes": 2384,
+        "sha256": "240fbc37d16a0c8fa407912963f0e7ff4c607c21ba81419d5f3431b3c93de5e0",
+        "semanticDigest": "c2a542d0cc1d29bffd38a16d92124d21d1de54334ba24904d31aaf2efa33b743"
+      }
+    },
+    {
+      "index": 29,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0029.jsonl",
+        "bytes": 190349,
+        "sha256": "fbda33044d87d72f6ad343dbbb4586f02ebab51d824975744542fff8c0c0dc42"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0029.certificate.json",
+        "bytes": 2384,
+        "sha256": "4dcb0eea98ad6ea7d59411ce08a7c771cd988b74e6e1b49af42ee3814af28f0d",
+        "semanticDigest": "1d375a478a9a3b3eb59db50eb0c131536b9c87beb2a34a4dc42aeff40ff9ebeb"
+      }
+    },
+    {
+      "index": 30,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0030.jsonl",
+        "bytes": 190361,
+        "sha256": "7418b7ea2360eb0de3ae04d8cb7d06cc49d9af8c5c768df0514834473cf3485a"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0030.certificate.json",
+        "bytes": 2384,
+        "sha256": "9bce83e041ee580343cdbc7ee730f30ea71c36e0b070a275a9ab08ac4491a13e",
+        "semanticDigest": "98ef1f314555332788832119106bba756d6224920712a19d622ca53c5825a816"
+      }
+    },
+    {
+      "index": 31,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0031.jsonl",
+        "bytes": 190303,
+        "sha256": "859235b22ea8a1d4b28e1d6bd63afbb3ba8ce3fd1b70ab523b527b940c2a6544"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0031.certificate.json",
+        "bytes": 2385,
+        "sha256": "ebd3bd5db66e2b00a65cb57d65c22e530692b8e1910cabf9980e048d4eeefdf9",
+        "semanticDigest": "adfb7f8afbd17f0fb07252e83e0cea27cd76453dc6cd79c1860ea90503cabc3c"
+      }
+    },
+    {
+      "index": 32,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0032.jsonl",
+        "bytes": 191606,
+        "sha256": "c3c8b29c74a765881a1fb75036f39b6a304960b21b84ae2b9ba0bce68d3a247b"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0032.certificate.json",
+        "bytes": 2386,
+        "sha256": "531d924b5f37706d5f02a781158f5d9ee640232e9bc1b4fdfd882275adf88a48",
+        "semanticDigest": "27a7678aa46d33b5a5b911830e965644a17434c478de8d00aaa3b9303fcb55e9"
+      }
+    },
+    {
+      "index": 33,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0033.jsonl",
+        "bytes": 192854,
+        "sha256": "a025be7b437d5a66bf0eb0c2c8759304e375ccf55b70f2f8366697cab3363e3f"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0033.certificate.json",
+        "bytes": 2386,
+        "sha256": "540f496e83b0e23e1fdf3a63be009ec98db5512179cee80eb01838e4b7dcd2c5",
+        "semanticDigest": "6c6d86d2546c9dd340da72d4b88f5e5c58865e07ee4843899ba83ca797d022a1"
+      }
+    },
+    {
+      "index": 34,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0034.jsonl",
+        "bytes": 192838,
+        "sha256": "6dfc16e965e788ec5ba7dc349d3ef49f245381fc02bfe808ac802d154b6d4247"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0034.certificate.json",
+        "bytes": 2386,
+        "sha256": "fe9dc9f12ffb765ca8819cc0ea8667a39f4b116e93960f338b92f5c87228bdf7",
+        "semanticDigest": "cdb698e5522eb753563cf08939cd0ff273d27391bc51d3586a03a5e21b3115c8"
+      }
+    },
+    {
+      "index": 35,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0035.jsonl",
+        "bytes": 192776,
+        "sha256": "fc4f9e810d8a2c71a1d7408e61b0a9ede8774e941bad858291a0db6583697e77"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0035.certificate.json",
+        "bytes": 2386,
+        "sha256": "8aad79f148ac230cc98e5d4612c824271fe87524ce760045104f8f474e710ad3",
+        "semanticDigest": "722db1f87b77509b813dbd16a3f58ac63bcbe51398eef66540202ef0aa8a01b0"
+      }
+    },
+    {
+      "index": 36,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0036.jsonl",
+        "bytes": 192598,
+        "sha256": "508c1b7a344d78bebeafb15d30d94412c1ccba1727a21306507a9a3f8a9c3305"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0036.certificate.json",
+        "bytes": 2386,
+        "sha256": "84187d41868324618324b7290086b89bc1dc71ce4889e4fcbd4906092c6524e4",
+        "semanticDigest": "55ceb90c2c8b7402077c84e7362b591fca7a2263b7535342e4fd417729362311"
+      }
+    },
+    {
+      "index": 37,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0037.jsonl",
+        "bytes": 193846,
+        "sha256": "f628591454c37e8cc4178eaf5eca7e3606ffa354ec782b4d044963575cfc5abc"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0037.certificate.json",
+        "bytes": 2386,
+        "sha256": "eb42734f02e708627ccdd8b2bffa1997c2bb03a35c9aa04822bd3afccccb9fe7",
+        "semanticDigest": "077c1a2b97cc97a0099aea17e5b579d1e8efdb313324d8bfe63e7bb6e0aa9854"
+      }
+    },
+    {
+      "index": 38,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0038.jsonl",
+        "bytes": 193838,
+        "sha256": "c81856cafd6b26afa849fe39e989f48397232ff77910b5075c61c06cfdefd881"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0038.certificate.json",
+        "bytes": 2386,
+        "sha256": "78b186e0557bc1cb73d794d66a952e5d3a3d9396b10e044ba6cdbf0e0567d088",
+        "semanticDigest": "0a9585bb791369775298082475541285258805eef642ef2b1d10450f33c032d3"
+      }
+    },
+    {
+      "index": 39,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0039.jsonl",
+        "bytes": 193764,
+        "sha256": "bf723ec6272d70da9efd8687ccee2c89efc1f2dc03f34103198e44b6a294a8c3"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0039.certificate.json",
+        "bytes": 2386,
+        "sha256": "25b5515af4ff26b5248b6b5baffa76c959269725d1dad3fc889346a34d3e580f",
+        "semanticDigest": "02a354439bc92761b57ac66f86f2da831daa92253669684d50856ef488fe0457"
+      }
+    },
+    {
+      "index": 40,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0040.jsonl",
+        "bytes": 320893,
+        "sha256": "d6706026dd671255cfa0b1482bd25bd23e79eb5e42507b6b64220abd17bb78b2"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0040.certificate.json",
+        "bytes": 2386,
+        "sha256": "ef64632170a0ec04622585484847135e4a34a14859f7ed15290e4f252979aca1",
+        "semanticDigest": "f7134415056c445ef031b207d845957767551e386398e4d333e91a56d7d3003c"
+      }
+    },
+    {
+      "index": 41,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0041.jsonl",
+        "bytes": 360155,
+        "sha256": "e39021f3fdf61d4cc3aff5ecb06dcdcdd247ac9bb04c5a7b20d1c619ba801560"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0041.certificate.json",
+        "bytes": 2386,
+        "sha256": "8872d0c4998ce744cff2e356af1745b336d3ca1c2f611bb97744dd68fb247783",
+        "semanticDigest": "b2976496b440f5e59a6bae10bd4025df117199b2f8bf51884438eb62c224f80e"
+      }
+    },
+    {
+      "index": 42,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0042.jsonl",
+        "bytes": 360199,
+        "sha256": "6421165a29d7f5ff66191b29a0e9bde93d31216614a7d80c43bcaa680be5e708"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0042.certificate.json",
+        "bytes": 2386,
+        "sha256": "7d1fe6072e4aa1484e0a4a3d00cec651718c2b9b988ac93715f98f24b8fa0092",
+        "semanticDigest": "f00a6b5a6021c45d124603882bee33b5e267bccee0ad5ec3a06e44a7c83ac061"
+      }
+    },
+    {
+      "index": 43,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0043.jsonl",
+        "bytes": 360051,
+        "sha256": "50c662d134549f191f74bf3fda1d6af166331c5f11d7968f45993998095581f6"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0043.certificate.json",
+        "bytes": 2386,
+        "sha256": "bdf21a4d2a69b5d08a60691ea45ecb1cd6b3aac5fde5c44defa2fb955d6504bf",
+        "semanticDigest": "6984f62d9a7ab85ec4b9df10f2885040a7c130b800518beca31d6289939f548e"
+      }
+    },
+    {
+      "index": 44,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0044.jsonl",
+        "bytes": 355069,
+        "sha256": "495c4d048e3682f4b8f94d5c276b94a94020104956ee583c1c1d5a80632a5f17"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0044.certificate.json",
+        "bytes": 2388,
+        "sha256": "cda714e8d79f8cc70c28b635f6ddbdbd629d39cbb610a4b128b133362eb09e8b",
+        "semanticDigest": "111fe92a89b8f76c1dc25c0b37ac5ecdd4148bd1928039ed57dc17fe0881b2dd"
+      }
+    },
+    {
+      "index": 45,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0045.jsonl",
+        "bytes": 412380,
+        "sha256": "8cabf6ee44df80b505a74349d33759969024ab5a22f969887061c947aa2e5e3b"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0045.certificate.json",
+        "bytes": 2388,
+        "sha256": "45b5361e3559c7d967b452bf37d093970fe053dbaade4f53838b92f990368458",
+        "semanticDigest": "45d9bdfe00971f14220afb4abc4f8865c2bccf412d75c48bee7b5657e21f3249"
+      }
+    },
+    {
+      "index": 46,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0046.jsonl",
+        "bytes": 410584,
+        "sha256": "fc57696283c1b0e100202f82b493c18c36add94b09668c58528f591a878c48ec"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0046.certificate.json",
+        "bytes": 2388,
+        "sha256": "1473ddea94c044a9b69999d4251dad6821c0739a8159f1608fef5601e0d05e89",
+        "semanticDigest": "719b5d1fc2d22de3ac94a77abc21d621c1fa512a0c9ed9e22c13344942f2c712"
+      }
+    },
+    {
+      "index": 47,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0047.jsonl",
+        "bytes": 410429,
+        "sha256": "d25eb9ebcac34ebedf470acba230acf7dba9a3fce3de6cc163e5a4ddbb16b7bd"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0047.certificate.json",
+        "bytes": 2388,
+        "sha256": "3b112ae0faa5798432ffef3df7a02f6b12ef48d0cf888d77ef607e5046fd3aaf",
+        "semanticDigest": "f7194f8674cda2425eda8b82fbb1730893fa12f423278a0f200238a7fc5a60ec"
+      }
+    },
+    {
+      "index": 48,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0048.jsonl",
+        "bytes": 188200,
+        "sha256": "c790be62dafc500b32a86dc16d558c9cd61388b26253087f3de894b636027743"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0048.certificate.json",
+        "bytes": 2380,
+        "sha256": "2912072d6d63f16dfb6ceb649e573a592a4283dad020f786584f4fff589fe40b",
+        "semanticDigest": "789197f7ad2d23f34a68b2027b295d225291841d5451413ca9d07e733e337bc6"
+      }
+    },
+    {
+      "index": 49,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0049.jsonl",
+        "bytes": 189515,
+        "sha256": "2c6cdd941b05ce6cb4dc6c9e8c2148d1da9cef0e73ac5d45a3ebde2620dd8455"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0049.certificate.json",
+        "bytes": 2380,
+        "sha256": "848b8e24624e335e293b1d8e75e2430c776b668fa5fcc95ff53975148fb29c09",
+        "semanticDigest": "fdedf69ca8c91f2feb8cc28f934631a7a14f27e97b18338bf47074216d2a674c"
+      }
+    },
+    {
+      "index": 50,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0050.jsonl",
+        "bytes": 189443,
+        "sha256": "ce037a87b4a5867023028fcce70aa226cf6e4414f6fa361637b44a024cf5c6c7"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0050.certificate.json",
+        "bytes": 2380,
+        "sha256": "7a6292419f7714e7da0ba4fd3a7402c4b68f7719521414217a8ab399645dad5f",
+        "semanticDigest": "83443f983ac3de05f7896e5ed5c84037a3ae6d16ea1fb254fa02eb326031a91f"
+      }
+    },
+    {
+      "index": 51,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0051.jsonl",
+        "bytes": 189315,
+        "sha256": "ff0295dbcc30d5b84607db2999c1547ade9bfdba02a868c5e87ea7d32a3c978d"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0051.certificate.json",
+        "bytes": 2380,
+        "sha256": "4bb001c0fa7384eb580c47969a79c6c76af18bf6c0a86ebfaf2cf0a3fd126756",
+        "semanticDigest": "862bf82e06c64d67c6c07f3d9410dbad99800df5901dc24b9bc42103b9a9051c"
+      }
+    },
+    {
+      "index": 52,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0052.jsonl",
+        "bytes": 189959,
+        "sha256": "cd280f40de1e1ab78cddc74e9e44bce5ae3fb408ec4c82a487095d913f383a3a"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0052.certificate.json",
+        "bytes": 2380,
+        "sha256": "4c17f116d7eb903b157621ac422432c06e3d00751f788e21a87c52243f62b9fe",
+        "semanticDigest": "e10cfb2f46d1a569e047985c0da629ac09dce9eebcf1e8c7fef8a86a277e8e1c"
+      }
+    },
+    {
+      "index": 53,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0053.jsonl",
+        "bytes": 191161,
+        "sha256": "d33510c9cb31edd7e9d9de34f9aa46876679982a0bcdb7774d84711ed856714a"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0053.certificate.json",
+        "bytes": 2380,
+        "sha256": "7c20ab62ed000a5b2220962f1ba5aa6fac7b5b9eabf0e55e02ff854c26f9578b",
+        "semanticDigest": "a140a828ab16f9043ee215c567c17a3cd131bda9e45ab3fefd38d6bd6cfab257"
+      }
+    },
+    {
+      "index": 54,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0054.jsonl",
+        "bytes": 191155,
+        "sha256": "d2941d646fee8349c870a14e58c08a9836ed91ae55ee4ef7b1974aa3c6065338"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0054.certificate.json",
+        "bytes": 2380,
+        "sha256": "71a0f89ec11b6e3026d65da6c595b9bce341e072808be45958d09a0666b73d8c",
+        "semanticDigest": "55b83e899906dec797dfc33337843f28a63044054814bcd94b9c7d76321b0b0e"
+      }
+    },
+    {
+      "index": 55,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0055.jsonl",
+        "bytes": 191187,
+        "sha256": "57a9269edf4b52ad6cbbfb1c52caec3d9f1ca81e862bc6a610bf91c2912a7c5b"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0055.certificate.json",
+        "bytes": 2380,
+        "sha256": "d60b09a64404bd616c351a14339adadb5f8dd085744ea11a8aff2ebbfd90bb15",
+        "semanticDigest": "49a20a101edea392de275b5a31a9e81f6b206de3b912755f06ed035d090ab575"
+      }
+    },
+    {
+      "index": 56,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0056.jsonl",
+        "bytes": 192467,
+        "sha256": "e2ebfc7fdeb4564ee793c8a0dded9da6d3278114bf1fedb707a9702e95f726ff"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0056.certificate.json",
+        "bytes": 2380,
+        "sha256": "8ee545ee1e6ad1dd31d16f8eeee74c20d111fa342d9c58c54ebe7839c2164b54",
+        "semanticDigest": "4937f2be4fdd080c2a18e51e538037570cd4abe1db984a970c9f8855420ba048"
+      }
+    },
+    {
+      "index": 57,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0057.jsonl",
+        "bytes": 193828,
+        "sha256": "e1053c4534ef000d3fef53f6da1183a8128210d7613e089f69b1f64dd8d4a3ac"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0057.certificate.json",
+        "bytes": 2380,
+        "sha256": "3d9960cdd67112e169940a3fffc906b81662868288ce7cce15c66d2cdc91b6a6",
+        "semanticDigest": "97742f43f8a6701e93ba4f9465cfa5f26a4993af069529d36e46431fbe639d09"
+      }
+    },
+    {
+      "index": 58,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0058.jsonl",
+        "bytes": 193740,
+        "sha256": "ecc46e461ae492f15b98a5b0f0f9678f9bf50cad135621e84af609e237d31d56"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0058.certificate.json",
+        "bytes": 2380,
+        "sha256": "12389d65bd9e683dc9458ee125d3cb265ffead70ce8fe6142beaa861c45d7d6a",
+        "semanticDigest": "772241278d330bc9b8ea4ad930ded896d0367f17355768896553b539170b1ea0"
+      }
+    },
+    {
+      "index": 59,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0059.jsonl",
+        "bytes": 193719,
+        "sha256": "0e914832fbd5cdee5c373f398aeeb5330a65382044b954dde896c98a3ed9d2db"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0059.certificate.json",
+        "bytes": 2380,
+        "sha256": "f7e49fb0835daf85fb221682808f656a31007fa223ba091670afbeeb3d5e0112",
+        "semanticDigest": "3b056afa0ea7d6afb56fade80252a01995eb8d93dc5c6454d4284d3e2e45cb83"
+      }
+    },
+    {
+      "index": 60,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0060.jsonl",
+        "bytes": 193258,
+        "sha256": "7b00b6de3a41bac61a582911b5feb041aa9b0c832b99a768552fa76ec2f8e4a3"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0060.certificate.json",
+        "bytes": 2380,
+        "sha256": "6d85a2ac25d56b452c8e1b4ef2378f0f8ebd4a46ff17b5a397bcc8c073a8b2a7",
+        "semanticDigest": "4ec3897b1bc8d1e28df7d39db7d805636d5ad606015139459fca5fc1f54cbefe"
+      }
+    },
+    {
+      "index": 61,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0061.jsonl",
+        "bytes": 194464,
+        "sha256": "2965cb5567871acaa52540758ab8454bfbdabe08ad1402c4e4cc11e02eaed5e8"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0061.certificate.json",
+        "bytes": 2380,
+        "sha256": "daf8508ecd9e5f93c6f34cab7d302e43b0a93af835347a862421dded4a9ef2a5",
+        "semanticDigest": "cbbdaa0d7a245a0a706df9b6e1f10c7f4658a8145cda7747f5290a7ef858cd6f"
+      }
+    },
+    {
+      "index": 62,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0062.jsonl",
+        "bytes": 194518,
+        "sha256": "8335a610a7e29646c6733d20de1a19841eb5d3941369b246506f1f94cd52b465"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0062.certificate.json",
+        "bytes": 2380,
+        "sha256": "97b76d10c115cf36c152d5a20c1853a37650cea8340fe8ca5d20365e3f7bde89",
+        "semanticDigest": "57a63bffb3d589d87dd25aa0fc8a3af3d2116f21e237baae31f8ad28a3792204"
+      }
+    },
+    {
+      "index": 63,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0063.jsonl",
+        "bytes": 194362,
+        "sha256": "8646f0ce05c98609380fe9122fcc8044bd16a1e086ccbc3c12596f0c9ae1278f"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0063.certificate.json",
+        "bytes": 2380,
+        "sha256": "0677b5da233c3db4b375eca964ab31d4d759ab0526c60d6bc2943f5be23f7c66",
+        "semanticDigest": "53d3e85283b7fd3333e2f3f0d53901fe4effc9c6f947babce6b273823ce45271"
+      }
+    },
+    {
+      "index": 64,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0064.jsonl",
+        "bytes": 321862,
+        "sha256": "da3f72571c516692d8575eb20269db10c591716a95685d63b32e939580cb1756"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0064.certificate.json",
+        "bytes": 2380,
+        "sha256": "5198d42d2b4d5e91009936a02de2dee21c8e362f709ef1b70290bb0d47188602",
+        "semanticDigest": "e024330b7b4214684adca8f1d9c84495476a1c5b1c422313ba0847adee7a78d9"
+      }
+    },
+    {
+      "index": 65,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0065.jsonl",
+        "bytes": 361265,
+        "sha256": "5b7e31ea8a454da07514470931c856eb083acc0cc3306255a5684e24ac3f1b9d"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0065.certificate.json",
+        "bytes": 2380,
+        "sha256": "3856d03ed7d810552d7ef1537ecad073bbc242fad72aa3eee66c35385138ccdc",
+        "semanticDigest": "ab8eb96fee72e3f6edd51f841a537849a82b2a6cacd301fe9d59544a443fa0d4"
+      }
+    },
+    {
+      "index": 66,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0066.jsonl",
+        "bytes": 361246,
+        "sha256": "96b27f655ce4ea6ee9cfbb262bf36dae94d3c2a1cc5807c55bcd5b1a9ee8dbc1"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0066.certificate.json",
+        "bytes": 2380,
+        "sha256": "6a23bcdf6c84d4f04b53e57b2d27f24be1141ccb9c04d8b730756f651884b54f",
+        "semanticDigest": "bfffb5d276f7920689e9bc38cc7b3fd0b367bd7d3da2fb8ce56debe930d78548"
+      }
+    },
+    {
+      "index": 67,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0067.jsonl",
+        "bytes": 359759,
+        "sha256": "942750ed3362bd9849bfc975ff2f82789663e610fd0f8c7d58d10d19d9ff7933"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0067.certificate.json",
+        "bytes": 2380,
+        "sha256": "83bb2c63bd2f3b94c7add17cfa938353d4fa193f6d3e4274b8af035785bb28a4",
+        "semanticDigest": "056a0de020e1da4909f9b75e7644f7045e06c18a2ffc84cf731638ec77b2f061"
+      }
+    },
+    {
+      "index": 68,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0068.jsonl",
+        "bytes": 356087,
+        "sha256": "124daf3f87c330b29a52b5b97a1f9dd25f221a61e9d3be3f7ba22bd6d97551b5"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0068.certificate.json",
+        "bytes": 2382,
+        "sha256": "23851a1e663ed8659d40a89170a04b3e3423bda86d81180978ee72ae98304c1b",
+        "semanticDigest": "c1b53d1a04c3dc8398fa55a2cbad7848b05b6f089aa7cb149696fac6d07df302"
+      }
+    },
+    {
+      "index": 69,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0069.jsonl",
+        "bytes": 411532,
+        "sha256": "b4d78763aa3e2f961219e3ef4b65d2bbdc6c98cc62209b4343b1c74723c61503"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0069.certificate.json",
+        "bytes": 2382,
+        "sha256": "7c1cbb4a5cd94fb4d7e5aada0e87cb70f8adf1ef0ae6cd185577ad7a73f11fe0",
+        "semanticDigest": "8a99645c78bd794aa9aafe73bc14393ad2f9754ca11b5b84d308357cfda49c68"
+      }
+    },
+    {
+      "index": 70,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0070.jsonl",
+        "bytes": 411680,
+        "sha256": "5c4845eb9fbc506f39e878b4455956c7c284e20432a66a64ff1dcc9f169f1ed1"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0070.certificate.json",
+        "bytes": 2382,
+        "sha256": "e4efa7190d86c04ed20128d90b646e15cf296fee5e8c00ad248a9e6ddb569cb4",
+        "semanticDigest": "1b3651984771dbe1c0de3d7c11b4b1e96ee49ee9bc7874bb405fb7b29003ba3d"
+      }
+    },
+    {
+      "index": 71,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0071.jsonl",
+        "bytes": 411324,
+        "sha256": "62b1789180e113b9e4f17b1dac3bd3cac5823522f3b0a5e59cc214b9b7009976"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0071.certificate.json",
+        "bytes": 2382,
+        "sha256": "04938558ce1729848f4789096c20dff189924bdeb1f55c4440f70d55c903738d",
+        "semanticDigest": "9b6456ecfd4f2f94b7e9631cce31f63c9b41e18db5f52b9fda4e8f4a3ea5e77e"
+      }
+    },
+    {
+      "index": 72,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0072.jsonl",
+        "bytes": 186795,
+        "sha256": "00197b21195ec7c363a6ad2ee7796d4631ae5071d699a9b06b62b00522406b14"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0072.certificate.json",
+        "bytes": 2394,
+        "sha256": "d3c44654a116e15763e08f13c8bbfd1237e22f878207306785b71aa62e30e659",
+        "semanticDigest": "dc40bb37c27980ef3c2c5be565ab851c328e25f1756ac82dcaa778a576231c47"
+      }
+    },
+    {
+      "index": 73,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0073.jsonl",
+        "bytes": 189381,
+        "sha256": "284c4d2a727d30236e5e13a162778e023321af6d81801adb485a4d21e6efccbe"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0073.certificate.json",
+        "bytes": 2394,
+        "sha256": "b5a4d1d86fdc35f51ec816f08bfffd6090172aea4fc362b400dedd3f1a3645e8",
+        "semanticDigest": "8e7d8b11ad2a9e00f6790cb4c262cb5691387c6609af56bc63b8f8a5f7c18c3f"
+      }
+    },
+    {
+      "index": 74,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0074.jsonl",
+        "bytes": 189376,
+        "sha256": "89f4abf3c62a2852ce85de77553343764e002e11681e8ff6dcad37cd20a2f004"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0074.certificate.json",
+        "bytes": 2394,
+        "sha256": "eaf0534dfba3fbba6e51a73844adf73d2f070ac543c35ea8490cd7b8c7e0c0c8",
+        "semanticDigest": "748c3826e8411773501b45572233018a63962f491affc9be0ecfba2cd200f43e"
+      }
+    },
+    {
+      "index": 75,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0075.jsonl",
+        "bytes": 189303,
+        "sha256": "f246144c0ba5ca3a32590b39f574e3ff87f4580aae2d73c9373b9e401f53ed8f"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0075.certificate.json",
+        "bytes": 2394,
+        "sha256": "b06e892d0894143c2418f889085aece65a247d711f973f67586f53da631cfe05",
+        "semanticDigest": "bd9924e014da2796cd23fd1751181792da57189b19271e717712d3530683c466"
+      }
+    },
+    {
+      "index": 76,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0076.jsonl",
+        "bytes": 188429,
+        "sha256": "86ac95af8fef1246f03fa1742771745df91a999b96e42244a2811df907b1a68d"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0076.certificate.json",
+        "bytes": 2394,
+        "sha256": "d0480eab2ab70c0eb3f8a5579a6d1dc629d46187201c2f3c4158d2cec6c704cb",
+        "semanticDigest": "83c0068038225b34999a24aef3618b6ca87a56df808ce68b767b6fc7f13fb68c"
+      }
+    },
+    {
+      "index": 77,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0077.jsonl",
+        "bytes": 190959,
+        "sha256": "43e0ae0511cd621cce27d390359ad2b2ce7e45cf8c01cd1f2e4342c4bb05fb0d"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0077.certificate.json",
+        "bytes": 2394,
+        "sha256": "78fef620c6a03575f340a1324ed97857d46a895e8f33db0660c4e9b7efe7ee5a",
+        "semanticDigest": "a7d2d6d0551003ead101a3bb490ba40a7d195bcb16e6f0b3a1cc0c71cc259951"
+      }
+    },
+    {
+      "index": 78,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0078.jsonl",
+        "bytes": 190940,
+        "sha256": "32f606e92494e17b701c85ac74d32db93abd231e6e9898240a1dbce879a23a10"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0078.certificate.json",
+        "bytes": 2394,
+        "sha256": "56c97163a8fd3706875400bf22dc1dc2cd411c1816bf7881a145ddd061002d97",
+        "semanticDigest": "9e7a0e8cecfaedfba12fd2b0878bad89890f5abdc54e57aa99eecdf0104f19cd"
+      }
+    },
+    {
+      "index": 79,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0079.jsonl",
+        "bytes": 190860,
+        "sha256": "9b8417a9ee8bbc4fb76364bf86e4075937f988b301433a3ee9548eccd3c10b57"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0079.certificate.json",
+        "bytes": 2394,
+        "sha256": "1fa45a71fdf1b7b72ce0874d22ef9e12ab4ec783e17c101da2d61ec9837cce5b",
+        "semanticDigest": "54183e6f923c2423873f7190da3f9fc357e93e50a4fac0636c63e3a60d42b42c"
+      }
+    },
+    {
+      "index": 80,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0080.jsonl",
+        "bytes": 191575,
+        "sha256": "866372e5bb7892f3be75b318e0b0fccfe2f86e317a7c2e750506b5980ab371ad"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0080.certificate.json",
+        "bytes": 2394,
+        "sha256": "3bf93df20ac1e6cf094832b713c15e2b454e28fc1acf6adba0fc941891ac788d",
+        "semanticDigest": "022220cbda513795cbd66a39560bdb5894098a23b595af42faa1668ba1c1bf63"
+      }
+    },
+    {
+      "index": 81,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0081.jsonl",
+        "bytes": 194202,
+        "sha256": "b5fd1a0af9e1992560a94e783bcc0fa5fa47a043b496e7fc3dcd9067d97ffa2f"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0081.certificate.json",
+        "bytes": 2394,
+        "sha256": "4f548730f1bef5452a5f438b4c0209dd3acc4d4101b19c24dc763ca992e20b8d",
+        "semanticDigest": "1716c244ccac2c236e65dd5f25b19bc2f563c5a7dfcb631901c1be3b26e2a585"
+      }
+    },
+    {
+      "index": 82,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0082.jsonl",
+        "bytes": 194169,
+        "sha256": "ebfc4a900029d77d1a5c80c94e1d5d12ca164c9ab0c17552ff881e6fd2010fbb"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0082.certificate.json",
+        "bytes": 2394,
+        "sha256": "9c70df3f1781826ed1f05c00f9843062f3ecae8e1275868ea2b52af0b1e61f4a",
+        "semanticDigest": "77c2afdb147765c53206a88947faa90cb40f384313f6a7f94acce63b72cbcfa6"
+      }
+    },
+    {
+      "index": 83,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0083.jsonl",
+        "bytes": 194070,
+        "sha256": "6d287c3df6a45eafb818386351ac83377d1003fae5a19b3984b239889ad1793d"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0083.certificate.json",
+        "bytes": 2394,
+        "sha256": "c4be607f03ad16a9ce92957b115a3427bf1339a89dc9872c865255195a5dd83b",
+        "semanticDigest": "50948dd6f821b58f1db783c48dcbeb43c3d5225f0b78384bd973e09e419332e0"
+      }
+    },
+    {
+      "index": 84,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0084.jsonl",
+        "bytes": 192261,
+        "sha256": "2c2ba872e51996f3c0a0c7ff44d3ebfad118c7b1a8406de4712cdc7a988951e6"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0084.certificate.json",
+        "bytes": 2394,
+        "sha256": "76a1f3f5a309ff428ccb5fe8cf7219152cda7bdd029179d3ee081796ee007865",
+        "semanticDigest": "84a3fc61a8bdfee349b66e7dfb57dbb6718b3bd28ff5256ffcf8354a7603bf5c"
+      }
+    },
+    {
+      "index": 85,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0085.jsonl",
+        "bytes": 194771,
+        "sha256": "fe80140347824e1413e390533fe49b328c7c2d4cddf298d08f9f369d85a9da8b"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0085.certificate.json",
+        "bytes": 2394,
+        "sha256": "26dddf18893c4b3ac238a79403ea2371a77d637dd0681be47ddbaf1ae2e294fa",
+        "semanticDigest": "f95288cb6bbae0cad3837168a4b59574f95d1e8572f399913c0fcd612b1de325"
+      }
+    },
+    {
+      "index": 86,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0086.jsonl",
+        "bytes": 194716,
+        "sha256": "bb488d4c6fad0dba4a16586a5aaf083828166f5be329a96394696bc0139a65aa"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0086.certificate.json",
+        "bytes": 2394,
+        "sha256": "7f651bc61f9f0f3343370b8cf327456ab75f420379bdb56ed5efb24ec7e59367",
+        "semanticDigest": "c22756be29e7bfa401da5b996b06619f51acbd207c6ae01243d0c2f093f1f0fa"
+      }
+    },
+    {
+      "index": 87,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0087.jsonl",
+        "bytes": 194736,
+        "sha256": "5dfa0cce76018635221d6c7735408947c2b82f6cfaaedf548703096d000ded34"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0087.certificate.json",
+        "bytes": 2394,
+        "sha256": "7540e143593c9c5c8e50ec5d7570c30238a25233108d3ada2694595c1834522b",
+        "semanticDigest": "760dab170300386ddeceb83e5e3713dc4b529e61cfcad5ee5b7822409450d295"
+      }
+    },
+    {
+      "index": 88,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0088.jsonl",
+        "bytes": 320190,
+        "sha256": "feb9e5d4b21e0da31993df54ca68c684643cbc86d1c03c73965f4752be5a6439"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0088.certificate.json",
+        "bytes": 2394,
+        "sha256": "ea5fc2e6eed347b6703b50ae4fd3d00570ba38c227617a829ff35de2608bf10e",
+        "semanticDigest": "d6eb3082ad981fad13d448546ed47beb102c24655d5441be705a063110d2d6e7"
+      }
+    },
+    {
+      "index": 89,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0089.jsonl",
+        "bytes": 362297,
+        "sha256": "c4236f156d6a49046a6504a2464cb008a29a7ee4c810138b23b0b7427219ca0e"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0089.certificate.json",
+        "bytes": 2394,
+        "sha256": "0a0d30fac7c1f72825d9ff09d4f03b21f7f14f2f413ba764771c310eb08471ec",
+        "semanticDigest": "09cbbc7e302b4626a83c09ad4f50c5726148e4efc8d3293a014ed867cae1426a"
+      }
+    },
+    {
+      "index": 90,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0090.jsonl",
+        "bytes": 362370,
+        "sha256": "acb0839870029d6556713316a1bc2f2925f0e49f47696067f435544ec7dd6b25"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0090.certificate.json",
+        "bytes": 2394,
+        "sha256": "a81d64a3acf401d710efa0b6b98ef129016c1fd6901735109610188c98ab0c31",
+        "semanticDigest": "c70f7478c83ca8b0b2771dfe2cc1e79d369c03e6547db8f58a795c17a16cee63"
+      }
+    },
+    {
+      "index": 91,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0091.jsonl",
+        "bytes": 362175,
+        "sha256": "7b108a407d0c993a655917e0bd70aba19d1b7b400ba99b2919eabd664a96508d"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0091.certificate.json",
+        "bytes": 2394,
+        "sha256": "f74c45b837f0ad38fe58fdaaa9c2c796292dcbd4291757102c58e090135bf115",
+        "semanticDigest": "6830194081b1f7862c04e1440cacd118adfc6461d0d20818d193f3772a784e6f"
+      }
+    },
+    {
+      "index": 92,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0092.jsonl",
+        "bytes": 354482,
+        "sha256": "28802fe16b9cb697c01bb966dd88b608c14e0cce122ed8af121303a625c3ddb1"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0092.certificate.json",
+        "bytes": 2396,
+        "sha256": "376106337fc140f363f926e5e42d3ae0489a903f54aef6ee083b848778fe9379",
+        "semanticDigest": "bf23d733aa797710aeab12316af2b40e87f7836eed51d8d16fd1e415ab451bfe"
+      }
+    },
+    {
+      "index": 93,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0093.jsonl",
+        "bytes": 414751,
+        "sha256": "ca4f8ddea980af27e9f600c1c06e5eb61d9edaccae5097f206011a5687228dfb"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0093.certificate.json",
+        "bytes": 2396,
+        "sha256": "2a045d2fc14b3a807d2c7404260dd265a8537c0c25c4dbabe4bd8c815708927b",
+        "semanticDigest": "24bba49f44a629e2966da32c6c0396bd88b18f0a82f0432c1f5ade3dbe63ddfb"
+      }
+    },
+    {
+      "index": 94,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0094.jsonl",
+        "bytes": 413815,
+        "sha256": "3dc4598531643af7e50f34c4ab6fcf72759a7f8f112c6db12e9a97006eaa6449"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0094.certificate.json",
+        "bytes": 2396,
+        "sha256": "6d422a3d381f4a47e83804b5c1c9518c485e8cdc215399a86cdd2e61fb32529e",
+        "semanticDigest": "aac42f32227f028a029faa5371a027b1fc4ef97d28d00f8b6512a51e0f5d7f46"
+      }
+    },
+    {
+      "index": 95,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0095.jsonl",
+        "bytes": 413322,
+        "sha256": "22cf6dc4a7f4a190ecae62e2a3884b83a9ac79e1bdb125444c8bd58ff0c5a9b3"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0095.certificate.json",
+        "bytes": 2396,
+        "sha256": "25cf07bd22742fc03f3c5066ebd4c17947775ee4fce02435aa5adbc62950f44e",
+        "semanticDigest": "cb853d4bef8d0fb8e399b88ffcec200b4f42c1fc2872f58e12d6b3d0e6249484"
+      }
+    },
+    {
+      "index": 96,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0096.jsonl",
+        "bytes": 150064,
+        "sha256": "4d2681b2c2815f27dcba9d56b5c7d740677bec1b24f597e76cef31a7e7f896ff"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0096.certificate.json",
+        "bytes": 2360,
+        "sha256": "7ac51ae1ee72a22962ef472a957490cc5022b7a0839242d849231a8e1eceb235",
+        "semanticDigest": "23ba0bcabae6eeb4c555cd917ba17a5ef176b9e2b4fc42311edd20daa6bc763a"
+      }
+    },
+    {
+      "index": 97,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0097.jsonl",
+        "bytes": 150069,
+        "sha256": "74988601a535dfabf84a906c11e24584d97c41432d93c71cc636afdd15a3d3f5"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0097.certificate.json",
+        "bytes": 2360,
+        "sha256": "bb149825cac99272a300605f00b97c1ee4473aa3a8563c5e48eebf5641c4113c",
+        "semanticDigest": "17fa2199ab6c29a3bece419e1a53cc3d5533afee8db779130ec943d6d4ffc66b"
+      }
+    },
+    {
+      "index": 98,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0098.jsonl",
+        "bytes": 150561,
+        "sha256": "0cfab2f1f1d27bd109a9bd9318cd2b10477f76dcb40c4318e9e13088ecd7a421"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0098.certificate.json",
+        "bytes": 2360,
+        "sha256": "62551e2ee3b5167397c087b0227a2e67745f0586ba49cfccb1f41f91db3d1096",
+        "semanticDigest": "f2345dcd13945f114d2981eb5c04f625c420ab7e7aa201fe32c53ab8c9b60e41"
+      }
+    },
+    {
+      "index": 99,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0099.jsonl",
+        "bytes": 150581,
+        "sha256": "365e43e997d18f1d16c82dc068d4dbb202e8a70fc9fce81a68337229b7f5cf34"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0099.certificate.json",
+        "bytes": 2360,
+        "sha256": "e56cd6b6d0b4df93c7a4f832657c80627ab0d90cd7e30d80e99e78b66ec902ac",
+        "semanticDigest": "334a58c9732e1791483e6b95ade85003c1cfded2d914ac62255416c50488dfd1"
+      }
+    },
+    {
+      "index": 100,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0100.jsonl",
+        "bytes": 151079,
+        "sha256": "91bc223443a8919db40d89cdc82e4985970f18413721777ca97a5c2f134ff7c0"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0100.certificate.json",
+        "bytes": 2361,
+        "sha256": "00a67a6c87cc36ac418f0af8f8c19e83215386a2d199b8c7ec94744badafdca8",
+        "semanticDigest": "73e8e8d89c064099b0a7a35a5a16f82233b1773514bd13d8adb8aa14a613b4af"
+      }
+    },
+    {
+      "index": 101,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0101.jsonl",
+        "bytes": 152034,
+        "sha256": "d373bcad0732736a69f66e2a061e8a7c3a4340d12e5fc751a72c5ae4f419d961"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0101.certificate.json",
+        "bytes": 2363,
+        "sha256": "911a118540c84bb81ff066b5c5de32e49221bc08436966c34ce44b0909b9cccd",
+        "semanticDigest": "a3c327e65e624672706c5a94150d912f582524edd81d4b95a66a79a860fd654d"
+      }
+    },
+    {
+      "index": 102,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0102.jsonl",
+        "bytes": 146654,
+        "sha256": "bfd67c826d3544efb6ccf610b1dd44cf4acdea06245a32dddd8fe0a0cf958da2"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0102.certificate.json",
+        "bytes": 2385,
+        "sha256": "11f901b67f054342136b5523ad5017ebc7ec6b743f5a5869ff1b0e53f62ffe3f",
+        "semanticDigest": "df2826d088549be35d09ad265d9cc08ac622efe43ad5a562822b6e922e230caf"
+      }
+    },
+    {
+      "index": 103,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0103.jsonl",
+        "bytes": 161890,
+        "sha256": "be05c4f19a5d4aa763e9390f4708b7ca88f26e38abd25f18c92049117534d104"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0103.certificate.json",
+        "bytes": 2385,
+        "sha256": "2bc02ebdddb11ead0c98ca9c73669d341d97964e1e24cd2f5c821394ff1b736f",
+        "semanticDigest": "e0627db39d21fc44b6561213e7676b4456555f7b96f6a4f13996df9fce3bfc6d"
+      }
+    },
+    {
+      "index": 104,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0104.jsonl",
+        "bytes": 192565,
+        "sha256": "d7366f0d10c5ece39ebe3a1db52110a4120e592da2fc382fd75fd065b5fba4c8"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0104.certificate.json",
+        "bytes": 2385,
+        "sha256": "c83132642b3446eb5495938795a1e80ce75323090564016e08ab4c48583d4546",
+        "semanticDigest": "334d5787b65bb58ed0b1929e3b5f424f1eb39dece1ec76d05de58c206392920c"
+      }
+    },
+    {
+      "index": 105,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0105.jsonl",
+        "bytes": 251953,
+        "sha256": "7a9a04037806d260ab47d3d210e871f53fb4b90ba6ec24afbc83ffdc63df2c1f"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0105.certificate.json",
+        "bytes": 2385,
+        "sha256": "47988a9fe738a66a75f6e03b3f3e732a01278e586c7436fb809b8848f200d2c2",
+        "semanticDigest": "abbe8003e8ff4a0f7008e1ab1375cbea8490e83236eb34d1ee32706e526ab431"
+      }
+    },
+    {
+      "index": 106,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0106.jsonl",
+        "bytes": 405584,
+        "sha256": "9a81b7a9d20e6ef788f6bd33d1d5e3a747d98767f1354fd88316e62c51a19c80"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0106.certificate.json",
+        "bytes": 2385,
+        "sha256": "3b940a8a0abc2b771801710c4aaf8815a04eafb56e7bf64cf76976eda2720afd",
+        "semanticDigest": "6deedaeab00ee26d9487f7e111e1e8387834fc97e0f23d0171bfa4897eb7639f"
+      }
+    },
+    {
+      "index": 107,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0107.jsonl",
+        "bytes": 743121,
+        "sha256": "12b1ff258537b61ebc37f87205e2e2f4631c0a9c47fe4d634b10d6ffa4148f2f"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0107.certificate.json",
+        "bytes": 2387,
+        "sha256": "b74760abf574b46315a35caf15048f9c5e15a9e4e8bcffb5c7ee9cbac2779b9f",
+        "semanticDigest": "feb30f2e368fee868a032e81d726569de49140bd3ce1f6436c15ab0c5edd852e"
+      }
+    },
+    {
+      "index": 108,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0108.jsonl",
+        "bytes": 169750,
+        "sha256": "f7ddc8f1753bf3ad8cc6260e696539d8e6040b59fb0240ce10cf62d6a085f11b"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0108.certificate.json",
+        "bytes": 2371,
+        "sha256": "dd2b5fde10e9697f72ac0dc6ea23ed092d1efc4ebabc549debc83bc98858569a",
+        "semanticDigest": "233c5d78ecca925f795cd903ae6daad6d3a23e29e58855f0e172d36c5a3e9165"
+      }
+    },
+    {
+      "index": 109,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0109.jsonl",
+        "bytes": 184118,
+        "sha256": "0a263d688ea474552df45150abe90d2b1e35a08553e6ee15b921de0b733b75f2"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0109.certificate.json",
+        "bytes": 2371,
+        "sha256": "87ab4c494cf0a1a750dcbd395981657216bacdd6d3c2facf703898a318fb68b9",
+        "semanticDigest": "4bb200f697c588039c57c5990be26d0feab22b5f16f72774e8d9191b94081ac9"
+      }
+    },
+    {
+      "index": 110,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0110.jsonl",
+        "bytes": 205622,
+        "sha256": "065d69504eabb354093e6ca735f873bafd86c5d983ba4cb35f3ef0744aa9a9e0"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0110.certificate.json",
+        "bytes": 2371,
+        "sha256": "b567cd8947c52986af6d6b8789d7ec745b58f2f3ff387faf78aacc156bcbceb2",
+        "semanticDigest": "9862e9a57ab25b509889e1166562eb6005cb276b70e10389c1fad5d5b681c7fe"
+      }
+    },
+    {
+      "index": 111,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0111.jsonl",
+        "bytes": 242006,
+        "sha256": "da8fec45ff8cf72bec6df1072a7b2a6f2ccbffccd4d2ef1e1c1c3b52c29ba078"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0111.certificate.json",
+        "bytes": 2371,
+        "sha256": "c70042ec24dfb844688f93df86202e753b941d1933771dd22a33c33fbf1cdace",
+        "semanticDigest": "caf9009f05020db45c47dca0e78c6d47a29f5f31e3b112d34c66fe38b863f13e"
+      }
+    },
+    {
+      "index": 112,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0112.jsonl",
+        "bytes": 294230,
+        "sha256": "f719413c500ddb246d5ac407f9bd472de49d0f03a8701066ca3b479d321a457d"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0112.certificate.json",
+        "bytes": 2371,
+        "sha256": "2ebffd712913d2edc3163421169e2e14a14074d7f1ff800ec0c27342d74f42f9",
+        "semanticDigest": "7afb1789c17894f6c33d2138a086c076b5d9afd0167fb8f02d551a0174648973"
+      }
+    },
+    {
+      "index": 113,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0113.jsonl",
+        "bytes": 369782,
+        "sha256": "09d58c4482b44dc019ae6812f1d3048ba85ae5588b8f3dbfbc8a8bdc1931d3da"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0113.certificate.json",
+        "bytes": 2373,
+        "sha256": "aaec99c246f392a4337adccd4153d607059e88890d14887d0ea5d3ab67958eba",
+        "semanticDigest": "e591c7b4d51b2b7b2192aea6620aa8e22c834b2ef04be082e906f5c100eed44c"
+      }
+    },
+    {
+      "index": 114,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0114.jsonl",
+        "bytes": 143870,
+        "sha256": "61e6d2b2f0a05f721e3d46c8f75df6a19da51abaa05712311aaeee61828d9861"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0114.certificate.json",
+        "bytes": 2373,
+        "sha256": "6d4a63e1c6187ed0323f1e2c31febc0741191fadef64146f031edfb474a7625e",
+        "semanticDigest": "f48278a394f2128f7d84504ae0bd71f42948e7572164839ff896f77220711c4b"
+      }
+    },
+    {
+      "index": 115,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0115.jsonl",
+        "bytes": 144276,
+        "sha256": "0c963120d8f58f4989c1f51c8681f632b023f8d659b209a5833038ac5f464ac7"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0115.certificate.json",
+        "bytes": 2373,
+        "sha256": "fbdb5f6cf877fcddb22f943b0692b4be1d408f172d6089b5f431123e0bddccb6",
+        "semanticDigest": "09343a299b130491ae83fafc787ca48d60a77d37b377f74169a533d2e356b99e"
+      }
+    },
+    {
+      "index": 116,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0116.jsonl",
+        "bytes": 144337,
+        "sha256": "2298693d198289934c5b251807ee4fa643a99e812b372e5d92c074f7cd6b766b"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0116.certificate.json",
+        "bytes": 2373,
+        "sha256": "3b509e3849e5108b6ab7d228a69dcc690e863fe25dca244bce881f2937ce65b6",
+        "semanticDigest": "e74d32d87a4973f85fe7c50d1eb6c590533f5a87670b1146f42c71d569564df3"
+      }
+    },
+    {
+      "index": 117,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0117.jsonl",
+        "bytes": 144661,
+        "sha256": "65fbfb44c2ec0f20b06288732da7b6c0484e85b654f9e73990816347d8ebd990"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0117.certificate.json",
+        "bytes": 2373,
+        "sha256": "b5dc3fc947c04de2d1c0bc880ff9428921e8130dc41bd65c176311e343457872",
+        "semanticDigest": "e1ffdec847efa7e0d967978f99e006f1e7c0f646182fdb0cd320778e58739227"
+      }
+    },
+    {
+      "index": 118,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0118.jsonl",
+        "bytes": 144853,
+        "sha256": "a3d5b504ce612c6c01cd587bc9cb2b7e58bc5d05b85457b7d7519fc29deebf40"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0118.certificate.json",
+        "bytes": 2373,
+        "sha256": "09b1f686e0d2510ce68932ba9411e20d93f7cdf5beca47d20944b557475fe110",
+        "semanticDigest": "03f7b72bc5acfe888e56b9b6b2578b2af899c875594c97e22ce0982db9d7c6ac"
+      }
+    },
+    {
+      "index": 119,
+      "chunk": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0119.jsonl",
+        "bytes": 145137,
+        "sha256": "40db1cac16874d76133a882316b3ed435358d79a52d6765de2cac06c22a33eb9"
+      },
+      "certificate": {
+        "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/chunks/chunk-0119.certificate.json",
+        "bytes": 2375,
+        "sha256": "d176545bb80924960cd98350c87bf1bf682df76962ef97a0d5d8b7f2413eafb9",
+        "semanticDigest": "f8777572a75eed06608daec23417b55b80126a6b7a3ccffd1303b01b52d7598e"
+      }
+    }
+  ],
+  "finalAssembly": {
+    "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-raw-v3.jsonl",
+    "bytes": 29396798,
+    "sha256": "47bbf6da93da1270ea5b8b6120bfa0351be3c0386050d989ef614f2a3802d1d4",
+    "exactCanonicalJsonl": true,
+    "exactlyOneTerminalLf": true
+  },
+  "outcome": {
+    "u2Status": "UNRESOLVED",
+    "decisionAuthority": "NONE"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "a59ac0798f6f9679d564c9aea8e20da3be6c107aed9a6a50beac027259da0314",
+    "canonicalBytes": 62368
+  }
+}

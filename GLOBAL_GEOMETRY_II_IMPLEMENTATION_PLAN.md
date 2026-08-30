@@ -5,6 +5,12 @@
 This is an alpha implementation plan.  It is not peer reviewed and makes no
 literature-priority or publication claim.
 
+The current outcome-bearing state is the separately addressed
+[U2 evaluation-v2 checkpoint](GLOBAL_GEOMETRY_II_U2_EVALUATION_REPORT.md).
+It is `UNRESOLVED`: the preview remains `NOT_EVALUATED`, strict Gate 1 is
+`PASS`, strict Gates 2--8 are `UNRESOLVED`, and full confirmation and physical
+validation are `NOT_RUN`.
+
 Global Geometry II is an active extension of the published Global Geometry
 Lab.  The release-1 core remains the reference implementation for exact finite
 topology, gated angle-defect Gauss--Bonnet, deterministic local dynamics,
@@ -204,6 +210,40 @@ priority, peer review, publication, or merge readiness.  Enlarging the replay
 surface requires new local records and a new comparison.  Publication and
 protected-branch merge remain explicit approval gates outside the attestation.
 
+The Milestone E v1 index and comparison are now historical prior-release
+records.  They continue to describe their original bounded surface but do not
+certify the enlarged evaluation-v2 surface.
+
+## Milestone F: shareable U2 evaluation checkpoint
+
+Milestone F publishes a fail-closed, content-addressed partial checkpoint:
+
+- screening v3 completed 3,840/3,840 records independently on each host, while
+  its exact raw cross-platform comparison is `FAIL` and its decision authority
+  remains `NONE`;
+- the strict partial campaign derives Gate 1 `PASS` and Gates 2--8
+  `UNRESOLVED`;
+- strict exact cross-platform replication is `FAIL`, while an explicitly
+  nondecisional \(10^{-12}\) diagnostic projection is `PASS` with authority
+  `NONE`;
+- the full confirmatory campaign is `NOT_RUN`; and
+- the passive-sheet digital dry preflight passes its declared fit/render
+  checks, while physical and camera validation remain `NOT_RUN`.
+
+The screening failure ledger retains 112 estimator-unavailable records (9
+comb, 103 small-world).  The strict normalization artifact is provenance-bound
+and validated, but its fitted values are not yet consumed by the partial
+campaign measurements; those channels are therefore not described as
+calibration-normalized.
+
+The checkpoint is bound by the
+[evaluation-v2 index](artifacts/global-geometry-ii/u2/evaluation-v2/evaluation-index-v2.json),
+[release-v2 manifest](global_geometry_ii_reproducibility_manifest_v2.json),
+and
+[release-v2 evidence index](artifacts/global-geometry-ii/release-index-v2.json).
+It is shareable for technical review, not as an accepted or rejected U2
+result.
+
 ## Integration execution order
 
 1. Reconcile the formal, universality, and inverse/sheet specifications.
@@ -217,6 +257,14 @@ protected-branch merge remain explicit approval gates outside the attestation.
 8. For confirmatory U2, vision fixtures, or instrumentation, freeze a new
    surface and issue new platform records rather than extending the bounded
    comparison by prose.
+9. Publish the strict-partial and screening results through a mechanically
+   derived evaluation index that exposes exact comparison failures and
+   unperformed stages.
+10. Freeze a distinct release-v2 source/artifact/test registry, run the deep
+    verifier on macOS and Windows, and compare only the surface declared by
+    the new certificates.
+11. Continue the full confirmatory and physical programmes only under their
+    existing authorization and preregistration boundaries.
 
 ## Current verified implementation state
 
@@ -248,15 +296,27 @@ As of the integrated alpha candidate:
   `macos-windows-comparison-v1.json`, whose local inputs are
   `macos-local-v2.json` and `windows-local-v1.json`; it covers only the
   declared digest and canonical nine focused PASS suite identity/path surface;
-  and
+  this v1 record is historical for the evaluation-v2 release;
+- the bounded U2 preview still reports `NOT_EVALUATED`;
+- screening v3 completed 3,840/3,840 records on both macOS and Windows, but
+  exact raw cross-platform replication is `FAIL` and screening has no
+  confirmatory decision authority;
+- the strict partial campaign reports Gate 1 `PASS`, Gates 2--8
+  `UNRESOLVED`, exact cross-platform replication `FAIL`, and a
+  decision-authority-`NONE` \(10^{-12}\) diagnostic `PASS`;
+- the full confirmatory campaign is `NOT_RUN`, so the evaluation-v2 top-level
+  state is `UNRESOLVED` with neither acceptance nor rejection claimed;
+- the digital sheet dry preflight passes only its declared fit/render surface,
+  while camera and physical validation remain `NOT_RUN`; and
 - the interactive lab exposes real forward, universality, recognition,
   inverse, programmable-sheet, and evidence modes with an explicit evidence
   ceiling in every panel.
 
-The full programme is not yet complete.  The bounded-disk U2 conjecture and
-its larger negative-control campaign remain withheld; the sheet is digitally
-validated and fabrication-ready rather than physically validated; and the
-bounded platform comparison is not a certificate for confirmatory U2,
-camera/device instrumentation, or hardware.  Every physical stage remains
-`NOT_RUN`.  Public publication and protected-branch merge remain outside the
-attestation and approval-gated.
+The full programme is not yet complete.  The evaluation-v2 checkpoint is
+share-worthy because it publishes negative, failed, and unresolved states
+without promotion, but it is not a confirmatory U2 decision.  The remaining
+decision-grade estimators, perturbation campaign, control conjunctions, and
+exact independent-host gate are incomplete.  The sheet is digitally
+preflighted and fabrication-ready rather than physically validated; every
+physical and camera stage remains `NOT_RUN`.  Public deployment and
+protected-branch merge remain outside the attestation and approval-gated.

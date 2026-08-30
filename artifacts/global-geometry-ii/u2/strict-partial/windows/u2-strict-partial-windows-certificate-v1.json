@@ -1,0 +1,185 @@
+{
+  "schema": "gg.u2.strict-partial.windows-run-certificate/1",
+  "semanticRole": "independent Windows strict-partial execution, validation, and provenance certificate",
+  "runId": "strict-partial-9721d2b-20260830T194234Z",
+  "source": {
+    "commit": "9721d2b02197f18821846938b9494bfc8a865fcb",
+    "tree": "4e262abdf9720b335890635ddec2a6f0a53f1eb5",
+    "verification": "actual Git commit/tree plus exact local=commit:path bytes for all 13 bound files",
+    "coreAutocrlf": "false",
+    "coreEol": "lf",
+    "boundary": {
+      "path": "provenance/strict-source-boundary.json",
+      "bytes": 2995,
+      "sha256": "77a6c5090d2db80dcc603b6d7e4bb4bb39985d30f8b477c92900dec9b6f61b35",
+      "semanticDigest": "5523f05ad72c20b32a6e44c4d9ffa3a0b9ca7a405c7f3595f6b6db3e50a8e18c"
+    },
+    "bundle": {
+      "bytes": 3497102,
+      "sha256": "e604d840a77e0b7c1f5b506f02a82aa33c7f98c8f2954d5e4de0b452b5ffeadf",
+      "advertisedHead": "9721d2b02197f18821846938b9494bfc8a865fcb refs/heads/u2-strict-partial"
+    }
+  },
+  "environment": {
+    "platform": "win32",
+    "arch": "x64",
+    "nodeVersion": "v22.22.2",
+    "nodeExecutableSha256": "ae1a50511be58e987483fdbc12125407443926d2d394669ade2352776e920dd3",
+    "gitVersion": "git version 2.55.0.windows.5",
+    "gitExecutableSha256": "78211c7ed73988da93a6d8a33d47ec6187f464d7ea2a9a00c182bbd7a1ecf30f",
+    "osRelease": "10.0.19045",
+    "cpuCount": 12,
+    "totalMemoryBytes": 17098805248
+  },
+  "commands": {
+    "calibration": [
+      "node",
+      "website/global-geometry-lab/generate-global-geometry-ii-u2.js",
+      "--calibration",
+      "--output",
+      "outputs/u2-normalization-v2.json",
+      "--source-commit",
+      "9721d2b02197f18821846938b9494bfc8a865fcb"
+    ],
+    "validateCalibration": [
+      "node",
+      "website/global-geometry-lab/generate-global-geometry-ii-u2.js",
+      "--validate-calibration",
+      "--input",
+      "outputs/u2-normalization-v2.json"
+    ],
+    "campaign": [
+      "node",
+      "website/global-geometry-lab/generate-global-geometry-ii-u2.js",
+      "--campaign",
+      "--output",
+      "outputs/u2-campaign-partial-v2.json",
+      "--source-commit",
+      "9721d2b02197f18821846938b9494bfc8a865fcb",
+      "--normalization",
+      "outputs/u2-normalization-v2.json"
+    ],
+    "validateCampaign": [
+      "node",
+      "website/global-geometry-lab/generate-global-geometry-ii-u2.js",
+      "--validate-campaign",
+      "--input",
+      "outputs/u2-campaign-partial-v2.json",
+      "--normalization",
+      "outputs/u2-normalization-v2.json"
+    ]
+  },
+  "stages": {
+    "calibration": {
+      "startedAt": "2026-08-30T19:43:47.9930027Z",
+      "elapsedMilliseconds": 8089.5962,
+      "exitCode": 0,
+      "artifact": {
+        "path": "outputs/u2-normalization-v2.json",
+        "bytes": 533353,
+        "sha256": "dd2409eb52e1b90de4f7690631a53c48811f8d18eaad43f516655e3411bea0f7",
+        "semanticDigest": "1a2324166fba3699446a1769e90a9739d8feeb61056b392835ade6650cc90810"
+      },
+      "records": 384
+    },
+    "validateCalibration": {
+      "startedAt": "2026-08-30T19:44:12.9034446Z",
+      "elapsedMilliseconds": 5053.5568,
+      "exitCode": 0,
+      "valid": true
+    },
+    "detachedCampaignPreflight": {
+      "status": "ABORTED_BEFORE_OUTPUT",
+      "reason": "detached child terminated with remote SSH/PowerShell session",
+      "outputPresent": false,
+      "stdoutBytes": 0,
+      "stderrBytes": 0,
+      "scientificAuthority": "NONE"
+    },
+    "campaign": {
+      "startedAt": "2026-08-30T19:45:39.8786798Z",
+      "elapsedMilliseconds": 652984.1539,
+      "exitCode": 0,
+      "artifact": {
+        "path": "outputs/u2-campaign-partial-v2.json",
+        "bytes": 74959750,
+        "sha256": "0411e4e665ca6bc5656b5579e4734bbdc930089f6479bf9c33731e61524d2a47",
+        "semanticDigest": "a00f123d9747378dbe734f9b4b5b57387060f031211ef36f867092f888cd6d14"
+      },
+      "positiveRuns": 3072,
+      "controlRuns": 768,
+      "conclusion": "UNRESOLVED"
+    },
+    "validateCampaign": {
+      "startedAt": "2026-08-30T19:57:06.9186821Z",
+      "elapsedMilliseconds": 322834.7533,
+      "exitCode": 0,
+      "valid": true
+    }
+  },
+  "logs": {
+    "calibrationStdout": {
+      "path": "provenance/content-addressed-logs/calibration.stdout.842c297b5f2d6223cfa88f205b920c6a9b59466ccceb9ba2ea08fa89a6ab7f7a.log",
+      "bytes": 256,
+      "sha256": "842c297b5f2d6223cfa88f205b920c6a9b59466ccceb9ba2ea08fa89a6ab7f7a"
+    },
+    "calibrationStderr": {
+      "path": "provenance/content-addressed-logs/calibration.stderr.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calibrationValidationStdout": {
+      "path": "provenance/content-addressed-logs/calibration-validation.stdout.dc7904a9f7f176ed01d3f57068cdbccd7e52182bdd9489d7325518c23f913c9e.log",
+      "bytes": 176,
+      "sha256": "dc7904a9f7f176ed01d3f57068cdbccd7e52182bdd9489d7325518c23f913c9e"
+    },
+    "calibrationValidationStderr": {
+      "path": "provenance/content-addressed-logs/calibration-validation.stderr.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "detachedCampaignStdout": {
+      "path": "provenance/content-addressed-logs/campaign-detached-abort.stdout.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "detachedCampaignStderr": {
+      "path": "provenance/content-addressed-logs/campaign-detached-abort.stderr.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "campaignStdout": {
+      "path": "provenance/content-addressed-logs/campaign.stdout.7d7ce2b965a400f7c6390b07b192b98026567978f38114130356b3dddba69030.log",
+      "bytes": 295,
+      "sha256": "7d7ce2b965a400f7c6390b07b192b98026567978f38114130356b3dddba69030"
+    },
+    "campaignStderr": {
+      "path": "provenance/content-addressed-logs/campaign.stderr.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "campaignValidationStdout": {
+      "path": "provenance/content-addressed-logs/campaign-validation.stdout.a9031f6f964e4d94ec7ec4b888c2a094ca1852da619d9c7c08268a9f85e9dcdb.log",
+      "bytes": 176,
+      "sha256": "a9031f6f964e4d94ec7ec4b888c2a094ca1852da619d9c7c08268a9f85e9dcdb"
+    },
+    "campaignValidationStderr": {
+      "path": "provenance/content-addressed-logs/campaign-validation.stderr.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "result": {
+    "normalizationValid": true,
+    "campaignValid": true,
+    "crossPlatformComparison": "DEFERRED_UNTIL_INDEPENDENT_RETRIEVAL",
+    "u2Status": "UNRESOLVED",
+    "decisionAuthority": "STRICT_PARTIAL_ONLY"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "dad329b405cd531d5403ca370c8ca6eb38072b8ba1fbdb9c35f6167bc384fa44",
+    "canonicalBytes": 6033
+  }
+}

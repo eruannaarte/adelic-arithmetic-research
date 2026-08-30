@@ -2,7 +2,8 @@
 
 **Research manuscript draft — 2026-08-30**
 **Status:** alpha research manuscript; not peer reviewed; no publication,
-physical-validation, or literature-priority claim
+physical-validation, or literature-priority claim.  The separately addressed
+U2 evaluation-v2 checkpoint is `UNRESOLVED`, not a confirmatory decision.
 
 ## Abstract
 
@@ -50,8 +51,13 @@ whose inputs are
 and
 [the Windows local record](artifacts/global-geometry-ii/certificates/windows-local-v1.json).
 That comparison closes only its declared digest-and-focused-test surface.  The
-preregistered confirmatory U2 atlas and every physical, camera, device, or
-hardware experiment remain open and unvalidated.
+v1 records are now historical prior-release evidence and do not certify the
+enlarged v2 surface.  A later strict-partial and screening checkpoint is
+documented in the
+[U2 evaluation report](GLOBAL_GEOMETRY_II_U2_EVALUATION_REPORT.md): the finite
+preview remains `NOT_EVALUATED`, the evaluation checkpoint is `UNRESOLVED`,
+and the full confirmatory U2 atlas and every physical, camera, device, or
+hardware experiment remain `NOT_RUN`.
 
 ## 1. The local-to-global question
 
@@ -781,6 +787,9 @@ manuscript.
 | CP, Gauss--Bonnet, and triangle obstructions | exact finite theorem instance or exhaustive check | witnesses \(-\pi/5\), \(-4\pi\), and zero triangle margin | Impossibility in each precisely declared finite model | Impossibility in unrelated metric/material classes |
 | q-star intrinsic budgets | exact finite identity | symbolic q-star constructor and focused fixtures | \(+\pi/3,0,-\pi/3\) center defects and total \(2\pi\) | A unique 3-D shape or a fabricated response |
 | Virtual sheet/HIL | engineering | bounded plant, synthetic measurement, protocol, safety-state, and transcript contracts | Deterministic digital model behavior in the implemented envelope | Physical hardware, material response, and camera/device instrumentation, including Windows instrumentation |
+| U2 screening v3 | computational screening; decision authority `NONE` | 3,840/3,840 validated records on each of macOS and Windows; addressed cross-host comparison | Completion and validation of the declared bounded screening census on both hosts | Decision-grade estimators, robustness, Gate 8, or a confirmatory U2 decision; exact raw cross-host comparison is `FAIL` |
+| U2 strict partial | computational partial evidence | host-specific addressed campaigns, compact projections, and strict cross-host comparison | Gate 1 `PASS`; finite partial diagnostic profiles; explicit Gates 2--8 `UNRESOLVED` ledger | A completed confirmatory campaign; exact cross-host replication is `FAIL`; the \(10^{-12}\) diagnostic `PASS` has authority `NONE` |
+| Passive-sheet dry preflight | engineering dry check | content-addressed analytic and renderer-envelope record | Declared q=5,6,7 A4 fit and dry raster-clearance checks `PASS` | Physical output and camera validation, both `NOT_RUN`; no assembly or material response |
 | Bounded Darwin/Windows digital replay | computational | content-addressed `macos-local-v2.json`, `windows-local-v1.json`, and external comparison record | Equality of the declared manifest, release-index, source, scientific-artifact, reproduction-resource, and canonical nine PASS suite identity/path surface | Suite-output or performance equality; confirmatory U2; vision/device/hardware instrumentation; physical validation; authentication or publication approval |
 
 ## 9. Reproducibility
@@ -885,6 +894,48 @@ hardware, a physical sheet, authentication, machine independence, scientific
 completeness, peer review, priority, or publication approval.  Any enlarged
 surface requires new local certificates and a new comparison record.
 
+The preceding comparison is the release-v1 comparison and is retained as a
+historical prior-release record.  It does not certify the enlarged
+evaluation-v2 source, artifact, or test surface.
+
+### 9.4 U2 evaluation-v2 checkpoint
+
+The outcome-bearing checkpoint is reported separately in the
+[U2 evaluation report](GLOBAL_GEOMETRY_II_U2_EVALUATION_REPORT.md) and bound
+by the
+[evaluation-v2 index](artifacts/global-geometry-ii/u2/evaluation-v2/evaluation-index-v2.json).
+Its strict and screening comparisons are:
+
+- [strict cross-platform comparison](artifacts/global-geometry-ii/u2/evaluation-v2/strict-cross-comparison-v1.json); and
+- [screening-v3 cross-platform comparison](artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-cross-comparison-v1.json).
+
+The strict campaign is not exactly replicated across hosts.  Its explicitly
+nondecisional \(10^{-12}\)-rounded diagnostic projection agrees, but that
+projection has decision authority `NONE` and cannot satisfy Gate 8.  The
+screening census is complete on both hosts but its raw cross-host comparison
+is also `FAIL`; every confirmatory decision gate remains outside screening
+authority.  The mechanically derived top-level state is `UNRESOLVED`, with no
+acceptance or rejection claim.  The full confirmatory campaign is `NOT_RUN`.
+The shared screening ledger includes 112 estimator-unavailable records (9 comb
+and 103 small-world).  In the strict partial implementation, the normalization
+artifact is validated and bound but its fitted values are not consumed by the
+campaign measurements, so those channels are not calibration-normalized.
+
+The v2 publication surface is bound by the
+[release-v2 manifest](global_geometry_ii_reproducibility_manifest_v2.json),
+[release-v2 evidence index](artifacts/global-geometry-ii/release-index-v2.json),
+and separately addressed
+[release-v2 platform comparison](artifacts/global-geometry-ii/certificates/macos-windows-comparison-v2.json).
+Run its deep verifier from the repository root:
+
+```bash
+node website/global-geometry-lab/reproduce-global-geometry-ii-v2.js --verify --mode deep
+```
+
+This command validates the declared release and platform-native evaluation
+surface.  It does not execute the full confirmatory experiment and does not
+perform physical or camera validation.
+
 ## 10. Preregistered next experiments
 
 ### 10.1 Confirmatory U2 atlas
@@ -903,7 +954,11 @@ controls: comb traps, small-world shortcuts, critical or nonelliptic bonds,
 vanishing necks, perforations, and degree-preserving rewires.  The result will
 be classified as accepted, rejected, or unresolved in its preregistered record.
 Any publication remains separately approval-gated.  The current preview is not
-part of this confirmation.
+part of this confirmation.  Since preregistration, screening v3 and a strict
+partial campaign have been executed and published as an `UNRESOLVED`
+evaluation checkpoint.  Gate 1 is `PASS`, Gates 2--8 remain `UNRESOLVED`, and
+the complete confirmatory campaign remains `NOT_RUN`.  These partial results
+do not amend the registered decision rule or turn the preview into evidence.
 
 ### 10.2 Strengthen the diffusion theorem
 
@@ -1050,9 +1105,13 @@ Its strongest current conclusion is deliberately nuanced: the square and
 triangular examples share one proved cylinder-law diffusion limit while
 retaining different proved graph-metric limits, and P8.3 robustifies the
 finite-dimensional statement only after exact covariance whitening over a
-bounded iid basin.  The confirmatory atlas, physical sheet, and replication
-beyond the bounded comparison record's declared surface will test how far
-that structure-relative view of emergence can be extended.
+bounded iid basin.  The later U2 screening and strict-partial executions make
+the research system more inspectable, but their honest conclusion is
+`UNRESOLVED`: exact cross-host comparisons do not close, most decision gates
+remain incomplete, and the full confirmatory run is `NOT_RUN`.  The physical
+sheet and camera experiment also remain `NOT_RUN`.  Those exposed limits,
+rather than a promoted universality claim, define the present publication
+checkpoint.
 
 ## Bibliography
 

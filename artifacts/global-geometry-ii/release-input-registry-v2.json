@@ -1,0 +1,393 @@
+{
+  "schema": "ggii.release-input-registry/2",
+  "releaseId": "global-geometry-ii-evaluation-checkpoint-v2",
+  "evaluationBoundary": {
+    "checkpointStatus": "UNRESOLVED",
+    "u2Decision": "NO_ACCEPTANCE_OR_REJECTION_CLAIM",
+    "universalityClaim": "NONE",
+    "fullConfirmatoryEvaluation": "NOT_RUN",
+    "physicalValidation": "NOT_RUN",
+    "publicationMeaning": "SHAREABLE_EVIDENCE_CHECKPOINT_NOT_A_CONFIRMATORY_DECISION"
+  },
+  "historicalV1": {
+    "classification": "HISTORICAL_PRIOR_RELEASE_ONLY_DOES_NOT_CERTIFY_V2",
+    "releaseIndexPath": "artifacts/global-geometry-ii/release-index-v1.json",
+    "comparisonPath": "artifacts/global-geometry-ii/certificates/macos-windows-comparison-v1.json"
+  },
+  "entries": [
+    {
+      "id": "calibration-v1",
+      "path": "artifacts/global-geometry-ii/calibration-v1.json",
+      "role": "principal-artifact",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "ggii.calibration-artifact/1",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "atlas-pilot-v1",
+      "path": "artifacts/global-geometry-ii/atlas-pilot-v1.json",
+      "role": "principal-artifact",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "ggii.atlas-pilot-artifact/1",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "inverse-certificates-v1",
+      "path": "artifacts/global-geometry-ii/inverse-certificates-v1.json",
+      "role": "principal-artifact",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "ggii.inverse-certificates-artifact/1",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "sheet-hil-v1",
+      "path": "artifacts/global-geometry-ii/sheet-hil-v1.json",
+      "role": "principal-artifact",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "ggii.sheet-hil-artifact/1",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "u2-evaluation-index-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/evaluation-index-v2.json",
+      "role": "evaluation-index",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.evaluation.index/2",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "u2-evaluation-report-v2",
+      "path": "GLOBAL_GEOMETRY_II_U2_EVALUATION_REPORT.md",
+      "role": "evaluation-report",
+      "platform": "shared",
+      "mediaType": "text/markdown",
+      "addressing": "utf8-text",
+      "expectedSchema": null,
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "screening-summary-darwin-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-summary-envelope-v3.json",
+      "role": "screening-summary",
+      "platform": "darwin",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.summary-envelope/3",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "screening-summary-win32-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-summary-envelope-v3.json",
+      "role": "screening-summary",
+      "platform": "win32",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.summary-envelope/3",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "screening-runtime-darwin-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-runtime-v3.json",
+      "role": "screening-runtime",
+      "platform": "darwin",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.runtime-certificate/3",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "screening-runtime-win32-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-runtime-v3.json",
+      "role": "screening-runtime",
+      "platform": "win32",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.runtime-certificate/3",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "screening-writer-darwin-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/writer-capability-v3.json",
+      "role": "screening-writer-capability",
+      "platform": "darwin",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.writer-capability/3",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "screening-writer-win32-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/writer-capability-v3.json",
+      "role": "screening-writer-capability",
+      "platform": "win32",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.writer-capability/3",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "screening-checkpoint-darwin-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-checkpoint-manifest-v3.json",
+      "role": "screening-checkpoint",
+      "platform": "darwin",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.checkpoint-manifest/3",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "screening-checkpoint-win32-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-checkpoint-manifest-v3.json",
+      "role": "screening-checkpoint",
+      "platform": "win32",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.checkpoint-manifest/3",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "screening-certificate-darwin-v2",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/macos/screening-v3-macos-validation-certificate-v2.json",
+      "role": "screening-certificate",
+      "platform": "darwin",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.evaluation.native-screening-v3-validation-certificate/2",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "screening-certificate-win32-v2",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/windows/screening-v3-windows-validation-certificate-v2.json",
+      "role": "screening-certificate",
+      "platform": "win32",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.evaluation.native-screening-v3-validation-certificate/2",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "screening-source-boundary-v3",
+      "path": "artifacts/global-geometry-ii/u2/screening/screening-v3/source-boundary-v3.json",
+      "role": "screening-source-boundary",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.screening.source-boundary/3",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "screening-cross-comparison-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-cross-comparison-v1.json",
+      "role": "screening-comparison",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.evaluation.screening-v3-cross-comparison/2",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "strict-normalization-darwin-v2",
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/macos/u2-normalization-v2.json",
+      "role": "strict-normalization",
+      "platform": "darwin",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.atlas.u2-normalization/2",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "strict-normalization-win32-v2",
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/windows/u2-normalization-v2.json",
+      "role": "strict-normalization",
+      "platform": "win32",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.atlas.u2-normalization/2",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "strict-summary-darwin-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-macos-compact-v1.json",
+      "role": "strict-partial-summary",
+      "platform": "darwin",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.evaluation.strict-partial-compact/2",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "strict-summary-win32-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-windows-compact-v1.json",
+      "role": "strict-partial-summary",
+      "platform": "win32",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.evaluation.strict-partial-compact/2",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "strict-certificate-darwin-v2",
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/macos/u2-strict-partial-macos-validation-certificate-v2.json",
+      "role": "strict-partial-certificate",
+      "platform": "darwin",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.evaluation.native-strict-validation-certificate/2",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "strict-certificate-win32-v1",
+      "path": "artifacts/global-geometry-ii/u2/strict-partial/windows/u2-strict-partial-windows-certificate-v1.json",
+      "role": "strict-partial-certificate",
+      "platform": "win32",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.strict-partial.windows-run-certificate/1",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "strict-cross-comparison-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-cross-comparison-v1.json",
+      "role": "strict-partial-comparison",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "gg.u2.evaluation.strict-cross-comparison/2",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "physical-preflight-v1",
+      "path": "artifacts/global-geometry-ii/fabrication/physical-preflight-v1.json",
+      "role": "physical-preflight",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "content-addressed-json",
+      "expectedSchema": "ggii.physical-preflight-evidence/1",
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "strict-archive-darwin-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-macos-campaign-v2.json.gz",
+      "role": "strict-campaign-archive",
+      "platform": "darwin",
+      "mediaType": "application/gzip",
+      "addressing": "raw-bytes-only",
+      "expectedSchema": null,
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "strict-archive-win32-v2",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/strict-partial-windows-campaign-v2.json.gz",
+      "role": "strict-campaign-archive",
+      "platform": "win32",
+      "mediaType": "application/gzip",
+      "addressing": "raw-bytes-only",
+      "expectedSchema": null,
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "screening-archive-darwin-v3",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-macos-raw.jsonl.gz",
+      "role": "screening-raw-archive",
+      "platform": "darwin",
+      "mediaType": "application/gzip",
+      "addressing": "raw-bytes-only",
+      "expectedSchema": null,
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "screening-archive-win32-v3",
+      "path": "artifacts/global-geometry-ii/u2/evaluation-v2/screening-v3-windows-raw.jsonl.gz",
+      "role": "screening-raw-archive",
+      "platform": "win32",
+      "mediaType": "application/gzip",
+      "addressing": "raw-bytes-only",
+      "expectedSchema": null,
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "historical-v1-index",
+      "path": "artifacts/global-geometry-ii/release-index-v1.json",
+      "role": "historical-v1-metadata",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "canonical-json",
+      "expectedSchema": null,
+      "required": true,
+      "maximumBytes": 16777216
+    },
+    {
+      "id": "historical-v1-comparison",
+      "path": "artifacts/global-geometry-ii/certificates/macos-windows-comparison-v1.json",
+      "role": "historical-v1-metadata",
+      "platform": "shared",
+      "mediaType": "application/json",
+      "addressing": "canonical-json",
+      "expectedSchema": null,
+      "required": true,
+      "maximumBytes": 16777216
+    }
+  ],
+  "deepSuites": [
+    {
+      "id": "screening-v3-artifact-validation",
+      "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-evaluation-index-v2.js",
+      "args": [
+        "--validate-screening"
+      ],
+      "timeoutMs": 1800000,
+      "readOnly": true,
+      "coverage": "screening-v3"
+    },
+    {
+      "id": "strict-partial-artifact-validation",
+      "path": "website/global-geometry-lab/generate-global-geometry-ii-u2-evaluation-index-v2.js",
+      "args": [
+        "--validate-strict"
+      ],
+      "timeoutMs": 1800000,
+      "readOnly": true,
+      "coverage": "strict-partial"
+    }
+  ]
+}
