@@ -1,0 +1,119 @@
+{
+    "schema":  "gg.u2.screening.windows-transfer-verification/1",
+    "semanticRole":  "outcome-blind transfer and extraction provenance; no decision authority",
+    "runId":  "screening-v2-ed624f4-20260830T192556Z",
+    "sourceCommit":  "1c3373267057b8a018ad5039e0f3b2b4e8eb2b1d",
+    "boundaryCommit":  "ed624f4ff42b4e5488a1889c3d55ba1195e5a952",
+    "archive":  {
+                    "bytes":  100918,
+                    "sha256":  "a28677772f4a372bc720b2eee7e4f62c011a276cc8d234e8b7684b74d0287984",
+                    "fileEntryCount":  15
+                },
+    "boundary":  {
+                     "bytes":  4594,
+                     "sha256":  "c60331209247fccee700d10d38b9ae03da3f81e9013f19281a1f5918fb9e6c73",
+                     "semanticDigest":  "a1b1b9bb525ba9c172be48af60b9881a13ce58ebed9862a60fec18a25f07fae0"
+                 },
+    "extraction":  {
+                       "exactPathSetVerified":  true,
+                       "requiredFileCount":  15,
+                       "totalFileCountIncludingBoundary":  16,
+                       "files":  [
+                                     {
+                                         "path":  "GLOBAL_GEOMETRY_II_EVALUATION_REPAIR_AUDIT.md",
+                                         "bytes":  9042,
+                                         "sha256":  "3810154ff591ca42a0e85d4ceb90900c09f85e79a6e3ff403525003bac6e0313"
+                                     },
+                                     {
+                                         "path":  "GLOBAL_GEOMETRY_II_U2_ADVERSARIAL_PREREGISTRATION.md",
+                                         "bytes":  23688,
+                                         "sha256":  "faffef2526d16f79b700102057d59745f0a4359ea7c386c318cc0ee4afd0d5dc"
+                                     },
+                                     {
+                                         "path":  "GLOBAL_GEOMETRY_II_UNIVERSALITY_SPEC.md",
+                                         "bytes":  52967,
+                                         "sha256":  "d49a4e7b3cf31ed47c6cab462b6340f6dfa15434f56e4df4d7e70737e1afe885"
+                                     },
+                                     {
+                                         "path":  "artifacts/global-geometry-ii/u2/experiment-manifest-v2.json",
+                                         "bytes":  35194,
+                                         "sha256":  "337b22a86b6f7b6b4d842c12d03f3eb580d8097e90746e55f9f1d8456c6cf9c6"
+                                     },
+                                     {
+                                         "path":  "artifacts/global-geometry-ii/u2/screening/screening-manifest-v1.json",
+                                         "bytes":  8299,
+                                         "sha256":  "2b60f5ca51bfa37c7de068b92928c17664b36f81ff931a8851316b47f135cc25"
+                                     },
+                                     {
+                                         "path":  "artifacts/global-geometry-ii/u2/screening/screening-implementation-supplement-v2.json",
+                                         "bytes":  9285,
+                                         "sha256":  "5380552dc7c6ee91d6e632b7bfec6a6031d49ab0b98a2aa6f95b71b4c73ab8d6"
+                                     },
+                                     {
+                                         "path":  "artifacts/global-geometry-ii/u2/screening/screening-implementation-supplement-v3.json",
+                                         "bytes":  10114,
+                                         "sha256":  "3bd284f7b19a5c4caa790c3e25a177a603e81e74e265a526cc99407a691b18da"
+                                     },
+                                     {
+                                         "path":  "artifacts/global-geometry-ii/u2/screening/screening-pilot-abort-macos-v1.json",
+                                         "bytes":  1531,
+                                         "sha256":  "ce1f7100730a68775fcc80f8fa6155f8b97b48dd9c6aa5e64d14461c0dd25228"
+                                     },
+                                     {
+                                         "path":  "website/global-geometry-lab/global-geometry-ii-u2-screening.js",
+                                         "bytes":  63217,
+                                         "sha256":  "d4fb0022e9b6347c23cf0e740a8d1de5b9196c224a43207c8d8180675ab6b41d"
+                                     },
+                                     {
+                                         "path":  "website/global-geometry-lab/global-geometry-ii-u2-screening-v2.js",
+                                         "bytes":  18980,
+                                         "sha256":  "3976809ec412580975852540166147d870c354672d055e243861ea7046e19873"
+                                     },
+                                     {
+                                         "path":  "website/global-geometry-lab/run-global-geometry-ii-u2-screening-v2.js",
+                                         "bytes":  37803,
+                                         "sha256":  "25012302339f4b7d1cc27eb55c969ae3d3888642b33ade30e02d2a8f22b552c8"
+                                     },
+                                     {
+                                         "path":  "website/global-geometry-lab/generate-global-geometry-ii-u2-screening-supplement-v3.js",
+                                         "bytes":  12999,
+                                         "sha256":  "9e2b374f895b11f42aef774008792e175400792bd5ee4ccfc7b45a095dc4d96a"
+                                     },
+                                     {
+                                         "path":  "website/global-geometry-lab/test-global-geometry-ii-u2-screening-v2.js",
+                                         "bytes":  11823,
+                                         "sha256":  "aa444f28cc6029a7f44c0921f83798368844c0e2f81feec11d5091bd5384551a"
+                                     },
+                                     {
+                                         "path":  "website/global-geometry-lab/test-global-geometry-ii-u2-screening-v2-adversarial.js",
+                                         "bytes":  30121,
+                                         "sha256":  "f35e04e1537429646c32457b4241a6af16eea6197990a61d5833b2fb9270f71a"
+                                     },
+                                     {
+                                         "path":  "website/global-geometry-lab/generate-global-geometry-ii-u2-screening-source-boundary-v2.js",
+                                         "bytes":  10343,
+                                         "sha256":  "1a031a2b83317c8de19f99a3aa8507650f18a6cf3d063f09816ad8332b64cbad"
+                                     }
+                                 ]
+                   },
+    "setupRepair":  {
+                        "initialVerifierSha256":  "61c74d64bc82587af79a05319338574372e18722e09554c2eb361f913a4ce342",
+                        "initialFailure":  "boundary parent directory absent after valid extraction; runner was not invoked",
+                        "action":  "created only the missing boundary parent and copied the separately pinned boundary"
+                    },
+    "executionPreflight":  {
+                               "portableNodeExists":  true,
+                               "gitAvailableOnDefaultPath":  false,
+                               "sourceMode":  "portable"
+                           },
+    "outcome":  {
+                    "u2Status":  "UNRESOLVED",
+                    "decisionAuthority":  "NONE"
+                },
+    "contentAddress":  {
+                           "algorithm":  "sha256",
+                           "serialization":  "PowerShell ConvertTo-Json -Compress over ordered payload",
+                           "digest":  "3f8ef8f972ffad57ec6caed8f91f0ae05497ac137347988e2dfb4293d018a856",
+                           "bytes":  3766
+                       }
+}

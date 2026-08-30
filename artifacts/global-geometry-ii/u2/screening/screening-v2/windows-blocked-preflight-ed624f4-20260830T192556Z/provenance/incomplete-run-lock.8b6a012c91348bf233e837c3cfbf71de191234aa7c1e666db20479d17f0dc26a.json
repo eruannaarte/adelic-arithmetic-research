@@ -1,0 +1,21 @@
+{
+  "schema": "gg.u2.screening.run-lock/2",
+  "platformLabel": "windows",
+  "operation": "fresh",
+  "pid": 1240,
+  "creatorHost": {
+    "hostname": "DESKTOP-T1PBPJD",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "sourceBoundary": {
+    "path": "artifacts/global-geometry-ii/u2/screening/screening-v2/source-boundary-v2.json",
+    "fileSha256": "c60331209247fccee700d10d38b9ae03da3f81e9013f19281a1f5918fb9e6c73",
+    "semanticDigest": "a1b1b9bb525ba9c172be48af60b9881a13ce58ebed9862a60fec18a25f07fae0",
+    "sourceCommit": "1c3373267057b8a018ad5039e0f3b2b4e8eb2b1d",
+    "sourceTree": "c21acf2c5f1f3c1b3415f0ee05a46a4a069b4a25",
+    "verificationMode": "portable"
+  },
+  "startedAt": "2026-08-30T19:30:16.657Z",
+  "lockToken": "d983ca500e195c53a22a29ce51ba261acf4fa2d25abd876a621b2cf9484cbfbd"
+}

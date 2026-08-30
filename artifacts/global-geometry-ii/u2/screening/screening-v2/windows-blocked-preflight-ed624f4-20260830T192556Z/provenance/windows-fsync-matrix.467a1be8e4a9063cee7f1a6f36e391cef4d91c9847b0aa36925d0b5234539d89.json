@@ -1,0 +1,95 @@
+{
+  "schema": "gg.u2.screening.windows-fsync-matrix/1",
+  "semanticRole": "outcome-blind Windows filesystem capability probe; no scientific source or decision authority",
+  "probeId": "screening-v2-jG4bUH",
+  "environment": {
+    "platform": "win32",
+    "arch": "x64",
+    "node": "v22.22.2",
+    "osRelease": "10.0.19045",
+    "filesystemApi": "node:fs synchronous operations"
+  },
+  "cases": [
+    {
+      "id": "original-wx-fsync-before-link",
+      "completed": true,
+      "error": null,
+      "detail": {
+        "contentSha256": "2c80c152dddbc7f1bd3ff76a10b7bd44fabf121b736250d6bd6c04acdc73ef2c"
+      }
+    },
+    {
+      "id": "reopen-hardlink-readonly-r-fsync",
+      "completed": false,
+      "error": {
+        "name": "Error",
+        "code": "EPERM",
+        "errno": -4048,
+        "syscall": "fsync",
+        "message": "EPERM: operation not permitted, fsync"
+      },
+      "detail": null
+    },
+    {
+      "id": "reopen-hardlink-writable-r-plus-fsync",
+      "completed": true,
+      "error": null,
+      "detail": {
+        "contentSha256": "2c80c152dddbc7f1bd3ff76a10b7bd44fabf121b736250d6bd6c04acdc73ef2c"
+      }
+    },
+    {
+      "id": "original-writable-fd-across-hardlink-and-refsync",
+      "completed": true,
+      "error": null,
+      "detail": {
+        "contentSha256": "2c80c152dddbc7f1bd3ff76a10b7bd44fabf121b736250d6bd6c04acdc73ef2c",
+        "sameContent": true
+      }
+    },
+    {
+      "id": "directory-open-r-fsync",
+      "completed": false,
+      "error": {
+        "name": "Error",
+        "code": "EPERM",
+        "errno": -4048,
+        "syscall": "fsync",
+        "message": "EPERM: operation not permitted, fsync"
+      },
+      "detail": null
+    },
+    {
+      "id": "hardlink-no-replace-eexist",
+      "completed": true,
+      "error": null,
+      "detail": {
+        "collision": {
+          "code": "EEXIST",
+          "syscall": "link"
+        },
+        "outputSha256": "b015c857d208c5374f29c8d6e2620662fafa14768dea4d53f11fdf05dd63ef04",
+        "outputPreserved": true
+      }
+    }
+  ],
+  "conclusions": {
+    "readonlyReopenOperationallyValid": false,
+    "writableReopenOperationallyValid": true,
+    "originalWritableDescriptorAcrossLinkOperationallyValid": true,
+    "directoryFsyncAvailableViaNode": false,
+    "hardlinkNoReplacePreserved": true,
+    "narrowRepair": "keep the original writable descriptor open through the exclusive hard-link publication and fsync it after linking; on win32 do not call directory fsync, and report the unavailable directory barrier explicitly",
+    "durabilityQualification": "functional file flush and no-replace publication are demonstrated; power-loss persistence of the directory entry is not established because Node win32 directory fsync is unavailable"
+  },
+  "outcome": {
+    "u2Status": "UNRESOLVED",
+    "decisionAuthority": "NONE"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "944adfe7c17463bae1e95ac808a2df4032647154dc6dbfbc45a8e77d6dc90b32",
+    "canonicalBytes": 2221
+  }
+}

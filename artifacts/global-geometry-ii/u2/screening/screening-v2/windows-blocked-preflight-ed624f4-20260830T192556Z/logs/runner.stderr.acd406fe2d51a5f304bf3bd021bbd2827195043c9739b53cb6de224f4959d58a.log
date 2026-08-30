@@ -1,0 +1,21 @@
+node:fs:1305
+  binding.fsync(fd);
+          ^
+
+Error: EPERM: operation not permitted, fsync
+    at Object.fsyncSync (node:fs:1305:11)
+    at durableWriteNoReplace (C:\Users\Public\ggii-u2-replication\runs\screening-v2-ed624f4-20260830T192556Z\source\website\global-geometry-lab\run-global-geometry-ii-u2-screening-v2.js:71:14)
+    at acquireRunLock (C:\Users\Public\ggii-u2-replication\runs\screening-v2-ed624f4-20260830T192556Z\source\website\global-geometry-lab\run-global-geometry-ii-u2-screening-v2.js:283:5)
+    at run (C:\Users\Public\ggii-u2-replication\runs\screening-v2-ed624f4-20260830T192556Z\source\website\global-geometry-lab\run-global-geometry-ii-u2-screening-v2.js:477:108)
+    at Object.<anonymous> (C:\Users\Public\ggii-u2-replication\runs\screening-v2-ed624f4-20260830T192556Z\source\website\global-geometry-lab\run-global-geometry-ii-u2-screening-v2.js:516:30)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'fsync'
+}
+
+Node.js v22.22.2

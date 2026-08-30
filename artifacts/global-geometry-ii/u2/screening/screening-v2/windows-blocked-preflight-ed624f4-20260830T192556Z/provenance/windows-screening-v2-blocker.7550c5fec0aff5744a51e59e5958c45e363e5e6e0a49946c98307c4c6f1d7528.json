@@ -1,0 +1,134 @@
+{
+  "schema": "gg.u2.screening.windows-blocker-certificate/1",
+  "semanticRole": "sanitized pre-measurement execution blocker; no scientific inference or decision authority",
+  "runId": "screening-v2-ed624f4-20260830T192556Z",
+  "status": "BLOCKED_BEFORE_RECORD_0",
+  "source": {
+    "implementationCommit": "1c3373267057b8a018ad5039e0f3b2b4e8eb2b1d",
+    "implementationTree": "c21acf2c5f1f3c1b3415f0ee05a46a4a069b4a25",
+    "boundaryCommit": "ed624f4ff42b4e5488a1889c3d55ba1195e5a952",
+    "boundaryFileSha256": "c60331209247fccee700d10d38b9ae03da3f81e9013f19281a1f5918fb9e6c73",
+    "boundarySemanticDigest": "a1b1b9bb525ba9c172be48af60b9881a13ce58ebed9862a60fec18a25f07fae0",
+    "requiredFilesVerified": 15,
+    "transferVerification": {
+      "path": "provenance/transfer-verification.json",
+      "bytes": 8067,
+      "sha256": "22ad61e87c793d6c9da3a8e668bbad980270fcd163f7f411c24abb09f5ab4a24"
+    }
+  },
+  "commandSemantics": {
+    "runtime": {
+      "distribution": "official portable Node.js v22.22.2 win-x64 already provisioned and checksum-verified by readiness work",
+      "version": "v22.22.2",
+      "executableSha256": "ae1a50511be58e987483fdbc12125407443926d2d394669ade2352776e920dd3"
+    },
+    "workingDirectoryRole": "fresh exact extracted source snapshot under the run identifier",
+    "runner": "website/global-geometry-lab/run-global-geometry-ii-u2-screening-v2.js",
+    "arguments": [
+      "--source-mode",
+      "portable",
+      "--source-boundary-file-sha256",
+      "c60331209247fccee700d10d38b9ae03da3f81e9013f19281a1f5918fb9e6c73",
+      "--source-boundary-semantic-sha256",
+      "a1b1b9bb525ba9c172be48af60b9881a13ce58ebed9862a60fec18a25f07fae0",
+      "--platform-label",
+      "windows"
+    ],
+    "gitAvailableOnDefaultPath": false,
+    "macOSRecordTransfer": "NONE"
+  },
+  "process": {
+    "pid": 1240,
+    "pidExitObserved": true,
+    "exitCode": "NOT_CAPTURED_BY_DETACHED_DISPATCH",
+    "stdout": {
+      "path": "logs/runner.stdout.working.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "logs/runner.stderr.working.log",
+      "bytes": 1296,
+      "sha256": "acd406fe2d51a5f304bf3bd021bbd2827195043c9739b53cb6de224f4959d58a"
+    }
+  },
+  "exception": {
+    "name": "Error",
+    "code": "EPERM",
+    "errno": -4048,
+    "syscall": "fsync",
+    "message": "EPERM: operation not permitted, fsync",
+    "firstProjectFrame": "website/global-geometry-lab/run-global-geometry-ii-u2-screening-v2.js:71:14",
+    "operation": "reopen newly published hard-link path with flag r, then fs.fsyncSync on that read-only descriptor",
+    "classification": "frozen runner is operationally incompatible with Windows before chunk generation"
+  },
+  "noRecordBoundary": {
+    "recordCount": 0,
+    "jsonlChunkCount": 0,
+    "chunkCertificateCount": 0,
+    "finalRawPresent": false,
+    "finalSummaryPresent": false,
+    "runtimeCertificatePresent": false,
+    "checkpointManifestPresent": false,
+    "runnerStdoutBytes": 0,
+    "artifactCensus": [
+      {
+        "path": ".run-lock.json",
+        "bytes": 800,
+        "sha256": "8b6a012c91348bf233e837c3cfbf71de191234aa7c1e666db20479d17f0dc26a"
+      }
+    ]
+  },
+  "fsyncMatrix": {
+    "artifact": {
+      "bytes": 3072,
+      "sha256": "467a1be8e4a9063cee7f1a6f36e391cef4d91c9847b0aa36925d0b5234539d89",
+      "semanticDigest": "944adfe7c17463bae1e95ac808a2df4032647154dc6dbfbc45a8e77d6dc90b32"
+    },
+    "readonlyReopenOperationallyValid": false,
+    "writableReopenOperationallyValid": true,
+    "originalWritableDescriptorAcrossLinkOperationallyValid": true,
+    "directoryFsyncAvailableViaNode": false,
+    "hardlinkNoReplacePreserved": true,
+    "narrowRepair": "keep the original writable descriptor open through the exclusive hard-link publication and fsync it after linking; on win32 do not call directory fsync, and report the unavailable directory barrier explicitly",
+    "durabilityQualification": "functional file flush and no-replace publication are demonstrated; power-loss persistence of the directory entry is not established because Node win32 directory fsync is unavailable"
+  },
+  "preservedEvidence": {
+    "stderr": {
+      "path": "logs/runner.stderr.acd406fe2d51a5f304bf3bd021bbd2827195043c9739b53cb6de224f4959d58a.log",
+      "bytes": 1296,
+      "sha256": "acd406fe2d51a5f304bf3bd021bbd2827195043c9739b53cb6de224f4959d58a"
+    },
+    "stdout": {
+      "path": "logs/runner.stdout.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "dispatch": {
+      "path": "provenance/runner-dispatch.ea23a712d0b7fb1250ae8661bbd002eb14b007cce76d50b5874e75f8b3997bb9.json",
+      "bytes": 1019,
+      "sha256": "ea23a712d0b7fb1250ae8661bbd002eb14b007cce76d50b5874e75f8b3997bb9"
+    },
+    "incompleteRunLock": {
+      "path": "provenance/incomplete-run-lock.8b6a012c91348bf233e837c3cfbf71de191234aa7c1e666db20479d17f0dc26a.json",
+      "bytes": 800,
+      "sha256": "8b6a012c91348bf233e837c3cfbf71de191234aa7c1e666db20479d17f0dc26a"
+    },
+    "fsyncMatrix": {
+      "path": "provenance/windows-fsync-matrix.467a1be8e4a9063cee7f1a6f36e391cef4d91c9847b0aa36925d0b5234539d89.json",
+      "bytes": 3072,
+      "sha256": "467a1be8e4a9063cee7f1a6f36e391cef4d91c9847b0aa36925d0b5234539d89"
+    }
+  },
+  "action": "do not modify or resume C1/C2; create a versioned implementation repair and a new source boundary before any Windows scientific retry",
+  "outcome": {
+    "u2Status": "UNRESOLVED",
+    "decisionAuthority": "NONE"
+  },
+  "contentAddress": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785-compatible closed JSON subset",
+    "digest": "50108bc66bf8807772f9fef21baa35eea3e178e621de1958a9b7ddaef7ad6865",
+    "canonicalBytes": 4865
+  }
+}

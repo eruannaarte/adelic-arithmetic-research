@@ -1,0 +1,23 @@
+{
+    "schema":  "gg.u2.screening.windows-run-dispatch/1",
+    "semanticRole":  "execution dispatch provenance; no decision authority",
+    "runId":  "screening-v2-ed624f4-20260830T192556Z",
+    "pid":  1240,
+    "node":  {
+                 "versionExpected":  "v22.22.2",
+                 "executableSha256":  "ae1a50511be58e987483fdbc12125407443926d2d394669ade2352776e920dd3"
+             },
+    "sourceCommit":  "1c3373267057b8a018ad5039e0f3b2b4e8eb2b1d",
+    "boundaryCommit":  "ed624f4ff42b4e5488a1889c3d55ba1195e5a952",
+    "sourceMode":  "portable",
+    "gitAvailableOnDefaultPath":  false,
+    "pins":  {
+                 "fileSha256":  "c60331209247fccee700d10d38b9ae03da3f81e9013f19281a1f5918fb9e6c73",
+                 "semanticSha256":  "a1b1b9bb525ba9c172be48af60b9881a13ce58ebed9862a60fec18a25f07fae0"
+             },
+    "outputLabel":  "windows",
+    "outcome":  {
+                    "u2Status":  "UNRESOLVED",
+                    "decisionAuthority":  "NONE"
+                }
+}
