@@ -1,0 +1,106 @@
+{
+  "schema": "tgn.global-geometry-reproducibility.v1",
+  "package": "Global Geometry Lab",
+  "version": "0.1.0",
+  "prepared_at": "2026-08-30T03:58:17Z",
+  "repository": "https://github.com/eruannaarte/adelic-arithmetic-research",
+  "source_ref": "codex/publish-global-geometry-lab",
+  "source_commit_policy": "Publication must bind an immutable commit supplied in the Website Manager dispatch; this manifest deliberately avoids a self-referential commit hash.",
+  "entrypoint": "website/global-geometry-lab/index.html",
+  "runtime": {
+    "kind": "dependency-free static browser application",
+    "network_requests": false,
+    "external_assets": false,
+    "build_step": false,
+    "dynamic_import": false,
+    "user_code_evaluation": false,
+    "server_api": false,
+    "browser_global": "GlobalGeometryCore",
+    "node_module": "website/global-geometry-lab/global-geometry-core.js"
+  },
+  "commands": {
+    "serve": "python -m http.server 8000 --bind 127.0.0.1",
+    "open": "http://127.0.0.1:8000/website/global-geometry-lab/",
+    "focused_test": "node --test website/global-geometry-lab/test-global-geometry-core.js",
+    "browser_labs_regression": "node --test website/double-pendulum-oig-wind-tunnel/test-wind-tunnel-core.js website/double-pendulum-oig-wind-tunnel/test-wind-tunnel-ensemble-adversarial.js website/global-geometry-lab/test-global-geometry-core.js"
+  },
+  "expected_verification": {
+    "global_geometry_checks": 26,
+    "combined_browser_lab_checks": 58,
+    "deterministic_replay": true,
+    "closed_schema_rejection": true,
+    "finite_outputs_for_all_presets": true,
+    "desktop_width": 1024,
+    "tablet_width": 736,
+    "narrow_width": 360,
+    "horizontal_overflow_expected": false
+  },
+  "research_contract": {
+    "directions": ["forward", "inverse", "recognition"],
+    "locality_classes": ["L0 strictly local", "L1 local with disclosed broadcast", "L2 globally mediated analysis"],
+    "evidence_labels": ["exact finite identity", "finite numerical estimate", "research target", "application analogy"],
+    "dimension_profiles": ["volume growth", "spectral", "walk"],
+    "application_families": ["networks", "machine learning", "programmable materials", "morphogenesis", "distributed robotics", "physics analogy"]
+  },
+  "scientific_boundaries": [
+    "Finite numerical runs are not continuum-convergence theorems.",
+    "Two-seed observable agreement is not proof of isometry or a universality class.",
+    "Passing the Gauss-Bonnet sum is necessary, not sufficient, for arbitrary target-curvature realizability.",
+    "The exact curvature badge applies only after the finite triangulated-manifold validity gate passes.",
+    "Graph and sample descriptors do not certify a unique latent smooth manifold.",
+    "Application presets are bounded mathematical analogies, not validated material, biological, robotic, networking, or spacetime models.",
+    "The work is not peer reviewed and makes no literature-priority claim."
+  ],
+  "source_manifest": [
+    {
+      "path": "GLOBAL_GEOMETRY_LAB.md",
+      "sha256": "59154a8c13a8856af7a04810d692efb9198dd3c770c6e2da9128fb87b564378b",
+      "role": "research and implementation contract"
+    },
+    {
+      "path": "website/global-geometry-lab/README.md",
+      "sha256": "ac0027aaca7bfd96e1e8db74c9bd61ea4e3b20cdfc6be203097f2d548d90318c",
+      "role": "runtime and reproduction guide"
+    },
+    {
+      "path": "website/global-geometry-lab/index.html",
+      "sha256": "5a562c2f15e624a09471812986f49f5a2198f4578392e120924bcff6dc0448c3",
+      "role": "accessible laboratory document"
+    },
+    {
+      "path": "website/global-geometry-lab/global-geometry-lab.css",
+      "sha256": "80d0a3e0294ceea4b284f40f23317fe087eaea60d07b2de88bb15d2ec89d6991",
+      "role": "responsive light-dark presentation"
+    },
+    {
+      "path": "website/global-geometry-lab/global-geometry-core.js",
+      "sha256": "9c461080b306b4304e4aa0d266d86d55ee31a9c90690a6f01e83022d55f4d77d",
+      "role": "deterministic discrete-geometry engine"
+    },
+    {
+      "path": "website/global-geometry-lab/global-geometry-lab.js",
+      "sha256": "a078750217d83e1940b3a96a33d5ba6bcacc59880d15866d1aadce24159618a1",
+      "role": "browser controller, rendering, configuration, comparison, and export"
+    },
+    {
+      "path": "website/global-geometry-lab/test-global-geometry-core.js",
+      "sha256": "cabf274a7cacd763107cfed9afe3e2d6f174170195a244ff1c473894b8006fb9",
+      "role": "mathematical, invariance, locality, and adversarial test suite"
+    },
+    {
+      "path": "CITATION.cff",
+      "sha256": "8793f33f9ca095db6f14742f2d8fb6cddf87b5e3eab915e1608ec1e58a01da67",
+      "role": "citation metadata"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "role": "Apache-2.0 software license"
+    },
+    {
+      "path": "LICENSE-CONTENT.md",
+      "sha256": "c25b0ddbe8ddc9dfad01a4363aa7528840ce1d3a5324e7f809994ef4603a13aa",
+      "role": "additional CC BY 4.0 grant for original non-software content"
+    }
+  ]
+}

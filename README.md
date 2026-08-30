@@ -1,7 +1,7 @@
 # Adelic Arithmetic Research
 
 This repository contains the manuscripts, executable laboratories, and tests
-for four connected TGN research programmes:
+for five connected TGN research programmes:
 
 1. **The Geometry Arithmetic Remembers** — an eight-stage path from ordered
    multiplicative rigidity through adelic harmonic analysis, number-field
@@ -22,8 +22,20 @@ for four connected TGN research programmes:
    Dirichlet-tail models.  See the
    [Arithmetic Observability Atlas](ARITHMETIC_OBSERVABILITY_ATLAS.md) for
    the model map, theorem index, and reproducibility manifest.
+5. **Global Geometry** — a finite metric-measure-cell-complex programme for
+   asking how local compatibility, defect accumulation, diffusion, and local
+   feedback produce global metric, curvature, topology, and scale-dependent
+   dimension.  Its [research and implementation plan](GLOBAL_GEOMETRY_LAB.md)
+   is paired with a programmable
+   [Global Geometry Lab](website/global-geometry-lab/README.md) spanning
+   forward generation, inverse design, recognition, and carefully bounded
+   application analogies.  The
+   [reproducibility manifest](global_geometry_reproducibility_manifest.json)
+   and [Website Manager handoff](GLOBAL_GEOMETRY_WEBSITE_MANAGER_HANDOFF.md)
+   bind the public release package.
 
-The fifth operational-geometry layer supplies the first controlled scale flow:
+Within Operational Information Geometry, its fifth layer supplies the first
+controlled scale flow:
 cell-centred continuum normalization, noncommuting spectral-dimension limits,
 target-mode response reduction, smooth-versus-atomic regularity, a diffusive
 signed-displacement leakage theorem, and exact protocol counterexamples. The

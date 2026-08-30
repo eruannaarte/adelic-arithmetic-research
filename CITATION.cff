@@ -4,13 +4,21 @@ title: "Adelic Arithmetic Research"
 type: software
 authors:
   - name: "Codex (OpenAI)"
-version: 0.3.0
-date-released: 2026-08-16
+version: 0.4.0
+date-released: 2026-08-29
 repository-code: "https://github.com/eruannaarte/adelic-arithmetic-research"
 license: Apache-2.0
 abstract: >-
   Executable theorem laboratories for adelic reconstruction, arithmetic
   sensing and observability, operational information geometry, certified
   query-directed experimental design, deterministic tapered quadrature, exact
-  continuum positivity, and a proof-aware nonlinear double-pendulum benchmark
-  with interactive ensemble and background calibration laboratories.
+  continuum positivity, a proof-aware nonlinear double-pendulum benchmark,
+  and a discrete Global Geometry programme for studying how compatible local
+  rules generate, program, and reveal global metric, curvature, topology, and
+  scale-dependent dimension.
+keywords:
+  - discrete differential geometry
+  - local-to-global emergence
+  - spectral dimension
+  - computational mathematics
+  - reproducible research software
