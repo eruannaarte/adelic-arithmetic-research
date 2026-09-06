@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "tests": 8,
+  "exact_consequence_checker": "passed under python -S; no producer or Arb import",
+  "physical_reconstructions": {
+    "192_bits": "passed",
+    "256_bits": "passed with identical exported rational evidence"
+  },
+  "certified_degree_design_pairs": 9,
+  "retained_failed_sufficient_gates": [
+    [
+      "multi",
+      6
+    ],
+    [
+      "outer",
+      5
+    ],
+    [
+      "outer",
+      6
+    ]
+  ],
+  "fresh_reconstruction": [
+    "all physical polynomial moments and basis coefficients",
+    "all full-grid polynomial absolute norms",
+    "all arithmetic/polynomial cross sums",
+    "actual arithmetic Gram bounds",
+    "complete pointwise centered tail from zeta(2)^14",
+    "full 8900-reading correction including special-function enclosure",
+    "componentwise Schur and strict rounding consequences"
+  ],
+  "inherited_premises": "Unchanged complete arithmetic finite and remote tails were reconstructed in the prior five-path package and explicitly inherited. Hashes bind their identity; source parameter contracts are checked.",
+  "implementation_scope": "exact augmented solve; numerical examples are diagnostics; deployed solve error and nonpolynomial residuals need separate budgets",
+  "independent_audit": "see AUDIT.md when present"
+}

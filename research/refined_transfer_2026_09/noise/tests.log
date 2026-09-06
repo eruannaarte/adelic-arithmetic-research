@@ -1,0 +1,12 @@
+test_both_physical_designs_verify (test_weighted.WeightedFamilyTests.test_both_physical_designs_verify) ... ok
+test_frequency_contract_and_zero_frequency (test_weighted.WeightedFamilyTests.test_frequency_contract_and_zero_frequency) ... ok
+test_full_arithmetic_error_budget (test_weighted.WeightedFamilyTests.test_full_arithmetic_error_budget) ... ok
+test_missing_complete_remainder_rejected (test_weighted.WeightedFamilyTests.test_missing_complete_remainder_rejected) ... ok
+test_understated_norm_rejected (test_weighted.WeightedFamilyTests.test_understated_norm_rejected) ... ok
+test_wrong_parity_rejected (test_weighted.WeightedFamilyTests.test_wrong_parity_rejected) ... ok
+test_wrong_physical_window_rejected (test_weighted.WeightedFamilyTests.test_wrong_physical_window_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 3.610s
+
+OK

@@ -1,0 +1,42 @@
+{
+  "verified": true,
+  "complete_budget_gate_checks": 2352,
+  "integer_multiplier_boundaries": [
+    {
+      "design": "multi",
+      "method": "orbit",
+      "largest_passing_integer_multiplier": 827
+    },
+    {
+      "design": "multi",
+      "method": "pair",
+      "largest_passing_integer_multiplier": 385
+    },
+    {
+      "design": "outer",
+      "method": "orbit",
+      "largest_passing_integer_multiplier": 170
+    },
+    {
+      "design": "outer",
+      "method": "pair",
+      "largest_passing_integer_multiplier": 79
+    }
+  ],
+  "actual_h120_results": [
+    {
+      "design": "multi",
+      "all_49_integers_recovered": true,
+      "prior_pair_bound_passes": true,
+      "coefficient_error_maximum": 0.44715336649770143,
+      "prior_pair_error_maximum": 0.4574462264296861
+    },
+    {
+      "design": "outer",
+      "all_49_integers_recovered": true,
+      "prior_pair_bound_passes": false,
+      "coefficient_error_maximum": 0.4961987078481399,
+      "prior_pair_error_maximum": 0.5064935790457127
+    }
+  ]
+}

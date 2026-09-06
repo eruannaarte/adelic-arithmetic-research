@@ -1,0 +1,14 @@
+test_changed_arithmetic_proposal_is_rejected (__main__.OperationalTests.test_changed_arithmetic_proposal_is_rejected) ... ok
+test_changed_readings_require_a_new_residual (__main__.OperationalTests.test_changed_readings_require_a_new_residual) ... ok
+test_exact_input_shapes_and_sign_contracts (__main__.OperationalTests.test_exact_input_shapes_and_sign_contracts) ... ok
+test_failed_float_proposal_is_not_accepted (__main__.OperationalTests.test_failed_float_proposal_is_not_accepted) ... ok
+test_large_slow_sine_has_small_remainder_after_polynomial_removal (__main__.OperationalTests.test_large_slow_sine_has_small_remainder_after_polynomial_removal) ... ok
+test_normal_residual_does_not_validate_physical_drift (__main__.OperationalTests.test_normal_residual_does_not_validate_physical_drift) ... ok
+test_sensor_and_drift_cannot_each_spend_full_noise_budget (__main__.OperationalTests.test_sensor_and_drift_cannot_each_spend_full_noise_budget) ... ok
+test_sufficient_remainder_limit_is_data_dependent_and_strict (__main__.OperationalTests.test_sufficient_remainder_limit_is_data_dependent_and_strict) ... ok
+test_zero_centered_residual_has_a_finite_outward_bound (__main__.OperationalTests.test_zero_centered_residual_has_a_finite_outward_bound) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 2.945s
+
+OK

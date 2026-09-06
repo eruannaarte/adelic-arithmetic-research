@@ -1,0 +1,16 @@
+{
+  "status": "floating direct-model control, not certificate input",
+  "target": 510,
+  "source": [
+    0.6,
+    0.8
+  ],
+  "tau": 2,
+  "channel_count": 99,
+  "discarded_information_norm": 1.2435995421564839e-59,
+  "retained_minimum_eigenvalue": 3.958009555735107e-06,
+  "sensor_noise_norm": 2.9999999999999993e-07,
+  "centroid": 510.0000000000001,
+  "rounded_target": 510,
+  "source_error": 0.00015079357430037302
+}

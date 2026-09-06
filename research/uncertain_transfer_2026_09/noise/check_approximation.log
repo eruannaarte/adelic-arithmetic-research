@@ -1,0 +1,13 @@
+{
+  "schema": "clocked-weighted-checked-v1",
+  "verified": true,
+  "bits": 384,
+  "full_vector_polynomial_norm_bounds": 184,
+  "complete_remainder_moment_bounds": 16,
+  "clock": {
+    "verified": true,
+    "complete_signal_derivative_upper": "4236677628957192044734946566283271/500000000000000000000000000000",
+    "complete_clock_distortion_radius": "800732071872909296454904901027538219/5000000000000000000000000000000000000000000"
+  },
+  "approximation_sha256": "79fca8f5edb07fd56e7b67f696f1867cd341790f2b7ff3a79e2849c258ddb18f"
+}

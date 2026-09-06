@@ -1,0 +1,31 @@
+test_boundary_both_sides (test_cycle2.Tests.test_boundary_both_sides) ... ok
+test_frozen_fixed_decoder_certificate (test_cycle2.Tests.test_frozen_fixed_decoder_certificate) ... ok
+test_invalid_decoder_and_source_bindings (test_cycle2.Tests.test_invalid_decoder_and_source_bindings) ... ok
+test_nominal_preparation_derivative_is_insufficient (test_cycle2.Tests.test_nominal_preparation_derivative_is_insufficient) ... ok
+test_row_gate_can_improve_worst_row_gate (test_cycle2.Tests.test_row_gate_can_improve_worst_row_gate) ... ok
+test_source_replay (test_cycle2.Tests.test_source_replay) ... validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+ok
+test_amgm_sharp_unit_cube (test_cycle3.Tests.test_amgm_sharp_unit_cube) ... ok
+test_dual_and_binding_tamper (test_cycle3.Tests.test_dual_and_binding_tamper) ... ok
+test_exact_primal_dual_and_targets (test_cycle3.Tests.test_exact_primal_dual_and_targets) ... ok
+test_face_and_cap_violations (test_cycle3.Tests.test_face_and_cap_violations) ... ok
+test_isotropic_boundary_matches_previous_cycle (test_cycle3.Tests.test_isotropic_boundary_matches_previous_cycle) ... ok
+test_contract_and_boundary_rejections (test_preparation.Tests.test_contract_and_boundary_rejections) ... ok
+test_cycle1_exact_consequences (test_preparation.Tests.test_cycle1_exact_consequences) ... ok
+test_cycle1_source_replay (test_preparation.Tests.test_cycle1_source_replay) ... validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+ok
+test_finite_preparation_and_clock_derivatives (test_preparation.Tests.test_finite_preparation_and_clock_derivatives) ... ok
+test_launch_cancellation_control (test_preparation.Tests.test_launch_cancellation_control) ... ok
+test_six_direction_rhs (test_preparation.Tests.test_six_direction_rhs) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 11.907s
+
+OK

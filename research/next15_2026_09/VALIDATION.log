@@ -1,0 +1,300 @@
+### harmonic.cycle1
+Cycle1 PASS: exact 171-ratio classification and outward acquisition bounds
+{
+  "strongest_time_lower": [
+    "20563168418583/1000000000000",
+    "2570396052323/125000000000"
+  ],
+  "previous_cubic_time_lower": [
+    "1647050313643/1000000000000",
+    "411762578411/250000000000"
+  ],
+  "improvement_ratio": [
+    "12484845331227/1000000000000",
+    "3121211332807/250000000000"
+  ],
+  "time20_floor_upper": [
+    "39697617201/50000000000",
+    "793952344021/1000000000000"
+  ]
+}
+
+
+### harmonic.cycle2
+Cycle2 PASS: complete dual cover and all171 vertex differences
+{
+  "dual": {
+    "horizon": "109/5",
+    "cells": 4096,
+    "terms": [
+      {
+        "ratio": "25/24",
+        "changed_factors": 3,
+        "weight": "1761/2000"
+      },
+      {
+        "ratio": "27/20",
+        "changed_factors": 3,
+        "weight": "239/2000"
+      }
+    ],
+    "supremum_upper": "13762376583/125000000000",
+    "floor_upper": "406384693357/500000000000",
+    "worst_cell": 2278,
+    "floor_target": "163/200",
+    "all_schedules_rejected": true
+  },
+  "short_vertex_floor": "206690840331/200000000000"
+}
+
+
+### harmonic.cycle3
+Cycle3 PASS: strict interval contraction proves an interior exact collision
+{
+  "contraction_norm_upper": "2922557/1000000000000",
+  "minimum_probability_lower": "3853336691/50000000000",
+  "factor_distance_squared_lower": "319999998043/500000000000",
+  "box_radius": "1/1000000000",
+  "conclusion": "two distinct strictly interior product distributions have exactly equal six raw complex responses"
+}
+
+
+### noise.cycle1
+N1 PASS: complete-family certificate/actual-variance Pareto obstruction
+alpha interval ['17613/10000000', '5107/2500000']
+uniform variance inflation lower 1000090900677660097/1000000000000000000
+
+
+### noise.cycle2
+N2 PASS: full-tail midpoint correction, all8900 readings, strict bounded-noise rounding
+multi sensor radius 1/10000 threshold ['100356572843797/1000000000000000000', '50178286421899/500000000000000000']
+outer sensor radius 1/12500 threshold ['5048285889607/62500000000000000', '80772574233713/1000000000000000000']
+radius gain interval ['63618682457004293261/500000000000000000', '127237364914008586523/1000000000000000000']
+
+
+### noise.cycle3
+N3 PASS: arbitrary affine baseline, knowna1, same8900 observations
+multi noise radius 9/100000 maxbias 0.258210856291969 remainingmargin 0.016704073434746388
+outer noise radius 7/100000 maxbias 0.3071803008069921 remainingmargin 0.01772968502954786
+
+
+### preparation.all_cycles
+validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+PASS: all three adaptive-cycle consequences and all three full nonlinear ODE replays
+
+
+### quadratic.geometry
+{
+  "verified": true,
+  "pairs": 3,
+  "genuine_fundamental_discriminants": [
+    35473497127622875037,
+    12470811778107064205,
+    9894082171941632381
+  ],
+  "universal_radius_squared": "1686433/4199040000",
+  "metric": "Euclidean normalized coefficient prefix; not full zeta samples"
+}
+
+
+### quadratic.infinite_geometry
+{
+  "verified": true,
+  "radius_interval_decimal": [
+    0.02004073208441193,
+    0.02004073208441193
+  ],
+  "radius_endpoint_included": true,
+  "scope": "existence of a query decoder on promised full-sequence data; no efficient algorithm claim"
+}
+
+
+### quadratic.conditional_query
+{
+  "verified": true,
+  "strata": 9,
+  "declared_radii": [
+    [
+      0,
+      0,
+      "2003/100000"
+    ],
+    [
+      0,
+      1,
+      "403/20000"
+    ],
+    [
+      0,
+      2,
+      "513/25000"
+    ],
+    [
+      1,
+      0,
+      "129/6250"
+    ],
+    [
+      1,
+      1,
+      "2077/100000"
+    ],
+    [
+      1,
+      2,
+      "529/25000"
+    ],
+    [
+      2,
+      0,
+      "2269/100000"
+    ],
+    [
+      2,
+      1,
+      "2283/100000"
+    ],
+    [
+      2,
+      2,
+      "581/25000"
+    ]
+  ],
+  "complete_tail_premise": "independently recheck/replay the bound source; no finite-support assumption"
+}
+
+
+### resolution.placement
+placement certificate: True
+
+
+### resolution.localization
+unknown-target certificate: True
+
+
+### resolution.window
+window certificate: True
+
+
+### harmonic.tests
+test_full_reconstruction_and_precision (test_cycles.Cycle1Tests.test_full_reconstruction_and_precision) ... ok
+test_independent_all_vertex_pairs (test_cycles.Cycle1Tests.test_independent_all_vertex_pairs) ... ok
+test_necessary_not_sufficient_and_domain_boundaries (test_cycles.Cycle1Tests.test_necessary_not_sufficient_and_domain_boundaries) ... ok
+test_raw_model_pair_identity_and_universal_cap (test_cycles.Cycle1Tests.test_raw_model_pair_identity_and_universal_cap) ... ok
+test_complete_dual_cover_and_vertex_replay (test_cycles.Cycle2Tests.test_complete_dual_cover_and_vertex_replay) ... ok
+test_different_dual_majorant_and_grid_check (test_cycles.Cycle2Tests.test_different_dual_majorant_and_grid_check) ... ok
+test_dual_and_design_negative_domains (test_cycles.Cycle2Tests.test_dual_and_design_negative_domains) ... ok
+test_independent_raw_all_2016_pairs (test_cycles.Cycle2Tests.test_independent_raw_all_2016_pairs) ... ok
+test_complete_interval_existence_and_refinement (test_cycles.Cycle3Tests.test_complete_interval_existence_and_refinement) ... ok
+test_exact_contraction_and_separation_consequences (test_cycles.Cycle3Tests.test_exact_contraction_and_separation_consequences) ... ok
+test_independent_full_integer_label_expansion (test_cycles.Cycle3Tests.test_independent_full_integer_label_expansion) ... ok
+test_interval_domains_and_adversarial_claims (test_cycles.Cycle3Tests.test_interval_domains_and_adversarial_claims) ... ok
+test_jacobian_against_independent_finite_difference (test_cycles.Cycle3Tests.test_jacobian_against_independent_finite_difference) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.146s
+
+OK
+
+
+### preparation.tests
+test_boundary_both_sides (test_cycle2.Tests.test_boundary_both_sides) ... ok
+test_frozen_fixed_decoder_certificate (test_cycle2.Tests.test_frozen_fixed_decoder_certificate) ... ok
+test_invalid_decoder_and_source_bindings (test_cycle2.Tests.test_invalid_decoder_and_source_bindings) ... ok
+test_nominal_preparation_derivative_is_insufficient (test_cycle2.Tests.test_nominal_preparation_derivative_is_insufficient) ... ok
+test_row_gate_can_improve_worst_row_gate (test_cycle2.Tests.test_row_gate_can_improve_worst_row_gate) ... ok
+test_source_replay (test_cycle2.Tests.test_source_replay) ... validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+ok
+test_amgm_sharp_unit_cube (test_cycle3.Tests.test_amgm_sharp_unit_cube) ... ok
+test_dual_and_binding_tamper (test_cycle3.Tests.test_dual_and_binding_tamper) ... ok
+test_exact_primal_dual_and_targets (test_cycle3.Tests.test_exact_primal_dual_and_targets) ... ok
+test_face_and_cap_violations (test_cycle3.Tests.test_face_and_cap_violations) ... ok
+test_isotropic_boundary_matches_previous_cycle (test_cycle3.Tests.test_isotropic_boundary_matches_previous_cycle) ... ok
+test_contract_and_boundary_rejections (test_preparation.Tests.test_contract_and_boundary_rejections) ... ok
+test_cycle1_exact_consequences (test_preparation.Tests.test_cycle1_exact_consequences) ... ok
+test_cycle1_source_replay (test_preparation.Tests.test_cycle1_source_replay) ... validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+ok
+test_finite_preparation_and_clock_derivatives (test_preparation.Tests.test_finite_preparation_and_clock_derivatives) ... ok
+test_launch_cancellation_control (test_preparation.Tests.test_launch_cancellation_control) ... ok
+test_six_direction_rhs (test_preparation.Tests.test_six_direction_rhs) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 12.025s
+
+OK
+
+
+### quadratic.tests
+test_bad_weights_budget_strata_and_comparison_rejected (test_conditional.ConditionalTests.test_bad_weights_budget_strata_and_comparison_rejected) ... ok
+test_decode_rejects_forged_certificate_before_lookup (test_conditional.ConditionalTests.test_decode_rejects_forged_certificate_before_lookup) ... ok
+test_exact_query_for_all_27_realizable_arithmetic_strata (test_conditional.ConditionalTests.test_exact_query_for_all_27_realizable_arithmetic_strata) ... ok
+test_full_tail_replay_matches_and_all_strata_certify (test_conditional.ConditionalTests.test_full_tail_replay_matches_and_all_strata_certify) ... ok
+test_raw_shared_grid_decoder_and_worst_noise_direction (test_conditional.ConditionalTests.test_raw_shared_grid_decoder_and_worst_noise_direction) ... ok
+test_source_cache_is_by_content_and_returns_fresh_documents (test_conditional.ConditionalTests.test_source_cache_is_by_content_and_returns_fresh_documents) ... ok
+test_actual_field_witnesses_with_independent_coefficients (test_geometry.GeometryTests.test_actual_field_witnesses_with_independent_coefficients) ... ok
+test_all_81_small_prime_patterns_and_exact_pair_distances (test_geometry.GeometryTests.test_all_81_small_prime_patterns_and_exact_pair_distances) ... ok
+test_forged_primes_prefixes_and_metric_rejected (test_geometry.GeometryTests.test_forged_primes_prefixes_and_metric_rejected) ... ok
+test_midpoint_and_nonzero_anchor_obstruction (test_geometry.GeometryTests.test_midpoint_and_nonzero_anchor_obstruction) ... ok
+test_elementary_split_prime_for_actual_squarefree_radicands (test_infinite.InfiniteTests.test_elementary_split_prime_for_actual_squarefree_radicands) ... ok
+test_false_endpoint_topology_and_tail_rejected (test_infinite.InfiniteTests.test_false_endpoint_topology_and_tail_rejected) ... ok
+test_independent_positive_series_and_sqrt_bounds (test_infinite.InfiniteTests.test_independent_positive_series_and_sqrt_bounds) ... ok
+test_odd_square_local_parity_and_formal_difference (test_infinite.InfiniteTests.test_odd_square_local_parity_and_formal_difference) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.336s
+
+OK
+
+
+### noise.tests
+test_complete_new_replay_and_precision (test_cycles.N1Tests.test_complete_new_replay_and_precision) ... ok
+test_divisor_counts_and_source_contract_controls (test_cycles.N1Tests.test_divisor_counts_and_source_contract_controls) ... ok
+test_exact_affine_exclusion_and_variance (test_cycles.N1Tests.test_exact_affine_exclusion_and_variance) ... ok
+test_independent_raw_grid_responses_and_covariance (test_cycles.N1Tests.test_independent_raw_grid_responses_and_covariance) ... ok
+test_full_vector_at_independent_precision (test_cycles.N2Tests.test_full_vector_at_independent_precision) ... ok
+test_independent_mpmath_full_tail_values (test_cycles.N2Tests.test_independent_mpmath_full_tail_values) ... ok
+test_midpoint_geometry_and_unchanged_noise_response (test_cycles.N2Tests.test_midpoint_geometry_and_unchanged_noise_response) ... ok
+test_strict_budgets_and_negative_controls (test_cycles.N2Tests.test_strict_budgets_and_negative_controls) ... ok
+test_exact_constant_alias_and_contract_controls (test_cycles.N3Tests.test_exact_constant_alias_and_contract_controls) ... ok
+test_full_arb_reconstruction_and_precision (test_cycles.N3Tests.test_full_arb_reconstruction_and_precision) ... ok
+test_independent_augmented_physical_map_and_worked_source (test_cycles.N3Tests.test_independent_augmented_physical_map_and_worked_source) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 4.202s
+
+OK
+
+
+### resolution.tests
+test_centroid_noise_inequality_and_zero_obstruction (test_localization.LocalizationTests.test_centroid_noise_inequality_and_zero_obstruction) ... ok
+test_certificate_and_adversarial_claims (test_localization.LocalizationTests.test_certificate_and_adversarial_claims) ... ok
+test_first_moment_tail_identity (test_localization.LocalizationTests.test_first_moment_tail_identity) ... ok
+test_infinite_symmetry_on_large_finite_control (test_localization.LocalizationTests.test_infinite_symmetry_on_large_finite_control) ... ok
+test_dense_arb_exponential (test_placement.PlacementTests.test_dense_arb_exponential) ... ok
+test_exact_certificate_and_threshold (test_placement.PlacementTests.test_exact_certificate_and_threshold) ... ok
+test_invalid_domains (test_placement.PlacementTests.test_invalid_domains) ... ok
+test_locality_moments_and_boundary_counterexample (test_placement.PlacementTests.test_locality_moments_and_boundary_counterexample) ... ok
+test_certificate_and_corruption (test_window.WindowTests.test_certificate_and_corruption) ... ok
+test_discarded_gram_identity_and_psd (test_window.WindowTests.test_discarded_gram_identity_and_psd) ... ok
+test_two_symmetric_readouts_are_blind (test_window.WindowTests.test_two_symmetric_readouts_are_blind) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.093s
+
+OK
+

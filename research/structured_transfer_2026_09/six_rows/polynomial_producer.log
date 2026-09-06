@@ -1,0 +1,25 @@
+case 1 records 2 elapsed 0.01
+case 11 records 28 elapsed 0.05
+case 21 records 51 elapsed 0.09
+case 31 records 117 elapsed 1.32
+case 41 records 152 elapsed 1.94
+case 51 records 215 elapsed 3.17
+case 61 records 269 elapsed 4.16
+case 71 records 328 elapsed 5.25
+case 81 records 393 elapsed 6.45
+case 91 records 430 elapsed 7.11
+case 101 records 493 elapsed 8.27
+case 111 records 539 elapsed 9.1
+case 121 records 586 elapsed 9.96
+case 131 records 657 elapsed 11.32
+case 141 records 715 elapsed 12.39
+case 151 records 768 elapsed 13.36
+case 161 records 808 elapsed 14.08
+case 171 records 845 elapsed 14.72
+case 181 records 891 elapsed 15.55
+case 191 records 957 elapsed 16.77
+case 201 records 1015 elapsed 17.83
+case 211 records 1106 elapsed 19.71
+case 221 records 1168 elapsed 20.85
+case 231 records 1278 elapsed 22.93
+PRODUCED 1278 records in 22.940794708993053

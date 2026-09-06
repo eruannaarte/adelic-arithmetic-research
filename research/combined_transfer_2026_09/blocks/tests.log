@@ -1,0 +1,15 @@
+test_actual_grid_complete_source_replay (__main__.OrbitTests.test_actual_grid_complete_source_replay) ... ok
+test_discarded_infinite_valuation_tail_rejected (__main__.OrbitTests.test_discarded_infinite_valuation_tail_rejected) ... ok
+test_exact_clock_domain (__main__.OrbitTests.test_exact_clock_domain) ... ok
+test_fake_rounding_certificate_rejected (__main__.OrbitTests.test_fake_rounding_certificate_rejected) ... ok
+test_false_decorrelation_rejected (__main__.OrbitTests.test_false_decorrelation_rejected) ... ok
+test_h120_actual_queries_and_exact_boundaries (__main__.OrbitTests.test_h120_actual_queries_and_exact_boundaries) ... ok
+test_missing_clock_corner_rejected (__main__.OrbitTests.test_missing_clock_corner_rejected) ... ok
+test_missing_nonlinear_remainder_rejected (__main__.OrbitTests.test_missing_nonlinear_remainder_rejected) ... ok
+test_missing_phase_lag_rejected (__main__.OrbitTests.test_missing_phase_lag_rejected) ... ok
+test_underclaimed_complete_odd_mass_rejected (__main__.OrbitTests.test_underclaimed_complete_odd_mass_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 4.163s
+
+OK

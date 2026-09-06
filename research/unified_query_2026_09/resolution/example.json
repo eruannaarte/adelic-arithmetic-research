@@ -1,0 +1,89 @@
+{
+  "status": "floating full-model diagnostic; not an interval certificate",
+  "model_n": 1001,
+  "model_state_dimension": 1002001,
+  "full_stencil_terms": 90,
+  "cases": 192,
+  "examples": [
+    {
+      "target": 490,
+      "tau": 1.0,
+      "channel_count": 50,
+      "cases": 24,
+      "source_error_max": 0.00012510203891012237,
+      "centroid_error_max": 1.585373752277519e-07,
+      "actual_Gram_loss_norm": 2.239488175190867e-21,
+      "actual_retained_floor_L2": 5.750607596328798e-06
+    },
+    {
+      "target": 490,
+      "tau": 1.0,
+      "channel_count": 48,
+      "cases": 24,
+      "source_error_max": 0.00012510203891052054,
+      "centroid_error_max": 1.540076937089907e-07,
+      "actual_Gram_loss_norm": 1.7077847576402287e-19,
+      "actual_retained_floor_L2": 5.750607596328741e-06
+    },
+    {
+      "target": 490,
+      "tau": 2.0,
+      "channel_count": 50,
+      "cases": 24,
+      "source_error_max": 0.00015079357434913399,
+      "centroid_error_max": 2.2661146203972748e-07,
+      "actual_Gram_loss_norm": 8.716320467352286e-15,
+      "actual_retained_floor_L2": 3.958009553215573e-06
+    },
+    {
+      "target": 490,
+      "tau": 2.0,
+      "channel_count": 48,
+      "cases": 24,
+      "source_error_max": 0.00015079357518462425,
+      "centroid_error_max": 4.31054331784253e-07,
+      "actual_Gram_loss_norm": 1.7798199846929928e-13,
+      "actual_retained_floor_L2": 3.958009509341402e-06
+    },
+    {
+      "target": 510,
+      "tau": 1.0,
+      "channel_count": 50,
+      "cases": 24,
+      "source_error_max": 0.00012510203891029958,
+      "centroid_error_max": 1.540076937089907e-07,
+      "actual_Gram_loss_norm": 2.5863286777862916e-23,
+      "actual_retained_floor_L2": 5.750607596328793e-06
+    },
+    {
+      "target": 510,
+      "tau": 1.0,
+      "channel_count": 48,
+      "cases": 24,
+      "source_error_max": 0.00012510203891029958,
+      "centroid_error_max": 1.494780121902295e-07,
+      "actual_Gram_loss_norm": 2.239488175190867e-21,
+      "actual_retained_floor_L2": 5.750607596328796e-06
+    },
+    {
+      "target": 510,
+      "tau": 2.0,
+      "channel_count": 50,
+      "cases": 24,
+      "source_error_max": 0.00015079357430282844,
+      "centroid_error_max": 2.183432457059098e-07,
+      "actual_Gram_loss_norm": 3.782568378242935e-16,
+      "actual_retained_floor_L2": 3.958009555615905e-06
+    },
+    {
+      "target": 510,
+      "tau": 2.0,
+      "channel_count": 48,
+      "cases": 24,
+      "source_error_max": 0.00015079357434871258,
+      "centroid_error_max": 2.1377360326368944e-07,
+      "actual_Gram_loss_norm": 8.716320467352287e-15,
+      "actual_retained_floor_L2": 3.958009553215573e-06
+    }
+  ]
+}

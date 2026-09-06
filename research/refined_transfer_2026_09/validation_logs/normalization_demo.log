@@ -1,0 +1,16 @@
+raw bank 7 completed; cases 9 elapsed 72.13
+raw bank 8 completed; cases 45 elapsed 83.21
+raw bank 9 completed; cases 72 elapsed 96.01
+{
+  "verified": true,
+  "status": "exact synthetic raw-data promise and exact normalization/decoding checks",
+  "case_count": 72,
+  "bank_profiles": 8,
+  "source_amplitude_scales": [
+    "1/10^40",
+    "1",
+    "10^40"
+  ],
+  "maximum_source_relative_error_squared_upper": "12141843934710072571797/1000000000000000000000000000000",
+  "all_normalization_charges_at_most": "1/1000000000"
+}

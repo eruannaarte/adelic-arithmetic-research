@@ -1,0 +1,89 @@
+{
+  "schema": "harmonic-cycle1-v1",
+  "model": {
+    "primes": [
+      2,
+      3,
+      5
+    ],
+    "states": 4,
+    "readings": 6,
+    "factor_floor_target": "163/200"
+  },
+  "classes": {
+    "1": {
+      "oriented_differences": 9,
+      "minimum_ratio": "2",
+      "difference": [
+        1,
+        0,
+        0
+      ],
+      "required_time": [
+        "27410813133/40000000000",
+        "342635164163/500000000000"
+      ]
+    },
+    "2": {
+      "oriented_differences": 54,
+      "minimum_ratio": "27/25",
+      "difference": [
+        0,
+        3,
+        -2
+      ],
+      "required_time": [
+        "8814562279083/1000000000000",
+        "2203640569771/250000000000"
+      ]
+    },
+    "3": {
+      "oriented_differences": 108,
+      "minimum_ratio": "25/24",
+      "difference": [
+        -3,
+        -1,
+        2
+      ],
+      "required_time": [
+        "20563168418583/1000000000000",
+        "2570396052323/125000000000"
+      ]
+    }
+  },
+  "strongest_time_lower": [
+    "20563168418583/1000000000000",
+    "2570396052323/125000000000"
+  ],
+  "previous_cubic_time_lower": [
+    "1647050313643/1000000000000",
+    "411762578411/250000000000"
+  ],
+  "improvement_ratio": [
+    "12484845331227/1000000000000",
+    "3121211332807/250000000000"
+  ],
+  "witness": {
+    "numerator_vertex": [
+      0,
+      0,
+      2
+    ],
+    "denominator_vertex": [
+      3,
+      1,
+      0
+    ],
+    "integer_labels": [
+      25,
+      24
+    ],
+    "changed_factors": 3,
+    "factor_distance_squared": "6"
+  },
+  "time20_floor_upper": [
+    "39697617201/50000000000",
+    "793952344021/1000000000000"
+  ],
+  "time20_rejected_for_target": true
+}

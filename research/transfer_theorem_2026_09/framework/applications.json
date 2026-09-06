@@ -1,0 +1,118 @@
+{
+  "previous": {
+    "passed": true,
+    "models": 3,
+    "scalar_gates": 687,
+    "quadratic_pairs": 243,
+    "polynomial_coordinates": 441,
+    "preparation_rows": 3
+  },
+  "new_noise": {
+    "passed": true,
+    "scalar_gates": 392,
+    "design_degrees": [
+      {
+        "design": "multi",
+        "degree": 6,
+        "sensor_radius": "1/10000"
+      },
+      {
+        "design": "multi",
+        "degree": 8,
+        "sensor_radius": "1/10000"
+      },
+      {
+        "design": "multi",
+        "degree": 10,
+        "sensor_radius": "99/1000000"
+      },
+      {
+        "design": "multi",
+        "degree": 12,
+        "sensor_radius": "99/1000000"
+      },
+      {
+        "design": "outer",
+        "degree": 6,
+        "sensor_radius": "1/12500"
+      },
+      {
+        "design": "outer",
+        "degree": 8,
+        "sensor_radius": "1/12500"
+      },
+      {
+        "design": "outer",
+        "degree": 10,
+        "sensor_radius": "1/12500"
+      },
+      {
+        "design": "outer",
+        "degree": 12,
+        "sensor_radius": "79/1000000"
+      }
+    ],
+    "additional_conditional_normal_residual_gates": 392,
+    "conditional_normal_residual_radius": "1/100000000",
+    "complete_tail_consequences_checked": true,
+    "solve_contract": "exact solve, or a verified exact-model normal residual within the declared radius"
+  },
+  "new_resolution": {
+    "passed": true,
+    "direct_rows": [
+      485,
+      488,
+      491,
+      494,
+      497,
+      500,
+      503,
+      506,
+      509,
+      512,
+      516
+    ],
+    "individual_cases": 21,
+    "pair_cases": 210,
+    "whole_cell_records": 895,
+    "metric_contracts": [
+      {
+        "source_metric": "L2",
+        "sensor_relative_radius": "3/10000000",
+        "model_relative_radius": "1/1000000000",
+        "conditional_computed_data_relative_radius": "1/1000000000",
+        "total_relative_radius": "151/500000000",
+        "pair_floor": "361/25600000000000",
+        "individual_floor": "2527/25600000000",
+        "strict_source_error_upper": "481/500000",
+        "label_gate_passed": true,
+        "source_gate_passed": true
+      },
+      {
+        "source_metric": "declared_H1",
+        "sensor_relative_radius": "3/100000000",
+        "model_relative_radius": "1/1000000000",
+        "conditional_computed_data_relative_radius": "1/1000000000",
+        "total_relative_radius": "1/31250000",
+        "pair_floor": "361/1049600000000000",
+        "individual_floor": "2527/1049600000000",
+        "strict_source_error_upper": "481/500000",
+        "label_gate_passed": true,
+        "source_gate_passed": true
+      },
+      {
+        "source_metric": "natural_discrete_H1",
+        "sensor_relative_radius": "3/100000000",
+        "model_relative_radius": "1/1000000000",
+        "conditional_computed_data_relative_radius": "1/1000000000",
+        "total_relative_radius": "1/31250000",
+        "pair_floor": "361/1049600000000000",
+        "individual_floor": "2527/1049600000000",
+        "strict_source_error_upper": "481/500000",
+        "label_gate_passed": true,
+        "source_gate_passed": true
+      }
+    ],
+    "scope": "common pair and inverse theorem after the complete spatial consumer; exact inverse or additional certified solve error required"
+  }
+}

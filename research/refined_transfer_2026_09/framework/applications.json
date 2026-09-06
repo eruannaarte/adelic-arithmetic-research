@@ -1,0 +1,197 @@
+{
+  "schema": "refined-common-transfer-applications-v1",
+  "passed": true,
+  "unchanged_transfer_library": "research/transfer_theorem_2026_09/framework/transfer.py",
+  "spatial": {
+    "passed": true,
+    "bank_rows": [
+      488,
+      490,
+      497,
+      500,
+      504,
+      508,
+      510
+    ],
+    "separate_individual_cases": 21,
+    "separate_pair_cases": 210,
+    "nonempty_cells": 1051,
+    "individual_cell_gates": 69,
+    "pair_cell_gates": 3322,
+    "whole_cell_gates": 3391,
+    "global_pair_gates": 1,
+    "global_inverse_gates": 1,
+    "sensor_relative_radius": "1/10000000",
+    "model_relative_radius": "1/1000000000",
+    "conditional_computed_data_radius": "1/1000000000",
+    "total_radius": "51/500000000",
+    "individual_floor": "13357/1280000000000",
+    "pair_floor": "361/12800000000000000",
+    "strict_source_relative_error_upper": "998507/1000000000",
+    "source_accuracy_squared_fraction_of_target": "332928/333925",
+    "pair_noise_squared_fraction_of_floor": "166464/225625",
+    "premise": "complete kernel reconstruction and exact rational normalized data, or separately certified computed-data error"
+  },
+  "arithmetic": {
+    "passed": true,
+    "scalar_integer_gates": 98,
+    "designs": [
+      {
+        "design": "multi",
+        "degree": 8,
+        "unknown_integer_gates": 49,
+        "amplitude_bound": "20000",
+        "normalized_frequency_limit": "1",
+        "phase": "arbitrary real",
+        "uniform_weighted_factor": "69594926934115004835210552588307644275857/51090942171709440000000000000000000000000000000000",
+        "nonpolynomial_radius": "69594926934115004835210552588307644275857/2554547108585472000000000000000000000000000000",
+        "sensor_radius": "1/25000",
+        "correction_radius": "1/100000000000000000000",
+        "joint_reading_radius": "171776811277533910380681638443027644275857/2554547108585472000000000000000000000000000000",
+        "actual_normal_residual_upper": "793778955607940852617/250000000000000000000000000000000000000000000000000000000000",
+        "coefficient_error_upper_rounded_outward": "8356969691/20000000000",
+        "old_pointwise_sufficient_gates_failed": 47
+      },
+      {
+        "design": "outer",
+        "degree": 8,
+        "unknown_integer_gates": 49,
+        "amplitude_bound": "20000",
+        "normalized_frequency_limit": "1",
+        "phase": "arbitrary real",
+        "uniform_weighted_factor": "557150347557968166865517092667294744891/408727537373675520000000000000000000000000000000",
+        "nonpolynomial_radius": "557150347557968166865517092667294744891/20436376868683776000000000000000000000000000",
+        "sensor_radius": "1/25000",
+        "correction_radius": "1/100000000000000000000",
+        "joint_reading_radius": "1374605422305319411229285779505054744891/20436376868683776000000000000000000000000000",
+        "actual_normal_residual_upper": "641278217951723206787/200000000000000000000000000000000000000000000000000000000000",
+        "coefficient_error_upper_rounded_outward": "466872332637/1000000000000",
+        "old_pointwise_sufficient_gates_failed": 47
+      }
+    ],
+    "older_sufficient_gates_failed": 94,
+    "family_factors_reconstructed": 2,
+    "physical_weighted_norm_premises": {
+      "polynomial_norms": 24,
+      "moments": 6,
+      "hash_bound": true
+    },
+    "premise": "complete infinite tail, known a(1)=1, declared weighted sensor/drift bounds, and physical residual replay on the bound data and proposals"
+  },
+  "successful_common_transfer_gates": 3509,
+  "input_sha256": {
+    "research/transfer_theorem_2026_09/framework/transfer.py": "3fd2f75c17a16a06514571c78e9a8f0c7dc6e8342619db4de07085a9f6edd859",
+    "research/transfer_theorem_2026_09/framework/PROOFS.md": "827ee8096aca92a489c57981c9f8f3d66ceacf4f4e1ae3bb3a7f34728343161e",
+    "research/transfer_theorem_2026_09/resolution/kernel.json": "f8e6dd8821a3a1881ebda34cdcecdbb786c3d71b3e1aeecf97a7f1b1a6c03952",
+    "research/refined_transfer_2026_09/resolution/certificate_7.json": "a99de86f229bbe329262c9334a70a11bf240318bc87ec238164b254d8b61e611",
+    "research/refined_transfer_2026_09/resolution/check.py": "0f319818fc71c762d7558f1e4351c5f863c0ece546dcd48ddfa2813a41581266",
+    "research/transfer_theorem_2026_09/noise/evidence.json": "b4b6010bfe3d54785a5d564cc9c400a5a3fec697667d97c79994fd63b27bd365",
+    "research/refined_transfer_2026_09/noise/approximation.json": "16e319de07de35987344a96b23a42e5032b09870ba478dd7716bb1956c70ffd4",
+    "research/refined_transfer_2026_09/noise/checked_approximation.json": "8b4549d2977d210a93a4518f185b99c2ee150cccceefb44be55389e037a0501b",
+    "research/refined_transfer_2026_09/noise/check_approximation.py": "f2dd1a2eebaca23a6e0fc0cbed039f512d7de6f88510e27a5656def59de1c6f2",
+    "research/refined_transfer_2026_09/noise/data.json": "be1444518c2cfafa58511622d613d0c9cb98c93cf19588d53b85cf8c8850f9d0",
+    "research/refined_transfer_2026_09/noise/result_multi.json": "8d04f5230678d37f3d2d18056d3c8f7fa558b345a64a8bb7eb6e80da60f1e45c",
+    "research/refined_transfer_2026_09/noise/result_outer.json": "223f4f188212d1800c7e9679259c73f737c12d58ee1c3cd537590adb43513d83",
+    "research/refined_transfer_2026_09/noise/consequences.py": "c03bee7900c18bac05a263e570f21f876d5d76df9653ee86ee9e0f4d97935635",
+    "research/refined_transfer_2026_09/normalization/evidence.json": "3b5e5196873ead934100543e936dfb3e36079a450bc4722597647c1a8313ac98",
+    "research/refined_transfer_2026_09/normalization/normalize.py": "c84a708733c16e8692627d1163429e70ff012fff9f884efcdaa10631555b49ef"
+  },
+  "scope": "shared theorem consequences; model reconstruction, calibration, and physical residual verification remain separate premises",
+  "normalization": {
+    "passed": true,
+    "verified_raw_packets": 72,
+    "bank_profiles": 8,
+    "all_packet_charges_within_xi": true,
+    "maximum_actual_charge": "280000063/465044392320000000",
+    "seven_bank_pair_gates": 9,
+    "seven_bank_inverse_gates": 9,
+    "seven_bank_cases": [
+      {
+        "time": "1",
+        "fixture_source_label": 490,
+        "source_amplitude_scale": "1/10000000000000000000000000000000000000000",
+        "charged_physical_relative_radius": "280000021/514656220740000000",
+        "total_relative_radius": "2613013915787/25732811037000000000",
+        "target_gate_passed": true,
+        "source_gate_passed": true
+      },
+      {
+        "time": "1",
+        "fixture_source_label": 500,
+        "source_amplitude_scale": "1",
+        "charged_physical_relative_radius": "280000021/514656220740000000",
+        "total_relative_radius": "2613013915787/25732811037000000000",
+        "target_gate_passed": true,
+        "source_gate_passed": true
+      },
+      {
+        "time": "1",
+        "fixture_source_label": 510,
+        "source_amplitude_scale": "10000000000000000000000000000000000000000",
+        "charged_physical_relative_radius": "280000021/514656220740000000",
+        "total_relative_radius": "2613013915787/25732811037000000000",
+        "target_gate_passed": true,
+        "source_gate_passed": true
+      },
+      {
+        "time": "3/2",
+        "fixture_source_label": 490,
+        "source_amplitude_scale": "1/10000000000000000000000000000000000000000",
+        "charged_physical_relative_radius": "280000021/486731802120000000",
+        "total_relative_radius": "617998900439/6084147526500000000",
+        "target_gate_passed": true,
+        "source_gate_passed": true
+      },
+      {
+        "time": "3/2",
+        "fixture_source_label": 500,
+        "source_amplitude_scale": "1",
+        "charged_physical_relative_radius": "280000021/486731802120000000",
+        "total_relative_radius": "617998900439/6084147526500000000",
+        "target_gate_passed": true,
+        "source_gate_passed": true
+      },
+      {
+        "time": "3/2",
+        "fixture_source_label": 510,
+        "source_amplitude_scale": "10000000000000000000000000000000000000000",
+        "charged_physical_relative_radius": "280000021/486731802120000000",
+        "total_relative_radius": "617998900439/6084147526500000000",
+        "target_gate_passed": true,
+        "source_gate_passed": true
+      },
+      {
+        "time": "2",
+        "fixture_source_label": 490,
+        "source_amplitude_scale": "1/10000000000000000000000000000000000000000",
+        "charged_physical_relative_radius": "280000021/465044392320000000",
+        "total_relative_radius": "1181237091133/11626109808000000000",
+        "target_gate_passed": true,
+        "source_gate_passed": true
+      },
+      {
+        "time": "2",
+        "fixture_source_label": 500,
+        "source_amplitude_scale": "1",
+        "charged_physical_relative_radius": "280000021/465044392320000000",
+        "total_relative_radius": "1181237091133/11626109808000000000",
+        "target_gate_passed": true,
+        "source_gate_passed": true
+      },
+      {
+        "time": "2",
+        "fixture_source_label": 510,
+        "source_amplitude_scale": "10000000000000000000000000000000000000000",
+        "charged_physical_relative_radius": "280000021/465044392320000000",
+        "total_relative_radius": "1181237091133/11626109808000000000",
+        "target_gate_passed": true,
+        "source_gate_passed": true
+      }
+    ],
+    "premise": "exact raw input and time, declared sensor calibration, and previously proved physical response gain; synthetic fixture promise replay remains separate"
+  },
+  "base_run_reused_for_normalization": {
+    "all_previous_inputs_rehashed_unchanged": true,
+    "scope": "3,491 base gates established in the earlier full adapter run; 72 packets and 18 new gates executed now"
+  }
+}

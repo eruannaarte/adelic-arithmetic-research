@@ -1,0 +1,131 @@
+{
+  "verified": true,
+  "mode": "tests",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "seconds": 16.343,
+  "checks": [
+    {
+      "name": "P1 exact consequence",
+      "command": [
+        "python",
+        "research/five_paths_2026_09/path1_preparation/checker.py",
+        "research/five_paths_2026_09/path1_preparation/region.json",
+        "research/five_paths_2026_09/path1_preparation/nominal.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.026
+    },
+    {
+      "name": "P2 full phase and consequence",
+      "command": [
+        "python",
+        "research/five_paths_2026_09/path2_harmonic/certificate_checker.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.049
+    },
+    {
+      "name": "P3 exact consequence",
+      "command": [
+        "python",
+        "research/five_paths_2026_09/path3_noise/check_consequences.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.272
+    },
+    {
+      "name": "P4 exact remote and consequence",
+      "command": [
+        "python",
+        "research/five_paths_2026_09/path4_realizability/check_certificate.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.573
+    },
+    {
+      "name": "P4 refinement consequence",
+      "command": [
+        "python",
+        "research/five_paths_2026_09/path4_realizability/check_certificate.py",
+        "research/five_paths_2026_09/path4_realizability/refinement.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.568
+    },
+    {
+      "name": "P5 exact transfer consequence",
+      "command": [
+        "python",
+        "research/five_paths_2026_09/path5_resolution/check_certificate.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.036
+    },
+    {
+      "name": "P1 controls and complete nonlinear replay",
+      "command": [
+        "python",
+        "research/five_paths_2026_09/path1_preparation/validate.py"
+      ],
+      "exit_code": 0,
+      "seconds": 8.576
+    },
+    {
+      "name": "P2 15 controls",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/five_paths_2026_09/path2_harmonic",
+        "-p",
+        "test_certificate.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 0.175
+    },
+    {
+      "name": "P3 5 controls and weight/Gram replay",
+      "command": [
+        "python",
+        "research/five_paths_2026_09/path3_noise/audit_checks.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.704
+    },
+    {
+      "name": "P4 17 controls",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/five_paths_2026_09/path4_realizability",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 5.082
+    },
+    {
+      "name": "P5 16 controls",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/five_paths_2026_09/path5_resolution",
+        "-p",
+        "test_resolution.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 0.282
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "verified": true,
+  "scope": "this particular seven-row bank, two targets and two nonzero L2 sources",
+  "sensor_relative_radius": "3/100000000",
+  "physical_difference_upper": "43483467004832886304975184047681/1500000000000000000000000000000000000000",
+  "sum_source_norms_lower": "353159239995156362798530674613/250000000000000000000000000000",
+  "sufficient_collision_radius_upper": "43483467004832886304975184047681/2118955439970938176791184047678000000000",
+  "consequence": "at this allowed noise radius, no decoder can always distinguish these two targets"
+}

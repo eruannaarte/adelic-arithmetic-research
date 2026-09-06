@@ -1,0 +1,29 @@
+{
+  "verified": true,
+  "approximation_producer_precisions": [
+    192,
+    256,
+    320
+  ],
+  "independent_norm_consumer_precisions": [
+    192,
+    320
+  ],
+  "rational_polynomials_checked": 24,
+  "complete_weighted_moments_checked": 6,
+  "exact_integer_consequence_gates_checked": 98,
+  "actual_physical_data_reconstruction_bits": 320,
+  "saved_exact_proposals_reverified_in_both_residual_formulations": true,
+  "unknown_integers_recovered_per_design": 49,
+  "adverse_tests_passed": 7,
+  "independent_moment_audit": "../review/weighted_moment_review.py",
+  "logs": [
+    "check.log",
+    "consequences.log",
+    "demonstrate.log",
+    "precision_replay.log",
+    "replay_320.log",
+    "tests.log"
+  ],
+  "physical_premise_scope": "Declared slow sinusoidal family, sensor budget, exact timing, original physical weights and integer source envelope; no empirical calibration claim."
+}

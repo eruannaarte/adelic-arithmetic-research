@@ -1,0 +1,95 @@
+{
+  "complete_time_certificate": "PASS: producer plus separate exact consumer, 1051 nonempty cells and 3391 records; 231 individual case covers",
+  "focused_tests": {
+    "count": 8,
+    "status": "PASS",
+    "log": "tests.log",
+    "elapsed_seconds": 146.11
+  },
+  "physical_forward_diagnostics": {
+    "status": "floating full finite-model diagnostics; no certified normalization or arithmetic rounding claim",
+    "finite_state_count": 1002001,
+    "case_count": 5,
+    "cases": [
+      {
+        "time": "1",
+        "target": 490,
+        "source": [
+          "3/5",
+          "4/5"
+        ],
+        "physical_model_difference": 7.806267406412766e-18,
+        "physical_added_noise": 1e-07,
+        "noise_direction": "weakest left singular vector, floating diagnostic",
+        "source_relative_error": 0.0001639318734217232,
+        "recovered_target": 490
+      },
+      {
+        "time": "1",
+        "target": 496,
+        "source": [
+          "3/5",
+          "4/5"
+        ],
+        "physical_model_difference": 9.55144713622272e-18,
+        "physical_added_noise": 1e-07,
+        "noise_direction": "weakest left singular vector, floating diagnostic",
+        "source_relative_error": 0.0009705473078514181,
+        "recovered_target": 496
+      },
+      {
+        "time": "1221707459/1000000000",
+        "target": 493,
+        "source": [
+          "3/5",
+          "4/5"
+        ],
+        "physical_model_difference": 6.348429612648545e-18,
+        "physical_added_noise": 1e-07,
+        "noise_direction": "weakest left singular vector, floating diagnostic",
+        "source_relative_error": 0.00016324899643140525,
+        "recovered_target": 493
+      },
+      {
+        "time": "3/2",
+        "target": 507,
+        "source": [
+          "3/5",
+          "4/5"
+        ],
+        "physical_model_difference": 9.220820582990939e-18,
+        "physical_added_noise": 1e-07,
+        "noise_direction": "weakest left singular vector, floating diagnostic",
+        "source_relative_error": 0.0001421706749546327,
+        "recovered_target": 507
+      },
+      {
+        "time": "2",
+        "target": 510,
+        "source": [
+          "3/5",
+          "4/5"
+        ],
+        "physical_model_difference": 1.2894263231966281e-17,
+        "physical_added_noise": 1e-07,
+        "noise_direction": "weakest left singular vector, floating diagnostic",
+        "source_relative_error": 9.266110218741136e-05,
+        "recovered_target": 510
+      }
+    ],
+    "maximum_physical_model_difference": 1.2894263231966281e-17,
+    "maximum_source_relative_error": 0.0009705473078514181
+  },
+  "coarse_grid_collision": {
+    "verified": true,
+    "scope": "this particular seven-row bank, two targets and two nonzero L2 sources",
+    "sensor_relative_radius": "1/10000000",
+    "physical_difference_upper": "1618578237288144044158782698817/1000000000000000000000000000000000000000",
+    "sum_source_norms_lower": "221385153077557643561356539763/200000000000000000000000000000",
+    "sufficient_collision_radius_upper": "1618578237288144044158782698817/1106925765387788217806782698815000000000",
+    "consequence": "at this allowed noise radius, no decoder can always distinguish these two targets"
+  },
+  "independent_point_review": "../review/seven_point_review.json",
+  "physical_kernel_replay": "shared root validation; see ../VALIDATION.json",
+  "prior_files": "none changed by this subtask"
+}

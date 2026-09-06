@@ -1,0 +1,37 @@
+{
+  "status": "completed local Path5 extension",
+  "central_result": "n=1001,K=2,central full-Neumann transfer for every tau in[1,2] in L2,declaredH1,natural discreteH1",
+  "analytic_proof": "APPENDIX.md",
+  "fresh_numerical_proofs": [
+    "baseline.json",
+    "certificate.json"
+  ],
+  "focused_test_count": 16,
+  "focused_tests_passed": 16,
+  "independent_small_grid_algorithm": "Arb dense matrix exponential and derivative action, n=7,c=5/4,orders0..3",
+  "refinement": {
+    "status": "PASS",
+    "base_precision_bits": 192,
+    "refinement_precision_bits": 256,
+    "base_order": 18,
+    "refinement_order": 20,
+    "base_exponential_degree": 64,
+    "refinement_exponential_degree": 72,
+    "coefficient_intersections_checked": 171,
+    "metric_bounds_improved": true,
+    "meaning": "independent precision/order/degree replay is consistent; it is not a differential implementation of Arb"
+  },
+  "not_established": [
+    "physical model validation",
+    "hardware local sensor realization",
+    "minimal grid",
+    "target placement robustness",
+    "growing-K stability",
+    "fixed-grid all-time transfer"
+  ],
+  "remaining_trusted_components": [
+    "Arb interval arithmetic and rigorous complex quadrature",
+    "audited base coefficient algorithms, source hashes recorded"
+  ],
+  "source_files_modified": false
+}

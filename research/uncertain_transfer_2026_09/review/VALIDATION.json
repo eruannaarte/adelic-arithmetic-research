@@ -1,0 +1,25 @@
+{
+  "verified": true,
+  "independent_review_scripts": 5,
+  "results": {
+    "arithmetic_review.json": true,
+    "clock_review.json": true,
+    "raw_review.json": true,
+    "spatial_review.json": true,
+    "weighted_review.json": true
+  },
+  "files_sha256": {
+    "CLOCK_NUISANCE.md": "858b3cc3370feb9fdf22b145fac0d526ef6337ebe60d721fbc0e3fd575fde067",
+    "REVIEW.md": "81693581210604cac11338715548d76430372876ce6cb68a16123ec54a078471",
+    "arithmetic_review.json": "07796e79c585f65c07ac299a017fa8861b6136a6076a4b15a15bdc05f58719c7",
+    "arithmetic_review.py": "cc00c4f12df39230eb05a621fd0d5827b3d44e94cae96e923a106639886e6c9c",
+    "clock_review.json": "d9d7e903070b4bbebd2e10e73fa6379701dd68de23916f990c622271f24f4a53",
+    "clock_review.py": "23e90da49161f437106c463cf6374eddf663ce93a5705a9b39302e4ac7178b44",
+    "raw_review.json": "832ab8c4a6233f9266ae473df590e31fb3975f092442856aa72154b95702cba9",
+    "raw_review.py": "3de64891e646794cf97c96edb5cc8f4b23be559d7bcb6a81b96a39d36dc12649",
+    "spatial_review.json": "dc6d2661676ecf4341d0dd10afeb44fb8a98ded69ee5c3bb7670688a7268db0a",
+    "spatial_review.py": "0654d85c7f335351967ebd6f604e411dd6ad4425bdb9be74165b3f8025b67919",
+    "weighted_review.json": "30d5d2592e905b64d7535ca73f563728b8f6734d809046cabf489a47fe3dd4bb",
+    "weighted_review.py": "8023170427fe8a84c12ba67353f232f6b140eb12554d06e3ea8325e376ee8b9b"
+  }
+}

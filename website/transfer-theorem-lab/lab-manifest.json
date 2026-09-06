@@ -1,0 +1,30 @@
+{
+  "schema": "tgn-static-lab-manifest-v1",
+  "id": "transfer-theorem-lab-v1",
+  "title": "The Transfer Theorem Lab",
+  "research_line": "Certified query recovery under structured uncertainty",
+  "version": "1.0.0",
+  "date": "2026-09-05",
+  "suggested_route": "/number-geometry/certified-query-recovery/lab/",
+  "article_route": "/number-geometry/certified-query-recovery/",
+  "runtime": "static HTML/CSS/JavaScript/SVG; no background network requests",
+  "source_tag": "transfer-theorem-v1-2026-09-05",
+  "status_semantics": [
+    "exact elementary observation-specific answer set",
+    "containment in saved spatial contract",
+    "rounded arithmetic estimates with saved-contract inheritance"
+  ],
+  "asset_sha256": {
+    "index.html": "a42f937edb68b2459d58678b95675ee3199a3ea4f0c60d3c2b8d475f545dbc3e",
+    "transfer.css": "b0a3fcc88188fae5f8c9442b0c70f8cea46963ebfd39819edf0671d0c9ccc27b",
+    "core.js": "b1cb10f9ac79c455db44c5e23383a8d93d759d2048312a53fc53549702117cc2",
+    "app.js": "f6b2de50ec12830f8bf0e4fe55aefd043255b378b27e8dfb96f6c04af6f5aa42",
+    "evidence.js": "c66a1da509bfdfc5a2647a12efca70774b6bf3ba94f798de0162dec0b1a383d8",
+    "evidence.json": "3678364ec1f43cd34468733defc03e2e084a73ffc2832a054630a7d9c48ca891"
+  },
+  "source_evidence": "evidence.json",
+  "sharing": "URL fragment; closed scenario JSON; visible manual copy fallbacks",
+  "requires_backend": false,
+  "requires_external_runtime": false,
+  "active_webmcp": false
+}

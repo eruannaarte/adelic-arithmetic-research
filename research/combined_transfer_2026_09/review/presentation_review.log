@@ -1,0 +1,10 @@
+{
+  "verified": true,
+  "exactElementaryCases": 606,
+  "arithmeticScenarioCases": 4020,
+  "conservativelyCertifiedArithmeticCases": 488,
+  "spatialBoundaryCases": 192,
+  "originalResearchPaths": 5,
+  "researchPackages": 9,
+  "scope": "Core semantics and conservative published-contract containment, not browser layout or a new interval certificate."
+}

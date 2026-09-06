@@ -1,0 +1,13 @@
+test_all_raw_fixtures (__main__.RawTests.test_all_raw_fixtures) ... ok
+test_incompatible_data_has_no_accuracy_claim (__main__.RawTests.test_incompatible_data_has_no_accuracy_claim) ... ok
+test_invalid_contracts_rejected (__main__.RawTests.test_invalid_contracts_rejected) ... ok
+test_source_amplitude_not_required (__main__.RawTests.test_source_amplitude_not_required) ... ok
+test_uncertainty_over_budget_rejected (__main__.RawTests.test_uncertainty_over_budget_rejected) ... ok
+test_correlated_errors_are_added (__main__.TransferTests.test_correlated_errors_are_added) ... ok
+test_integer_half_boundary_and_negative_margin (__main__.TransferTests.test_integer_half_boundary_and_negative_margin) ... ok
+test_strict_spatial_boundary (__main__.TransferTests.test_strict_spatial_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 65.468s
+
+OK

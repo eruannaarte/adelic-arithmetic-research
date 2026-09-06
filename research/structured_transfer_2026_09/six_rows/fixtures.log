@@ -1,0 +1,16 @@
+{
+  "schema": "six-row-raw-finite-model-fixtures-v1",
+  "kernel_sha256": "f8e6dd8821a3a1881ebda34cdcecdbb786c3d71b3e1aeecf97a7f1b1a6c03952",
+  "bank_offsets": [
+    -15,
+    -7,
+    -1,
+    1,
+    7,
+    15
+  ],
+  "sensor_relative_radius": "3/100000000",
+  "case_count": 60,
+  "precision_bits": 256,
+  "status": "synthetic exact rational observations with a full finite-model sensor-promise proof; not empirical data"
+}

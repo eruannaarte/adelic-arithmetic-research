@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "base_precision_bits": 192,
+  "refinement_precision_bits": 256,
+  "base_order": 18,
+  "refinement_order": 20,
+  "base_exponential_degree": 64,
+  "refinement_exponential_degree": 72,
+  "coefficient_intersections_checked": 171,
+  "metric_bounds_improved": true,
+  "meaning": "independent precision/order/degree replay is consistent; it is not a differential implementation of Arb"
+}

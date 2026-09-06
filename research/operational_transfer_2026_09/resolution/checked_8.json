@@ -1,0 +1,71 @@
+{
+  "verified": true,
+  "direct_rows": [
+    488,
+    490,
+    494,
+    498,
+    502,
+    506,
+    510,
+    514
+  ],
+  "channel_count": 8,
+  "target_indices": [
+    490,
+    510
+  ],
+  "known_time_interval": [
+    "1",
+    "2"
+  ],
+  "individual_cases": 21,
+  "pair_cases": 210,
+  "nonempty_time_cells": 43,
+  "whole_cell_records": 1174,
+  "all_case_covers_verified": true,
+  "physical_operator_model_error_upper": "1/1000000000",
+  "metrics": {
+    "L2": {
+      "source_relative_accuracy_target": "1/1000",
+      "sensor_relative_radius": "23/100000000",
+      "operator_relative_radius": "1/1000000000",
+      "conditional_numerical_relative_radius": "1/1000000000",
+      "total_relative_radius": "29/125000000",
+      "individual_approximate_map_floor": "361/6400000000",
+      "pair_approximate_map_floor": "361/256000000000000",
+      "source_relative_error_squared_upper": "3364/3525390625"
+    },
+    "declared_H1": {
+      "source_relative_accuracy_target": "1/1000",
+      "sensor_relative_radius": "3/100000000",
+      "operator_relative_radius": "1/1000000000",
+      "conditional_numerical_relative_radius": "1/1000000000",
+      "total_relative_radius": "1/31250000",
+      "individual_approximate_map_floor": "361/262400000000",
+      "pair_approximate_map_floor": "361/10496000000000000",
+      "source_relative_error_squared_upper": "2624/3525390625"
+    },
+    "natural_discrete_H1": {
+      "source_relative_accuracy_target": "1/1000",
+      "sensor_relative_radius": "3/100000000",
+      "operator_relative_radius": "1/1000000000",
+      "conditional_numerical_relative_radius": "1/1000000000",
+      "total_relative_radius": "1/31250000",
+      "individual_approximate_map_floor": "361/262400000000",
+      "pair_approximate_map_floor": "361/10496000000000000",
+      "source_relative_error_squared_upper": "2624/3525390625"
+    },
+    "L2_original_noise": {
+      "source_relative_accuracy_target": "13/10000",
+      "sensor_relative_radius": "3/10000000",
+      "operator_relative_radius": "1/1000000000",
+      "conditional_numerical_relative_radius": "1/1000000000",
+      "total_relative_radius": "151/500000000",
+      "individual_approximate_map_floor": "361/6400000000",
+      "pair_approximate_map_floor": "361/256000000000000",
+      "source_relative_error_squared_upper": "22801/14101562500"
+    }
+  },
+  "premise": "full finite-x periodic Taylor enclosures require separate kernel.py replay"
+}

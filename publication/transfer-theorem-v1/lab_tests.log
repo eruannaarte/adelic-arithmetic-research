@@ -1,0 +1,124 @@
+TAP version 13
+# Subtest: zero-error shared nuisance identifies exact source
+ok 1 - zero-error shared nuisance identifies exact source
+  ---
+  duration_ms: 0.700291
+  type: 'test'
+  ...
+# Subtest: closed interval retains boundary integer alternatives
+ok 2 - closed interval retains boundary integer alternatives
+  ---
+  duration_ms: 0.170917
+  type: 'test'
+  ...
+# Subtest: independent unbounded nuisance cannot be canceled
+ok 3 - independent unbounded nuisance cannot be canceled
+  ---
+  duration_ms: 0.107917
+  type: 'test'
+  ...
+# Subtest: every toy integer has an exact admissible shared-nuisance witness iff retained
+ok 4 - every toy integer has an exact admissible shared-nuisance witness iff retained
+  ---
+  duration_ms: 1.161958
+  type: 'test'
+  ...
+# Subtest: continuous diameter is reported without rounding to a discrete answer
+ok 5 - continuous diameter is reported without rounding to a discrete answer
+  ---
+  duration_ms: 0.116792
+  type: 'test'
+  ...
+# Subtest: all controls survive share-link round trip
+ok 6 - all controls survive share-link round trip
+  ---
+  duration_ms: 0.142292
+  type: 'test'
+  ...
+# Subtest: scenario parser rejects malformed and unknown state
+ok 7 - scenario parser rejects malformed and unknown state
+  ---
+  duration_ms: 0.235208
+  type: 'test'
+  ...
+# Subtest: spatial inherited box includes boundaries and excludes exceeded coordinates
+ok 8 - spatial inherited box includes boundaries and excludes exceeded coordinates
+  ---
+  duration_ms: 0.085333
+  type: 'test'
+  ...
+# Subtest: known-time bank keeps physical uncertainty exactly zero
+ok 9 - known-time bank keeps physical uncertainty exactly zero
+  ---
+  duration_ms: 0.20775
+  type: 'test'
+  ...
+# Subtest: degree12 saved contract is inherited only within h120
+ok 10 - degree12 saved contract is inherited only within h120
+  ---
+  duration_ms: 0.568125
+  type: 'test'
+  ...
+# Subtest: degree11 lower amplitude/baseclock consequence stays distinct
+ok 11 - degree11 lower amplitude/baseclock consequence stays distinct
+  ---
+  duration_ms: 0.10525
+  type: 'test'
+  ...
+# Subtest: UI budget agrees with independent exact h120 component receipt
+ok 12 - UI budget agrees with independent exact h120 component receipt
+  ---
+  duration_ms: 0.057541
+  type: 'test'
+  ...
+# Subtest: verified degree11 positive and failed fixed-amplitude budgets agree
+ok 13 - verified degree11 positive and failed fixed-amplitude budgets agree
+  ---
+  duration_ms: 0.039375
+  type: 'test'
+  ...
+# Subtest: all displayed budgets are finite positive and monotone in clock
+ok 14 - all displayed budgets are finite positive and monotone in clock
+  ---
+  duration_ms: 7.875167
+  type: 'test'
+  ...
+# Subtest: no older tested degree is advertised as verified
+ok 15 - no older tested degree is advertised as verified
+  ---
+  duration_ms: 0.058834
+  type: 'test'
+  ...
+# Subtest: evidence input hashes bind actual research artifacts
+ok 16 - evidence input hashes bind actual research artifacts
+  ---
+  duration_ms: 4.394583
+  type: 'test'
+  ...
+# Subtest: proof and path links are pinned to this publication tag
+ok 17 - proof and path links are pinned to this publication tag
+  ---
+  duration_ms: 0.084333
+  type: 'test'
+  ...
+# Subtest: JS evidence and JSON evidence have the same content
+ok 18 - JS evidence and JSON evidence have the same content
+  ---
+  duration_ms: 0.989792
+  type: 'test'
+  ...
+# Subtest: standalone assets require no remote runtime scripts or styles
+ok 19 - standalone assets require no remote runtime scripts or styles
+  ---
+  duration_ms: 0.366083
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 52.100208

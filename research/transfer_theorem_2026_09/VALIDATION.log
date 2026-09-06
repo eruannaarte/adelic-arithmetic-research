@@ -1,0 +1,262 @@
+### framework.all_applications
+{
+  "previous": {
+    "passed": true,
+    "models": 3,
+    "scalar_gates": 687,
+    "quadratic_pairs": 243,
+    "polynomial_coordinates": 441,
+    "preparation_rows": 3
+  },
+  "new_noise": {
+    "passed": true,
+    "scalar_gates": 392,
+    "design_degrees": [
+      {
+        "design": "multi",
+        "degree": 6,
+        "sensor_radius": "1/10000"
+      },
+      {
+        "design": "multi",
+        "degree": 8,
+        "sensor_radius": "1/10000"
+      },
+      {
+        "design": "multi",
+        "degree": 10,
+        "sensor_radius": "99/1000000"
+      },
+      {
+        "design": "multi",
+        "degree": 12,
+        "sensor_radius": "99/1000000"
+      },
+      {
+        "design": "outer",
+        "degree": 6,
+        "sensor_radius": "1/12500"
+      },
+      {
+        "design": "outer",
+        "degree": 8,
+        "sensor_radius": "1/12500"
+      },
+      {
+        "design": "outer",
+        "degree": 10,
+        "sensor_radius": "1/12500"
+      },
+      {
+        "design": "outer",
+        "degree": 12,
+        "sensor_radius": "79/1000000"
+      }
+    ],
+    "additional_conditional_normal_residual_gates": 392,
+    "conditional_normal_residual_radius": "1/100000000",
+    "complete_tail_consequences_checked": true,
+    "solve_contract": "exact solve, or a verified exact-model normal residual within the declared radius"
+  },
+  "new_resolution": {
+    "passed": true,
+    "direct_rows": [
+      485,
+      488,
+      491,
+      494,
+      497,
+      500,
+      503,
+      506,
+      509,
+      512,
+      516
+    ],
+    "individual_cases": 21,
+    "pair_cases": 210,
+    "whole_cell_records": 895,
+    "metric_contracts": [
+      {
+        "source_metric": "L2",
+        "sensor_relative_radius": "3/10000000",
+        "model_relative_radius": "1/1000000000",
+        "conditional_computed_data_relative_radius": "1/1000000000",
+        "total_relative_radius": "151/500000000",
+        "pair_floor": "361/25600000000000",
+        "individual_floor": "2527/25600000000",
+        "strict_source_error_upper": "481/500000",
+        "label_gate_passed": true,
+        "source_gate_passed": true
+      },
+      {
+        "source_metric": "declared_H1",
+        "sensor_relative_radius": "3/100000000",
+        "model_relative_radius": "1/1000000000",
+        "conditional_computed_data_relative_radius": "1/1000000000",
+        "total_relative_radius": "1/31250000",
+        "pair_floor": "361/1049600000000000",
+        "individual_floor": "2527/1049600000000",
+        "strict_source_error_upper": "481/500000",
+        "label_gate_passed": true,
+        "source_gate_passed": true
+      },
+      {
+        "source_metric": "natural_discrete_H1",
+        "sensor_relative_radius": "3/100000000",
+        "model_relative_radius": "1/1000000000",
+        "conditional_computed_data_relative_radius": "1/1000000000",
+        "total_relative_radius": "1/31250000",
+        "pair_floor": "361/1049600000000000",
+        "individual_floor": "2527/1049600000000",
+        "strict_source_error_upper": "481/500000",
+        "label_gate_passed": true,
+        "source_gate_passed": true
+      }
+    ],
+    "scope": "common pair and inverse theorem after the complete spatial consumer; exact inverse or additional certified solve error required"
+  }
+}
+
+
+### framework.independent_witnesses
+PASS: ten independent exact transfer witnesses
+
+
+### framework.independent_KKT
+{
+  "schema": "independent-transfer-consumer-audit-v1",
+  "consumer_sha256": "3fd2f75c17a16a06514571c78e9a8f0c7dc6e8342619db4de07085a9f6edd859",
+  "KKT_case_counts": {
+    "correlated_noise": 5,
+    "shared_rank_deficient_nuisance": 25,
+    "coupled_rows_and_metric": 25,
+    "discarded_nuisance": 25,
+    "two_dimensional_rank_deficient_nuisance": 125
+  },
+  "total_exact_minimum_lift_checks": 205,
+  "exact_cell_sign_and_endpoint_checks": 180,
+  "status": "PASS",
+  "scope": "Independent rational constrained minimization and exact sign controls; mathematical proof reviewed separately."
+}
+
+
+### noise.core_exact
+PASS: complete oscillatory-tail and exact Schur/rounding consequences
+multi degree 6 eta 1/10000 maximum bias upper (display) 0.24928410718392097 threshold interval (display) [0.000100248432132837, 0.000100248432132838]
+outer degree 6 eta 1/12500 maximum bias upper (display) 0.2982359742048201 threshold interval (display) [8.066410162199599e-05, 8.066410162199699e-05]
+
+
+### noise.core_model_192
+PASS: complete oscillatory polynomial nuisance channels
+multi 6 eta 1/10000 max bias 0.24928410718392097
+outer 6 eta 1/12500 max bias 0.2982359742048201
+
+
+### noise.extended_model_192
+PASS: complete oscillatory polynomial nuisance channels
+multi 6 eta 1/10000 max bias 0.24928410718392097
+multi 8 eta 1/10000 max bias 0.24967596504154146
+multi 10 eta 99/1000000 max bias 0.2503851077032774
+multi 12 eta 99/1000000 max bias 0.25152039198495424
+outer 6 eta 1/12500 max bias 0.2982359742048201
+outer 8 eta 1/12500 max bias 0.2986290560112879
+outer 10 eta 1/12500 max bias 0.29934041642819603
+outer 12 eta 79/1000000 max bias 0.30047920916313603
+
+
+### noise.extended_model_256
+PASS: complete oscillatory polynomial nuisance channels
+multi 6 eta 1/10000 max bias 0.24928410718392097
+multi 8 eta 1/10000 max bias 0.24967596504154146
+multi 10 eta 99/1000000 max bias 0.2503851077032774
+multi 12 eta 99/1000000 max bias 0.25152039198495424
+outer 6 eta 1/12500 max bias 0.2982359742048201
+outer 8 eta 1/12500 max bias 0.2986290560112879
+outer 10 eta 1/12500 max bias 0.29934041642819603
+outer 12 eta 79/1000000 max bias 0.30047920916313603
+
+
+### noise.independent_model_320
+Reconstructing multi full physical vectors at 320 bits
+Reconstructing outer full physical vectors at 320 bits
+PASS: independent full-vector audit and all 392 rounding gates
+
+
+### resolution.kernel_192
+PASS full finite-x periodic kernel, all 27 displacements, two sources and 33 coefficients, precision 192
+
+
+### resolution.kernel_256
+PASS full finite-x periodic kernel, all 27 displacements, two sources and 33 coefficients, precision 256
+
+
+### resolution.independent_bridge
+Reconstructing 16 selected full-x coefficients by independent uniformization
+PASS: independent analytic, finite-walk, dense, and full-x coefficient audit
+
+
+### resolution.full_finite_graph_controls
+{
+  "status": "floating full finite-grid regression, not proof evidence or a certified rounding budget",
+  "state_dimension": 1002001,
+  "count": 27,
+  "maximum_physical_model_discrepancy": 3.355023296452901e-17,
+  "maximum_relative_source_error": 0.00023671198087254228
+}
+
+
+### framework.tests
+test_commuting_restriction_need_not_reconstruct_full_quotient (test_transfer.TransferTests.test_commuting_restriction_need_not_reconstruct_full_quotient) ... ok
+test_continuous_cell_signs_before_squaring (test_transfer.TransferTests.test_continuous_cell_signs_before_squaring) ... ok
+test_correlated_retained_noise_uses_minimum_lift (test_transfer.TransferTests.test_correlated_retained_noise_uses_minimum_lift) ... ok
+test_dropping_shared_reference_destroys_query (test_transfer.TransferTests.test_dropping_shared_reference_destroys_query) ... ok
+test_invalid_metric_and_inexact_scalar_rejected (test_transfer.TransferTests.test_invalid_metric_and_inexact_scalar_rejected) ... ok
+test_normal_residual_accounts_for_weak_direction (test_transfer.TransferTests.test_normal_residual_accounts_for_weak_direction) ... ok
+test_pair_gate_has_actual_endpoint_collision (test_transfer.TransferTests.test_pair_gate_has_actual_endpoint_collision) ... ok
+test_query_class_saturation_differs_from_source_saturation (test_transfer.TransferTests.test_query_class_saturation_differs_from_source_saturation) ... ok
+test_rank_deficient_nuisance_and_redundant_reading_contract (test_transfer.TransferTests.test_rank_deficient_nuisance_and_redundant_reading_contract) ... ok
+test_scalar_closed_endpoint_and_zero_gain (test_transfer.TransferTests.test_scalar_closed_endpoint_and_zero_gain) ... ok
+test_shared_nuisance_lifting_is_attained (test_transfer.TransferTests.test_shared_nuisance_lifting_is_attained) ... ok
+test_unbounded_leak_and_convexified_query_counterexamples (test_transfer.TransferTests.test_unbounded_leak_and_convexified_query_counterexamples) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.014s
+
+OK
+
+
+### noise.tests
+test_actual_source_drift_and_worst_coefficient_noise (test_oscillatory.OscillatoryTests.test_actual_source_drift_and_worst_coefficient_noise) ... ok
+test_conditional_exact_normal_residual_contract (test_oscillatory.OscillatoryTests.test_conditional_exact_normal_residual_contract) ... ok
+test_exact_consumers_and_frozen_core (test_oscillatory.OscillatoryTests.test_exact_consumers_and_frozen_core) ... ok
+test_finite_phase_bound_and_remote_alias_control (test_oscillatory.OscillatoryTests.test_finite_phase_bound_and_remote_alias_control) ... ok
+test_independent_actual_basis_variations_crosses_and_gram (test_oscillatory.OscillatoryTests.test_independent_actual_basis_variations_crosses_and_gram) ... ok
+test_independent_zeta_and_divisor_convolution (test_oscillatory.OscillatoryTests.test_independent_zeta_and_divisor_convolution) ... ok
+test_missing_remote_and_false_guarantees_rejected (test_oscillatory.OscillatoryTests.test_missing_remote_and_false_guarantees_rejected) ... ok
+test_physical_oscillatory_responses_obey_complete_variation_bound (test_oscillatory.OscillatoryTests.test_physical_oscillatory_responses_obey_complete_variation_bound) ... ok
+test_reused_covariance_and_unbounded_projection_leakage (test_oscillatory.OscillatoryTests.test_reused_covariance_and_unbounded_projection_leakage) ... ok
+test_summation_by_parts_identity_and_essential_endpoints (test_oscillatory.OscillatoryTests.test_summation_by_parts_identity_and_essential_endpoints) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.244s
+
+OK
+
+
+### resolution.tests
+test_changed_rows_noise_premise_or_kernel_rejected (test_resolution.SpatialTests.test_changed_rows_noise_premise_or_kernel_rejected) ... ok
+test_complete_case_cover_and_three_calibrations (test_resolution.SpatialTests.test_complete_case_cover_and_three_calibrations) ... ok
+test_incompatible_data_returns_empty_answer_set (test_resolution.SpatialTests.test_incompatible_data_returns_empty_answer_set) ... ok
+test_individual_pair_case_gap_not_hidden_by_union (test_resolution.SpatialTests.test_individual_pair_case_gap_not_hidden_by_union) ... ok
+test_model_tail_and_normalization_strict (test_resolution.SpatialTests.test_model_tail_and_normalization_strict) ... ok
+test_rational_polynomial_translation_independent_identity (test_resolution.SpatialTests.test_rational_polynomial_translation_independent_identity) ... ok
+test_same_observation_sensor_noise_and_H1_envelopes (test_resolution.SpatialTests.test_same_observation_sensor_noise_and_H1_envelopes) ... ok
+test_unknown_label_every_target_and_time_endpoints (test_resolution.SpatialTests.test_unknown_label_every_target_and_time_endpoints) ... ok
+test_zero_time_and_numerical_contract_rejections (test_resolution.SpatialTests.test_zero_time_and_numerical_contract_rejections) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 23.948s
+
+OK
+

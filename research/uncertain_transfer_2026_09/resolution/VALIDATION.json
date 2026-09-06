@@ -1,0 +1,42 @@
+{
+  "verified": true,
+  "spatial_floor_consumer": "produce.py finished by calling independent check.py; 861 time cells, 3743 records",
+  "focused_tests": 8,
+  "synthetic_raw_fixtures": 12,
+  "fixture_replay_precision_bits": 320,
+  "independent_review": "../review/spatial_review.py at 384 bits",
+  "known_clock_sensor_radius": "7/50000000",
+  "uncertain_clock_sensor_radius": "11/100000000",
+  "files_sha256": {
+    "PROOFS.md": "4ef0794bc56cd67223cc96e3fc9c24ba95720c8895b0bfb419440383ae65c175",
+    "README.md": "0d13e49b69a81de6c4b4598158cd9841c97767611170d42d573a605fd943e1e4",
+    "REPORT.md": "460f585fcbb0d8b01f7e5aa048c0694ce03741b7ffad80c0ccfbc246b7a56095",
+    "certificate_7.json": "8159a0203c29f1dd3749d3a2ed4829f7473d9319c2c6866c81176f028e2d50ac",
+    "check.py": "ff09a3dee5cfc9c4b9103d1e6cac0fad0f6b6b6e1d2e4b2efd592047478ffc44",
+    "checked_7.json": "b8b5e2d85c48fd77d2d771c8158729d631d06b3b84617a1b69d66a3082cca26d",
+    "discovery.json": "e435ccc4a75fff4d421c3f766aa7695c70a0460c623c1d086f7ba52c3fa52830",
+    "discovery.log": "e435ccc4a75fff4d421c3f766aa7695c70a0460c623c1d086f7ba52c3fa52830",
+    "discovery.py": "5e61aa012091040c5accbd1d7fdc249844a65107c6f85ef4359272de4c732d7b",
+    "fixtures.json": "078eff002ade922da23d73070551ced31a308938352fff0456212f4728939d4c",
+    "fixtures.log": "1dd48755416338937a40eca171bed5ffff4fde38405507da465845eb3338a1bd",
+    "fixtures.py": "d90759a7a3c988e831409e2e0f6484993bd331c27ceb379f2245a97cb519f807",
+    "fixtures_replay.json": "38cea8bdc108950756a91829cbcb08588da8b78c393660ea628a1f135c420349",
+    "fixtures_replay.log": "38cea8bdc108950756a91829cbcb08588da8b78c393660ea628a1f135c420349",
+    "forward_checks.json": "d664548bef21154d3e2223a1fd98bd9c8a86a0ab95a0b068d68df291b8184377",
+    "forward_checks.log": "d664548bef21154d3e2223a1fd98bd9c8a86a0ab95a0b068d68df291b8184377",
+    "forward_checks.py": "c43ec442f4cc4fa6ea33ba2ce434c0c2f133815c435049960b3af0c9074f008c",
+    "produce.log": "c275af59e384155f56472453c042519f596ed874ffff02475d712ad03addd92d",
+    "produce.py": "ba35c7f15b472365ad4f286948163981d48838bf9421371f325e2029cf6b6e83",
+    "test_resolution.py": "63ed82157b538b54a32cee9f1d5bb19f2e2ca3f02376da68ac8cb195f05ed340",
+    "tests.log": "688c2cfdd9b2ede4fa47b9864079df0a17e906c0b6a12ca86e2a6f38343128ab",
+    "timing.json": "10fb07a3b8307ffd79beab1aa8714146baf40415df291b50c76f9fc5f5ddadbd",
+    "timing.log": "fe7e7709c4434d152a24136dce77bac4548f8a457dc82b4b699fc2270ee68c21",
+    "timing.py": "5001284b106ce8f5d6ea25aef24d383de14a06260ab47b9a7a5365fcdde6ecb0"
+  },
+  "full_finite_model_diagnostics": {
+    "cases": 3,
+    "state_count": 1002001,
+    "maximum_observed_source_relative_error": 0.00017014426172189825,
+    "status": "floating diagnostics, not proof premises"
+  }
+}

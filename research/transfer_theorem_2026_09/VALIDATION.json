@@ -1,0 +1,255 @@
+{
+  "checked_at_utc": "2026-09-05T18:58:25.984343+00:00",
+  "python": "3.12.14",
+  "executable": "/private/tmp/math-five-paths-venv/bin/python",
+  "quick": false,
+  "job_count": 15,
+  "focused_tests": 31,
+  "all_passed": true,
+  "seconds": 94.817,
+  "results": [
+    {
+      "name": "framework.all_applications",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/transfer_theorem_2026_09/framework/applications.py",
+        "--all"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 12.485
+    },
+    {
+      "name": "framework.independent_witnesses",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/transfer_theorem_2026_09/framework_review/examples.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.025
+    },
+    {
+      "name": "framework.independent_KKT",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/transfer_theorem_2026_09/framework_review/audit_consumer.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.133
+    },
+    {
+      "name": "noise.core_exact",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/transfer_theorem_2026_09/noise/check_certificate.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.158
+    },
+    {
+      "name": "noise.core_model_192",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/transfer_theorem_2026_09/noise/oscillatory_channels.py",
+        "--precision",
+        "192"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 3.61
+    },
+    {
+      "name": "noise.extended_model_192",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/transfer_theorem_2026_09/noise/oscillatory_channels.py",
+        "--extended",
+        "--precision",
+        "192"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 4.256
+    },
+    {
+      "name": "noise.extended_model_256",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/transfer_theorem_2026_09/noise/oscillatory_channels.py",
+        "--extended",
+        "--precision",
+        "256"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 4.647
+    },
+    {
+      "name": "noise.independent_model_320",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/transfer_theorem_2026_09/noise/independent_audit.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 7.428
+    },
+    {
+      "name": "resolution.kernel_192",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/transfer_theorem_2026_09/resolution/kernel.py",
+        "--precision",
+        "192"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 6.532
+    },
+    {
+      "name": "resolution.kernel_256",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/transfer_theorem_2026_09/resolution/kernel.py",
+        "--precision",
+        "256"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 6.631
+    },
+    {
+      "name": "resolution.independent_bridge",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/transfer_theorem_2026_09/resolution/independent_audit.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 8.083
+    },
+    {
+      "name": "resolution.full_finite_graph_controls",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/transfer_theorem_2026_09/resolution/forward_checks.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 15.141
+    },
+    {
+      "name": "framework.tests",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/transfer_theorem_2026_09/framework",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.044,
+      "tests": 12
+    },
+    {
+      "name": "noise.tests",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/transfer_theorem_2026_09/noise",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.582,
+      "tests": 10
+    },
+    {
+      "name": "resolution.tests",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/transfer_theorem_2026_09/resolution",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 23.986,
+      "tests": 9
+    }
+  ],
+  "previous_artifacts": {
+    "passed": true,
+    "files_checked": 279,
+    "changed_or_missing": []
+  },
+  "file_identity_sha256": {
+    "PREVIOUS_ARTIFACTS_SHA256.json": "435e3dba568e1c8de6e6ad0fbfe0b508521d33f1c3f4154a809171787a66ca00",
+    "framework/applications.json": "019333fe9f5189fa9cd4f108b15bc1d07a648ba2be5d68fc5623bbb30e10a6cb",
+    "framework/applications.py": "387aad318c648ca911e504d8ffad7d196160f92e83e1e716f5fc44dc535ef1de",
+    "framework/test_transfer.py": "d2025491efd5cf4ba86cd95671b7230663c514c44fd3a198194870beb2e31d58",
+    "framework/transfer.py": "3fd2f75c17a16a06514571c78e9a8f0c7dc6e8342619db4de07085a9f6edd859",
+    "framework_review/audit_consumer.py": "961dad53e2a2ae84df5ff48e0b461f2bf4f24f7687e2db2495dec8b7fa926120",
+    "framework_review/consumer_audit.json": "fbf8ebf59ee0131baed71277c39f824b188f58249f94fe7529d6070e9a629e2b",
+    "framework_review/examples.json": "7f34678b1e05df9d8a54d4435e773ed2dafa4b71a8cf5c1127b3ccaf8424c9b2",
+    "framework_review/examples.py": "3290165b2dd92943e484db2003cc9ec2c126c66ac6a494db33ab5f65d87475d1",
+    "noise/VALIDATION.json": "ad9f3f61c6d9c6599bb97d567cb1681d552bcc0844a3c046b1ff68b871f885a8",
+    "noise/check_certificate.py": "903e43d1f9ab8aa3ad0e1f70c1f0e0f23efcf4177de2ca629eb326c496214048",
+    "noise/core_evidence.json": "ceb9c1b16f8becd19178db8243994a8417af74d6b316e2395edf5ac8be2bb6e1",
+    "noise/evidence.json": "b4b6010bfe3d54785a5d564cc9c400a5a3fec697667d97c79994fd63b27bd365",
+    "noise/independent_audit.json": "1e1c1a2fa6b018bc566bf088530ad0d6ad62f53d0e3393a3aeca8be8fd556ace",
+    "noise/independent_audit.py": "9e470c85a8b7644256b43d9b3e7ff2e09011e6dba709bf0d5b52d2be330bf18b",
+    "noise/oscillatory_channels.py": "cdbb4c48b60675c111b7ed71d8a3cd26b35109e589f6d6050a9a559c7b39c275",
+    "noise/test_oscillatory.py": "41ea9d720cb9305619cd2125e1bcf45758d9863dcb25464deaa3407738966921",
+    "resolution/VALIDATION.json": "81431a4a5edff49bf5d3614cee6deb752cb2ff6de0d61fa9791bd5b693046c1d",
+    "resolution/certificate.json": "c9ea121b15035968ca8deb10f7386d4a528dc15c90f348181874927fd1f8decb",
+    "resolution/check.py": "719ee362600449a01316dbe0939ea7e3880bfe97404f9714aa58969aed8d14fa",
+    "resolution/checked_interface.json": "9ddd0c7524df1c0921f2b156501db6ae4101006f7f1aa9394d61974b366821fb",
+    "resolution/decoder.py": "75d5a9ee8b02b18352966e0c0ed4fa7064fe25f90c226e03ebd2e39d35604dd9",
+    "resolution/discover.py": "d9ba04dc96b474f84011756fec5c2660acb83c83c37419b9470a99c2a57aa19d",
+    "resolution/discovery.json": "80da37d6f797bc5363de248788fb9082cc7e8663d744db973ff7cb9a0c456bb8",
+    "resolution/discovery_refined.json": "a3fd99d9b34f8604dc2bc4d666fc642525bd3a64304108f6f76ba378f21456c5",
+    "resolution/exact.py": "e5595eb24b0da6759c513a9a67ab46290368004ad60fedbf91cacf7ecb88da71",
+    "resolution/forward_checks.json": "3ce8dfeff957d17be17f2400bf1e1b9f1a4f3d4ef9a9c367f98ac4ec5605f2a9",
+    "resolution/forward_checks.py": "bda0b9a6e1f2ecf744adacc85db64a788701b249c1b13fd2b6907137ecd9c242",
+    "resolution/independent_audit.json": "de79003a08b987375ea9accec3c97356d8450d25fcf8c3cd95c1ee25fb71edf4",
+    "resolution/independent_audit.py": "594b3949f5ab8e31387c4027f5e6f60d3aed9ca9dea0f6fbf08d2f6ba7456216",
+    "resolution/kernel.json": "f8e6dd8821a3a1881ebda34cdcecdbb786c3d71b3e1aeecf97a7f1b1a6c03952",
+    "resolution/kernel.py": "831c4e2aea3ed454b31e64e704b4108fcdc32ab01b042e0e6f4472d6651f0474",
+    "resolution/produce.py": "2c158072f3e59c7a13e3277a629bdbadabe72064931ab885930c9ddeb4a67944",
+    "resolution/test_resolution.py": "3c6e60e4d39c207d9305f12d368dcf27524d5b70cbcce66e9c72c2aeea20310a",
+    "verify_package.py": "169d05a87b5c7de38381168f7bae855cf76cf81685961713db7b29bfbeebbbea"
+  },
+  "coverage": {
+    "previous_scalar_gates": 687,
+    "new_polynomial_gates": 392,
+    "conditional_normal_residual_gates": 392,
+    "spatial_individual_cases": 21,
+    "spatial_pair_cases": 210,
+    "spatial_whole_cell_records": 895,
+    "common_spatial_metric_contracts": 3
+  },
+  "scope": "New model reconstructions, independent audits, and exact transfer consequences. Unchanged expensive d14 finite/remote arithmetic tails remain explicit inherited premises. Physical calibration and deployed numerical residual validation are not claimed."
+}

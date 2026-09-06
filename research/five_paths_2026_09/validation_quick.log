@@ -1,0 +1,89 @@
+P1 exact consequence
+{
+  "selected_AB": {
+    "kappa_decimal": 0.07746040249448326,
+    "certified": true,
+    "feasible_set_diameter_decimal": 2.0116270417712133e-05
+  },
+  "uniform_ABC": {
+    "kappa_decimal": 0.08324913409026624,
+    "certified": true,
+    "feasible_set_diameter_decimal": 2.4891410233236215e-05
+  },
+  "uniform_AB": {
+    "kappa_decimal": 0.07695823375503111,
+    "certified": true,
+    "feasible_set_diameter_decimal": 1.9792376242283727e-05
+  }
+}
+
+
+P2 full phase and consequence
+{
+  "verified": true,
+  "python": "3.12.14",
+  "python_flint": "0.9.0",
+  "FLINT": "3.6.0",
+  "precision": 384,
+  "schedules": {
+    "baseline": {
+      "maximum_time": 220023.423,
+      "robust_floor": 1.239141702928095,
+      "nominal_floor": 1.259498595827095,
+      "relative_clock_radius": 4.544970650692949e-09,
+      "unknown_clock_error": 0.041954191740261944
+    },
+    "short": {
+      "maximum_time": 1463.985949,
+      "robust_floor": 0.503910443491095,
+      "nominal_floor": 0.523373164049095,
+      "relative_clock_radius": 6.830666651432458e-07,
+      "unknown_clock_error": 0.10316751571535689
+    },
+    "balanced": {
+      "maximum_time": 2773.804407,
+      "robust_floor": 0.815089139403095,
+      "nominal_floor": 0.834772347034095,
+      "relative_clock_radius": 3.605156864977178e-07,
+      "unknown_clock_error": 0.06378098552027228
+    },
+    "high_floor": {
+      "maximum_time": 8081.202441,
+      "robust_floor": 1.090781011902095,
+      "nominal_floor": 1.110017325164095,
+      "relative_clock_radius": 1.237439610380873e-07,
+      "unknown_clock_error": 0.04766051850072561
+    }
+  }
+}
+
+
+P3 exact consequence
+PASS: exact bias-margin, Neumann variance, bounded noise, rational Gaussian tail, and inflation consequences
+
+
+P4 exact remote and consequence
+{
+  "verified": true,
+  "noise_radius": "2001/100000",
+  "positive_window": "1e-9 < density < 3",
+  "remote_method": "independent rational log/pi/sine bounds",
+  "trusted_inputs": "finite-tail and Gram vectors: replay producer to reconstruct"
+}
+
+
+P4 refinement consequence
+{
+  "verified": true,
+  "noise_radius": "2001/100000",
+  "positive_window": "1e-9 < density < 3",
+  "remote_method": "independent rational log/pi/sine bounds",
+  "trusted_inputs": "finite-tail and Gram vectors: replay producer to reconstruct"
+}
+
+
+P5 exact transfer consequence
+PASS: exact Taylor remainders, interval Horner arithmetic, robust 2x2 spectral inequalities, metric floors and continuous cover.
+L2 error_upper_display= 2.550715019124e-08 floor_lower_display= 1.1764481493014326e-07
+declared_H1 error_upper_display= 2.259489034e-09 floor_lower_display= 1.2928209881039934e-09
+natural_discrete_H1 error_upper_display= 2.17948059475e-09 floor_lower_display= 1.3728294273539934e-09

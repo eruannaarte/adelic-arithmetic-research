@@ -1,0 +1,21 @@
+{
+  "schema": "combined-six-potential-raw-fixtures-v1",
+  "status": "synthetic mathematical observations, not laboratory measurements",
+  "generator_family": "H(g)=I_y tensor L_x + L_y tensor diag(1+g*x); exact finite paths each have 1001 vertices",
+  "working_precision_bits": 256,
+  "true_g_interval": [
+    "79999999/100000000",
+    "80000001/100000000"
+  ],
+  "clock_radius": "1/100000000",
+  "bank_rows": [
+    485,
+    493,
+    499,
+    501,
+    507,
+    515
+  ],
+  "case_count": 24,
+  "runtime_seconds": 52.32822962501086
+}

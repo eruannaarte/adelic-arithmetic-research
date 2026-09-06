@@ -1,0 +1,63 @@
+{
+  "path": 1,
+  "new_contribution": "finite nonlinear inverse-stability and preparation/noise region for all seven declared pendulum sensors, including shared finite clock and unknown preparation",
+  "status": "proved analytically and certified computationally, model-conditional",
+  "claims": [
+    {
+      "id": "P1-1",
+      "statement": "For convex source box, bounded preparation bias, and fixed left inverse B with k<1, any two feasible sources satisfy explicit diameter bound.",
+      "evidence": "PROOF.md, finite nonlinear inverse theorem and full proof",
+      "validation": "checker.py exact algebra; validate.py boundary controls"
+    },
+    {
+      "id": "P1-2",
+      "statement": "At source radius 1e-4 and preparation radius 1e-7 in all four launch coordinates, all seven nonlinear Jacobian rows and preparation biases satisfy saved outward bounds.",
+      "evidence": [
+        "region.json",
+        "alternate.json",
+        "preparation.py"
+      ],
+      "validation": "complete nonlinear replay, alternate outward partition, mechanical RHS and finite-difference controls, 12 heldout parameter cases per launch"
+    },
+    {
+      "id": "P1-3",
+      "statement": "At weighted noise norm<=1e-7, selectedAB diameter<2.011628e-5; uniformABC<2.489142e-5; uniformAB<1.979238e-5.",
+      "evidence": "comparison.json",
+      "validation": "checker.py, exact Fractions; only sufficient-bound comparisons are claimed"
+    },
+    {
+      "id": "P1-4",
+      "statement": "An explicit half-plane preparation/noise region certifies desired parameter diameter1e-4; selectedAB admits eta approx5.67935565e-6 at rho=1e-7.",
+      "evidence": "noise_region.json",
+      "validation": "exact half-plane and boundary tests"
+    },
+    {
+      "id": "P1-5",
+      "statement": "A failed k<1 sufficient test is not an impossibility theorem; nonzero unknown additive errors need not permit exact recovery.",
+      "evidence": "PROOF.md scalar counterexamples",
+      "validation": "validate.py exact boundary examples"
+    }
+  ],
+  "historical_delta": "Old result exact preparation, nominal parameter/clock derivative only, five certified active rows. New result unknown finite preparation and finite nonlinear source/clock box, seven certified rows, explicit error region, two uniform comparisons.",
+  "limitations": [
+    "rho=1e-7 is a small uncalibrated mathematical tolerance",
+    "noise precision and normalized fractional budget are declarations, not measured apparatus laws",
+    "same one clock shared globally; no per-output independent clocks",
+    "no probabilistic confidence interpretation; Cartesian preparation allows arbitrary correlations",
+    "bounds certify maximum feasible-set error, not actual minimax errors or optimal design",
+    "Arb and source implementation remain trusted; no formal proof-assistant verification",
+    "numeric heldouts are controls, not proof"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://www.mat.univie.ac.at/~gerald/ftp/book-ode/ode.pdf",
+      "theorem": "2.10 and 2.11; smooth flow and parameter dependence",
+      "hypotheses": "smooth mechanics from positive mass determinant; bounded accepted tubes give continuation"
+    },
+    {
+      "url": "https://fredrikj.net/math/arbpaper.pdf",
+      "theorem": "not a theorem input; primary implementation account of outward arithmetic",
+      "role": "trusted numerical arithmetic dependency"
+    }
+  ]
+}

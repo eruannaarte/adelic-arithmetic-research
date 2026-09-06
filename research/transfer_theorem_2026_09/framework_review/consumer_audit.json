@@ -1,0 +1,15 @@
+{
+  "schema": "independent-transfer-consumer-audit-v1",
+  "consumer_sha256": "3fd2f75c17a16a06514571c78e9a8f0c7dc6e8342619db4de07085a9f6edd859",
+  "KKT_case_counts": {
+    "correlated_noise": 5,
+    "shared_rank_deficient_nuisance": 25,
+    "coupled_rows_and_metric": 25,
+    "discarded_nuisance": 25,
+    "two_dimensional_rank_deficient_nuisance": 125
+  },
+  "total_exact_minimum_lift_checks": 205,
+  "exact_cell_sign_and_endpoint_checks": 180,
+  "status": "PASS",
+  "scope": "Independent rational constrained minimization and exact sign controls; mathematical proof reviewed separately."
+}

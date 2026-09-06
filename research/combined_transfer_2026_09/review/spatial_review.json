@@ -1,0 +1,14 @@
+{
+  "schema": "independent-six-row-review-v1",
+  "verified": true,
+  "bits": 384,
+  "all_direction_cells_replayed": 2688,
+  "all_pair_source_records_replayed": 1280,
+  "independent_exact_tube_gate": "4864502567503/150000000000000000000",
+  "independent_exact_nonlinear_remainder": "2567503/150000000000000000000",
+  "directional_source_gate_passes": true,
+  "coarse_source_gate_also_passes": true,
+  "changed_clock_and_potential_contracts_rejected": 2,
+  "spatial_files_unchanged": 26,
+  "wall_seconds": 28.595582583977375
+}

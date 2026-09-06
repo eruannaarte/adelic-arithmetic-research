@@ -1,0 +1,13 @@
+{
+  "verified": true,
+  "exact_raw_cases": 72,
+  "bank_profiles": 8,
+  "focused_tests_passed": 8,
+  "actual_normalization_charges_verified": true,
+  "full_spatial_certificates_checked_before_decoding": true,
+  "logs": [
+    "../validation_logs/normalization_demo.log",
+    "../validation_logs/normalization_tests.log"
+  ],
+  "independent_review": "../review/raw_fixture_review.json"
+}

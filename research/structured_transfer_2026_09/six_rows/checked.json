@@ -1,0 +1,27 @@
+{
+  "verified": true,
+  "deletion_layouts": 7,
+  "distinct_layouts": 7,
+  "maximum_collision_radius_upper": "294633154484105140388766843512599128581345956619329/272828286275358451528969317745373441189467595472896000000000",
+  "maximum_case": {
+    "bank_offsets": [
+      -10,
+      -8,
+      -4,
+      4,
+      8,
+      10
+    ],
+    "time": "259926135489/200000000000",
+    "target_offsets": [
+      -9,
+      -6
+    ],
+    "collision_radius_upper": "294633154484105140388766843512599128581345956619329/272828286275358451528969317745373441189467595472896000000000"
+  },
+  "sensor_relative_radius": "3/100000000",
+  "all_deletion_layouts_physically_ambiguous": true,
+  "consequence": "No decoder identifies every target for every nonzero source at eta=3e-8 on any of the seven one-row deletions.",
+  "scope_limitation": "Other six-row layouts are not covered; the separate redesigned bank has a positive certificate.",
+  "kernel_premise": "Rerun the preserved 256-bit finite-x kernel reconstruction to discharge its coefficient enclosures."
+}

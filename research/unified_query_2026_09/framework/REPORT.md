@@ -1,0 +1,13 @@
+# One answer-set framework, three executable transfer applications
+
+The common framework specifies the source/nuisance joint set, exact observation map, sensor error set, and requested query. It keeps the set of answers consistent with each observation. Exact discrete recovery means that set is a singleton; continuous minimax error is its enclosing radius in the declared query norm. Empty means inconsistency, while a nonsingleton conservative enclosure means the certificate abstains.
+
+The transfer theorem proves that verified transformations and approximation bounds produce outer answer sets containing the true answers. This composes through nuisance elimination, finite approximation, numerical computation, and restricted sensing. A reverse implication needs a separate lifting proof. For unrestricted linear nuisance and a weighted noise ball, the metric-orthogonal quotient has exactly such a lifting proof and preserves the answer set, even when the source model or query is nonlinear.
+
+A single exact directional support/dual-norm inequality now reproduces687 scalar gates in three models:243 joint quadratic template comparisons,441 integer rounding gates across nine polynomial-drift design/degree pairs, and three finite nonlinear pendulum diameter gates. Each model first establishes its actual support and gain premises. The common checker confirms the transfer algebra; it does not turn supplied matrices into physical facts.
+
+The framework also clarifies the meaning of the previous127× arithmetic result. Subtracting a known deterministic envelope midpoint is invertible processing, so it preserves intrinsic identifiability and exact minimax information. It can substantially improve a particular decoder and its certificate, as that example does. Conversely, restricting observation rows can reduce acquisition cost while losing information, so the smaller sensing-bank result requires explicit new loss and localization bounds.
+
+Two logical boundaries remain visible. First, an infimum of unequal-query distances at twice the noise radius does not settle recovery without knowing whether an actual pair attains it. Second, a diameter bound of2r does not generically provide an r-error point estimator in arbitrary norms; the center or decoder needs justification. The application proofs respect both distinctions.
+
+This is a focused extension of the existing OIG/Arithmetic Observability architecture, with established optimal-recovery mathematics as context. The new scientific content is in the quantified model extensions and their transferable certificate structure. It is not a historical-priority claim for answer sets or nuisance projection.

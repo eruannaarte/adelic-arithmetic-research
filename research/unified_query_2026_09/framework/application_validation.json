@@ -1,0 +1,10 @@
+{
+  "verified": true,
+  "models": 3,
+  "quadratic_pair_gates": 243,
+  "polynomial_coordinate_gates": 441,
+  "polynomial_design_degree_pairs": 9,
+  "nonlinear_preparation_gates": 3,
+  "total_scalar_gates": 687,
+  "scope": "exact scalar transfer after separately checked model-specific support and gain premises"
+}

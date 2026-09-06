@@ -1,0 +1,30 @@
+{
+  "verified": true,
+  "sensor_relative_radius": "11/100000000",
+  "clock_radius": "1/2000000",
+  "potential_radius": "1/400000",
+  "potential_tolerance_factor_vs_prior_generic": 10000,
+  "source_relative_accuracy_target": "1/1000",
+  "source_relative_error_upper": "8010197137091080798473126545797488843/10000000000000000000000000000000000000000",
+  "label_total_relative_radius": "535280375009/3000000000000000000",
+  "label_pair_floor": "361/5120000000000000",
+  "source_floor": "1083/51200000000",
+  "structured_direction_radius": "33/500000000",
+  "structured_inverse_radius": "7/250000",
+  "unstructured_remainder_radius": "337280375009/3000000000000000000",
+  "old_global_inverse_gate_fails_at_same_rectangle": true,
+  "label_separation_verified": true,
+  "source_accuracy_verified": true,
+  "independent_centered_consumer_verified": true,
+  "case_cells": 2688,
+  "precision_bits": 320,
+  "certified_direction_limits": {
+    "joint_forward": "33/500000000",
+    "joint_inverse": "7/250000",
+    "time_forward": "3/125",
+    "potential_forward": "3/125",
+    "time_inverse": "18",
+    "potential_inverse": "8"
+  },
+  "runtime_seconds": 9.636925208993489
+}

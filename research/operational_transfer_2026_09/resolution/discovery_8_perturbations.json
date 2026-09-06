@@ -1,0 +1,614 @@
+{
+  "status": "floating samples only",
+  "sample_time_count": 129,
+  "cases": [
+    {
+      "bank_offsets": [
+        -15,
+        -10,
+        -6,
+        -2,
+        2,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 3.750400495532477e-08,
+      "sampled_unnormalized_pair_floor": 1.295269326657306e-11,
+      "limiting_sample_time": 1.9140625,
+      "limiting_pair": [
+        8,
+        10
+      ]
+    },
+    {
+      "bank_offsets": [
+        -12,
+        -10,
+        -6,
+        -2,
+        2,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 4.545717483205925e-08,
+      "sampled_unnormalized_pair_floor": 1.295269326657306e-11,
+      "limiting_sample_time": 1.9140625,
+      "limiting_pair": [
+        8,
+        10
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -2,
+        2,
+        6,
+        10,
+        12
+      ],
+      "sampled_unnormalized_source_floor": 4.5457174832060095e-08,
+      "sampled_unnormalized_pair_floor": 1.2952693255822448e-11,
+      "limiting_sample_time": 1.9140625,
+      "limiting_pair": [
+        -10,
+        -8
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -2,
+        2,
+        6,
+        10,
+        15
+      ],
+      "sampled_unnormalized_source_floor": 3.7504004955324784e-08,
+      "sampled_unnormalized_pair_floor": 1.2952693255822448e-11,
+      "limiting_sample_time": 1.9140625,
+      "limiting_pair": [
+        -10,
+        -8
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -12,
+        -6,
+        -2,
+        2,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 3.471076016082068e-08,
+      "sampled_unnormalized_pair_floor": 6.875417744045104e-12,
+      "limiting_sample_time": 1.0,
+      "limiting_pair": [
+        -3,
+        -2
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -8,
+        -2,
+        2,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.042273293386333e-08,
+      "sampled_unnormalized_pair_floor": 6.875417744045104e-12,
+      "limiting_sample_time": 1.0,
+      "limiting_pair": [
+        1,
+        2
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -2,
+        2,
+        8,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.0422732933863344e-08,
+      "sampled_unnormalized_pair_floor": 6.875417697433421e-12,
+      "limiting_sample_time": 1.0,
+      "limiting_pair": [
+        -2,
+        -1
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -2,
+        2,
+        6,
+        12,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 3.471076016082027e-08,
+      "sampled_unnormalized_pair_floor": 6.8754176974019195e-12,
+      "limiting_sample_time": 1.0,
+      "limiting_pair": [
+        2,
+        3
+      ]
+    },
+    {
+      "bank_offsets": [
+        -16,
+        -10,
+        -6,
+        -2,
+        2,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 3.4710487435026736e-08,
+      "sampled_unnormalized_pair_floor": 6.870737970179553e-12,
+      "limiting_sample_time": 1.0,
+      "limiting_pair": [
+        -7,
+        -6
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -2,
+        2,
+        6,
+        10,
+        16
+      ],
+      "sampled_unnormalized_source_floor": 3.471048743502673e-08,
+      "sampled_unnormalized_pair_floor": 6.87073795145582e-12,
+      "limiting_sample_time": 1.0,
+      "limiting_pair": [
+        6,
+        7
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -2,
+        1,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.6053473661522196e-09,
+      "sampled_unnormalized_pair_floor": 4.646798504070919e-12,
+      "limiting_sample_time": 1.84375,
+      "limiting_pair": [
+        8,
+        10
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -1,
+        2,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.6053473661522196e-09,
+      "sampled_unnormalized_pair_floor": 4.646798500618691e-12,
+      "limiting_sample_time": 1.84375,
+      "limiting_pair": [
+        -10,
+        -8
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -2,
+        2,
+        5,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.6053472834405455e-09,
+      "sampled_unnormalized_pair_floor": 4.141074524979346e-12,
+      "limiting_sample_time": 1.984375,
+      "limiting_pair": [
+        8,
+        10
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -5,
+        -2,
+        2,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.6053472834405455e-09,
+      "sampled_unnormalized_pair_floor": 4.1410745153244535e-12,
+      "limiting_sample_time": 1.984375,
+      "limiting_pair": [
+        -10,
+        -8
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -2,
+        3,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.6053473661522196e-09,
+      "sampled_unnormalized_pair_floor": 2.7963698372165485e-12,
+      "limiting_sample_time": 1.9140625,
+      "limiting_pair": [
+        -10,
+        -8
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -3,
+        2,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.6053473661522196e-09,
+      "sampled_unnormalized_pair_floor": 2.7963698302838238e-12,
+      "limiting_sample_time": 1.9140625,
+      "limiting_pair": [
+        8,
+        10
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -2,
+        0,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.0425739143793696e-08,
+      "sampled_unnormalized_pair_floor": 1.5408433235347164e-12,
+      "limiting_sample_time": 1.7890625,
+      "limiting_pair": [
+        8,
+        10
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        0,
+        2,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.0425739143793703e-08,
+      "sampled_unnormalized_pair_floor": 1.540843309699745e-12,
+      "limiting_sample_time": 1.7890625,
+      "limiting_pair": [
+        -10,
+        -8
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -4,
+        2,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.042573914213622e-08,
+      "sampled_unnormalized_pair_floor": 1.5312270394441301e-12,
+      "limiting_sample_time": 1.9140625,
+      "limiting_pair": [
+        8,
+        10
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -2,
+        4,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.0425739142136228e-08,
+      "sampled_unnormalized_pair_floor": 1.5312270326849395e-12,
+      "limiting_sample_time": 1.9140625,
+      "limiting_pair": [
+        -10,
+        -8
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -7,
+        -2,
+        2,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.6053472834405455e-09,
+      "sampled_unnormalized_pair_floor": 1.1025236055591201e-12,
+      "limiting_sample_time": 1.7109375,
+      "limiting_pair": [
+        -10,
+        -9
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -2,
+        2,
+        7,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.6053472834405455e-09,
+      "sampled_unnormalized_pair_floor": 1.1025235970726622e-12,
+      "limiting_sample_time": 1.7109375,
+      "limiting_pair": [
+        9,
+        10
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -2,
+        2,
+        4,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.0425739143793296e-08,
+      "sampled_unnormalized_pair_floor": 7.281895007338688e-13,
+      "limiting_sample_time": 1.9921875,
+      "limiting_pair": [
+        8,
+        10
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -4,
+        -2,
+        2,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.0425739143793306e-08,
+      "sampled_unnormalized_pair_floor": 7.281894830689228e-13,
+      "limiting_sample_time": 1.9921875,
+      "limiting_pair": [
+        -10,
+        -8
+      ]
+    },
+    {
+      "bank_offsets": [
+        -13,
+        -10,
+        -6,
+        -2,
+        2,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 4.545717483205925e-08,
+      "sampled_unnormalized_pair_floor": 3.087052700237327e-13,
+      "limiting_sample_time": 1.1640625,
+      "limiting_pair": [
+        -10,
+        -8
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -2,
+        2,
+        6,
+        10,
+        13
+      ],
+      "sampled_unnormalized_source_floor": 4.5457174832060095e-08,
+      "sampled_unnormalized_pair_floor": 3.087052481529533e-13,
+      "limiting_sample_time": 1.1640625,
+      "limiting_pair": [
+        8,
+        10
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -2,
+        2,
+        6,
+        8,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.04257356832675e-08,
+      "sampled_unnormalized_pair_floor": 9.368525321237961e-14,
+      "limiting_sample_time": 1.6640625,
+      "limiting_pair": [
+        9,
+        10
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -8,
+        -6,
+        -2,
+        2,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.04257356832675e-08,
+      "sampled_unnormalized_pair_floor": 9.368522160466373e-14,
+      "limiting_sample_time": 1.6640625,
+      "limiting_pair": [
+        -10,
+        -9
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -2,
+        2,
+        6,
+        9,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.548295662786341e-09,
+      "sampled_unnormalized_pair_floor": 2.5632592193281894e-14,
+      "limiting_sample_time": 1.0625,
+      "limiting_pair": [
+        9,
+        10
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -9,
+        -6,
+        -2,
+        2,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.548295662786336e-09,
+      "sampled_unnormalized_pair_floor": 2.5632580182596504e-14,
+      "limiting_sample_time": 1.0625,
+      "limiting_pair": [
+        -10,
+        -9
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -10,
+        -6,
+        -2,
+        2,
+        6,
+        11,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.548295662786341e-09,
+      "sampled_unnormalized_pair_floor": 1.001783443073326e-14,
+      "limiting_sample_time": 1.3671875,
+      "limiting_pair": [
+        9,
+        10
+      ]
+    },
+    {
+      "bank_offsets": [
+        -14,
+        -11,
+        -6,
+        -2,
+        2,
+        6,
+        10,
+        14
+      ],
+      "sampled_unnormalized_source_floor": 2.548295662786336e-09,
+      "sampled_unnormalized_pair_floor": 1.0017822421983056e-14,
+      "limiting_sample_time": 1.3671875,
+      "limiting_pair": [
+        -10,
+        -9
+      ]
+    }
+  ]
+}

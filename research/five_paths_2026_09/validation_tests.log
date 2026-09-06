@@ -1,0 +1,203 @@
+P1 exact consequence
+{
+  "selected_AB": {
+    "kappa_decimal": 0.07746040249448326,
+    "certified": true,
+    "feasible_set_diameter_decimal": 2.0116270417712133e-05
+  },
+  "uniform_ABC": {
+    "kappa_decimal": 0.08324913409026624,
+    "certified": true,
+    "feasible_set_diameter_decimal": 2.4891410233236215e-05
+  },
+  "uniform_AB": {
+    "kappa_decimal": 0.07695823375503111,
+    "certified": true,
+    "feasible_set_diameter_decimal": 1.9792376242283727e-05
+  }
+}
+
+
+P2 full phase and consequence
+{
+  "verified": true,
+  "python": "3.12.14",
+  "python_flint": "0.9.0",
+  "FLINT": "3.6.0",
+  "precision": 384,
+  "schedules": {
+    "baseline": {
+      "maximum_time": 220023.423,
+      "robust_floor": 1.239141702928095,
+      "nominal_floor": 1.259498595827095,
+      "relative_clock_radius": 4.544970650692949e-09,
+      "unknown_clock_error": 0.041954191740261944
+    },
+    "short": {
+      "maximum_time": 1463.985949,
+      "robust_floor": 0.503910443491095,
+      "nominal_floor": 0.523373164049095,
+      "relative_clock_radius": 6.830666651432458e-07,
+      "unknown_clock_error": 0.10316751571535689
+    },
+    "balanced": {
+      "maximum_time": 2773.804407,
+      "robust_floor": 0.815089139403095,
+      "nominal_floor": 0.834772347034095,
+      "relative_clock_radius": 3.605156864977178e-07,
+      "unknown_clock_error": 0.06378098552027228
+    },
+    "high_floor": {
+      "maximum_time": 8081.202441,
+      "robust_floor": 1.090781011902095,
+      "nominal_floor": 1.110017325164095,
+      "relative_clock_radius": 1.237439610380873e-07,
+      "unknown_clock_error": 0.04766051850072561
+    }
+  }
+}
+
+
+P3 exact consequence
+PASS: exact bias-margin, Neumann variance, bounded noise, rational Gaussian tail, and inflation consequences
+
+
+P4 exact remote and consequence
+{
+  "verified": true,
+  "noise_radius": "2001/100000",
+  "positive_window": "1e-9 < density < 3",
+  "remote_method": "independent rational log/pi/sine bounds",
+  "trusted_inputs": "finite-tail and Gram vectors: replay producer to reconstruct"
+}
+
+
+P4 refinement consequence
+{
+  "verified": true,
+  "noise_radius": "2001/100000",
+  "positive_window": "1e-9 < density < 3",
+  "remote_method": "independent rational log/pi/sine bounds",
+  "trusted_inputs": "finite-tail and Gram vectors: replay producer to reconstruct"
+}
+
+
+P5 exact transfer consequence
+PASS: exact Taylor remainders, interval Horner arithmetic, robust 2x2 spectral inequalities, metric floors and continuous cover.
+L2 error_upper_display= 2.550715019124e-08 floor_lower_display= 1.1764481493014326e-07
+declared_H1 error_upper_display= 2.259489034e-09 floor_lower_display= 1.2928209881039934e-09
+natural_discrete_H1 error_upper_display= 2.17948059475e-09 floor_lower_display= 1.3728294273539934e-09
+
+
+P1 controls and complete nonlinear replay
+test_alternate_outward_partition (__main__.Checks.test_alternate_outward_partition) ... validated launch-A: 188 steps
+validated launch-B: 157 steps
+validated launch-C: 188 steps
+ok
+test_deep_nonlinear_source_replay (__main__.Checks.test_deep_nonlinear_source_replay) ... validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+ok
+test_exact_algebra_replay_and_frozen_comparison (__main__.Checks.test_exact_algebra_replay_and_frozen_comparison) ... ok
+test_held_out_finite_boxes_and_preparation_bias (__main__.Checks.test_held_out_finite_boxes_and_preparation_bias) ... ok
+test_independent_mechanical_rhs_and_derivatives (__main__.Checks.test_independent_mechanical_rhs_and_derivatives) ... ok
+test_noise_budget_region (__main__.Checks.test_noise_budget_region) ... ok
+test_readdressed_false_enclosure_is_rejected (__main__.Checks.test_readdressed_false_enclosure_is_rejected) ... validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+ok
+test_widened_jacobian_and_contract_failures (__main__.Checks.test_widened_jacobian_and_contract_failures) ... ok
+test_zero_preparation_and_boundary_semantics (__main__.Checks.test_zero_preparation_and_boundary_semantics) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 8.214s
+
+OK
+
+
+P2 15 controls
+test_all_vertex_derivatives_and_clock_corners (test_certificate.CertificateTests.test_all_vertex_derivatives_and_clock_corners) ... ok
+test_bad_schedule_rejected (test_certificate.CertificateTests.test_bad_schedule_rejected) ... ok
+test_centering_matches_raw_model (test_certificate.CertificateTests.test_centering_matches_raw_model) ... ok
+test_complete_reconstruction (test_certificate.CertificateTests.test_complete_reconstruction) ... ok
+test_duplicate_and_zero_time_rejected (test_certificate.CertificateTests.test_duplicate_and_zero_time_rejected) ... ok
+test_exact_gram_consequences (test_certificate.CertificateTests.test_exact_gram_consequences) ... ok
+test_excess_clock_rejected (test_certificate.CertificateTests.test_excess_clock_rejected) ... ok
+test_half_dft_even_odd_and_small_cases (test_certificate.CertificateTests.test_half_dft_even_odd_and_small_cases) ... ok
+test_higher_precision_reconstruction (test_certificate.CertificateTests.test_higher_precision_reconstruction) ... ok
+test_inflated_claim_rejected (test_certificate.CertificateTests.test_inflated_claim_rejected) ... ok
+test_negative_noise_or_floor_rejected (test_certificate.CertificateTests.test_negative_noise_or_floor_rejected) ... ok
+test_secants_include_simplex_boundaries (test_certificate.CertificateTests.test_secants_include_simplex_boundaries) ... ok
+test_six_distinct_resonant_readings_are_blind (test_certificate.CertificateTests.test_six_distinct_resonant_readings_are_blind) ... ok
+test_unknown_clock_displacement_direct_model (test_certificate.CertificateTests.test_unknown_clock_displacement_direct_model) ... ok
+test_wrong_winding_rejected (test_certificate.CertificateTests.test_wrong_winding_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.105s
+
+OK
+
+
+P3 5 controls and weight/Gram replay
+test_direct_covariance_and_reused_reading_control (__main__.Audit.test_direct_covariance_and_reused_reading_control) ... ok
+test_rebuild_preserves_certified_result (__main__.Audit.test_rebuild_preserves_certified_result) ... ok
+test_stale_readdressed_and_wrong_contract_dependencies (__main__.Audit.test_stale_readdressed_and_wrong_contract_dependencies) ... ok
+test_standard_library_consequence_checker (__main__.Audit.test_standard_library_consequence_checker) ... ok
+test_vector_boundaries_and_rounding (__main__.Audit.test_vector_boundaries_and_rounding) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.439s
+
+OK
+
+
+P4 17 controls
+test_all_81_local_patterns_and_fresh_fields (test_quadratic.QuadraticControls.test_all_81_local_patterns_and_fresh_fields) ... ok
+test_integral_convex_gap_exact_midpoint (test_quadratic.QuadraticControls.test_integral_convex_gap_exact_midpoint) ... ok
+test_prefix_domain_and_bad_primes (test_quadratic.QuadraticControls.test_prefix_domain_and_bad_primes) ... ok
+test_prime2_and_ramification_boundary (test_quadratic.QuadraticControls.test_prime2_and_ramification_boundary) ... ok
+test_refinement_enclosures_and_every_query (test_quadratic.QuadraticControls.test_refinement_enclosures_and_every_query) ... ok
+test_stored_witnesses_and_arithmetic_constraints (test_quadratic.QuadraticControls.test_stored_witnesses_and_arithmetic_constraints) ... ok
+test_declared_threshold_cannot_be_inflated (test_query_certificate.QueryCertificateTests.test_declared_threshold_cannot_be_inflated) ... ok
+test_exact_measure_against_raw_centered_grid (test_query_certificate.QueryCertificateTests.test_exact_measure_against_raw_centered_grid) ... ok
+test_incomplete_tail_and_wrong_query_algebra_rejected (test_query_certificate.QueryCertificateTests.test_incomplete_tail_and_wrong_query_algebra_rejected) ... ok
+test_independent_complete_consequence_check (test_query_certificate.QueryCertificateTests.test_independent_complete_consequence_check) ... ok
+test_invalid_measure_weight_spacing_nesting_and_positivity (test_query_certificate.QueryCertificateTests.test_invalid_measure_weight_spacing_nesting_and_positivity) ... ok
+test_negative_noise_tail_and_gram_rejected (test_query_certificate.QueryCertificateTests.test_negative_noise_tail_and_gram_rejected) ... ok
+test_outward_remote_precision_refinement (test_query_certificate.QueryCertificateTests.test_outward_remote_precision_refinement) ... ok
+test_remote_domains_and_alias_boundary_rejected (test_query_certificate.QueryCertificateTests.test_remote_domains_and_alias_boundary_rejected) ... ok
+test_remote_sine_mass_and_partition_corruption_rejected (test_query_certificate.QueryCertificateTests.test_remote_sine_mass_and_partition_corruption_rejected) ... ok
+test_unit_or_larger_gram_and_wrong_lengths_rejected (test_query_certificate.QueryCertificateTests.test_unit_or_larger_gram_and_wrong_lengths_rejected) ... ok
+test_zero_noise_and_exact_query_threshold_boundary (test_query_certificate.QueryCertificateTests.test_zero_noise_and_exact_query_threshold_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 4.818s
+
+OK
+
+
+P5 16 controls
+test_natural_and_declared_metrics_are_different (test_resolution.AnalyticAndMatrixControls.test_natural_and_declared_metrics_are_different) ... ok
+test_negative_and_nonnormal_generators_break_contract (test_resolution.AnalyticAndMatrixControls.test_negative_and_nonnormal_generators_break_contract) ... ok
+test_remainder_improvement_is_rigorous (test_resolution.AnalyticAndMatrixControls.test_remainder_improvement_is_rigorous) ... ok
+test_scalar_remainder_including_zero_and_stiff_generator (test_resolution.AnalyticAndMatrixControls.test_scalar_remainder_including_zero_and_stiff_generator) ... ok
+test_small_grid_dense_exponential_independent_derivatives (test_resolution.AnalyticAndMatrixControls.test_small_grid_dense_exponential_independent_derivatives) ... ok
+test_source_and_observation_normalization (test_resolution.AnalyticAndMatrixControls.test_source_and_observation_normalization) ... ok
+test_zero_left_endpoint_rejected (test_resolution.AnalyticAndMatrixControls.test_zero_left_endpoint_rejected) ... ok
+test_failed_transfer_is_not_singularity (test_resolution.CertificateTests.test_failed_transfer_is_not_singularity) ... ok
+test_false_floor_premise_rejected (test_resolution.CertificateTests.test_false_floor_premise_rejected) ... ok
+test_fresh_baseline_exact_minors (test_resolution.CertificateTests.test_fresh_baseline_exact_minors) ... ok
+test_gap_in_cover_rejected (test_resolution.CertificateTests.test_gap_in_cover_rejected) ... ok
+test_grid_change_rejected (test_resolution.CertificateTests.test_grid_change_rejected) ... ok
+test_offdiagonal_information_matters (test_resolution.CertificateTests.test_offdiagonal_information_matters) ... ok
+test_omitted_remainder_rejected (test_resolution.CertificateTests.test_omitted_remainder_rejected) ... ok
+test_understated_error_rejected (test_resolution.CertificateTests.test_understated_error_rejected) ... ok
+test_whole_certificate (test_resolution.CertificateTests.test_whole_certificate) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.011s
+
+OK

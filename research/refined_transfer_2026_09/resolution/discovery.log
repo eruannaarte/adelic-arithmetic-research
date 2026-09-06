@@ -1,0 +1,34 @@
+round 0 searched 699 best {'bank': [-15, -10, -5, 0, 5, 10, 15], 'source': 7.394862480219766e-09, 'pair': 2.7341248512135673e-12, 'time': 1.0, 'labels': [-10, -9]} seconds 4.8
+round 1 searched 918 best {'bank': [-15, -10, -5, 0, 5, 10, 15], 'source': 7.394862480219766e-09, 'pair': 2.7341248512135673e-12, 'time': 1.0, 'labels': [-10, -9]} seconds 6.3
+round 2 searched 1096 best {'bank': [-11, -8, -4, 0, 4, 8, 11], 'source': 6.630782687564929e-08, 'pair': 1.1138919071834716e-12, 'time': 1.8125, 'labels': [-10, -9]} seconds 7.6
+round 3 searched 1214 best {'bank': [-11, -8, -4, 0, 4, 8, 11], 'source': 6.630782687564929e-08, 'pair': 1.1138919071834716e-12, 'time': 1.8125, 'labels': [-10, -9]} seconds 8.4
+refined {'bank': [-11, -8, -4, 0, 4, 8, 11], 'source': 6.630782687564929e-08, 'pair': 1.4725449786180809e-19, 'time': 1.2217074594395072, 'labels': [-8, -7], 'local_time_minimizations': 128}
+refined {'bank': [-11, -8, -4, 0, 6, 8, 10], 'source': 3.4718413774540535e-08, 'pair': 2.581846064789734e-21, 'time': 1.2217074561127557, 'labels': [-8, -7], 'local_time_minimizations': 89}
+refined {'bank': [-10, -8, -6, 0, 4, 8, 11], 'source': 3.471841377454011e-08, 'pair': 2.5818460595434714e-21, 'time': 1.2217074561127568, 'labels': [7, 8], 'local_time_minimizations': 89}
+refined {'bank': [-12, -10, -4, 0, 4, 8, 11], 'source': 3.4710760163977984e-08, 'pair': 1.4725003039526686e-19, 'time': 1.221707459439493, 'labels': [7, 8], 'local_time_minimizations': 86}
+refined {'bank': [-11, -8, -4, 0, 4, 10, 12], 'source': 3.471076016397758e-08, 'pair': 1.4725003057326735e-19, 'time': 1.2217074594394925, 'labels': [-8, -7], 'local_time_minimizations': 86}
+refined {'bank': [-15, -10, -5, 0, 5, 10, 15], 'source': 7.394862480219766e-09, 'pair': 1.0616492341757862e-16, 'time': 1.142534366789614, 'labels': [-8, -7], 'local_time_minimizations': 30}
+refined {'bank': [-11, -8, -4, 0, 4, 10, 13], 'source': 1.4614147788780945e-08, 'pair': 9.214782341874149e-21, 'time': 1.2250817713211941, 'labels': [9, 10], 'local_time_minimizations': 92}
+refined {'bank': [-13, -10, -4, 0, 4, 8, 11], 'source': 1.4614147788781155e-08, 'pair': 9.214782340952567e-21, 'time': 1.2250817713211941, 'labels': [-10, -9], 'local_time_minimizations': 92}
+refined {'bank': [-11, -8, -4, 0, 6, 8, 12], 'source': 2.0422732933863344e-08, 'pair': 2.5818432720821045e-21, 'time': 1.2217074561127557, 'labels': [-8, -7], 'local_time_minimizations': 80}
+refined {'bank': [-12, -8, -6, 0, 4, 8, 11], 'source': 2.042273293386333e-08, 'pair': 2.5818432646678655e-21, 'time': 1.2217074561127574, 'labels': [7, 8], 'local_time_minimizations': 80}
+refined {'bank': [-11, -8, -4, 0, 5, 10, 12], 'source': 7.506743622179576e-09, 'pair': 3.2182868969836137e-20, 'time': 1.221707456387704, 'labels': [-8, -7], 'local_time_minimizations': 73}
+refined {'bank': [-12, -10, -5, 0, 4, 8, 11], 'source': 7.506743622179578e-09, 'pair': 3.2182869013270726e-20, 'time': 1.2217074563877142, 'labels': [7, 8], 'local_time_minimizations': 73}
+refined {'bank': [-11, -8, -4, 0, 4, 8, 10], 'source': 1.9665245872199566e-08, 'pair': 1.4725450060242556e-19, 'time': 1.2217074594395072, 'labels': [-8, -7], 'local_time_minimizations': 101}
+refined {'bank': [-10, -8, -4, 0, 4, 8, 11], 'source': 1.9665245872199566e-08, 'pair': 1.4725450097301885e-19, 'time': 1.2217074594395063, 'labels': [7, 8], 'local_time_minimizations': 101}
+refined {'bank': [-10, -8, -4, 0, 4, 8, 10], 'source': 1.9665245872199566e-08, 'pair': 2.6676001692542433e-13, 'time': 1.4959857783705346, 'labels': [6, 9], 'local_time_minimizations': 78}
+refined {'bank': [-13, -11, -4, 0, 4, 8, 10], 'source': 1.9665245872199566e-08, 'pair': 2.667578017876988e-13, 'time': 1.495985779642388, 'labels': [6, 9], 'local_time_minimizations': 57}
+refined {'bank': [-13, -10, -4, 0, 4, 8, 10], 'source': 1.4614147788781155e-08, 'pair': 9.214782342582954e-21, 'time': 1.2250817713211941, 'labels': [-10, -9], 'local_time_minimizations': 71}
+refined {'bank': [-10, -8, -4, 0, 4, 10, 12], 'source': 1.9665245872199566e-08, 'pair': 2.6675780381941516e-13, 'time': 1.4959857796408575, 'labels': [-9, -6], 'local_time_minimizations': 63}
+refined {'bank': [-10, -8, -4, 0, 4, 10, 13], 'source': 1.4614147788780945e-08, 'pair': 9.21478232843281e-21, 'time': 1.2250817713211941, 'labels': [9, 10], 'local_time_minimizations': 71}
+refined {'bank': [-10, -8, -4, 0, 4, 11, 13], 'source': 1.9665245872199566e-08, 'pair': 2.6675780178755796e-13, 'time': 1.4959857796421463, 'labels': [-9, -6], 'local_time_minimizations': 57}
+refined {'bank': [-12, -10, -4, 0, 4, 8, 10], 'source': 1.9665245872199566e-08, 'pair': 2.667578038193514e-13, 'time': 1.4959857796408043, 'labels': [6, 9], 'local_time_minimizations': 63}
+refined {'bank': [-15, -10, -5, 0, 5, 10, 14], 'source': 7.394862480219769e-09, 'pair': 1.0616492341757866e-16, 'time': 1.142534366789614, 'labels': [-8, -7], 'local_time_minimizations': 33}
+refined {'bank': [-14, -10, -5, 0, 5, 10, 15], 'source': 7.394862480219766e-09, 'pair': 1.0616492341756789e-16, 'time': 1.1425343667896133, 'labels': [7, 8], 'local_time_minimizations': 33}
+refined {'bank': [-14, -10, -5, 0, 5, 10, 14], 'source': 7.394865928848201e-09, 'pair': 1.9762935834503903e-16, 'time': 1.1909293479599126, 'labels': [-8, -7], 'local_time_minimizations': 36}
+refined {'bank': [-14, -10, -3, 0, 4, 8, 12], 'source': 7.449423274297181e-09, 'pair': 3.2731374792190964e-13, 'time': 2.0, 'labels': [-10, -7], 'local_time_minimizations': 75}
+refined {'bank': [-12, -8, -4, 0, 3, 10, 14], 'source': 7.449423274297176e-09, 'pair': 3.2731374792168805e-13, 'time': 2.0, 'labels': [7, 10], 'local_time_minimizations': 75}
+refined {'bank': [-14, -12, -4, 0, 5, 7, 15], 'source': 2.9942350341784088e-09, 'pair': 3.432519172838658e-13, 'time': 1.0, 'labels': [-5, -4], 'local_time_minimizations': 29}
+refined {'bank': [-10, -8, -4, 0, 3, 10, 12], 'source': 7.506743622206881e-09, 'pair': 2.9347828608924553e-13, 'time': 1.0, 'labels': [9, 10], 'local_time_minimizations': 92}
+refined {'bank': [-12, -10, -3, 0, 4, 8, 12], 'source': 7.506743622179187e-09, 'pair': 2.9347828608924473e-13, 'time': 1.0, 'labels': [-10, -9], 'local_time_minimizations': 94}
+refined {'bank': [-12, -10, -3, 0, 4, 8, 10], 'source': 7.506743622206883e-09, 'pair': 2.9347828608924473e-13, 'time': 1.0, 'labels': [-10, -9], 'local_time_minimizations': 92}

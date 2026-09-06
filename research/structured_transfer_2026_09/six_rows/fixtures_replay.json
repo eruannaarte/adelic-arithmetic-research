@@ -1,0 +1,7 @@
+{
+  "verified": true,
+  "case_count": 60,
+  "replay_precision_bits": 320,
+  "all_raw_digits_reproduced": true,
+  "full_finite_model_sensor_promises_reproved": true
+}

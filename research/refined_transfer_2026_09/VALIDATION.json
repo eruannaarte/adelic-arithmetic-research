@@ -1,0 +1,197 @@
+{
+  "schema": "refined-transfer-validation-v1",
+  "recorded_at_utc": "2026-09-05T20:54:51.051563+00:00",
+  "working_directory": "/Volumes/KINGSTON/Vibecoding/Math",
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "mpmath": "1.4.1",
+    "gmpy2": "2.3.1",
+    "python-flint": "0.9.0"
+  },
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "all_recorded_checks_passed": true,
+  "focused_tests": {
+    "spatial": 8,
+    "normalization": 8,
+    "weighted_arithmetic": 7,
+    "total": 23
+  },
+  "historical_files_preserved": 388,
+  "common_transfer_gates": 3509,
+  "normalization_packets": 72,
+  "unchanged_expensive_premises": "Complete arithmetic tail/correction reconstructions retain earlier validated records. Full physical spatial kernel was replayed again at256bits.",
+  "review_scope": "Independent agent checks with different algorithms and adverse controls; not external peer review or proof-assistant formalization.",
+  "checks": [
+    {
+      "name": "seven_row_producer_and_full_consumer",
+      "status": "PASS",
+      "record": "resolution/VALIDATION.json",
+      "log": "resolution/produce.log"
+    },
+    {
+      "name": "spatial_eight_focused_tests",
+      "status": "PASS",
+      "record": "resolution/VALIDATION.json",
+      "log": "resolution/tests.log"
+    },
+    {
+      "name": "spatial_finite_model_diagnostics",
+      "status": "PASS; floating diagnostics only",
+      "record": "resolution/forward_checks.json",
+      "log": "resolution/forward_checks.log"
+    },
+    {
+      "name": "physical_coarse_grid_ambiguity",
+      "status": "PASS",
+      "record": "resolution/coarse_grid_obstruction_checked.json"
+    },
+    {
+      "name": "full_spatial_kernel_256",
+      "status": "PASS",
+      "command": "/private/tmp/math-five-paths-venv/bin/python research/transfer_theorem_2026_09/resolution/kernel.py --precision 256",
+      "exit_code": 0,
+      "log": "validation_logs/full_spatial_kernel_256.log"
+    },
+    {
+      "name": "weighted_norms_and_precision_replay",
+      "status": "PASS",
+      "record": "noise/VALIDATION.json",
+      "logs": [
+        "noise/check.log",
+        "noise/precision_replay.log"
+      ]
+    },
+    {
+      "name": "weighted_actual_data_solve_and_replay_320",
+      "status": "PASS",
+      "record": "noise/VALIDATION.json",
+      "logs": [
+        "noise/demonstrate.log",
+        "noise/replay_320.log"
+      ]
+    },
+    {
+      "name": "weighted_exact_consequences_and_seven_tests",
+      "status": "PASS",
+      "record": "noise/VALIDATION.json",
+      "logs": [
+        "noise/consequences.log",
+        "noise/tests.log"
+      ]
+    },
+    {
+      "name": "raw_normalization_and_eight_tests",
+      "status": "PASS",
+      "record": "normalization/VALIDATION.json",
+      "logs": [
+        "validation_logs/normalization_demo.log",
+        "validation_logs/normalization_tests.log"
+      ]
+    },
+    {
+      "name": "shared_transfer_adapter",
+      "status": "PASS",
+      "record": "framework/applications.json",
+      "log": "framework/applications.log",
+      "reuse": "3491 base gates fully checked; all inputs rehashed unchanged before 72 packets and18 additional gates were appended"
+    },
+    {
+      "name": "independent_reviews",
+      "status": "PASS",
+      "record": "review/REVIEW.md",
+      "receipts": [
+        "review/normalization_implementation_review.json",
+        "review/normalization_review.json",
+        "review/raw_fixture_review.json",
+        "review/seven_point_review.json",
+        "review/weighted_moment_review.json"
+      ]
+    }
+  ],
+  "validated_artifact_sha256": {
+    "COMPLETION_AUDIT.md": "e78ce934049e96224597f37c6c12660720217bc76d4cc553b4f022e94fdff532",
+    "PREVIOUS_ARTIFACTS_SHA256.json": "6704701c0ab15c2f32b52c8846ce50960b5447d1993381f4f1ad489b927d1315",
+    "PROTOCOL.md": "4ac3b8fad75cfd10756c3588e0f38545b1450274697b298cd30ce6e6bd6d3f13",
+    "README.md": "f737a9a565b4602d077f612a7868640d702297fa304d61633803684f69fc0ccb",
+    "REPORT.md": "2c2d9485327d8b1a05282c2ef1e4576a04a8caca61c0c69c9c1253b54a771cec",
+    "framework/README.md": "85919872a1f161c13d23534e6929908b4fffa626cec668c2925f2e1d2c248c5b",
+    "framework/applications.json": "4360a18d581aa5dda1497da1e3e6477a336257d138ced49f26225142f124e8a2",
+    "framework/applications.log": "4f2ae09de34c53ba87b5020a9838d46dc0e879ac941a7188a12076d7bc1d8e24",
+    "framework/applications.py": "580691d8999e0a63bdde3a1189cef9f0e597eecef5bb30bc09cf2f743490885e",
+    "integrity.py": "5c9750a743afbdb150fa1506d4005a2bbab8cd3fba1eff2e822883b05ca1ab39",
+    "noise/PROOFS.md": "57039d38cdbab542777adf1803c6a91d40271c78e94b7c054238b8d9f727b7dc",
+    "noise/README.md": "725edb39710903da952f224d184777e0fac83414c684e86f02b529e76025b3d0",
+    "noise/REPORT.md": "998f597505666d9f1d9a9c3a4fc49676d2bbd66ec191369f09d5e06a4416887b",
+    "noise/VALIDATION.json": "8f882b29cb124e918773637f931e583a3b5748a780153b02c8280ae2d743d64a",
+    "noise/approximation.json": "16e319de07de35987344a96b23a42e5032b09870ba478dd7716bb1956c70ffd4",
+    "noise/approximation.py": "a5b4f9ed940f017ecccdd95c73cc7311aa4ca87be142f8d6d2219efe3c98ab9b",
+    "noise/check.log": "8b4549d2977d210a93a4518f185b99c2ee150cccceefb44be55389e037a0501b",
+    "noise/check_approximation.py": "f2dd1a2eebaca23a6e0fc0cbed039f512d7de6f88510e27a5656def59de1c6f2",
+    "noise/checked_approximation.json": "8b4549d2977d210a93a4518f185b99c2ee150cccceefb44be55389e037a0501b",
+    "noise/consequences.json": "f20cb783fbb66defae5bcd64674cccca1980cd8c71124a9842782d39a5b1e17d",
+    "noise/consequences.log": "f20cb783fbb66defae5bcd64674cccca1980cd8c71124a9842782d39a5b1e17d",
+    "noise/consequences.py": "c03bee7900c18bac05a263e570f21f876d5d76df9653ee86ee9e0f4d97935635",
+    "noise/data.json": "be1444518c2cfafa58511622d613d0c9cb98c93cf19588d53b85cf8c8850f9d0",
+    "noise/demonstrate.log": "15fb413db9168425565ee2bd305a2d5a503f000ccc66b8fb50e4328f0a32b046",
+    "noise/demonstrate.py": "ac5cc0e0f3de20799db6bddd208c553bdce927ae3d65f9be04b22d57d45d8714",
+    "noise/demonstration.json": "70c901b29eb0ea36c0c7a4c90e0bafc746b3f431e8ee883c2c7698d922aa822a",
+    "noise/precision_replay.json": "31d88d43695c90a54ff59925aee65e38d397f9b0ed7142e8abd7e2728fbba418",
+    "noise/precision_replay.log": "31d88d43695c90a54ff59925aee65e38d397f9b0ed7142e8abd7e2728fbba418",
+    "noise/precision_replay.py": "340e5d1f9035436baf2b5956ce1a472aef959633ec0f886ff2dc948290fbfb48",
+    "noise/replay_320.log": "0c2672398bee719deb2613dec88ccc6dd651e03a1e70bc660eecae2614af2044",
+    "noise/result_multi.json": "8d04f5230678d37f3d2d18056d3c8f7fa558b345a64a8bb7eb6e80da60f1e45c",
+    "noise/result_outer.json": "223f4f188212d1800c7e9679259c73f737c12d58ee1c3cd537590adb43513d83",
+    "noise/test_weighted.py": "a159c8aebb1087d41809ea24ee24692322bf148562c035117a2dec5b75dc89ad",
+    "noise/tests.log": "732e6f6e0a80c7c2cb271b38f78bf556d37628798bfe615504dac8c2b7b73b4c",
+    "normalization/PROOFS.md": "15b8c89d154b9f4a5bc643b9f9eaed24474dc1a192fcce8f44c6bcb0f7ae43cf",
+    "normalization/README.md": "e5ca3af15014448537d01b496e2da5f2413bc49491244fc30ed9d8fcbb78703c",
+    "normalization/VALIDATION.json": "13042ea56e7c48d07cca56a47da52e99c26a5914ef7165778c3073b09806c22c",
+    "normalization/demo.py": "1b112cc36afe4bb8763e6802e9f47ab684dd3307d6df472937f57de8a03cf124",
+    "normalization/evidence.json": "3b5e5196873ead934100543e936dfb3e36079a450bc4722597647c1a8313ac98",
+    "normalization/normalize.py": "c84a708733c16e8692627d1163429e70ff012fff9f884efcdaa10631555b49ef",
+    "normalization/test_normalize.py": "7e35cd8b35a6a3068ae2fb89a66d3d1781fe496e17ba0e8cb9cadade36381141",
+    "requirements.txt": "10dd4c02dab8fc9917a2b063ddb90aca73c929ed78fd0a69566acd8f224d3794",
+    "resolution/PROOFS.md": "43d1ffa1754da149db2f5261271623fde33a6e4ba14709374c7a480ec23fb5cc",
+    "resolution/README.md": "e76ec5fc5df175862373d96d6d40a5280b6e3bbace617d7f146f077346b09c4d",
+    "resolution/REPORT.md": "d92aeaf52ac36119df0366a74f826be0bf6aea43200151ce9f590d0e6338774e",
+    "resolution/VALIDATION.json": "4c0caac946c601f2ee27d8d7d1ed50306cc62b7851d8f49624152e2d2cf76bb2",
+    "resolution/certificate_7.json": "a99de86f229bbe329262c9334a70a11bf240318bc87ec238164b254d8b61e611",
+    "resolution/check.py": "0f319818fc71c762d7558f1e4351c5f863c0ece546dcd48ddfa2813a41581266",
+    "resolution/checked_7.json": "94d6ee355e90f27030f6613800ce8e597698820931da131e29128e905225127e",
+    "resolution/coarse_grid_obstruction.json": "b7503fad628b2dbcb7656ed6c0410efd0deca6778c047e46af9999782b0f7280",
+    "resolution/coarse_grid_obstruction_checked.json": "736397afaba45a08072c666083ac9b00c10421a86a3867e566a2ce3e3d69a9de",
+    "resolution/decoder.py": "0b2ce14d0b41d8b3d138334971b097d5c3b87fabd2acb268f17c9415c54075a0",
+    "resolution/discover.py": "ea92852309872fb17440129cb9047a025ed43ca1d107859bff2f886694d76f0d",
+    "resolution/discovery.json": "f5dfbaa3898270ceffff222e1ecb002a971c8359b2aa9f6d5d4fe66ec9e8278f",
+    "resolution/discovery.log": "94c8d6598054d012335c882fbb74c43a945c78b8b9a280f5e0c0ab43ee89f8c7",
+    "resolution/forward_checks.json": "57d676230f9d424bbfa98173548b46327bea70b71657ccc5aa1e03f097239b90",
+    "resolution/forward_checks.log": "c06926efd1624239dc3d08a2a5a993e16dec80c6659645b8440f260c03da31b1",
+    "resolution/forward_checks.py": "b7733208c49aa7b573bdc70ca4c1fa2402a6d6ce1ff4e987b1a8cabeeca434b8",
+    "resolution/obstruction.py": "8f5db6d72d8d18b4486493ee4e153c80ca6fedff9e3fd778cc05925ab45ce4f6",
+    "resolution/produce.log": "7a09c0b771da87b5bb6335d182134f3239bbc5dfa8d165b0d9f03f6a249816a0",
+    "resolution/produce.py": "553d3d67d77504c9cb59fb9072ce9049c7d7fd592b7d5d700819ba29e4ceb9e6",
+    "resolution/test_resolution.py": "4a113beeadde26829dd369f9f1c717ffe529942194061e094c1a75e15eea2fd6",
+    "resolution/tests.log": "064fd74c767d17ec020052ec4a9b080bb11bbda5c3e3c948bbf81466e033035f",
+    "review/NORMALIZATION_REVIEW.md": "353bf5cc8f52852a346bada9a69387e95b6a3b1dbc1e7984f59c274d19e95457",
+    "review/REVIEW.md": "c626145836fa457156c58e692d9125048bbc69f8987c9506586aea490e9849a6",
+    "review/normalization_implementation_review.json": "7434ce88ef8a05af2bd8450092cfe293189b2d1cf1189a9ecd1851250fe42def",
+    "review/normalization_implementation_review.py": "41b2f87f0bc07ddf7bd9c1b241d6e00163521184a8410cd13b17ab96790fe284",
+    "review/normalization_review.json": "92e92babd52df696ebf0328b461950a670ebe2bde652d6e90b70431834f8158e",
+    "review/normalization_review.py": "95452b0699215305a4196737d53720bfec77f6b9c0f63e01089551588abf2201",
+    "review/raw_fixture_review.json": "e1cf5b23aa571da9b2bb31a649e6c761981a0bbd20ad0485b3775f3292255caf",
+    "review/raw_fixture_review.py": "e2251c5315d992a0b8880c590fea0d759d52290858f8f5b50a169a2b49e52ee3",
+    "review/seven_point_review.json": "8980222cb641cf9874594e163d785ca4cde7613827f89379e57a6ee7ee92b4bf",
+    "review/seven_point_review.py": "879c8423d7e12f819afac9f361c63023f39fcf845c1970529e69399d68c59226",
+    "review/weighted_moment_review.json": "91e724f6517e6a164e95a75372eb936365c51d6300c6aef3a29f3b371563532c",
+    "review/weighted_moment_review.py": "152f1ff69eb9a61f51d16fe72c26b9f0723b9c887b7aff7e994c53ddfe00799e",
+    "validation_logs/full_spatial_kernel_256.log": "183e7512f3f98b8783317be4cc64a8e0d19091465517f9819c39bd1a79a01d3e",
+    "validation_logs/normalization_demo.log": "58eced1f068819dcc3019ddcc3ff4e99a59e0a6329764696ce40d980b66b3654",
+    "validation_logs/normalization_tests.log": "489879770e548ed19307ddc75777ed960c0b0a8b619c60079bffcfcf6a5d6d3a"
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "verified": true,
+  "approximation_sha256": "79fca8f5edb07fd56e7b67f696f1867cd341790f2b7ff3a79e2849c258ddb18f",
+  "nuisance_witnesses": [
+    {
+      "degree": 6,
+      "nominal_times": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "annihilator": [
+        "-1",
+        "7",
+        "-21",
+        "35",
+        "-35",
+        "21",
+        "-7",
+        "1"
+      ],
+      "exact_moments_through_degree_p_plus_1": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "5040"
+      ],
+      "one_reading_jitter": "1/1000000000000",
+      "linear_nuisance_amplitude": "100000000000000000000",
+      "absolute_quotient_functional_leakage": "100000000",
+      "uniform_weight_dual_norm_squared": "27456",
+      "quotient_norm_squared_lower_bound": "156250000000000/429",
+      "affine_classification_sample_count_condition": true
+    },
+    {
+      "degree": 8,
+      "nominal_times": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "annihilator": [
+        "-1",
+        "9",
+        "-36",
+        "84",
+        "-126",
+        "126",
+        "-84",
+        "36",
+        "-9",
+        "1"
+      ],
+      "exact_moments_through_degree_p_plus_1": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "362880"
+      ],
+      "one_reading_jitter": "1/1000000000000",
+      "linear_nuisance_amplitude": "100000000000000000000",
+      "absolute_quotient_functional_leakage": "100000000",
+      "uniform_weight_dual_norm_squared": "486200",
+      "quotient_norm_squared_lower_bound": "50000000000000/2431",
+      "affine_classification_sample_count_condition": true
+    },
+    {
+      "degree": 10,
+      "nominal_times": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "annihilator": [
+        "-1",
+        "11",
+        "-55",
+        "165",
+        "-330",
+        "462",
+        "-462",
+        "330",
+        "-165",
+        "55",
+        "-11",
+        "1"
+      ],
+      "exact_moments_through_degree_p_plus_1": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "39916800"
+      ],
+      "one_reading_jitter": "1/1000000000000",
+      "linear_nuisance_amplitude": "100000000000000000000",
+      "absolute_quotient_functional_leakage": "100000000",
+      "uniform_weight_dual_norm_squared": "8465184",
+      "quotient_norm_squared_lower_bound": "312500000000000/264537",
+      "affine_classification_sample_count_condition": true
+    },
+    {
+      "degree": 12,
+      "nominal_times": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "annihilator": [
+        "-1",
+        "13",
+        "-78",
+        "286",
+        "-715",
+        "1287",
+        "-1716",
+        "1716",
+        "-1287",
+        "715",
+        "-286",
+        "78",
+        "-13",
+        "1"
+      ],
+      "exact_moments_through_degree_p_plus_1": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "6227020800"
+      ],
+      "one_reading_jitter": "1/1000000000000",
+      "linear_nuisance_amplitude": "100000000000000000000",
+      "absolute_quotient_functional_leakage": "100000000",
+      "uniform_weight_dual_norm_squared": "145608400",
+      "quotient_norm_squared_lower_bound": "25000000000000/364021",
+      "affine_classification_sample_count_condition": true
+    }
+  ],
+  "complete_derivative": {
+    "independent_cutoff": 10000,
+    "working_precision_bits": 384,
+    "complete_derivative_interval": [
+      "20377479149648076104130389379956088430245443642493906732273435619312036102082060640791802948712602302133399937704691/2404907604760405225358828131112281116032698930082119547604265954848982041717359046106827774346003151904701415424",
+      "2547185345199425573567573961978041225698667891554725579333526113820119623259367003493849167935181348932965097985533/300613450595050653169853516389035139504087366260264943450533244356122755214669880763353471793250393988087676928"
+    ],
+    "reported_derivative_upper_verified": "4236677628957192044734946566283271/500000000000000000000000000000",
+    "reported_complete_clock_radius_verified": "800732071872909296454904901027538219/5000000000000000000000000000000000000000000",
+    "positive_series_tail_method": "integrals from N+1 and N bound the decreasing positive tails"
+  }
+}

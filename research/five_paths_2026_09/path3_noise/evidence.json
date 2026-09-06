@@ -1,0 +1,50 @@
+{
+  "path": 3,
+  "status": "proved analytical consequences with outward and exact computational certificates",
+  "historical_delta": "Extends noiseless multiscale bias0.4980274 to nonzero adversarial and Gaussian sensor-noise guarantees, preserves reused-reading covariance, certifies variance increase for target50.",
+  "claims": [
+    {
+      "id": "P3-1",
+      "claim": "All50 coefficients round correctly for weighted adversarial radius7e-7; common per-reading modulus bound7e-7 suffices under either design.",
+      "proof": "PROOF.md adversarial bounded noise theorem",
+      "evidence": "certificate.json designs.multi; check_consequences.py"
+    },
+    {
+      "id": "P3-2",
+      "claim": "At iid proper circular complex observation noise E|epsilon|\u00b2=1e-10, multiscale probability of any rounding failure<5.466e-14.",
+      "proof": "PROOF.md Gaussian density integration and union bound",
+      "evidence": "certificate.json designs.multi.gaussian_union_failure_upper; exact rational exponential checker"
+    },
+    {
+      "id": "P3-3",
+      "claim": "At same iid observation noise and8900 shared readings, multiscale coefficient50 variance/single variance>1.000265975.",
+      "proof": "PROOF.md rowwise Neumann variance comparison",
+      "evidence": "certificate.json variance50_inflation_ratio_lower; independent direct covariance controls"
+    },
+    {
+      "id": "P3-4",
+      "claim": "Dropping nested reuse covariance is invalid for the declared actual readings.",
+      "proof": "PROOF.md squared-weight expansion",
+      "evidence": "audit_checks.py exact grid/reuse and direct covariance tests"
+    },
+    {
+      "id": "P3-5",
+      "claim": "Complete deterministic arithmetic tail and Gram premises reproduce.",
+      "evidence": [
+        "multiscale_rebuild.json",
+        "dependency_rebuild.json"
+      ],
+      "validation": "original full finite/Gram verifiers and MPFR remote verifiers; separate from fast derived checker"
+    }
+  ],
+  "limitations": [
+    "degree14 coefficient envelope, no realization of arbitrary envelope witnesses",
+    "no physical sensor-distribution/model calibration",
+    "weighted adversarial norms differ by design; common coordinatewise bound supplied for identical assumptions",
+    "single-window sufficient bias failure is not impossibility",
+    "variance increase proved for target50, not every target",
+    "actual numerical decoder rounding error needs additional allowance",
+    "Arb/MPFR/exact-integer and prior tail proof trust remain"
+  ],
+  "audit": "AUDIT.md; source hash gap repaired without altering source artifacts or output certificate values"
+}

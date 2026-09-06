@@ -1,0 +1,12 @@
+{
+  "status": "independent rational source-box and Arb all-vertex controls passed",
+  "exact_probability_lower": "192666834552137/2500000000000000",
+  "exact_factor_distance_squared_lower": "959648155421280947193000038803815937/1500000000000000000000000000000000000",
+  "raw_vertex_pairs": 2016,
+  "uniform_vertex_squared_floor_lower_from_point_plus_Lipschitz": "1676026251775651268565702770384443650590774398418136315679/1569275433846670190958947355801916604025588861116008628224",
+  "fixed_query_gap": "274800677541277801/500000000000000000",
+  "parameter_radius": "1/40000",
+  "exact_root_radius": "1/30000",
+  "predictor_infinity_norm": "3212907677991/1000000000000",
+  "both_exported_contraction_and_self_map_checks": true
+}

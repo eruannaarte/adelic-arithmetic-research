@@ -1,0 +1,13 @@
+test_complete_time_covers_and_calibrations (__main__.SpatialTests.test_complete_time_covers_and_calibrations) ... ok
+test_deleting_one_pair_cell_invalidates_cover (__main__.SpatialTests.test_deleting_one_pair_cell_invalidates_cover) ... ok
+test_invalid_time_data_normalization_budget_and_incompatibility (__main__.SpatialTests.test_invalid_time_data_normalization_budget_and_incompatibility) ... ok
+test_noise_and_both_H1_norms_and_original_noise_profile (__main__.SpatialTests.test_noise_and_both_H1_norms_and_original_noise_profile) ... ok
+test_seven_row_physical_alias_is_specific_and_strict (__main__.SpatialTests.test_seven_row_physical_alias_is_specific_and_strict) ... ok
+test_unknown_label_all_targets_and_time_endpoints (__main__.SpatialTests.test_unknown_label_all_targets_and_time_endpoints) ... ok
+test_wrong_preconditioner_and_omitted_variation_rejected (__main__.SpatialTests.test_wrong_preconditioner_and_omitted_variation_rejected) ... ok
+test_wrong_rows_floors_and_kernel_rejected (__main__.SpatialTests.test_wrong_rows_floors_and_kernel_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 33.208s
+
+OK

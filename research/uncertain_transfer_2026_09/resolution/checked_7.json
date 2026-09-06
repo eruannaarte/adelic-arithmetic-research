@@ -1,0 +1,40 @@
+{
+  "verified": true,
+  "direct_rows": [
+    490,
+    492,
+    496,
+    500,
+    504,
+    508,
+    510
+  ],
+  "channel_count": 7,
+  "target_indices": [
+    490,
+    510
+  ],
+  "known_time_interval": [
+    "1",
+    "2"
+  ],
+  "individual_cases": 21,
+  "pair_cases": 210,
+  "nonempty_time_cells": 861,
+  "whole_cell_records": 3743,
+  "all_case_covers_verified": true,
+  "physical_operator_model_error_upper": "1/1000000000",
+  "metrics": {
+    "L2": {
+      "source_relative_accuracy_target": "1/1000",
+      "sensor_relative_radius": "11/100000000",
+      "operator_relative_radius": "1/1000000000",
+      "conditional_numerical_relative_radius": "1/1000000000",
+      "total_relative_radius": "7/62500000",
+      "individual_approximate_map_floor": "1083/51200000000",
+      "pair_approximate_map_floor": "361/5120000000000000",
+      "source_relative_error_squared_upper": "6272/10576171875"
+    }
+  },
+  "premise": "full finite-x periodic Taylor enclosures require separate kernel.py replay"
+}

@@ -1,0 +1,39 @@
+{
+  "verified": true,
+  "direct_rows": [
+    485,
+    493,
+    499,
+    501,
+    507,
+    515
+  ],
+  "channel_count": 6,
+  "target_indices": [
+    490,
+    510
+  ],
+  "known_time_interval": [
+    "1",
+    "2"
+  ],
+  "individual_cases": 21,
+  "pair_cases": 210,
+  "whole_cell_records": 1278,
+  "all_case_covers_verified": true,
+  "physical_operator_model_error_upper": "1/1000000000",
+  "metrics": {
+    "L2": {
+      "source_relative_accuracy_target": "1/1000",
+      "sensor_relative_radius": "3/100000000",
+      "operator_relative_radius": "1/1000000000",
+      "conditional_numerical_relative_radius": "1/1000000000",
+      "total_relative_radius": "1/31250000",
+      "individual_approximate_map_floor": "361/256000000000",
+      "source_relative_error_squared_upper": "512/705078125",
+      "pair_certificate": "all weighted two-block Gram inequalities are strictly positive definite on complete time covers"
+    }
+  },
+  "pair_proof": "Sylvester leading principal minors, polynomial coefficients rational; consumer uses fraction-free elimination.",
+  "premise": "full finite-x periodic Taylor enclosures require the preserved kernel.py replay"
+}

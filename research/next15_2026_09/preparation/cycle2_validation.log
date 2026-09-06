@@ -1,0 +1,14 @@
+test_boundary_both_sides (__main__.Tests.test_boundary_both_sides) ... ok
+test_frozen_fixed_decoder_certificate (__main__.Tests.test_frozen_fixed_decoder_certificate) ... ok
+test_invalid_decoder_and_source_bindings (__main__.Tests.test_invalid_decoder_and_source_bindings) ... ok
+test_nominal_preparation_derivative_is_insufficient (__main__.Tests.test_nominal_preparation_derivative_is_insufficient) ... ok
+test_row_gate_can_improve_worst_row_gate (__main__.Tests.test_row_gate_can_improve_worst_row_gate) ... ok
+test_source_replay (__main__.Tests.test_source_replay) ... validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 3.978s
+
+OK

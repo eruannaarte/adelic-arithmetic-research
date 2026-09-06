@@ -1,0 +1,253 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Joint launch calibration record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "evidence_kind",
+    "experiment_id",
+    "design",
+    "source_radius",
+    "target_diameter",
+    "readout_noise_radius",
+    "source_contract",
+    "coordinates",
+    "units",
+    "shared_systematic",
+    "shared_systematic_evidence",
+    "launches",
+    "operating_assumptions_evidence"
+  ],
+  "properties": {
+    "schema": {
+      "const": "joint-launch-calibration-v1"
+    },
+    "source_radius": {
+      "const": "1/10000"
+    },
+    "source_contract": {
+      "const": {
+        "source_coordinates": [
+          "log(m2/m1)",
+          "log(l2/l1)",
+          "epsilon"
+        ],
+        "clock": "one epsilon shared globally; actual dimensionless time exp(epsilon)*tau",
+        "velocity": "sqrt(l1/g)*dtheta/dt_physical; not dtheta/dtau_nominal",
+        "angles": "unwrapped around the literal nominal launches",
+        "correction_equation": "true initial state = measured initial state + shared systematic + launch residual",
+        "scope": "one A launch and one B launch; every reading in a group uses that same preparation"
+      }
+    },
+    "coordinates": {
+      "const": [
+        "theta1",
+        "theta2",
+        "scaled_omega1",
+        "scaled_omega2"
+      ]
+    },
+    "units": {
+      "const": [
+        "radian",
+        "radian",
+        "dimensionless physical-time angular velocity",
+        "dimensionless physical-time angular velocity"
+      ]
+    },
+    "evidence_kind": {
+      "enum": [
+        "synthetic_fixture",
+        "physical_record"
+      ]
+    },
+    "experiment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "design": {
+      "enum": [
+        "selected_AB",
+        "uniform_AB"
+      ]
+    },
+    "target_diameter": {
+      "type": "string",
+      "minLength": 1
+    },
+    "readout_noise_radius": {
+      "type": "string",
+      "minLength": 1
+    },
+    "shared_systematic": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "prefixItems": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "type": "string",
+            "minLength": 1
+          }
+        ],
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "shared_systematic_evidence": {
+      "type": "string",
+      "minLength": 1
+    },
+    "launches": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "A",
+        "B"
+      ],
+      "properties": {
+        "A": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "launch_id",
+            "measured_initial_state",
+            "local_residual_intervals",
+            "same_preparation_for_all_readings",
+            "evidence_reference"
+          ],
+          "properties": {
+            "launch_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "measured_initial_state": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 4,
+              "maxItems": 4
+            },
+            "local_residual_intervals": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                ],
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "minItems": 4,
+              "maxItems": 4
+            },
+            "same_preparation_for_all_readings": {
+              "const": true
+            },
+            "evidence_reference": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "B": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "launch_id",
+            "measured_initial_state",
+            "local_residual_intervals",
+            "same_preparation_for_all_readings",
+            "evidence_reference"
+          ],
+          "properties": {
+            "launch_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "measured_initial_state": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 4,
+              "maxItems": 4
+            },
+            "local_residual_intervals": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                ],
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "minItems": 4,
+              "maxItems": 4
+            },
+            "same_preparation_for_all_readings": {
+              "const": true
+            },
+            "evidence_reference": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "operating_assumptions_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_box",
+        "readout_noise",
+        "model",
+        "time_and_velocity_reference"
+      ],
+      "properties": {
+        "source_box": {
+          "type": "string",
+          "minLength": 1
+        },
+        "readout_noise": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "time_and_velocity_reference": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  },
+  "$comment": "All numeric strings must parse as exact rational numbers. The Python checker enforces signs, interval order, units/clock semantics, outer containment, and the finite-query certificate; JSON Schema alone does not prove the mathematics."
+}

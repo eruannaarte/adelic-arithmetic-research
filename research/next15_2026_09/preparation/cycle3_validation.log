@@ -1,0 +1,10 @@
+test_amgm_sharp_unit_cube (__main__.Tests.test_amgm_sharp_unit_cube) ... ok
+test_dual_and_binding_tamper (__main__.Tests.test_dual_and_binding_tamper) ... ok
+test_exact_primal_dual_and_targets (__main__.Tests.test_exact_primal_dual_and_targets) ... ok
+test_face_and_cap_violations (__main__.Tests.test_face_and_cap_violations) ... ok
+test_isotropic_boundary_matches_previous_cycle (__main__.Tests.test_isotropic_boundary_matches_previous_cycle) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.063s
+
+OK

@@ -1,0 +1,144 @@
+{
+  "schema": "operational-transfer-validation-v1",
+  "recorded_at_utc": "2026-09-05T19:58:41.983703+00:00",
+  "working_directory": "/Volumes/KINGSTON/Vibecoding/Math",
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "mpmath": "1.4.1",
+    "gmpy2": "2.3.1",
+    "python-flint": "0.9.0"
+  },
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "all_recorded_commands_passed": true,
+  "focused_tests": {
+    "resolution": 8,
+    "arithmetic": 9,
+    "total": 17
+  },
+  "model_replays": {
+    "spatial_kernel_bits": 256,
+    "arithmetic_production_bits": 256,
+    "arithmetic_replay_bits": 320
+  },
+  "inherited_unchanged_premises": "Complete arithmetic tails and digital correction retain the predecessor reconstruction record; no new expensive complete-tail replay was required.",
+  "review_scope": "Self-checks with exact and outward arithmetic, two residual forms, higher precision and adverse controls; no new independent agent or external review.",
+  "jobs": [
+    {
+      "name": "spatial_nine",
+      "command": "/private/tmp/math-five-paths-venv/bin/python research/operational_transfer_2026_09/resolution/produce.py --bank 9 --write",
+      "exit_code": 0,
+      "log": "validation_logs/spatial_nine.log"
+    },
+    {
+      "name": "spatial_eight",
+      "command": "/private/tmp/math-five-paths-venv/bin/python research/operational_transfer_2026_09/resolution/produce.py --bank 8 --write",
+      "exit_code": 0,
+      "log": "validation_logs/spatial_eight.log"
+    },
+    {
+      "name": "full_spatial_kernel_256",
+      "command": "/private/tmp/math-five-paths-venv/bin/python research/transfer_theorem_2026_09/resolution/kernel.py --precision 256",
+      "exit_code": 0,
+      "log": "validation_logs/full_spatial_kernel_256.log"
+    },
+    {
+      "name": "arithmetic_data_and_solve_256",
+      "command": "/private/tmp/math-five-paths-venv/bin/python research/operational_transfer_2026_09/noise/demo.py --write",
+      "exit_code": 0,
+      "log": "validation_logs/arithmetic_data_and_solve_256.log"
+    },
+    {
+      "name": "arithmetic_replay_320",
+      "command": "/private/tmp/math-five-paths-venv/bin/python research/operational_transfer_2026_09/noise/replay.py --write",
+      "exit_code": 0,
+      "log": "validation_logs/arithmetic_replay_320.log"
+    },
+    {
+      "name": "spatial_tests",
+      "command": "/private/tmp/math-five-paths-venv/bin/python research/operational_transfer_2026_09/resolution/test_resolution.py -v",
+      "exit_code": 0,
+      "log": "validation_logs/spatial_tests.log"
+    },
+    {
+      "name": "arithmetic_tests",
+      "command": "/private/tmp/math-five-paths-venv/bin/python research/operational_transfer_2026_09/noise/test_operational.py -v",
+      "exit_code": 0,
+      "log": "validation_logs/arithmetic_tests.log"
+    },
+    {
+      "name": "finite_grid_diagnostics",
+      "command": "/private/tmp/math-five-paths-venv/bin/python research/operational_transfer_2026_09/resolution/forward_checks.py --write",
+      "exit_code": 0,
+      "log": "validation_logs/finite_grid_diagnostics.log"
+    },
+    {
+      "name": "common_transfer_adapter",
+      "command": "/private/tmp/math-five-paths-venv/bin/python research/operational_transfer_2026_09/applications.py --write",
+      "exit_code": 0,
+      "log": "validation_logs/common_transfer_adapter.log"
+    },
+    {
+      "name": "seven_row_obstruction",
+      "command": "/private/tmp/math-five-paths-venv/bin/python research/operational_transfer_2026_09/resolution/obstruction.py --write",
+      "exit_code": 0,
+      "output_artifact": "resolution/obstruction_7_checked.json"
+    }
+  ],
+  "validated_artifact_sha256": {
+    "COMPLETION_AUDIT.md": "2c6a46d310d3fc50faaaac982c28b3891c777566fa70e0076233c6cd0ba05357",
+    "PREVIOUS_ARTIFACTS_SHA256.json": "eaa3d506ecd64069cc83c877a58e8ec44472b9c06fe13de7d8d00069e58abf71",
+    "PROTOCOL.md": "42e6227d742649fe6e60f3a05fa4f6d867dc29bc242d9f63c02c40ec1e479fce",
+    "README.md": "cc009bf3b8d71802620ecb26734b5f96f2e1e1f8d5a9f18421fee42302d44169",
+    "REPORT.md": "43d9444d8ba0126e91257fe0b2104483a3a714e4b77c21426b97ddf968d4c52f",
+    "applications.json": "27e0cdcf8bb5cd810ffb6b0c1ad470043d42c477e46b8f160a3a3dde4f872f6f",
+    "applications.py": "6cf8a18036591476640a96c010a2270c3ffc595c183a85581b7ea527e79f4e82",
+    "integrity.py": "e86b56ddfca6d5c8c42c35694cd54ccd9f43ecfef87c54aaff42547e53ab34ce",
+    "noise/PROOFS.md": "ddc218bea551866c3e2ef20fd4cc349376dfc4b7790795c3e047488d22cc41b6",
+    "noise/certify.py": "54e689786294605d85f4fb79a398d4a47d3937d73a67fd5991d226c433578a1d",
+    "noise/data_large.json": "bd193efedc5687c0cdbdcff1c2edf7bee566da69b34f1e5055f666202bfe4e4f",
+    "noise/data_moderate.json": "d73f217d6804bf19479de4b6f3d06b9e8b70d2839858d9c732056071c2e46b5b",
+    "noise/demo.py": "7b2b0ad6210964b42b51f18c1a219aeb678da47549ca846e3256b57b540b71db",
+    "noise/demonstration.json": "8073f192daa91ec5c69b12960685656d4c5f0e05a1aa1e13628b521a98e1c6a1",
+    "noise/physical.py": "a6b1c32de76b63433c0389bb1409aacd61633a7cf376b626815ca0bfb432b7a3",
+    "noise/replay.json": "abffb6669150e4a6e9d93942378f4dbe28dfd93b50b10ada7d2d2c449f4f5927",
+    "noise/replay.py": "cd9aad2f247fe53ba5a8f0a6b975891ea73e3c3ceb03535829d79f8b8f7eddce",
+    "noise/result_multi_large.json": "f778d6c37c4968d6af816ad231faf9af019e41ecdf29bef00d9bdfa8ea98b8ea",
+    "noise/result_multi_moderate.json": "4e80002297d9ec7ec6f44a99d9e2b3ee9c5640840405935550d9267746f30710",
+    "noise/result_outer_large.json": "674dc7d688c3943703f32e44d9dcc84c7980c1776cd7063a7714d54d55622ca4",
+    "noise/result_outer_moderate.json": "28c8af798f9e17c1cf132e1ab2c2e3030933f50cbef148deedd1d0ef8bf8183c",
+    "noise/test_operational.py": "719634ca85662fab52975eaff882a30fc6a3903c253b6aabcf59e7447e3c1134",
+    "requirements.txt": "c66db96f74de842121d78cc8e354ea98d4bfb3e491156ad507c4d4b4c360227e",
+    "resolution/PROOFS.md": "9300ad49775b512e614a7dddff72d373d8831bb2ac15a35b292ec9779a69c456",
+    "resolution/certificate_8.json": "ad348cc0aad3ca08eeadd38dda6a9e8d18b64bebd4f74190f7eb03635d1c734a",
+    "resolution/certificate_9.json": "0750432c231356bb24034ed074533225847223453a29b69fd7eea7694193ef9f",
+    "resolution/check.py": "b02e184d391661869c36a8a226fd2ed38040173788c5eafad7c7f883a7a7281a",
+    "resolution/checked_8.json": "f39ec60714beb22ab27f78eab4951cd99f76ffbc47e1db49a9e7dd743b8c63cc",
+    "resolution/checked_9.json": "c8e94668f12bf053a01f76d3f63afad554bfff58e372e317656e973845e36c8d",
+    "resolution/decoder.py": "0806914f7f7a36a9fd0cdda321a5fafa6002857256814cdfb8fe169b27cbf7c9",
+    "resolution/discover.py": "a686d94cf44a03c40883bb2c3dd9411dfa5aa59b6591f5b2fe6eb570a307a98a",
+    "resolution/discovery.json": "b95d9bf17f266361b7c85062f700ebd508c88241c11c1d53585b7a771c713763",
+    "resolution/discovery_8_perturbations.json": "8e650ee6275ae2cbae2f4a829ba5abd6a46d27d7748346287f7b9f0f06394c78",
+    "resolution/forward_checks.json": "a5339b7d68b433f0b4650de7084f19857344fa301a47ffc0005cf5e317174b43",
+    "resolution/forward_checks.py": "f159e8d82c8f9d079f1e66a82bf6daa295cba2ba53f1be1bce58f15b8c6075b1",
+    "resolution/obstruction.py": "4acaf0ea54022eed16f049882b13c30546ae98e1a170972e014db11d1cdd96a1",
+    "resolution/obstruction_7.json": "5fe3258b08039ef046bb5bc99a496fb5f173a1d0a1e907dee1a2ed98a363d488",
+    "resolution/obstruction_7_checked.json": "e0754e200089c9dadf3d7dac521635102ae26dd4448fee4dba9642a7398a176d",
+    "resolution/produce.py": "071c0fd6ec9f98bf667e812ab5c2667d6e3772dc86dd7df355a009e9a9536408",
+    "resolution/test_resolution.py": "c6d3b45e28c430f54094c50e2e17c2dcb16e09a70fb0b0e9473683eed2800b29",
+    "validation_logs/arithmetic_data_and_solve_256.log": "d0a5fdea7ff51dc7d6b210345849a5506e29f9c8fae0a8bc5dbf66a1b1eada20",
+    "validation_logs/arithmetic_replay_320.log": "abffb6669150e4a6e9d93942378f4dbe28dfd93b50b10ada7d2d2c449f4f5927",
+    "validation_logs/arithmetic_tests.log": "8b4be545706ace0a3b32399f896edfae6426d915d45c80517c7bceff9f202b75",
+    "validation_logs/common_transfer_adapter.log": "23ef21f93111f305edb5e92e35df1d621e6624716fd30f1fba5bf36acff77147",
+    "validation_logs/finite_grid_diagnostics.log": "d87e70c87591e04c10c6823cd8125f850c4b7745f69262c7b4dd22a37872655a",
+    "validation_logs/full_spatial_kernel_256.log": "183e7512f3f98b8783317be4cc64a8e0d19091465517f9819c39bd1a79a01d3e",
+    "validation_logs/spatial_eight.log": "e23bd959db3b793d3722f4c9258f78308306b2b645ef360c5b61ac3d7fffd4d9",
+    "validation_logs/spatial_nine.log": "0536c05d502ae53332486b7905050ffc30b63ca0e5f5c208d9ca7a003c4b8591",
+    "validation_logs/spatial_tests.log": "16f4a4084c4eebcbff78f8bb6018b5a907ff20b82d1f10409f96a42d5b97cd68"
+  }
+}

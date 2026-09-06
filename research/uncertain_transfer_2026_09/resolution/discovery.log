@@ -1,0 +1,27 @@
+{
+  "status": "floating candidate screening only; all mathematical conclusions use the separate exact certificate",
+  "fixed_contract": "seven rows; minimum gap 2; offsets [-16,16]; eta=1.1e-7; relative source error<0.001; all targets and time [1,2]",
+  "proposal_source": "A previously screened layout with strong source floor and no detected continuous-time alias",
+  "candidates_tested_this_phase": 1,
+  "result": {
+    "bank": [
+      -10,
+      -8,
+      -4,
+      0,
+      4,
+      8,
+      10
+    ],
+    "source": 1.9665245872199566e-08,
+    "pair": 2.6676001692542433e-13,
+    "time": 1.4959857783705346,
+    "labels": [
+      6,
+      9
+    ],
+    "local_time_minimizations": 78
+  },
+  "six_row_search": "not performed after the seven-row improvement contract was certified",
+  "elapsed_seconds": 0.12883066601352766
+}

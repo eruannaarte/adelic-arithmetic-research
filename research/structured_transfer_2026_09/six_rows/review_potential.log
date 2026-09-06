@@ -1,0 +1,15 @@
+{
+  "verified": true,
+  "reviewer_scope": "independent exact-rational inverse algebra and remainder derivation; fresh 384-bit complete-time consumer replay",
+  "point_cases": 63,
+  "corner_cases": 126,
+  "cauchy_tail_identities_verified": true,
+  "mixed_derivative_entire_rectangle_upper": "380/3",
+  "nonlinear_radius": "1280375009/3000000000000000000",
+  "independent_source_error_upper": "10012746421363850998091408182246861053378944749/12500000000000000000000000000000000000000000000000",
+  "complete_time_cases": 2688,
+  "complete_consumer_precision_bits": 384,
+  "separate_explanations_note": "Two candidate sources may carry different clock and potential values; each complete forward tube is charged independently.",
+  "physical_premise": "Potential derivative enclosure replay and old finite-x kernel replay remain separate accepted physical premises.",
+  "elapsed_seconds": 10.411317707999842
+}

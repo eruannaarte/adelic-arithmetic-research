@@ -1,0 +1,13 @@
+test_affine_polynomial_closure_at_unbounded_scale (test_uncertainty.UncertaintyTests.test_affine_polynomial_closure_at_unbounded_scale) ... ok
+test_clock_contract_and_false_derivative_rejected (test_uncertainty.UncertaintyTests.test_clock_contract_and_false_derivative_rejected) ... ok
+test_complete_budget_controls (test_uncertainty.UncertaintyTests.test_complete_budget_controls) ... ok
+test_inexact_metadata_rejected_before_numeric_validation (test_uncertainty.UncertaintyTests.test_inexact_metadata_rejected_before_numeric_validation) ... ok
+test_invalid_family_data_rejected (test_uncertainty.UncertaintyTests.test_invalid_family_data_rejected) ... ok
+test_nonaffine_jitter_leaks_linear_nuisance (test_uncertainty.UncertaintyTests.test_nonaffine_jitter_leaks_linear_nuisance) ... ok
+test_separate_mismatch_not_inferred_from_residual (test_uncertainty.UncertaintyTests.test_separate_mismatch_not_inferred_from_residual) ... ok
+test_zero_frequency_and_powerlaw (test_uncertainty.UncertaintyTests.test_zero_frequency_and_powerlaw) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.061s
+
+OK

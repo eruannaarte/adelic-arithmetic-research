@@ -1,0 +1,30 @@
+{
+  "verified": true,
+  "exact_strict_gate_checks": 196,
+  "records": [
+    {
+      "design": "multi",
+      "amplitude": 4000,
+      "passing_gates": 32,
+      "maximum_error_upper": 1.092609097961996
+    },
+    {
+      "design": "multi",
+      "amplitude": 500,
+      "passing_gates": 49,
+      "maximum_error_upper": 0.44595110342279765
+    },
+    {
+      "design": "outer",
+      "amplitude": 4000,
+      "passing_gates": 32,
+      "maximum_error_upper": 1.1422033611452393
+    },
+    {
+      "design": "outer",
+      "amplitude": 500,
+      "passing_gates": 49,
+      "maximum_error_upper": 0.49499960874011195
+    }
+  ]
+}

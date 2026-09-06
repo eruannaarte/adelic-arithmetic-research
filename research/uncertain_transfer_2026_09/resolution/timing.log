@@ -1,0 +1,44 @@
+{
+  "schema": "spatial-clock-model-budget-v1",
+  "physical_model_approximation_verified": "1/1000000000",
+  "uncertain_time_domain": "Both nominal and true times lie in [1,2]",
+  "model_family": "H and Htrue are self-adjoint positive semidefinite; ||Htrue-H||_2 <= epsilon_H; source, sensing rows and alpha(t) unchanged",
+  "profiles": {
+    "uncertain_clock": {
+      "sensor_relative_radius": "11/100000000",
+      "maximum_absolute_clock_error": "1/2000000",
+      "generator_perturbation_operator_norm_upper": "1/1000000000",
+      "forward_time_lipschitz_upper": "37/1000",
+      "timing_relative_radius": "37/2000000000",
+      "model_mismatch_relative_radius": "1/375000000",
+      "operator_approximation_relative_radius": "1/1000000000",
+      "normalization_relative_radius": "1/1000000000",
+      "total_relative_radius": "799/6000000000",
+      "approximate_source_floor": "1083/51200000000",
+      "approximate_pair_floor": "361/5120000000000000",
+      "source_relative_error_squared_upper": "638401/761484375000",
+      "source_relative_error_target": "1/1000",
+      "label_separation_verified": true,
+      "source_accuracy_verified": true
+    },
+    "known_clock": {
+      "sensor_relative_radius": "7/50000000",
+      "maximum_absolute_clock_error": "0",
+      "generator_perturbation_operator_norm_upper": "0",
+      "forward_time_lipschitz_upper": "37/1000",
+      "timing_relative_radius": "0",
+      "model_mismatch_relative_radius": "0",
+      "operator_approximation_relative_radius": "1/1000000000",
+      "normalization_relative_radius": "1/1000000000",
+      "total_relative_radius": "71/500000000",
+      "approximate_source_floor": "1083/51200000000",
+      "approximate_pair_floor": "361/5120000000000000",
+      "source_relative_error_squared_upper": "10082/10576171875",
+      "source_relative_error_target": "1/1000",
+      "label_separation_verified": true,
+      "source_accuracy_verified": true
+    }
+  },
+  "sufficient_tradeoff": "eta + rho + xi + L h + (8/3) epsilon_H < min(0.001 sqrt(mu), sqrt(lambda/2))",
+  "derivative_note": "One inherited model approximation radius is charged at the true time, then the polynomial map is transported to nominal time."
+}

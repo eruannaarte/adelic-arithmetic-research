@@ -1,0 +1,7 @@
+{
+  "verified": true,
+  "unchanged_framework": "research/transfer_theorem_2026_09/framework/transfer.py",
+  "whole_time_cell_transfer_gates": 2457,
+  "global_pair_and_inverse_profiles": 7,
+  "arithmetic_coordinate_transfer_gates": 196
+}

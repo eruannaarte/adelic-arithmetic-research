@@ -1,0 +1,20 @@
+{
+  "bits": 256,
+  "seconds": 1.7065498330048285,
+  "records": [
+    {
+      "design": "multi",
+      "base_radius": 2.986831229660749e-08,
+      "h120_radius": 3.5841975449715365e-06,
+      "derivative": 2884.3031411565526,
+      "gram_operator": 1.0000002859854673
+    },
+    {
+      "design": "outer",
+      "base_radius": 2.987007956885863e-08,
+      "h120_radius": 3.5844096176605273e-06,
+      "derivative": 2884.3031418674796,
+      "gram_operator": 1.0000002864784303
+    }
+  ]
+}

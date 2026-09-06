@@ -1,0 +1,7 @@
+{
+  "status": "floating direct finite-grid diagnostics, not proof input or verified normalization rounding",
+  "finite_state_count": 1002001,
+  "case_count": 63,
+  "maximum_physical_model_discrepancy": 4.0831198121568266e-17,
+  "maximum_relative_source_error": 0.00016420232173020689
+}

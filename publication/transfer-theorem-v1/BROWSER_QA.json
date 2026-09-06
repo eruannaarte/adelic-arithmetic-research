@@ -1,0 +1,32 @@
+{
+  "schema": "transfer-theorem-browser-qa-v1",
+  "date": "2026-09-05",
+  "browser": "Codex in-app browser",
+  "served_url": "http://127.0.0.1:8765/",
+  "tested_viewport_widths": [
+    360,
+    390,
+    768,
+    1280
+  ],
+  "horizontal_overflow": false,
+  "observed_checks": {
+    "default_spatial_and_arithmetic_contracts": true,
+    "toy_integer_boundary_epsilon_0_5_three_answers": true,
+    "degree11_B4000_uncertified": true,
+    "degree11_B500_baseclock_certified": true,
+    "spatial_sensor_101_percent_uncertified": true,
+    "shared_url_roundtrip_degree11_B500": true,
+    "valid_scenario_file_import": true,
+    "manual_JSON_export_matches_state": true,
+    "SVG_accessible_title_targets": true,
+    "console_errors_or_warnings": false,
+    "mobile_and_desktop_screenshots_reviewed": true,
+    "viewport_override_reset": true
+  },
+  "limits": {
+    "direct_file_navigation": "Not run: browser URL policy blocks file:// navigation. No alternate browser or workaround was used. Runtime dependencies and relative serving paths were checked statically.",
+    "download_file_capture": "The export handler ran without console errors, but the tool did not deliver the Blob download event. Manual JSON export is visible and its content was checked. No downloaded-file receipt is claimed.",
+    "offline_design": "All interactive assets are local and embedded; no runtime fetch/network/library dependency. Internet is needed only when following public evidence links."
+  }
+}

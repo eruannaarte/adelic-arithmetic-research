@@ -1,0 +1,308 @@
+{
+  "checked_at_utc": "2026-09-05T08:19:46.245263+00:00",
+  "python": "3.12.14",
+  "executable": "/private/tmp/math-five-paths-venv/bin/python",
+  "deep_preparation_replay": true,
+  "completed_research_cycles": 15,
+  "job_count": 18,
+  "focused_tests": 66,
+  "all_passed": true,
+  "seconds": 34.005,
+  "results": [
+    {
+      "name": "harmonic.cycle1",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/next15_2026_09/harmonic/cycle1.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.086
+    },
+    {
+      "name": "harmonic.cycle2",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/next15_2026_09/harmonic/cycle2.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.084
+    },
+    {
+      "name": "harmonic.cycle3",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/next15_2026_09/harmonic/cycle3.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.05
+    },
+    {
+      "name": "noise.cycle1",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/next15_2026_09/noise/cycle1.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.582
+    },
+    {
+      "name": "noise.cycle2",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/next15_2026_09/noise/cycle2.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.947
+    },
+    {
+      "name": "noise.cycle3",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/next15_2026_09/noise/cycle3.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.225
+    },
+    {
+      "name": "preparation.all_cycles",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/next15_2026_09/preparation/verify.py",
+        "--deep"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 11.615
+    },
+    {
+      "name": "quadratic.geometry",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/next15_2026_09/quadratic/geometry.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.021
+    },
+    {
+      "name": "quadratic.infinite_geometry",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/next15_2026_09/quadratic/infinite_geometry.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.018
+    },
+    {
+      "name": "quadratic.conditional_query",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/next15_2026_09/quadratic/conditional_query.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.582
+    },
+    {
+      "name": "resolution.placement",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/next15_2026_09/resolution/check_placement.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "resolution.localization",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/next15_2026_09/resolution/check_localization.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "resolution.window",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/next15_2026_09/resolution/check_window.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "harmonic.tests",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/next15_2026_09/harmonic",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.195,
+      "tests": 13
+    },
+    {
+      "name": "preparation.tests",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/next15_2026_09/preparation",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 12.284,
+      "tests": 17
+    },
+    {
+      "name": "quadratic.tests",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/next15_2026_09/quadratic",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.584,
+      "tests": 14
+    },
+    {
+      "name": "noise.tests",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/next15_2026_09/noise",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 4.481,
+      "tests": 11
+    },
+    {
+      "name": "resolution.tests",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/next15_2026_09/resolution",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.172,
+      "tests": 11
+    }
+  ],
+  "file_identity_sha256": {
+    "harmonic/CLAIMS.json": "76a1e0454baee9ce069cabb913a81d7ed103eda6cfa727d9778ed8368b6d1b2b",
+    "harmonic/cycle1.py": "133c824d7f1128679a856fe4ec23f48ae1efbfa3f05cf437cfb39f09b74d8882",
+    "harmonic/cycle1_evidence.json": "8788085127d16980afb9cfe84fa6a667c49c329c0aa5ee700c63a3669db9b699",
+    "harmonic/cycle2.py": "182dd40dc51dc393a09c60671231f564c358ace33d9fcf6321d6bc5350468097",
+    "harmonic/cycle2_evidence.json": "8d31a4b7809c375e3ab41b9728b981cd9eadebc9f13445bdd68e4f90a23f18a7",
+    "harmonic/cycle3.py": "5a406ee1ec6d678f17a304c568ce304c8318610455e644447c56655df022df2b",
+    "harmonic/cycle3_discovery.json": "cc2131ab86eb0007936f10f09d7d695a29ec736f95f82645f63de9983fb84826",
+    "harmonic/cycle3_evidence.json": "257f986ce7118e1ce95a173cffe1fe61e276a67d5701c2c7f8dc90a2a6e8f1de",
+    "harmonic/cycle3_inputs.json": "85aa03bd33ed3b4af7dbe428a7c250e20de031467c3852c243a14d96efc85801",
+    "harmonic/test_cycles.py": "758c1c1a8ab831f0e899cb4b1e703af90bbcb2b51363ab5369954a4ed04cf84f",
+    "noise/CLAIMS.json": "b6a7c4adeba8a377f4559bdacb131f7667960c4ca66395aa085aaca582ddd55f",
+    "noise/cycle1.py": "3a4b2d21326e8de6424f9906a4c3be5bc2051591d8a0ede8ca18d5518a5c7e60",
+    "noise/cycle1_evidence.json": "9ce06ca871bf7ef0f9217f1ae957a5f3608fddba9b82acdb36fd2c4f44189ab1",
+    "noise/cycle2.py": "0c3b772ce52ae17792b131fa4256d192fbc5ff982ae15e5597d8d0814a73e067",
+    "noise/cycle2_correction.json": "e95d87bd04d74ca9458ce179202803880b235fe06b308bb6fbd587f807331ff3",
+    "noise/cycle2_evidence.json": "380a5f2d9f2e4f5d52dabd27c3d639ed788961373b225f2ee9d3421323b7b4d5",
+    "noise/cycle3.py": "b937e8e442ea54426f6faef60ec41f5ff1f8a7f38ba4154c8f43aa89cebb6d1a",
+    "noise/cycle3_evidence.json": "f6b670d5b27e52d4476d0be85c782de56c6329da89ffa7f235f3210a9d8de7bb",
+    "noise/cycle3_inputs.json": "536bbeb068a0ac03493db561a5bcee57f6e62adda3cbc4112c07c9d20d75328b",
+    "noise/test_cycles.py": "092d7ae18bbd94d730e2e2d7608dd6f62f2cd36e5d5a6825b14c0dc654b81f72",
+    "preparation/anisotropic.py": "737a11fadf56453161b6b0461da7c9d694880beece7b012803628b525d615a6a",
+    "preparation/calibration.py": "9a680646624098529fa3f761003b820b53983e876fefc120db14bc32cfa487f7",
+    "preparation/checker.py": "d56ed3c70714d2180b29a7e3d6d647c244795e6f426b6250ebca8a086558bc31",
+    "preparation/cycle1_certificate.json": "879ac1c677319b6bef1bf9ee6eee5f5d104967960fda138db6b8f9127dfe7d80",
+    "preparation/cycle1_region.json": "d2532d3363145f191566eb7c69232f26821d0f9747a15d30341259952160d146",
+    "preparation/cycle2_calibration.json": "ac41a29a8fd423a6de0b529964231de49be6c999eb6e57d8aa6b0561e565ab8d",
+    "preparation/cycle2_certificate.json": "13548cc7fda5634f34671d480f2f943c1e380b7ac8385f099abc9238deb571f7",
+    "preparation/cycle2_region.json": "adf950725e9bcdfbbe022b771cac469dc8979ef8760f6acdec3e248f87903e48",
+    "preparation/cycle3_certificate.json": "662021188ca360f75bfe68be09942d89595ec20607898f991a4c0c758924b619",
+    "preparation/evidence.json": "6fce3cdaf8e7daba3377dd18528760ebfa8db665f5e3b057b167ae8bae6021b6",
+    "preparation/full_sensitivity.py": "a1de2d245c51435f0add190c210b32485ad0f96b656cf247ddd3a56e64199cd1",
+    "preparation/nominal.json": "21c6b5db17bf2d2a5f88100181c384a31bbb8350d4c32f3508eb2b9a17d54233",
+    "preparation/synthesize.py": "022261454fc99a00a4fc8d4d089526360e3a7fb2a18b171ae8a1a6f5c4bfe6bc",
+    "preparation/test_cycle2.py": "08709545bdb838e26484c0c8ac579206c26679327edb2f01ae016c22989f1317",
+    "preparation/test_cycle3.py": "785f744c5a7b4ab69c01688aad438038b91a86caf27f1903a90812e9b40c0907",
+    "preparation/test_preparation.py": "426b45dd2e5f9cf77d242c5e7d140c8de275593734650caaa6694b7ec5fe1355",
+    "preparation/verify.py": "73528aec3c9b22379ba3d3a516593657e1434cd0152868e744f8ab64df9548ab",
+    "quadratic/base_tail_replay.json": "6c2e5951363d7b2b172976e621e447fd650d3c426ee2420d99ded3c7d863d4f7",
+    "quadratic/conditional_query.json": "7833b19f3655b53c5abe94a22c35049d7907f5c950176da51087799a7185154e",
+    "quadratic/conditional_query.py": "04cc85c7f6db509b9b5ae7ae231bcfdc563544b0797900fe4abde5e0e38bc759",
+    "quadratic/geometry.json": "bd7d856d16266e4be3db85b5d28433a9844d272d2aef2d66bb0aefc7efb4a13d",
+    "quadratic/geometry.py": "11352f660f7bac3b7e956bc7163cf0bd66f21a9247fb65f9d1aa3c1818e04764",
+    "quadratic/infinite_geometry.json": "e5b4fa8c5500682dc4d6c1efa5d8d0d6282497e43d712db6836b0aef5e465f04",
+    "quadratic/infinite_geometry.py": "3bab6f91c88d9e664f9b1bb07c3db391e6eb1a70584f8f0fb205f098983e13be",
+    "quadratic/test_conditional.py": "67bc61a6800516393b2317a917bfd44f112b88d96b3590d997303e5eb59a1914",
+    "quadratic/test_geometry.py": "6bff3235259c5531e9476cf2b2b7b383cc82824ce49eda19de2bd6ba597995c6",
+    "quadratic/test_infinite.py": "72c0603ee3d2bcc883eff8fead1c7fd7940a49120c2c55e7f72a708981e62738",
+    "resolution/VALIDATION.json": "88463434e975fc74488d34926278ae65500e5d8a278c94f20a68b00c35b98c6c",
+    "resolution/check_localization.py": "9304a686493ec20e8eda9a9ff399e3774b379d15fe6f055149f1db3937fcc561",
+    "resolution/check_placement.py": "6c3c314425b418cbd1b69065d0c6d9ba730c79aa7c8710a59ddfb7cbca75f8e1",
+    "resolution/check_window.py": "5e7155c975e98b137fb2f6445fc77d97acd08e56b54dc22f46ee1bc0e17d2ff3",
+    "resolution/localization.py": "298f86cda661373a09c25c465d5d5109e3f76305a1ef756ff7eb76eb7c9657aa",
+    "resolution/localization_certificate.json": "02383501eb6346f5e4d3668adfdcbe71563ea988cff7180d61cb52518abdee7b",
+    "resolution/localization_example.json": "84fa08832483ec9b62ef804c74a9e537b500fb2e0e1d25591ff5c7d18fce66d0",
+    "resolution/placement.py": "64c986d914136fafa98011e1ecaaa9ddae0c08732bd0e13db942d5e8ec9cc477",
+    "resolution/placement_certificate.json": "90c02b50b26b13f8aae98e7e98bc36e73837420bb0acacabe5adc6664ff1fdf4",
+    "resolution/simulate.py": "d9f3d33b369271d2661fc6ab47ec1ea14258ce694bf13678898e13222973749a",
+    "resolution/test_localization.py": "e9b62150b4b3e79ac30b5808a7a84bbec44fff9ee5cf0b4e70cff666387b4d0e",
+    "resolution/test_placement.py": "1faca823e418d358ad81080f12665afac97930c0a2420fd0306c1691eae655af",
+    "resolution/test_window.py": "fa0fa5a498ed8ac56f54139ab6e7ca5938d1a258a2eeea2894761ac26f7a80fc",
+    "resolution/window.py": "4e03a1546d0d260ae56b7d9e629b3343db12a4f053956da8e76a412fd64ea0c0",
+    "resolution/window_certificate.json": "7eaf3f4d3088c15e2025bcb5ec6e10f9a6526eb25bd833411b1dfa35aeb7071e",
+    "resolution/window_example.json": "f116502eafc64af8076a77f147a8e72478b62d23667f908d5759d2a4d24da171",
+    "resolution/window_example.py": "b3e6447391bf1182e937ccddef4e1d6a5a9744363806775afbf60f11ad9c629f",
+    "verify_package.py": "e659cc377e4ee8c91d309361a462bf14974e35300856941059535a190c21b812"
+  },
+  "scope": "New cycle computations and consequences; see README for explicitly inherited model-to-certificate premises."
+}

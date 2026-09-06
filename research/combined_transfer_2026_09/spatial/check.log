@@ -1,0 +1,70 @@
+{
+  "verified": true,
+  "sensor_relative_radius": "3/100000000",
+  "clock_radius": "1/100000000",
+  "potential_radius": "1/100000000",
+  "source_relative_accuracy_target": "1/1000",
+  "source_relative_error_upper": "4264155336972800030565369560261676063/5000000000000000000000000000000000000000",
+  "label_total_relative_radius": "4864502567503/150000000000000000000",
+  "certified_label_tube_radius": "13/400000000",
+  "source_floor": "361/256000000000",
+  "structured_direction_radius": "43/100000000000",
+  "structured_inverse_radius": "17/25000000",
+  "unstructured_remainder_radius": "4800002567503/150000000000000000000",
+  "global_inverse_source_error_upper": "4318009206188480161628928474960878967/5000000000000000000000000000000000000000",
+  "global_inverse_gate_also_passes": true,
+  "label_separation_verified": true,
+  "source_accuracy_verified": true,
+  "weighted_pair_certificate": {
+    "verified": true,
+    "direct_rows": [
+      485,
+      493,
+      499,
+      501,
+      507,
+      515
+    ],
+    "channel_count": 6,
+    "target_indices": [
+      490,
+      510
+    ],
+    "nominal_time_interval": [
+      "1",
+      "2"
+    ],
+    "individual_cases": 21,
+    "pair_cases": 210,
+    "whole_cell_records": 1280,
+    "all_case_covers_verified": true,
+    "physical_operator_model_error_upper": "1/1000000000",
+    "metrics": {
+      "L2": {
+        "source_relative_accuracy_target": "1/1000",
+        "sensor_relative_radius": "3/100000000",
+        "operator_relative_radius": "1/1000000000",
+        "conditional_numerical_relative_radius": "1/1000000000",
+        "total_relative_radius": "13/400000000",
+        "individual_approximate_map_floor": "361/256000000000",
+        "unstructured_source_relative_error_squared_upper": "169/225625000",
+        "note": "This file proves the enlarged nominal tubes; check.py supplies actual-model clock/potential transfer.",
+        "pair_certificate": "all weighted two-block Gram inequalities are strictly positive definite on complete time covers"
+      }
+    },
+    "pair_proof": "Sylvester leading principal minors, polynomial coefficients rational; consumer uses fraction-free elimination.",
+    "premise": "full finite-x periodic Taylor enclosures require the preserved kernel.py replay"
+  },
+  "independent_centered_consumer_verified": true,
+  "case_cells": 2688,
+  "precision_bits": 320,
+  "certified_direction_limits": {
+    "joint_forward": "43/100000000000",
+    "joint_inverse": "17/25000000",
+    "time_forward": "23/1000",
+    "potential_forward": "11/500",
+    "time_inverse": "46",
+    "potential_inverse": "23"
+  },
+  "runtime_seconds": 28.0236542080238
+}

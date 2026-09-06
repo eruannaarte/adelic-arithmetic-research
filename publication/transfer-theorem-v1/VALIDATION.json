@@ -1,0 +1,30 @@
+{
+  "schema": "transfer-theorem-publication-validation-v1",
+  "verified": true,
+  "research_tests": 33,
+  "lab_tests": 19,
+  "research_seal_sha256": "ed02ff222d97bd9a6f2bde58446fdf88c8f78fee14607c8dcbf12e044a7f85be",
+  "browser_qa": "BROWSER_QA.json",
+  "files_sha256": {
+    "TRANSFER_THEOREM_PUBLIC_COMPANION.md": "d66702bf051f058b0f703de161a4c45e7abc4af7c3df21da1e38594091389d0f",
+    ".github/workflows/transfer-theorem.yml": "0bda43756a44ee1e954186b1b10544f128e1cabc5419e138916f6d787b4b5269",
+    "website/transfer-theorem-lab/README.md": "c54a38894c8b76fc83b93270e1d01d63a720840ad8671f9da01457f75c8fcdd0",
+    "website/transfer-theorem-lab/app.js": "f6b2de50ec12830f8bf0e4fe55aefd043255b378b27e8dfb96f6c04af6f5aa42",
+    "website/transfer-theorem-lab/core.js": "b1cb10f9ac79c455db44c5e23383a8d93d759d2048312a53fc53549702117cc2",
+    "website/transfer-theorem-lab/evidence.js": "c66a1da509bfdfc5a2647a12efca70774b6bf3ba94f798de0162dec0b1a383d8",
+    "website/transfer-theorem-lab/evidence.json": "3678364ec1f43cd34468733defc03e2e084a73ffc2832a054630a7d9c48ca891",
+    "website/transfer-theorem-lab/index.html": "a42f937edb68b2459d58678b95675ee3199a3ea4f0c60d3c2b8d475f545dbc3e",
+    "website/transfer-theorem-lab/lab-manifest.json": "7415868d578cdf94f8bb8e369c1b39ec70c9cee4d2a0a6b0edf4090368f4041d",
+    "website/transfer-theorem-lab/test-core.js": "a4e3af520f5ea2c739a1e541b9887450fe4dc0a6294f6ff06d7c3e371f617f87",
+    "website/transfer-theorem-lab/transfer.css": "b0a3fcc88188fae5f8c9442b0c70f8cea46963ebfd39819edf0671d0c9ccc27b",
+    "publication/transfer-theorem-v1/BROWSER_QA.json": "aa36812d6a52075e0ab7f0375c2d715259c9468777b288b29fe00a9a5fd3d41d",
+    "publication/transfer-theorem-v1/CITATION.cff": "15bd3544de1f1c7366d5f65d1b51042fed0d8d1150c04b72668fa96ff266f030",
+    "publication/transfer-theorem-v1/PORTABLE_GUIDE.md": "b478504eaaf9244cd96249492513a29268d3b0bb79ceabb91457c40ede120b81",
+    "publication/transfer-theorem-v1/RELEASE_NOTES.md": "db14d6863394ceebe0748e41e772f3bed7ee2c36499d8afdfaa64f351170e1e5",
+    "publication/transfer-theorem-v1/WEBSITE_MANAGER_HANDOFF.md": "08be7bd2a552a43925b7e7b675478688a464afad58a324c68fbf499a41ebbaee",
+    "publication/transfer-theorem-v1/build_bundles.py": "8efd4f5720793cd32a9caff4c77e3a8a439a240e92e51270a48613025cf92533",
+    "publication/transfer-theorem-v1/build_evidence.py": "f6a3e9e3232d33f360ec8c93fe980181d6901bf8a5cd736b2f98fa2d760f71db",
+    "publication/transfer-theorem-v1/lab_tests.log": "2947eb82e5088b7069bb0f556cce056f2267f4c1723da38e85e5d96b6e1fde49",
+    "publication/transfer-theorem-v1/verify_publication.py": "df3882435cd07b8976ce1048ed4bbaaf7a58db9ab0fda0742072de5e67aa7b5b"
+  }
+}

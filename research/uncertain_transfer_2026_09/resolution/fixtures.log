@@ -1,0 +1,18 @@
+{
+  "schema": "spatial-uncertain-time-raw-fixtures-v1",
+  "physical_model": "The declared finite generator Htrue=H+lambda I; all true times in [1,2].",
+  "status": "synthetic exact-rational observations with outward sensor-promise proof, not empirical measurements",
+  "kernel_sha256": "f8e6dd8821a3a1881ebda34cdcecdbb786c3d71b3e1aeecf97a7f1b1a6c03952",
+  "bank_offsets": [
+    -10,
+    -8,
+    -4,
+    0,
+    4,
+    8,
+    10
+  ],
+  "case_count": 12,
+  "working_precision_bits": 256,
+  "generation_proof": "Raw discrepancy from the full perturbed finite model is <= exp(-lambda*t)rho||u|| plus outward generation rounding plus the explicit sensor vector; exp(-lambda*t)<=1."
+}

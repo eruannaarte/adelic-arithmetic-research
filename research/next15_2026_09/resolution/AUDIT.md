@@ -1,0 +1,35 @@
+# Independent audit of resolution cycles R1–R3
+
+Auditor: the preparation/dynamics agent, independently of the resolution producer. I read the actual proofs, producer/checker code, inherited model appendix, and saved certificate contracts; ran the checks below; and derived separate operator and boundary controls. **Verdict:** the three mathematical results are supported under their stated model, observation, source-amplitude, and inherited-enclosure premises. One decoder-definition defect in the theorem wording was identified and repaired by the author. No certificate value required changing.
+
+## Finding and repair
+
+The original R2 statement referred to an “ordinary left inverse,” while claiming noise gain at most 1/sqrt(c_S). An arbitrary left inverse need not have this gain: T=(1,0)^T has floor1, while B=(1,M) satisfies BT=1 with arbitrarily large noise amplification. The examples already used `numpy.linalg.lstsq`, so their calculations were consistent with the intended decoder.
+
+The final [R2/R3 proof](/Volumes/KINGSTON/Vibecoding/Math/research/next15_2026_09/resolution/PROOFS.md:40) now explicitly specifies the least-squares/Moore–Penrose inverse and gives the calibrated identity `(T S^-1/2)^dagger=S^1/2(T^T T)^-1 T^T`. Full column rank follows from the certified positive floor. This identity proves the claimed gain in either H1 metric as well as L2. The ambiguity is resolved; arbitrary left inverses are expressly excluded.
+
+## Mathematical checks
+
+1. **The graph is connected to the actual observation Gram.** Orthogonal y-diagonalization gives `G_j=alpha^2 sum_l |v_l(j)|^2 b_l b_l^T`. Tensorizing the two x-responses at the *same* y eigenvalue produces the stated common-y operator K, not two independently translated targets. Its y-edge weight is V_aa+V_bb and its x-edge weights are1. The maximum diagonal bound56/5 and nonnegative stochastic uniformization therefore follow without commuting L_x with V. This matches [R1](/Volumes/KINGSTON/Vibecoding/Math/research/next15_2026_09/resolution/PROOFS.md:20).
+
+2. **The two locality orders are different and correct.** A target-diagonal closed walk first sees a changed endpoint diagonal at order2d+1, whereas a state propagated toward a boundary first changes at orderd+1. The R1 and R2 tails use these respective orders. Stochastic symmetry supplies contraction. The infinite operator is bounded, and the first-moment series is absolutely convergent; applying the unbounded coordinate multiplier X is justified by that weighted series estimate.
+
+3. **Off-center odd modes are included.** They cannot be discarded by inheriting central parity. The new full Gram uses every nonzero y mode, and the proof explicitly distinguishes full-field acquisition from the former even-only representation. This condition is essential to interpreting the result.
+
+4. **Centroid localization handles unknown labels and signed sources.** Infinite-lattice reflection gives an energy first moment of zero for every source combination. The finite/infinite weighted difference and Cauchy–Schwarz control the finite centroid even when output amplitudes change sign or source ports cancel. The denominator uses the positive L2 floor. Subtracting the true noiseless centroid in the noise numerator gives the stated range factor and `(1-nu)^2` denominator. The statistic itself does not know j; the analysis centers X at j only to prove its error. Rounding identifies j before the selected least-squares inverse is used. Zero source and arbitrary fixed absolute noise at vanishing amplitude remain valid obstructions.
+
+5. **Window truncation charges both missing energy and missing first moment.** For window margin w, discarded output begins at orderw+1. The operator loss is `Q T`, so Gram loss is `(QT)^T QT`, positive semidefinite with norm at most2 T_(w+1)^2. The discarded first moment is bounded by `||XQT u|| ||QT u||`, yielding2mu T_w T_(w+1). The centroid denominator is the retained floor `c_L2-loss`, not the old floor or an unproved retained mass. No new amplitude normalization is introduced. The rational checker compares the resulting floors against99% of the *original central* floors, paying both placement and truncation losses.
+
+## Independent calculations and controls
+
+- All **11 existing tests** passed in a fresh process. All three exact checkers passed after the placement checker was strengthened to call the inherited baseline rational checker and verify its covered interval.
+- Independently assembled dense operators with x-size3, y-size9 at times0.1,1,2 and all nine target indices. Across27 comparisons, the direct observation Gram and full DCT-mode Gram differed by at most1.182e-17; the tensor-lift expression differed by at most2.339e-16. These are floating diagnostics, not proof enclosures. At time1 the odd-mode Gram trace was0.000336385862 for off-center target3, versus1.843e-35 at central target4, directly exposing the danger of retaining central parity.
+- Built exact rational single-response walk matrices independently by edges, for x-size2 and finite y-size9 embedded in y-size25. A depth2 launch agreed with the infinite-lattice power calculation through order2 and first differed at order3. The exact squared X-weighted contraction bound passed at every order0 through5; the larger lattice boundary is unreachable at these orders.
+- Constructed nine separate modal forward models at n=61 for target29,30,31 and three distinct source directions. A decoder receiving only the noisy retained readings first rounded their centroid, then constructed its inverse from that recovered index. All nine labels were correct; maximum centroid error was0.001311815 at relative window noise10^-3. The retained-Gram identity, centroid-noise bound, and calibrated H1 pseudoinverse error inequality all passed. This checks the absence of a target-label oracle in a separate executable control.
+- An exact two-endpoint signed-noise control, y=(1,1), epsilon=(nu,-nu), gives centroid displacement `range*nu/(1+nu^2)`. It obeys both declared noise bounds: displacement approximately0.10 versus bound0.200050009 for full range1000, and0.097999903 versus0.196490786 for window range98.
+
+## Scope of the verdict
+
+The new exact checkers establish consequences of the existing outward central coefficient/floor enclosures and the supplied analytic locality proofs. I did not rerun the expensive n=1001 baseline coefficient producer in this audit; its independent prior audit and source-replay evidence remain dependencies. Small floating examples do not replace those enclosures.
+
+R1/R2 use full spatial output, or all relevant modes transformed orthogonally. R3 has an additional21-target prior and99 spatial-average readouts; direct acquisition requires those readouts to be available. If they are formed from full modal measurements, the reduction is post-processing rather than acquisition savings. Every channel still includes the global x-average. The results establish neither fully local hardware observability nor experimental noise performance. These limitations are explicit in the final proof and must remain in any summary.

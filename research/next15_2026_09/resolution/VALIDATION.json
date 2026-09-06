@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "completed_cycles": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "cycle_count": 3,
+  "report_words": 890,
+  "focused_tests_passed": 11,
+  "exact_checkers": [
+    "check_placement.py",
+    "check_localization.py",
+    "check_window.py"
+  ],
+  "full_model_examples": [
+    "localization_example.json",
+    "window_example.json"
+  ],
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.5.2",
+    "python_flint": "0.9.0",
+    "flint": "3.6.0"
+  },
+  "trust_boundary": "Analytic locality proofs + inherited central Arb certificate. New exact checkers rederive all rational bounds; examples are floating regressions.",
+  "source_sha256": {
+    "check_localization.py": "9304a686493ec20e8eda9a9ff399e3774b379d15fe6f055149f1db3937fcc561",
+    "check_placement.py": "6c3c314425b418cbd1b69065d0c6d9ba730c79aa7c8710a59ddfb7cbca75f8e1",
+    "check_window.py": "5e7155c975e98b137fb2f6445fc77d97acd08e56b54dc22f46ee1bc0e17d2ff3",
+    "localization.py": "298f86cda661373a09c25c465d5d5109e3f76305a1ef756ff7eb76eb7c9657aa",
+    "placement.py": "64c986d914136fafa98011e1ecaaa9ddae0c08732bd0e13db942d5e8ec9cc477",
+    "simulate.py": "d9f3d33b369271d2661fc6ab47ec1ea14258ce694bf13678898e13222973749a",
+    "test_localization.py": "e9b62150b4b3e79ac30b5808a7a84bbec44fff9ee5cf0b4e70cff666387b4d0e",
+    "test_placement.py": "1faca823e418d358ad81080f12665afac97930c0a2420fd0306c1691eae655af",
+    "test_window.py": "fa0fa5a498ed8ac56f54139ab6e7ca5938d1a258a2eeea2894761ac26f7a80fc",
+    "window.py": "4e03a1546d0d260ae56b7d9e629b3343db12a4f053956da8e76a412fd64ea0c0",
+    "window_example.py": "b3e6447391bf1182e937ccddef4e1d6a5a9744363806775afbf60f11ad9c629f"
+  }
+}

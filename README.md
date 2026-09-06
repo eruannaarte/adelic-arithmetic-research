@@ -1,5 +1,12 @@
 # Adelic Arithmetic Research
 
+The [Transfer Theorem public guide](TRANSFER_THEOREM_PUBLIC_COMPANION.md) and
+[interactive lab](website/transfer-theorem-lab/index.html) connect five research
+paths through certified query recovery under structured uncertainty. The
+[versioned package](publication/transfer-theorem-v1/PORTABLE_GUIDE.md) includes
+six-channel spatial recovery with a joint clock/potential contract, complete
+arithmetic clock blocks, verified degree-eleven comparisons, proofs and replays.
+
 This repository contains the manuscripts, executable laboratories, and tests
 for five connected TGN research programmes:
 

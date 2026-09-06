@@ -1,0 +1,56 @@
+{
+  "status": "completed production, exact-consumer, adversarial-test, finite-model and independent-audit checks",
+  "kernel_replay_precisions": [
+    192,
+    256
+  ],
+  "kernel_replay_export_equality": true,
+  "regenerated_preconditioner_certificate_independently_checked": true,
+  "standard_library_consumer": {
+    "verified": true,
+    "whole_cell_records": 895,
+    "all_231_case_covers_verified": true
+  },
+  "unit_tests": {
+    "passed": 9,
+    "observed_wall_seconds": 23.484,
+    "coverage": [
+      "all target labels at times 1, 3/2, 2",
+      "both basis and mixed signed sources",
+      "all three noise/source calibrations",
+      "removed single pair coverage with unchanged global cell union",
+      "changed kernel, operator bound, bank rows and boolean-as-integer rejection",
+      "independent polynomial shift identity",
+      "incompatible and zero data, timing and numerical contract"
+    ]
+  },
+  "finite_grid_diagnostics": {
+    "state_dimension": 1002001,
+    "decoded_cases": 27,
+    "maximum_physical_model_discrepancy": 3.355023296452901e-17,
+    "maximum_relative_source_error": 0.00023671198087254228,
+    "role": "floating regressions, not a proof input or numerical-budget certificate"
+  },
+  "sha256": {
+    "PROOFS.md": "66776e1e3f4ed710a24c82e6b6a681864abc4f5a8d601cf1ed77dd70ef8f48b1",
+    "kernel.py": "831c4e2aea3ed454b31e64e704b4108fcdc32ab01b042e0e6f4472d6651f0474",
+    "kernel.json": "f8e6dd8821a3a1881ebda34cdcecdbb786c3d71b3e1aeecf97a7f1b1a6c03952",
+    "produce.py": "2c158072f3e59c7a13e3277a629bdbadabe72064931ab885930c9ddeb4a67944",
+    "exact.py": "e5595eb24b0da6759c513a9a67ab46290368004ad60fedbf91cacf7ecb88da71",
+    "certificate.json": "c9ea121b15035968ca8deb10f7386d4a528dc15c90f348181874927fd1f8decb",
+    "check.py": "719ee362600449a01316dbe0939ea7e3880bfe97404f9714aa58969aed8d14fa",
+    "decoder.py": "75d5a9ee8b02b18352966e0c0ed4fa7064fe25f90c226e03ebd2e39d35604dd9",
+    "test_resolution.py": "3c6e60e4d39c207d9305f12d368dcf27524d5b70cbcce66e9c72c2aeea20310a",
+    "forward_checks.py": "bda0b9a6e1f2ecf744adacc85db64a788701b249c1b13fd2b6907137ecd9c242",
+    "independent_audit.py": "594b3949f5ab8e31387c4027f5e6f60d3aed9ca9dea0f6fbf08d2f6ba7456216",
+    "independent_audit.json": "de79003a08b987375ea9accec3c97356d8450d25fcf8c3cd95c1ee25fb71edf4"
+  },
+  "independent_audit": {
+    "verified": true,
+    "alternative_full_x_coefficients": 16,
+    "alternative_full_x_precision": 256,
+    "exact_boundary_power_controls": 15,
+    "dense_model_entry_controls": 48,
+    "published_operator_radius_unchanged": "1/1000000000"
+  }
+}

@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Please cite this versioned research package when using the transfer theorem proofs, certificates or lab."
+title: "Certified Query Recovery under Structured Uncertainty: Transfer Theorem Research and Lab"
+type: software
+authors:
+  - name: "Codex (OpenAI)"
+version: "1.0.0"
+date-released: 2026-09-05
+repository-code: "https://github.com/eruannaarte/adelic-arithmetic-research"
+url: "https://github.com/eruannaarte/adelic-arithmetic-research/releases/tag/transfer-theorem-v1-2026-09-05"
+license: Apache-2.0
+abstract: >-
+  Proved query transfer through nuisance removal, finite approximation and
+  restricted sensing, with structured clock and model uncertainty. Includes
+  complete six-channel spatial certificates, infinite arithmetic clock blocks,
+  verified degree-eleven and degree-twelve recovery budgets, actual-model
+  reconstructions, independent internal reviews and a standalone interactive lab.
+keywords:
+  - inverse problems
+  - uncertainty quantification
+  - query recovery
+  - validated numerics
+  - reproducible research

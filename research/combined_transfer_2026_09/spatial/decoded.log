@@ -1,0 +1,8 @@
+{
+  "verified": true,
+  "case_count": 24,
+  "maximum_observed_relative_source_error_upper": "236873653067835077530615350081538997/10000000000000000000000000000000000000000",
+  "all_raw_normalization_budgets_verified": true,
+  "prior_complete_time_floors_rechecked": true,
+  "structured_complete_time_directions_rechecked": true
+}

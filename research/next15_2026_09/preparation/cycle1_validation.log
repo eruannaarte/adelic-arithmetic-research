@@ -1,0 +1,17 @@
+test_contract_and_boundary_rejections (__main__.Tests.test_contract_and_boundary_rejections) ... ok
+test_cycle1_exact_consequences (__main__.Tests.test_cycle1_exact_consequences) ... ok
+test_cycle1_source_replay (__main__.Tests.test_cycle1_source_replay) ... validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+ok
+test_finite_preparation_and_clock_derivatives (__main__.Tests.test_finite_preparation_and_clock_derivatives) ... ok
+test_launch_cancellation_control (__main__.Tests.test_launch_cancellation_control) ... ok
+test_six_direction_rhs (__main__.Tests.test_six_direction_rhs) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 8.433s
+
+OK

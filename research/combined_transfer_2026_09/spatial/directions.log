@@ -1,0 +1,34 @@
+{
+  "schema": "spatial-structured-directions-v1",
+  "bank_rows": [
+    485,
+    493,
+    499,
+    501,
+    507,
+    515
+  ],
+  "nominal_g": "4/5",
+  "time_interval": [
+    "1",
+    "2"
+  ],
+  "clock_radius": "1/100000000",
+  "potential_radius": "1/100000000",
+  "subdivisions": 128,
+  "precision_bits": 256,
+  "method": "outward polynomial Gram numerators and determinant; common rectangle corners; Frobenius operator upper bounds",
+  "global_bounds": {
+    "joint_forward": "42741604135958108849/100000000000000000000000000000",
+    "joint_inverse": "676141883885120585885287/1000000000000000000000000000000",
+    "time_forward": "5663833884232065458121358889/250000000000000000000000000000",
+    "potential_forward": "437800890896728096095592359/20000000000000000000000000000",
+    "time_inverse": "45560986005480043945958307941589/1000000000000000000000000000000",
+    "potential_inverse": "2255417045052826965376617326261/100000000000000000000000000000"
+  },
+  "premise_sha256": {
+    "research/transfer_theorem_2026_09/resolution/kernel.json": "f8e6dd8821a3a1881ebda34cdcecdbb786c3d71b3e1aeecf97a7f1b1a6c03952",
+    "research/structured_transfer_2026_09/resolution/kernel_derivative.json": "4a6a8f6796d8ee5ff3babc3c6c783d319e23dac2a8a9cda529db71fefe301f84"
+  },
+  "runtime_seconds": 0.7296033749880735
+}

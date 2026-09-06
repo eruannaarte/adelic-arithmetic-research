@@ -1,0 +1,72 @@
+{
+  "verified": true,
+  "working_precision_bits": 384,
+  "reconstructed_actual_readings": 8900,
+  "maximum_independent_digitization_error_upper": "158234764583559172591760531595598503925664710877581192167049527/2239744742177804210557442280568444278121645497234649534899989100963791871180160945380877493271607115776",
+  "data_sha256": "ea8d31fc83cb07e1a77e94f356a1e86d836a650662a10c882d9afddf68e24232",
+  "data_file_sha256": "1f5c30bf2fef913209d164dd6d5a0244193644d16b86a1d5135af439043c4d08",
+  "approximation_sha256": "79fca8f5edb07fd56e7b67f696f1867cd341790f2b7ff3a79e2849c258ddb18f",
+  "consequences_sha256": "95be989388c83b349bd8b57c8e2bcbff11fb977fb0784125c0795e6068e82f40",
+  "actual_results": [
+    {
+      "design": "multi",
+      "degree": 6,
+      "passing_gates": 0,
+      "coefficient_error_upper_display": 10796.120197856115,
+      "normal_residual_upper": "30055552997/1000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "design": "multi",
+      "degree": 8,
+      "passing_gates": 1,
+      "coefficient_error_upper_display": 309.6821045527105,
+      "normal_residual_upper": "6162802717/200000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "design": "multi",
+      "degree": 10,
+      "passing_gates": 12,
+      "coefficient_error_upper_display": 6.368365407733796,
+      "normal_residual_upper": "94152703721/250000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "design": "multi",
+      "degree": 12,
+      "passing_gates": 49,
+      "coefficient_error_upper_display": 0.43858998573542907,
+      "normal_residual_upper": "331660090549924050966899/1000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "design": "outer",
+      "degree": 6,
+      "passing_gates": 0,
+      "coefficient_error_upper_display": 10805.524333808711,
+      "normal_residual_upper": "28030024259/1000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "design": "outer",
+      "degree": 8,
+      "passing_gates": 1,
+      "coefficient_error_upper_display": 309.99307292754554,
+      "normal_residual_upper": "32636856191/1000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "design": "outer",
+      "degree": 10,
+      "passing_gates": 12,
+      "coefficient_error_upper_display": 6.422392791902433,
+      "normal_residual_upper": "96301635527/250000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "design": "outer",
+      "degree": 12,
+      "passing_gates": 49,
+      "coefficient_error_upper_display": 0.48763363006220506,
+      "normal_residual_upper": "336101980722456325794269/1000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "actual_coordinate_gates_recomputed": 392,
+  "reported_actual_and_planning_budgets_recomputed": 80,
+  "future_residual_ceiling": "1/1000000000000000000000000000000",
+  "scope": "Complete-tail and outward normal-residual bounds are separately reconstructed premises; this consumer independently reconstructs raw data and rederives all subsequent arithmetic consequences."
+}

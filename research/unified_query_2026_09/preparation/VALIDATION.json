@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "new_exact_replay_count": 1,
+  "focused_test_count": 10,
+  "inherited_full_ODE_replay_count": 3,
+  "physical_calibration": "NOT_RUN",
+  "source_hashes": {
+    "research/unified_query_2026_09/preparation/calibration_bridge.py": "5dd8bdaadc2ed615e207db58f566878d822f0c75c8e264785a7f667d5603150d",
+    "research/unified_query_2026_09/preparation/synthetic_calibration.json": "5c93285cd847d1ed55c6ecec07a273c043347fccae7576060cc6c6cb4eb9724e",
+    "research/unified_query_2026_09/preparation/test_calibration_bridge.py": "ef696742fce9f79a88cdc8e6e65337c67bce1ea3851d5a8913f8f7d0520f2e01"
+  },
+  "checks": [
+    {
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/unified_query_2026_09/preparation/calibration_bridge.py"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"mathematical_contract_passes\": true,\n  \"physical_validation\": \"NOT_RUN\",\n  \"query_source_diameter_bound\": \"10638154367130464020167707360678484367513536586414101856156657783653155820350923320923102233107239943550723296140947293620158490750152599345195798298696260753731669/177148422211036340542728836921633890203243154633217173600137293067512589589034699401996275054595604722287755027834312776238048019929450015335868818178963075251054500000\",\n  \"maximum_weighted_readout_noise_radius\": \"433775260627906357910219804475653669564305819734736217240686048200294630724604902022099753810832249248190655351100247246941512585763920084931823658716936677286693/174995045118375323746211967412475135166129446225235405432112527239356225744551008881865024959898652083052314309541305408446707479526023091441128634698751025000000000000\",\n  \"zero_center_envelope_control_passes\": false\n}\n"
+    },
+    {
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/unified_query_2026_09/preparation",
+        "-p",
+        "test_calibration_bridge.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_complete_rational_replay_and_comfortable_slack (test_calibration_bridge.CalibrationBridgeTests.test_complete_rational_replay_and_comfortable_slack) ... ok\ntest_known_center_translation_changes_domain_not_ambiguity (test_calibration_bridge.CalibrationBridgeTests.test_known_center_translation_changes_domain_not_ambiguity) ... ok\ntest_mutated_prior_intervals_are_not_trusted_from_cache (test_calibration_bridge.CalibrationBridgeTests.test_mutated_prior_intervals_are_not_trusted_from_cache) ... ok\ntest_noise_boundary_and_beyond_are_exactly_distinguished (test_calibration_bridge.CalibrationBridgeTests.test_noise_boundary_and_beyond_are_exactly_distinguished) ... ok\ntest_outer_domain_cannot_be_traded_for_small_width (test_calibration_bridge.CalibrationBridgeTests.test_outer_domain_cannot_be_traded_for_small_width) ... ok\ntest_reprepared_launch_wrong_clock_units_and_float_rejected (test_calibration_bridge.CalibrationBridgeTests.test_reprepared_launch_wrong_clock_units_and_float_rejected) ... ok\ntest_reversed_support_missing_evidence_and_bad_source_box (test_calibration_bridge.CalibrationBridgeTests.test_reversed_support_missing_evidence_and_bad_source_box) ... ok\ntest_shared_bias_cancellation_toy_and_independent_obstruction (test_calibration_bridge.CalibrationBridgeTests.test_shared_bias_cancellation_toy_and_independent_obstruction) ... ok\ntest_shared_projection_independent_direct_sensor_sum (test_calibration_bridge.CalibrationBridgeTests.test_shared_projection_independent_direct_sensor_sum) ... ok\ntest_synthetic_records_never_supply_physical_validation (test_calibration_bridge.CalibrationBridgeTests.test_synthetic_records_never_supply_physical_validation) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.054s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/next15_2026_09/preparation/verify.py",
+        "--deep"
+      ],
+      "exit_code": 0,
+      "completion_record": "Executed and completed as terminal session74187 during this extension, before the final exact-bridge replay.",
+      "output": "validated launch-A: 150 steps\nvalidated launch-B: 125 steps\nvalidated launch-C: 150 steps\nvalidated launch-A: 150 steps\nvalidated launch-B: 125 steps\nvalidated launch-C: 150 steps\nvalidated launch-A: 150 steps\nvalidated launch-B: 125 steps\nvalidated launch-C: 150 steps\nPASS: all three adaptive-cycle consequences and all three full nonlinear ODE replays\n"
+    }
+  ],
+  "premises": "Conditional on the declared model, actual initial-state support, source box, one shared clock, and weighted readout-noise support. The fixture is synthetic."
+}

@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "anisotropic_quotient_exact_vectors": 25,
+  "asymmetric_support_exact_cases": 104,
+  "ordinary_euclidean_projection_wrong_metric_counterexample": "e=(1,0), W=diag(1,4); ordinary projection residual=(1/2,-1/2) has W norm squared 5/4 > original 1",
+  "digital_correction_scope": "polynomial instantiation must use eta_total=eta+xi in the shared radius inequality"
+}

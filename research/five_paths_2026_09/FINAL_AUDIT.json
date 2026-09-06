@@ -1,0 +1,19 @@
+{
+  "structural_audit": "PASS",
+  "main_words": 2678,
+  "opening_words": 275,
+  "all_local_markdown_links_resolve": true,
+  "markdown_tables_consistent": true,
+  "existing_tracked_files_unchanged": true,
+  "focused_test_counts": [
+    9,
+    15,
+    5,
+    17,
+    16
+  ],
+  "focused_test_total": 62,
+  "quick_checks": true,
+  "full_test_run": true,
+  "full_arithmetic_dependency_replays": true
+}

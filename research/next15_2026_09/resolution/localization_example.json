@@ -1,0 +1,16 @@
+{
+  "status": "floating direct-model regression, not certified data",
+  "n": 1001,
+  "target": 47,
+  "source": [
+    0.6,
+    0.8
+  ],
+  "tau": 2,
+  "output_energy": 0.0005243413234901075,
+  "source_noise_norm": 3e-08,
+  "centroid": 47.00000000163576,
+  "rounded_target": 47,
+  "source_error": 3.1401849173675503e-16,
+  "matrix_minimum_eigenvalue": 3.95800955573511e-06
+}

@@ -1,0 +1,8 @@
+{
+  "verified": true,
+  "homogeneous_raw_data_cases": 15,
+  "receipt_corruptions_rejected": 8,
+  "additional_data_domain_and_budget_rejections": 7,
+  "exact_rational_root_and_zero_budget_verified": true,
+  "interface_scope": "scale and packet verifier; bank-specific decoding is checked by the main tests"
+}

@@ -1,0 +1,12 @@
+{
+  "verified": true,
+  "hashed_model_inputs": 7,
+  "arithmetic_profiles": 10,
+  "complete_display_Taylor_terms": 246,
+  "five_research_paths_have_local_evidence": true,
+  "strict_spatial_percentage_rounds_upward": true,
+  "positive_pair_weights_declared": true,
+  "toy_source_classes_declared": true,
+  "complex_modulus_and_real_rounding_declared": true,
+  "scope": "Exported quantities checked as display estimates; rigorous badges derive from complete saved contracts, not these floating comparisons."
+}

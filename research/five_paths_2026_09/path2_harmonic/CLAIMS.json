@@ -1,0 +1,64 @@
+{
+  "schema": "path2-claim-evidence-v1",
+  "claims": [
+    {
+      "id": "P2.1",
+      "claim": "Global harmonic reading count is r floor(s/2) on the declared labelled product of closed simplices.",
+      "status": "baseline reconstructed analytically",
+      "proof": "PROOFS.md section 2",
+      "accepted_source": "Borsuk 1933 Satz II printed p178; hypotheses checked in proof",
+      "newness": "not claimed new"
+    },
+    {
+      "id": "P2.2",
+      "claim": "The minimum count for local inverse-Lipschitz recovery somewhere in the interior is ceil(r(s-1)/2); five can be locally stable for r3s4 while every five-reading schedule fails globally.",
+      "status": "proved analytically with certified finite worked witness",
+      "proof": "PROOFS.md section 3",
+      "checker": "certificate_checker.py local_witness",
+      "artifact": "certificate.json five_reading_local_witness",
+      "scope": "no useful small-time noise constant asserted"
+    },
+    {
+      "id": "P2.3",
+      "claim": "Centered row-specific phase majorant proves global factor floor sqrt(s/2)-sqrt(maxrow(B^T B)), uniformly for all specified clock perturbations and boundary sources.",
+      "status": "proved analytically",
+      "proof": "PROOFS.md section 4",
+      "checker": "certificate_checker.py derive and schedule_bound",
+      "newness": "new application/refinement; no general priority claim"
+    },
+    {
+      "id": "P2.3-balanced",
+      "claim": "Six rational times with maximum 2773.804407 and absolute timing box .001 have global factor floor greater than .815089139403, 79.3219 times shorter than original maximum time.",
+      "status": "certified computationally conditional on P2.3",
+      "proof": "PROOFS.md section 6",
+      "inputs": "inputs.json schedules.balanced",
+      "artifact": "certificate.json schedules.balanced",
+      "boundary": "old schedule under same theorem has stronger floor1.23914; no domination or shortest-time claim"
+    },
+    {
+      "id": "P2.4",
+      "claim": "Unknown finite common/affine clock perturbation and adversarial data noise imply nominal least-squares error at most2(epsilon+Omega||rho||2)/c0.",
+      "status": "proved analytically",
+      "proof": "PROOFS.md section 5",
+      "worked_example": "balanced: error<=.063780985521 for unknown shared offset .001 and raw l2 noise .001; <=.002453719359 when realized timing is known",
+      "artifact": "certificate.json schedules.balanced",
+      "boundary": "requires a global minimizer; no efficient optimization claim; timing correlation retained"
+    },
+    {
+      "id": "P2-time-obstruction",
+      "claim": "For four-state factors, every m-reading schedule with max timeT has global floor at mostsqrt(m/20)min(Tlog p,2)^3.",
+      "status": "proved analytically",
+      "proof": "PROOFS.md section 7",
+      "witness": "single-factor centered perturbation(-1,3,-3,1)",
+      "boundary": "coarse necessary bound, not time optimality"
+    }
+  ],
+  "validation": {
+    "original_baseline_verifier": "passed at384bits",
+    "fresh_certificate": "passed at384bits",
+    "precision_refinement": "512bits gives identical rational consequences",
+    "focused_tests": "15 passed",
+    "trusted_components": "Python integers/Fraction; python-flint0.9.0,FLINT3.6.0,Arb elementary functions and determinant",
+    "not_mechanized": "analytic proof and accepted Borsuk theorem"
+  }
+}

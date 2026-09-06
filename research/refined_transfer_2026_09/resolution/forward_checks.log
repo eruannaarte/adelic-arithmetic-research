@@ -1,0 +1,7 @@
+{
+  "status": "floating full finite-model diagnostics; no certified normalization or arithmetic rounding claim",
+  "finite_state_count": 1002001,
+  "case_count": 5,
+  "maximum_physical_model_difference": 1.2894263231966281e-17,
+  "maximum_source_relative_error": 0.0009705473078514181
+}

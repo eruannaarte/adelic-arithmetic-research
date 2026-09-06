@@ -1,0 +1,61 @@
+{
+  "schema": "combined-six-spatial-validation-v1",
+  "verified": true,
+  "scope": "Fixed six-row all-target/all-source/all-time clock-potential transfer contract; mathematical model, no apparatus calibration",
+  "environment": {
+    "python": "3.12.14",
+    "python_flint": "0.9.0",
+    "numpy": "2.5.2",
+    "scipy": "1.18.1"
+  },
+  "checks": {
+    "independent_direction_cells": 2688,
+    "exact_polynomial_records": 1280,
+    "single_target_cases": 21,
+    "pair_cases": 210,
+    "unit_tests_passed": 13,
+    "actual_parameter_fixtures_reconstructed": 24,
+    "actual_raw_decodings_verified": 24,
+    "nominal_kernel_replay_bits": 320,
+    "potential_kernel_replay_bits": 384,
+    "raw_fixture_replay_bits": 320,
+    "preserved_predecessor_files": 660
+  },
+  "source_relative_error_upper": "4264155336972800030565369560261676063/5000000000000000000000000000000000000000",
+  "label_tube_radius": "13/400000000",
+  "dependencies_sha256": {
+    "research/transfer_theorem_2026_09/resolution/kernel.json": "f8e6dd8821a3a1881ebda34cdcecdbb786c3d71b3e1aeecf97a7f1b1a6c03952",
+    "research/transfer_theorem_2026_09/resolution/kernel.py": "831c4e2aea3ed454b31e64e704b4108fcdc32ab01b042e0e6f4472d6651f0474",
+    "research/structured_transfer_2026_09/resolution/kernel_derivative.json": "4a6a8f6796d8ee5ff3babc3c6c783d319e23dac2a8a9cda529db71fefe301f84",
+    "research/structured_transfer_2026_09/resolution/kernel_derivative.py": "a853800fe7a9a2e24fc9307cc1cecfb8ab0f7c1e9987cdd483356593f97c9bab",
+    "research/refined_transfer_2026_09/normalization/normalize.py": "c84a708733c16e8692627d1163429e70ff012fff9f884efcdaa10631555b49ef"
+  },
+  "artifact_count_excluding_this_manifest": 25,
+  "artifact_sha256": {
+    "PROOFS.md": "bfb4baf747f4503013e11bf0c698acd667b94cac193ae43af07639f379e22c18",
+    "README.md": "8ca9c8cbb004a6c9063ef604d2988565a575571cebdd7762788f897c669b0cba",
+    "REPORT.md": "ebec91dfd229da8f72c125e5fb04d4c8ae9a14b4595b1c27a2e12f9266ece13b",
+    "certificate_6.json": "3334a1f2753569338912c0fcd87b16ea54f90effd652a2b6f4952c9a860922c1",
+    "certify.py": "7cf3616a659efe534cca806766af56d0ffa1f59b6c365aba637becdbc7d5557f",
+    "check.log": "0095daf7246ec8b48d5547132d5785e379b89e7f13cb49d6530da4fb5e5cbcec",
+    "check.py": "c5636fd5e0a8b205be6b273aa92d11943de1ee53b751e9bd2f57f05cbc6c10ce",
+    "checked.json": "3b50e5449f522ad16f05d65612adc63bfcd7da6c0d0704b04a8dc418f064bfb3",
+    "decoded.json": "bc787767ec894fcdb902fda02f4a87a02159a783f196cab96e15ff5de80b2bbd",
+    "decoded.log": "7a516cbe9c66a71bd26a7fc91500a88910b621fcb37330bbb03cbe6a0d5d8944",
+    "decoder.py": "72c7e5d06954c21d6ffdf9f028a080a9e5db4d0d05c1a4ee51da90858525c597",
+    "derivative_kernel_replay.log": "568001dab00ad6c27fd2675a51f9753217ab26d1ca96c023383f75e658319c5a",
+    "directions.json": "61361f8c497a0b079176d956c11cf6ff9e2eadd333ee6385c2414fb9bf2d8e96",
+    "directions.log": "1c097da8be3513b252c20cb510f19eb7864e6bad45ed241a7e07a7115e642a9d",
+    "directions.py": "d393a0a3839d8c48a9f338631632a94af9cd22ed5af62f07e916b25801801558",
+    "fixtures.json": "4d92e4fdff636963b56389fbc9d9e595aed63d692f381757c17c80c30af6f9a9",
+    "fixtures.log": "099adf7d9bf326e956945864c95218a8421a9f7cd00104f671a095c3d99a25ff",
+    "fixtures.py": "c8fef5430e2d090a4974beda1b05b8eafc64119681865917c11acce74fce6d03",
+    "fixtures_replay.json": "aa33558480a632b44c58dd057881ba422c1ac7ed70fadd993d886e6ec0d9810e",
+    "fixtures_replay.log": "aa33558480a632b44c58dd057881ba422c1ac7ed70fadd993d886e6ec0d9810e",
+    "polynomial_producer.log": "5c83eceaea2746be104ef170dea45c5842fae6972abb861bcdef4cd706f19ebc",
+    "polynomial_producer.py": "3784f56ba4a3db3b09647c3b1526c0b7b33ebb7f93708dbab764b60d958dd4c6",
+    "test_spatial.py": "e2f50d2e38640a1b999ce481becb24f788184bebbd1d32f39f403296c22aec68",
+    "tests.log": "dd11b2021a3de98fd74b2f52533b5863f3c833dbc765c53b90561ef2c035cee1",
+    "value_kernel_replay.log": "d3b98d6be51173c5c4e660d6def36ed60af4218284bb46f25c6b25a7f8eae109"
+  }
+}

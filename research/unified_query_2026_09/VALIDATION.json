@@ -1,0 +1,330 @@
+{
+  "checked_at_utc": "2026-09-05T17:39:18.996663+00:00",
+  "python": "3.12.14",
+  "executable": "/private/tmp/math-five-paths-venv/bin/python",
+  "deep": true,
+  "job_count": 21,
+  "focused_tests": 49,
+  "common_transfer_gates": 687,
+  "all_passed": true,
+  "seconds": 30.791,
+  "results": [
+    {
+      "name": "framework.three_model_transfer",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/unified_query_2026_09/framework/check_applications.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.726
+    },
+    {
+      "name": "harmonic.factored256",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/unified_query_2026_09/harmonic/uniform_collision.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.083
+    },
+    {
+      "name": "harmonic.factored384",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/unified_query_2026_09/harmonic/uniform_collision.py",
+        "--precision",
+        "384"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.049
+    },
+    {
+      "name": "harmonic.raw256",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/unified_query_2026_09/harmonic/uniform_collision.py",
+        "--independent"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.059
+    },
+    {
+      "name": "harmonic.raw384",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/unified_query_2026_09/harmonic/uniform_collision.py",
+        "--independent",
+        "--precision",
+        "384"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.061
+    },
+    {
+      "name": "preparation.record",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/unified_query_2026_09/preparation/calibration_bridge.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.038
+    },
+    {
+      "name": "quadratic.certificate",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/unified_query_2026_09/quadratic/joint_query.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.617
+    },
+    {
+      "name": "quadratic.independent_fields",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/unified_query_2026_09/quadratic/audit_independent.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.604
+    },
+    {
+      "name": "noise.exact",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/unified_query_2026_09/noise/check_certificate.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.088
+    },
+    {
+      "name": "noise.full_model_192",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/unified_query_2026_09/noise/polynomial_drift.py",
+        "--precision",
+        "192"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.222
+    },
+    {
+      "name": "noise.full_model_256",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/unified_query_2026_09/noise/polynomial_drift.py",
+        "--precision",
+        "256"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.312
+    },
+    {
+      "name": "resolution.certificate",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/unified_query_2026_09/resolution/certificate.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.031
+    },
+    {
+      "name": "resolution.check",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/unified_query_2026_09/resolution/check.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.025
+    },
+    {
+      "name": "framework.tests",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/unified_query_2026_09/framework",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.024,
+      "tests": 6
+    },
+    {
+      "name": "harmonic.tests",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/unified_query_2026_09/harmonic",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.13,
+      "tests": 10
+    },
+    {
+      "name": "preparation.tests",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/unified_query_2026_09/preparation",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.082,
+      "tests": 10
+    },
+    {
+      "name": "quadratic.tests",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/unified_query_2026_09/quadratic",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 4.575,
+      "tests": 7
+    },
+    {
+      "name": "noise.tests",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/unified_query_2026_09/noise",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 4.481,
+      "tests": 8
+    },
+    {
+      "name": "resolution.tests",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/unified_query_2026_09/resolution",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.202,
+      "tests": 8
+    },
+    {
+      "name": "preparation.full_ode_replay",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/next15_2026_09/preparation/verify.py",
+        "--deep"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 11.724
+    },
+    {
+      "name": "resolution.full_graph_controls",
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/unified_query_2026_09/resolution/example.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.641
+    }
+  ],
+  "file_identity_sha256": {
+    "framework/application_validation.json": "ae3f1a4cdd7959036b40444c78cf1e36f905759b4e18824e2bd95684cc231f78",
+    "framework/check_applications.py": "79191a056d3792a32a4b024e252025661c4b40a9bfd9460585d27c890852e279",
+    "framework/directional.py": "07849541815a84f932cb942454c447d8ef0710bbe6ecb4560cab5f95a883cf64",
+    "framework/independent_audit_checks.json": "df81ead324d2a57b8c9b3203bd01dae380051009c979018ef8df3c0a6962ec40",
+    "framework/test_directional.py": "75486886a5019f0c71e98e6f671851fdd60bacb1b7068f896ed0e916f7541253",
+    "harmonic/VALIDATION.json": "b0e6c5ea6b9839b5ac8926a18fd66ab5ddebf4334a12beb79cea5489282b7e47",
+    "harmonic/certificate.json": "cdd18d3269eae40385d8a46dbe5f0d9e0b305b27c03004b7b9377907cc791e76",
+    "harmonic/independent_audit_checks.json": "dfcc259ddbe56a73ba4915d48090316470036d2d70213d48597da2915fdcf0ae",
+    "harmonic/independent_certificate.json": "015475c7784e15d733a2b6ccb869414a1ff17fc945767289e79626e21d1084be",
+    "harmonic/inputs.json": "03449f751521b133891eb7333d4098daa5c13bf022bdbdd97fec7012cd752aa8",
+    "harmonic/test_uniform_collision.py": "24c7e9a4ffc651c24213cd1e8e88d2c365b69641affaa74fbae56a125dde6eff",
+    "harmonic/uniform_collision.py": "f230a9bbf1f22cf339ebbe3d167154b6abfb45c3eca4e553d99c2ee4890bb1f1",
+    "noise/VALIDATION.json": "e256b7f07c51effdd288b214be361645e1dfdb417815858cbddc9cedf9757b00",
+    "noise/check_certificate.py": "03e45ec4315562b3a1395238f64d5e6aa8a37bb86bc19d1f5254e673ad0a9835",
+    "noise/evidence.json": "4820917cd604707990722621a16443f6d0e866622304717ec557ca8fca2eaf67",
+    "noise/polynomial_drift.py": "7d022ed01411f25f7c8ed48670476de36908f08d1a936e11db97cb42109091a0",
+    "noise/test_polynomial_drift.py": "037f8a78371cbaedfd2d2da2c81fbbc17cfd8a4c609377e2d8e5781bc70508a1",
+    "preparation/VALIDATION.json": "847b0dc712d4920e8990a2ca6726bb9bda9adcf0e4b3011f29b306ae0780367d",
+    "preparation/calibration_bridge.py": "5dd8bdaadc2ed615e207db58f566878d822f0c75c8e264785a7f667d5603150d",
+    "preparation/certificate.json": "0c8dc2572807b0efaa12e05571c48b2e3511d07b2a3ed1108aa64e4011ac2c68",
+    "preparation/independent_audit_checks.json": "e67a246cd5ee73fb0c85270216cc86a724e4fd7028725cf9ae4296198873d032",
+    "preparation/record.schema.json": "9d06e5d57b203611209ef4afb60e6f1c8546138f6265f44a5456afecdf657a7e",
+    "preparation/synthetic_calibration.json": "5c93285cd847d1ed55c6ecec07a273c043347fccae7576060cc6c6cb4eb9724e",
+    "preparation/test_calibration_bridge.py": "ef696742fce9f79a88cdc8e6e65337c67bce1ea3851d5a8913f8f7d0520f2e01",
+    "quadratic/audit_independent.json": "39a772d8e1eced240ac34a190be2456cf7fa2564b8efde1b60078454212c0745",
+    "quadratic/audit_independent.py": "d45ac2360185f1da36249a4ea58c5ee2015c86d933b00bb46201de5564780a3d",
+    "quadratic/certificate.json": "d415950f488ba712308785dd5b528d4dff57817fbedea3d9ec9b681ee6d30cd2",
+    "quadratic/joint_query.py": "efd2eb2ad64c0f7fdf114f665410fc307e8c7a7849159a440be65de002f73f8a",
+    "quadratic/test_joint_query.py": "f2ef47dc1c86b951d96c0f2e3fdea152d3f62bcc7ebdb526034c0c5466796175",
+    "resolution/VALIDATION.json": "38b2dab7a374c2c17f58ad2146d669853777cae795c313f998f2db60f66ae4fb",
+    "resolution/certificate.py": "a34e4929416b06ac761405c4f62382206c235d36c23b0345c326383fda236ac3",
+    "resolution/check.py": "f657a846feb8295f400dc7f83529bc139f149a71333c07d77edd27a0aea855b7",
+    "resolution/evidence.json": "b4e989822a547ae3bd2314ec3d51f9f74c8eb4288ee4c7fbe5e586f1f639f24d",
+    "resolution/example.json": "80d7cc7d6620a5999c05500012a2aa2304de3363ef7ae9d7690dbd344b722f03",
+    "resolution/example.py": "ecdb285a5b9f1aea6fb87d58cd1dc92a2bf377e613b228d9de08d97002e486a7",
+    "resolution/independent_audit_checks.json": "adf767f2d82e272fa2ca3e857197b3d4c9b743c02316f9ea9471e0232ca80507",
+    "resolution/test_banks.py": "0e7321054504bb5ba578b61ca595f65299037ce36021a9283ec2dc9cb3214d12",
+    "verify_package.py": "3d20da9f92485c008f800a9b1f4b3745b4ffa743e79bd9c417f0a3b947f708a9"
+  },
+  "scope": "Complete new computations and consequences; unchanged d14 tails and central resolution premises are explicitly inherited. Physical preparation calibration NOT_RUN."
+}

@@ -1,0 +1,289 @@
+{
+  "schema": "independent-transfer-witnesses-v1",
+  "examples": {
+    "correlated_retained_metric": {
+      "W": [
+        [
+          "2",
+          "1"
+        ],
+        [
+          "1",
+          "2"
+        ]
+      ],
+      "retention": [
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "actual_error": [
+        "4/5",
+        "-2/5"
+      ],
+      "retained_precision": "3/2",
+      "minimum_original_noise_cost_squared": "24/25",
+      "wrong_principal_precision_cost_squared": "32/25"
+    },
+    "Hermitian_retained_metric": {
+      "Hermitian_W_Gaussian_pairs": [
+        [
+          [
+            "2",
+            "0"
+          ],
+          [
+            "0",
+            "-1"
+          ]
+        ],
+        [
+          [
+            "0",
+            "1"
+          ],
+          [
+            "2",
+            "0"
+          ]
+        ]
+      ],
+      "error_Gaussian_pairs": [
+        [
+          "4/5",
+          "0"
+        ],
+        [
+          "0",
+          "-2/5"
+        ]
+      ],
+      "noise_cost_squared_Gaussian_pair": [
+        "24/25",
+        "0"
+      ],
+      "minimum_retained_precision": "3/2"
+    },
+    "noncommuting_quotient": {
+      "nuisance_column": [
+        "1",
+        "1"
+      ],
+      "full_projector": [
+        [
+          "1/2",
+          "-1/2"
+        ],
+        [
+          "-1/2",
+          "1/2"
+        ]
+      ],
+      "same_retained_data": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "2"
+        ]
+      ],
+      "restricted_full_quotient_outputs": [
+        "0",
+        "-1"
+      ],
+      "correct_retained_nuisance_free_dimension": 0
+    },
+    "distinct_factorization_criteria": {
+      "full_projector": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "retention": [
+        [
+          "1",
+          "0",
+          "0"
+        ]
+      ],
+      "restricted_quotient_factors_through_retention": true,
+      "entire_quotient_factors_through_retention": false,
+      "same_retained_data_with_distinct_full_quotients": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ]
+      ]
+    },
+    "query_class_saturation": {
+      "sources": {
+        "a0": [
+          0,
+          0
+        ],
+        "a1": [
+          0,
+          1
+        ],
+        "b0": [
+          1,
+          0
+        ],
+        "b1": [
+          1,
+          1
+        ]
+      },
+      "query_labels": {
+        "a0": 0,
+        "a1": 0,
+        "b0": 1,
+        "b1": 1
+      },
+      "query_fibers_preserved": [
+        {
+          "observation": [
+            0,
+            0
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "observation": [
+            0,
+            1
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "observation": [
+            1,
+            0
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "observation": [
+            1,
+            1
+          ],
+          "answer": [
+            1
+          ]
+        }
+      ],
+      "individual_source_fibers_preserved": false,
+      "saturation_scope": "relative to the four-point promised domain"
+    },
+    "pointwise_vs_minimax": {
+      "observation": [
+        "0",
+        "3/5"
+      ],
+      "full_conditional_query_interval": [
+        "-4/5",
+        "4/5"
+      ],
+      "retained_conditional_query_interval": [
+        "-1",
+        "1"
+      ],
+      "both_uniform_minimax_radii": "1",
+      "candidate_admitted_only_after_restriction": "9/10"
+    },
+    "shared_stage_error_support": {
+      "shared_primitive_radius": "1",
+      "stage_coefficients": [
+        "1",
+        "-1"
+      ],
+      "exact_composed_directional_budget": "0",
+      "separate_error_set_budget": "2",
+      "independent_box_sum_witness": "2",
+      "quadrature_of_separate_unit_radii_is_unsafe_for_that_box": true
+    },
+    "unrestricted_nuisance_leakage": {
+      "projector_matrix_error": "1/1000",
+      "unrestricted_nuisance_amplitude_witness": "2000",
+      "resulting_output_leakage": "2",
+      "violated_proposed_output_budget": "1",
+      "scaling_formula_for_any_budget_K": "choose amplitude=(K+1)/epsilon"
+    },
+    "nonconvex_query_union": {
+      "query0_exact_responses": [
+        "-1",
+        "1"
+      ],
+      "query1_exact_responses": [
+        "0"
+      ],
+      "actual_pair_distance": "1",
+      "sharp_open_noise_threshold": "1/2",
+      "convexified_classes_overlap_at": "0"
+    },
+    "closed_source_tube_endpoint": {
+      "block_Gram": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "relative_radii": [
+        "3/5",
+        "4/5"
+      ],
+      "source_amplitudes": [
+        "5/4",
+        "5/3"
+      ],
+      "common_observation_at_equality": [
+        "4/5",
+        "3/5"
+      ],
+      "legal_errors": [
+        [
+          "-9/20",
+          "3/5"
+        ],
+        [
+          "4/5",
+          "-16/15"
+        ]
+      ],
+      "consequence": "strict pair-floor inequality cannot be weakened to equality in general"
+    }
+  },
+  "status": "PASS",
+  "scope": "exact witnesses and finite algebraic controls; general theorems require the accompanying proofs"
+}

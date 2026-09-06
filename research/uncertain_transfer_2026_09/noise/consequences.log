@@ -1,0 +1,19 @@
+verified 32 frequency/degree capacities; 40 planning budgets
+multi 1/2 best degree 12 B < 102157685866744.84
+multi 1 best degree 12 B < 12339809296.639097
+multi 2 best degree 12 B < 1444273.73085319
+multi 3 best degree 12 B < 6919.763383120189
+outer 1/2 best degree 12 B < 67725961696351.586
+outer 1 best degree 12 B < 8180736257.724412
+outer 2 best degree 12 B < 957486.5875933559
+outer 3 best degree 12 B < 4587.469528319785
+planning multi B 0 degree 6 Emax 0.35222340146681064
+planning multi B 1/10 degree 6 Emax 0.35232802138718694
+planning multi B 1 degree 8 Emax 0.3526186979273434
+planning multi B 100 degree 8 Emax 0.3529559644821024
+planning multi B 4000 degree 10 Emax 0.35335444049996656
+planning outer B 0 degree 6 Emax 0.40118929142888043
+planning outer B 1/10 degree 6 Emax 0.4012940007616286
+planning outer B 1 degree 8 Emax 0.40158581474005633
+planning outer B 100 degree 8 Emax 0.4019233640852718
+planning outer B 4000 degree 10 Emax 0.4023237972928694

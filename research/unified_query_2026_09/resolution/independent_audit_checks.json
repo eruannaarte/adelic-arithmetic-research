@@ -1,0 +1,38 @@
+{
+  "independent_checker": "edgewise Hermitian dominance and Arb exponential",
+  "finite_graph_checks": [
+    {
+      "a": "4",
+      "state_dimension": 44,
+      "all_source_hermitian_dominance_slack": "9/40"
+    },
+    {
+      "a": "9/2",
+      "state_dimension": 44,
+      "all_source_hermitian_dominance_slack": "49/180"
+    }
+  ],
+  "banks": [
+    {
+      "rows": 50,
+      "all_21_label_energy_and_moment_checks": true,
+      "retained_central_floor_ratios_lower": {
+        "L2": 0.9998323094115252,
+        "declared_H1": 0.9960679398160374,
+        "natural_discrete_H1": 0.9962971001123477
+      },
+      "centroid_error_upper": 0.1003463522741546
+    },
+    {
+      "rows": 48,
+      "all_21_label_energy_and_moment_checks": true,
+      "retained_central_floor_ratios_lower": {
+        "L2": 0.9974117126829767,
+        "declared_H1": 0.9715934115668365,
+        "natural_discrete_H1": 0.9732489463038323
+      },
+      "centroid_error_upper": 0.13017732573705879
+    }
+  ],
+  "full_boundary_moment": "[8.77233991064789951139104288084666666519882842003273045750e-592 +/- 3.26e-649]"
+}

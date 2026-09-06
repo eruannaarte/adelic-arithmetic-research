@@ -1,0 +1,10 @@
+{
+  "schema": "adaptive-noise-claims-v1",
+  "cycles": [
+    {"id": "N1", "claim": "Every rounding-capable original absolute-tail/Neumann mixture certificate has .0017613<alpha<.0020428 and actual target50 iid variance greater than1.00009090067766 times outer-only variance", "scope": "Original sufficient certificate family, not universal recovery impossibility", "proof": "PROOFS.md#n1--a-complete-family-certificatevariance-pareto-obstruction", "checker": "cycle1.py", "evidence": "cycle1_evidence.json", "status": "Complete proof with new interval reconstruction and explicitly inherited full-tail premises"},
+    {"id": "N2", "claim": "Complete envelope-midpoint preprocessing certifies all50 integers at sensor radii1e-4 multi and8e-5 outer, with correction error below1e-20 and unchanged covariance", "scope": "Known d14 envelope, original8900 readings, exact linear decoder with supplied rational correction", "proof": "PROOFS.md#n2--complete-envelope-centering-changes-the-robustness-regime", "checker": "cycle2.py", "evidence": "cycle2_evidence.json", "additional_artifact": "cycle2_correction.json", "status": "Complete proof and all-reading outward complex-zeta certificate"},
+    {"id": "N3", "claim": "Knowna1=1 permits exact removal of arbitrary complex affine baseline and recovery of the remaining49 integers at sensor radii9e-5 multi and7e-5 outer; unknowna1 has an exact legal collision", "scope": "Exactly affine baseline and exact augmented solve; finite-precision error needs a separate budget", "proof": "PROOFS.md#n3--arbitrary-affine-instrument-drift-and-its-exact-identifiability-boundary", "checker": "cycle3.py", "evidence": "cycle3_evidence.json", "inputs": "cycle3_inputs.json", "status": "Complete Schur/noise proof, full new nuisance-tail bound, exact obstruction, and outward physical-map reconstruction"}
+  ],
+  "validation": "11 tests, including192/256-bit reconstruction, independent raw-grid covariance and augmented maps, correction values, invalid budgets, and correction-file binding",
+  "novelty": "No historical novelty claim; standard methods have a new quantified application within this project"
+}

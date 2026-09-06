@@ -1,0 +1,7 @@
+**Quadratic realizability and constrained arithmetic queries**
+
+Primary source family: actual real quadratic fields Q(sqrt(d)), d>1 squarefree, with no imposed discriminant ceiling. At each prime p, chi_D(p) belongs to {-1,0,1}; a_D(n)=sum_{e|n}chi_D(e). Seek a necessary and sufficient finite-prefix criterion, and prove existence using CRT and Dirichlet's theorem with all residue coprimality conditions checked. Distinguish this infinite family theorem from finite computational examples.
+
+Information target: queries at primes 2,3,5 using the same AS-V time grid, specialized to the divisor-d_2 envelope. For equal a(2),a(3), arithmetic forces a(20)=a(4)a(5) and a(45)=a(9)a(5), with a(4),a(9)>=1. Test whether exploiting these relations increases the certified noise radius for a(5) beyond the independent-prefix zero-tail threshold 1/50. Freeze raw measurement norm to the AS-V weighted l2 probability measure and use identical noise/tail semantics for every comparison. This is a constrained-class guarantee, not a statement about arbitrary degree-14 number fields.
+
+Fallback mathematical outcome if the numeric threshold fails: the exact realizability criterion and a proof that the isolated e_5 prefix collision is impossible in quadratic data with N>=20, plus a correctly bounded constrained decoder. Any claimed threshold improvement requires a fresh complete d_2 tail bound and rigorous Gram/noise analysis.

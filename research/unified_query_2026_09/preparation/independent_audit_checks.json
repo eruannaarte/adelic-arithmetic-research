@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "direct_reconstruction": "all B*A, source contraction, signed local/shared columns and weighted noise inequalities from raw finite-box/nominal records",
+  "source_infinity_diameter": 6.005221065111867e-05,
+  "weighted_noise_boundary": 2.4787859583937322e-06,
+  "row_loads": [
+    0.6420269183747765,
+    0.6051979066759539,
+    0.2874388386630074
+  ],
+  "asymmetric_interval_reparameterization_preserves_same_joint_support": true,
+  "physical_calibration": "NOT_RUN",
+  "acquisition_scope": "five dynamical outputs plus externally justified initial-state metrology and reference-characterization resources"
+}

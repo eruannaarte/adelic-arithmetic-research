@@ -1,0 +1,7 @@
+{
+  "verified": true,
+  "case_count": 12,
+  "reconstruction_precision_bits": 320,
+  "raw_readings_reconstructed": true,
+  "all_sensor_promises_reproved": true
+}

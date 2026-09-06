@@ -1,0 +1,11 @@
+test_directional_gain_matters (__main__.TransferTests.test_directional_gain_matters) ... ok
+test_half_integer_boundary (__main__.TransferTests.test_half_integer_boundary) ... ok
+test_invalid_premises (__main__.TransferTests.test_invalid_premises) ... ok
+test_strict_accuracy_boundary (__main__.TransferTests.test_strict_accuracy_boundary) ... ok
+test_strict_label_boundary (__main__.TransferTests.test_strict_label_boundary) ... ok
+test_weighted_source_incidence (__main__.TransferTests.test_weighted_source_incidence) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK

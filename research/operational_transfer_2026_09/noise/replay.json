@@ -1,0 +1,39 @@
+{
+  "verified": true,
+  "physical_readings_per_dataset": 8900,
+  "working_precision_bits": 320,
+  "cases": [
+    {
+      "case": "multi_moderate",
+      "normal_residual_upper_at_320_bits": "513857022978568008047599224743619348929407262011353/200000000000000000000000000000000000000000000000000000000000",
+      "saved_residual_bound_verified": true,
+      "both_residual_identities_checked": true,
+      "all_49_answers_verified": true,
+      "data_reconstructed_at_320_bits": true
+    },
+    {
+      "case": "multi_large",
+      "normal_residual_upper_at_320_bits": "1791872651931/1000000000000000000000000000000000000000000000000000000000000",
+      "saved_residual_bound_verified": true,
+      "both_residual_identities_checked": true,
+      "all_49_answers_verified": true,
+      "data_reconstructed_at_320_bits": true
+    },
+    {
+      "case": "outer_moderate",
+      "normal_residual_upper_at_320_bits": "1948273897120221846312795235454102773789331859615039/1000000000000000000000000000000000000000000000000000000000000",
+      "saved_residual_bound_verified": true,
+      "both_residual_identities_checked": true,
+      "all_49_answers_verified": true,
+      "data_reconstructed_at_320_bits": true
+    },
+    {
+      "case": "outer_large",
+      "normal_residual_upper_at_320_bits": "941574765889/1000000000000000000000000000000000000000000000000000000000000",
+      "saved_residual_bound_verified": true,
+      "both_residual_identities_checked": true,
+      "all_49_answers_verified": true,
+      "data_reconstructed_at_320_bits": true
+    }
+  ]
+}

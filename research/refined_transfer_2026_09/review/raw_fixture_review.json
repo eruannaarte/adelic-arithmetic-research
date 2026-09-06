@@ -1,0 +1,12 @@
+{
+  "verified": true,
+  "independently_scanned_raw_cases": 72,
+  "bank_profiles": 8,
+  "exact_raw_reconstructions": 72,
+  "independent_quartic_packets": 72,
+  "independent_least_squares_error_enclosures": 72,
+  "maximum_sensor_budget_fraction": "792775909782774634263575765599282426289737662868999/2798032622762733435799206200659772436594104692478820",
+  "maximum_normalization_relative_charge": "280000063/465044392320000000",
+  "maximum_source_relative_error_squared_upper": "12141843934710072571797/1000000000000000000000000000000",
+  "premise": "previously proved full finite-model operator error and spatial floors; this scan reruns no expensive model reconstruction"
+}

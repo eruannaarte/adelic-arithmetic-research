@@ -1,0 +1,49 @@
+{
+  "checked_UTC": "2026-09-05T16:50:57.016489+00:00",
+  "exact_certificate_jobs": 2,
+  "unit_tests_passed": 8,
+  "checks": [
+    {
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/unified_query_2026_09/resolution/check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Smaller asymmetric banks: exact certificate passed.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-S",
+        "research/unified_query_2026_09/resolution/certificate.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"verified\": true,\n  \"banks\": [\n    {\n      \"channel_count\": 50,\n      \"retained_central_fraction\": \"99/100\",\n      \"loss_upper\": 1.6475038103616827e-11,\n      \"centroid_error_upper\": 0.1003463522741546\n    },\n    {\n      \"channel_count\": 48,\n      \"retained_central_fraction\": \"97/100\",\n      \"loss_upper\": 3.0124569225421554e-10,\n      \"centroid_error_upper\": 0.13017732573705879\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/unified_query_2026_09/resolution",
+        "-p",
+        "test_banks.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_arb_full_generator_tail_control (test_banks.BankTests.test_arb_full_generator_tail_control) ... ok\ntest_centroid_perturbation_at_extreme_rows (test_banks.BankTests.test_centroid_perturbation_at_extreme_rows) ... ok\ntest_exact_conjugation_energy_for_noncommuting_graph (test_banks.BankTests.test_exact_conjugation_energy_for_noncommuting_graph) ... ok\ntest_forged_noise_and_acquisition_contract (test_banks.BankTests.test_forged_noise_and_acquisition_contract) ... ok\ntest_published_certificate (test_banks.BankTests.test_published_certificate) ... ok\ntest_tail_moment_envelope (test_banks.BankTests.test_tail_moment_envelope) ... ok\ntest_three_row_label_collision (test_banks.BankTests.test_three_row_label_collision) ... ok\ntest_zero_source_cannot_identify_target (test_banks.BankTests.test_zero_source_cannot_identify_target) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.165s\n\nOK\n"
+    }
+  ],
+  "model_replay": {
+    "status": "completed separately before validation capture",
+    "cases": 192,
+    "artifact": "example.json"
+  },
+  "inherited_numerical_premises": "Original continuous-time central Arb coefficient enclosures retain their prior audited reconstruction; consequences are freshly rechecked."
+}

@@ -1,0 +1,32 @@
+physical inverse reconstructed multi 320
+physical inverse reconstructed outer 320
+{
+  "schema": "degree-eleven-model-replay-v1",
+  "bits": 320,
+  "verified": true,
+  "designs": [
+    {
+      "design": "multi",
+      "verified": true,
+      "matrix_reconstruction_seconds": 3.172295041993493,
+      "complete_channel_count": 11,
+      "cross_channel_count": 550,
+      "weighted_residual_norm_count": 21,
+      "complete_Taylor_remainder_count": 2,
+      "actual_gram_defect_upper": "47372488228472114350209450509727311859929319535782735657/62500000000000000000000000000000000000000000000000000000000",
+      "wall_seconds": 3.648909334006021
+    },
+    {
+      "design": "outer",
+      "verified": true,
+      "matrix_reconstruction_seconds": 3.134698042005766,
+      "complete_channel_count": 11,
+      "cross_channel_count": 550,
+      "weighted_residual_norm_count": 21,
+      "complete_Taylor_remainder_count": 2,
+      "actual_gram_defect_upper": "64384416514140987866405622151024022597978099890596644267/62500000000000000000000000000000000000000000000000000000000",
+      "wall_seconds": 3.615516541991383
+    }
+  ],
+  "scope": "Fresh actual 8900-point weights, degree-11 basis and inverse Gram; complete new tail channels and weighted norms. Unchanged original arithmetic tail enumeration remains a hash-bound inherited premise with its previous replay commands."
+}

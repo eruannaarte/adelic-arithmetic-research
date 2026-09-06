@@ -1,0 +1,118 @@
+{
+  "schema": "joint-launch-calibration-v1",
+  "evidence_kind": "synthetic_fixture",
+  "experiment_id": "calibration-bridge-worked-fixture-2026-09",
+  "design": "selected_AB",
+  "source_radius": "1/10000",
+  "target_diameter": "1/10000",
+  "readout_noise_radius": "1/10000000",
+  "source_contract": {
+    "source_coordinates": [
+      "log(m2/m1)",
+      "log(l2/l1)",
+      "epsilon"
+    ],
+    "clock": "one epsilon shared globally; actual dimensionless time exp(epsilon)*tau",
+    "velocity": "sqrt(l1/g)*dtheta/dt_physical; not dtheta/dtau_nominal",
+    "angles": "unwrapped around the literal nominal launches",
+    "correction_equation": "true initial state = measured initial state + shared systematic + launch residual",
+    "scope": "one A launch and one B launch; every reading in a group uses that same preparation"
+  },
+  "coordinates": [
+    "theta1",
+    "theta2",
+    "scaled_omega1",
+    "scaled_omega2"
+  ],
+  "units": [
+    "radian",
+    "radian",
+    "dimensionless physical-time angular velocity",
+    "dimensionless physical-time angular velocity"
+  ],
+  "shared_systematic": [
+    [
+      "-1/1000000",
+      "1/1000000"
+    ],
+    [
+      "-1/1000000",
+      "1/1000000"
+    ],
+    [
+      "-1/1000000",
+      "1/1000000"
+    ],
+    [
+      "-1/1000000",
+      "1/1000000"
+    ]
+  ],
+  "shared_systematic_evidence": "synthetic declared correction intervals; not measured instrument calibration",
+  "launches": {
+    "A": {
+      "launch_id": "synthetic-launch-A",
+      "measured_initial_state": [
+        "800001/1000000",
+        "-350001/1000000",
+        "1/1000000",
+        "-1/1000000"
+      ],
+      "local_residual_intervals": [
+        [
+          "-1/200000",
+          "1/200000"
+        ],
+        [
+          "-1/200000",
+          "1/200000"
+        ],
+        [
+          "-1/200000",
+          "1/200000"
+        ],
+        [
+          "-1/200000",
+          "1/200000"
+        ]
+      ],
+      "same_preparation_for_all_readings": true,
+      "evidence_reference": "synthetic exact interval fixture; no physical readings"
+    },
+    "B": {
+      "launch_id": "synthetic-launch-B",
+      "measured_initial_state": [
+        "-119999/200000",
+        "900001/1000000",
+        "-1/1000000",
+        "1/1000000"
+      ],
+      "local_residual_intervals": [
+        [
+          "-3/1000000",
+          "3/1000000"
+        ],
+        [
+          "-1/200000",
+          "1/200000"
+        ],
+        [
+          "-1/200000",
+          "1/200000"
+        ],
+        [
+          "-1/200000",
+          "1/200000"
+        ]
+      ],
+      "same_preparation_for_all_readings": true,
+      "evidence_reference": "synthetic exact interval fixture; no physical readings"
+    }
+  },
+  "operating_assumptions_evidence": {
+    "source_box": "synthetic fixture assumption; no physical evidence",
+    "readout_noise": "synthetic fixture assumption; no physical evidence",
+    "model": "synthetic fixture assumption; no physical evidence",
+    "time_and_velocity_reference": "synthetic fixture assumption; no physical evidence"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "complete_replay_count": 4,
+  "focused_test_count": 10,
+  "arithmetic_forms": [
+    "factored product model",
+    "64 integer-label terms"
+  ],
+  "precisions_bits": [
+    256,
+    384
+  ],
+  "source_hashes": {
+    "research/unified_query_2026_09/harmonic/uniform_collision.py": "f230a9bbf1f22cf339ebbe3d167154b6abfb45c3eca4e553d99c2ee4890bb1f1",
+    "research/unified_query_2026_09/harmonic/inputs.json": "03449f751521b133891eb7333d4098daa5c13bf022bdbdd97fec7012cd752aa8",
+    "research/unified_query_2026_09/harmonic/test_uniform_collision.py": "24c7e9a4ffc651c24213cd1e8e88d2c365b69641affaa74fbae56a125dde6eff"
+  },
+  "checks": [
+    {
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/unified_query_2026_09/harmonic/uniform_collision.py"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"schema\": \"uniform-harmonic-collision-v1\",\n  \"method\": \"factored product model\",\n  \"contraction_upper\": \"218567913/1000000000\",\n  \"center_residual_upper\": \"26113283/4000000000000000000000\",\n  \"predictor_derivative_upper\": \"64657243/500000000\",\n  \"moving_center_residual_upper\": \"3233/1000000000\",\n  \"self_map_radius_upper\": \"10519/1000000000\",\n  \"self_map_ratio_upper\": \"315553777/1000000000\",\n  \"complement_coordinate_branch_lipschitz_upper\": \"222938597/62500000\",\n  \"minimum_probability_lower\": \"77066733/1000000000\",\n  \"factor_distance_squared_lower\": \"31988237/50000000\",\n  \"vertex_floor_squared_lower\": \"33375807/31250000\",\n  \"maximum_time_upper\": \"7491661/250000\",\n  \"query_obstruction\": {\n    \"query\": \"probability at exponent 1 in the prime-3 factor\",\n    \"first_answer\": \"20802017891925647/250000000000000000\",\n    \"second_answer\": \"63280942665025819/100000000000000000\",\n    \"answer_gap\": \"274800677541277801/500000000000000000\",\n    \"noiseless_absolute_error_lower\": \"274800677541277801/1000000000000000000\",\n    \"threshold\": \"1/2\",\n    \"threshold_answers\": [\n      0,\n      1\n    ]\n  },\n  \"all_strict_gates_pass\": true\n}\n"
+    },
+    {
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/unified_query_2026_09/harmonic/uniform_collision.py",
+        "--precision",
+        "384"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"schema\": \"uniform-harmonic-collision-v1\",\n  \"method\": \"factored product model\",\n  \"contraction_upper\": \"218567913/1000000000\",\n  \"center_residual_upper\": \"26113283/4000000000000000000000\",\n  \"predictor_derivative_upper\": \"64657243/500000000\",\n  \"moving_center_residual_upper\": \"3233/1000000000\",\n  \"self_map_radius_upper\": \"10519/1000000000\",\n  \"self_map_ratio_upper\": \"315553777/1000000000\",\n  \"complement_coordinate_branch_lipschitz_upper\": \"222938597/62500000\",\n  \"minimum_probability_lower\": \"77066733/1000000000\",\n  \"factor_distance_squared_lower\": \"31988237/50000000\",\n  \"vertex_floor_squared_lower\": \"33375807/31250000\",\n  \"maximum_time_upper\": \"7491661/250000\",\n  \"query_obstruction\": {\n    \"query\": \"probability at exponent 1 in the prime-3 factor\",\n    \"first_answer\": \"20802017891925647/250000000000000000\",\n    \"second_answer\": \"63280942665025819/100000000000000000\",\n    \"answer_gap\": \"274800677541277801/500000000000000000\",\n    \"noiseless_absolute_error_lower\": \"274800677541277801/1000000000000000000\",\n    \"threshold\": \"1/2\",\n    \"threshold_answers\": [\n      0,\n      1\n    ]\n  },\n  \"all_strict_gates_pass\": true\n}\n"
+    },
+    {
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/unified_query_2026_09/harmonic/uniform_collision.py",
+        "--independent"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"schema\": \"uniform-harmonic-collision-v1\",\n  \"method\": \"integer-label expansion\",\n  \"contraction_upper\": \"496731191/1000000000\",\n  \"center_residual_upper\": \"26113283/4000000000000000000000\",\n  \"predictor_derivative_upper\": \"193605501/500000000\",\n  \"moving_center_residual_upper\": \"9681/1000000000\",\n  \"self_map_radius_upper\": \"13119/500000000\",\n  \"self_map_ratio_upper\": \"393569721/500000000\",\n  \"complement_coordinate_branch_lipschitz_upper\": \"2371893143/500000000\",\n  \"minimum_probability_lower\": \"77066733/1000000000\",\n  \"factor_distance_squared_lower\": \"31988237/50000000\",\n  \"vertex_floor_squared_lower\": \"33375807/31250000\",\n  \"maximum_time_upper\": \"7491661/250000\",\n  \"query_obstruction\": {\n    \"query\": \"probability at exponent 1 in the prime-3 factor\",\n    \"first_answer\": \"20802017891925647/250000000000000000\",\n    \"second_answer\": \"63280942665025819/100000000000000000\",\n    \"answer_gap\": \"274800677541277801/500000000000000000\",\n    \"noiseless_absolute_error_lower\": \"274800677541277801/1000000000000000000\",\n    \"threshold\": \"1/2\",\n    \"threshold_answers\": [\n      0,\n      1\n    ]\n  },\n  \"all_strict_gates_pass\": true\n}\n"
+    },
+    {
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "research/unified_query_2026_09/harmonic/uniform_collision.py",
+        "--independent",
+        "--precision",
+        "384"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"schema\": \"uniform-harmonic-collision-v1\",\n  \"method\": \"integer-label expansion\",\n  \"contraction_upper\": \"496731191/1000000000\",\n  \"center_residual_upper\": \"26113283/4000000000000000000000\",\n  \"predictor_derivative_upper\": \"193605501/500000000\",\n  \"moving_center_residual_upper\": \"9681/1000000000\",\n  \"self_map_radius_upper\": \"13119/500000000\",\n  \"self_map_ratio_upper\": \"393569721/500000000\",\n  \"complement_coordinate_branch_lipschitz_upper\": \"2371893143/500000000\",\n  \"minimum_probability_lower\": \"77066733/1000000000\",\n  \"factor_distance_squared_lower\": \"31988237/50000000\",\n  \"vertex_floor_squared_lower\": \"33375807/31250000\",\n  \"maximum_time_upper\": \"7491661/250000\",\n  \"query_obstruction\": {\n    \"query\": \"probability at exponent 1 in the prime-3 factor\",\n    \"first_answer\": \"20802017891925647/250000000000000000\",\n    \"second_answer\": \"63280942665025819/100000000000000000\",\n    \"answer_gap\": \"274800677541277801/500000000000000000\",\n    \"noiseless_absolute_error_lower\": \"274800677541277801/1000000000000000000\",\n    \"threshold\": \"1/2\",\n    \"threshold_answers\": [\n      0,\n      1\n    ]\n  },\n  \"all_strict_gates_pass\": true\n}\n"
+    },
+    {
+      "command": [
+        "/private/tmp/math-five-paths-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/unified_query_2026_09/harmonic",
+        "-p",
+        "test_uniform_collision.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_all_vertex_pairs_with_independent_lipschitz_control (test_uniform_collision.UniformCollisionTests.test_all_vertex_pairs_with_independent_lipschitz_control) ... ok\ntest_exact_exported_consequences_and_forged_values (test_uniform_collision.UniformCollisionTests.test_exact_exported_consequences_and_forged_values) ... ok\ntest_factored_and_expanded_point_values_and_all_derivatives (test_uniform_collision.UniformCollisionTests.test_factored_and_expanded_point_values_and_all_derivatives) ... ok\ntest_factored_full_parameter_box_at_two_precisions (test_uniform_collision.UniformCollisionTests.test_factored_full_parameter_box_at_two_precisions) ... ok\ntest_frozen_scalar_and_bit_queries (test_uniform_collision.UniformCollisionTests.test_frozen_scalar_and_bit_queries) ... ok\ntest_independent_integer_label_full_box_at_two_precisions (test_uniform_collision.UniformCollisionTests.test_independent_integer_label_full_box_at_two_precisions) ... ok\ntest_malformed_domains_and_singular_preconditioner (test_uniform_collision.UniformCollisionTests.test_malformed_domains_and_singular_preconditioner) ... ok\ntest_moving_center_is_needed_by_this_frozen_certificate (test_uniform_collision.UniformCollisionTests.test_moving_center_is_needed_by_this_frozen_certificate) ... ok\ntest_oversized_box_and_false_recovery_claims_are_rejected (test_uniform_collision.UniformCollisionTests.test_oversized_box_and_false_recovery_claims_are_rejected) ... ok\ntest_source_derivative_exact_centered_coordinate_identity (test_uniform_collision.UniformCollisionTests.test_source_derivative_exact_centered_coordinate_identity) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.081s\n\nOK\n"
+    }
+  ],
+  "limits": "Both algebraic reconstructions share the Arb interval library; no physical experiment or proof-assistant formalization."
+}

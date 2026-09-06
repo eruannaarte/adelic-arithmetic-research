@@ -1,0 +1,8 @@
+{
+  "schema": "noise-affine-nuisance-input-v1",
+  "known_a1": 1,
+  "nuisance": "arbitrary complex beta0+beta1*t",
+  "measurement_count": 8900,
+  "declared_sensor_radii": {"multi": "9/100000", "outer": "7/100000"},
+  "correction_radius": "1/100000000000000000000"
+}

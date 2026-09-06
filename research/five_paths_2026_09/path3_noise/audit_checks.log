@@ -1,0 +1,10 @@
+test_direct_covariance_and_reused_reading_control (__main__.Audit.test_direct_covariance_and_reused_reading_control) ... ok
+test_rebuild_preserves_certified_result (__main__.Audit.test_rebuild_preserves_certified_result) ... ok
+test_stale_readdressed_and_wrong_contract_dependencies (__main__.Audit.test_stale_readdressed_and_wrong_contract_dependencies) ... ok
+test_standard_library_consequence_checker (__main__.Audit.test_standard_library_consequence_checker) ... ok
+test_vector_boundaries_and_rounding (__main__.Audit.test_vector_boundaries_and_rounding) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.740s
+
+OK

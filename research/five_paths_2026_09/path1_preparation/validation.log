@@ -1,0 +1,26 @@
+test_alternate_outward_partition (__main__.Checks.test_alternate_outward_partition) ... validated launch-A: 188 steps
+validated launch-B: 157 steps
+validated launch-C: 188 steps
+ok
+test_deep_nonlinear_source_replay (__main__.Checks.test_deep_nonlinear_source_replay) ... validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+ok
+test_exact_algebra_replay_and_frozen_comparison (__main__.Checks.test_exact_algebra_replay_and_frozen_comparison) ... ok
+test_held_out_finite_boxes_and_preparation_bias (__main__.Checks.test_held_out_finite_boxes_and_preparation_bias) ... ok
+test_independent_mechanical_rhs_and_derivatives (__main__.Checks.test_independent_mechanical_rhs_and_derivatives) ... ok
+test_noise_budget_region (__main__.Checks.test_noise_budget_region) ... ok
+test_readdressed_false_enclosure_is_rejected (__main__.Checks.test_readdressed_false_enclosure_is_rejected) ... validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+ok
+test_widened_jacobian_and_contract_failures (__main__.Checks.test_widened_jacobian_and_contract_failures) ... ok
+test_zero_preparation_and_boundary_semantics (__main__.Checks.test_zero_preparation_and_boundary_semantics) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 8.974s
+
+OK

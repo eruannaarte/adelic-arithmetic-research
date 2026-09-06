@@ -1,0 +1,444 @@
+### framework.three_model_transfer
+{
+  "verified": true,
+  "models": 3,
+  "quadratic_pair_gates": 243,
+  "polynomial_coordinate_gates": 441,
+  "polynomial_design_degree_pairs": 9,
+  "nonlinear_preparation_gates": 3,
+  "total_scalar_gates": 687,
+  "scope": "exact scalar transfer after separately checked model-specific support and gain premises"
+}
+
+
+### harmonic.factored256
+{
+  "schema": "uniform-harmonic-collision-v1",
+  "method": "factored product model",
+  "contraction_upper": "218567913/1000000000",
+  "center_residual_upper": "26113283/4000000000000000000000",
+  "predictor_derivative_upper": "64657243/500000000",
+  "moving_center_residual_upper": "3233/1000000000",
+  "self_map_radius_upper": "10519/1000000000",
+  "self_map_ratio_upper": "315553777/1000000000",
+  "complement_coordinate_branch_lipschitz_upper": "222938597/62500000",
+  "minimum_probability_lower": "77066733/1000000000",
+  "factor_distance_squared_lower": "31988237/50000000",
+  "vertex_floor_squared_lower": "33375807/31250000",
+  "maximum_time_upper": "7491661/250000",
+  "query_obstruction": {
+    "query": "probability at exponent 1 in the prime-3 factor",
+    "first_answer": "20802017891925647/250000000000000000",
+    "second_answer": "63280942665025819/100000000000000000",
+    "answer_gap": "274800677541277801/500000000000000000",
+    "noiseless_absolute_error_lower": "274800677541277801/1000000000000000000",
+    "threshold": "1/2",
+    "threshold_answers": [
+      0,
+      1
+    ]
+  },
+  "all_strict_gates_pass": true
+}
+
+
+### harmonic.factored384
+{
+  "schema": "uniform-harmonic-collision-v1",
+  "method": "factored product model",
+  "contraction_upper": "218567913/1000000000",
+  "center_residual_upper": "26113283/4000000000000000000000",
+  "predictor_derivative_upper": "64657243/500000000",
+  "moving_center_residual_upper": "3233/1000000000",
+  "self_map_radius_upper": "10519/1000000000",
+  "self_map_ratio_upper": "315553777/1000000000",
+  "complement_coordinate_branch_lipschitz_upper": "222938597/62500000",
+  "minimum_probability_lower": "77066733/1000000000",
+  "factor_distance_squared_lower": "31988237/50000000",
+  "vertex_floor_squared_lower": "33375807/31250000",
+  "maximum_time_upper": "7491661/250000",
+  "query_obstruction": {
+    "query": "probability at exponent 1 in the prime-3 factor",
+    "first_answer": "20802017891925647/250000000000000000",
+    "second_answer": "63280942665025819/100000000000000000",
+    "answer_gap": "274800677541277801/500000000000000000",
+    "noiseless_absolute_error_lower": "274800677541277801/1000000000000000000",
+    "threshold": "1/2",
+    "threshold_answers": [
+      0,
+      1
+    ]
+  },
+  "all_strict_gates_pass": true
+}
+
+
+### harmonic.raw256
+{
+  "schema": "uniform-harmonic-collision-v1",
+  "method": "integer-label expansion",
+  "contraction_upper": "496731191/1000000000",
+  "center_residual_upper": "26113283/4000000000000000000000",
+  "predictor_derivative_upper": "193605501/500000000",
+  "moving_center_residual_upper": "9681/1000000000",
+  "self_map_radius_upper": "13119/500000000",
+  "self_map_ratio_upper": "393569721/500000000",
+  "complement_coordinate_branch_lipschitz_upper": "2371893143/500000000",
+  "minimum_probability_lower": "77066733/1000000000",
+  "factor_distance_squared_lower": "31988237/50000000",
+  "vertex_floor_squared_lower": "33375807/31250000",
+  "maximum_time_upper": "7491661/250000",
+  "query_obstruction": {
+    "query": "probability at exponent 1 in the prime-3 factor",
+    "first_answer": "20802017891925647/250000000000000000",
+    "second_answer": "63280942665025819/100000000000000000",
+    "answer_gap": "274800677541277801/500000000000000000",
+    "noiseless_absolute_error_lower": "274800677541277801/1000000000000000000",
+    "threshold": "1/2",
+    "threshold_answers": [
+      0,
+      1
+    ]
+  },
+  "all_strict_gates_pass": true
+}
+
+
+### harmonic.raw384
+{
+  "schema": "uniform-harmonic-collision-v1",
+  "method": "integer-label expansion",
+  "contraction_upper": "496731191/1000000000",
+  "center_residual_upper": "26113283/4000000000000000000000",
+  "predictor_derivative_upper": "193605501/500000000",
+  "moving_center_residual_upper": "9681/1000000000",
+  "self_map_radius_upper": "13119/500000000",
+  "self_map_ratio_upper": "393569721/500000000",
+  "complement_coordinate_branch_lipschitz_upper": "2371893143/500000000",
+  "minimum_probability_lower": "77066733/1000000000",
+  "factor_distance_squared_lower": "31988237/50000000",
+  "vertex_floor_squared_lower": "33375807/31250000",
+  "maximum_time_upper": "7491661/250000",
+  "query_obstruction": {
+    "query": "probability at exponent 1 in the prime-3 factor",
+    "first_answer": "20802017891925647/250000000000000000",
+    "second_answer": "63280942665025819/100000000000000000",
+    "answer_gap": "274800677541277801/500000000000000000",
+    "noiseless_absolute_error_lower": "274800677541277801/1000000000000000000",
+    "threshold": "1/2",
+    "threshold_answers": [
+      0,
+      1
+    ]
+  },
+  "all_strict_gates_pass": true
+}
+
+
+### preparation.record
+{
+  "mathematical_contract_passes": true,
+  "physical_validation": "NOT_RUN",
+  "query_source_diameter_bound": "10638154367130464020167707360678484367513536586414101856156657783653155820350923320923102233107239943550723296140947293620158490750152599345195798298696260753731669/177148422211036340542728836921633890203243154633217173600137293067512589589034699401996275054595604722287755027834312776238048019929450015335868818178963075251054500000",
+  "maximum_weighted_readout_noise_radius": "433775260627906357910219804475653669564305819734736217240686048200294630724604902022099753810832249248190655351100247246941512585763920084931823658716936677286693/174995045118375323746211967412475135166129446225235405432112527239356225744551008881865024959898652083052314309541305408446707479526023091441128634698751025000000000000",
+  "zero_center_envelope_control_passes": false
+}
+
+
+### quadratic.certificate
+{
+  "verified": true,
+  "anchor_strata": 9,
+  "templates": 81,
+  "unequal_query_pairs": 243,
+  "minimum_gain_squared": "1",
+  "maximum_gain_squared": "276627786622728408995266830525265863374516200287168483047760182566443972825227993060137924747731178953967922034723698784171775926894666728837201341034294641953265583461998915092720433022673377938943372474278853595813019245271698156224346073536881832708776012412028665168493497040508288337060030937606743366913380835958441237499560081920752222097275757090857128274136608300791463636989102803284517320624935482001841279558783190398035967553445203604624890436526652535033/274427227578657418376544831260799396267692032725400057413938737422074475672509968575835450810558090808855921925836288690866062615798335534022440286882667277589232515303947609575088932056351695443886998997420250629761177071216360101023049071062872755796160036166731288870056703386538582182876891042036343282006751002137279853159684943247089717110744820143087647065924447329570249187972688763928375851473142843638171319623443491528878666884441432662738195984990708525625",
+  "source_scope": "actual fields; complete inherited finite/remote tail and Gram premises"
+}
+
+
+### quadratic.independent_fields
+{
+  "status": "independent exact audit passed; no producer build imported",
+  "witness_count": 81,
+  "maximum_witness_discriminant": 1365,
+  "exact_unequal_query_pairs_checked": 243,
+  "minimum_gain_squared": "1",
+  "maximum_gain_squared": "276627786622728408995266830525265863374516200287168483047760182566443972825227993060137924747731178953967922034723698784171775926894666728837201341034294641953265583461998915092720433022673377938943372474278853595813019245271698156224346073536881832708776012412028665168493497040508288337060030937606743366913380835958441237499560081920752222097275757090857128274136608300791463636989102803284517320624935482001841279558783190398035967553445203604624890436526652535033/274427227578657418376544831260799396267692032725400057413938737422074475672509968575835450810558090808855921925836288690866062615798335534022440286882667277589232515303947609575088932056351695443886998997420250629761177071216360101023049071062872755796160036166731288870056703386538582182876891042036343282006751002137279853159684943247089717110744820143087647065924447329570249187972688763928375851473142843638171319623443491528878666884441432662738195984990708525625",
+  "maximum_declared_noise_squared_to_anchor_limit_ratio": "37841400940610525331126068790411471734454924477792413015030933385798651324465394089374488225527862885302297186678525889475504340055177045744936974806345599178998182005198727653275482236102040944520496559503616109234101952894207853631288473202876589210688333897784091094216252338604237116771646307659035296446859781659403875156024621596562524355305584175579948851438390982975098299807411237467946821981585544749198417527586046963503647018801067720704/214444371488249806530763664022877198390387033050189612382435236953705993611761115744811177780902270242951577480412374258608772689949153172657147932942962174829715330412457056091349614696283432466975725463715682087882657683248586579273627431702318719505633285211752803710826044559937244116738455649060181687437400094450210188927994735699647747087486852392503082656081166539779920864177418664528221008894770624144873660908919370319205901338988759765625"
+}
+
+
+### noise.exact
+PASS: independent exact Schur, complete-tail and rounding consequence checker
+multi degree 1 certified True threshold ['9736513154793899/100000000000000000000', '9736513154793999/100000000000000000000']
+multi degree 2 certified True threshold ['9036964939186999/100000000000000000000', '9036964939187099/100000000000000000000']
+multi degree 3 certified True threshold ['7757061425817899/100000000000000000000', '7757061425817999/100000000000000000000']
+multi degree 4 certified True threshold ['5344685843487999/100000000000000000000', '5344685843488099/100000000000000000000']
+multi degree 5 certified True threshold ['1633429200727599/100000000000000000000', '1633429200727699/100000000000000000000']
+multi degree 6 certified False threshold None
+outer degree 1 certified True threshold ['7777408269272399/100000000000000000000', '7777408269272499/100000000000000000000']
+outer degree 2 certified True threshold ['7075413640447599/100000000000000000000', '7075413640447699/100000000000000000000']
+outer degree 3 certified True threshold ['5792199834264799/100000000000000000000', '5792199834264899/100000000000000000000']
+outer degree 4 certified True threshold ['3371838209838299/100000000000000000000', '3371838209838399/100000000000000000000']
+outer degree 5 certified False threshold None
+outer degree 6 certified False threshold None
+
+
+### noise.full_model_192
+PASS: complete polynomial-drift physical reconstruction
+multi degree 1 eta 97/1000000 max bias 0.25649513914849326 certified
+multi degree 2 eta 9/100000 max bias 0.27399045351967044 certified
+multi degree 3 eta 77/1000000 max bias 0.306000139554769 certified
+multi degree 4 eta 53/1000000 max bias 0.3663323250867776 certified
+multi degree 5 eta 1/62500 max bias 0.4591488273303329 certified
+multi degree 6 eta None max bias 0.6116657857644305 this sufficient complete-tail gate fails
+outer degree 1 eta 77/1000000 max bias 0.305464782282583 certified
+outer degree 2 eta 7/100000 max bias 0.32302367246087 certified
+outer degree 3 eta 57/1000000 max bias 0.3551205189664075 certified
+outer degree 4 eta 33/1000000 max bias 0.41566067971962267 certified
+outer degree 5 eta None max bias 0.5087179068050165 this sufficient complete-tail gate fails
+outer degree 6 eta None max bias 0.6617935847859027 this sufficient complete-tail gate fails
+
+
+### noise.full_model_256
+PASS: complete polynomial-drift physical reconstruction
+multi degree 1 eta 97/1000000 max bias 0.25649513914849326 certified
+multi degree 2 eta 9/100000 max bias 0.27399045351967044 certified
+multi degree 3 eta 77/1000000 max bias 0.306000139554769 certified
+multi degree 4 eta 53/1000000 max bias 0.3663323250867776 certified
+multi degree 5 eta 1/62500 max bias 0.4591488273303329 certified
+multi degree 6 eta None max bias 0.6116657857644305 this sufficient complete-tail gate fails
+outer degree 1 eta 77/1000000 max bias 0.305464782282583 certified
+outer degree 2 eta 7/100000 max bias 0.32302367246087 certified
+outer degree 3 eta 57/1000000 max bias 0.3551205189664075 certified
+outer degree 4 eta 33/1000000 max bias 0.41566067971962267 certified
+outer degree 5 eta None max bias 0.5087179068050165 this sufficient complete-tail gate fails
+outer degree 6 eta None max bias 0.6617935847859027 this sufficient complete-tail gate fails
+
+
+### resolution.certificate
+{
+  "verified": true,
+  "banks": [
+    {
+      "channel_count": 50,
+      "retained_central_fraction": "99/100",
+      "loss_upper": 1.6475038103616827e-11,
+      "centroid_error_upper": 0.1003463522741546
+    },
+    {
+      "channel_count": 48,
+      "retained_central_fraction": "97/100",
+      "loss_upper": 3.0124569225421554e-10,
+      "centroid_error_upper": 0.13017732573705879
+    }
+  ]
+}
+
+
+### resolution.check
+Smaller asymmetric banks: exact certificate passed.
+
+
+### framework.tests
+test_correlated_noise_uses_one_dual_norm (test_directional.DirectionalTests.test_correlated_noise_uses_one_dual_norm) ... ok
+test_invalid_contracts_and_closed_slab_endpoint (test_directional.DirectionalTests.test_invalid_contracts_and_closed_slab_endpoint) ... ok
+test_scalar_closed_interval_overlap_boundary (test_directional.DirectionalTests.test_scalar_closed_interval_overlap_boundary) ... ok
+test_shared_nuisance_cancels_before_support (test_directional.DirectionalTests.test_shared_nuisance_cancels_before_support) ... ok
+test_translation_preserves_finite_answer_sets (test_directional.DirectionalTests.test_translation_preserves_finite_answer_sets) ... ok
+test_zero_gain_and_one_sided_support (test_directional.DirectionalTests.test_zero_gain_and_one_sided_support) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK
+
+
+### harmonic.tests
+test_all_vertex_pairs_with_independent_lipschitz_control (test_uniform_collision.UniformCollisionTests.test_all_vertex_pairs_with_independent_lipschitz_control) ... ok
+test_exact_exported_consequences_and_forged_values (test_uniform_collision.UniformCollisionTests.test_exact_exported_consequences_and_forged_values) ... ok
+test_factored_and_expanded_point_values_and_all_derivatives (test_uniform_collision.UniformCollisionTests.test_factored_and_expanded_point_values_and_all_derivatives) ... ok
+test_factored_full_parameter_box_at_two_precisions (test_uniform_collision.UniformCollisionTests.test_factored_full_parameter_box_at_two_precisions) ... ok
+test_frozen_scalar_and_bit_queries (test_uniform_collision.UniformCollisionTests.test_frozen_scalar_and_bit_queries) ... ok
+test_independent_integer_label_full_box_at_two_precisions (test_uniform_collision.UniformCollisionTests.test_independent_integer_label_full_box_at_two_precisions) ... ok
+test_malformed_domains_and_singular_preconditioner (test_uniform_collision.UniformCollisionTests.test_malformed_domains_and_singular_preconditioner) ... ok
+test_moving_center_is_needed_by_this_frozen_certificate (test_uniform_collision.UniformCollisionTests.test_moving_center_is_needed_by_this_frozen_certificate) ... ok
+test_oversized_box_and_false_recovery_claims_are_rejected (test_uniform_collision.UniformCollisionTests.test_oversized_box_and_false_recovery_claims_are_rejected) ... ok
+test_source_derivative_exact_centered_coordinate_identity (test_uniform_collision.UniformCollisionTests.test_source_derivative_exact_centered_coordinate_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.081s
+
+OK
+
+
+### preparation.tests
+test_complete_rational_replay_and_comfortable_slack (test_calibration_bridge.CalibrationBridgeTests.test_complete_rational_replay_and_comfortable_slack) ... ok
+test_known_center_translation_changes_domain_not_ambiguity (test_calibration_bridge.CalibrationBridgeTests.test_known_center_translation_changes_domain_not_ambiguity) ... ok
+test_mutated_prior_intervals_are_not_trusted_from_cache (test_calibration_bridge.CalibrationBridgeTests.test_mutated_prior_intervals_are_not_trusted_from_cache) ... ok
+test_noise_boundary_and_beyond_are_exactly_distinguished (test_calibration_bridge.CalibrationBridgeTests.test_noise_boundary_and_beyond_are_exactly_distinguished) ... ok
+test_outer_domain_cannot_be_traded_for_small_width (test_calibration_bridge.CalibrationBridgeTests.test_outer_domain_cannot_be_traded_for_small_width) ... ok
+test_reprepared_launch_wrong_clock_units_and_float_rejected (test_calibration_bridge.CalibrationBridgeTests.test_reprepared_launch_wrong_clock_units_and_float_rejected) ... ok
+test_reversed_support_missing_evidence_and_bad_source_box (test_calibration_bridge.CalibrationBridgeTests.test_reversed_support_missing_evidence_and_bad_source_box) ... ok
+test_shared_bias_cancellation_toy_and_independent_obstruction (test_calibration_bridge.CalibrationBridgeTests.test_shared_bias_cancellation_toy_and_independent_obstruction) ... ok
+test_shared_projection_independent_direct_sensor_sum (test_calibration_bridge.CalibrationBridgeTests.test_shared_projection_independent_direct_sensor_sum) ... ok
+test_synthetic_records_never_supply_physical_validation (test_calibration_bridge.CalibrationBridgeTests.test_synthetic_records_never_supply_physical_validation) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.054s
+
+OK
+
+
+### quadratic.tests
+test_actual_reused_grid_covariance_and_query_noise (test_joint_query.JointTests.test_actual_reused_grid_covariance_and_query_noise) ... ok
+test_ambiguity_and_anchor_abstention (test_joint_query.JointTests.test_ambiguity_and_anchor_abstention) ... ok
+test_direct_decode_rejects_forged_certificates (test_joint_query.JointTests.test_direct_decode_rejects_forged_certificates) ... ok
+test_exact_margins_gains_and_unimproved_worst_case (test_joint_query.JointTests.test_exact_margins_gains_and_unimproved_worst_case) ... ok
+test_exact_pair_and_template_coverage (test_joint_query.JointTests.test_exact_pair_and_template_coverage) ... ok
+test_independent_actual_arithmetic_prefixes_and_decoding (test_joint_query.JointTests.test_independent_actual_arithmetic_prefixes_and_decoding) ... ok
+test_numerical_error_is_charged_and_invalid_inputs_rejected (test_joint_query.JointTests.test_numerical_error_is_charged_and_invalid_inputs_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 4.383s
+
+OK
+
+
+### noise.tests
+test_exact_alias_boundaries (test_polynomial_drift.PolynomialDriftTests.test_exact_alias_boundaries) ... ok
+test_exact_consumer_and_negative_margin_gates (test_polynomial_drift.PolynomialDriftTests.test_exact_consumer_and_negative_margin_gates) ... ok
+test_full_reconstruction_at_256_bits (test_polynomial_drift.PolynomialDriftTests.test_full_reconstruction_at_256_bits) ... ok
+test_higher_drift_full_source_example_with_worst_direction_noise (test_polynomial_drift.PolynomialDriftTests.test_higher_drift_full_source_example_with_worst_direction_noise) ... ok
+test_independent_full_grid_basis_crosses_and_gram (test_polynomial_drift.PolynomialDriftTests.test_independent_full_grid_basis_crosses_and_gram) ... ok
+test_l1_refinement_is_needed_for_quintic_certificate (test_polynomial_drift.PolynomialDriftTests.test_l1_refinement_is_needed_for_quintic_certificate) ... ok
+test_projection_answer_set_identity_and_reused_covariance (test_polynomial_drift.PolynomialDriftTests.test_projection_answer_set_identity_and_reused_covariance) ... ok
+test_tampering_and_missing_complete_channel_rejected (test_polynomial_drift.PolynomialDriftTests.test_tampering_and_missing_complete_channel_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 4.217s
+
+OK
+
+
+### resolution.tests
+test_arb_full_generator_tail_control (test_banks.BankTests.test_arb_full_generator_tail_control) ... ok
+test_centroid_perturbation_at_extreme_rows (test_banks.BankTests.test_centroid_perturbation_at_extreme_rows) ... ok
+test_exact_conjugation_energy_for_noncommuting_graph (test_banks.BankTests.test_exact_conjugation_energy_for_noncommuting_graph) ... ok
+test_forged_noise_and_acquisition_contract (test_banks.BankTests.test_forged_noise_and_acquisition_contract) ... ok
+test_published_certificate (test_banks.BankTests.test_published_certificate) ... ok
+test_tail_moment_envelope (test_banks.BankTests.test_tail_moment_envelope) ... ok
+test_three_row_label_collision (test_banks.BankTests.test_three_row_label_collision) ... ok
+test_zero_source_cannot_identify_target (test_banks.BankTests.test_zero_source_cannot_identify_target) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.123s
+
+OK
+
+
+### preparation.full_ode_replay
+validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+validated launch-A: 150 steps
+validated launch-B: 125 steps
+validated launch-C: 150 steps
+PASS: all three adaptive-cycle consequences and all three full nonlinear ODE replays
+
+
+### resolution.full_graph_controls
+{
+  "status": "floating full-model diagnostic; not an interval certificate",
+  "model_n": 1001,
+  "model_state_dimension": 1002001,
+  "full_stencil_terms": 90,
+  "cases": 192,
+  "examples": [
+    {
+      "target": 490,
+      "tau": 1.0,
+      "channel_count": 50,
+      "cases": 24,
+      "source_error_max": 0.00012510203891012237,
+      "centroid_error_max": 1.585373752277519e-07,
+      "actual_Gram_loss_norm": 2.239488175190867e-21,
+      "actual_retained_floor_L2": 5.750607596328798e-06
+    },
+    {
+      "target": 490,
+      "tau": 1.0,
+      "channel_count": 48,
+      "cases": 24,
+      "source_error_max": 0.00012510203891052054,
+      "centroid_error_max": 1.540076937089907e-07,
+      "actual_Gram_loss_norm": 1.7077847576402287e-19,
+      "actual_retained_floor_L2": 5.750607596328741e-06
+    },
+    {
+      "target": 490,
+      "tau": 2.0,
+      "channel_count": 50,
+      "cases": 24,
+      "source_error_max": 0.00015079357434913399,
+      "centroid_error_max": 2.2661146203972748e-07,
+      "actual_Gram_loss_norm": 8.716320467352286e-15,
+      "actual_retained_floor_L2": 3.958009553215573e-06
+    },
+    {
+      "target": 490,
+      "tau": 2.0,
+      "channel_count": 48,
+      "cases": 24,
+      "source_error_max": 0.00015079357518462425,
+      "centroid_error_max": 4.31054331784253e-07,
+      "actual_Gram_loss_norm": 1.7798199846929928e-13,
+      "actual_retained_floor_L2": 3.958009509341402e-06
+    },
+    {
+      "target": 510,
+      "tau": 1.0,
+      "channel_count": 50,
+      "cases": 24,
+      "source_error_max": 0.00012510203891029958,
+      "centroid_error_max": 1.540076937089907e-07,
+      "actual_Gram_loss_norm": 2.5863286777862916e-23,
+      "actual_retained_floor_L2": 5.750607596328793e-06
+    },
+    {
+      "target": 510,
+      "tau": 1.0,
+      "channel_count": 48,
+      "cases": 24,
+      "source_error_max": 0.00012510203891029958,
+      "centroid_error_max": 1.494780121902295e-07,
+      "actual_Gram_loss_norm": 2.239488175190867e-21,
+      "actual_retained_floor_L2": 5.750607596328796e-06
+    },
+    {
+      "target": 510,
+      "tau": 2.0,
+      "channel_count": 50,
+      "cases": 24,
+      "source_error_max": 0.00015079357430282844,
+      "centroid_error_max": 2.183432457059098e-07,
+      "actual_Gram_loss_norm": 3.782568378242935e-16,
+      "actual_retained_floor_L2": 3.958009555615905e-06
+    },
+    {
+      "target": 510,
+      "tau": 2.0,
+      "channel_count": 48,
+      "cases": 24,
+      "source_error_max": 0.00015079357434871258,
+      "centroid_error_max": 2.1377360326368944e-07,
+      "actual_Gram_loss_norm": 8.716320467352287e-15,
+      "actual_retained_floor_L2": 3.958009553215573e-06
+    }
+  ]
+}
+

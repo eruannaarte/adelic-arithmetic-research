@@ -1,0 +1,35 @@
+{
+  "verified": true,
+  "elapsed_seconds": 393.8834320419992,
+  "fresh_reconstructions": [
+    {
+      "verified": true,
+      "schema": "arithmetic-sensing-v-verified-mellin-v1",
+      "formal_certificate_sha256": "c7f86fc51a19355ac882f3ede53d3870ed298eb5e09dc713259b5b5736d46409",
+      "runtime": {
+        "gmpy2": "2.3.1",
+        "mpfr": "MPFR 4.2.2"
+      },
+      "artifact": "arithmetic_sensing_v_multiscale_T510_remote.json"
+    },
+    {
+      "verified": true,
+      "schema": "arithmetic-sensing-v-verified-mellin-v1",
+      "formal_certificate_sha256": "d515a57c8484649a7618912b9be08ebf49318cbe240df8cff2ff81e38194a4d7",
+      "runtime": {
+        "gmpy2": "2.3.1",
+        "mpfr": "MPFR 4.2.2"
+      },
+      "artifact": "arithmetic_sensing_v_multiscale_T1780_remote.json"
+    },
+    {
+      "verified": true,
+      "schema": "arithmetic-sensing-v-end-to-end-v1",
+      "formal_certificate_sha256": "723d3069d31e927dadd5e1eddd28decd9d2a05b2ac3f1bd5d77706c4cc7222aa",
+      "runtime": {
+        "python_flint": "0.9.0"
+      },
+      "artifact": "arithmetic_sensing_v_multiscale_T1780_single_end_to_end.json"
+    }
+  ]
+}

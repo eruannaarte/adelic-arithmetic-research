@@ -1,0 +1,45 @@
+{
+  "schema": "adaptive-preparation-evidence-v1",
+  "cycles_completed": 3,
+  "validation": {
+    "tests": 17,
+    "status": "PASS",
+    "seconds": 11.907,
+    "log": "validation.log",
+    "deep_ode_replays": [
+      "nominal.json",
+      "cycle1_region.json",
+      "cycle2_region.json"
+    ],
+    "standard_library_only_fast_checker": "PASS with python -S verify.py"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "scope": "declared nonlinear double-pendulum model and deterministic weighted observation noise; no hardware feasibility evidence",
+  "artifacts_sha256": {
+    "CHAIN_REPORT.md": "046be2bcf9d8a328c45dc05bddb84551c511d88b61b1e2874ce539b0f3c387fc",
+    "CYCLES.md": "8efe0aabfe17284e584382d010b5a15a48bfd5f29bfe1ec302a83e0cd0b1b9d5",
+    "PROOFS.md": "e8cd8b96f16d2bd7f8e5307315cdd6b0c01c24a6e5b926bde01470080297ae4c",
+    "README.md": "23acf6608f8e072d779b6d2f2ef15db7bf29b053675bac1cf619986b3e77f6e7",
+    "anisotropic.py": "737a11fadf56453161b6b0461da7c9d694880beece7b012803628b525d615a6a",
+    "calibration.py": "9a680646624098529fa3f761003b820b53983e876fefc120db14bc32cfa487f7",
+    "checker.py": "d56ed3c70714d2180b29a7e3d6d647c244795e6f426b6250ebca8a086558bc31",
+    "cycle1_certificate.json": "879ac1c677319b6bef1bf9ee6eee5f5d104967960fda138db6b8f9127dfe7d80",
+    "cycle1_region.json": "d2532d3363145f191566eb7c69232f26821d0f9747a15d30341259952160d146",
+    "cycle1_validation.log": "e05b463703873e7a94efa22a5cb65e45fcccc2442526137f327603b73478b5a3",
+    "cycle2_calibration.json": "ac41a29a8fd423a6de0b529964231de49be6c999eb6e57d8aa6b0561e565ab8d",
+    "cycle2_certificate.json": "13548cc7fda5634f34671d480f2f943c1e380b7ac8385f099abc9238deb571f7",
+    "cycle2_region.json": "adf950725e9bcdfbbe022b771cac469dc8979ef8760f6acdec3e248f87903e48",
+    "cycle2_validation.log": "72c0100680205a04da3905483e3b883cc76eef496a7a3b5816f7c4f1cdbc53f6",
+    "cycle3_certificate.json": "662021188ca360f75bfe68be09942d89595ec20607898f991a4c0c758924b619",
+    "cycle3_validation.log": "74f40ee8ff72c67d25457b40b9dede9e12a5be726edc7acce2f6c02ccecc8390",
+    "full_sensitivity.py": "a1de2d245c51435f0add190c210b32485ad0f96b656cf247ddd3a56e64199cd1",
+    "nominal.json": "21c6b5db17bf2d2a5f88100181c384a31bbb8350d4c32f3508eb2b9a17d54233",
+    "requirements.txt": "2449a82aa70540b3e64e4baea532a953e17bf8630b474c061dcc7c02318e31be",
+    "synthesize.py": "022261454fc99a00a4fc8d4d089526360e3a7fb2a18b171ae8a1a6f5c4bfe6bc",
+    "test_cycle2.py": "08709545bdb838e26484c0c8ac579206c26679327edb2f01ae016c22989f1317",
+    "test_cycle3.py": "785f744c5a7b4ab69c01688aad438038b91a86caf27f1903a90812e9b40c0907",
+    "test_preparation.py": "426b45dd2e5f9cf77d242c5e7d140c8de275593734650caaa6694b7ec5fe1355",
+    "validation.log": "d6c2e98900f8333edce2cb3c0382101fb58e817907f61cf9b16268e896fc20e1",
+    "verify.py": "73528aec3c9b22379ba3d3a516593657e1434cd0152868e744f8ab64df9548ab"
+  }
+}

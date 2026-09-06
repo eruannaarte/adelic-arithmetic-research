@@ -1,0 +1,45 @@
+{
+  "schema": "harmonic-adaptive-three-cycles-v1",
+  "completed_cycles": 3,
+  "cycles": [
+    {
+      "id": "H1",
+      "objective": "Strengthen the universal acquisition obstruction using exact arithmetic product vertices.",
+      "result": "For six readings and target floor .815, maximum absolute time must be at least20.56316841858, versus previous1.64705031364.",
+      "status": "analytic theorem plus exact finite enumeration and outward endpoints",
+      "proof": "PROOFS.md Cycle1",
+      "code": "cycle1.py",
+      "evidence": "cycle1_evidence.json",
+      "next": "Account for simultaneous pair requirements and identify the limitation of vertex-only arguments."
+    },
+    {
+      "id": "H2",
+      "objective": "Develop a rigorous simultaneous-pair obstruction and a supported short vertex design.",
+      "result": "Continuum dual certificate forbids horizon21.8 at floor .815; six exact times below30 separate all64 vertices with floor>1.03.",
+      "status": "analytic dual theorem plus complete interval time cover and finite source certificate",
+      "proof": "PROOFS.md Cycle2",
+      "code": "cycle2.py",
+      "evidence": "cycle2_evidence.json",
+      "next": "Test the actual product-distribution interior for the exact short vertex schedule."
+    },
+    {
+      "id": "H3",
+      "objective": "Resolve the vertex/full-product gap for the newly certified short schedule.",
+      "result": "The same six-time schedule has an exact interior collision, with all24 factor probabilities>.07 and factor distance>.79; its full-model floor is zero.",
+      "status": "complete interval contraction existence proof from raw harmonic model",
+      "proof": "PROOFS.md Cycle3",
+      "code": "cycle3.py",
+      "inputs": "cycle3_inputs.json",
+      "evidence": "cycle3_evidence.json",
+      "next_not_executed": "Optimize with a full-source chord certificate, or certify interior obstructions uniformly over schedule regions."
+    }
+  ],
+  "validation": {
+    "full_reconstruction": "All three cycle checkers pass; 256-bit primary and384-bit refinement.",
+    "tests": "13 passed in test_cycles.py",
+    "independent_controls": "all2016 actual vertex pairs; raw factored responses;64-term integer-label expansion; affine-coordinate derivative identity; exact final gates",
+    "negative_controls": "necessary versus sufficient horizon; invalid dual weights/designs; invalid or inflated collision box/source/separation claims"
+  },
+  "novelty": "new local research developments/applications, no historical-priority claim",
+  "scope": "finite labelled probability-factor harmonic model; fixed nonadaptive times; no arithmetic tails, unknown clock/gain, hardware calibration or time-optimality theorem"
+}

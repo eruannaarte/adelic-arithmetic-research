@@ -1,0 +1,11 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.5.2",
+  "scipy": "1.18.1",
+  "python_flint": "0.9.0",
+  "system": "Darwin",
+  "machine": "arm64",
+  "threads": 1,
+  "polynomial_producer_elapsed_seconds": 22.940794708993053,
+  "tests_elapsed_seconds": 39.104
+}

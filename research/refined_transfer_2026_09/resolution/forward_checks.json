@@ -1,0 +1,74 @@
+{
+  "status": "floating full finite-model diagnostics; no certified normalization or arithmetic rounding claim",
+  "finite_state_count": 1002001,
+  "case_count": 5,
+  "cases": [
+    {
+      "time": "1",
+      "target": 490,
+      "source": [
+        "3/5",
+        "4/5"
+      ],
+      "physical_model_difference": 7.806267406412766e-18,
+      "physical_added_noise": 1e-07,
+      "noise_direction": "weakest left singular vector, floating diagnostic",
+      "source_relative_error": 0.0001639318734217232,
+      "recovered_target": 490
+    },
+    {
+      "time": "1",
+      "target": 496,
+      "source": [
+        "3/5",
+        "4/5"
+      ],
+      "physical_model_difference": 9.55144713622272e-18,
+      "physical_added_noise": 1e-07,
+      "noise_direction": "weakest left singular vector, floating diagnostic",
+      "source_relative_error": 0.0009705473078514181,
+      "recovered_target": 496
+    },
+    {
+      "time": "1221707459/1000000000",
+      "target": 493,
+      "source": [
+        "3/5",
+        "4/5"
+      ],
+      "physical_model_difference": 6.348429612648545e-18,
+      "physical_added_noise": 1e-07,
+      "noise_direction": "weakest left singular vector, floating diagnostic",
+      "source_relative_error": 0.00016324899643140525,
+      "recovered_target": 493
+    },
+    {
+      "time": "3/2",
+      "target": 507,
+      "source": [
+        "3/5",
+        "4/5"
+      ],
+      "physical_model_difference": 9.220820582990939e-18,
+      "physical_added_noise": 1e-07,
+      "noise_direction": "weakest left singular vector, floating diagnostic",
+      "source_relative_error": 0.0001421706749546327,
+      "recovered_target": 507
+    },
+    {
+      "time": "2",
+      "target": 510,
+      "source": [
+        "3/5",
+        "4/5"
+      ],
+      "physical_model_difference": 1.2894263231966281e-17,
+      "physical_added_noise": 1e-07,
+      "noise_direction": "weakest left singular vector, floating diagnostic",
+      "source_relative_error": 9.266110218741136e-05,
+      "recovered_target": 510
+    }
+  ],
+  "maximum_physical_model_difference": 1.2894263231966281e-17,
+  "maximum_source_relative_error": 0.0009705473078514181
+}

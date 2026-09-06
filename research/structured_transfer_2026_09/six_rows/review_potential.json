@@ -1,0 +1,29 @@
+{
+  "verified": true,
+  "reviewer_scope": "independent exact-rational inverse algebra and remainder derivation; fresh 384-bit complete-time consumer replay",
+  "point_cases": 63,
+  "corner_cases": 126,
+  "exact_point_norm_upper_bounds": {
+    "joint_forward": "263293873563346106972767227744766663713783/4000000000000000000000000000000000000000000000000",
+    "joint_inverse": "2257524536922704545773951193986062415935330301/100000000000000000000000000000000000000000000000000",
+    "time_forward": "2356044797797466788245339736162367098265933518311/100000000000000000000000000000000000000000000000000",
+    "potential_forward": "472447358126906955825469169277734994399400537809/20000000000000000000000000000000000000000000000000",
+    "time_inverse": "1433424306820395558088059501952282305582940218649003/100000000000000000000000000000000000000000000000000",
+    "potential_inverse": "1244255745771981986726026232805271714173614145507/200000000000000000000000000000000000000000000000"
+  },
+  "cauchy_tail_identities_verified": true,
+  "mixed_derivative_entire_rectangle_upper": "380/3",
+  "nonlinear_radius": "1280375009/3000000000000000000",
+  "independent_source_error_upper": "10012746421363850998091408182246861053378944749/12500000000000000000000000000000000000000000000000",
+  "complete_time_cases": 2688,
+  "complete_consumer_precision_bits": 384,
+  "separate_explanations_note": "Two candidate sources may carry different clock and potential values; each complete forward tube is charged independently.",
+  "physical_premise": "Potential derivative enclosure replay and old finite-x kernel replay remain separate accepted physical premises.",
+  "reviewed_sha256": {
+    "check.py": "f62edb3b7b812d148a9d90706c88adebcb3ef26ec3559ce331e671f2cf17c8e2",
+    "directions.json": "95002c04639c0aadc67bdbd40a5a13b595f180f87aabba6420771da1fd6b6d43",
+    "kernel_derivative.json": "4a6a8f6796d8ee5ff3babc3c6c783d319e23dac2a8a9cda529db71fefe301f84",
+    "PROOFS.md": "18208ef7f86a7494deacef2e63fc2c7509760ad4e8823460da43c47521f12291"
+  },
+  "elapsed_seconds": 10.411317707999842
+}

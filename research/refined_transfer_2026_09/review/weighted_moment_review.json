@@ -1,0 +1,27 @@
+{
+  "verified": true,
+  "working_precision_bits": 320,
+  "method": "fresh physical cosine weights; moment quadratic forms; exact parity",
+  "designs": [
+    {
+      "design": "multi",
+      "verified_rational_approximants": 12,
+      "verified_complete_tail_moments": [
+        9,
+        21,
+        22
+      ],
+      "uniform_factor": "69594926934115004835210552588307644275857/51090942171709440000000000000000000000000000000000"
+    },
+    {
+      "design": "outer",
+      "verified_rational_approximants": 12,
+      "verified_complete_tail_moments": [
+        9,
+        21,
+        22
+      ],
+      "uniform_factor": "557150347557968166865517092667294744891/408727537373675520000000000000000000000000000000"
+    }
+  ]
+}

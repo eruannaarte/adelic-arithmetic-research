@@ -1,0 +1,39 @@
+{
+  "schema": "independent-complete-orbit-review-v1",
+  "verified": true,
+  "scope": "complete phase-block theorem and actual h=120 two-window consequence",
+  "phase_replay_bits": 448,
+  "actual_corner_lag_checks": 248,
+  "complete_valuation_tails_checked_against_exact_generating_function": true,
+  "exact_omitted_mass": "2088831562624693/344649238497994142121984",
+  "exact_omitted_weighted_mass": "407673718423246009/2067895430987964852731904",
+  "all_odd_starting_integers_checked_by_proof": true,
+  "arbitrary_allowed_coefficient_amplitudes_checked_by_proof": true,
+  "nonlinear_shared_clock_remainder_checked_by_proof": true,
+  "actual_inverse_results": [
+    {
+      "design": "multi",
+      "raw_readings_reconstructed": 8900,
+      "physical_reconstruction_bits": 384,
+      "dual_residual_recomputed": true,
+      "fresh_normal_residual_upper": "55260865524357/1000000000000000000000000000000000000000000000000000000000000",
+      "all_49_integer_answers_verified": true,
+      "new_exact_h120_gates": 49,
+      "prior_pair_h120_gates": 49,
+      "publication_component_inequalities_checked": 343
+    },
+    {
+      "design": "outer",
+      "raw_readings_reconstructed": 8900,
+      "physical_reconstruction_bits": 384,
+      "dual_residual_recomputed": true,
+      "fresh_normal_residual_upper": "9436664427007/62500000000000000000000000000000000000000000000000000000000",
+      "all_49_integer_answers_verified": true,
+      "new_exact_h120_gates": 49,
+      "prior_pair_h120_gates": 48,
+      "publication_component_inequalities_checked": 343
+    }
+  ],
+  "reviewed_files_unchanged": true,
+  "wall_seconds": 10.059134792012628
+}

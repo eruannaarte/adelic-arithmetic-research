@@ -1,0 +1,13 @@
+test_data_binding_and_exact_multiplication_are_checked (__main__.NormalizationTests.test_data_binding_and_exact_multiplication_are_checked) ... ok
+test_every_dyadic_time_and_three_sensor_profiles (__main__.NormalizationTests.test_every_dyadic_time_and_three_sensor_profiles) ... ok
+test_exact_rational_root_and_zero_budget (__main__.NormalizationTests.test_exact_rational_root_and_zero_budget) ... ok
+test_invalid_domains_unresolved_refinement_and_zero_data (__main__.NormalizationTests.test_invalid_domains_unresolved_refinement_and_zero_data) ... ok
+test_omitted_sensor_gain_false_scale_and_false_charge_rejected (__main__.NormalizationTests.test_omitted_sensor_gain_false_scale_and_false_charge_rejected) ... ok
+test_physical_wrapper_preserves_profile_and_refuses_excess_budget (__main__.NormalizationTests.test_physical_wrapper_preserves_profile_and_refuses_excess_budget) ... ok
+test_saved_raw_cases_cover_all_banks_profiles_and_scales (__main__.NormalizationTests.test_saved_raw_cases_cover_all_banks_profiles_and_scales) ... ok
+test_scale_equivariance_extreme_and_negative_data (__main__.NormalizationTests.test_scale_equivariance_extreme_and_negative_data) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 9.779s
+
+OK

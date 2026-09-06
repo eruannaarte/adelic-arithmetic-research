@@ -1,0 +1,16 @@
+{
+  "schema": "weighted-family-precision-replay-v1",
+  "verified": true,
+  "producer_precisions_bits": [
+    192,
+    256,
+    320
+  ],
+  "consumer_replay_precisions_bits": [
+    192,
+    320
+  ],
+  "all_24_rational_polynomials_identical": true,
+  "all_30_weighted_norm_bounds_identical": true,
+  "all_rational_family_consequences_identical": true
+}

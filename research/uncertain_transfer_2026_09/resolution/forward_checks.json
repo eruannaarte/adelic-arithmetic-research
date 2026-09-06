@@ -1,0 +1,51 @@
+{
+  "status": "floating full finite-model diagnostics, not an outward proof or a measured experiment",
+  "finite_state_count": 1002001,
+  "case_count": 3,
+  "uniformization_terms": 100,
+  "maximum_source_relative_error": 0.00017014426172189825,
+  "cases": [
+    {
+      "nominal_time": "1",
+      "true_time": "2000001/2000000",
+      "source_label": 490,
+      "generator_decay_lambda": "1/1000000000",
+      "source": [
+        "3/5",
+        "4/5"
+      ],
+      "perturbed_finite_vs_nominal_polynomial_norm": 7.520868824573021e-09,
+      "physical_sensor_noise": 1.1e-07,
+      "source_relative_error": 0.00017014426172189825,
+      "recovered_label": 490
+    },
+    {
+      "nominal_time": "3/2",
+      "true_time": "2999999/2000000",
+      "source_label": 500,
+      "generator_decay_lambda": "1/1000000000",
+      "source": [
+        "3/5",
+        "4/5"
+      ],
+      "perturbed_finite_vs_nominal_polynomial_norm": 3.341829654846797e-09,
+      "physical_sensor_noise": 1.1e-07,
+      "source_relative_error": 0.0001456836978174931,
+      "recovered_label": 500
+    },
+    {
+      "nominal_time": "2",
+      "true_time": "3999999/2000000",
+      "source_label": 510,
+      "generator_decay_lambda": "1/1000000000",
+      "source": [
+        "3/5",
+        "4/5"
+      ],
+      "perturbed_finite_vs_nominal_polynomial_norm": 2.8755565219842476e-09,
+      "physical_sensor_noise": 1.1e-07,
+      "source_relative_error": 9.949064142684863e-05,
+      "recovered_label": 510
+    }
+  ]
+}
