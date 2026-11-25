@@ -1,0 +1,34 @@
+16x16-seed7-target160 clues=160 free=None cands=None bt=0g/1ms prop_solves=True lift=None 0s popped=None/None correct=None maxfrac=None
+16x16-seed7-target140 clues=140 free=None cands=None bt=0g/1ms prop_solves=True lift=None 0s popped=None/None correct=None maxfrac=None
+16x16-seed7-target120 clues=120 free=109 cands=374 bt=10g/9ms prop_solves=False lift=optimal 39s popped=109/109 correct=109 maxfrac=1.3511054656079047e-05
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/Volumes/KINGSTON/Vibecoding/Math/research/sudoku_gw_wave_2026_11_24/gw_scale.py", line 367, in <module>
+  File "/Volumes/KINGSTON/Vibecoding/Math/research/sudoku_gw_wave_2026_11_24/gw_scale.py", line 367, in <module>
+    b, seed, target, budget, max_iters = (int(x) for x in sys.argv[2:7])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    b, seed, target, budget, max_iters = (int(x) for x in sys.argv[2:7])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/KINGSTON/Vibecoding/Math/research/sudoku_gw_wave_2026_11_24/gw_scale.py", line 367, in <module>
+  File "/Volumes/KINGSTON/Vibecoding/Math/research/sudoku_gw_wave_2026_11_24/gw_scale.py", line 367, in <genexpr>
+  File "/Volumes/KINGSTON/Vibecoding/Math/research/sudoku_gw_wave_2026_11_24/gw_scale.py", line 367, in <genexpr>
+    b, seed, target, budget, max_iters = (int(x) for x in sys.argv[2:7])
+    b, seed, target, budget, max_iters = (int(x) for x in sys.argv[2:7])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                          ^^^^^^
+    b, seed, target, budget, max_iters = (int(x) for x in sys.argv[2:7])
+                                          ^^^^^^
+  File "/Volumes/KINGSTON/Vibecoding/Math/research/sudoku_gw_wave_2026_11_24/gw_scale.py", line 367, in <genexpr>
+    b, seed, target, budget, max_iters = (int(x) for x in sys.argv[2:7])
+                                          ^^^^^^
+ValueError: invalid literal for int() with base 10: '7 110'
+ValueError: invalid literal for int() with base 10: '8 0'
+ValueError: invalid literal for int() with base 10: '7 104'
+BATCH2_DONE
+16x16-seed7-target110 clues=110 free=123 cands=486 bt=58g/43ms prop_solves=False lift=optimal 181s popped=123/123 correct=123 maxfrac=1.631241809185724e-06
+16x16-seed7-target104 clues=104 free=146 cands=650 bt=1506g/1359ms prop_solves=False lift=optimal 2531s popped=146/146 correct=146 maxfrac=6.2878716426961745e-06
+16x16-seed8-target0 clues=104 free=135 cands=579 bt=1876g/1667ms prop_solves=False lift=optimal 3035s popped=135/135 correct=135 maxfrac=4.711153328118556e-06
+BATCH2_DONE
+16x16-seed7-target0 clues=100 free=148 cands=667 bt=1982g/1692ms prop_solves=False lift=optimal 4237s popped=148/148 correct=148 maxfrac=3.1887216037640442e-06
+ALL_DONE

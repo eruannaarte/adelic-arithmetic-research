@@ -1,0 +1,5 @@
+guesses seed=31 steps=124170 accepted=24137 best=36.0 guesses=36
+lp seed=33 steps=59518 accepted=11866 best=25.333349333333334 guesses=16
+lp seed=34 steps=28930 accepted=5529 best=35.500008 guesses=8
+guesses seed=32 steps=35711 accepted=6822 best=240.0 guesses=240
+CLIMB_DONE

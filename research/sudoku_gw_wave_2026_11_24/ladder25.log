@@ -1,0 +1,4 @@
+25x25-seed12-target315 clues=315 free=231 cands=927 bt=2g/42ms prop_solves=False lift=optimal 131s popped=231/231 correct=231 maxfrac=4.0035960172300297e-07
+25x25-seed11-target315 clues=315 free=244 cands=1029 bt=490g/1792ms prop_solves=False lift=optimal 2490s popped=244/244 correct=244 maxfrac=4.742672449431495e-06
+25x25-seed11-target310 clues=310 free=249 cands=1091 bt=1554g/5658ms prop_solves=False lift=optimal 5529s popped=249/249 correct=249 maxfrac=3.542967354386306e-06
+LADDER25_DONE

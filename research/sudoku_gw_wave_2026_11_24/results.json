@@ -1,0 +1,1138 @@
+[
+ {
+  "name": "generated-36-1",
+  "puzzle": "967....23...7........39.6.739..7..517...3.964652.1.73.8.9.531.....1......1..8.49.",
+  "clues": 36,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 0,
+   "seconds": 0.00037308293394744396
+  },
+  "propagation_only_solves": true,
+  "note": "propagation alone solves it; no lift needed"
+ },
+ {
+  "name": "generated-36-2",
+  "puzzle": "....5.......689..3.5832.47...31...8.29...461.8.1.7...4.3.5.684....7..3.95892.3...",
+  "clues": 36,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 0,
+   "seconds": 0.0004213328938931227
+  },
+  "propagation_only_solves": true,
+  "note": "propagation alone solves it; no lift needed"
+ },
+ {
+  "name": "generated-36-3",
+  "puzzle": ".82..4..99..86..345...918..3.8.4..671...7...57..6...9....2.36.18...17.52..7..6.4.",
+  "clues": 36,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 0,
+   "seconds": 0.0003595000598579645
+  },
+  "propagation_only_solves": true,
+  "note": "propagation alone solves it; no lift needed"
+ },
+ {
+  "name": "generated-30-1",
+  "puzzle": ".......397951..........8.7....641.5.26.9....83.1.8.....2.7.63.5..6...14..1.82....",
+  "clues": 30,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 0,
+   "seconds": 0.0002864160342141986
+  },
+  "propagation_only_solves": true,
+  "note": "propagation alone solves it; no lift needed"
+ },
+ {
+  "name": "generated-30-2",
+  "puzzle": "25...43.....5..941..9...7.5.3........8..43.1....9.85.4.9...5.68.42.3........6.4.3",
+  "clues": 30,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 2,
+   "seconds": 0.0005545419408008456
+  },
+  "propagation_only_solves": false,
+  "free_cells": 29,
+  "candidates": 74,
+  "lp_one_shot": {
+   "status": "optimal",
+   "popped": 0,
+   "max_fractionality": 0.48562057549724114,
+   "argmax_accuracy": 0.9310344827586207
+  },
+  "sdp_one_shot": {
+   "status": "optimal",
+   "seconds": 0.2498234590748325,
+   "popped": 29,
+   "popped_correct": 29,
+   "free_cells": 29,
+   "max_fractionality": 5.2135866469949246e-08,
+   "argmax_accuracy": 1.0,
+   "rounding": {
+    "trials": 200,
+    "mean_cell_accuracy": 1.0,
+    "best_clashes": 0,
+    "accuracy_of_fewest_clash_draw": 1.0,
+    "exact_solutions_drawn": 200
+   }
+  },
+  "forcing_audit": {
+   "lp_max_wrong_mass": 15.5,
+   "sdp_max_wrong_mass": -1.3336094106115066e-06,
+   "sdp_audit_status": "optimal",
+   "sdp_audit_seconds": 0.28139633301179856
+  },
+  "sdp_wave": {
+   "lifts": 1,
+   "lift_seconds": 0.24838208290748298,
+   "popped_claims": 29,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 0.2496006248984486,
+   "solved": true
+  },
+  "lp_wave": {
+   "lifts": 3,
+   "lift_seconds": 0.0777255839202553,
+   "popped_claims": 0,
+   "branches": 3,
+   "max_depth": 3,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 0.07859258307144046,
+   "solved": true
+  }
+ },
+ {
+  "name": "generated-30-3",
+  "puzzle": ".7...2...5..46.2....6.....1...2.4..824..5..9.38..7..2..93.....2.523....4.6...8.35",
+  "clues": 30,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 0,
+   "seconds": 0.000401125056669116
+  },
+  "propagation_only_solves": true,
+  "note": "propagation alone solves it; no lift needed"
+ },
+ {
+  "name": "generated-min-1",
+  "puzzle": "7.18.....52..9.....36.2.1.7........2.6..513.....47..........57.......41.3...1...9",
+  "clues": 25,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 6,
+   "seconds": 0.0013697079848498106
+  },
+  "propagation_only_solves": false,
+  "free_cells": 47,
+  "candidates": 166,
+  "lp_one_shot": {
+   "status": "optimal",
+   "popped": 1,
+   "max_fractionality": 0.49282512873524165,
+   "argmax_accuracy": 0.5531914893617021
+  },
+  "sdp_one_shot": {
+   "status": "optimal",
+   "seconds": 4.248917417018674,
+   "popped": 47,
+   "popped_correct": 47,
+   "free_cells": 47,
+   "max_fractionality": 9.159191377561271e-07,
+   "argmax_accuracy": 1.0,
+   "rounding": {
+    "trials": 200,
+    "mean_cell_accuracy": 1.0,
+    "best_clashes": 0,
+    "accuracy_of_fewest_clash_draw": 1.0,
+    "exact_solutions_drawn": 200
+   }
+  },
+  "forcing_audit": {
+   "lp_max_wrong_mass": 32.66666666666667,
+   "sdp_max_wrong_mass": 1.7535219232742816e-06,
+   "sdp_audit_status": "optimal",
+   "sdp_audit_seconds": 5.146127082989551
+  },
+  "sdp_wave": {
+   "lifts": 1,
+   "lift_seconds": 4.2752275000093505,
+   "popped_claims": 47,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 4.277139583951794,
+   "solved": true
+  },
+  "lp_wave": {
+   "lifts": 14,
+   "lift_seconds": 0.6364719569683075,
+   "popped_claims": 34,
+   "branches": 10,
+   "max_depth": 10,
+   "refuted_by_lift": 1,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 0.6388767500175163,
+   "solved": true
+  }
+ },
+ {
+  "name": "generated-min-2",
+  "puzzle": "...5...21..71.34..........95....1.9..79.6....1.3...5...6..9...8..1..2..........67",
+  "clues": 24,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 0,
+   "seconds": 0.00048008293379098177
+  },
+  "propagation_only_solves": true,
+  "note": "propagation alone solves it; no lift needed"
+ },
+ {
+  "name": "generated-min-3",
+  "puzzle": "98.2.34......7......19.6.....6..........57..8.9....14.73..24..55......9..4.......",
+  "clues": 24,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 0,
+   "seconds": 0.0005012920591980219
+  },
+  "propagation_only_solves": true,
+  "note": "propagation alone solves it; no lift needed"
+ },
+ {
+  "name": "generated-min-4",
+  "puzzle": "..4.96...8....7.2........7..2..4..6.96.25....5.1.......97415.........3.....7..1..",
+  "clues": 24,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 4,
+   "seconds": 0.0009656669571995735
+  },
+  "propagation_only_solves": false,
+  "free_cells": 35,
+  "candidates": 94,
+  "lp_one_shot": {
+   "status": "optimal",
+   "popped": 0,
+   "max_fractionality": 0.49674860637187956,
+   "argmax_accuracy": 0.8857142857142857
+  },
+  "sdp_one_shot": {
+   "status": "optimal",
+   "seconds": 0.6337616250384599,
+   "popped": 35,
+   "popped_correct": 35,
+   "free_cells": 35,
+   "max_fractionality": 4.728360889494354e-07,
+   "argmax_accuracy": 1.0,
+   "rounding": {
+    "trials": 200,
+    "mean_cell_accuracy": 0.9967142857142858,
+    "best_clashes": 0,
+    "accuracy_of_fewest_clash_draw": 1.0,
+    "exact_solutions_drawn": 199
+   }
+  },
+  "forcing_audit": {
+   "lp_max_wrong_mass": 21.0,
+   "sdp_max_wrong_mass": 2.8273855675380883e-06,
+   "sdp_audit_status": "optimal",
+   "sdp_audit_seconds": 0.7549216659972444
+  },
+  "sdp_wave": {
+   "lifts": 1,
+   "lift_seconds": 0.6318428330123425,
+   "popped_claims": 35,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 0.6333739159163088,
+   "solved": true
+  },
+  "lp_wave": {
+   "lifts": 6,
+   "lift_seconds": 0.19968570803757757,
+   "popped_claims": 0,
+   "branches": 6,
+   "max_depth": 6,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 0.20110366598237306,
+   "solved": true
+  }
+ },
+ {
+  "name": "norvig-hardest-1",
+  "puzzle": "85...24..72......9..4.........1.7..23.5...9...4...........8..7..17..........36.4.",
+  "clues": 22,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 8,
+   "seconds": 0.0017046660650521517
+  },
+  "propagation_only_solves": false,
+  "free_cells": 48,
+  "candidates": 169,
+  "lp_one_shot": {
+   "status": "optimal",
+   "popped": 48,
+   "max_fractionality": 0.0,
+   "argmax_accuracy": 1.0
+  },
+  "sdp_one_shot": {
+   "status": "optimal",
+   "seconds": 0.6163482500705868,
+   "popped": 48,
+   "popped_correct": 48,
+   "free_cells": 48,
+   "max_fractionality": 1.0841157402907697e-06,
+   "argmax_accuracy": 1.0,
+   "rounding": {
+    "trials": 200,
+    "mean_cell_accuracy": 1.0,
+    "best_clashes": 0,
+    "accuracy_of_fewest_clash_draw": 1.0,
+    "exact_solutions_drawn": 200
+   }
+  },
+  "forcing_audit": {
+   "lp_max_wrong_mass": 0.0,
+   "sdp_max_wrong_mass": -1.7020241208405771e-07,
+   "sdp_audit_status": "optimal",
+   "sdp_audit_seconds": 0.9769093339564279
+  },
+  "sdp_wave": {
+   "lifts": 1,
+   "lift_seconds": 0.6270870830630884,
+   "popped_claims": 48,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 0.6295304580125958,
+   "solved": true
+  },
+  "lp_wave": {
+   "lifts": 1,
+   "lift_seconds": 0.06239075004123151,
+   "popped_claims": 48,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 0.06286979198921472,
+   "solved": true
+  }
+ },
+ {
+  "name": "norvig-hardest-2",
+  "puzzle": "..53.....8......2..7..1.5..4....53...1..7...6..32...8..6.5....9..4....3......97..",
+  "clues": 23,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 56,
+   "seconds": 0.008273042039945722
+  },
+  "propagation_only_solves": false,
+  "free_cells": 56,
+  "candidates": 209,
+  "lp_one_shot": {
+   "status": "optimal",
+   "popped": 0,
+   "max_fractionality": 0.4943042638164261,
+   "argmax_accuracy": 0.48214285714285715
+  },
+  "sdp_one_shot": {
+   "status": "optimal",
+   "seconds": 51.979631582973525,
+   "popped": 56,
+   "popped_correct": 56,
+   "free_cells": 56,
+   "max_fractionality": 6.515772172588363e-06,
+   "argmax_accuracy": 1.0,
+   "rounding": {
+    "trials": 200,
+    "mean_cell_accuracy": 0.9996428571428573,
+    "best_clashes": 0,
+    "accuracy_of_fewest_clash_draw": 1.0,
+    "exact_solutions_drawn": 199
+   }
+  },
+  "forcing_audit": {
+   "lp_max_wrong_mass": 48.23529411764706,
+   "sdp_max_wrong_mass": -6.199478487585571e-07,
+   "sdp_audit_status": "optimal",
+   "sdp_audit_seconds": 22.668094834079966
+  },
+  "sdp_wave": {
+   "lifts": 1,
+   "lift_seconds": 53.73538499989081,
+   "popped_claims": 56,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 53.737731375033036,
+   "solved": true
+  },
+  "lp_wave": {
+   "lifts": 26,
+   "lift_seconds": 1.3611532879294828,
+   "popped_claims": 3,
+   "branches": 20,
+   "max_depth": 15,
+   "refuted_by_lift": 3,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 1.3666377500630915,
+   "solved": true
+  }
+ },
+ {
+  "name": "norvig-hardest-3",
+  "puzzle": "12..4......5.69.1...9...5.........7.7...52.9..3......2.9.6...5.4..9..8.1..3...9.4",
+  "clues": 26,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 12,
+   "seconds": 0.002317916019819677
+  },
+  "propagation_only_solves": false,
+  "free_cells": 48,
+  "candidates": 171,
+  "lp_one_shot": {
+   "status": "optimal",
+   "popped": 0,
+   "max_fractionality": 0.4996955019456925,
+   "argmax_accuracy": 0.5625
+  },
+  "sdp_one_shot": {
+   "status": "optimal",
+   "seconds": 6.326486416975968,
+   "popped": 48,
+   "popped_correct": 48,
+   "free_cells": 48,
+   "max_fractionality": 5.533821553216356e-07,
+   "argmax_accuracy": 1.0,
+   "rounding": {
+    "trials": 200,
+    "mean_cell_accuracy": 0.995625,
+    "best_clashes": 0,
+    "accuracy_of_fewest_clash_draw": 1.0,
+    "exact_solutions_drawn": 199
+   }
+  },
+  "forcing_audit": {
+   "lp_max_wrong_mass": 37.0,
+   "sdp_max_wrong_mass": -6.623325793286031e-07,
+   "sdp_audit_status": "optimal",
+   "sdp_audit_seconds": 6.1612117500044405
+  },
+  "sdp_wave": {
+   "lifts": 1,
+   "lift_seconds": 5.987207958009094,
+   "popped_claims": 48,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 5.989634416997433,
+   "solved": true
+  },
+  "lp_wave": {
+   "lifts": 29,
+   "lift_seconds": 1.2746136208297685,
+   "popped_claims": 42,
+   "branches": 24,
+   "max_depth": 10,
+   "refuted_by_lift": 1,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 1.2812550000380725,
+   "solved": true
+  }
+ },
+ {
+  "name": "norvig-hardest-4",
+  "puzzle": "...57..3.1......2.7...234......8...4..7..4...49....6.5.42...3.....7..9....18.....",
+  "clues": 24,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 44,
+   "seconds": 0.0061471250373870134
+  },
+  "propagation_only_solves": false,
+  "free_cells": 53,
+  "candidates": 196,
+  "lp_one_shot": {
+   "status": "optimal",
+   "popped": 53,
+   "max_fractionality": 0.0,
+   "argmax_accuracy": 1.0
+  },
+  "sdp_one_shot": {
+   "status": "optimal",
+   "seconds": 1.5562053329776973,
+   "popped": 53,
+   "popped_correct": 53,
+   "free_cells": 53,
+   "max_fractionality": 3.977645489373636e-08,
+   "argmax_accuracy": 1.0,
+   "rounding": {
+    "trials": 200,
+    "mean_cell_accuracy": 0.9951886792452831,
+    "best_clashes": 0,
+    "accuracy_of_fewest_clash_draw": 1.0,
+    "exact_solutions_drawn": 199
+   }
+  },
+  "forcing_audit": {
+   "lp_max_wrong_mass": 0.0,
+   "sdp_max_wrong_mass": 6.384337270547964e-09,
+   "sdp_audit_status": "optimal",
+   "sdp_audit_seconds": 1.6378008750034496
+  },
+  "sdp_wave": {
+   "lifts": 1,
+   "lift_seconds": 1.4755317080998793,
+   "popped_claims": 53,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 1.477844167035073,
+   "solved": true
+  },
+  "lp_wave": {
+   "lifts": 1,
+   "lift_seconds": 0.05848362494725734,
+   "popped_claims": 53,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 0.05879741697572172,
+   "solved": true
+  }
+ },
+ {
+  "name": "norvig-hardest-5",
+  "puzzle": "7..1523........92....3.....1....47.8.......6............9...5.6.4.9.7...8....6.1.",
+  "clues": 22,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 0,
+   "seconds": 0.0004627500893548131
+  },
+  "propagation_only_solves": true,
+  "note": "propagation alone solves it; no lift needed"
+ },
+ {
+  "name": "norvig-hardest-6",
+  "puzzle": "1....7.9..3..2...8..96..5....53..9...1..8...26....4...3......1..4......7..7...3..",
+  "clues": 23,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 142,
+   "seconds": 0.016659875051118433
+  },
+  "propagation_only_solves": false,
+  "free_cells": 57,
+  "candidates": 216,
+  "lp_one_shot": {
+   "status": "optimal",
+   "popped": 0,
+   "max_fractionality": 0.49203279342203493,
+   "argmax_accuracy": 0.43859649122807015
+  },
+  "sdp_one_shot": {
+   "status": "optimal",
+   "seconds": 58.51131787500344,
+   "popped": 57,
+   "popped_correct": 57,
+   "free_cells": 57,
+   "max_fractionality": 1.140860817098619e-06,
+   "argmax_accuracy": 1.0,
+   "rounding": {
+    "trials": 200,
+    "mean_cell_accuracy": 0.9983333333333333,
+    "best_clashes": 0,
+    "accuracy_of_fewest_clash_draw": 1.0,
+    "exact_solutions_drawn": 198
+   }
+  },
+  "forcing_audit": {
+   "lp_max_wrong_mass": 51.333333333333336,
+   "sdp_max_wrong_mass": 0.00042667322624286616,
+   "sdp_audit_status": "optimal",
+   "sdp_audit_seconds": 32.13912258297205
+  },
+  "sdp_wave": {
+   "lifts": 1,
+   "lift_seconds": 57.83755799999926,
+   "popped_claims": 57,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 57.840034916996956,
+   "solved": true
+  },
+  "lp_wave": {
+   "lifts": 81,
+   "lift_seconds": 4.044085920788348,
+   "popped_claims": 95,
+   "branches": 63,
+   "max_depth": 16,
+   "refuted_by_lift": 5,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 4.061716583091766,
+   "solved": true
+  }
+ },
+ {
+  "name": "norvig-hardest-7",
+  "puzzle": "1...34.8....8..5....4.6..21.18......3..1.2..6......81.52..7.9....6..9....9.64...2",
+  "clues": 28,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 6,
+   "seconds": 0.0010741670848801732
+  },
+  "propagation_only_solves": false,
+  "free_cells": 39,
+  "candidates": 118,
+  "lp_one_shot": {
+   "status": "optimal",
+   "popped": 0,
+   "max_fractionality": 0.47826215368555147,
+   "argmax_accuracy": 0.8205128205128205
+  },
+  "sdp_one_shot": {
+   "status": "optimal",
+   "seconds": 1.056134167010896,
+   "popped": 39,
+   "popped_correct": 39,
+   "free_cells": 39,
+   "max_fractionality": 7.614488792828666e-07,
+   "argmax_accuracy": 1.0,
+   "rounding": {
+    "trials": 200,
+    "mean_cell_accuracy": 1.0,
+    "best_clashes": 0,
+    "accuracy_of_fewest_clash_draw": 1.0,
+    "exact_solutions_drawn": 200
+   }
+  },
+  "forcing_audit": {
+   "lp_max_wrong_mass": 24.0,
+   "sdp_max_wrong_mass": 9.77949120921012e-06,
+   "sdp_audit_status": "optimal",
+   "sdp_audit_seconds": 1.4299051250563934
+  },
+  "sdp_wave": {
+   "lifts": 1,
+   "lift_seconds": 1.0564706670120358,
+   "popped_claims": 39,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 1.058473875047639,
+   "solved": true
+  },
+  "lp_wave": {
+   "lifts": 3,
+   "lift_seconds": 0.12357020913623273,
+   "popped_claims": 38,
+   "branches": 1,
+   "max_depth": 1,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 0.12431866698898375,
+   "solved": true
+  }
+ },
+ {
+  "name": "norvig-hardest-8",
+  "puzzle": "...92......68.3...19..7...623..4.1....1...7....8.3..297...8..91...5.72......64...",
+  "clues": 28,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 10,
+   "seconds": 0.0013114999746903777
+  },
+  "propagation_only_solves": false,
+  "free_cells": 35,
+  "candidates": 103,
+  "lp_one_shot": {
+   "status": "optimal",
+   "popped": 0,
+   "max_fractionality": 0.47069031344125056,
+   "argmax_accuracy": 0.5714285714285714
+  },
+  "sdp_one_shot": {
+   "status": "optimal",
+   "seconds": 0.7441825419664383,
+   "popped": 35,
+   "popped_correct": 35,
+   "free_cells": 35,
+   "max_fractionality": 6.016442221141044e-07,
+   "argmax_accuracy": 1.0,
+   "rounding": {
+    "trials": 200,
+    "mean_cell_accuracy": 0.9978571428571428,
+    "best_clashes": 0,
+    "accuracy_of_fewest_clash_draw": 1.0,
+    "exact_solutions_drawn": 199
+   }
+  },
+  "forcing_audit": {
+   "lp_max_wrong_mass": 22.5,
+   "sdp_max_wrong_mass": -5.43917049825957e-06,
+   "sdp_audit_status": "optimal",
+   "sdp_audit_seconds": 0.8789904169971123
+  },
+  "sdp_wave": {
+   "lifts": 1,
+   "lift_seconds": 0.751023625023663,
+   "popped_claims": 35,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 0.7531167909037322,
+   "solved": true
+  },
+  "lp_wave": {
+   "lifts": 8,
+   "lift_seconds": 0.2526722480542958,
+   "popped_claims": 0,
+   "branches": 8,
+   "max_depth": 8,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 0.25438033300451934,
+   "solved": true
+  }
+ },
+ {
+  "name": "norvig-hardest-9",
+  "puzzle": ".6.5.4.3.1...9...8.........9...5...6.4.6.2.7.7...4...5.........4...8...1.5.2.3.4.",
+  "clues": 24,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 4,
+   "seconds": 0.0010052910074591637
+  },
+  "propagation_only_solves": false,
+  "free_cells": 52,
+  "candidates": 201,
+  "lp_one_shot": {
+   "status": "optimal",
+   "popped": 52,
+   "max_fractionality": 1.8096635301390052e-14,
+   "argmax_accuracy": 1.0
+  },
+  "sdp_one_shot": {
+   "status": "optimal",
+   "seconds": 1.6196854579029605,
+   "popped": 52,
+   "popped_correct": 52,
+   "free_cells": 52,
+   "max_fractionality": 2.903217219751401e-08,
+   "argmax_accuracy": 1.0,
+   "rounding": {
+    "trials": 200,
+    "mean_cell_accuracy": 1.0,
+    "best_clashes": 0,
+    "accuracy_of_fewest_clash_draw": 1.0,
+    "exact_solutions_drawn": 200
+   }
+  },
+  "forcing_audit": {
+   "lp_max_wrong_mass": 0.0,
+   "sdp_max_wrong_mass": 5.538263439443625e-07,
+   "sdp_audit_status": "optimal",
+   "sdp_audit_seconds": 1.377099083038047
+  },
+  "sdp_wave": {
+   "lifts": 1,
+   "lift_seconds": 1.6053408329607919,
+   "popped_claims": 52,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 1.6081833749776706,
+   "solved": true
+  },
+  "lp_wave": {
+   "lifts": 1,
+   "lift_seconds": 0.07035004196222872,
+   "popped_claims": 52,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 0.07073866599239409,
+   "solved": true
+  }
+ },
+ {
+  "name": "norvig-hardest-10",
+  "puzzle": "7.....4...2..7..8...3..8.799..5..3...6..2..9...1.97..6...3..9...3..4..6...9..1.35",
+  "clues": 28,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 8,
+   "seconds": 0.001277000061236322
+  },
+  "propagation_only_solves": false,
+  "free_cells": 46,
+  "candidates": 155,
+  "lp_one_shot": {
+   "status": "optimal",
+   "popped": 0,
+   "max_fractionality": 0.49819043850931366,
+   "argmax_accuracy": 0.717391304347826
+  },
+  "sdp_one_shot": {
+   "status": "optimal",
+   "seconds": 2.4393582090269774,
+   "popped": 46,
+   "popped_correct": 46,
+   "free_cells": 46,
+   "max_fractionality": 2.0914619980327842e-07,
+   "argmax_accuracy": 1.0,
+   "rounding": {
+    "trials": 200,
+    "mean_cell_accuracy": 1.0,
+    "best_clashes": 0,
+    "accuracy_of_fewest_clash_draw": 1.0,
+    "exact_solutions_drawn": 200
+   }
+  },
+  "forcing_audit": {
+   "lp_max_wrong_mass": 30.0,
+   "sdp_max_wrong_mass": -1.0502415365684015e-06,
+   "sdp_audit_status": "optimal",
+   "sdp_audit_seconds": 2.654895583051257
+  },
+  "sdp_wave": {
+   "lifts": 1,
+   "lift_seconds": 2.3276329579530284,
+   "popped_claims": 46,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 2.329707833006978,
+   "solved": true
+  },
+  "lp_wave": {
+   "lifts": 7,
+   "lift_seconds": 0.3608839161461219,
+   "popped_claims": 0,
+   "branches": 7,
+   "max_depth": 7,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 0.3625702910358086,
+   "solved": true
+  }
+ },
+ {
+  "name": "norvig-hardest-11",
+  "puzzle": "....7..2.8.......6.1.2.5...9.54....8.........3....85.1...3.2.8.4.......9.7..6....",
+  "clues": 22,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 32,
+   "seconds": 0.005458250059746206
+  },
+  "propagation_only_solves": false,
+  "free_cells": 59,
+  "candidates": 234,
+  "lp_one_shot": {
+   "status": "optimal",
+   "popped": 2,
+   "max_fractionality": 0.4999386215343319,
+   "argmax_accuracy": 0.8305084745762712
+  },
+  "sdp_one_shot": {
+   "status": "optimal",
+   "seconds": 11.471672707935795,
+   "popped": 59,
+   "popped_correct": 59,
+   "free_cells": 59,
+   "max_fractionality": 3.076724846340362e-06,
+   "argmax_accuracy": 1.0,
+   "rounding": {
+    "trials": 200,
+    "mean_cell_accuracy": 1.0,
+    "best_clashes": 0,
+    "accuracy_of_fewest_clash_draw": 1.0,
+    "exact_solutions_drawn": 200
+   }
+  },
+  "forcing_audit": {
+   "lp_max_wrong_mass": 36.25,
+   "sdp_max_wrong_mass": -3.4691199652212376e-05,
+   "sdp_audit_status": "optimal",
+   "sdp_audit_seconds": 15.395274667069316
+  },
+  "sdp_wave": {
+   "lifts": 1,
+   "lift_seconds": 11.15204466599971,
+   "popped_claims": 59,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 11.154347667004913,
+   "solved": true
+  },
+  "lp_wave": {
+   "lifts": 17,
+   "lift_seconds": 0.944725748966448,
+   "popped_claims": 2,
+   "branches": 16,
+   "max_depth": 16,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 0.9473114579450339,
+   "solved": true
+  }
+ },
+ {
+  "name": "inkala-2012",
+  "puzzle": "8..........36......7..9.2...5...7.......457.....1...3...1....68..85...1..9....4..",
+  "clues": 21,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 320,
+   "seconds": 0.04597975010983646
+  },
+  "propagation_only_solves": false,
+  "free_cells": 60,
+  "candidates": 254,
+  "lp_one_shot": {
+   "status": "optimal",
+   "popped": 3,
+   "max_fractionality": 0.4963328700830265,
+   "argmax_accuracy": 0.6833333333333333
+  },
+  "sdp_one_shot": {
+   "status": "optimal",
+   "seconds": 19.476087250048295,
+   "popped": 60,
+   "popped_correct": 60,
+   "free_cells": 60,
+   "max_fractionality": 1.0291765271119857e-06,
+   "argmax_accuracy": 1.0,
+   "rounding": {
+    "trials": 200,
+    "mean_cell_accuracy": 1.0,
+    "best_clashes": 0,
+    "accuracy_of_fewest_clash_draw": 1.0,
+    "exact_solutions_drawn": 200
+   }
+  },
+  "forcing_audit": {
+   "lp_max_wrong_mass": 44.5,
+   "sdp_max_wrong_mass": 2.8205648566155145e-07,
+   "sdp_audit_status": "optimal",
+   "sdp_audit_seconds": 22.578895499929786
+  },
+  "sdp_wave": {
+   "lifts": 1,
+   "lift_seconds": 19.825612291926518,
+   "popped_claims": 60,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 19.828151666908525,
+   "solved": true
+  },
+  "lp_wave": {
+   "lifts": 25,
+   "lift_seconds": 1.384195706108585,
+   "popped_claims": 16,
+   "branches": 19,
+   "max_depth": 15,
+   "refuted_by_lift": 1,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 1.388874709024094,
+   "solved": true
+  }
+ },
+ {
+  "name": "easter-monster",
+  "puzzle": "1.......2.9.4...5...6...7...5.9.3.......7.......85..4.7.....6...3...9.8...2.....1",
+  "clues": 21,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 677,
+   "seconds": 0.07615504204295576
+  },
+  "propagation_only_solves": false,
+  "free_cells": 60,
+  "candidates": 239,
+  "lp_one_shot": {
+   "status": "optimal",
+   "popped": 1,
+   "max_fractionality": 0.4972091825974916,
+   "argmax_accuracy": 0.5
+  },
+  "sdp_one_shot": {
+   "status": "optimal",
+   "seconds": 65.67295962502249,
+   "popped": 60,
+   "popped_correct": 60,
+   "free_cells": 60,
+   "max_fractionality": 8.981443130329225e-07,
+   "argmax_accuracy": 1.0,
+   "rounding": {
+    "trials": 200,
+    "mean_cell_accuracy": 0.9995833333333333,
+    "best_clashes": 0,
+    "accuracy_of_fewest_clash_draw": 1.0,
+    "exact_solutions_drawn": 199
+   }
+  },
+  "forcing_audit": {
+   "lp_max_wrong_mass": 54.75,
+   "sdp_max_wrong_mass": 0.000131309125720389,
+   "sdp_audit_status": "optimal",
+   "sdp_audit_seconds": 58.408077917061746
+  },
+  "sdp_wave": {
+   "lifts": 1,
+   "lift_seconds": 62.41932095901575,
+   "popped_claims": 60,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 62.42243445792701,
+   "solved": true
+  },
+  "lp_wave": {
+   "lifts": 108,
+   "lift_seconds": 6.215544827049598,
+   "popped_claims": 99,
+   "branches": 72,
+   "max_depth": 15,
+   "refuted_by_lift": 19,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 6.236896999995224,
+   "solved": true
+  }
+ },
+ {
+  "name": "norvig-grid2",
+  "puzzle": "4.....8.5.3..........7......2.....6.....8.4......1.......6.3.7.5..2.....1.4......",
+  "clues": 17,
+  "backtrack": {
+   "solutions_found": 1,
+   "guesses": 100,
+   "seconds": 0.010794625035487115
+  },
+  "propagation_only_solves": false,
+  "free_cells": 61,
+  "candidates": 271,
+  "lp_one_shot": {
+   "status": "optimal",
+   "popped": 61,
+   "max_fractionality": 0.0,
+   "argmax_accuracy": 1.0
+  },
+  "sdp_one_shot": {
+   "status": "optimal",
+   "seconds": 5.940012082923204,
+   "popped": 61,
+   "popped_correct": 61,
+   "free_cells": 61,
+   "max_fractionality": 1.0573856774609425e-06,
+   "argmax_accuracy": 1.0,
+   "rounding": {
+    "trials": 200,
+    "mean_cell_accuracy": 1.0,
+    "best_clashes": 0,
+    "accuracy_of_fewest_clash_draw": 1.0,
+    "exact_solutions_drawn": 200
+   }
+  },
+  "forcing_audit": {
+   "lp_max_wrong_mass": 0.0,
+   "sdp_max_wrong_mass": -2.5992606326472346e-07,
+   "sdp_audit_status": "optimal",
+   "sdp_audit_seconds": 4.0218294999795035
+  },
+  "sdp_wave": {
+   "lifts": 1,
+   "lift_seconds": 6.015994583023712,
+   "popped_claims": 61,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 6.019631915958598,
+   "solved": true
+  },
+  "lp_wave": {
+   "lifts": 1,
+   "lift_seconds": 0.08116199995856732,
+   "popped_claims": 61,
+   "branches": 0,
+   "max_depth": 0,
+   "refuted_by_lift": 0,
+   "popped_contradictions": 0,
+   "gave_up": false,
+   "seconds": 0.08146745897829533,
+   "solved": true
+  }
+ }
+]

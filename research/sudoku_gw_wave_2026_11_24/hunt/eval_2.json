@@ -1,0 +1,236 @@
+[
+ {
+  "puzzle": "100300002090400050006000700050903000000070000000800040700000600030009080002000001",
+  "solution": "174385962293467158586192734451923876928674315367851249719548623635219487842736591",
+  "backtrack": {
+   "guesses": 386,
+   "ms": 35.88895802386105,
+   "solutions": 1
+  },
+  "free_cells": 60,
+  "candidates": 240,
+  "lift": {
+   "status": "optimal",
+   "seconds": 54.08987458294723,
+   "n": 241,
+   "min_eigenvalue": -1.5505934503381916e-05,
+   "min_entry": -3.4219774774992873e-06,
+   "max_equality_residual": 1.9545543850085778e-08,
+   "iterations": 6450,
+   "popped": 60,
+   "popped_correct": 60,
+   "max_fractionality": 2.471487489885682e-06
+  },
+  "audit": {
+   "status": "optimal",
+   "seconds": 62.691571082919836,
+   "n": 241,
+   "value": 0.00014195003567538252,
+   "min_eigenvalue": -1.99576256259317e-05,
+   "min_entry": -4.178097801641564e-07,
+   "max_equality_residual": 1.8014115199527225e-08,
+   "iterations": 7225
+  },
+  "lp_wrong_mass": 51.666666666666664,
+  "forced": true,
+  "source": "g_easter.json",
+  "kind": "guesses",
+  "score": 386.0,
+  "clues": 21
+ },
+ {
+  "puzzle": "800000000003600000070090200050007000000045700000100030001000068008500010090000400",
+  "solution": "812753649943682175675491283154237896369845721287169534521974368438526917796318452",
+  "backtrack": {
+   "guesses": 320,
+   "ms": 59.606708004139364,
+   "solutions": 1
+  },
+  "free_cells": 60,
+  "candidates": 254,
+  "lift": {
+   "status": "optimal",
+   "seconds": 27.810116041102447,
+   "n": 255,
+   "min_eigenvalue": -3.879070349975746e-06,
+   "min_entry": -1.4806889068411953e-06,
+   "max_equality_residual": 3.601283515841658e-08,
+   "iterations": 2875,
+   "popped": 60,
+   "popped_correct": 60,
+   "max_fractionality": 1.0291765271119857e-06
+  },
+  "audit": {
+   "status": "optimal",
+   "seconds": 32.51863725006115,
+   "n": 255,
+   "value": 2.8205648566155145e-07,
+   "min_eigenvalue": -3.6365651179152223e-07,
+   "min_entry": -3.216801221118151e-08,
+   "max_equality_residual": 6.122987450396522e-08,
+   "iterations": 3175
+  },
+  "lp_wrong_mass": 44.5,
+  "forced": true,
+  "source": "g_inkala.json",
+  "kind": "guesses",
+  "score": 320.0,
+  "clues": 21
+ },
+ {
+  "puzzle": "100000002090400050006000700050903000000070000000800040700040600030009080002000001",
+  "solution": "174385962293467158586192734451923876928674315367851249719548623635219487842736591",
+  "backtrack": {
+   "guesses": 92,
+   "ms": 18.1605409597978,
+   "solutions": 1
+  },
+  "free_cells": 59,
+  "candidates": 231,
+  "lift": {
+   "status": "optimal",
+   "seconds": 31.347084791050293,
+   "n": 232,
+   "min_eigenvalue": -4.879672091563862e-06,
+   "min_entry": -1.1515171679711553e-06,
+   "max_equality_residual": 5.769744459982462e-09,
+   "iterations": 4300,
+   "popped": 59,
+   "popped_correct": 59,
+   "max_fractionality": 9.068560365976808e-07
+  },
+  "audit": {
+   "status": "optimal",
+   "seconds": 33.60326020908542,
+   "n": 232,
+   "value": 1.9192017724450598e-06,
+   "min_eigenvalue": -1.510241169230311e-06,
+   "min_entry": -2.5440299495575144e-07,
+   "max_equality_residual": 7.741097318714196e-09,
+   "iterations": 5375
+  },
+  "lp_wrong_mass": 51.935483870967744,
+  "forced": true,
+  "source": "lp_easter.json",
+  "kind": "lp",
+  "score": 51.935575870967746,
+  "clues": 21
+ },
+ {
+  "puzzle": "000000040003000005070091200000000800060045000000100030021000060008500907000000002",
+  "solution": "812753649943682175675491283154237896369845721287169534521974368438526917796318452",
+  "backtrack": {
+   "guesses": 14,
+   "ms": 2.7822500560432673,
+   "solutions": 1
+  },
+  "free_cells": 50,
+  "candidates": 191,
+  "lift": {
+   "status": "optimal",
+   "seconds": 5.039138916996308,
+   "n": 192,
+   "min_eigenvalue": -1.08816779541181e-05,
+   "min_entry": -5.759471856371978e-06,
+   "max_equality_residual": 2.249952535393618e-08,
+   "iterations": 1100,
+   "popped": 50,
+   "popped_correct": 50,
+   "max_fractionality": 3.626546411172882e-06
+  },
+  "audit": {
+   "status": "optimal",
+   "seconds": 5.72601237508934,
+   "n": 192,
+   "value": -1.3272636667561911e-05,
+   "min_eigenvalue": -1.640114687767431e-05,
+   "min_entry": -4.35847332055647e-06,
+   "max_equality_residual": 6.265313923226046e-08,
+   "iterations": 1150
+  },
+  "lp_wrong_mass": 32.5,
+  "forced": true,
+  "source": "lp_inkala.json",
+  "kind": "lp",
+  "score": 32.500014,
+  "clues": 21
+ },
+ {
+  "puzzle": "000712000000000000000400856070000000002000010800060004980000003000203408007000000",
+  "solution": "568712349493586172721439856176324985342895617859167234984651723615273498237948561",
+  "backtrack": {
+   "guesses": 6,
+   "ms": 0.9939169976860285,
+   "solutions": 1
+  },
+  "free_cells": 29,
+  "candidates": 79,
+  "lift": {
+   "status": "optimal",
+   "seconds": 0.4675025410251692,
+   "n": 80,
+   "min_eigenvalue": -6.472289421275569e-06,
+   "min_entry": -2.8278286180727564e-06,
+   "max_equality_residual": 2.283513933498682e-08,
+   "iterations": 675,
+   "popped": 29,
+   "popped_correct": 29,
+   "max_fractionality": 6.049170926860088e-07
+  },
+  "audit": {
+   "status": "optimal",
+   "seconds": 0.5918208750663325,
+   "n": 80,
+   "value": -5.426548382331202e-09,
+   "min_eigenvalue": -1.654663181079315e-07,
+   "min_entry": -6.655171779381956e-08,
+   "max_equality_residual": 1.283497752524454e-10,
+   "iterations": 775
+  },
+  "lp_wrong_mass": 16.5,
+  "forced": true,
+  "source": "lp_rand.json",
+  "kind": "lp",
+  "score": 16.500006,
+  "clues": 21
+ },
+ {
+  "puzzle": "500712000000500000000000806100000000002805000000060004980000003000203400007000500",
+  "solution": "568712349493586172721439856176324985342895617859167234984651723615273498237948561",
+  "backtrack": {
+   "guesses": 12,
+   "ms": 1.592291984707117,
+   "solutions": 1
+  },
+  "free_cells": 44,
+  "candidates": 150,
+  "lift": {
+   "status": "optimal",
+   "seconds": 0.5398533339612186,
+   "n": 151,
+   "min_eigenvalue": -2.7845865172290823e-06,
+   "min_entry": -3.0033725081307066e-07,
+   "max_equality_residual": 4.8821028997281246e-08,
+   "iterations": 175,
+   "popped": 44,
+   "popped_correct": 44,
+   "max_fractionality": 4.1905945702414016e-07
+  },
+  "audit": {
+   "status": "optimal",
+   "seconds": 0.720049083000049,
+   "n": 151,
+   "value": 2.2482291609817103e-07,
+   "min_eigenvalue": -5.839899093151053e-07,
+   "min_entry": -2.2281104416427376e-08,
+   "max_equality_residual": 5.231953870143968e-09,
+   "iterations": 200
+  },
+  "lp_wrong_mass": 0.0,
+  "forced": true,
+  "source": "lp_rand.json",
+  "kind": "lp",
+  "score": 1.2e-05,
+  "clues": 21
+ }
+]

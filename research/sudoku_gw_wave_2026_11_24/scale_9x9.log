@@ -1,0 +1,40 @@
+9x9-909-1 clues=24 free=27 cands=81 bt=2g/1ms lift=optimal 0.3s popped=27/27 wrong_sdp=-1.289805346646717e-06 wrong_lp=16.5 forces=True wave=None
+9x9-909-2 clues=24 free=44 cands=139 bt=10g/1ms lift=optimal 2.3s popped=44/44 wrong_sdp=-5.284758144992554e-06 wrong_lp=29.333333333333332 forces=True wave=None
+9x9-909-3 clues=25 free=50 cands=165 bt=2g/0ms lift=optimal 0.8s popped=50/50 wrong_sdp=-1.7811721176718424e-06 wrong_lp=0.0 forces=True wave=None
+9x9-909-4 clues=24 free=46 cands=153 bt=12g/1ms lift=optimal 0.5s popped=46/46 wrong_sdp=1.7945780952605588e-06 wrong_lp=0.0 forces=True wave=None
+9x9-909-5 clues=24 free=46 cands=160 bt=4g/1ms lift=optimal 3.9s popped=46/46 wrong_sdp=-9.38990000343342e-06 wrong_lp=37.5 forces=True wave=None
+9x9-909-6 clues=27 free=45 cands=146 bt=6g/1ms lift=optimal 0.5s popped=45/45 wrong_sdp=-1.7861198723414346e-06 wrong_lp=0.0 forces=True wave=None
+9x9-909-7 clues=24 free=43 cands=143 bt=4g/1ms lift=optimal 2.3s popped=43/43 wrong_sdp=1.7802759989888075e-06 wrong_lp=19.0 forces=True wave=None
+9x9-909-8 clues=22 propagation solves
+9x9-909-9 clues=26 propagation solves
+9x9-909-10 clues=27 propagation solves
+9x9-909-11 clues=24 free=30 cands=88 bt=4g/1ms lift=optimal 0.6s popped=30/30 wrong_sdp=2.9272784341369394e-05 wrong_lp=19.0 forces=True wave=None
+9x9-909-12 clues=23 propagation solves
+9x9-909-13 clues=26 propagation solves
+9x9-909-14 clues=23 propagation solves
+9x9-909-15 clues=22 free=30 cands=85 bt=2g/0ms lift=optimal 0.1s popped=30/30 wrong_sdp=-2.514344756542157e-08 wrong_lp=0.0 forces=True wave=None
+9x9-909-16 clues=25 free=42 cands=142 bt=6g/1ms lift=optimal 1.4s popped=42/42 wrong_sdp=-8.038581439325943e-06 wrong_lp=29.5 forces=True wave=None
+9x9-909-17 clues=23 propagation solves
+9x9-909-18 clues=26 free=30 cands=72 bt=2g/0ms lift=optimal 0.3s popped=30/30 wrong_sdp=2.2295117485639154e-07 wrong_lp=18.5 forces=True wave=None
+9x9-909-19 clues=23 propagation solves
+9x9-909-20 clues=23 free=31 cands=82 bt=4g/1ms lift=optimal 0.1s popped=31/31 wrong_sdp=2.4435857390631847e-09 wrong_lp=0.0 forces=True wave=None
+9x9-909-21 clues=23 propagation solves
+9x9-909-22 clues=23 propagation solves
+9x9-909-23 clues=25 free=49 cands=168 bt=2g/1ms lift=optimal 0.9s popped=49/49 wrong_sdp=-8.938761039109746e-07 wrong_lp=0.0 forces=True wave=None
+9x9-909-24 clues=26 free=43 cands=134 bt=8g/1ms lift=optimal 1.6s popped=43/43 wrong_sdp=-1.715465591732714e-05 wrong_lp=28.666666666666668 forces=True wave=None
+9x9-909-25 clues=26 free=50 cands=173 bt=8g/1ms lift=optimal 3.7s popped=50/50 wrong_sdp=2.884038611041041e-06 wrong_lp=24.5 forces=True wave=None
+9x9-909-26 clues=24 propagation solves
+9x9-909-27 clues=24 propagation solves
+9x9-909-28 clues=24 free=51 cands=185 bt=4g/1ms lift=optimal 1.4s popped=51/51 wrong_sdp=-1.839061319504816e-05 wrong_lp=0.0 forces=True wave=None
+9x9-909-29 clues=23 free=36 cands=109 bt=2g/1ms lift=optimal 1.1s popped=36/36 wrong_sdp=-2.34155818685699e-07 wrong_lp=12.0 forces=True wave=None
+9x9-909-30 clues=25 free=19 cands=44 bt=2g/0ms lift=optimal 0.1s popped=19/19 wrong_sdp=-2.634949672026553e-08 wrong_lp=10.5 forces=True wave=None
+9x9-909-31 clues=26 free=42 cands=137 bt=6g/1ms lift=optimal 1.2s popped=42/42 wrong_sdp=1.5048916636429777e-05 wrong_lp=11.5 forces=True wave=None
+9x9-909-32 clues=25 free=47 cands=162 bt=4g/1ms lift=optimal 0.6s popped=47/47 wrong_sdp=4.519155567923532e-08 wrong_lp=0.0 forces=True wave=None
+9x9-909-33 clues=26 free=28 cands=76 bt=2g/1ms lift=optimal 0.3s popped=28/28 wrong_sdp=-1.3713187370584203e-05 wrong_lp=17.5 forces=True wave=None
+9x9-909-34 clues=24 propagation solves
+9x9-909-35 clues=26 free=46 cands=147 bt=10g/1ms lift=optimal 3.5s popped=46/46 wrong_sdp=-1.0949628117738899e-05 wrong_lp=30.0 forces=True wave=None
+9x9-909-36 clues=22 propagation solves
+9x9-909-37 clues=24 propagation solves
+9x9-909-38 clues=25 propagation solves
+9x9-909-39 clues=24 propagation solves
+9x9-909-40 clues=24 propagation solves
