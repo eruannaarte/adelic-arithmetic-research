@@ -1,0 +1,48 @@
+random 3-SAT n=12 m=60 seed=4
+    algebra alone d=3: refuted
+    level-1 lift alone: feasible
+    round 1 algebra(d=3): refuted, +0 clauses +0 parity eqs (0.0s)
+    rich wave d=3: refuted_by_algebra after 1 rounds, 0 facts, 0s
+    level-2 lift alone: refuted {'seconds': 2.59, 'matrix': 79, 'moments': 794, 'equations': 780}
+random 3-SAT n=16 m=80 seed=4
+    algebra alone d=3: refuted
+    level-1 lift alone: feasible
+    round 1 algebra(d=3): refuted, +0 clauses +0 parity eqs (0.0s)
+    rich wave d=3: refuted_by_algebra after 1 rounds, 0 facts, 0s
+    level-2 lift alone: refuted {'seconds': 39.55, 'matrix': 137, 'moments': 2517, 'equations': 1360}
+random 3-SAT n=20 m=100 seed=4
+    algebra alone d=3: closed
+    algebra alone d=4: refuted
+    level-1 lift alone: feasible
+    round 1 algebra(d=3): closed, +5 clauses +0 parity eqs (0.05s)
+    round 1 geometry(level 1): feasible, +0 clauses (0.22s, 1 solves)
+    round 2 algebra(d=3): closed, +0 clauses +0 parity eqs (0.05s)
+    round 2 geometry(level 1): feasible, +0 clauses (0.22s, 1 solves)
+    rich wave d=3: stuck after 2 rounds, 5 facts, 1s
+random 3-SAT n=25 m=125 seed=4
+    algebra alone d=3: closed
+    algebra alone d=4: refuted
+    level-1 lift alone: feasible
+    round 1 algebra(d=3): closed, +8 clauses +0 parity eqs (0.1s)
+    round 1 geometry(level 1): feasible, +5 clauses (1.6s, 6 solves)
+    round 2 algebra(d=3): closed, +8 clauses +0 parity eqs (0.1s)
+    round 2 geometry(level 1): feasible, +0 clauses (0.33s, 1 solves)
+    round 3 algebra(d=3): closed, +0 clauses +0 parity eqs (0.1s)
+    round 3 geometry(level 1): feasible, +0 clauses (0.32s, 1 solves)
+    rich wave d=3: stuck after 3 rounds, 21 facts, 3s
+random 3-SAT n=30 m=150 seed=4
+    algebra alone d=3: closed
+    algebra alone d=4: refuted
+    level-1 lift alone: feasible
+    round 1 algebra(d=3): closed, +1 clauses +0 parity eqs (0.18s)
+    round 1 geometry(level 1): feasible, +0 clauses (0.37s, 1 solves)
+    round 2 algebra(d=3): closed, +0 clauses +0 parity eqs (0.19s)
+    round 2 geometry(level 1): feasible, +0 clauses (0.36s, 1 solves)
+    rich wave d=3: stuck after 2 rounds, 1 facts, 1s
+random 3-SAT n=40 m=200 seed=4
+    algebra alone d=3: closed
+    algebra alone d=4: refuted
+    level-1 lift alone: feasible
+    round 1 algebra(d=3): closed, +0 clauses +0 parity eqs (0.44s)
+    round 1 geometry(level 1): feasible, +0 clauses (0.61s, 1 solves)
+    rich wave d=3: stuck after 1 rounds, 0 facts, 1s

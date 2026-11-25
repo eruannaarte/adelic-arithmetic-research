@@ -1,0 +1,626 @@
+{
+ "n": 18,
+ "seed": 1,
+ "3sat": {
+  "constraints": 72,
+  "solutions": 39,
+  "trace": [
+   {
+    "constraints": 1,
+    "solutions": 229376,
+    "support": 8,
+    "support_fraction": 3.0517578125e-05
+   },
+   {
+    "constraints": 2,
+    "solutions": 200704,
+    "support": 64,
+    "support_fraction": 0.000244140625
+   },
+   {
+    "constraints": 3,
+    "solutions": 175616,
+    "support": 512,
+    "support_fraction": 0.001953125
+   },
+   {
+    "constraints": 4,
+    "solutions": 154112,
+    "support": 640,
+    "support_fraction": 0.00244140625
+   },
+   {
+    "constraints": 5,
+    "solutions": 129024,
+    "support": 936,
+    "support_fraction": 0.003570556640625
+   },
+   {
+    "constraints": 6,
+    "solutions": 110592,
+    "support": 1170,
+    "support_fraction": 0.00446319580078125
+   },
+   {
+    "constraints": 7,
+    "solutions": 99072,
+    "support": 7488,
+    "support_fraction": 0.028564453125
+   },
+   {
+    "constraints": 8,
+    "solutions": 93312,
+    "support": 12320,
+    "support_fraction": 0.0469970703125
+   },
+   {
+    "constraints": 9,
+    "solutions": 82160,
+    "support": 16384,
+    "support_fraction": 0.0625
+   },
+   {
+    "constraints": 10,
+    "solutions": 70000,
+    "support": 16384,
+    "support_fraction": 0.0625
+   },
+   {
+    "constraints": 11,
+    "solutions": 59812,
+    "support": 65536,
+    "support_fraction": 0.25
+   },
+   {
+    "constraints": 12,
+    "solutions": 56504,
+    "support": 52322,
+    "support_fraction": 0.19959259033203125
+   },
+   {
+    "constraints": 13,
+    "solutions": 53552,
+    "support": 31263,
+    "support_fraction": 0.11925888061523438
+   },
+   {
+    "constraints": 14,
+    "solutions": 48580,
+    "support": 86511,
+    "support_fraction": 0.3300132751464844
+   },
+   {
+    "constraints": 15,
+    "solutions": 43428,
+    "support": 87417,
+    "support_fraction": 0.3334693908691406
+   },
+   {
+    "constraints": 16,
+    "solutions": 35416,
+    "support": 112636,
+    "support_fraction": 0.4296722412109375
+   },
+   {
+    "constraints": 17,
+    "solutions": 32236,
+    "support": 108383,
+    "support_fraction": 0.4134483337402344
+   },
+   {
+    "constraints": 18,
+    "solutions": 28962,
+    "support": 131072,
+    "support_fraction": 0.5
+   },
+   {
+    "constraints": 19,
+    "solutions": 24766,
+    "support": 131072,
+    "support_fraction": 0.5
+   },
+   {
+    "constraints": 20,
+    "solutions": 19542,
+    "support": 131072,
+    "support_fraction": 0.5
+   },
+   {
+    "constraints": 21,
+    "solutions": 18651,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 22,
+    "solutions": 16533,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 23,
+    "solutions": 15778,
+    "support": 241519,
+    "support_fraction": 0.9213218688964844
+   },
+   {
+    "constraints": 24,
+    "solutions": 12239,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 25,
+    "solutions": 11211,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 26,
+    "solutions": 10079,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 27,
+    "solutions": 9975,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 28,
+    "solutions": 8468,
+    "support": 238936,
+    "support_fraction": 0.911468505859375
+   },
+   {
+    "constraints": 29,
+    "solutions": 8000,
+    "support": 238445,
+    "support_fraction": 0.9095954895019531
+   },
+   {
+    "constraints": 30,
+    "solutions": 6279,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 31,
+    "solutions": 6192,
+    "support": 242696,
+    "support_fraction": 0.925811767578125
+   },
+   {
+    "constraints": 32,
+    "solutions": 5971,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 33,
+    "solutions": 5385,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 34,
+    "solutions": 4852,
+    "support": 243889,
+    "support_fraction": 0.9303627014160156
+   },
+   {
+    "constraints": 35,
+    "solutions": 4412,
+    "support": 245714,
+    "support_fraction": 0.9373245239257812
+   },
+   {
+    "constraints": 36,
+    "solutions": 3741,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 37,
+    "solutions": 3027,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 38,
+    "solutions": 2629,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 39,
+    "solutions": 2058,
+    "support": 247712,
+    "support_fraction": 0.9449462890625
+   },
+   {
+    "constraints": 40,
+    "solutions": 1801,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 41,
+    "solutions": 1498,
+    "support": 244940,
+    "support_fraction": 0.9343719482421875
+   },
+   {
+    "constraints": 42,
+    "solutions": 1168,
+    "support": 243676,
+    "support_fraction": 0.9295501708984375
+   },
+   {
+    "constraints": 43,
+    "solutions": 1054,
+    "support": 242570,
+    "support_fraction": 0.9253311157226562
+   },
+   {
+    "constraints": 44,
+    "solutions": 1054,
+    "support": 242570,
+    "support_fraction": 0.9253311157226562
+   },
+   {
+    "constraints": 45,
+    "solutions": 983,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 46,
+    "solutions": 899,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 47,
+    "solutions": 761,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 48,
+    "solutions": 761,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 49,
+    "solutions": 541,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 50,
+    "solutions": 505,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 51,
+    "solutions": 505,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 52,
+    "solutions": 459,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 53,
+    "solutions": 419,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 54,
+    "solutions": 235,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 55,
+    "solutions": 207,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 56,
+    "solutions": 139,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 57,
+    "solutions": 83,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 58,
+    "solutions": 83,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 59,
+    "solutions": 65,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 60,
+    "solutions": 65,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 61,
+    "solutions": 65,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 62,
+    "solutions": 65,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 63,
+    "solutions": 63,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 64,
+    "solutions": 63,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 65,
+    "solutions": 63,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 66,
+    "solutions": 63,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 67,
+    "solutions": 63,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 68,
+    "solutions": 63,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 69,
+    "solutions": 51,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 70,
+    "solutions": 39,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 71,
+    "solutions": 39,
+    "support": 262144,
+    "support_fraction": 1.0
+   },
+   {
+    "constraints": 72,
+    "solutions": 39,
+    "support": 262144,
+    "support_fraction": 1.0
+   }
+  ],
+  "weight_by_degree": [
+   0.000148773193359375,
+   0.001390701685196314,
+   0.006564507117638221,
+   0.020930363581730768,
+   0.05019945976061699,
+   0.09496522561097756,
+   0.14473978678385416,
+   0.17901767828525642,
+   0.17962157420622996,
+   0.1458438971103766,
+   0.0956434592222556,
+   0.050515199318910256,
+   0.02129540076622596,
+   0.007021390474759615,
+   0.0017500657301682692,
+   0.0003130008012820513,
+   3.6875406901041664e-05,
+   2.5431315104166665e-06,
+   9.781275040064102e-08
+  ],
+  "degree1_reads_plant": null,
+  "support_final": 262144
+ },
+ "3xor": {
+  "constraints": 22,
+  "solutions": 2,
+  "trace": [
+   {
+    "constraints": 1,
+    "solutions": 131072,
+    "support": 2,
+    "support_fraction": 7.62939453125e-06
+   },
+   {
+    "constraints": 2,
+    "solutions": 65536,
+    "support": 4,
+    "support_fraction": 1.52587890625e-05
+   },
+   {
+    "constraints": 3,
+    "solutions": 32768,
+    "support": 8,
+    "support_fraction": 3.0517578125e-05
+   },
+   {
+    "constraints": 4,
+    "solutions": 16384,
+    "support": 16,
+    "support_fraction": 6.103515625e-05
+   },
+   {
+    "constraints": 5,
+    "solutions": 8192,
+    "support": 32,
+    "support_fraction": 0.0001220703125
+   },
+   {
+    "constraints": 6,
+    "solutions": 4096,
+    "support": 64,
+    "support_fraction": 0.000244140625
+   },
+   {
+    "constraints": 7,
+    "solutions": 2048,
+    "support": 128,
+    "support_fraction": 0.00048828125
+   },
+   {
+    "constraints": 8,
+    "solutions": 1024,
+    "support": 256,
+    "support_fraction": 0.0009765625
+   },
+   {
+    "constraints": 9,
+    "solutions": 512,
+    "support": 512,
+    "support_fraction": 0.001953125
+   },
+   {
+    "constraints": 10,
+    "solutions": 256,
+    "support": 1024,
+    "support_fraction": 0.00390625
+   },
+   {
+    "constraints": 11,
+    "solutions": 128,
+    "support": 2048,
+    "support_fraction": 0.0078125
+   },
+   {
+    "constraints": 12,
+    "solutions": 64,
+    "support": 4096,
+    "support_fraction": 0.015625
+   },
+   {
+    "constraints": 13,
+    "solutions": 32,
+    "support": 8192,
+    "support_fraction": 0.03125
+   },
+   {
+    "constraints": 14,
+    "solutions": 16,
+    "support": 16384,
+    "support_fraction": 0.0625
+   },
+   {
+    "constraints": 15,
+    "solutions": 8,
+    "support": 32768,
+    "support_fraction": 0.125
+   },
+   {
+    "constraints": 16,
+    "solutions": 8,
+    "support": 32768,
+    "support_fraction": 0.125
+   },
+   {
+    "constraints": 17,
+    "solutions": 8,
+    "support": 32768,
+    "support_fraction": 0.125
+   },
+   {
+    "constraints": 18,
+    "solutions": 8,
+    "support": 32768,
+    "support_fraction": 0.125
+   },
+   {
+    "constraints": 19,
+    "solutions": 4,
+    "support": 65536,
+    "support_fraction": 0.25
+   },
+   {
+    "constraints": 20,
+    "solutions": 4,
+    "support": 65536,
+    "support_fraction": 0.25
+   },
+   {
+    "constraints": 21,
+    "solutions": 2,
+    "support": 131072,
+    "support_fraction": 0.5
+   },
+   {
+    "constraints": 22,
+    "solutions": 2,
+    "support": 131072,
+    "support_fraction": 0.5
+   }
+  ],
+  "weight_by_degree": [
+   7.62939453125e-06,
+   0.00012969970703125,
+   0.00103759765625,
+   0.00518798828125,
+   0.018157958984375,
+   0.047210693359375,
+   0.09442138671875,
+   0.14837646484375,
+   0.1854705810546875,
+   0.1854705810546875,
+   0.14837646484375,
+   0.09442138671875,
+   0.047210693359375,
+   0.018157958984375,
+   0.00518798828125,
+   0.00103759765625,
+   0.00012969970703125,
+   7.62939453125e-06,
+   0.0
+  ],
+  "degree1_reads_plant": null,
+  "support_final": 131072
+ }
+}

@@ -1,0 +1,21 @@
+random 3-SAT n=12 m=60 seed=4
+    algebra alone d=3: refuted
+    level-1 lift alone: feasible
+    round 1 algebra(d=3): refuted, +0 clauses +0 parity eqs (0.0s)
+    rich wave d=3: refuted_by_algebra after 1 rounds, 0 facts, 0s
+    level-2 lift alone: refuted {'seconds': 3.35, 'matrix': 79, 'moments': 794, 'equations': 780}
+random 3-SAT n=16 m=80 seed=4
+    algebra alone d=3: refuted
+    level-1 lift alone: feasible
+    round 1 algebra(d=3): refuted, +0 clauses +0 parity eqs (0.0s)
+    rich wave d=3: refuted_by_algebra after 1 rounds, 0 facts, 0s
+    level-2 lift alone: refuted {'seconds': 146.01, 'matrix': 137, 'moments': 2517, 'equations': 1360}
+random 3-SAT n=20 m=100 seed=4
+    algebra alone d=3: closed
+    algebra alone d=4: refuted
+    level-1 lift alone: feasible
+    round 1 algebra(d=3): closed, +5 clauses +0 parity eqs (0.06s)
+    round 1 geometry(level 1): feasible, +0 clauses (0.27s, 1 solves)
+    round 2 algebra(d=3): closed, +0 clauses +0 parity eqs (0.06s)
+    round 2 geometry(level 1): feasible, +0 clauses (0.26s, 1 solves)
+    rich wave d=3: stuck after 2 rounds, 5 facts, 1s

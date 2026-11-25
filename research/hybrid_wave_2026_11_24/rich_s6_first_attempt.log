@@ -1,0 +1,9 @@
+random 3-SAT n=20 m=100 seed=6
+    algebra alone d=3: closed
+    algebra alone d=4: refuted
+    level-1 lift alone: feasible
+    round 1 algebra(d=3): closed, +2 clauses +0 parity eqs (0.05s)
+    round 1 geometry(level 1): feasible, +0 clauses (0.25s, 1 solves)
+    round 2 algebra(d=3): closed, +0 clauses +0 parity eqs (0.05s)
+    round 2 geometry(level 1): feasible, +0 clauses (0.23s, 1 solves)
+    rich wave d=3: stuck after 2 rounds, 2 facts, 1s
