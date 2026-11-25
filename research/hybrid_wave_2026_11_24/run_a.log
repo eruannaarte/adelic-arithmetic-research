@@ -1,0 +1,122 @@
+pigeons 3 into 2 (n=6)
+    algebra d=1: closed {'seconds': 0.0, 'rank': 3, 'monomials': 7}
+    algebra d=2: refuted {'seconds': 0.0, 'rank': 21, 'monomials': 22}
+    geometry: refuted 0.01s
+pigeons 4 into 3 (n=12)
+    algebra d=1: closed {'seconds': 0.0, 'rank': 4, 'monomials': 13}
+    algebra d=2: closed {'seconds': 0.0, 'rank': 64, 'monomials': 79}
+    algebra d=3: refuted {'seconds': 0.0, 'rank': 297, 'monomials': 299}
+    geometry: refuted 0.02s
+pigeons 5 into 4 (n=20)
+    algebra d=1: closed {'seconds': 0.0, 'rank': 5, 'monomials': 21}
+    algebra d=2: closed {'seconds': 0.0, 'rank': 145, 'monomials': 211}
+    algebra d=3: refuted {'seconds': 0.01, 'rank': 1327, 'monomials': 1351}
+    geometry: refuted 0.04s
+pigeons 6 into 5 (n=30)
+    algebra d=1: closed {'seconds': 0.0, 'rank': 6, 'monomials': 31}
+    algebra d=2: closed {'seconds': 0.0, 'rank': 276, 'monomials': 466}
+    algebra d=3: closed {'seconds': 0.01, 'rank': 4056, 'monomials': 4526}
+    algebra d=4: refuted {'seconds': 0.3, 'rank': 31592, 'monomials': 31931}
+    geometry: refuted 0.12s
+pigeons 7 into 6 (n=42)
+    algebra d=1: closed {'seconds': 0.0, 'rank': 7, 'monomials': 43}
+    algebra d=2: closed {'seconds': 0.0, 'rank': 469, 'monomials': 904}
+    algebra d=3: closed {'seconds': 0.04, 'rank': 10304, 'monomials': 12384}
+    algebra d=4: refuted {'seconds': 2.62, 'rank': 120918, 'monomials': 124314}
+    geometry: refuted 0.39s
+pigeons 8 into 7 (n=56)
+    algebra d=1: closed {'seconds': 0.0, 'rank': 8, 'monomials': 57}
+    algebra d=2: closed {'seconds': 0.0, 'rank': 736, 'monomials': 1597}
+    algebra d=3: closed {'seconds': 0.13, 'rank': 22632, 'monomials': 29317}
+    algebra d=4: too_big {'error': '396607 monomials'}
+    geometry: refuted 0.95s
+parity n=10 m=15
+    algebra d=1: refuted {'seconds': 0.0, 'rank': 10, 'monomials': 11}
+    geometry: feasible 0.03s
+parity n=10 m=30
+    algebra d=1: refuted {'seconds': 0.0, 'rank': 10, 'monomials': 11}
+    geometry: feasible 0.05s
+parity n=20 m=30
+    algebra d=1: refuted {'seconds': 0.0, 'rank': 19, 'monomials': 21}
+    geometry: feasible 0.08s
+parity n=20 m=60
+    algebra d=1: refuted {'seconds': 0.0, 'rank': 20, 'monomials': 21}
+    geometry: feasible 0.12s
+parity n=40 m=60
+    algebra d=1: refuted {'seconds': 0.0, 'rank': 36, 'monomials': 41}
+    geometry: feasible 0.28s
+parity n=40 m=120
+    algebra d=1: refuted {'seconds': 0.0, 'rank': 36, 'monomials': 41}
+    geometry: feasible 0.42s
+parity n=60 m=90
+    algebra d=1: refuted {'seconds': 0.0, 'rank': 56, 'monomials': 61}
+    geometry: feasible 0.95s
+parity n=60 m=180
+    algebra d=1: refuted {'seconds': 0.0, 'rank': 57, 'monomials': 61}
+    geometry: feasible 1.23s
+parity n=80 m=120
+    algebra d=1: refuted {'seconds': 0.0, 'rank': 73, 'monomials': 81}
+/Volumes/KINGSTON/Vibecoding/Math/research/hybrid_wave_2026_11_24/engines.py:235: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  prob.solve(solver=solver)
+    geometry: feasible 2.89s
+parity n=80 m=240
+    algebra d=1: refuted {'seconds': 0.0, 'rank': 73, 'monomials': 81}
+    geometry: feasible 3.38s
+coupled: parity on 11 vars switches on 4-into-3 pigeons (n=23)
+    algebra d=1: closed {'seconds': 0.0, 'rank': 11, 'monomials': 24}
+    algebra d=2: closed {'seconds': 0.0, 'rank': 262, 'monomials': 277}
+    algebra d=3: refuted {'seconds': 0.01, 'rank': 2033, 'monomials': 2048}
+    geometry: refuted 0.11s
+    round 1 algebra(d=1): closed, +11 facts
+    round 1 geometry: refuted, +0 facts
+    round 1 algebra(d=2): closed, +11 facts
+    round 1 geometry: refuted, +0 facts
+coupled: parity on 11 vars switches on 5-into-4 pigeons (n=31)
+    algebra d=1: closed {'seconds': 0.0, 'rank': 11, 'monomials': 32}
+    algebra d=2: closed {'seconds': 0.0, 'rank': 431, 'monomials': 497}
+    algebra d=3: refuted {'seconds': 0.02, 'rank': 4970, 'monomials': 4992}
+    geometry: feasible 0.19s
+    round 1 algebra(d=1): closed, +11 facts
+    round 1 geometry: refuted, +0 facts
+    round 1 algebra(d=2): closed, +11 facts
+    round 1 geometry: refuted, +0 facts
+coupled: parity on 11 vars switches on 6-into-5 pigeons (n=41)
+    algebra d=1: closed {'seconds': 0.0, 'rank': 11, 'monomials': 42}
+    algebra d=2: closed {'seconds': 0.0, 'rank': 672, 'monomials': 862}
+    algebra d=3: closed {'seconds': 0.05, 'rank': 11052, 'monomials': 11522}
+    algebra d=4: refuted {'seconds': 2.58, 'rank': 112300, 'monomials': 112792}
+    geometry: feasible 0.43s
+    round 1 algebra(d=1): closed, +11 facts
+    round 1 geometry: refuted, +0 facts
+    round 1 algebra(d=2): closed, +11 facts
+    round 1 geometry: refuted, +0 facts
+coupled: parity on 11 vars switches on 7-into-6 pigeons (n=53)
+    algebra d=1: closed {'seconds': 0.0, 'rank': 11, 'monomials': 54}
+    algebra d=2: closed {'seconds': 0.0, 'rank': 997, 'monomials': 1432}
+    algebra d=3: closed {'seconds': 0.13, 'rank': 22778, 'monomials': 24858}
+    algebra d=4: too_big {'error': '317683 monomials'}
+    geometry: feasible 1.35s
+    round 1 algebra(d=1): closed, +11 facts
+    round 1 geometry: refuted, +0 facts
+    round 1 algebra(d=2): closed, +11 facts
+    round 1 geometry: refuted, +0 facts
+coupled: parity on 11 vars switches on 8-into-7 pigeons (n=67)
+    algebra d=1: closed {'seconds': 0.0, 'rank': 11, 'monomials': 68}
+    algebra d=2: closed {'seconds': 0.0, 'rank': 1418, 'monomials': 2279}
+    algebra d=3: closed {'seconds': 0.33, 'rank': 43499, 'monomials': 50184}
+    algebra d=4: too_big {'error': '816664 monomials'}
+    geometry: feasible 2.76s
+    round 1 algebra(d=1): closed, +11 facts
+    round 1 geometry: refuted, +0 facts
+    round 1 algebra(d=2): closed, +11 facts
+    round 1 geometry: refuted, +0 facts
+coupled: parity on 11 vars switches on 9-into-8 pigeons (n=83)
+    algebra d=1: closed {'seconds': 0.0, 'rank': 11, 'monomials': 84}
+    algebra d=2: closed {'seconds': 0.0, 'rank': 1947, 'monomials': 3487}
+    algebra d=3: closed {'seconds': 0.81, 'rank': 77784, 'monomials': 95368}
+    algebra d=4: too_big {'error': '1932988 monomials'}
+    geometry: feasible 7.17s
+    round 1 algebra(d=1): closed, +11 facts
+    round 1 geometry: refuted, +0 facts
+    round 1 algebra(d=2): closed, +11 facts
+    round 1 geometry: refuted, +0 facts

@@ -1,0 +1,506 @@
+[
+ {
+  "family": "sudoku",
+  "name": "generated-30-2",
+  "n": 74,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "forced": 0,
+    "of": 74,
+    "consistent_with_solution": true,
+    "seconds": 0.0,
+    "rank": 65,
+    "monomials": 75
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "forced": 74,
+    "of": 74,
+    "consistent_with_solution": true,
+    "seconds": 0.01,
+    "rank": 2775,
+    "monomials": 2776
+   }
+  ]
+ },
+ {
+  "family": "sudoku",
+  "name": "generated-min-1",
+  "n": 166,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "forced": 3,
+    "of": 166,
+    "consistent_with_solution": true,
+    "seconds": 0.0,
+    "rank": 121,
+    "monomials": 167
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "forced": 18,
+    "of": 166,
+    "consistent_with_solution": true,
+    "seconds": 0.08,
+    "rank": 13452,
+    "monomials": 13862
+   },
+   {
+    "d": 3,
+    "status": "too_big",
+    "forced": 0,
+    "of": 166,
+    "consistent_with_solution": true,
+    "error": "762522 monomials"
+   }
+  ]
+ },
+ {
+  "family": "sudoku",
+  "name": "generated-min-4",
+  "n": 94,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "forced": 1,
+    "of": 94,
+    "consistent_with_solution": true,
+    "seconds": 0.0,
+    "rank": 80,
+    "monomials": 95
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "forced": 94,
+    "of": 94,
+    "consistent_with_solution": true,
+    "seconds": 0.01,
+    "rank": 4465,
+    "monomials": 4466
+   }
+  ]
+ },
+ {
+  "family": "sudoku",
+  "name": "norvig-hardest-1",
+  "n": 169,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "forced": 0,
+    "of": 169,
+    "consistent_with_solution": true,
+    "seconds": 0.0,
+    "rank": 124,
+    "monomials": 170
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "forced": 169,
+    "of": 169,
+    "consistent_with_solution": true,
+    "seconds": 0.14,
+    "rank": 14365,
+    "monomials": 14366
+   }
+  ]
+ },
+ {
+  "family": "sudoku",
+  "name": "norvig-hardest-2",
+  "n": 209,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "forced": 0,
+    "of": 209,
+    "consistent_with_solution": true,
+    "seconds": 0.0,
+    "rank": 152,
+    "monomials": 210
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "forced": 6,
+    "of": 209,
+    "consistent_with_solution": true,
+    "seconds": 0.2,
+    "rank": 20994,
+    "monomials": 21946
+   },
+   {
+    "d": 3,
+    "status": "too_big",
+    "forced": 0,
+    "of": 209,
+    "consistent_with_solution": true,
+    "error": "1521730 monomials"
+   }
+  ]
+ },
+ {
+  "family": "sudoku",
+  "name": "norvig-hardest-3",
+  "n": 171,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "forced": 0,
+    "of": 171,
+    "consistent_with_solution": true,
+    "seconds": 0.0,
+    "rank": 127,
+    "monomials": 172
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "forced": 51,
+    "of": 171,
+    "consistent_with_solution": true,
+    "seconds": 0.23,
+    "rank": 14597,
+    "monomials": 14707
+   },
+   {
+    "d": 3,
+    "status": "too_big",
+    "forced": 0,
+    "of": 171,
+    "consistent_with_solution": true,
+    "error": "833512 monomials"
+   }
+  ]
+ },
+ {
+  "family": "sudoku",
+  "name": "norvig-hardest-4",
+  "n": 196,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "forced": 8,
+    "of": 196,
+    "consistent_with_solution": true,
+    "seconds": 0.0,
+    "rank": 142,
+    "monomials": 197
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "forced": 196,
+    "of": 196,
+    "consistent_with_solution": true,
+    "seconds": 0.45,
+    "rank": 19306,
+    "monomials": 19307
+   }
+  ]
+ },
+ {
+  "family": "sudoku",
+  "name": "norvig-hardest-6",
+  "n": 216,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "forced": 0,
+    "of": 216,
+    "consistent_with_solution": true,
+    "seconds": 0.0,
+    "rank": 154,
+    "monomials": 217
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "forced": 1,
+    "of": 216,
+    "consistent_with_solution": true,
+    "seconds": 0.17,
+    "rank": 22037,
+    "monomials": 23437
+   },
+   {
+    "d": 3,
+    "status": "too_big",
+    "forced": 0,
+    "of": 216,
+    "consistent_with_solution": true,
+    "error": "1679797 monomials"
+   }
+  ]
+ },
+ {
+  "family": "sudoku",
+  "name": "norvig-hardest-7",
+  "n": 118,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "forced": 2,
+    "of": 118,
+    "consistent_with_solution": true,
+    "seconds": 0.0,
+    "rank": 96,
+    "monomials": 119
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "forced": 118,
+    "of": 118,
+    "consistent_with_solution": true,
+    "seconds": 0.04,
+    "rank": 7021,
+    "monomials": 7022
+   }
+  ]
+ },
+ {
+  "family": "sudoku",
+  "name": "norvig-hardest-8",
+  "n": 103,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "forced": 0,
+    "of": 103,
+    "consistent_with_solution": true,
+    "seconds": 0.0,
+    "rank": 86,
+    "monomials": 104
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "forced": 103,
+    "of": 103,
+    "consistent_with_solution": true,
+    "seconds": 0.04,
+    "rank": 5356,
+    "monomials": 5357
+   }
+  ]
+ },
+ {
+  "family": "sudoku",
+  "name": "norvig-hardest-9",
+  "n": 201,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "forced": 0,
+    "of": 201,
+    "consistent_with_solution": true,
+    "seconds": 0.0,
+    "rank": 140,
+    "monomials": 202
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "forced": 7,
+    "of": 201,
+    "consistent_with_solution": true,
+    "seconds": 0.14,
+    "rank": 19098,
+    "monomials": 20302
+   },
+   {
+    "d": 3,
+    "status": "too_big",
+    "forced": 0,
+    "of": 201,
+    "consistent_with_solution": true,
+    "error": "1353602 monomials"
+   }
+  ]
+ },
+ {
+  "family": "sudoku",
+  "name": "norvig-hardest-10",
+  "n": 155,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "forced": 0,
+    "of": 155,
+    "consistent_with_solution": true,
+    "seconds": 0.0,
+    "rank": 120,
+    "monomials": 156
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "forced": 8,
+    "of": 155,
+    "consistent_with_solution": true,
+    "seconds": 0.08,
+    "rank": 11845,
+    "monomials": 12091
+   },
+   {
+    "d": 3,
+    "status": "too_big",
+    "forced": 0,
+    "of": 155,
+    "consistent_with_solution": true,
+    "error": "620776 monomials"
+   }
+  ]
+ },
+ {
+  "family": "sudoku",
+  "name": "norvig-hardest-11",
+  "n": 234,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "forced": 0,
+    "of": 234,
+    "consistent_with_solution": true,
+    "seconds": 0.0,
+    "rank": 161,
+    "monomials": 235
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "forced": 31,
+    "of": 234,
+    "consistent_with_solution": true,
+    "seconds": 0.41,
+    "rank": 26432,
+    "monomials": 27496
+   },
+   {
+    "d": 3,
+    "status": "too_big",
+    "forced": 0,
+    "of": 234,
+    "consistent_with_solution": true,
+    "error": "2135680 monomials"
+   }
+  ]
+ },
+ {
+  "family": "sudoku",
+  "name": "inkala-2012",
+  "n": 254,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "forced": 0,
+    "of": 254,
+    "consistent_with_solution": true,
+    "seconds": 0.0,
+    "rank": 165,
+    "monomials": 255
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "forced": 0,
+    "of": 254,
+    "consistent_with_solution": true,
+    "seconds": 0.3,
+    "rank": 29142,
+    "monomials": 32386
+   },
+   {
+    "d": 3,
+    "status": "too_big",
+    "forced": 0,
+    "of": 254,
+    "consistent_with_solution": true,
+    "error": "2731390 monomials"
+   }
+  ]
+ },
+ {
+  "family": "sudoku",
+  "name": "easter-monster",
+  "n": 239,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "forced": 0,
+    "of": 239,
+    "consistent_with_solution": true,
+    "seconds": 0.0,
+    "rank": 165,
+    "monomials": 240
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "forced": 0,
+    "of": 239,
+    "consistent_with_solution": true,
+    "seconds": 0.34,
+    "rank": 26483,
+    "monomials": 28681
+   },
+   {
+    "d": 3,
+    "status": "too_big",
+    "forced": 0,
+    "of": 239,
+    "consistent_with_solution": true,
+    "error": "2275520 monomials"
+   }
+  ]
+ },
+ {
+  "family": "sudoku",
+  "name": "norvig-grid2",
+  "n": 271,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "forced": 0,
+    "of": 271,
+    "consistent_with_solution": true,
+    "seconds": 0.0,
+    "rank": 170,
+    "monomials": 272
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "forced": 271,
+    "of": 271,
+    "consistent_with_solution": true,
+    "seconds": 1.35,
+    "rank": 36856,
+    "monomials": 36857
+   }
+  ]
+ }
+]

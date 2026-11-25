@@ -1,0 +1,386 @@
+[
+ {
+  "family": "3sat",
+  "n": 12,
+  "m": 60,
+  "algebra_min_degree": 3,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 0,
+    "monomials": 13
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 0,
+    "monomials": 79
+   },
+   {
+    "d": 3,
+    "status": "refuted",
+    "seconds": 0.0,
+    "rank": 251,
+    "monomials": 299
+   }
+  ],
+  "geometry": {
+   "status": "feasible",
+   "seconds": 0.11
+  }
+ },
+ {
+  "family": "3sat",
+  "n": 16,
+  "m": 80,
+  "algebra_min_degree": 3,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 0,
+    "monomials": 17
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 0,
+    "monomials": 137
+   },
+   {
+    "d": 3,
+    "status": "refuted",
+    "seconds": 0.0,
+    "rank": 591,
+    "monomials": 697
+   }
+  ],
+  "geometry": {
+   "status": "feasible",
+   "seconds": 0.14
+  }
+ },
+ {
+  "family": "3sat",
+  "n": 20,
+  "m": 100,
+  "algebra_min_degree": 4,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 0,
+    "monomials": 21
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 0,
+    "monomials": 211
+   },
+   {
+    "d": 3,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 165,
+    "monomials": 1351
+   },
+   {
+    "d": 4,
+    "status": "refuted",
+    "seconds": 0.04,
+    "rank": 4614,
+    "monomials": 6196
+   }
+  ],
+  "geometry": {
+   "status": "feasible",
+   "seconds": 0.21
+  },
+  "wave_d3": {
+   "result": "stuck",
+   "facts": 0,
+   "seconds": 0.22,
+   "history": [
+    {
+     "round": 1,
+     "engine": "algebra",
+     "status": "closed",
+     "new_facts": 0,
+     "seconds": 0.0,
+     "rank": 165,
+     "monomials": 1351
+    },
+    {
+     "round": 1,
+     "engine": "geometry",
+     "status": "feasible",
+     "new_facts": 0,
+     "solves": 1,
+     "seconds": 0.21
+    }
+   ]
+  }
+ },
+ {
+  "family": "3sat",
+  "n": 25,
+  "m": 125,
+  "algebra_min_degree": 4,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 0,
+    "monomials": 26
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 0,
+    "monomials": 326
+   },
+   {
+    "d": 3,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 232,
+    "monomials": 2626
+   },
+   {
+    "d": 4,
+    "status": "refuted",
+    "seconds": 0.08,
+    "rank": 9052,
+    "monomials": 15276
+   }
+  ],
+  "geometry": {
+   "status": "feasible",
+   "seconds": 0.26
+  },
+  "wave_d3": {
+   "result": "stuck",
+   "facts": 0,
+   "seconds": 0.27,
+   "history": [
+    {
+     "round": 1,
+     "engine": "algebra",
+     "status": "closed",
+     "new_facts": 0,
+     "seconds": 0.0,
+     "rank": 232,
+     "monomials": 2626
+    },
+    {
+     "round": 1,
+     "engine": "geometry",
+     "status": "feasible",
+     "new_facts": 0,
+     "solves": 1,
+     "seconds": 0.27
+    }
+   ]
+  }
+ },
+ {
+  "family": "3sat",
+  "n": 30,
+  "m": 150,
+  "algebra_min_degree": 4,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 0,
+    "monomials": 31
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 0,
+    "monomials": 466
+   },
+   {
+    "d": 3,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 230,
+    "monomials": 4526
+   },
+   {
+    "d": 4,
+    "status": "refuted",
+    "seconds": 0.37,
+    "rank": 20445,
+    "monomials": 31931
+   }
+  ],
+  "geometry": {
+   "status": "feasible",
+   "seconds": 0.36
+  },
+  "wave_d3": {
+   "result": "stuck",
+   "facts": 0,
+   "seconds": 0.37,
+   "history": [
+    {
+     "round": 1,
+     "engine": "algebra",
+     "status": "closed",
+     "new_facts": 0,
+     "seconds": 0.0,
+     "rank": 230,
+     "monomials": 4526
+    },
+    {
+     "round": 1,
+     "engine": "geometry",
+     "status": "feasible",
+     "new_facts": 0,
+     "solves": 1,
+     "seconds": 0.36
+    }
+   ]
+  }
+ },
+ {
+  "family": "3sat",
+  "n": 40,
+  "m": 200,
+  "algebra_min_degree": 4,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 0,
+    "monomials": 41
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 0,
+    "monomials": 821
+   },
+   {
+    "d": 3,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 200,
+    "monomials": 10701
+   },
+   {
+    "d": 4,
+    "status": "refuted",
+    "seconds": 0.96,
+    "rank": 41670,
+    "monomials": 102091
+   }
+  ],
+  "geometry": {
+   "status": "feasible",
+   "seconds": 0.6
+  },
+  "wave_d3": {
+   "result": "stuck",
+   "facts": 0,
+   "seconds": 0.61,
+   "history": [
+    {
+     "round": 1,
+     "engine": "algebra",
+     "status": "closed",
+     "new_facts": 0,
+     "seconds": 0.0,
+     "rank": 200,
+     "monomials": 10701
+    },
+    {
+     "round": 1,
+     "engine": "geometry",
+     "status": "feasible",
+     "new_facts": 0,
+     "solves": 1,
+     "seconds": 0.6
+    }
+   ]
+  }
+ },
+ {
+  "family": "3sat",
+  "n": 50,
+  "m": 250,
+  "algebra_min_degree": null,
+  "algebra": [
+   {
+    "d": 1,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 0,
+    "monomials": 51
+   },
+   {
+    "d": 2,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 0,
+    "monomials": 1276
+   },
+   {
+    "d": 3,
+    "status": "closed",
+    "seconds": 0.0,
+    "rank": 250,
+    "monomials": 20876
+   },
+   {
+    "d": 4,
+    "status": "too_big",
+    "error": "251176 monomials"
+   }
+  ],
+  "geometry": {
+   "status": "feasible",
+   "seconds": 0.96
+  },
+  "wave_d3": {
+   "result": "stuck",
+   "facts": 0,
+   "seconds": 0.97,
+   "history": [
+    {
+     "round": 1,
+     "engine": "algebra",
+     "status": "closed",
+     "new_facts": 0,
+     "seconds": 0.0,
+     "rank": 250,
+     "monomials": 20876
+    },
+    {
+     "round": 1,
+     "engine": "geometry",
+     "status": "feasible",
+     "new_facts": 0,
+     "solves": 1,
+     "seconds": 0.96
+    }
+   ]
+  }
+ }
+]
