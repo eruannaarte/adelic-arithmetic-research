@@ -197,6 +197,10 @@ emergent-geometry models built on graphs.
 The run snapshots (`runs/`, about 15 MB) and the compiled `geo` binary are not committed; the
 commands below regenerate them. `space-from-a-tangle.html` is the source of the interactive page
 (a 216-point live version of the model, plus a folding-chain mode using the HP model of protein folding).
+`the-first-tipping.html` is its companion: a nested sphere of folded levels that tips, cascades and
+unfolds into a 2D world, with a panel that measures the world's ripples by size the way the microwave
+sky's tilt n_s is measured. Both pages are self-contained (inline JavaScript, Google Fonts only); they
+were written as claude.ai artifacts, so they omit the html/head/body wrapper that the host adds.
 
 ```bash
 clang -O2 -march=native -o geo geo.c -lm

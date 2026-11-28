@@ -1,0 +1,689 @@
+<title>The First Tipping</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one dark observatory screen. The sphere's canvas is the instrument; a narrow log panel sits beside it, notes below. */
+:root {
+  --bg: #0c0b14;
+  --panel: #14121f;
+  --line: #2a2640;
+  --fg: #ebe7f6;
+  --muted: #9b94b5;
+  --accent: #cbbcff;
+  --accent-ink: #1a1530;
+  --display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  color-scheme: dark;
+}
+html, body { background: var(--bg); color: var(--fg); }
+body { font-family: var(--body); font-size: 15px; line-height: 1.55; }
+.wrap {
+  max-width: 1180px; margin: 0 auto;
+  padding-block: 28px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 28px;
+}
+header { display: grid; gap: 8px; }
+h1 {
+  font-family: var(--display); font-weight: 500; font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.02; margin: 0; letter-spacing: 0.01em; text-wrap: balance;
+}
+h1 em { font-style: italic; color: var(--accent); }
+.lede { margin: 0; max-width: 64ch; color: var(--muted); }
+.stage { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 24px; align-items: start; }
+@media (max-width: 900px) { .stage { grid-template-columns: minmax(0, 1fr); } }
+.view { position: relative; min-width: 0; }
+canvas { display: block; width: 100%; height: auto; max-width: 100%; aspect-ratio: 1 / 1; border-radius: 4px; background: var(--bg); }
+.phase {
+  position: absolute; top: 12px; left: 12px; right: 12px;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--fg); pointer-events: none; display: flex; gap: 10px; flex-wrap: wrap; align-items: baseline;
+}
+.phase b { font-weight: 500; color: var(--accent); }
+.phase span { color: var(--muted); text-transform: none; letter-spacing: 0.02em; }
+.hint { margin: 10px 2px 0; color: var(--muted); font-size: 13px; }
+.panel { display: grid; gap: 18px; min-width: 0; }
+.box { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 14px; display: grid; gap: 12px; }
+.box h2 { margin: 0; font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+button {
+  font: 500 13px/1 var(--body); padding: 9px 12px; border-radius: 4px; cursor: pointer;
+  border: 1px solid var(--line); background: transparent; color: var(--fg);
+}
+button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+button:hover { border-color: var(--accent); }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ctl { display: grid; gap: 4px; }
+.ctl label { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; }
+.ctl label output { font-family: var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.ctl small { color: var(--muted); font-size: 12px; line-height: 1.4; }
+input[type=range] { width: 100%; accent-color: var(--accent); }
+select { font: 13px var(--body); background: var(--bg); color: var(--fg); border: 1px solid var(--line); border-radius: 4px; padding: 6px 8px; }
+.stats { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; font-size: 13px; margin: 0; }
+.stats dt { color: var(--muted); }
+.stats dd { margin: 0; font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; }
+.levels { display: grid; gap: 6px; }
+.lvl { display: grid; grid-template-columns: 92px minmax(0, 1fr) 44px; gap: 8px; align-items: center; font-size: 12px; }
+.lvl .name { color: var(--muted); white-space: nowrap; }
+.lvl .bar { height: 8px; background: var(--bg); border: 1px solid var(--line); border-radius: 2px; position: relative; overflow: hidden; }
+.lvl .press { position: absolute; inset: 0 auto 0 0; background: var(--line); }
+.lvl .fill { position: absolute; inset: 0 auto 0 0; background: var(--accent); }
+.lvl .pct { font-family: var(--mono); text-align: right; font-variant-numeric: tabular-nums; }
+.scl .fill { border-radius: 0 2px 2px 0; }
+.scl .even { position: absolute; top: -1px; bottom: -1px; left: 50%; width: 1px; background: var(--muted); }
+.scl:hover .fill { background: var(--fg); }
+.box .note { color: var(--muted); font-size: 12px; line-height: 1.45; margin: 0; }
+ol.log { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 13px; max-height: 210px; overflow-y: auto; }
+ol.log li { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 8px; }
+ol.log time { font-family: var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+ol.log .empty { display: block; color: var(--muted); }
+.notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 32px; border-top: 1px solid var(--line); padding-top: 24px; }
+@media (max-width: 700px) { .notes { grid-template-columns: minmax(0, 1fr); } }
+.notes h3 { margin: 0 0 4px; font-family: var(--display); font-weight: 600; font-size: 1.35rem; line-height: 1.15; text-wrap: balance; }
+.notes p { margin: 0; color: var(--muted); max-width: 62ch; }
+.notes .wide { grid-column: 1 / -1; }
+.foot { color: var(--muted); font-size: 12px; margin: 0; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>The First <em>Tipping</em></h1>
+    <p class="lede">A sphere made of folded levels, each one a ball balanced on a hilltop, each holding four smaller folds inside it. Noise rocks every level at once. Somewhere a fold tips past the point of return, the tip spreads through the levels, and when the whole sphere tips it unfolds into a world. Color is the direction a fold fell; grey means it is still balanced.</p>
+  </header>
+
+  <main class="stage">
+    <section class="view" aria-label="Simulation">
+      <canvas id="cv" width="800" height="800" role="img" aria-label="Nested circles of folded levels that tip, cascade and unfold into a colored grid"></canvas>
+      <div class="phase" id="phase"><b>Folded</b><span>every level balanced</span></div>
+      <p class="hint" id="hint">Each seed is a different beginning. Replay a seed to watch the same story again.</p>
+    </section>
+
+    <aside class="panel">
+      <div class="box">
+        <h2>Run</h2>
+        <div class="buttons">
+          <button id="play" class="primary" type="button">Pause</button>
+          <button id="replay" type="button">Replay seed</button>
+          <button id="fresh" type="button">New seed</button>
+        </div>
+        <dl class="stats">
+          <dt>Seed</dt><dd id="seed">—</dd>
+          <dt>Time</dt><dd id="time">0.0</dd>
+          <dt>Independent tips</dt><dd id="indep">0</dd>
+          <dt>First tip</dt><dd id="first">—</dd>
+          <dt>Whole sphere tipped</dt><dd id="root">—</dd>
+          <dt>Scars in the world</dt><dd id="scars">—</dd>
+        </dl>
+      </div>
+
+      <div class="box">
+        <h2>Levels tipped</h2>
+        <div class="levels" id="levels"></div>
+      </div>
+
+      <div class="box">
+        <h2>Variation by size</h2>
+        <div class="levels" id="scales"></div>
+        <dl class="stats">
+          <dt>Tilt n, now</dt><dd id="tilt">—</dd>
+          <dt>Tilt n, long-run average</dt><dd id="tiltAvg">—</dd>
+          <dt>Even at every size</dt><dd>1.000</dd>
+          <dt>Cosmic microwave background</dt><dd>0.965</dd>
+        </dl>
+        <p class="note" id="scaleNote">Each bar is one size of ripple and its share of all the variation. The line marks an even split. Above 1, small ripples carry more; below 1, large ones do.</p>
+      </div>
+
+      <div class="box">
+        <h2>Settings</h2>
+        <div class="ctl">
+          <label for="noise">Noise <output id="noiseOut"></output></label>
+          <input id="noise" type="range" min="0.0070" max="0.0200" step="0.0005" value="0.0105">
+          <small>How hard the balance is rocked. More noise means more places tip on their own.</small>
+        </div>
+        <div class="ctl">
+          <label for="up">Upward pull <output id="upOut"></output></label>
+          <input id="up" type="range" min="0.05" max="0.45" step="0.01" value="0.20">
+          <small>How strongly tipped folds push the fold that contains them. Below 0.25, one fold alone cannot tip its container; its siblings must agree.</small>
+        </div>
+        <div class="ctl">
+          <label for="down">Downward pull <output id="downOut"></output></label>
+          <input id="down" type="range" min="0.03" max="0.40" step="0.01" value="0.15">
+          <small>How strongly a tipped fold pulls the folds inside it toward its own direction.</small>
+        </div>
+        <div class="ctl">
+          <label for="speed">Speed <output id="speedOut"></output></label>
+          <input id="speed" type="range" min="1" max="40" step="1" value="8">
+        </div>
+        <div class="ctl">
+          <label for="depth">Folded levels</label>
+          <select id="depth">
+            <option value="4">4 levels · 256 innermost folds</option>
+            <option value="5" selected>5 levels · 1,024 innermost folds</option>
+            <option value="6">6 levels · 4,096 innermost folds</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Moments</h2>
+        <ol class="log" id="log"><li class="empty">Nothing has tipped yet.</li></ol>
+      </div>
+    </aside>
+  </main>
+
+  <section class="notes" aria-label="What the model shows">
+    <div>
+      <h3>Balance at every scale</h3>
+      <p>Before anything tips, every level flickers with small swings that die away. A system poised at a critical point looks like this: fluctuations at all sizes at once, nested inside each other.</p>
+    </div>
+    <div>
+      <h3>A tip that cannot undo itself</h3>
+      <p>Each fold sits in a shallow dip at the top of its hill. Most swings fall back. One that crosses the rim keeps going, the way one ice crystal in supercooled water turns the whole glass to ice. Physicists call it nucleation.</p>
+    </div>
+    <div>
+      <h3>The cascade carries the pattern</h3>
+      <p>A tipped fold leans on its container and on the folds inside it, so the tip spreads up and down the levels. Folds that tipped independently fell in different directions, and those differences are carried into the unfolded world, much as inflation is thought to have stretched tiny early fluctuations into the seeds of galaxies.</p>
+    </div>
+    <div>
+      <h3>Scars that carry whole numbers</h3>
+      <p>Where regions that fell in different directions meet, the colors can wind all the way around a point. That point is a scar. It winds a whole number of times, which is the same counting that defines the circle in homotopy type theory, and it can only disappear by meeting a scar that winds the opposite way. At its core the field is zero: a speck of the original balance survives there.</p>
+    </div>
+    <div class="wide">
+      <h3>Ripples by size, and an honest near-miss</h3>
+      <p>Cosmologists split the microwave sky's ripples by size and ask how much variation each size carries. The answer is almost an even split: a tilt of n ≈ 0.965, with slightly more in the large ripples. The panel makes the same split. Before anything tips, the noise sits in the smallest ripples and n is near 3. The cascade moves the variation into large ripples, so at the unfolding n is well below 1. As the scars heal, a few broad swirls are left behind and n dips to around zero or below. Then the world settles near 1. In five test runs with 5 levels, the long-run average read 0.96 to 0.99 after 8,000 time units, still creeping up as the early settling faded.</p>
+      <p style="margin-top:10px">That closeness is a rhyme, not a reproduction. Turning the direction a region fell costs nothing. In a flat two-dimensional world, the noise of such a free direction spreads evenly across sizes, the same reason inflation predicts near-evenness. The details here come from the grid. The largest ripples come in only a few coarse shapes, so the directions alone read about 0.91. Jitter in how far each cell has fallen sits in the smallest ripples and lifts the total to about 1. If a scar never finds its opposite, as happened in test runs with 6 levels, its swirl dominates every size and n stays near −1.2. Defects leave a fingerprint the real sky does not show, which is part of why cosmic strings were ruled out as the main seed of galaxies. The sky's 0.965 comes from the slowly changing field of inflation, and this model has nothing like it.</p>
+    </div>
+    <p class="foot wide">A toy model, not a theory of the universe. Each fold follows a potential with a metastable balanced state and a deeper tipped ring; tipped folds push their neighbors in the nesting tree. After unfolding, the innermost folds become a grid whose neighbors pull on each other. The run is fully determined by its seed and settings.</p>
+  </section>
+</div>
+
+<script>
+(() => {
+  const cv = document.getElementById('cv');
+  const ctx = cv.getContext('2d');
+  const $ = (id) => document.getElementById(id);
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const A = 0.6, TIP = 0.8, WELL = 1.278, DT = 0.05, GRID_HALF = 0.97;
+  const P = { L: 5, D: 0.0105, ku: 0.20, kd: 0.15, speed: reduceMotion ? 4 : 8 };
+  $('speed').value = P.speed;
+
+  let seed, rnd, spare = null;
+  function mulberry(a) {
+    return function () {
+      a |= 0; a = (a + 0x6D2B79F5) | 0;
+      let t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  function gauss() {
+    if (spare !== null) { const s = spare; spare = null; return s; }
+    let u = 0; while (u === 0) u = rnd();
+    const v = rnd(), r = Math.sqrt(-2 * Math.log(u)), th = 2 * Math.PI * v;
+    spare = r * Math.sin(th);
+    return r * Math.cos(th);
+  }
+
+  let L, lv, geo, gx, gy, t, phase, first, indep, rootT, unfoldAt, unfoldStart, W, cs;
+  let gre, gim, gnre, gnim, scars = [], maxScars = 0, healed = false, playing = true;
+
+  function buildGeo() {
+    geo = [{ x: new Float32Array([0]), y: new Float32Array([0]), r: GRID_HALF }];
+    for (let l = 1; l <= L; l++) {
+      const pg = geo[l - 1], n = 4 ** l, d = pg.r * 0.40;
+      const g = { x: new Float32Array(n), y: new Float32Array(n), r: pg.r * 0.38 };
+      for (let i = 0; i < n; i++) {
+        const p = i >> 2, k = i & 3;
+        g.x[i] = pg.x[p] + ((k & 1) ? d : -d);
+        g.y[i] = pg.y[p] + ((k & 2) ? d : -d);
+      }
+      geo.push(g);
+    }
+    const n = 4 ** L;
+    gx = new Uint16Array(n); gy = new Uint16Array(n);
+    for (let j = 0; j < n; j++) {
+      let x = 0, y = 0;
+      for (let m = 0; m < L; m++) {
+        const digit = (j >> (2 * m)) & 3;
+        x |= (digit & 1) << m; y |= ((digit >> 1) & 1) << m;
+      }
+      gx[j] = x; gy[j] = y;
+    }
+  }
+
+  function init(newSeed) {
+    L = P.L;
+    seed = newSeed !== undefined ? newSeed : (Math.random() * 1e6) | 0;
+    rnd = mulberry(seed); spare = null;
+    lv = [];
+    for (let l = 0; l <= L; l++) {
+      const n = 4 ** l;
+      lv.push({ n, re: new Float64Array(n), im: new Float64Array(n), nre: new Float64Array(n), nim: new Float64Array(n), tip: new Uint8Array(n), count: 0 });
+    }
+    buildGeo();
+    W = 2 ** L; cs = (2 * GRID_HALF) / W;
+    gre = new Float64Array(W * W); gim = new Float64Array(W * W);
+    gnre = new Float64Array(W * W); gnim = new Float64Array(W * W);
+    t = 0; phase = 'folded'; first = null; indep = 0; rootT = null; unfoldAt = null; unfoldStart = null;
+    scars = []; maxScars = 0; healed = false; acc = 0;
+    avgV = null; avgN = 0; settleAt = null; lastAvgT = -1;
+    $('seed').textContent = seed;
+    buildLevels();
+    buildScales();
+    clearLog();
+    updatePanel();
+  }
+
+  function stepTree(dt) {
+    const sq = Math.sqrt(P.D * dt), ku = P.ku * 0.25, kd = P.kd;
+    for (let l = 0; l <= L; l++) {
+      const c = lv[l], ch = l < L ? lv[l + 1] : null, pa = l > 0 ? lv[l - 1] : null;
+      for (let i = 0; i < c.n; i++) {
+        const x = c.re[i], y = c.im[i], r2 = x * x + y * y, g = -A + 2 * r2 - r2 * r2;
+        let fx = x * g, fy = y * g;
+        if (ch) {
+          for (let k = 4 * i; k < 4 * i + 4; k++) {
+            const cx = ch.re[k], cy = ch.im[k], q = cx * cx + cy * cy;
+            fx += ku * cx * q; fy += ku * cy * q;
+          }
+        }
+        if (pa) {
+          const p = i >> 2, px = pa.re[p], py = pa.im[p], q = px * px + py * py;
+          fx += kd * px * q; fy += kd * py * q;
+        }
+        c.nre[i] = x + fx * dt + sq * gauss();
+        c.nim[i] = y + fy * dt + sq * gauss();
+      }
+    }
+    for (let l = 0; l <= L; l++) {
+      const c = lv[l];
+      let s = c.re; c.re = c.nre; c.nre = s;
+      s = c.im; c.im = c.nim; c.nim = s;
+    }
+    t += dt;
+    for (let l = 0; l <= L; l++) {
+      const c = lv[l];
+      for (let i = 0; i < c.n; i++) {
+        if (c.tip[i]) continue;
+        const x = c.re[i], y = c.im[i];
+        if (x * x + y * y <= TIP * TIP) continue;
+        const parentTipped = l > 0 && lv[l - 1].tip[i >> 2];
+        let childTipped = false;
+        if (l < L) { const ct = lv[l + 1].tip; childTipped = !!(ct[4 * i] | ct[4 * i + 1] | ct[4 * i + 2] | ct[4 * i + 3]); }
+        c.tip[i] = 1; c.count++;
+        if (!parentTipped && !childTipped) {
+          indep++;
+          if (!first) {
+            first = { l, i, t };
+            phase = 'cascade';
+            addEvent(t, 'First irreversible tip, in ' + levelName(l, true) + '.');
+          }
+        }
+        if (l === 0) {
+          rootT = t; unfoldAt = t + 10;
+          addEvent(t, 'The whole sphere tipped.');
+        }
+      }
+    }
+  }
+
+  function stepWorld(dt) {
+    const sq = Math.sqrt(P.D * 0.25 * dt), c = 0.5;
+    for (let y = 0; y < W; y++) {
+      for (let x = 0; x < W; x++) {
+        const i = y * W + x, zx = gre[i], zy = gim[i], r2 = zx * zx + zy * zy, g = -A + 2 * r2 - r2 * r2;
+        let fx = zx * g, fy = zy * g, sx = 0, sy = 0, nb = 0;
+        if (x > 0) { sx += gre[i - 1]; sy += gim[i - 1]; nb++; }
+        if (x < W - 1) { sx += gre[i + 1]; sy += gim[i + 1]; nb++; }
+        if (y > 0) { sx += gre[i - W]; sy += gim[i - W]; nb++; }
+        if (y < W - 1) { sx += gre[i + W]; sy += gim[i + W]; nb++; }
+        fx += c * (sx - nb * zx); fy += c * (sy - nb * zy);
+        gnre[i] = zx + fx * dt + sq * gauss();
+        gnim[i] = zy + fy * dt + sq * gauss();
+      }
+    }
+    let s = gre; gre = gnre; gnre = s;
+    s = gim; gim = gnim; gnim = s;
+    t += dt;
+  }
+
+  const TAU = 2 * Math.PI;
+  const wrap = (d) => d - TAU * Math.round(d / TAU);
+  function findScars() {
+    const ang = new Float32Array(W * W);
+    for (let i = 0; i < W * W; i++) ang[i] = Math.atan2(gim[i], gre[i]);
+    const list = [];
+    for (let y = 0; y < W - 1; y++) {
+      for (let x = 0; x < W - 1; x++) {
+        const a = ang[y * W + x], b = ang[y * W + x + 1], c = ang[(y + 1) * W + x + 1], d = ang[(y + 1) * W + x];
+        const w = wrap(b - a) + wrap(c - b) + wrap(d - c) + wrap(a - d);
+        const n = Math.round(w / TAU);
+        if (n) list.push({ x, y, n });
+      }
+    }
+    return list;
+  }
+
+  function startUnfold() {
+    const leaves = lv[L];
+    for (let j = 0; j < leaves.n; j++) {
+      const i = gy[j] * W + gx[j];
+      gre[i] = leaves.re[j]; gim[i] = leaves.im[j];
+    }
+    phase = 'unfold';
+    unfoldStart = performance.now();
+    addEvent(t, 'Unfolded into a world of ' + W + ' × ' + W + ' cells.');
+  }
+
+  function finishUnfold() {
+    phase = 'world';
+    settleAt = t + SETTLE; avgV = new Float64Array(L); avgN = 0; lastAvgT = -1;
+    scars = findScars(); maxScars = scars.length;
+    addEvent(t, scars.length === 0 ? 'The world unfolded without scars.' : scars.length + (scars.length === 1 ? ' scar' : ' scars') + ' where differently fallen regions met.');
+  }
+
+  // ---------- variation by size ----------
+  // Orthonormal 2-D cosine transform (the natural modes of a grid with closed edges), then the
+  // power is summed in octaves of wavenumber k: band m holds ripples 2^m <= k < 2^(m+1).
+  // Equal power per octave is scale invariance; the slope of log power against log k is n - 1,
+  // the same definition behind the cosmic microwave background's n_s.
+  let cosT = null, cosW = 0, sfr, sfi, str, sti, spec = null, tilt = null;
+  let avgV = null, avgN = 0, settleAt = null, lastAvgT = -1;
+  const SETTLE = 300;
+  function tiltOf(V) {
+    let sx = 0, sy = 0, sxx = 0, sxy = 0;
+    for (let m = 0; m < L; m++) {
+      const y = Math.log2(Math.max(V[m], 1e-300));
+      sx += m; sy += y; sxx += m * m; sxy += m * y;
+    }
+    return 1 + (L * sxy - sx * sy) / (L * sxx - sx * sx);
+  }
+  function prepSpectrum() {
+    if (cosW === W) return;
+    cosW = W; cosT = new Float64Array(W * W);
+    for (let k = 0; k < W; k++) {
+      const a = Math.sqrt((k === 0 ? 1 : 2) / W);
+      for (let x = 0; x < W; x++) cosT[k * W + x] = a * Math.cos(Math.PI * k * (x + 0.5) / W);
+    }
+    sfr = new Float64Array(W * W); sfi = new Float64Array(W * W);
+    str = new Float64Array(W * W); sti = new Float64Array(W * W);
+  }
+  function measureSpectrum() {
+    prepSpectrum();
+    if (phase === 'world') { sfr.set(gre); sfi.set(gim); }
+    else {
+      const leaves = lv[L];
+      for (let j = 0; j < leaves.n; j++) { const i = gy[j] * W + gx[j]; sfr[i] = leaves.re[j]; sfi[i] = leaves.im[j]; }
+    }
+    for (let y = 0; y < W; y++) {
+      for (let k = 0; k < W; k++) {
+        let ar = 0, ai = 0;
+        for (let x = 0; x < W; x++) { const c = cosT[k * W + x]; ar += c * sfr[y * W + x]; ai += c * sfi[y * W + x]; }
+        str[y * W + k] = ar; sti[y * W + k] = ai;
+      }
+    }
+    const V = new Float64Array(L);
+    for (let ky = 0; ky < W; ky++) {
+      for (let kx = 0; kx < W; kx++) {
+        const k = Math.hypot(kx, ky);
+        if (k < 1 || k >= W) continue;
+        let ar = 0, ai = 0;
+        for (let y = 0; y < W; y++) { const c = cosT[ky * W + y]; ar += c * str[y * W + kx]; ai += c * sti[y * W + kx]; }
+        V[Math.floor(Math.log2(k))] += ar * ar + ai * ai;
+      }
+    }
+    let tot = 0; for (const v of V) tot += v;
+    spec = Array.from(V, (v) => (tot > 0 ? v / tot : 0));
+    tilt = tot > 0 ? tiltOf(V) : null;
+    if (phase === 'world' && settleAt !== null && t >= settleAt && t !== lastAvgT) {
+      for (let m = 0; m < L; m++) avgV[m] += spec[m];
+      avgN++; lastAvgT = t;
+    }
+  }
+  let scaleRows = [];
+  function buildScales() {
+    const box = $('scales'); box.textContent = ''; scaleRows = [];
+    for (let m = 0; m < L; m++) {
+      const lo = W >> (m + 1), hi = W >> m;
+      const row = document.createElement('div'); row.className = 'lvl scl';
+      const name = document.createElement('span'); name.className = 'name';
+      name.textContent = hi === 2 ? '1–2 cells' : lo + '–' + hi + ' cells';
+      const bar = document.createElement('span'); bar.className = 'bar';
+      const fill = document.createElement('span'); fill.className = 'fill';
+      const even = document.createElement('span'); even.className = 'even';
+      bar.append(fill, even);
+      const pct = document.createElement('span'); pct.className = 'pct';
+      row.append(name, bar, pct); box.append(row);
+      scaleRows.push({ row, fill, pct, label: name.textContent });
+    }
+  }
+  function updateScales() {
+    measureSpectrum();
+    const even = 1 / L;
+    for (let m = 0; m < L; m++) {
+      const s = spec[m], r = scaleRows[m];
+      r.fill.style.width = (Math.min(1, s / (2 * even)) * 100).toFixed(1) + '%';
+      r.pct.textContent = Math.round(s * 100) + '%';
+      r.row.title = 'Ripples ' + r.label + ' across carry ' + (s * 100).toFixed(1) + '% of the variation. An even split gives each size ' + Math.round(even * 100) + '%.';
+    }
+    $('tilt').textContent = tilt === null ? '—' : tilt.toFixed(3);
+    $('tiltAvg').textContent = avgN > 0 ? tiltOf(avgV).toFixed(3) : (phase === 'world' ? 'settling, t ' + settleAt.toFixed(0) : '—');
+    $('scaleNote').textContent = (phase === 'world'
+      ? 'Measured on the world. '
+      : 'Measured on the innermost folds, laid out as they will unfold. ')
+      + 'Each bar is one size of ripple and its share of all the variation; the line marks an even split. Above 1, small ripples carry more; below 1, large ones do. The largest ripples are few, so the value now swings; the average starts once the world has settled.';
+  }
+
+  // ---------- drawing ----------
+  const smooth = (a, b, x) => { const u = Math.min(1, Math.max(0, (x - a) / (b - a))); return u * u * (3 - 2 * u); };
+  function color(x, y, l) {
+    const m = Math.min(1, Math.sqrt(x * x + y * y) / WELL);
+    const h = ((Math.atan2(y, x) * 180 / Math.PI) + 360) % 360;
+    const tip = smooth(0.35, 0.8, m);
+    const base = 9 + l * 2.4;
+    const sat = 10 + 70 * tip;
+    const light = base * (1 - tip) + 56 * tip + 14 * m * (1 - tip);
+    return 'hsl(' + (h | 0) + ' ' + (sat | 0) + '% ' + light.toFixed(1) + '%)';
+  }
+  const ease = (p) => p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+  const lerp = (a, b, p) => a + (b - a) * p;
+
+  function resize() {
+    const w = cv.clientWidth || 600;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const px = Math.round(w * dpr);
+    if (cv.width !== px) { cv.width = px; cv.height = px; }
+  }
+
+  function draw(now) {
+    const S = cv.width, half = S / 2;
+    const map = (u) => half + u * half;
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = '#0c0b14';
+    ctx.fillRect(0, 0, S, S);
+
+    if (phase !== 'world') {
+      let p = 0;
+      if (phase === 'unfold') p = ease(Math.min(1, (now - unfoldStart) / (reduceMotion ? 1 : 2600)));
+      for (let l = 0; l <= L; l++) {
+        const c = lv[l], g = geo[l], leaf = l === L;
+        const alpha = leaf ? 1 : 1 - p;
+        if (alpha <= 0.01) continue;
+        ctx.globalAlpha = alpha;
+        const rr = Math.max(0.6, g.r * half);
+        for (let i = 0; i < c.n; i++) {
+          ctx.fillStyle = color(c.re[i], c.im[i], l);
+          if (leaf && p > 0) {
+            const tx = -GRID_HALF + (gx[i] + 0.5) * cs, ty = -GRID_HALF + (gy[i] + 0.5) * cs;
+            const cx = map(lerp(g.x[i], tx, p)), cy = map(lerp(g.y[i], ty, p));
+            const hs = lerp(rr, (cs / 2) * half + 0.5, p), corner = lerp(hs, 0, p);
+            ctx.beginPath();
+            if (ctx.roundRect) ctx.roundRect(cx - hs, cy - hs, 2 * hs, 2 * hs, corner);
+            else ctx.rect(cx - hs, cy - hs, 2 * hs, 2 * hs);
+            ctx.fill();
+          } else {
+            ctx.beginPath();
+            ctx.arc(map(g.x[i]), map(g.y[i]), rr, 0, TAU);
+            ctx.fill();
+          }
+        }
+      }
+      ctx.globalAlpha = 1;
+      if (first && phase !== 'unfold' && t - first.t < 30) {
+        const g = geo[first.l], fade = 1 - (t - first.t) / 30;
+        ctx.strokeStyle = 'rgba(235,231,246,' + (0.85 * fade).toFixed(3) + ')';
+        ctx.lineWidth = Math.max(1.5, S / 400);
+        ctx.beginPath();
+        ctx.arc(map(g.x[first.i]), map(g.y[first.i]), Math.max(6, g.r * half * 1.9), 0, TAU);
+        ctx.stroke();
+      }
+    } else {
+      const cell = cs * half;
+      for (let y = 0; y < W; y++) {
+        for (let x = 0; x < W; x++) {
+          const i = y * W + x;
+          ctx.fillStyle = color(gre[i], gim[i], L);
+          ctx.fillRect(Math.floor(map(-GRID_HALF + x * cs)), Math.floor(map(-GRID_HALF + y * cs)), Math.ceil(cell) + 1, Math.ceil(cell) + 1);
+        }
+      }
+      const rad = Math.max(3, cell * 0.42);
+      ctx.lineWidth = Math.max(1.5, S / 450);
+      for (const s of scars) {
+        const cx = map(-GRID_HALF + (s.x + 1) * cs), cy = map(-GRID_HALF + (s.y + 1) * cs);
+        ctx.beginPath(); ctx.arc(cx, cy, rad, 0, TAU);
+        ctx.fillStyle = s.n > 0 ? 'rgba(245,242,252,0.95)' : 'rgba(12,11,20,0.95)';
+        ctx.strokeStyle = s.n > 0 ? 'rgba(12,11,20,0.9)' : 'rgba(245,242,252,0.95)';
+        ctx.fill(); ctx.stroke();
+      }
+    }
+  }
+
+  // ---------- panel ----------
+  function levelName(l, lower) {
+    if (l === 0) return lower ? 'the whole sphere' : 'Whole sphere';
+    return (lower ? 'fold ' : 'Fold ') + l + (l === L ? (lower ? ', the innermost' : ' · inner') : '');
+  }
+  let rows = [];
+  function buildLevels() {
+    const box = $('levels'); box.textContent = ''; rows = [];
+    for (let l = 0; l <= L; l++) {
+      const row = document.createElement('div'); row.className = 'lvl';
+      const name = document.createElement('span'); name.className = 'name';
+      name.textContent = (l === 0 ? 'Whole' : 'Fold ' + l) + ' · ' + (4 ** l).toLocaleString('en-US');
+      const bar = document.createElement('span'); bar.className = 'bar';
+      const press = document.createElement('span'); press.className = 'press';
+      const fill = document.createElement('span'); fill.className = 'fill';
+      bar.append(press, fill);
+      const pct = document.createElement('span'); pct.className = 'pct';
+      row.append(name, bar, pct); box.append(row);
+      rows.push({ press, fill, pct });
+    }
+  }
+  function updatePanel() {
+    for (let l = 0; l <= L; l++) {
+      const c = lv[l], frac = c.count / c.n;
+      let mx = 0;
+      if (phase === 'folded' || phase === 'cascade') {
+        for (let i = 0; i < c.n; i++) { const r = Math.hypot(c.re[i], c.im[i]); if (!c.tip[i] && r > mx) mx = r; }
+      }
+      rows[l].press.style.width = (Math.min(1, mx / TIP) * 100).toFixed(1) + '%';
+      rows[l].fill.style.width = (frac * 100).toFixed(1) + '%';
+      rows[l].pct.textContent = Math.round(frac * 100) + '%';
+    }
+    updateScales();
+    $('time').textContent = t.toFixed(1);
+    $('indep').textContent = indep;
+    $('first').textContent = first ? (first.l === 0 ? 'whole, ' : 'fold ' + first.l + ', ') + 't ' + first.t.toFixed(1) : '—';
+    $('root').textContent = rootT !== null ? 't ' + rootT.toFixed(1) : '—';
+    if (phase === 'world') {
+      const pos = scars.filter((s) => s.n > 0).length, neg = scars.length - pos;
+      $('scars').textContent = scars.length + ' (' + pos + ' +, ' + neg + ' −)';
+    } else $('scars').textContent = '—';
+
+    const ph = $('phase');
+    let title, sub;
+    if (phase === 'folded') { title = 'Folded'; sub = 'every level balanced, rocked by noise'; }
+    else if (phase === 'cascade') {
+      let tot = 0, n = 0; for (const c of lv) { tot += c.count; n += c.n; }
+      title = 'Cascade'; sub = Math.round(100 * tot / n) + '% of all folds have tipped';
+    } else if (phase === 'unfold') { title = 'Unfolding'; sub = 'the innermost folds spread out into space'; }
+    else { title = 'World'; sub = scars.length ? scars.length + (scars.length === 1 ? ' scar' : ' scars') + ' · white winds +1, dark winds −1' : 'no scars remain'; }
+    ph.firstChild.textContent = title;
+    ph.lastChild.textContent = sub;
+  }
+
+  function clearLog() {
+    const log = $('log'); log.textContent = '';
+    const li = document.createElement('li'); li.className = 'empty'; li.textContent = 'Nothing has tipped yet.';
+    log.append(li);
+  }
+  function addEvent(time, text) {
+    const log = $('log');
+    const empty = log.querySelector('.empty'); if (empty) empty.remove();
+    const li = document.createElement('li');
+    const tm = document.createElement('time'); tm.textContent = 't ' + time.toFixed(1);
+    const sp = document.createElement('span'); sp.textContent = text;
+    li.append(tm, sp); log.append(li);
+    log.scrollTop = log.scrollHeight;
+  }
+
+  // ---------- loop ----------
+  let last = performance.now(), acc = 0, panelTick = 0;
+  function frame(now) {
+    const dtReal = Math.min(0.05, (now - last) / 1000); last = now;
+    if (playing) {
+      if (phase === 'unfold') {
+        if (now - unfoldStart >= (reduceMotion ? 1 : 2600)) finishUnfold();
+      } else {
+        acc += P.speed * dtReal;
+        let steps = 0;
+        while (acc >= DT && steps < 60) {
+          if (phase === 'world') stepWorld(DT); else stepTree(DT);
+          acc -= DT; steps++;
+          if (unfoldAt !== null && phase === 'cascade' && t >= unfoldAt) { startUnfold(); acc = 0; break; }
+        }
+        if (steps >= 60) acc = 0;
+        if (phase === 'world') {
+          scars = findScars();
+          if (scars.length > maxScars) maxScars = scars.length;
+          if (!healed && maxScars > 0 && scars.length === 0) { healed = true; addEvent(t, 'Every scar met its opposite and healed.'); }
+        }
+      }
+    }
+    draw(now);
+    if (++panelTick % 3 === 0 || !playing) updatePanel();
+    requestAnimationFrame(frame);
+  }
+
+  // ---------- controls ----------
+  function fmt() {
+    $('noiseOut').textContent = P.D.toFixed(4);
+    $('upOut').textContent = P.ku.toFixed(2);
+    $('downOut').textContent = P.kd.toFixed(2);
+    $('speedOut').textContent = P.speed + ' t/s';
+  }
+  $('noise').addEventListener('input', (e) => { P.D = +e.target.value; fmt(); });
+  $('up').addEventListener('input', (e) => { P.ku = +e.target.value; fmt(); });
+  $('down').addEventListener('input', (e) => { P.kd = +e.target.value; fmt(); });
+  $('speed').addEventListener('input', (e) => { P.speed = +e.target.value; fmt(); });
+  $('depth').addEventListener('change', (e) => { P.L = +e.target.value; init(seed); });
+  $('play').addEventListener('click', () => {
+    playing = !playing;
+    $('play').textContent = playing ? 'Pause' : 'Play';
+    if (playing && phase === 'unfold') unfoldStart = performance.now();
+  });
+  $('replay').addEventListener('click', () => init(seed));
+  $('fresh').addEventListener('click', () => init());
+  window.addEventListener('resize', resize);
+
+  fmt();
+  resize();
+  init(271828);
+  requestAnimationFrame((n) => { last = n; frame(n); });
+})();
+</script>
