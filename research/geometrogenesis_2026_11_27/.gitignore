@@ -1,0 +1,4 @@
+# Regenerable outputs: run snapshots and the compiled model (see README, "Reproduce")
+runs/
+geo
+__pycache__/

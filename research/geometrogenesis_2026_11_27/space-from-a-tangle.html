@@ -1,0 +1,1228 @@
+<title>Space from a Tangle</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a dark instrument bench. The live network fills the left; its gauges sit in a narrow rail; the findings from the full-size runs follow as figure-and-text pairs. Companion to The First Tipping. */
+:root {
+  --bg: #0b0d14;
+  --panel: #121520;
+  --line: #262b3b;
+  --fg: #e8ebf4;
+  --muted: #98a0b6;
+  --accent: #b8d0ff;
+  --accent-ink: #0d1626;
+  --warm: #f2a679;
+  --still: #6878a3;
+  --moving: #e4edff;
+  --s1: #3987e5;
+  --s2: #d95926;
+  --s3: #199e70;
+  --s4: #c98500;
+  --s5: #d55181;
+  --display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  color-scheme: dark;
+}
+html, body { background: var(--bg); color: var(--fg); }
+body { font-family: var(--body); font-size: 15px; line-height: 1.55; }
+a { color: var(--accent); }
+.wrap {
+  max-width: 1180px; margin: 0 auto;
+  padding-block: 28px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 30px;
+}
+header { display: grid; gap: 8px; }
+h1 { font-family: var(--display); font-weight: 500; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.02; margin: 0; letter-spacing: 0.01em; text-wrap: balance; }
+h1 em { font-style: italic; color: var(--accent); }
+.lede { margin: 0; max-width: 66ch; color: var(--muted); }
+.stage { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 24px; align-items: start; }
+@media (max-width: 900px) { .stage { grid-template-columns: minmax(0, 1fr); } }
+.view { position: relative; min-width: 0; }
+#cv { display: block; width: 100%; height: auto; max-width: 100%; aspect-ratio: 1 / 1; border-radius: 4px; background: var(--bg); touch-action: pan-y; cursor: grab; }
+#cv:active { cursor: grabbing; }
+.phase { position: absolute; top: 12px; left: 12px; right: 12px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; pointer-events: none; display: flex; gap: 10px; flex-wrap: wrap; align-items: baseline; }
+.phase b { font-weight: 500; color: var(--accent); }
+.phase span { color: var(--muted); text-transform: none; letter-spacing: 0.02em; }
+.key { margin: 10px 2px 0; color: var(--muted); font-size: 13px; display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.key span { display: inline-flex; align-items: center; gap: 6px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.ring { width: 9px; height: 9px; border-radius: 50%; display: inline-block; border: 2px solid var(--muted); box-sizing: border-box; }
+.ramp { width: 52px; height: 9px; border-radius: 2px; display: inline-block; background: linear-gradient(90deg, var(--still), var(--moving)); }
+.key[hidden], .check[hidden], small[hidden], dt[hidden], dd[hidden] { display: none; }
+.panel { display: grid; gap: 18px; min-width: 0; }
+.box { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 14px; display: grid; gap: 12px; min-width: 0; }
+.box h2 { margin: 0; font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+button { font: 500 13px/1 var(--body); padding: 9px 12px; border-radius: 4px; cursor: pointer; border: 1px solid var(--line); background: transparent; color: var(--fg); }
+button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+button:hover { border-color: var(--accent); }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ctl { display: grid; gap: 4px; }
+.ctl label { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; }
+.ctl label output { font-family: var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.ctl small, .note { color: var(--muted); font-size: 12px; line-height: 1.45; margin: 0; }
+.check { display: flex; gap: 8px; align-items: center; font-size: 13px; }
+input[type=range] { width: 100%; accent-color: var(--accent); }
+input[type=checkbox] { accent-color: var(--accent); width: 16px; height: 16px; }
+select { font: 13px var(--body); background: var(--bg); color: var(--fg); border: 1px solid var(--line); border-radius: 4px; padding: 6px 8px; }
+.stats { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; font-size: 13px; margin: 0; }
+.stats dt { color: var(--muted); }
+.stats dd { margin: 0; font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; }
+ol.log { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 13px; max-height: 210px; overflow-y: auto; }
+ol.log li { display: grid; grid-template-columns: 62px minmax(0, 1fr); gap: 8px; }
+ol.log time { font-family: var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+/* charts */
+.chart { position: relative; min-width: 0; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart .grid line { stroke: var(--line); stroke-width: 1; }
+.chart .axis text { fill: var(--muted); font: 11px var(--mono); }
+.chart .axis-title { fill: var(--muted); font: 11px var(--body); }
+.chart .series { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.chart .cross { stroke: var(--muted); stroke-width: 1; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--muted); margin: 0; padding: 0; list-style: none; }
+.legend li { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 14px; height: 2px; border-radius: 1px; display: inline-block; }
+.tip { position: absolute; pointer-events: none; background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 8px 10px; font-size: 12px; min-width: 150px; z-index: 2; display: grid; gap: 3px; box-shadow: 0 6px 18px rgba(0,0,0,0.35); }
+.tip[hidden] { display: none; }
+.tip b { font-weight: 500; color: var(--fg); }
+.tip div { display: grid; grid-template-columns: 10px minmax(0, 1fr) auto; gap: 6px; align-items: center; color: var(--muted); }
+.tip div span:last-child { font-family: var(--mono); color: var(--fg); }
+.tip i { width: 10px; height: 2px; display: inline-block; }
+/* findings */
+.findings { display: grid; gap: 36px; border-top: 1px solid var(--line); padding-top: 28px; }
+.findings > h2 { margin: 0; font-family: var(--display); font-weight: 500; font-size: clamp(1.7rem, 3.4vw, 2.3rem); line-height: 1.1; text-wrap: balance; }
+.findings > p { margin: -24px 0 0; color: var(--muted); max-width: 66ch; }
+.finding { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 4fr); gap: 28px; align-items: start; }
+@media (max-width: 860px) { .finding { grid-template-columns: minmax(0, 1fr); } }
+.finding h3 { margin: 0 0 6px; font-family: var(--display); font-weight: 600; font-size: 1.45rem; line-height: 1.15; text-wrap: balance; }
+.finding p { margin: 0 0 10px; color: var(--muted); max-width: 62ch; }
+.finding p:last-child { margin-bottom: 0; }
+.fig { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 16px; display: grid; gap: 12px; min-width: 0; }
+.fig figcaption, .fig .cap { color: var(--muted); font-size: 12px; margin: 0; }
+.fig h4 { margin: 0; font: 500 13px var(--body); color: var(--fg); }
+details summary { cursor: pointer; color: var(--muted); font-size: 12px; }
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; font-size: 13px; width: 100%; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 500; font-size: 12px; }
+td.num, th.num { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.tile { border: 1px solid var(--line); border-radius: 6px; padding: 12px; display: grid; gap: 4px; }
+.tile .v { font: 600 1.9rem/1.1 var(--body); }
+.tile .v sup { font-size: 0.55em; }
+.tile .l { color: var(--muted); font-size: 12px; }
+.census { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.census li { font: 12px var(--mono); border: 1px solid var(--line); border-radius: 4px; padding: 3px 7px; color: var(--muted); }
+.census li b { color: var(--fg); font-weight: 500; }
+.foot { color: var(--muted); font-size: 12px; margin: 0; max-width: 90ch; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Space from a <em>Tangle</em></h1>
+    <p class="lede">Start with 216 points, every one linked to every other: no distance, no shape, no dimension. Cool them under local rules that ask each point for a few links and each link to close a few small squares. Then send a random walker through what is left and ask how many dimensions it feels.</p>
+  </header>
+
+  <main class="stage">
+    <section class="view" aria-label="Live network">
+      <canvas id="cv" width="800" height="800" role="img" aria-label="A network of 216 points cooling from a fully connected tangle, drawn in three dimensions"></canvas>
+      <div class="phase" id="phase"><b>Everything connected</b><span>every point one step from every other</span></div>
+      <p class="key" id="mobKey" hidden>
+        <span><i class="ramp"></i>still → moving</span>
+        <span><i class="dot" style="background: var(--fg)"></i>sticky bead</span>
+        <span><i class="ring"></i>plain bead</span>
+        <span>Drag sideways to turn it.</span>
+      </p>
+      <p class="key" id="mainKey">
+        <span><i class="dot" style="background: var(--accent)"></i><span id="k1">crystal point: every link on the right number of squares</span></span>
+        <span><i class="dot" style="background: var(--warm)"></i><span id="k2">touches a triangle</span></span>
+        <span><i class="dot" style="background: var(--muted)"></i><span id="k3">other</span></span>
+        <span>Drag sideways to turn it.</span>
+      </p>
+    </section>
+
+    <aside class="panel">
+      <div class="box">
+        <h2>Run</h2>
+        <div class="buttons">
+          <button id="play" class="primary" type="button">Pause</button>
+          <button id="fromAll" type="button">Start from everything</button>
+          <button id="fromCrystal" type="button">Start from a crystal</button>
+        </div>
+        <dl class="stats">
+          <dt>Seed</dt><dd id="seed">—</dd>
+          <dt>Temperature</dt><dd id="tOut">—</dd>
+          <dt id="lppL">Links per point</dt><dd id="lpp">—</dd>
+          <dt id="triL">Triangles</dt><dd id="tri">—</dd>
+          <dt id="flatL">Links on the right squares</dt><dd id="flat">—</dd>
+          <dt id="crysL">Crystal points</dt><dd id="crys">—</dd>
+          <dt id="piecesL">Separate pieces</dt><dd id="pieces">—</dd>
+          <dt id="movL" hidden>Beads still moving</dt><dd id="mov" hidden>—</dd>
+        </dl>
+      </div>
+
+      <div class="box">
+        <h2>Rules</h2>
+        <div class="ctl">
+          <label for="rule">Rule</label>
+          <select id="rule">
+            <optgroup label="Network rules">
+              <option value="d3" selected>3D: 6 links, each on 4 squares</option>
+              <option value="d2">2D: 4 links, each on 2 squares</option>
+              <option value="d1">1D: 2 links, no squares</option>
+              <option value="nb">Neighbors only: 6 links, squares ignored</option>
+            </optgroup>
+            <optgroup label="Folding chain">
+              <option value="fh">Protein-like: half the beads sticky</option>
+              <option value="fa">Every bead sticky</option>
+            </optgroup>
+          </select>
+          <small id="ruleHelp">Each rule is satisfied exactly by a perfect grid of that dimension. Triangles always cost extra.</small>
+          <label class="check" for="mobil" id="mobilRow" hidden><input id="mobil" type="checkbox"> Color beads by how much they move</label>
+          <small id="mobHelp" hidden>A move that makes or breaks no sticky contact costs nothing, so it still happens at the lowest temperature. Like the loops of a real enzyme, those parts stay mobile while the core is frozen.</small>
+        </div>
+        <div class="ctl">
+          <label for="temp">Temperature <output id="tempOut"></output></label>
+          <input id="temp" type="range" min="0" max="1000" step="1" value="1000">
+          <label class="check" for="auto"><input id="auto" type="checkbox" checked> Cool automatically, down to 0.02</label>
+          <small id="tempHelp">Heat lets the network accept changes that break the rules. A 3D crystal started at 1.5 and cooled survives; held at 1.5 it slowly melts, and at 1.75 it melts within seconds.</small>
+        </div>
+        <div class="ctl">
+          <label for="speed">Speed <output id="speedOut"></output></label>
+          <input id="speed" type="range" min="0" max="1000" step="1" value="420">
+        </div>
+        <div class="buttons"><button id="reseed" type="button">New seed</button></div>
+      </div>
+
+      <div class="box">
+        <h2>What the walker feels</h2>
+        <ul class="legend" id="liveLegend"></ul>
+        <div class="chart" id="liveChart"></div>
+        <p class="note" id="liveNote">A walker that wanders s steps returns to its start less often in more dimensions. The slope of that decline is the dimension it feels. Reference grids have the same 216 points.</p>
+      </div>
+
+      <div class="box">
+        <h2>Moments</h2>
+        <ol class="log" id="log"></ol>
+      </div>
+    </aside>
+  </main>
+
+  <section class="findings" aria-label="Findings from the full-size runs">
+    <h2>What the full-size runs found</h2>
+    <p>The same model in C, with 512 points, starting from all 130,816 links. Every number below comes from those runs.</p>
+
+    <div class="finding">
+      <figure class="fig" style="margin:0">
+        <h4>Dimension felt by a walker, by walk length</h4>
+        <ul class="legend" id="fLegend"></ul>
+        <div class="chart" id="fChart"></div>
+        <details>
+          <summary>Show the numbers</summary>
+          <div class="tablewrap"><table id="fTable"></table></div>
+        </details>
+        <p class="cap">Spectral dimension of the largest piece, from the exact return probability of a lazy random walk. The complete graph is off the chart: 11 at 8 steps and climbing.</p>
+      </figure>
+      <div>
+        <h3>The squares rule is what makes space</h3>
+        <p>With only a rule about how many links each point has, the network reaches its lowest energy as a tangle. Its dimension keeps climbing the farther the walker goes, the signature of a network where everything is a few steps from everything else.</p>
+        <p>Asking each link to close squares changes that. The 1D rule reaches its perfect state exactly: rings, dimension 1. The 3D rule freezes into a glass that reads about 2.4 at every scale. Cooled fifteen times more slowly, it forms dense grains strung on narrow necks, which look 2.4-dimensional up close and 1-dimensional from far away.</p>
+      </div>
+    </div>
+
+    <div class="finding">
+      <figure class="fig" style="margin:0">
+        <h4>Pieces left by the 2D rule</h4>
+        <svg viewBox="0 0 220 170" width="220" height="170" role="img" aria-label="A cube drawn as a network: eight corners, each with three links, every face a square" style="max-width:100%">
+          <g stroke="#98a0b6" stroke-width="1.5" fill="none">
+            <path d="M40 60 L120 60 L120 140 L40 140 Z"/>
+            <path d="M90 25 L170 25 L170 105 L90 105 Z" stroke-opacity="0.55"/>
+            <path d="M40 60 L90 25 M120 60 L170 25 M120 140 L170 105 M40 140 L90 105" />
+          </g>
+          <g fill="#f2a679" stroke="#121520" stroke-width="2">
+            <circle cx="40" cy="60" r="6"/><circle cx="120" cy="60" r="6"/><circle cx="120" cy="140" r="6"/><circle cx="40" cy="140" r="6"/>
+            <circle cx="90" cy="25" r="6"/><circle cx="170" cy="25" r="6"/><circle cx="170" cy="105" r="6"/><circle cx="90" cy="105" r="6"/>
+          </g>
+        </svg>
+        <ul class="census" aria-label="Piece sizes and how many of each">
+          <li><b>22</b> cubes of 8</li><li><b>3</b> × 7</li><li><b>7</b> × 9</li><li><b>7</b> × 10</li><li><b>1</b> × 11</li><li><b>2</b> × 12</li><li><b>1</b> × 13</li><li><b>1</b> × 19</li><li><b>1</b> × 115</li>
+        </ul>
+        <p class="cap">45 pieces from 512 points. Most closed pieces of 10 or more points also have exactly 8 corners with 3 links.</p>
+      </figure>
+      <div>
+        <h3>The 2D rule budded off bubble universes</h3>
+        <p>The 2D rule asks for a flat sheet: 4 links per point, each on 2 squares. It never found one. Instead the network broke into 45 closed pieces, and 22 of them are perfect cubes.</p>
+        <p>A cube is a sphere tiled by squares. Euler's formula says any sphere tiled by squares, where points have 3 or 4 links, has exactly 8 corners with 3 links: the sum of (4 − links) over all points is 8. Each bubble is flat almost everywhere and keeps all of its curvature in those 8 corners.</p>
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="fig">
+        <h4>Adding a time direction, 3D rule</h4>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Version</th><th>Each moment's space</th><th class="num">Walker at 8 steps</th></tr></thead>
+            <tbody>
+              <tr><td>No time</td><td>not applicable</td><td class="num">2.48</td></tr>
+              <tr><td>Moments only</td><td>shattered into 4–7 pieces</td><td class="num">2.10</td></tr>
+              <tr><td>Moments, space may not tear</td><td>one stringy piece</td><td class="num">2.40</td></tr>
+              <tr><td>Plus strong worldlines, slow cooling</td><td>one stringy piece; 59% of points persist</td><td class="num">2.72</td></tr>
+              <tr><td>Perfect crystal</td><td>an 8 × 8 sheet</td><td class="num">3.33</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="cap">8 moments of 64 points, time looping around. Worldlines ask each point for one link to the next moment and one to the previous.</p>
+      </div>
+      <div>
+        <h3>A time direction keeps space whole, but thin</h3>
+        <p>Causal dynamical triangulations found a 4-dimensional universe only after building spacetime with a time direction, so the model got one: each point lives at one of 8 moments, and links may only join a moment to itself or to its neighbors.</p>
+        <p>Time alone moved the bubbles inside the moments. Forbidding space to tear kept each moment in one piece, but a stringy one, barely more than a tree. Strong worldlines pushed the spacetime reading toward the crystal's without making any moment a sheet.</p>
+      </div>
+    </div>
+
+    <div class="finding">
+      <figure class="fig" style="margin:0">
+        <h4>Crystal points left in a half-crystal seed after 50 million moves</h4>
+        <ul class="legend" id="sLegend"></ul>
+        <div class="chart" id="sChart"></div>
+        <p class="cap">Out of 128 fully interior points at the start. Points in the liquid half that became crystal: 0 or 1 in every run.</p>
+        <div class="tiles">
+          <div class="tile"><span class="v">e<sup>7,421</sup></span><span class="l">ways to wire 512 labeled points with 6 links each</span></div>
+          <div class="tile"><span class="v">e<sup>2,676</sup></span><span class="l">ways to wire them as the perfect 8 × 8 × 8 crystal</span></div>
+        </div>
+      </figure>
+      <div>
+        <h3>Space survives, but is not born</h3>
+        <p>The perfect crystal is the rules' lowest-energy state. Warmed to 1.5 and cooled again, it survives almost untouched. Held at 1.75 it melts, and the melt never refreezes into a crystal; it supercools into the same glass the complete graph makes.</p>
+        <p>So the last test planted a seed: half the world as perfect crystal, half liquid. No seed ever grew. Above about 0.8 the seed melts from its surface. Below that, the liquid stops rearranging. With a time direction the seed survives better, but the liquid moments never become sheets.</p>
+        <p>The tiles say why. Disordered wirings outnumber the crystal by a factor of about e<sup>4,700</sup>. The crystal's energy advantage only wins once it is cold, and by then nothing moves.</p>
+      </div>
+    </div>
+
+    <p class="foot">A toy model, not a theory of the universe. Energy = Σ(links − target)² + Σ over links (squares − target)² + 2 × triangles. Moves are local: remove a link, add a link two steps away, or slide a link's end one step; 1% toggle a random pair. The live network uses 216 points so it runs in a browser; the findings use 512. The folding chain is the HP model of protein folding (Dill, 1985) on a cubic grid: sticky beads that touch lower the energy by 0.5 each, and finding a chain's best fold in this model is NP-complete. Ideas behind it: quantum graphity and geometrogenesis (Konopka, Markopoulou, Smolin), causal dynamical triangulations (Ambjørn, Jurkiewicz, Loll). Companion to <a href="https://claude.ai/artifact/MJK8mvgqm8BBVupUtF446o">The First Tipping</a>.</p>
+  </section>
+</div>
+
+<script id="sim-core">
+/* The model, the same as the C program: adjacency A, common neighbours C = A², squares S per link. */
+var GeoSim = function (N) {
+  var A = new Uint8Array(N * N), C = new Int32Array(N * N), S = new Int32Array(N * N);
+  var NB = new Int32Array(N * N), POS = new Int32Array(N * N), deg = new Int32Array(N);
+  var rule = null, rnd = null, lastS = 0;
+  var sim = { N: N, A: A, C: C, S: S, NB: NB, deg: deg, nEdges: 0, ntri: 0, E: 0, version: 0, accepted: 0 };
+  function sq(x) { return x * x; }
+  function listAdd(i, j) { POS[i * N + j] = deg[i]; NB[i * N + deg[i]] = j; deg[i]++; }
+  function listDel(i, j) { var p = POS[i * N + j], last = NB[i * N + deg[i] - 1]; NB[i * N + p] = last; POS[i * N + last] = p; deg[i]--; }
+  function addStruct(i, j) {
+    var k, x;
+    for (k = 0; k < deg[j]; k++) { x = NB[j * N + k]; C[i * N + x]++; C[x * N + i]++; }
+    for (k = 0; k < deg[i]; k++) { x = NB[i * N + k]; C[j * N + x]++; C[x * N + j]++; }
+    C[i * N + i]++; C[j * N + j]++;
+    A[i * N + j] = A[j * N + i] = 1; listAdd(i, j); listAdd(j, i);
+  }
+  function delStruct(i, j) {
+    var k, x;
+    A[i * N + j] = A[j * N + i] = 0; listDel(i, j); listDel(j, i);
+    for (k = 0; k < deg[j]; k++) { x = NB[j * N + k]; C[i * N + x]--; C[x * N + i]--; }
+    for (k = 0; k < deg[i]; k++) { x = NB[i * N + k]; C[j * N + x]--; C[x * N + j]--; }
+    C[i * N + i]--; C[j * N + j]--;
+  }
+  // squares i-a-b-j closed by link (i,j); state must not contain (i,j)
+  function sqUpdate(i, j, sigma) {
+    var dE = 0, s = 0, S0 = rule.S0, bi = i * N, bj = j * N, k, l, a, b, m, old, ba;
+    for (k = 0; k < deg[i]; k++) {
+      a = NB[bi + k]; m = C[a * N + j]; if (!m) continue;
+      s += m; old = S[bi + a];
+      dE += sq(old + sigma * m - S0) - sq(old - S0);
+      S[bi + a] = S[a * N + i] = old + sigma * m;
+    }
+    for (k = 0; k < deg[j]; k++) {
+      b = NB[bj + k]; m = C[bi + b]; if (!m) continue;
+      old = S[bj + b];
+      dE += sq(old + sigma * m - S0) - sq(old - S0);
+      S[bj + b] = S[b * N + j] = old + sigma * m;
+    }
+    for (k = 0; k < deg[i]; k++) {
+      a = NB[bi + k]; ba = a * N;
+      for (l = 0; l < deg[j]; l++) {
+        b = NB[bj + l];
+        if (!A[ba + b]) continue;
+        m = 1;
+        if (A[bi + b] && A[bj + a]) { if (a > b) continue; m = 2; }
+        old = S[ba + b];
+        dE += sq(old + sigma * m - S0) - sq(old - S0);
+        S[ba + b] = S[b * N + a] = old + sigma * m;
+      }
+    }
+    lastS = s;
+    return rule.wb * dE;
+  }
+  function doAdd(i, j) {
+    var D0 = rule.D0;
+    var dE = sq(deg[i] + 1 - D0) - sq(deg[i] - D0) + sq(deg[j] + 1 - D0) - sq(deg[j] - D0);
+    var dtri = C[i * N + j];
+    dE += rule.wc * dtri;
+    dE += sqUpdate(i, j, 1);
+    var s = lastS;
+    S[i * N + j] = S[j * N + i] = s;
+    dE += rule.wb * sq(s - rule.S0);
+    addStruct(i, j);
+    sim.ntri += dtri; sim.E += dE; sim.nEdges++;
+    return dE;
+  }
+  function doRemove(i, j) {
+    var D0 = rule.D0, sOld = S[i * N + j];
+    delStruct(i, j);
+    var dtri = C[i * N + j];
+    var dE = sq(deg[i] - D0) - sq(deg[i] + 1 - D0) + sq(deg[j] - D0) - sq(deg[j] + 1 - D0);
+    dE -= rule.wc * dtri;
+    dE += sqUpdate(i, j, -1);
+    dE -= rule.wb * sq(sOld - rule.S0);
+    sim.ntri -= dtri; sim.E += dE; sim.nEdges--;
+    return dE;
+  }
+  function keep(dE, T) { return dE <= 0 || rnd() < Math.exp(-dE / T); }
+  function oneMove(T) {
+    var r = rnd(), i = (rnd() * N) | 0, j, k, a, dE;
+    if (r < 0.01) {
+      j = (rnd() * N) | 0; if (j === i) return;
+      if (A[i * N + j]) { dE = doRemove(i, j); if (keep(dE, T)) accept(); else doAdd(i, j); }
+      else { dE = doAdd(i, j); if (keep(dE, T)) accept(); else doRemove(i, j); }
+    } else if (r < 0.34) {
+      if (!deg[i]) return;
+      j = NB[i * N + ((rnd() * deg[i]) | 0)];
+      dE = doRemove(i, j); if (keep(dE, T)) accept(); else doAdd(i, j);
+    } else if (r < 0.67) {
+      if (!deg[i]) return;
+      a = NB[i * N + ((rnd() * deg[i]) | 0)];
+      k = NB[a * N + ((rnd() * deg[a]) | 0)];
+      if (k === i || A[i * N + k]) return;
+      dE = doAdd(i, k); if (keep(dE, T)) accept(); else doRemove(i, k);
+    } else {
+      if (!deg[i]) return;
+      j = NB[i * N + ((rnd() * deg[i]) | 0)];
+      k = NB[j * N + ((rnd() * deg[j]) | 0)];
+      if (k === i || A[i * N + k]) return;
+      dE = doRemove(i, j); dE += doAdd(i, k);
+      if (keep(dE, T)) accept(); else { doRemove(i, k); doAdd(i, j); }
+    }
+  }
+  function accept() { sim.accepted++; sim.version++; }
+  function clear() { A.fill(0); C.fill(0); S.fill(0); deg.fill(0); sim.nEdges = 0; sim.ntri = 0; sim.version++; }
+  function energy() {
+    var e = 0, i, k, j;
+    for (i = 0; i < N; i++) {
+      e += sq(deg[i] - rule.D0);
+      for (k = 0; k < deg[i]; k++) { j = NB[i * N + k]; if (j > i) e += rule.wb * sq(S[i * N + j] - rule.S0); }
+    }
+    return e + rule.wc * sim.ntri;
+  }
+  sim.setRule = function (r) { rule = r; sim.E = energy(); };
+  sim.complete = function (r, random) {
+    rule = r; rnd = random; clear();
+    var i, j;
+    for (i = 0; i < N; i++) for (j = 0; j < N; j++) {
+      if (i === j) { C[i * N + i] = N - 1; continue; }
+      A[i * N + j] = 1; C[i * N + j] = N - 2; S[i * N + j] = (N - 2) * (N - 3); listAdd(i, j);
+    }
+    sim.nEdges = N * (N - 1) / 2; sim.ntri = N * (N - 1) * (N - 2) / 6;
+    sim.E = energy();
+  };
+  sim.fromEdges = function (r, random, edges) {
+    rule = r; rnd = random; clear();
+    var e, i, j, k, l, c, a3, t = 0;
+    for (e = 0; e < edges.length; e++) {
+      i = edges[e][0]; j = edges[e][1];
+      if (i !== j && !A[i * N + j]) { A[i * N + j] = A[j * N + i] = 1; listAdd(i, j); listAdd(j, i); sim.nEdges++; }
+    }
+    for (i = 0; i < N; i++) for (j = 0; j < N; j++) { c = 0; for (k = 0; k < deg[i]; k++) c += A[NB[i * N + k] * N + j]; C[i * N + j] = c; }
+    for (i = 0; i < N; i++) for (k = 0; k < deg[i]; k++) {
+      j = NB[i * N + k]; a3 = 0;
+      for (l = 0; l < deg[i]; l++) a3 += C[NB[i * N + l] * N + j];
+      S[i * N + j] = a3 - (deg[i] + deg[j] - 1);
+      if (j > i) t += C[i * N + j];
+    }
+    sim.ntri = t / 3;
+    sim.E = energy();
+  };
+  // run up to `count` moves; temperature follows tempAt(); stops early past msCap milliseconds
+  sim.run = function (count, tempRef, coolFactor, tMin, msCap, now) {
+    var t0 = now(), done = 0;
+    for (; done < count; done++) {
+      if ((done & 31) === 0 && now() - t0 > msCap) break;
+      oneMove(tempRef.T);
+      if (coolFactor < 1 && tempRef.T > tMin) tempRef.T = Math.max(tMin, tempRef.T * coolFactor);
+    }
+    return done;
+  };
+  sim.recount = function () { return energy(); };
+  return sim;
+};
+
+/* Walker dimension: exact average return probability of a lazy random walk, P(s) - 1/n,
+   and d(s) = -2 dlnP/dlns by central differences. nbrs: array of neighbour arrays. */
+var walkDimension = function (nbrs, sMax) {
+  var n = nbrs.length, W = new Float64Array(n * n), V = new Float64Array(n * n), P = new Float64Array(sMax + 2);
+  var i, k, j, s, v, row, list, deg = new Float64Array(n);
+  for (i = 0; i < n; i++) { W[i * n + i] = 1; deg[i] = nbrs[i].length; }
+  for (s = 1; s <= sMax + 1; s++) {
+    for (i = 0; i < n; i++) {
+      row = i * n;
+      for (k = 0; k < n; k++) {
+        v = 0.5 * W[row + k]; list = nbrs[k];
+        for (j = 0; j < list.length; j++) v += 0.5 * W[row + list[j]] / deg[list[j]];
+        V[row + k] = v;
+      }
+    }
+    var tmp = W; W = V; V = tmp;
+    var tr = 0; for (i = 0; i < n; i++) tr += W[i * n + i];
+    P[s] = Math.max(tr / n - 1 / n, 1e-300);
+  }
+  var ds = [];
+  for (s = 2; s <= sMax; s++) ds.push(-2 * (Math.log(P[s + 1]) - Math.log(P[s - 1])) / (Math.log(s + 1) - Math.log(s - 1)));
+  return ds; // ds[0] is s = 2
+};
+
+/* A folding chain on the cubic lattice (the HP model): beads in sequence, each one lattice step from
+   the next, never two on one site. Sticky beads (H) that touch without being chain neighbours lower the
+   energy by EPS each. Moves: end flips, corner flips, crankshafts and pivots. */
+var FoldSim = function (N) {
+  var X = new Int32Array(N), Y = new Int32Array(N), Z = new Int32Array(N), Hb = new Uint8Array(N);
+  var occ = new Map(), rnd = null, EPS = 0.5;
+  var sim = { N: N, X: X, Y: Y, Z: Z, H: Hb, E: 0, version: 0, accepted: 0, hits: new Float64Array(N) };
+  var D = [[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]];
+  function key(x, y, z) { return ((x + 4096) * 8192 + (y + 4096)) * 8192 + (z + 4096); }
+  var SYM = [];
+  [[0, 1, 2], [0, 2, 1], [1, 0, 2], [1, 2, 0], [2, 0, 1], [2, 1, 0]].forEach(function (p) {
+    for (var s = 0; s < 8; s++) {
+      var sg = [s & 1 ? -1 : 1, s & 2 ? -1 : 1, s & 4 ? -1 : 1];
+      if (p[0] === 0 && p[1] === 1 && p[2] === 2 && s === 0) continue;
+      SYM.push([p, sg]);
+    }
+  });
+  function contactsAt(i, x, y, z, inSet) {
+    if (!Hb[i]) return 0;
+    var c = 0;
+    for (var d = 0; d < 6; d++) {
+      var j = occ.get(key(x + D[d][0], y + D[d][1], z + D[d][2]));
+      if (j === undefined || j === i || j === i - 1 || j === i + 1 || !Hb[j]) continue;
+      c += inSet && inSet[j] ? 0.5 : 1;
+    }
+    return c;
+  }
+  function energyAll() {
+    var c = 0;
+    for (var i = 0; i < N; i++) c += contactsAt(i, X[i], Y[i], Z[i], null);
+    return -EPS * c / 2;
+  }
+  var mark = new Uint8Array(N);
+  function tryMove(idx, nx, ny, nz, T) {
+    var k, i, before = 0, after = 0;
+    for (k = 0; k < idx.length; k++) mark[idx[k]] = 1;
+    for (k = 0; k < idx.length; k++) { i = idx[k]; before += contactsAt(i, X[i], Y[i], Z[i], mark); }
+    for (k = 0; k < idx.length; k++) { i = idx[k]; occ.delete(key(X[i], Y[i], Z[i])); }
+    var ok = true;
+    for (k = 0; k < idx.length; k++) { if (occ.has(key(nx[k], ny[k], nz[k]))) { ok = false; break; } }
+    if (ok) {
+      var ox = [], oy = [], oz = [];
+      for (k = 0; k < idx.length; k++) { i = idx[k]; ox.push(X[i]); oy.push(Y[i]); oz.push(Z[i]); X[i] = nx[k]; Y[i] = ny[k]; Z[i] = nz[k]; occ.set(key(X[i], Y[i], Z[i]), i); }
+      for (k = 0; k < idx.length; k++) { i = idx[k]; after += contactsAt(i, X[i], Y[i], Z[i], mark); }
+      var dE = -EPS * (after - before);
+      if (dE <= 0 || rnd() < Math.exp(-dE / T)) {
+        sim.E += dE; sim.accepted++; sim.version++;
+        for (k = 0; k < idx.length; k++) { mark[idx[k]] = 0; sim.hits[idx[k]]++; }
+        return true;
+      }
+      for (k = 0; k < idx.length; k++) { i = idx[k]; occ.delete(key(X[i], Y[i], Z[i])); }
+      for (k = 0; k < idx.length; k++) { i = idx[k]; X[i] = ox[k]; Y[i] = oy[k]; Z[i] = oz[k]; }
+    }
+    for (k = 0; k < idx.length; k++) { i = idx[k]; occ.set(key(X[i], Y[i], Z[i]), i); mark[i] = 0; }
+    return false;
+  }
+  function adj(a, b) { return Math.abs(X[a] - X[b]) + Math.abs(Y[a] - Y[b]) + Math.abs(Z[a] - Z[b]) === 1; }
+  function oneMove(T) {
+    var r = rnd(), i, d, a;
+    if (r < 0.06) {
+      var end = rnd() < 0.5 ? 0 : N - 1, nb = end === 0 ? 1 : N - 2;
+      d = D[(rnd() * 6) | 0];
+      tryMove([end], [X[nb] + d[0]], [Y[nb] + d[1]], [Z[nb] + d[2]], T);
+    } else if (r < 0.5) {
+      i = 1 + ((rnd() * (N - 2)) | 0);
+      if (Math.abs(X[i - 1] - X[i + 1]) + Math.abs(Y[i - 1] - Y[i + 1]) + Math.abs(Z[i - 1] - Z[i + 1]) !== 2) return;
+      if (X[i - 1] === X[i + 1] && Y[i - 1] === Y[i + 1] || X[i - 1] === X[i + 1] && Z[i - 1] === Z[i + 1] || Y[i - 1] === Y[i + 1] && Z[i - 1] === Z[i + 1]) return;
+      tryMove([i], [X[i - 1] + X[i + 1] - X[i]], [Y[i - 1] + Y[i + 1] - Y[i]], [Z[i - 1] + Z[i + 1] - Z[i]], T);
+    } else if (r < 0.9) {
+      i = 1 + ((rnd() * (N - 3)) | 0);
+      if (!adj(i - 1, i + 2)) return;
+      var ax = X[i + 2] - X[i - 1], ay = Y[i + 2] - Y[i - 1], az = Z[i + 2] - Z[i - 1];
+      var vx = X[i] - X[i - 1], vy = Y[i] - Y[i - 1], vz = Z[i] - Z[i - 1];
+      var turns = 1 + ((rnd() * 3) | 0);
+      for (var t = 0; t < turns; t++) { var wx = ay * vz - az * vy, wy = az * vx - ax * vz, wz = ax * vy - ay * vx; vx = wx; vy = wy; vz = wz; }
+      tryMove([i, i + 1], [X[i - 1] + vx, X[i + 2] + vx], [Y[i - 1] + vy, Y[i + 2] + vy], [Z[i - 1] + vz, Z[i + 2] + vz], T);
+    } else {
+      i = 1 + ((rnd() * (N - 2)) | 0);
+      var s = SYM[(rnd() * SYM.length) | 0], p = s[0], sg = s[1], idx = [], nx = [], ny = [], nz = [];
+      var lo = i < N / 2 ? 0 : i + 1, hi = i < N / 2 ? i - 1 : N - 1;
+      for (a = lo; a <= hi; a++) {
+        var v = [X[a] - X[i], Y[a] - Y[i], Z[a] - Z[i]];
+        idx.push(a); nx.push(X[i] + sg[0] * v[p[0]]); ny.push(Y[i] + sg[1] * v[p[1]]); nz.push(Z[i] + sg[2] * v[p[2]]);
+      }
+      tryMove(idx, nx, ny, nz, T);
+    }
+  }
+  function place(pts) {
+    occ.clear();
+    for (var i = 0; i < N; i++) { X[i] = pts[i][0]; Y[i] = pts[i][1]; Z[i] = pts[i][2]; occ.set(key(X[i], Y[i], Z[i]), i); }
+    sim.E = energyAll(); sim.version++;
+  }
+  sim.setSequence = function (h) { for (var i = 0; i < N; i++) Hb[i] = h[i]; sim.E = energyAll(); };
+  sim.unfolded = function (random) {
+    rnd = random;
+    for (var tries = 0; tries < 500; tries++) {
+      var pts = [[0, 0, 0]], seen = new Set([key(0, 0, 0)]), ok = true;
+      for (var i = 1; i < N && ok; i++) {
+        var last = pts[i - 1], free = [];
+        for (var d = 0; d < 6; d++) { var q = [last[0] + D[d][0], last[1] + D[d][1], last[2] + D[d][2]]; if (!seen.has(key(q[0], q[1], q[2]))) free.push(q); }
+        if (!free.length) { ok = false; break; }
+        var c = free[(rnd() * free.length) | 0]; pts.push(c); seen.add(key(c[0], c[1], c[2]));
+      }
+      if (ok) { place(pts); return; }
+    }
+    var line = []; for (var k = 0; k < N; k++) line.push([k, 0, 0]); place(line);
+  };
+  sim.compact = function (random, side) {
+    rnd = random;
+    var layer = [], pts = [];
+    for (var y = 0; y < side; y++) for (var x0 = 0; x0 < side; x0++) layer.push([y % 2 ? side - 1 - x0 : x0, y]);
+    for (var z = 0; z < side; z++) { var L = z % 2 ? layer.slice().reverse() : layer; L.forEach(function (c) { pts.push([c[0], c[1], z]); }); }
+    place(pts);
+  };
+  sim.run = function (count, tempRef, coolFactor, tMin, msCap, now) {
+    var t0 = now(), done = 0;
+    for (; done < count; done++) {
+      if ((done & 63) === 0 && now() - t0 > msCap) break;
+      oneMove(tempRef.T);
+      if (coolFactor < 1 && tempRef.T > tMin) tempRef.T = Math.max(tMin, tempRef.T * coolFactor);
+    }
+    return done;
+  };
+  sim.contactNbrs = function () {
+    var nb = [];
+    for (var i = 0; i < N; i++) {
+      var a = [];
+      for (var d = 0; d < 6; d++) { var j = occ.get(key(X[i] + D[d][0], Y[i] + D[d][1], Z[i] + D[d][2])); if (j !== undefined) a.push(j); }
+      nb.push(a);
+    }
+    return nb;
+  };
+  sim.measure = function () {
+    var cx = 0, cy = 0, cz = 0, i, rg = 0, contacts = 0, sticky = 0, buried = 0;
+    for (i = 0; i < N; i++) { cx += X[i]; cy += Y[i]; cz += Z[i]; }
+    cx /= N; cy /= N; cz /= N;
+    for (i = 0; i < N; i++) {
+      rg += (X[i] - cx) * (X[i] - cx) + (Y[i] - cy) * (Y[i] - cy) + (Z[i] - cz) * (Z[i] - cz);
+      var n = 0;
+      for (var d = 0; d < 6; d++) {
+        var j = occ.get(key(X[i] + D[d][0], Y[i] + D[d][1], Z[i] + D[d][2]));
+        if (j === undefined) continue;
+        n++;
+        if (j !== i - 1 && j !== i + 1) { contacts++; if (Hb[i] && Hb[j]) sticky++; }
+      }
+      if (n === 6) buried++;
+    }
+    return { rg: Math.sqrt(rg / N), contacts: contacts / 2, sticky: sticky / 2, buried: buried };
+  };
+  sim.check = function () {
+    var s = new Set();
+    for (var i = 0; i < N; i++) { var k = key(X[i], Y[i], Z[i]); if (s.has(k) || occ.get(k) !== i) return 'overlap at ' + i; s.add(k); if (i && !adj(i - 1, i)) return 'broken at ' + i; }
+    if (occ.size !== N) return 'occupancy size ' + occ.size;
+    var e = energyAll(); if (Math.abs(e - sim.E) > 1e-9) return 'energy ' + e + ' vs ' + sim.E;
+    return 'ok';
+  };
+  return sim;
+};
+
+var torusEdges = function (dims) {
+  var n = dims.reduce(function (a, b) { return a * b; }, 1), edges = [], idx, ax, stride, coord, nxt;
+  for (idx = 0; idx < n; idx++) {
+    stride = 1;
+    for (ax = dims.length - 1; ax >= 0; ax--) {
+      coord = Math.floor(idx / stride) % dims[ax];
+      nxt = idx + (((coord + 1) % dims[ax]) - coord) * stride;
+      if (dims[ax] > 2 || coord === 0) edges.push([idx, nxt]);
+      stride *= dims[ax];
+    }
+  }
+  return edges;
+};
+</script>
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var N = 216, TMAX = 3, TMIN = 0.02, M_COOL = N * 39000;
+  var COOL = Math.pow(TMIN / TMAX, 1 / M_COOL);
+  var RULES = {
+    d3: { D0: 6, S0: 4, wb: 1, wc: 2, crystal: [6, 6, 6], name: '3D rule', grid: '6 × 6 × 6 crystal' },
+    d2: { D0: 4, S0: 2, wb: 1, wc: 2, crystal: [12, 18], name: '2D rule', grid: '12 × 18 sheet' },
+    d1: { D0: 2, S0: 0, wb: 1, wc: 2, crystal: [216], name: '1D rule', grid: 'ring of 216' },
+    nb: { D0: 6, S0: 4, wb: 0, wc: 0, crystal: [6, 6, 6], name: 'neighbors-only rule', grid: '6 × 6 × 6 crystal' },
+    fh: { fold: true, frac: 0.5, name: 'half-sticky chain', grid: 'fully compact 6 × 6 × 6 block' },
+    fa: { fold: true, frac: 1, name: 'fully sticky chain', grid: 'fully compact 6 × 6 × 6 block' }
+  };
+  var TEXT = {
+    graph: {
+      fromAll: 'Start from everything', fromCrystal: 'Start from a crystal',
+      k: ['crystal point: every link on the right number of squares', 'touches a triangle', 'other'],
+      labels: ['Links per point', 'Triangles', 'Links on the right squares', 'Crystal points', 'Separate pieces'],
+      rule: 'Each rule is satisfied exactly by a perfect grid of that dimension. Triangles always cost extra.',
+      temp: 'Heat lets the network accept changes that break the rules. A 3D crystal started at 1.5 and cooled survives; held at 1.5 it slowly melts, and at 1.75 it melts within seconds.',
+      self: 'This network'
+    },
+    fold: {
+      fromAll: 'Start unfolded', fromCrystal: 'Start folded',
+      k: ['line: two sticky beads touching', 'sticky bead', 'plain bead'],
+      labels: ['Contacts per bead', 'Sticky contacts', 'Fold radius', 'Buried beads', 'Energy'],
+      rule: 'A chain of 216 beads on a 3D grid, each one step from the next, never two on one site. Sticky beads stand in for oily amino acids: each pair of sticky beads that touch lowers the energy by 0.5. This is the HP model of protein folding.',
+      temp: 'Heat unfolds the chain, the way heat denatures a protein. A fully sticky fold comes apart between about 1 and 1.5; a half-sticky chain folds only below about 0.5.',
+      self: 'This chain’s contacts'
+    }
+  };
+  var CSS = getComputedStyle(document.documentElement);
+  var col = function (v) { return CSS.getPropertyValue(v).trim(); };
+  var C_ACC = col('--accent'), C_WARM = col('--warm'), C_MUTED = col('--muted'), C_BG = col('--bg');
+  var SER = [col('--s1'), col('--s2'), col('--s3'), col('--s4'), col('--s5')];
+
+  function mulberry(a) {
+    return function () {
+      a |= 0; a = (a + 0x6D2B79F5) | 0;
+      var t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  var sim = GeoSim(N), fold = FoldSim(N), isFold = false, fst = null;
+  var FP = new Float32Array(3 * N);
+  // mobility: accepted moves touching each bead per 1,000 tries, smoothed over about 120,000 tries
+  var mob = new Float64Array(N), showMob = false, MOVING = 0.2;
+  var RAMP = (function () {
+    var hex = function (c) { c = c.replace('#', ''); return [0, 2, 4].map(function (k) { return parseInt(c.substr(k, 2), 16); }); };
+    var a = hex(col('--still') || '#6878a3'), b = hex(col('--moving') || '#e4edff'), out = [];
+    for (var s = 0; s <= 32; s++) { var t = s / 32; out.push('rgb(' + a.map(function (v, k) { return Math.round(v + (b[k] - v) * t); }).join(',') + ')'); }
+    return out;
+  })();
+  function mobColor(i) { return RAMP[Math.round(32 * Math.min(1, Math.sqrt(mob[i] / 4)))]; }
+  var ruleKey = 'd3', rule = RULES.d3, seed = 1, rnd = mulberry(1);
+  var temp = { T: TMAX }, autoCool = true, playing = true, movesPerFrame = 3000;
+  var startedFrom = 'all', stepCount = 0;
+  var st = null, events = {}, lastDim = null, dimVersion = -1, frameNo = 0;
+
+  // ---------- layout (3D force-directed) ----------
+  var P = new Float32Array(3 * N), Vv = new Float32Array(3 * N), F = new Float32Array(3 * N);
+  var yaw = 0.6, pitch = 0.32, radius = 3;
+  function scatter() {
+    var lr = mulberry(seed * 7 + 3);
+    for (var i = 0; i < N; i++) {
+      var u = lr() * 2 - 1, th = lr() * Math.PI * 2, r = 2.2 * Math.cbrt(lr()), q = Math.sqrt(1 - u * u);
+      P[3 * i] = r * q * Math.cos(th); P[3 * i + 1] = r * q * Math.sin(th); P[3 * i + 2] = r * u;
+      Vv[3 * i] = Vv[3 * i + 1] = Vv[3 * i + 2] = 0;
+    }
+  }
+  function layoutStep() {
+    var i, j, k, dx, dy, dz, d2, d, f, KR = 0.05, KS = 0.35, KG = 0.012, dense = sim.nEdges > 4 * N;
+    F.fill(0);
+    for (i = 0; i < N; i++) {
+      var xi = P[3 * i], yi = P[3 * i + 1], zi = P[3 * i + 2];
+      for (j = i + 1; j < N; j++) {
+        dx = xi - P[3 * j]; dy = yi - P[3 * j + 1]; dz = zi - P[3 * j + 2];
+        d2 = dx * dx + dy * dy + dz * dz + 0.01; d = Math.sqrt(d2);
+        f = KR / (d2 * d);
+        F[3 * i] += f * dx; F[3 * i + 1] += f * dy; F[3 * i + 2] += f * dz;
+        F[3 * j] -= f * dx; F[3 * j + 1] -= f * dy; F[3 * j + 2] -= f * dz;
+      }
+      F[3 * i] -= KG * xi; F[3 * i + 1] -= KG * yi; F[3 * i + 2] -= KG * zi;
+    }
+    var ks = dense ? KS * 4 / (sim.nEdges / N) : KS;
+    for (i = 0; i < N; i++) {
+      for (k = 0; k < sim.deg[i]; k++) {
+        j = sim.NB[i * N + k]; if (j < i) continue;
+        dx = P[3 * j] - P[3 * i]; dy = P[3 * j + 1] - P[3 * i + 1]; dz = P[3 * j + 2] - P[3 * i + 2];
+        d = Math.sqrt(dx * dx + dy * dy + dz * dz) + 1e-6;
+        f = ks * (d - 1) / d;
+        F[3 * i] += f * dx; F[3 * i + 1] += f * dy; F[3 * i + 2] += f * dz;
+        F[3 * j] -= f * dx; F[3 * j + 1] -= f * dy; F[3 * j + 2] -= f * dz;
+      }
+    }
+    for (i = 0; i < 3 * N; i++) {
+      var v = (Vv[i] + F[i] * 0.5) * 0.82;
+      if (v > 0.25) v = 0.25; else if (v < -0.25) v = -0.25;
+      Vv[i] = v; P[i] += v;
+    }
+  }
+
+  // ---------- drawing ----------
+  var cv = $('cv'), ctx = cv.getContext('2d');
+  function resize() {
+    var w = cv.clientWidth || 600, dpr = Math.min(window.devicePixelRatio || 1, 2), px = Math.round(w * dpr);
+    if (cv.width !== px) { cv.width = px; cv.height = px; }
+  }
+  var sx = new Float32Array(N), sy = new Float32Array(N), sz = new Float32Array(N), order = [];
+  for (var oi = 0; oi < N; oi++) order.push(oi);
+  function draw() {
+    var Wd = cv.width, half = Wd / 2, i, j, k, Q = isFold ? FP : P;
+    ctx.fillStyle = C_BG; ctx.fillRect(0, 0, Wd, Wd);
+    var mx = 0, my = 0, mz = 0;
+    for (i = 0; i < N; i++) { mx += Q[3 * i]; my += Q[3 * i + 1]; mz += Q[3 * i + 2]; }
+    mx /= N; my /= N; mz /= N;
+    var R = 0.5;
+    for (i = 0; i < N; i++) { var dx = Q[3 * i] - mx, dy = Q[3 * i + 1] - my, dz = Q[3 * i + 2] - mz; R = Math.max(R, Math.sqrt(dx * dx + dy * dy + dz * dz)); }
+    radius += (R - radius) * 0.08;
+    var cy = Math.cos(yaw), syw = Math.sin(yaw), cp = Math.cos(pitch), sp = Math.sin(pitch), cam = radius * 5, scale = half * 0.74 / radius;
+    for (i = 0; i < N; i++) {
+      var x = Q[3 * i] - mx, y = Q[3 * i + 1] - my, z = Q[3 * i + 2] - mz;
+      var x1 = cy * x + syw * z, z1 = -syw * x + cy * z;
+      var y2 = cp * y - sp * z1, z2 = sp * y + cp * z1;
+      var persp = cam / (cam + z2);
+      sx[i] = half + x1 * scale * persp; sy[i] = half + y2 * scale * persp; sz[i] = z2;
+    }
+    var lw = Math.max(1, Wd / 700);
+    if (isFold) {
+      var chain = new Path2D(), stick = new Path2D(), touch = new Path2D(), nbs = fold.contactNbrs();
+      for (i = 0; i < N - 1; i++) { chain.moveTo(sx[i], sy[i]); chain.lineTo(sx[i + 1], sy[i + 1]); }
+      for (i = 0; i < N; i++) for (k = 0; k < nbs[i].length; k++) {
+        j = nbs[i][k]; if (j <= i + 1) continue;
+        var pth = fold.H[i] && fold.H[j] ? stick : touch;
+        pth.moveTo(sx[i], sy[i]); pth.lineTo(sx[j], sy[j]);
+      }
+      ctx.lineWidth = lw * (showMob ? 1.6 : 2.4); ctx.lineJoin = 'round'; ctx.globalAlpha = showMob ? 0.3 : 0.55; ctx.strokeStyle = C_MUTED; ctx.stroke(chain);
+      ctx.lineWidth = lw; ctx.globalAlpha = 0.22; ctx.stroke(touch);
+      ctx.lineWidth = lw * 1.4; ctx.globalAlpha = showMob ? 0.3 : 0.85; ctx.strokeStyle = showMob ? C_MUTED : C_ACC; ctx.stroke(stick);
+    } else {
+      var flatPath = new Path2D(), triPath = new Path2D(), otherPath = new Path2D();
+      var S0 = rule.S0;
+      for (i = 0; i < N; i++) for (k = 0; k < sim.deg[i]; k++) {
+        j = sim.NB[i * N + k]; if (j < i) continue;
+        var p = sim.C[i * N + j] ? triPath : (sim.S[i * N + j] === S0 ? flatPath : otherPath);
+        p.moveTo(sx[i], sy[i]); p.lineTo(sx[j], sy[j]);
+      }
+      var alpha = Math.min(0.55, Math.max(0.035, 500 / Math.max(1, sim.nEdges)));
+      ctx.lineWidth = lw;
+      ctx.globalAlpha = alpha; ctx.strokeStyle = C_MUTED; ctx.stroke(otherPath);
+      ctx.globalAlpha = Math.min(0.8, alpha * 1.3); ctx.strokeStyle = C_WARM; ctx.stroke(triPath);
+      ctx.globalAlpha = Math.min(0.85, alpha * 1.5); ctx.strokeStyle = C_ACC; ctx.stroke(flatPath);
+    }
+    ctx.globalAlpha = 1;
+    order.sort(function (a, b) { return sz[b] - sz[a]; });
+    var cls = st ? st.cls : null, base = Math.max(2, Wd / 260);
+    for (var q = 0; q < N; q++) {
+      i = order[q];
+      var depth = Math.min(1, Math.max(0, 0.5 - sz[i] / (2 * radius)));
+      var rad = base * (isFold ? (showMob ? 1.45 : 1.25) : 1) * (0.65 + 0.6 * depth);
+      ctx.globalAlpha = 0.45 + 0.55 * depth;
+      if (isFold && showMob) {
+        var mc = mobColor(i);
+        ctx.beginPath(); ctx.arc(sx[i], sy[i], rad, 0, 6.2832);
+        if (fold.H[i]) { ctx.fillStyle = mc; ctx.fill(); }
+        else { ctx.fillStyle = C_BG; ctx.fill(); ctx.lineWidth = Math.max(1.2, rad * 0.42); ctx.strokeStyle = mc; ctx.stroke(); }
+        continue;
+      }
+      if (isFold) ctx.fillStyle = fold.H[i] ? C_WARM : C_MUTED;
+      else ctx.fillStyle = cls && cls[i] === 1 ? C_ACC : cls && cls[i] === 2 ? C_WARM : C_MUTED;
+      ctx.beginPath(); ctx.arc(sx[i], sy[i], rad, 0, 6.2832); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  // ---------- measurement ----------
+  function measure() {
+    var D0 = rule.D0, S0 = rule.S0, flat = 0, crystal = 0, cls = new Uint8Array(N), i, k, j;
+    for (i = 0; i < N; i++) {
+      var good = sim.deg[i] === D0, tri = false;
+      for (k = 0; k < sim.deg[i]; k++) {
+        j = sim.NB[i * N + k];
+        var c = sim.C[i * N + j], s = sim.S[i * N + j];
+        if (c) tri = true;
+        if (s !== S0 || c) good = false;
+        if (j > i && s === S0 && !c) flat++;
+      }
+      cls[i] = good ? 1 : tri ? 2 : 0;
+      if (good) crystal++;
+    }
+    var comp = new Int32Array(N).fill(-1), sizes = [], q = [], nc = 0, best = -1, bestSize = 0, lone = 0;
+    for (i = 0; i < N; i++) {
+      if (comp[i] >= 0) continue;
+      if (sim.deg[i] === 0) { comp[i] = nc++; sizes.push(1); lone++; continue; }
+      comp[i] = nc; q.length = 0; q.push(i); var h = 0;
+      while (h < q.length) { var x = q[h++]; for (k = 0; k < sim.deg[x]; k++) { var y = sim.NB[x * N + k]; if (comp[y] < 0) { comp[y] = nc; q.push(y); } } }
+      sizes.push(q.length); if (q.length > bestSize) { bestSize = q.length; best = nc; } nc++;
+    }
+    return { cls: cls, flat: sim.nEdges ? flat / sim.nEdges : 0, crystal: crystal, pieces: nc - lone, lone: lone, largest: bestSize, comp: comp, best: best };
+  }
+  function giantNbrs() {
+    var idx = new Int32Array(N).fill(-1), list = [], i, k;
+    for (i = 0; i < N; i++) if (st.comp[i] === st.best) { idx[i] = list.length; list.push(i); }
+    return list.map(function (i) { var a = []; for (var k = 0; k < sim.deg[i]; k++) a.push(idx[sim.NB[i * N + k]]); return a; });
+  }
+
+  // ---------- charts ----------
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, parent) { var e = document.createElementNS(NS, tag); for (var a in attrs) e.setAttribute(a, attrs[a]); if (parent) parent.appendChild(e); return e; }
+  function legend(ul, names, colors, square) {
+    ul.textContent = '';
+    names.forEach(function (n, i) {
+      var li = document.createElement('li'); var sw = document.createElement('i'); sw.style.background = colors[i];
+      if (square) { sw.style.width = '10px'; sw.style.height = '10px'; sw.style.borderRadius = '2px'; }
+      li.append(sw, document.createTextNode(n)); ul.append(li);
+    });
+  }
+  // Line chart over walk length (log x). series: [{name, color, xs, ys}]
+  function lineChart(host, opts) {
+    host.textContent = '';
+    var W = opts.width || 560, H = opts.height || 300, m = { l: 34, r: 12, t: 10, b: 34 };
+    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': opts.label }, host);
+    var x0 = Math.log(opts.xMin), x1 = Math.log(opts.xMax);
+    var X = function (s) { return m.l + (Math.log(s) - x0) / (x1 - x0) * (W - m.l - m.r); };
+    var Y = function (v) { return H - m.b - Math.max(v, 0) / opts.yMax * (H - m.t - m.b); };
+    var clipId = 'clip' + Math.random().toString(36).slice(2, 8);
+    el('rect', { x: m.l, y: m.t - 1, width: W - m.l - m.r, height: H - m.t - m.b + 2 }, el('clipPath', { id: clipId }, el('defs', {}, svg)));
+    var g = el('g', { 'class': 'grid' }, svg), ax = el('g', { 'class': 'axis' }, svg);
+    for (var v = 0; v <= opts.yMax; v += opts.yStep) {
+      el('line', { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v) }, g);
+      var tl = el('text', { x: m.l - 8, y: Y(v) + 4, 'text-anchor': 'end' }, ax); tl.textContent = v;
+    }
+    opts.xTicks.forEach(function (s) { var t = el('text', { x: X(s), y: H - m.b + 16, 'text-anchor': 'middle' }, ax); t.textContent = s; });
+    var xt = el('text', { x: (m.l + W - m.r) / 2, y: H - 2, 'text-anchor': 'middle', 'class': 'axis-title' }, svg); xt.textContent = 'steps the walker takes';
+    var paths = [], lines = el('g', { 'clip-path': 'url(#' + clipId + ')' }, svg);
+    opts.series.forEach(function (s) {
+      var d = '';
+      s.xs.forEach(function (x, i) { if (x < opts.xMin || x > opts.xMax || !isFinite(s.ys[i])) return; d += (d ? 'L' : 'M') + X(x).toFixed(1) + ' ' + Y(s.ys[i]).toFixed(1); });
+      paths.push(el('path', { d: d, 'class': 'series', stroke: s.color, 'stroke-width': s.width || 2 }, lines));
+    });
+    var cross = el('line', { 'class': 'cross', y1: m.t, y2: H - m.b, x1: -10, x2: -10, visibility: 'hidden' }, svg);
+    var hit = el('rect', { x: m.l, y: m.t, width: W - m.l - m.r, height: H - m.t - m.b, fill: 'transparent' }, svg);
+    var tip = document.createElement('div'); tip.className = 'tip'; tip.hidden = true; host.appendChild(tip);
+    function show(ev) {
+      var r = svg.getBoundingClientRect(), px = (ev.clientX - r.left) / r.width * W;
+      var s = Math.exp(x0 + (px - m.l) / (W - m.l - m.r) * (x1 - x0));
+      var ref = opts.series[0].xs, best = 0;
+      for (var i = 1; i < ref.length; i++) if (Math.abs(Math.log(ref[i] / s)) < Math.abs(Math.log(ref[best] / s))) best = i;
+      var sx0 = ref[best]; if (sx0 < opts.xMin || sx0 > opts.xMax) return;
+      cross.setAttribute('x1', X(sx0)); cross.setAttribute('x2', X(sx0)); cross.setAttribute('visibility', 'visible');
+      tip.textContent = '';
+      var h = document.createElement('b'); h.textContent = (Math.round(sx0 * 10) / 10) + ' steps'; tip.appendChild(h);
+      opts.series.forEach(function (sr) {
+        var k = 0; for (var i = 1; i < sr.xs.length; i++) if (Math.abs(Math.log(sr.xs[i] / sx0)) < Math.abs(Math.log(sr.xs[k] / sx0))) k = i;
+        var row = document.createElement('div'), sw = document.createElement('i'), nm = document.createElement('span'), val = document.createElement('span');
+        sw.style.background = sr.color; nm.textContent = sr.name; val.textContent = isFinite(sr.ys[k]) ? sr.ys[k].toFixed(2) : '—';
+        row.append(sw, nm, val); tip.appendChild(row);
+      });
+      tip.hidden = false;
+      var hr = host.getBoundingClientRect(), left = ev.clientX - hr.left + 14;
+      if (left + tip.offsetWidth > hr.width) left = ev.clientX - hr.left - tip.offsetWidth - 14;
+      tip.style.left = Math.max(0, left) + 'px'; tip.style.top = Math.max(0, ev.clientY - hr.top - tip.offsetHeight - 10) + 'px';
+    }
+    hit.addEventListener('pointermove', show);
+    hit.addEventListener('pointerleave', function () { tip.hidden = true; cross.setAttribute('visibility', 'hidden'); });
+    return { update: function (i, ys) { var s = opts.series[i]; s.ys = ys; var d = ''; s.xs.forEach(function (x, k) { if (x < opts.xMin || x > opts.xMax || !isFinite(ys[k])) return; d += (d ? 'L' : 'M') + X(x).toFixed(1) + ' ' + Y(ys[k]).toFixed(1); }); paths[i].setAttribute('d', d); } };
+  }
+
+  // live chart with reference grids of the same size
+  var S_MAX = 31, SX = []; for (var s0 = 2; s0 <= S_MAX; s0++) SX.push(s0);
+  function nbrsFromEdges(n, edges) { var a = []; for (var i = 0; i < n; i++) a.push([]); edges.forEach(function (e) { a[e[0]].push(e[1]); a[e[1]].push(e[0]); }); return a; }
+  // a random 6-regular graph: start from the 6-regular crystal and shuffle it with many random
+  // double-edge swaps (a-b, c-d -> a-c, b-d), which keep every point at 6 links
+  function randomRegular(n, r) {
+    var edges = torusEdges([6, 6, 6]), has = {}, key = function (a, b) { return a < b ? a * n + b : b * n + a; };
+    edges.forEach(function (e) { has[key(e[0], e[1])] = 1; });
+    for (var t = 0; t < 40 * edges.length; t++) {
+      var p = (r() * edges.length) | 0, q = (r() * edges.length) | 0;
+      if (p === q) continue;
+      var a = edges[p][0], b = edges[p][1], c = edges[q][0], d = edges[q][1];
+      if (r() < 0.5) { var tmp = c; c = d; d = tmp; }
+      if (a === c || b === d || a === d || b === c || has[key(a, c)] || has[key(b, d)]) continue;
+      delete has[key(a, b)]; delete has[key(c, d)];
+      has[key(a, c)] = 1; has[key(b, d)] = 1;
+      edges[p] = [a, c]; edges[q] = [b, d];
+    }
+    return edges;
+  }
+  var refs = [
+    { name: '6 × 6 × 6 crystal', edges: torusEdges([6, 6, 6]) },
+    { name: '12 × 18 sheet', edges: torusEdges([12, 18]) },
+    { name: 'Ring of 216', edges: torusEdges([216]) },
+    { name: 'Random tangle, 6 links each', edges: randomRegular(216, mulberry(99)) }
+  ];
+  function blockEdges(n) { // an open n × n × n grid: what a perfectly compact chain touches
+    var e = [], id = function (x, y, z) { return (x * n + y) * n + z; };
+    for (var x = 0; x < n; x++) for (var y = 0; y < n; y++) for (var z = 0; z < n; z++) {
+      if (x < n - 1) e.push([id(x, y, z), id(x + 1, y, z)]);
+      if (y < n - 1) e.push([id(x, y, z), id(x, y + 1, z)]);
+      if (z < n - 1) e.push([id(x, y, z), id(x, y, z + 1)]);
+    }
+    return e;
+  }
+  var chainEdges = []; for (var ci = 0; ci < N - 1; ci++) chainEdges.push([ci, ci + 1]);
+  var refCurve = function (edges) { return walkDimension(nbrsFromEdges(N, edges), S_MAX); };
+  refs.forEach(function (r) { r.ys = refCurve(r.edges); });
+  var refsFold = [
+    { name: 'Fully compact 6 × 6 × 6 block', ys: refCurve(blockEdges(6)) },
+    refs[1],
+    { name: 'Unfolded chain of 216', ys: refCurve(chainEdges) },
+    refs[3]
+  ];
+  var liveSeries = [{ name: 'This network', color: SER[0], xs: SX, ys: SX.map(function () { return NaN; }), width: 2.5 }];
+  refs.forEach(function (r, i) { liveSeries.push({ name: r.name, color: SER[i + 1], xs: SX, ys: r.ys }); });
+  legend($('liveLegend'), liveSeries.map(function (s) { return s.name; }), SER);
+  var live = lineChart($('liveChart'), { width: 320, height: 210, xMin: 2, xMax: 31, xTicks: [2, 4, 8, 16, 31], yMax: 8, yStep: 2, series: liveSeries, label: 'Dimension felt by the walker in this network, compared with reference grids of 216 points' });
+
+  // ---------- findings charts (512-point runs) ----------
+  var FS = [2.0, 2.245, 2.52, 2.828, 3.175, 3.564, 4.0, 4.49, 5.04, 5.657, 6.35, 7.127, 8.0, 8.98, 10.079, 11.314, 12.699, 14.254, 16.0, 17.959, 20.159, 22.627, 25.398, 28.509, 32.0];
+  var FD = [
+    ['3D rule, fast cooling', SER[0], [1.864, 1.982, 2.096, 2.205, 2.304, 2.391, 2.461, 2.512, 2.542, 2.55, 2.538, 2.512, 2.476, 2.438, 2.404, 2.378, 2.363, 2.361, 2.372, 2.397, 2.435, 2.489, 2.557, 2.642, 2.745]],
+    ['Perfect crystal, 8 × 8 × 8', SER[1], [1.952, 2.091, 2.232, 2.374, 2.513, 2.649, 2.778, 2.9, 3.011, 3.111, 3.197, 3.269, 3.328, 3.375, 3.413, 3.446, 3.481, 3.523, 3.578, 3.652, 3.75, 3.876, 4.032, 4.221, 4.447]],
+    ['3D rule, slow cooling', SER[2], [1.86, 1.976, 2.089, 2.196, 2.293, 2.375, 2.438, 2.475, 2.481, 2.453, 2.389, 2.29, 2.161, 2.01, 1.849, 1.687, 1.534, 1.398, 1.283, 1.191, 1.123, 1.076, 1.049, 1.04, 1.045]],
+    ['1D rule (rings)', SER[3], [0.887, 0.9, 0.912, 0.923, 0.933, 0.942, 0.95, 0.958, 0.964, 0.971, 0.976, 0.982, 0.986, 0.991, 0.995, 0.999, 1.003, 1.006, 1.01, 1.013, 1.016, 1.019, 1.022, 1.026, 1.029]],
+    ['Neighbors only (tangle)', SER[4], [1.925, 2.049, 2.172, 2.295, 2.418, 2.54, 2.663, 2.789, 2.918, 3.053, 3.197, 3.351, 3.518, 3.702, 3.905, 4.13, 4.38, 4.659, 4.971, 5.321, 5.711, 6.148, 6.636, 7.182, 7.79]]
+  ];
+  legend($('fLegend'), FD.map(function (d) { return d[0]; }), FD.map(function (d) { return d[1]; }));
+  lineChart($('fChart'), { width: 420, height: 260, xMin: 2, xMax: 32, xTicks: [2, 4, 8, 16, 32], yMax: 8, yStep: 2, label: 'Dimension felt by a walker in the 512-point runs', series: FD.map(function (d) { return { name: d[0], color: d[1], xs: FS, ys: d[2] }; }) });
+  (function table() {
+    var t = $('fTable'), cols = [2, 4, 8, 16, 32], th = document.createElement('tr'), h = document.createElement('th'); h.textContent = 'Run'; th.appendChild(h);
+    cols.forEach(function (c) { var x = document.createElement('th'); x.className = 'num'; x.textContent = c + ' steps'; th.appendChild(x); });
+    var thead = document.createElement('thead'); thead.appendChild(th); t.appendChild(thead);
+    var tb = document.createElement('tbody');
+    FD.forEach(function (d) { var tr = document.createElement('tr'), n = document.createElement('td'); n.textContent = d[0]; tr.appendChild(n); cols.forEach(function (c) { var td = document.createElement('td'); td.className = 'num'; td.textContent = d[2][FS.indexOf(c)].toFixed(2); tr.appendChild(td); }); tb.appendChild(tr); });
+    t.appendChild(tb);
+  })();
+
+  // seeds: grouped columns
+  (function seedChart() {
+    var temps = ['0.8', '1.0', '1.2', '1.4'], plain = [117, 35, 7, 3], timed = [101, 83, 13, 0];
+    var names = ['Half crystal in liquid', 'Same, with a time direction'];
+    legend($('sLegend'), names, [SER[0], SER[1]], true);
+    var W = 420, H = 210, m = { l: 34, r: 10, t: 18, b: 34 }, host = $('sChart');
+    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': 'Crystal points left in the seed at four temperatures, with and without a time direction' }, host);
+    var Y = function (v) { return H - m.b - v / 128 * (H - m.t - m.b); };
+    var g = el('g', { 'class': 'grid' }, svg), ax = el('g', { 'class': 'axis' }, svg);
+    [0, 32, 64, 96, 128].forEach(function (v) { el('line', { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v) }, g); var t = el('text', { x: m.l - 8, y: Y(v) + 4, 'text-anchor': 'end' }, ax); t.textContent = v; });
+    var band = (W - m.l - m.r) / temps.length, bw = 24;
+    temps.forEach(function (T, i) {
+      var cx = m.l + band * (i + 0.5);
+      var t = el('text', { x: cx, y: H - m.b + 16, 'text-anchor': 'middle' }, ax); t.textContent = 'T ' + T;
+      [plain[i], timed[i]].forEach(function (v, k) {
+        var x = cx + (k === 0 ? -bw - 1 : 1), y = Y(v), h = H - m.b - y, r = Math.min(4, h);
+        var d = h <= 0 ? '' : 'M' + x + ' ' + (H - m.b) + 'V' + (y + r) + 'Q' + x + ' ' + y + ' ' + (x + r) + ' ' + y + 'H' + (x + bw - r) + 'Q' + (x + bw) + ' ' + y + ' ' + (x + bw) + ' ' + (y + r) + 'V' + (H - m.b) + 'Z';
+        if (d) { var p = el('path', { d: d, fill: k === 0 ? SER[0] : SER[1] }, svg); var tt = el('title', {}, p); tt.textContent = names[k] + ', T ' + T + ': ' + v + ' of 128'; }
+        var lab = el('text', { x: x + bw / 2, y: y - 5, 'text-anchor': 'middle' }, ax); lab.textContent = v;
+      });
+    });
+    var xt = el('text', { x: (m.l + W - m.r) / 2, y: H - 2, 'text-anchor': 'middle', 'class': 'axis-title' }, svg); xt.textContent = 'temperature held fixed';
+  })();
+
+  // ---------- log ----------
+  var logT0 = performance.now();
+  function clearLog() { $('log').textContent = ''; logT0 = performance.now(); }
+  function addEvent(text) {
+    var li = document.createElement('li'), tm = document.createElement('time'), sp = document.createElement('span');
+    tm.textContent = 'T ' + temp.T.toFixed(2); sp.textContent = text; li.append(tm, sp);
+    var log = $('log'); log.append(li); log.scrollTop = log.scrollHeight;
+  }
+
+  // ---------- controls ----------
+  var tToSlider = function (T) { return Math.round(1000 * Math.log(T / TMIN) / Math.log(TMAX / TMIN)); };
+  var sliderToT = function (v) { return TMIN * Math.pow(TMAX / TMIN, v / 1000); };
+  var speedFromSlider = function (v) { return Math.round(300 * Math.pow(200, v / 1000)); };
+  function fmt() {
+    $('tempOut').textContent = temp.T.toFixed(2);
+    $('speedOut').textContent = movesPerFrame.toLocaleString('en-US') + ' moves a frame';
+  }
+  function applyKey() {
+    var m = isFold && showMob;
+    $('mobKey').hidden = !m; $('mainKey').hidden = m;
+  }
+  $('mobil').addEventListener('change', function (e) { showMob = e.target.checked; applyKey(); });
+  function applyMode() {
+    var t = isFold ? TEXT.fold : TEXT.graph;
+    $('fromAll').textContent = t.fromAll; $('fromCrystal').textContent = t.fromCrystal;
+    $('k1').textContent = t.k[0]; $('k2').textContent = t.k[1]; $('k3').textContent = t.k[2];
+    ['lppL', 'triL', 'flatL', 'crysL', 'piecesL'].forEach(function (id, i) { $(id).textContent = t.labels[i]; });
+    $('ruleHelp').textContent = t.rule; $('tempHelp').textContent = t.temp;
+    ['mobilRow', 'mobHelp', 'movL', 'mov'].forEach(function (id) { $(id).hidden = !isFold; });
+    applyKey();
+    var set = isFold ? refsFold : refs;
+    liveSeries[0].name = t.self;
+    set.forEach(function (r, i) { liveSeries[i + 1].name = r.name; live.update(i + 1, r.ys); });
+    legend($('liveLegend'), liveSeries.map(function (s) { return s.name; }), SER);
+  }
+  function startFold(from) {
+    var sr = mulberry(seed * 31 + 7), h = [], nH = 0, i;
+    for (i = 0; i < N; i++) { var b = rule.frac >= 1 || sr() < rule.frac ? 1 : 0; h.push(b); nH += b; }
+    fold.setSequence(h);
+    if (from === 'all') { fold.unfolded(rnd); temp.T = TMAX; }
+    else { fold.compact(rnd, 6); temp.T = rule.frac >= 1 ? 0.8 : 0.25; }
+    autoCool = true;
+    for (i = 0; i < N; i++) { FP[3 * i] = fold.X[i]; FP[3 * i + 1] = fold.Y[i]; FP[3 * i + 2] = fold.Z[i]; }
+    fst = fold.measure();
+    addEvent(from === 'all'
+      ? 'An unfolded chain of 216 beads, ' + nH + ' of them sticky.'
+      : 'Folded into a perfect 6 × 6 × 6 block: ' + fst.contacts + ' contacts, ' + nH + ' sticky beads.');
+  }
+  function start(from) {
+    startedFrom = from; rnd = mulberry(seed); events = {}; lastDim = null; dimVersion = -1; stepCount = 0; mob.fill(0); fold.hits.fill(0);
+    liveSeries[0].ys = SX.map(function () { return NaN; }); live.update(0, liveSeries[0].ys);
+    clearLog();
+    if (isFold) startFold(from);
+    else {
+      scatter();
+      if (from === 'all') {
+        sim.complete(rule, rnd); temp.T = TMAX; autoCool = true;
+        addEvent('Everything connected: ' + sim.nEdges.toLocaleString('en-US') + ' links. Every point is one step from every other.');
+      } else {
+        sim.fromEdges(rule, rnd, torusEdges(rule.crystal)); temp.T = 1.5; autoCool = true;
+        addEvent('Started from a perfect ' + rule.grid + ': ' + sim.nEdges.toLocaleString('en-US') + ' links.');
+      }
+      st = measure();
+    }
+    $('auto').checked = autoCool; $('temp').value = tToSlider(temp.T);
+    $('seed').textContent = seed;
+    fmt(); updatePanel();
+  }
+  $('rule').addEventListener('change', function (e) {
+    ruleKey = e.target.value; rule = RULES[ruleKey];
+    var was = isFold; isFold = !!rule.fold;
+    if (was !== isFold) applyMode();
+    start(startedFrom);
+  });
+  $('temp').addEventListener('input', function (e) { temp.T = sliderToT(+e.target.value); autoCool = false; $('auto').checked = false; fmt(); });
+  $('auto').addEventListener('change', function (e) { autoCool = e.target.checked; });
+  $('speed').addEventListener('input', function (e) { movesPerFrame = speedFromSlider(+e.target.value); fmt(); });
+  $('play').addEventListener('click', function () { playing = !playing; $('play').textContent = playing ? 'Pause' : 'Play'; });
+  $('fromAll').addEventListener('click', function () { start('all'); });
+  $('fromCrystal').addEventListener('click', function () { start('crystal'); });
+  $('reseed').addEventListener('click', function () { seed = 1 + Math.floor(Math.random() * 99999); start(startedFrom); });
+  var drag = null;
+  cv.addEventListener('pointerdown', function (e) { drag = { x: e.clientX, y: e.clientY, yaw: yaw, pitch: pitch }; });
+  window.addEventListener('pointerup', function () { drag = null; });
+  cv.addEventListener('pointercancel', function () { drag = null; });
+  cv.addEventListener('pointermove', function (e) {
+    if (!drag) return;
+    yaw = drag.yaw + (e.clientX - drag.x) * 0.01;
+    pitch = Math.max(-1.2, Math.min(1.2, drag.pitch + (e.clientY - drag.y) * 0.006));
+  });
+  window.addEventListener('resize', resize);
+
+  // ---------- panel ----------
+  function updateFoldPanel() {
+    var m = fst;
+    $('tOut').textContent = temp.T.toFixed(3);
+    $('lpp').textContent = (2 * m.contacts / N).toFixed(2);
+    $('tri').textContent = m.sticky;
+    $('flat').textContent = m.rg.toFixed(2) + ' (block 2.96)';
+    $('crys').textContent = m.buried + ' of ' + N;
+    $('pieces').textContent = fold.E.toFixed(1);
+    var moving = 0; for (var q = 0; q < N; q++) if (mob[q] > MOVING) moving++;
+    $('mov').textContent = moving + ' of ' + N;
+    $('tempOut').textContent = temp.T.toFixed(2);
+    if (!drag && document.activeElement !== $('temp')) $('temp').value = tToSlider(temp.T);
+    var shape = m.rg > 6 ? 'Unfolded coil' : m.rg < 4.2 ? 'Folded' : 'Folding';
+    var frozen = temp.T <= TMIN * 1.001;
+    var ph = $('phase');
+    ph.firstChild.textContent = frozen ? 'Frozen' : shape;
+    ph.lastChild.textContent = (frozen ? shape.toLowerCase() + ' · ' : 'T ' + temp.T.toFixed(2) + ' · ') + 'fold radius ' + m.rg.toFixed(1) + ' · ' + rule.name;
+    if (m.rg > 6) { if (events.state === 'folded') addEvent('The fold came apart: fold radius ' + m.rg.toFixed(1) + '.'); events.state = 'unfolded'; }
+    else if (m.rg < 4.2) { if (events.state === 'unfolded') addEvent('Collapsed into a compact globule: fold radius ' + m.rg.toFixed(1) + ', ' + m.sticky + ' sticky contacts.'); events.state = 'folded'; }
+    if (!events.frozen && frozen) {
+      events.frozen = 1;
+      var d8 = lastDim ? lastDim[6] : NaN;
+      addEvent('Frozen: ' + m.sticky + ' sticky contacts, ' + m.buried + ' beads fully buried, ' + moving + ' still moving' + (isFinite(d8) ? '; walker reads ' + d8.toFixed(2) + ' at 8 steps.' : '.'));
+    }
+    if (!frozen) events.frozen = 0;
+  }
+  function updatePanel() {
+    if (isFold) { updateFoldPanel(); return; }
+    var lpp = 2 * sim.nEdges / N;
+    $('tOut').textContent = temp.T.toFixed(3);
+    $('lpp').textContent = lpp.toFixed(2);
+    $('tri').textContent = sim.ntri.toLocaleString('en-US');
+    $('flat').textContent = Math.round(st.flat * 100) + '%';
+    $('crys').textContent = st.crystal + ' of ' + N;
+    $('pieces').textContent = st.pieces + (st.pieces > 1 ? ', largest ' + st.largest : '') + (st.lone ? ' + ' + st.lone + ' alone' : '');
+    $('tempOut').textContent = temp.T.toFixed(2);
+    if (!drag && document.activeElement !== $('temp')) $('temp').value = tToSlider(temp.T);
+    var title, sub;
+    if (lpp > 3 * rule.D0) { title = 'Everything connected'; sub = Math.round(lpp) + ' links per point'; }
+    else if (autoCool && temp.T > TMIN * 1.001) { title = 'Cooling'; sub = 'T ' + temp.T.toFixed(2) + ' · ' + rule.name; }
+    else if (temp.T <= TMIN * 1.001) { title = 'Frozen'; sub = st.crystal + ' crystal points · ' + rule.name; }
+    else { title = 'Held at T ' + temp.T.toFixed(2); sub = rule.name; }
+    var ph = $('phase'); ph.firstChild.textContent = title; ph.lastChild.textContent = sub;
+    // moments
+    if (!events.thin && startedFrom === 'all' && lpp < rule.D0 + 1.5) { events.thin = 1; addEvent('Thinned to about ' + rule.D0 + ' links per point. Distance exists now.'); }
+    if (!events.split && st.pieces > 1 && lpp < 3 * rule.D0) { events.split = 1; addEvent('Space split into separate pieces.'); }
+    if (startedFrom === 'crystal' && !events.melt && st.crystal < 0.2 * N) { events.melt = 1; addEvent('The crystal melted.'); }
+    if (!events.frozen && temp.T <= TMIN * 1.001) {
+      events.frozen = 1;
+      var d8 = lastDim ? lastDim[6] : NaN;
+      addEvent('Frozen: ' + st.crystal + ' crystal points, ' + (st.pieces + st.lone) + (st.pieces + st.lone === 1 ? ' piece' : ' pieces') + (isFinite(d8) ? ', walker reads ' + d8.toFixed(2) + ' at 8 steps.' : '.'));
+    }
+    if (temp.T > TMIN * 1.001) events.frozen = 0;
+  }
+  function updateDimension() {
+    if (isFold) {
+      if (fold.version === dimVersion) return;
+      dimVersion = fold.version;
+      lastDim = walkDimension(fold.contactNbrs(), S_MAX);
+      live.update(0, lastDim);
+      $('liveNote').textContent = 'The network of who touches whom: chain links plus every pair of beads side by side on the grid. At 8 steps the walker feels ' + lastDim[6].toFixed(2) + ' dimensions; the fully compact block feels ' + liveSeries[1].ys[6].toFixed(2) + ' and the unfolded chain ' + liveSeries[3].ys[6].toFixed(2) + '.';
+      return;
+    }
+    var lpp = 2 * sim.nEdges / N;
+    if (lpp > 16) { $('liveNote').textContent = 'No reading yet: with ' + Math.round(lpp) + ' links per point, every point is a step or two from every other, so a walker is lost at once. The dimension is effectively unlimited.'; return; }
+    if (sim.version === dimVersion) return;
+    dimVersion = sim.version;
+    var nb = giantNbrs();
+    if (nb.length < 8) return;
+    lastDim = walkDimension(nb, S_MAX);
+    live.update(0, lastDim);
+    $('liveNote').textContent = 'Largest piece, ' + nb.length + ' points. At 8 steps the walker feels ' + lastDim[6].toFixed(2) + ' dimensions; the ' + rule.grid + ' feels ' + liveSeries[ruleKey === 'd2' ? 2 : ruleKey === 'd1' ? 3 : 1].ys[6].toFixed(2) + '.';
+  }
+
+  // ---------- loop ----------
+  function frame() {
+    frameNo++;
+    var clock = function () { return performance.now(); };
+    if (playing) {
+      if (isFold) {
+        var tries = fold.run(movesPerFrame, temp, autoCool ? COOL : 1, TMIN, 12, clock);
+        stepCount += tries;
+        if (tries > 0) {
+          var beta = 1 - Math.exp(-tries / 120000);
+          for (var mi = 0; mi < N; mi++) mob[mi] += (fold.hits[mi] / tries * 1000 - mob[mi]) * beta;
+          fold.hits.fill(0);
+        }
+      }
+      else { stepCount += sim.run(movesPerFrame, temp, autoCool ? COOL : 1, TMIN, 12, clock); layoutStep(); layoutStep(); }
+      if (!reduceMotion && !drag) yaw += 0.0025;
+    }
+    if (isFold) for (var b = 0; b < N; b++) {
+      FP[3 * b] += (fold.X[b] - FP[3 * b]) * 0.25; FP[3 * b + 1] += (fold.Y[b] - FP[3 * b + 1]) * 0.25; FP[3 * b + 2] += (fold.Z[b] - FP[3 * b + 2]) * 0.25;
+    }
+    draw();
+    if (frameNo % 8 === 0) { if (isFold) fst = fold.measure(); else st = measure(); updatePanel(); }
+    if (frameNo % 45 === 0) updateDimension();
+    requestAnimationFrame(frame);
+  }
+  resize();
+  movesPerFrame = speedFromSlider(+$('speed').value);
+  showMob = !!$('mobil').checked;
+  start('all');
+  requestAnimationFrame(frame);
+})();
+</script>
